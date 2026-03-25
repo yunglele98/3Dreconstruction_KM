@@ -157,5 +157,7 @@
     "lat": 43.65422814,
     "street": "Bellevue Ave",
     "street_number": 48
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 48_Bellevue_Ave (auto-detected by cleanup_before_batch.py)"
 }

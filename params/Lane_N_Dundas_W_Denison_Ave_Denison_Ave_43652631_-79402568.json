@@ -159,5 +159,7 @@
     "colour_hex": "#B85A3A"
   },
   "roof_pitch_deg": 40,
-  "site": {}
+  "site": {},
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of Lane_N_Dundas_W_Denison_Ave_Hickory_St_43652511_-79403072 (auto-detected by cleanup_before_batch.py)"
 }

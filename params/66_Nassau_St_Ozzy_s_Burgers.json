@@ -156,5 +156,7 @@
     "lon": -79.40264747,
     "lat": 43.65527305,
     "street": "Nassau St"
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 66_Nassau_St (auto-detected by cleanup_before_batch.py)"
 }

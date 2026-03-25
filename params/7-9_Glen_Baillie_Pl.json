@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "duplicate \u2014 pair photo; observations in 7_ and 9_ individual files",
+  "reason": "duplicate — pair photo; observations in 7_ and 9_ individual files",
   "photo": "IMG_20260316_114305141_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -37,7 +37,11 @@
       "8 GLEN BAILLIE PL",
       "9 GLEN BAILLIE PL"
     ],
-    "db_revision_ts": "2026-03-25T14:51:46"
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "cleanup_fixes": [
+      "roof_type -> gable",
+      "building_name -> 7-9 Glen Baillie Pl"
+    ]
   },
   "photo_observations": {
     "facade_colour_observed": "grey/blue painted brick (#7), salmon/peach painted brick (#9)",
@@ -188,5 +192,7 @@
     "height_above_ridge_m": 0.8,
     "material": "brick",
     "colour_hex": "#D8D0C0"
-  }
+  },
+  "roof_type": "gable",
+  "building_name": "7-9 Glen Baillie Pl"
 }

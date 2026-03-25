@@ -230,5 +230,7 @@
     3.2,
     3.2
   ],
-  "site": {}
+  "site": {},
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of Dundas_St_W_CAAM_United_Hardware_Ltd (auto-detected by cleanup_before_batch.py)"
 }

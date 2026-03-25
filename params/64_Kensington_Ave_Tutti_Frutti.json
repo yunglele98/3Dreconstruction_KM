@@ -138,5 +138,7 @@
     "lat": 43.65436089,
     "street": "Kensington Ave",
     "street_number": 64
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 64_Kensington_Ave (auto-detected by cleanup_before_batch.py)"
 }

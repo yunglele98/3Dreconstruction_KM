@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "duplicate \u2014 range; individual files have photo_observations",
+  "reason": "duplicate — range; individual files have photo_observations",
   "photo": "IMG_20260320_160713463_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -31,7 +31,12 @@
       "41 BELLEVUE AVE",
       "42 BELLEVUE AVE"
     ],
-    "db_revision_ts": "2026-03-25T14:51:45"
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "cleanup_fixes": [
+      "facade_material -> brick",
+      "roof_type -> gable",
+      "building_name -> 40-42 Bellevue Ave"
+    ]
   },
   "party_wall_left": false,
   "party_wall_right": false,
@@ -112,5 +117,8 @@
     "height_above_ridge_m": 0.8,
     "material": "brick",
     "colour_hex": "#B85A3A"
-  }
+  },
+  "facade_material": "brick",
+  "roof_type": "gable",
+  "building_name": "40-42 Bellevue Ave"
 }

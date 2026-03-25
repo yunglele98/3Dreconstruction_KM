@@ -135,5 +135,7 @@
     "lat": 43.65272052,
     "street": "Dundas St W",
     "street_number": 568
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 568_Dundas_St_W (auto-detected by cleanup_before_batch.py)"
 }

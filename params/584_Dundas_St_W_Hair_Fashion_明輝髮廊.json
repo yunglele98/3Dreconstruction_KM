@@ -1,5 +1,5 @@
 {
-  "building_name": "584 Dundas St W (Hair Fashion \u660e\u8f1d\u9aee\u5eca)",
+  "building_name": "584 Dundas St W (Hair Fashion 明輝髮廊)",
   "floors": 2,
   "facade_material": "Mixed masonry",
   "facade_colour": "dark storefront base with red sign band and narrow upper brick face",
@@ -12,7 +12,7 @@
     "notes": "Narrow hair salon storefront under a large bilingual sign."
   },
   "_meta": {
-    "address": "584 Dundas St W (Hair Fashion \u660e\u8f1d\u9aee\u5eca)",
+    "address": "584 Dundas St W (Hair Fashion 明輝髮廊)",
     "photo": "IMG_20260320_011550495_HDR.jpg",
     "agent": "codex-gpt-5",
     "timestamp": "2026-03-24T17:20:00-04:00",
@@ -116,7 +116,7 @@
   "decorative_elements": {},
   "street_setback_m": 2.0,
   "confidence": 0.7500000000000001,
-  "facade_description": "584 Dundas St W (Hair Fashion \u660e\u8f1d\u9aee\u5eca) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 6.1 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a dark storefront base with red sign band and narrow upper brick face palette, laid in running bond with light grey mortar joints. The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance.",
+  "facade_description": "584 Dundas St W (Hair Fashion 明輝髮廊) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 6.1 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a dark storefront base with red sign band and narrow upper brick face palette, laid in running bond with light grey mortar joints. The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",
@@ -149,5 +149,7 @@
     "lat": 43.65263505,
     "street": "Dundas St W",
     "street_number": 584
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 584_Dundas_St_W (auto-detected by cleanup_before_batch.py)"
 }

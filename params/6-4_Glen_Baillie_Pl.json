@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "duplicate \u2014 pair photo",
+  "reason": "duplicate — pair photo",
   "photo": "IMG_20260316_114417090_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -34,7 +34,12 @@
       "5 GLEN BAILLIE PL",
       "6 GLEN BAILLIE PL"
     ],
-    "db_revision_ts": "2026-03-25T14:51:46"
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "cleanup_fixes": [
+      "facade_material -> brick",
+      "roof_type -> gable",
+      "building_name -> 6-4 Glen Baillie Pl"
+    ]
   },
   "photo_observations": {
     "notes": "Part of Glen Baillie Pl row, visible in batch_008 daytime photos. Small semi-detached Victorian worker's houses, 2-2.5 storeys, painted brick in various colours.",
@@ -125,5 +130,8 @@
     "height_above_ridge_m": 0.8,
     "material": "brick",
     "colour_hex": "#B85A3A"
-  }
+  },
+  "facade_material": "brick",
+  "roof_type": "gable",
+  "building_name": "6-4 Glen Baillie Pl"
 }

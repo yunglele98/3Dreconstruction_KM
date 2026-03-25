@@ -21,7 +21,12 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "cleanup_fixes": [
+      "facade_material -> brick",
+      "roof_type -> gable",
+      "building_name -> 50 Bellvue Av"
+    ]
   },
   "party_wall_left": false,
   "party_wall_right": false,
@@ -102,5 +107,8 @@
     "height_above_ridge_m": 0.8,
     "material": "brick",
     "colour_hex": "#B85A3A"
-  }
+  },
+  "facade_material": "brick",
+  "roof_type": "gable",
+  "building_name": "50 Bellvue Av"
 }

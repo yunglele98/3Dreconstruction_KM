@@ -249,5 +249,7 @@
     "lat": 43.65772244,
     "street": "Spadina Ave",
     "street_number": 474
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 474_Spadina_Ave (auto-detected by cleanup_before_batch.py)"
 }

@@ -178,5 +178,7 @@
     "lat": 43.65628323,
     "street": "College St",
     "street_number": 429
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 429_College_St (auto-detected by cleanup_before_batch.py)"
 }

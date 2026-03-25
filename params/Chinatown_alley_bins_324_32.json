@@ -102,5 +102,7 @@
     "height_above_ridge_m": 0.8,
     "material": "brick",
     "colour_hex": "#B85A3A"
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Non-building photo (auto-detected by cleanup_before_batch.py)"
 }

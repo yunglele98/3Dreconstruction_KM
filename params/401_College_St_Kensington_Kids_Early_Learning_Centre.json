@@ -178,5 +178,7 @@
     "lon": -79.40573152,
     "lat": 43.65639782,
     "street": "College St"
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 401_College_St (auto-detected by cleanup_before_batch.py)"
 }

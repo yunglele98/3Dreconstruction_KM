@@ -159,5 +159,7 @@
     "colour_hex": "#B85A3A"
   },
   "roof_pitch_deg": 40,
-  "site": {}
+  "site": {},
+  "skipped": true,
+  "skip_reason": "Non-building photo (auto-detected by cleanup_before_batch.py)"
 }

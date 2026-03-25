@@ -5968,6 +5968,14 @@ def resolve_batch_files(params_dir, output_dir=None, do_render=False,
     out_dir = Path(output_dir) if output_dir else params_dir.parent / "outputs"
     plans = []
     for f in files:
+        # Skip param files marked as skipped (non-buildings, duplicates)
+        try:
+            with open(f, encoding="utf-8") as fh:
+                pdata = json.load(fh)
+            if pdata.get("skipped"):
+                continue
+        except Exception:
+            pass
         blend_path, render_path = default_output_paths(str(f), output_dir=str(out_dir))
         manifest_path = default_manifest_path(blend_path)
         skipped = bool(skip_existing and blend_path.exists())

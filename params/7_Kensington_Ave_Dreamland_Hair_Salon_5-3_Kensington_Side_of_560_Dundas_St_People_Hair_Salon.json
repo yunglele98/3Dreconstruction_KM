@@ -159,5 +159,7 @@
     "lon": -79.3997444,
     "lat": 43.65283382,
     "street": "Kensington Ave"
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 7_Kensington_Ave (auto-detected by cleanup_before_batch.py)"
 }

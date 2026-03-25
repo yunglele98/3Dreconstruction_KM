@@ -163,5 +163,7 @@
     "lat": 43.65569253,
     "street": "Nassau St",
     "street_number": 40
-  }
+  },
+  "skipped": true,
+  "skip_reason": "Duplicate photo-variant of 40_Nassau_St (auto-detected by cleanup_before_batch.py)"
 }
