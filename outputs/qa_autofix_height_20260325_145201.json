@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-03-25T14:52:01",
+  "mode": "apply",
+  "qa_report": "C:\\Users\\liam1\\blender_buildings\\outputs\\qa_fail_list_20260325_145200.json",
+  "targets": 12,
+  "changed_count": 12,
+  "skipped_count": 0,
+  "changed_files": [
+    {
+      "file": "189A_Baldwin_St.json",
+      "old_total_height_m": 3.44,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "27_Bellevue_Ave.json",
+      "old_total_height_m": 3.74,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "305_Augusta_Ave.json",
+      "old_total_height_m": 3.21,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "307_Augusta_Ave.json",
+      "old_total_height_m": 3.21,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "323_College_St.json",
+      "old_total_height_m": 3.53,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "333_College_St.json",
+      "old_total_height_m": 3.53,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "335_College_St.json",
+      "old_total_height_m": 3.53,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "337_College_St.json",
+      "old_total_height_m": 4.22,
+      "new_total_height_m": 12.0,
+      "floors": 5.0
+    },
+    {
+      "file": "35_Bellevue_Ave.json",
+      "old_total_height_m": 1.03,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "374_Spadina_Ave.json",
+      "old_total_height_m": 3.88,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "3_Nassau_St.json",
+      "old_total_height_m": 3.38,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "43_Kensington_Ave.json",
+      "old_total_height_m": 3.91,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    }
+  ],
+  "skipped": []
+}
