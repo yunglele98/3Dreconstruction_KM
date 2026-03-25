@@ -8,7 +8,7 @@
   ],
   "total_height_m": 14.4,
   "facade_width_m": 5.2,
-  "facade_depth_m": 32.0,
+  "facade_depth_m": 15.0,
   "site": {
     "lon": -79.40108255,
     "lat": 43.65266053,
@@ -124,7 +124,10 @@
       "new_total_height_m": 14.4,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "qa_tall_fixes": [
+      "149 Augusta: depth 32m -> 15m (row house default was too deep)"
+    ]
   },
   "storefront": {
     "type": "Commercial ground floor",

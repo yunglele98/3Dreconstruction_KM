@@ -7,7 +7,7 @@
   ],
   "total_height_m": 6.0,
   "facade_width_m": 5.2,
-  "facade_depth_m": 32.0,
+  "facade_depth_m": 22.4,
   "site": {
     "lon": -79.40506184999998,
     "lat": 43.65416781,
@@ -109,6 +109,9 @@
       "total_height_m 60->6",
       "roof_type cross-gable->gable",
       "facade_material mixed masonry->brick"
+    ],
+    "qa_depth_fixes": [
+      "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
     ]
   },
   "party_wall_left": true,

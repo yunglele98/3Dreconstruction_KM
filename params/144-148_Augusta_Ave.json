@@ -7,7 +7,7 @@
   ],
   "total_height_m": 8.89,
   "facade_width_m": 5.2,
-  "facade_depth_m": 32.0,
+  "facade_depth_m": 22.4,
   "site": {
     "lon": -79.40155192999998,
     "lat": 43.65253121,
@@ -108,6 +108,9 @@
       "146 AUGUSTA AVE",
       "147 AUGUSTA AVE",
       "148 AUGUSTA AVE"
+    ],
+    "qa_depth_fixes": [
+      "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
     ]
   },
   "storefront": {

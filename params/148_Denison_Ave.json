@@ -1,14 +1,13 @@
 {
   "building_name": "148 Denison Ave",
-  "floors": 3,
+  "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8,
-    4.8
+    3.5,
+    3.0
   ],
-  "total_height_m": 14.4,
+  "total_height_m": 8.5,
   "facade_width_m": 5.2,
-  "facade_depth_m": 32.0,
+  "facade_depth_m": 12.0,
   "site": {
     "lon": -79.40275142999998,
     "lat": 43.6528436,
@@ -30,8 +29,7 @@
   "facade_colour": "olive/tan stucco with dark brown trim and decorative wood elements",
   "windows_per_floor": [
     2,
-    2,
-    1
+    2
   ],
   "window_type": "Double-hung sash",
   "window_width_m": 0.85,
@@ -132,7 +130,10 @@
       "new_total_height_m": 14.4,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "qa_tall_fixes": [
+      "148 Denison: 3fl/14.4m -> 2fl/8.5m from photo. Depth 32->12m"
+    ]
   },
   "bay_window": {
     "present": true,

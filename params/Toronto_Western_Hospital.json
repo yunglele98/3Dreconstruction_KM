@@ -20,7 +20,7 @@
   "door_type": "recessed",
   "has_storefront": false,
   "condition": "good",
-  "roof_type": "flat institutional roof",
+  "roof_type": "flat",
   "roof_pitch_deg": 2,
   "roof_features": [
     "mechanical_penthouse",
@@ -119,7 +119,10 @@
     ],
     "reference_photo_count": 23,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_tall_fixes": [
+      "Hospital campus: 5x10m -> 60x40m from photos"
+    ]
   },
   "window_arrangement": "irregular",
   "door_width_m": 1.8,
@@ -179,7 +182,7 @@
   ],
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 40.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -335,7 +338,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 60.0,
   "total_height_m": 25.6,
   "floor_heights_m": [
     3.2,

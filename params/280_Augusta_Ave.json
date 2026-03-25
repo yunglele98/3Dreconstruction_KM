@@ -1,16 +1,14 @@
 {
   "building_name": "280 Augusta Ave",
-  "floors": 5,
+  "floors": 3,
   "floor_heights_m": [
-    4.5,
     3.6,
-    3.6,
-    3.6,
-    3.1
+    3.4,
+    3.4
   ],
-  "total_height_m": 18.25,
+  "total_height_m": 10.4,
   "facade_width_m": 5.2,
-  "facade_depth_m": 32.0,
+  "facade_depth_m": 22.4,
   "site": {
     "lon": -79.40334858,
     "lat": 43.65683739,
@@ -28,10 +26,8 @@
   "facade_material": "Concrete",
   "facade_colour": "grey concrete",
   "windows_per_floor": [
-    0,
     2,
-    2,
-    2,
+    3,
     1
   ],
   "window_type": "Double-hung sash",
@@ -109,6 +105,12 @@
     "db_revision_ts": "2026-03-25T14:51:45",
     "db_address_candidates": [
       "280 AUGUSTA AVE"
+    ],
+    "qa_tall_fixes": [
+      "Bay-and-gable: 5fl -> 3fl. Used height_avg=10.4m (height_max=18.25 was chimney/gable peak)"
+    ],
+    "qa_depth_fixes": [
+      "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
     ]
   },
   "storefront": {

@@ -6,7 +6,7 @@
   ],
   "total_height_m": 4.8,
   "facade_width_m": 5.2,
-  "facade_depth_m": 32.0,
+  "facade_depth_m": 22.4,
   "site": {
     "lon": -79.40182033,
     "lat": 43.65478692,
@@ -108,7 +108,10 @@
       "new_total_height_m": 4.8,
       "floors": 1.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "qa_depth_fixes": [
+      "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ]
   },
   "storefront": {
     "type": "Commercial ground floor",

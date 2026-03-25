@@ -58,7 +58,10 @@
       "changes": [
         "has_storefront:set_False"
       ]
-    }
+    },
+    "qa_tall_fixes": [
+      "13 Kensington: depth 10m -> 14m from photo"
+    ]
   },
   "notes": "Houseform storefront segment with Causa Culture signage.",
   "doors_detail": [
@@ -94,7 +97,7 @@
   },
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 14.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
