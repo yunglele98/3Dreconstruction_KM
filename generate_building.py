@@ -19,6 +19,7 @@ import json
 import math
 import os
 import sys
+import time
 from pathlib import Path
 from mathutils import Vector, Matrix
 
@@ -1299,7 +1300,7 @@ def _resolve_doors(params, facade_width):
                     "_source": "ground_floor_arches",
                 })
 
-    # 3) Resolve from windows_detail[].entrance (e.g. 3 Nassau St)
+    # 3) Resolve from windows_detail[].entrance (e.g. 21 Nassau St)
     for wd in params.get("windows_detail", []):
         if not isinstance(wd, dict):
             continue
@@ -1750,7 +1751,9 @@ def create_cross_gable_roof(params, wall_h, width, depth):
     overhang = eave_mm / 1000.0
 
     # --- Main side gable (ridge parallel to facade, runs left-right) ---
-    main_ridge_height = (depth / 2) * math.tan(pitch_rad)
+    # Ridge height governed by width (shorter facade dimension), not depth.
+    # Using depth would produce absurd heights on deep lots (e.g. 32m * tan(45°) = 16m).
+    main_ridge_height = (width / 2) * math.tan(pitch_rad)
     half_w = width / 2 + overhang * 0.5
     y_front = overhang
     y_back = -depth - overhang
@@ -5364,7 +5367,7 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
     return col
 
 
-def generate_building(params, offset=(0, 0, 0)):
+def generate_building(params, offset=(0, 0, 0), rotation=0.0):
     """Generate a complete 3D building from JSON parameters."""
     params = apply_hcd_guide_defaults(params)
 
@@ -5660,6 +5663,14 @@ def generate_building(params, offset=(0, 0, 0)):
     ox, oy, oz = offset
     for obj in all_objs:
         if _obj_valid(obj):
+            # Apply rotation around origin (Z-axis) before offset
+            if rotation != 0.0:
+                cos_r = math.cos(rotation)
+                sin_r = math.sin(rotation)
+                x, y = obj.location.x, obj.location.y
+                obj.location.x = x * cos_r - y * sin_r
+                obj.location.y = x * sin_r + y * cos_r
+                obj.rotation_euler.z += rotation
             obj.location.x += ox
             obj.location.y += oy
             obj.location.z += oz
@@ -5691,6 +5702,22 @@ def load_and_generate(params_path, spacing=15.0):
 
     path = Path(params_path)
 
+    # Load site coordinates from GIS export (SRID 2952, local metres)
+    site_coords_path = Path(__file__).parent / "params" / "_site_coordinates.json"
+    site_coords = None
+    if site_coords_path.exists():
+        with open(site_coords_path, encoding="utf-8") as gf:
+            site_coords = json.load(gf)
+        print(f"Loaded site coordinates: {len(site_coords)} buildings (from PostGIS)")
+
+    # Legacy geocode fallback
+    geocode_path = Path(__file__).parent / "archive" / "geocode.json"
+    geocode = None
+    if geocode_path.exists():
+        with open(geocode_path) as gf:
+            geocode = json.load(gf)
+        print(f"Loaded geocode.json: {len(geocode)} entries (legacy fallback)")
+
     if path.is_file():
         files = [path]
     elif path.is_dir():
@@ -5704,6 +5731,7 @@ def load_and_generate(params_path, spacing=15.0):
     print(f"Files: {len(files)}")
 
     buildings = []
+    manifest_buildings = []
     for i, f in enumerate(files):
         print(f"\n--- [{i+1}/{len(files)}] {f.name} ---")
         with open(f) as fp:
@@ -5715,35 +5743,115 @@ def load_and_generate(params_path, spacing=15.0):
             if hcd.get('discrepancies'):
                 print(f"  Discrepancies: {'; '.join(hcd['discrepancies'])}")
 
-        offset = (i * spacing, 0, 0)
-        bldg = generate_building(params, offset=offset)
+        # Determine building position:
+        # 1. Site coordinates from PostGIS GIS export (preferred)
+        # 2. Legacy geocode.json fallback
+        # 3. Linear spacing as last resort
+        address = params.get("building_name") or params.get("_meta", {}).get("address", "")
+        geo_key = f.stem
+
+        if site_coords and address and address in site_coords:
+            sc = site_coords[address]
+            offset = (sc["x"], sc["y"], 0)
+            rotation = math.radians(sc.get("rotation_deg", 0))
+        elif site_coords:
+            # Try matching by filename stem (address with underscores)
+            stem_addr = geo_key.replace("_", " ")
+            if stem_addr in site_coords:
+                sc = site_coords[stem_addr]
+                offset = (sc["x"], sc["y"], 0)
+                rotation = math.radians(sc.get("rotation_deg", 0))
+            elif geocode and geo_key in geocode:
+                gc = geocode[geo_key]
+                offset = (gc["blender_x"], gc["blender_y"], 0)
+                rotation = math.radians(gc.get("rotation_deg", 0))
+            else:
+                offset = (i * spacing, 0, 0)
+                rotation = 0.0
+        elif geocode and geo_key in geocode:
+            gc = geocode[geo_key]
+            offset = (gc["blender_x"], gc["blender_y"], 0)
+            rotation = math.radians(gc.get("rotation_deg", 0))
+        else:
+            offset = (i * spacing, 0, 0)
+            rotation = 0.0
+        bldg = generate_building(params, offset=offset, rotation=rotation)
         buildings.append(bldg)
+        hcd = params.get("hcd_data", {}) if isinstance(params.get("hcd_data"), dict) else {}
+        manifest_buildings.append({
+            "param_file": str(f.resolve()),
+            "building_name": params.get("building_name") or params.get("_meta", {}).get("address", f.stem),
+            "collection_name": bldg.name if bldg else None,
+            "hcd_reference_number": hcd.get("hcd_reference_number"),
+            "typology": hcd.get("typology"),
+            "construction_date": hcd.get("construction_date"),
+        })
 
     # Setup camera and lighting
     setup_scene(buildings, spacing)
 
     print(f"\n=== Done: {len(buildings)} buildings generated ===")
-    return buildings
+    return {
+        "collections": buildings,
+        "files": files,
+        "buildings": manifest_buildings,
+    }
 
 
 def setup_scene(buildings, spacing):
     """Set up camera, sun, and render settings."""
-    n = len(buildings)
-    center_x = (n - 1) * spacing / 2
+    # Compute scene bounds from all building collections
+    all_xs, all_ys = [], []
+    for col in buildings:
+        if col:
+            for obj in col.objects:
+                if obj.type == 'MESH':
+                    all_xs.append(obj.location.x)
+                    all_ys.append(obj.location.y)
 
-    # Sun light — facing the front facades (facades face +Y direction)
-    bpy.ops.object.light_add(type='SUN', location=(center_x, 20, 30))
+    if all_xs:
+        center_x = (min(all_xs) + max(all_xs)) / 2
+        center_y = (min(all_ys) + max(all_ys)) / 2
+        spread = max(max(all_xs) - min(all_xs), max(all_ys) - min(all_ys))
+        # For neighbourhood-scale (many buildings), keep a wide view
+        # For single/few buildings, frame tightly around the building(s)
+        if spread > 50:
+            extent = spread
+        else:
+            extent = max(spread, 30)
+    else:
+        n = len(buildings)
+        center_x = (n - 1) * spacing / 2
+        center_y = 0
+        extent = n * spacing
+
+    # Sun light
+    bpy.ops.object.light_add(type='SUN', location=(center_x, center_y + 50, 50))
     sun = bpy.context.active_object
     sun.name = "Sun"
     sun.data.energy = 4.0
-    # Sun shining from in front and above, slightly from the right
     sun.rotation_euler = (math.radians(55), math.radians(10), math.radians(200))
 
-    # Camera — positioned in front of buildings looking at facades
-    bpy.ops.object.camera_add(location=(center_x, spacing * 1.2, 12))
-    cam = bpy.context.active_object
-    cam.name = "Camera"
-    cam.rotation_euler = (math.radians(72), 0, math.radians(180))
+    # Camera — angled perspective view
+    n_buildings = len([c for c in buildings if c])
+    if n_buildings <= 3:
+        # Close-up: eye-level 3/4 view for single/few buildings
+        cam_dist = max(extent * 0.6, 20)
+        cam_height = cam_dist * 0.5
+        cam_x = center_x + cam_dist * 0.4
+        cam_y = center_y - cam_dist * 0.5
+        cam_pitch = math.degrees(math.atan2(cam_height, cam_dist * 0.5))
+        bpy.ops.object.camera_add(location=(cam_x, cam_y, cam_height))
+        cam = bpy.context.active_object
+        cam.name = "Camera"
+        cam.rotation_euler = (math.radians(cam_pitch), 0, math.radians(155))
+    else:
+        # Wide neighbourhood view
+        cam_height = extent * 0.8
+        bpy.ops.object.camera_add(location=(center_x, center_y - extent * 0.4, cam_height))
+        cam = bpy.context.active_object
+        cam.name = "Camera"
+        cam.rotation_euler = (math.radians(60), 0, math.radians(180))
     bpy.context.scene.camera = cam
 
     # Render settings
@@ -5760,7 +5868,8 @@ def setup_scene(buildings, spacing):
     scene.render.resolution_y = 1080
 
     # Ground plane
-    bpy.ops.mesh.primitive_plane_add(size=200, location=(center_x, 0, 0))
+    ground_size = max(extent * 2, 200)
+    bpy.ops.mesh.primitive_plane_add(size=ground_size, location=(center_x, center_y, 0))
     ground = bpy.context.active_object
     ground.name = "ground"
     ground_mat = get_or_create_material("mat_ground", colour_hex="#505050", roughness=0.95)
@@ -5790,11 +5899,182 @@ def default_output_paths(params_path, output_blend=None, output_dir=None, render
     return blend_path.resolve(), (render_out.resolve() if render_out else render_default.resolve())
 
 
+def default_manifest_path(blend_path):
+    """Place the run manifest next to the output .blend file."""
+    return blend_path.with_suffix(".manifest.json")
+
+
+def write_manifest(manifest_path, params_path, blend_path, render_path, do_render, run_data):
+    """Write a machine-readable summary of the generation run."""
+    run_data = run_data or {}
+    payload = {
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "params_path": str(Path(params_path).resolve()),
+        "blend_path": str(blend_path),
+        "render_path": str(render_path) if do_render else None,
+        "building_count": len(run_data.get("buildings", [])),
+        "buildings": run_data.get("buildings", []),
+    }
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(manifest_path, "w") as f:
+        json.dump(payload, f, indent=2)
+        f.write("\n")
+    print(f"Manifest: {manifest_path}")
+
+
+def purge_orphans_safe():
+    """Purge Blender orphan data with operator fallback for headless/context issues."""
+    try:
+        bpy.ops.outliner.orphans_purge(do_local_ids=True, do_linked_ids=True, do_recursive=True)
+    except Exception:
+        # Fallback: manually purge orphan meshes and materials
+        for block in list(bpy.data.meshes):
+            if block.users == 0:
+                bpy.data.meshes.remove(block)
+        for block in list(bpy.data.materials):
+            if block.users == 0:
+                bpy.data.materials.remove(block)
+
+
+def resolve_batch_files(params_dir, output_dir=None, do_render=False,
+                        skip_existing=False, match=None, limit=None):
+    """Resolve which batch files would be processed and where outputs would go."""
+    params_dir = Path(params_dir)
+    files = sorted(f for f in params_dir.glob("*.json") if not f.name.startswith("_"))
+    if match:
+        needle = match.lower()
+        files = [f for f in files if needle in f.stem.lower()]
+    if isinstance(limit, int) and limit > 0:
+        files = files[:limit]
+
+    out_dir = Path(output_dir) if output_dir else params_dir.parent / "outputs"
+    plans = []
+    for f in files:
+        blend_path, render_path = default_output_paths(str(f), output_dir=str(out_dir))
+        manifest_path = default_manifest_path(blend_path)
+        skipped = bool(skip_existing and blend_path.exists())
+        plans.append({
+            "param_file": str(f.resolve()),
+            "blend_path": str(blend_path),
+            "render_path": str(render_path) if do_render else None,
+            "manifest_path": str(manifest_path),
+            "skipped": skipped,
+        })
+    return plans
+
+
+def generate_batch_individual(params_dir, output_dir=None, do_render=False,
+                              skip_existing=False, match=None, limit=None):
+    """Generate one .blend per param file plus a batch manifest."""
+    params_dir = Path(params_dir)
+    plans = resolve_batch_files(
+        params_dir,
+        output_dir=output_dir,
+        do_render=do_render,
+        skip_existing=skip_existing,
+        match=match,
+        limit=limit,
+    )
+    if not plans:
+        print(f"[ERROR] No param files found in: {params_dir}")
+        return None
+
+    out_dir = Path(output_dir) if output_dir else params_dir.parent / "outputs"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    batch_manifest = {
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "params_path": str(params_dir.resolve()),
+        "mode": "batch_individual",
+        "building_count": len(plans),
+        "filters": {
+            "match": match,
+            "limit": limit,
+            "skip_existing": skip_existing,
+        },
+        "counts": {
+            "completed": 0,
+            "skipped": 0,
+            "failed": 0,
+        },
+        "buildings": [],
+    }
+
+    print(f"=== Parametric Building Generator ===")
+    print(f"Files: {len(plans)}")
+    print("Mode: batch individual")
+
+    for i, plan in enumerate(plans, start=1):
+        f = Path(plan["param_file"])
+        blend_path = Path(plan["blend_path"])
+        render_path = Path(plan["render_path"]) if plan["render_path"] else None
+        manifest_path = Path(plan["manifest_path"])
+        print(f"\n--- [{i}/{len(plans)}] {f.name} ---")
+
+        if plan["skipped"]:
+            print(f"  [SKIP] Existing output: {blend_path.name}")
+            batch_manifest["counts"]["skipped"] += 1
+            batch_manifest["buildings"].append({
+                "param_file": str(f.resolve()),
+                "blend_path": str(blend_path),
+                "render_path": str(render_path) if do_render and render_path and render_path.exists() else None,
+                "manifest_path": str(manifest_path) if manifest_path.exists() else None,
+                "skipped": True,
+                "status": "skipped",
+            })
+            continue
+
+        try:
+            run_data = load_and_generate(str(f), spacing=15.0)
+
+            purge_orphans_safe()
+            bpy.ops.wm.save_as_mainfile(filepath=str(blend_path))
+            print(f"Saved: {blend_path}")
+
+            rendered = None
+            if do_render:
+                bpy.context.scene.render.filepath = str(render_path)
+                bpy.ops.render.render(write_still=True)
+                rendered = str(render_path)
+                print(f"Rendered: {render_path}")
+
+            write_manifest(manifest_path, str(f), blend_path, render_path, do_render, run_data)
+            batch_manifest["counts"]["completed"] += 1
+            batch_manifest["buildings"].append({
+                "param_file": str(f.resolve()),
+                "blend_path": str(blend_path),
+                "render_path": rendered,
+                "manifest_path": str(manifest_path),
+                "summary": run_data.get("buildings", [{}])[0] if run_data else {},
+                "skipped": False,
+                "status": "completed",
+            })
+        except Exception as e:
+            print(f"  [FAIL] {f.name}: {e}")
+            batch_manifest["counts"]["failed"] += 1
+            batch_manifest["buildings"].append({
+                "param_file": str(f.resolve()),
+                "blend_path": str(blend_path),
+                "render_path": None,
+                "manifest_path": None,
+                "skipped": False,
+                "status": "failed",
+                "error": str(e),
+            })
+
+    batch_manifest_path = out_dir / "batch.manifest.json"
+    with open(batch_manifest_path, "w") as f:
+        json.dump(batch_manifest, f, indent=2)
+        f.write("\n")
+    print(f"\nBatch manifest: {batch_manifest_path}")
+    return batch_manifest
+
+
 # ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
-if __name__ == "__main__" or True:  # Always run when exec'd in Blender
+if __name__ == "__main__":
     import sys
 
     # Parse args after "--"
@@ -5803,7 +6083,13 @@ if __name__ == "__main__" or True:  # Always run when exec'd in Blender
     output_blend = None
     output_dir = None
     render_output = None
+    manifest_output = None
     do_render = False
+    batch_individual = False
+    skip_existing = False
+    match_filter = None
+    limit = None
+    dry_run = False
 
     if "--" in argv:
         args = argv[argv.index("--") + 1:]
@@ -5818,11 +6104,79 @@ if __name__ == "__main__" or True:  # Always run when exec'd in Blender
                 output_dir = args[i + 1]
             elif arg == "--render":
                 do_render = True
+            elif arg == "--batch-individual":
+                batch_individual = True
+            elif arg == "--skip-existing":
+                skip_existing = True
+            elif arg == "--dry-run":
+                dry_run = True
+            elif arg == "--match" and i + 1 < len(args):
+                match_filter = args[i + 1]
+            elif arg == "--limit" and i + 1 < len(args):
+                try:
+                    limit = int(args[i + 1])
+                except ValueError:
+                    limit = None
             elif arg == "--render-output" and i + 1 < len(args):
                 render_output = args[i + 1]
+            elif arg == "--manifest-output" and i + 1 < len(args):
+                manifest_output = args[i + 1]
+
+    if dry_run:
+        path = Path(params_path)
+        if path.is_dir() and batch_individual:
+            plans = resolve_batch_files(
+                path,
+                output_dir=output_dir,
+                do_render=do_render,
+                skip_existing=skip_existing,
+                match=match_filter,
+                limit=limit,
+            )
+            print("=== Dry Run ===")
+            print(f"Mode: batch individual")
+            print(f"Files: {len(plans)}")
+            for plan in plans:
+                status = "SKIP" if plan["skipped"] else "RUN"
+                print(f"[{status}] {Path(plan['param_file']).name} -> {Path(plan['blend_path']).name}")
+                if plan["render_path"]:
+                    print(f"       render: {Path(plan['render_path']).name}")
+                print(f"       manifest: {Path(plan['manifest_path']).name}")
+        else:
+            blend_path, render_path = default_output_paths(
+                params_path,
+                output_blend=output_blend,
+                output_dir=output_dir,
+                render_path=render_output,
+            )
+            manifest_path = Path(manifest_output).resolve() if manifest_output else default_manifest_path(blend_path)
+            print("=== Dry Run ===")
+            print(f"Params: {Path(params_path).resolve()}")
+            print(f"Blend: {blend_path}")
+            if do_render:
+                print(f"Render: {render_path}")
+            print(f"Manifest: {manifest_path}")
+        sys.exit(0)
+
+    if Path(params_path).is_dir() and batch_individual:
+        try:
+            generate_batch_individual(
+                params_path,
+                output_dir=output_dir,
+                do_render=do_render,
+                skip_existing=skip_existing,
+                match=match_filter,
+                limit=limit,
+            )
+        except Exception as e:
+            print(f"Batch generation failed: {e}")
+        sys.exit(0)
 
     # Generate buildings
-    load_and_generate(params_path)
+    run_data = load_and_generate(params_path)
+    if run_data is None:
+        print("[ERROR] Generation aborted due to invalid input path.")
+        sys.exit(1)
 
     blend_path, render_path = default_output_paths(
         params_path,
@@ -5830,10 +6184,11 @@ if __name__ == "__main__" or True:  # Always run when exec'd in Blender
         output_dir=output_dir,
         render_path=render_output,
     )
+    manifest_path = Path(manifest_output).resolve() if manifest_output else default_manifest_path(blend_path)
     blend_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Purge orphan data to reduce file size
-    bpy.ops.outliner.orphans_purge(do_local_ids=True, do_linked_ids=True, do_recursive=True)
+    purge_orphans_safe()
     try:
         bpy.ops.wm.save_as_mainfile(filepath=str(blend_path))
         print(f"Saved: {blend_path}")
@@ -5848,3 +6203,8 @@ if __name__ == "__main__" or True:  # Always run when exec'd in Blender
             print(f"Rendered: {render_path}")
         except Exception as e:
             print(f"Could not render snapshot: {e}")
+
+    try:
+        write_manifest(manifest_path, params_path, blend_path, render_path, do_render, run_data)
+    except Exception as e:
+        print(f"Could not write manifest: {e}")
