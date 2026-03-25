@@ -850,7 +850,16 @@ def create_walls(params, depth=None):
 
     if "brick" in mat_type:
         mat = create_brick_material(f"mat_brick_{hex_id}", facade_hex, mortar_hex)
-    elif "paint" in mat_type or "stucco" in mat_type or "clapboard" in mat_type:
+    elif "stone" in mat_type or "concrete" in mat_type:
+        mat = create_stone_material(f"mat_stone_{hex_id}", facade_hex)
+    elif (
+        "paint" in mat_type
+        or "stucco" in mat_type
+        or "clapboard" in mat_type
+        or "wood" in mat_type
+        or "vinyl" in mat_type
+        or "siding" in mat_type
+    ):
         mat = create_painted_material(f"mat_painted_{hex_id}", facade_hex)
     else:
         mat = create_brick_material(f"mat_facade_{hex_id}", facade_hex, mortar_hex)
@@ -1627,7 +1636,16 @@ def create_gable_walls(params, wall_h, width, depth, bldg_id=""):
     mat_type = str(params.get("facade_material", "brick")).lower()
     if "brick" in mat_type:
         mat = create_brick_material(f"mat_brick_{hex_id}", facade_hex)
-    elif "paint" in mat_type or "stucco" in mat_type or "clapboard" in mat_type:
+    elif "stone" in mat_type or "concrete" in mat_type:
+        mat = create_stone_material(f"mat_stone_{hex_id}", facade_hex)
+    elif (
+        "paint" in mat_type
+        or "stucco" in mat_type
+        or "clapboard" in mat_type
+        or "wood" in mat_type
+        or "vinyl" in mat_type
+        or "siding" in mat_type
+    ):
         mat = create_painted_material(f"mat_painted_{hex_id}", facade_hex)
     else:
         mat = create_brick_material(f"mat_facade_{hex_id}", facade_hex)
@@ -5916,7 +5934,7 @@ def write_manifest(manifest_path, params_path, blend_path, render_path, do_rende
         "buildings": run_data.get("buildings", []),
     }
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(manifest_path, "w") as f:
+    with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
         f.write("\n")
     print(f"Manifest: {manifest_path}")
@@ -6093,15 +6111,40 @@ if __name__ == "__main__":
 
     if "--" in argv:
         args = argv[argv.index("--") + 1:]
-        for i, arg in enumerate(args):
-            if arg == "--params" and i + 1 < len(args):
-                params_path = args[i + 1]
-            elif arg == "--single" and i + 1 < len(args):
-                params_path = args[i + 1]
-            elif arg == "--output-blend" and i + 1 < len(args):
-                output_blend = args[i + 1]
-            elif arg == "--output-dir" and i + 1 < len(args):
-                output_dir = args[i + 1]
+
+        def _get_value(idx):
+            nxt = idx + 1
+            if nxt >= len(args):
+                return None
+            value = args[nxt]
+            if isinstance(value, str) and value.startswith("--"):
+                return None
+            return value
+
+        i = 0
+        while i < len(args):
+            arg = args[i]
+            if arg in ("--params", "--single"):
+                value = _get_value(i)
+                if value is None:
+                    print(f"[WARN] Missing value for {arg}; keeping default params path")
+                else:
+                    params_path = value
+                    i += 1
+            elif arg == "--output-blend":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --output-blend; ignoring")
+                else:
+                    output_blend = value
+                    i += 1
+            elif arg == "--output-dir":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --output-dir; ignoring")
+                else:
+                    output_dir = value
+                    i += 1
             elif arg == "--render":
                 do_render = True
             elif arg == "--batch-individual":
@@ -6110,17 +6153,41 @@ if __name__ == "__main__":
                 skip_existing = True
             elif arg == "--dry-run":
                 dry_run = True
-            elif arg == "--match" and i + 1 < len(args):
-                match_filter = args[i + 1]
-            elif arg == "--limit" and i + 1 < len(args):
-                try:
-                    limit = int(args[i + 1])
-                except ValueError:
-                    limit = None
-            elif arg == "--render-output" and i + 1 < len(args):
-                render_output = args[i + 1]
-            elif arg == "--manifest-output" and i + 1 < len(args):
-                manifest_output = args[i + 1]
+            elif arg == "--match":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --match; ignoring")
+                else:
+                    match_filter = value
+                    i += 1
+            elif arg == "--limit":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --limit; ignoring")
+                else:
+                    try:
+                        limit = int(value)
+                    except ValueError:
+                        print(f"[WARN] Invalid --limit '{value}'; ignoring")
+                        limit = None
+                    i += 1
+            elif arg == "--render-output":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --render-output; ignoring")
+                else:
+                    render_output = value
+                    i += 1
+            elif arg == "--manifest-output":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --manifest-output; ignoring")
+                else:
+                    manifest_output = value
+                    i += 1
+            elif isinstance(arg, str) and arg.startswith("--"):
+                print(f"[WARN] Unknown option: {arg}")
+            i += 1
 
     if dry_run:
         path = Path(params_path)
