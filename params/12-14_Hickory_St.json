@@ -1,19 +1,18 @@
 {
   "building_name": "12-14 Hickory St",
-  "floors": 3,
+  "floors": 2,
   "facade_material": "brick",
   "facade_colour": "red brick with white dormer-style upper bays",
   "windows_per_floor": [
-    6,
-    6,
-    6
+    3,
+    3
   ],
   "window_type": "mixed",
   "door_count": 4,
   "door_type": "residential",
   "has_storefront": false,
   "condition": "good",
-  "roof_type": "gable",
+  "roof_type": "flat",
   "roof_features": [
     "dormers",
     "shared_drive"
@@ -59,7 +58,10 @@
       "13 HICKORY ST",
       "14 HICKORY ST"
     ],
-    "db_revision_ts": "2026-03-25T14:51:44"
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "qa_photo_fixes": [
+      "Photo: 2fl red brick semi pair ~8m, flat roof"
+    ]
   },
   "overall_style": "Residential",
   "notes": "Multi-unit houseform building with garage-front access and upper dormer projections.",
@@ -190,11 +192,10 @@
     "has_window": true
   },
   "volumes": [],
-  "facade_width_m": 5.0,
-  "total_height_m": 9.600000000000001,
+  "facade_width_m": 8.0,
+  "total_height_m": 6.5,
   "floor_heights_m": [
-    3.2,
-    3.2,
+    3.3,
     3.2
   ],
   "chimneys": {

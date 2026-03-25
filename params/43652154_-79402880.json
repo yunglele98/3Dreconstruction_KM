@@ -4,8 +4,8 @@
   "facade_material": "brick",
   "facade_colour": "red brick with white upper gables and a rear porch",
   "windows_per_floor": [
-    5,
-    5
+    4,
+    4
   ],
   "window_type": "mixed",
   "door_count": 2,
@@ -49,7 +49,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m, capped windows to 4/floor"
+    ]
   },
   "overall_style": "Residential",
   "notes": "Rear-facing lane house with a central porch and attached neighbors.",
@@ -71,7 +74,7 @@
   ],
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -152,7 +155,7 @@
     "has_window": true
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

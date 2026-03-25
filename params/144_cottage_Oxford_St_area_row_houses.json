@@ -8,8 +8,8 @@
   "facade_material": "brick",
   "facade_colour": "warm red-orange brick, with some variation in colour across the row",
   "windows_per_floor": [
-    2,
-    2
+    3,
+    3
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -105,7 +105,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Photo: 2.5fl brick row houses with gambrel ~12m"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 0.9,
@@ -245,7 +248,7 @@
     "has_window": true
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 12.0,
   "total_height_m": 8.0,
   "chimneys": {
     "count": 1,

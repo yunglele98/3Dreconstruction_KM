@@ -116,7 +116,10 @@
         "total_height_m": 39.82,
         "has_storefront": false
       }
-    }
+    },
+    "qa_photo_fixes": [
+      "commercial heuristic: 8.0x12.0m"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 1.1,
@@ -190,7 +193,7 @@
   },
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 12.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -272,7 +275,7 @@
     "spring_height_ratio": 0.7
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 8.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

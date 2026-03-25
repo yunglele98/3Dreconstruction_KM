@@ -113,7 +113,10 @@
         "total_height_m": 12.64,
         "has_storefront": true
       }
-    }
+    },
+    "qa_photo_fixes": [
+      "Single commercial unit ~8m"
+    ]
   },
   "window_arrangement": "asymmetric",
   "door_width_m": 0.95,
@@ -168,7 +171,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 15.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -254,7 +257,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 8.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

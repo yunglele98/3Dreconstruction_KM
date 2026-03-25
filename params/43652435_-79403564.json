@@ -4,7 +4,7 @@
   "facade_material": "brick",
   "facade_colour": "dark red-brown brick with a bright yellow garage door",
   "windows_per_floor": [
-    6
+    4
   ],
   "window_type": "rectangular",
   "door_count": 2,
@@ -49,7 +49,10 @@
     ],
     "reference_photo_count": 5,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m, capped windows to 4/floor"
+    ]
   },
   "overall_style": "Commercial",
   "notes": "Low service garage block with a prominent repair-bay opening.",
@@ -72,7 +75,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -124,7 +127,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 3.2,
   "floor_heights_m": [
     3.2

@@ -44,6 +44,9 @@
     "db_revision_ts": "2026-03-25T14:51:45",
     "db_address_candidates": [
       "2A KENSINGTON AVE"
+    ],
+    "qa_photo_fixes": [
+      "commercial heuristic: 8.0x12.0m"
     ]
   },
   "notes": "Small bar frontage tucked into the Kensington houseform row.",
@@ -73,7 +76,7 @@
   },
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 12.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -132,7 +135,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 8.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

@@ -4,16 +4,16 @@
   "facade_material": "brick",
   "facade_colour": "dark blue-gray, red, cream, and charcoal attached houseform commercial facades",
   "windows_per_floor": [
-    6,
-    6,
-    6
+    4,
+    4,
+    3
   ],
   "window_type": "mixed",
   "door_count": 5,
   "door_type": "storefront",
   "has_storefront": true,
   "condition": "fair",
-  "roof_type": "mixed",
+  "roof_type": "gable",
   "roof_features": [
     "gable_fronts"
   ],
@@ -50,7 +50,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Photo: bay-and-gable commercial row ~35m"
+    ]
   },
   "overall_style": "Commercial",
   "storefront_description": "Attached row including tattoo, spa, and restaurant storefronts in former houses.",
@@ -110,7 +113,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 15.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -189,7 +192,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 35.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

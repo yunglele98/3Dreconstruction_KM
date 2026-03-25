@@ -4,9 +4,9 @@
   "facade_material": "brick",
   "facade_colour": "mixed red, cream, and painted brick storefront row with varied tenant signage",
   "windows_per_floor": [
-    3,
-    3,
-    3
+    8,
+    8,
+    8
   ],
   "window_type": "mixed",
   "door_count": 8,
@@ -50,7 +50,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Photo: very long commercial strip ~50m with 8+ storefronts"
+    ]
   },
   "overall_style": "Commercial",
   "storefront_description": "Continuous historic main-street row including Istanbul Shawarma, El Rancho, Manic Coffee, Bollywood Tacos, and Pomegranate uses.",
@@ -131,7 +134,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 15.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -211,7 +214,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 50.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

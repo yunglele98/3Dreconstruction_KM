@@ -45,6 +45,9 @@
     "db_address_candidates": [
       "2A KENSINGTON AVE",
       "2 KENSINGTON AVE"
+    ],
+    "qa_photo_fixes": [
+      "commercial heuristic: 20.0x15.0m"
     ]
   },
   "notes": "Shared corner/frontage between the end of El Rey and Crows Nest Barbershop.",
@@ -81,7 +84,7 @@
   },
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 15.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -140,7 +143,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 20.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

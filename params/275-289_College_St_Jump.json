@@ -4,9 +4,9 @@
   "facade_material": "brick",
   "facade_colour": "black-painted commercial block beside a faded white-painted brick heritage row with mixed illuminated storefront signs",
   "windows_per_floor": [
-    5,
     3,
-    3
+    5,
+    5
   ],
   "window_type": "mixed",
   "window_width_m": 1.1,
@@ -101,7 +101,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Photo: large dark commercial ~25m"
+    ]
   },
   "window_arrangement": "irregular",
   "door_width_m": 1.0,
@@ -205,7 +208,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 20.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -288,7 +291,7 @@
     "spring_height_ratio": 0.7
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 25.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

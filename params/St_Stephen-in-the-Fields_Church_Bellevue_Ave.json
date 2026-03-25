@@ -7,7 +7,7 @@
   "facade_material": "stone",
   "facade_colour": "dark brown-grey stone, heavily weathered",
   "windows_per_floor": [
-    4
+    3
   ],
   "window_type": "arched",
   "window_width_m": 0.9,
@@ -102,7 +102,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "residential heuristic: 5.0x12.0m, capped windows to 3/floor"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 2.0,
@@ -147,7 +150,7 @@
   "building_type": "residential",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 12.0,
   "facade_detail": {
     "brick_colour_hex": "#C8B898",
     "bond_pattern": "running bond",

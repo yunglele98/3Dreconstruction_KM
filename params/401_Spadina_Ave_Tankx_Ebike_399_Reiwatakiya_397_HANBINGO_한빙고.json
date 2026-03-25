@@ -4,9 +4,9 @@
   "facade_material": "brick",
   "facade_colour": "dark narrow-bay storefronts in black, pink, and blue below older red-brick upper walls",
   "windows_per_floor": [
+    3,
     4,
-    6,
-    6
+    4
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -110,7 +110,10 @@
       "400 SPADINA AVE",
       "401 SPADINA AVE"
     ],
-    "db_revision_ts": "2026-03-25T14:51:45"
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "qa_photo_fixes": [
+      "Commercial strip ~18m on Spadina"
+    ]
   },
   "window_arrangement": "irregular",
   "door_width_m": 0.95,
@@ -179,7 +182,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 15.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -265,7 +268,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 18.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

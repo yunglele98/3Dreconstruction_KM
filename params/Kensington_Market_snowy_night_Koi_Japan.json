@@ -27,11 +27,14 @@
       "facade_material -> brick",
       "roof_type -> gable",
       "building_name -> Kensington Market snowy night Koi Japan"
+    ],
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m"
     ]
   },
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_colour": "brick",
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
@@ -93,7 +96,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

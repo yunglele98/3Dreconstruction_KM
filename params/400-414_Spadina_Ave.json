@@ -4,10 +4,10 @@
   "facade_material": "brick",
   "facade_colour": "tan, brown, and red-brown mixed masonry with a rounded-corner upper mass and varied tenant storefronts below",
   "windows_per_floor": [
-    3,
-    3,
-    3,
-    3
+    4,
+    6,
+    6,
+    4
   ],
   "window_type": "mixed",
   "window_width_m": 1.2,
@@ -101,7 +101,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Large Spadina commercial ~35m"
+    ]
   },
   "window_arrangement": "irregular",
   "door_width_m": 1.0,
@@ -191,7 +194,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 20.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -291,7 +294,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 35.0,
   "total_height_m": 12.8,
   "floor_heights_m": [
     3.2,

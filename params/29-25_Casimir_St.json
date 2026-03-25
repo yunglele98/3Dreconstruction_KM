@@ -60,7 +60,10 @@
       "28 CASIMIR ST",
       "29 CASIMIR ST"
     ],
-    "db_revision_ts": "2026-03-25T14:51:45"
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m"
+    ]
   },
   "overall_style": "Residential",
   "notes": "Large attached courtyard apartment row facing inward from the lane.",
@@ -96,7 +99,7 @@
   ],
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -177,7 +180,7 @@
     "has_window": true
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

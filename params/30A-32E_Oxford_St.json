@@ -11,7 +11,7 @@
   "windows_per_floor": [
     3,
     3,
-    5
+    3
   ],
   "window_type": "mixed",
   "window_width_m": 0.8,
@@ -114,7 +114,10 @@
       "changes": [
         "floor_heights_m:rebalance_to_total"
       ]
-    }
+    },
+    "qa_photo_fixes": [
+      "residential heuristic: 5.0x12.0m, capped windows to 3/floor"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 0.95,
@@ -206,7 +209,7 @@
   "building_type": "residential",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 12.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",

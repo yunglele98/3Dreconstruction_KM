@@ -4,7 +4,7 @@
   "facade_material": "brick",
   "facade_colour": "aged white-painted brick with stained and peeling surfaces above dark storefronts",
   "windows_per_floor": [
-    5,
+    3,
     5,
     5
   ],
@@ -114,7 +114,10 @@
       "288 COLLEGE ST",
       "289 COLLEGE ST"
     ],
-    "db_revision_ts": "2026-03-25T14:51:45"
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "qa_photo_fixes": [
+      "Photo: commercial block ~25m"
+    ]
   },
   "window_arrangement": "irregular",
   "door_width_m": 1.0,
@@ -217,7 +220,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 20.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -300,7 +303,7 @@
     "spring_height_ratio": 0.7
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 25.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

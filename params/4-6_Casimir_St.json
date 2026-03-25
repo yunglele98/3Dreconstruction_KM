@@ -4,8 +4,8 @@
   "facade_material": "brick",
   "facade_colour": "red and white brick with a rear porch enclosure and a small side addition",
   "windows_per_floor": [
-    5,
-    5
+    4,
+    4
   ],
   "window_type": "mixed",
   "door_count": 3,
@@ -57,7 +57,10 @@
       "5 CASIMIR ST",
       "6 CASIMIR ST"
     ],
-    "db_revision_ts": "2026-03-25T14:51:45"
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m, capped windows to 4/floor"
+    ]
   },
   "overall_style": "Residential",
   "notes": "Small rear-lot residential building with a mix of brick and white siding.",
@@ -86,7 +89,7 @@
   ],
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -159,7 +162,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

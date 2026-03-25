@@ -4,8 +4,8 @@
   "facade_material": "brick",
   "facade_colour": "red brick and cream trim with a compact courtyard-access layout",
   "windows_per_floor": [
-    6,
-    6
+    4,
+    4
   ],
   "window_type": "rectangular",
   "door_count": 3,
@@ -47,7 +47,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m, capped windows to 4/floor"
+    ]
   },
   "overall_style": "Residential",
   "notes": "Attached courtyard-side rowhouse/apartment block with a shared drive and rear access.",
@@ -76,7 +79,7 @@
   ],
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -149,7 +152,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

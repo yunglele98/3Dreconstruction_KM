@@ -39,6 +39,9 @@
       "facade_material -> brick",
       "roof_type -> gable",
       "building_name -> 8-6 Glen Baillie Pl"
+    ],
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m"
     ]
   },
   "photo_observations": {
@@ -54,7 +57,7 @@
   "notes": "Part of Glen Baillie Pl row, visible in batch_008 daytime photos. Small semi-detached Victorian worker's houses, 2-2.5 storeys, painted brick in various colours.",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_colour": "brick",
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
@@ -115,7 +118,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 6.4,
   "floor_heights_m": [
     3.2,

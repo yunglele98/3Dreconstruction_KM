@@ -1,13 +1,12 @@
 {
   "building_name": "750 Dundas St / 356 Bathurst St medical-commercial corner building",
-  "floors": 4,
+  "floors": 3,
   "facade_material": "brick",
   "facade_colour": "pale greenish painted upper wall with teal trim, dark green storefront band, and light blue framing",
   "windows_per_floor": [
-    0,
-    2,
-    2,
-    1
+    4,
+    6,
+    4
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -99,7 +98,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 0.95,
@@ -168,7 +170,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 20.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -240,13 +242,12 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
-  "total_height_m": 12.8,
+  "facade_width_m": 30.0,
+  "total_height_m": 12.0,
   "floor_heights_m": [
-    3.2,
-    3.2,
-    3.2,
-    3.2
+    4.5,
+    3.8,
+    3.7
   ],
   "site": {}
 }

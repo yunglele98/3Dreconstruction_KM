@@ -4,10 +4,10 @@
   "facade_material": "brick",
   "facade_colour": "uniform light brown brick with green-tinted windows and varied commercial storefront treatments",
   "windows_per_floor": [
-    5,
-    5,
-    5,
-    1
+    3,
+    4,
+    4,
+    2
   ],
   "window_type": "rectangular",
   "window_width_m": 1.6,
@@ -103,7 +103,10 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Photo: 4fl brick+glass commercial ~20m with arch feature"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 1.2,
@@ -179,7 +182,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 18.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -279,7 +282,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 20.0,
   "total_height_m": 12.8,
   "floor_heights_m": [
     3.2,

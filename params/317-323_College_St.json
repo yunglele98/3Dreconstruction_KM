@@ -4,9 +4,9 @@
   "facade_material": "brick",
   "facade_colour": "tan brick lower facade with darker brown upper wall planes and black commercial glazing",
   "windows_per_floor": [
-    5,
     4,
-    4
+    5,
+    5
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -113,7 +113,10 @@
       "322 COLLEGE ST",
       "323 COLLEGE ST"
     ],
-    "db_revision_ts": "2026-03-25T14:51:45"
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "qa_photo_fixes": [
+      "Photo: commercial strip ~25m"
+    ]
   },
   "window_arrangement": "regular",
   "door_width_m": 1.0,
@@ -196,7 +199,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 18.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -282,7 +285,7 @@
     "mortar_hex": "#C8C0B0"
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 25.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

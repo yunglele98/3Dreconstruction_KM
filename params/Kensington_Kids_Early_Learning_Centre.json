@@ -8,8 +8,8 @@
   "facade_material": "brick",
   "facade_colour": "brown brick ground floor, blue corrugated metal cladding on upper storey and roof gables",
   "windows_per_floor": [
-    5,
-    5
+    4,
+    4
   ],
   "window_type": "fixed",
   "window_width_m": 1.0,
@@ -115,7 +115,10 @@
       "changes": [
         "floor_heights_m:rebalance_to_total"
       ]
-    }
+    },
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m, capped windows to 4/floor"
+    ]
   },
   "window_arrangement": "irregular",
   "door_width_m": 0.9,
@@ -160,7 +163,7 @@
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -246,7 +249,7 @@
     "has_window": true
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 6.4,
   "site": {}
 }

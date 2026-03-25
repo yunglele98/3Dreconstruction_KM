@@ -74,6 +74,9 @@
     "translated": true,
     "translations_applied": [
       "photo_obs"
+    ],
+    "qa_photo_fixes": [
+      "residential heuristic: 5.0x12.0m"
     ]
   },
   "decorative_elements": {
@@ -84,7 +87,7 @@
       "style": "simple"
     }
   },
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 12.0,
   "facade_colour": "red brick with white wooden front addition",
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",

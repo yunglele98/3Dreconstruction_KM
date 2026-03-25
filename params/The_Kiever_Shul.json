@@ -106,7 +106,10 @@
     ],
     "reference_photo_count": 4,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 1.5,
@@ -180,7 +183,7 @@
   },
   "party_wall_left": false,
   "party_wall_right": false,
-  "facade_depth_m": 10.0,
+  "facade_depth_m": 11.0,
   "facade_detail": {
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
@@ -263,7 +266,7 @@
     "spring_height_ratio": 0.7
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 6.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
     3.2,

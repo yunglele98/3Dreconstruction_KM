@@ -9,9 +9,9 @@
   "facade_material": "brick",
   "facade_colour": "red brick rear elevation with buff brick arches and pale green painted doors, garage doors, gutters, and trim",
   "windows_per_floor": [
-    6,
-    6,
-    3
+    3,
+    3,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.8,
@@ -112,7 +112,10 @@
       "changes": [
         "floor_heights_m:rebalance_to_total"
       ]
-    }
+    },
+    "qa_photo_fixes": [
+      "Residential row ~10m"
+    ]
   },
   "window_arrangement": "symmetric",
   "door_width_m": 0.95,
@@ -280,7 +283,7 @@
     "spring_height_ratio": 0.7
   },
   "volumes": [],
-  "facade_width_m": 5.0,
+  "facade_width_m": 10.0,
   "total_height_m": 9.600000000000001,
   "chimneys": {
     "count": 1,
