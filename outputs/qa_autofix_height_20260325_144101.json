@@ -1,0 +1,2861 @@
+{
+  "timestamp": "2026-03-25T14:41:01",
+  "mode": "apply",
+  "qa_report": "C:\\Users\\liam1\\blender_buildings\\outputs\\qa_fail_list_20260325_143855.json",
+  "targets": 475,
+  "changed_count": 475,
+  "skipped_count": 0,
+  "changed_files": [
+    {
+      "file": "100_Bellevue_Ave.json",
+      "old_total_height_m": 10.61,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "100_Nassau_St.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "101_Oxford_St.json",
+      "old_total_height_m": 13.31,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "102_Nassau_St.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "102_Oxford_St.json",
+      "old_total_height_m": 11.32,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "103_Bellevue_Ave.json",
+      "old_total_height_m": 9.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "103_Oxford_St.json",
+      "old_total_height_m": 13.31,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "104_Oxford_St.json",
+      "old_total_height_m": 11.32,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "105_Oxford_St.json",
+      "old_total_height_m": 11.77,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "106_Oxford_St.json",
+      "old_total_height_m": 11.24,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "107_Oxford_St.json",
+      "old_total_height_m": 11.77,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "108_Oxford_St.json",
+      "old_total_height_m": 11.24,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "109_Oxford_St.json",
+      "old_total_height_m": 11.77,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "10_Hickory_St.json",
+      "old_total_height_m": 10.2,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "10_Kensington_Ave_Urban_Catwalk.json",
+      "old_total_height_m": 10.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "10_Lippincott_St.json",
+      "old_total_height_m": 4.74,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "10_Oxford_St.json",
+      "old_total_height_m": 11.97,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "10_St_Andrew_St.json",
+      "old_total_height_m": 15.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "110_Oxford_St.json",
+      "old_total_height_m": 11.24,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "111_Oxford_St.json",
+      "old_total_height_m": 10.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "112_Oxford_St.json",
+      "old_total_height_m": 10.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "113_Oxford_St.json",
+      "old_total_height_m": 10.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "114_Nassau_St.json",
+      "old_total_height_m": 10.12,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "114_Oxford_St.json",
+      "old_total_height_m": 10.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "116_Nassau_St.json",
+      "old_total_height_m": 10.63,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "116_Oxford_St.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "118_Nassau_St.json",
+      "old_total_height_m": 10.63,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "11_Casimir_St.json",
+      "old_total_height_m": 4.45,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "11_Glen_Baillie_Pl.json",
+      "old_total_height_m": 6.58,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "11_Oxford_St.json",
+      "old_total_height_m": 10.51,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "120_Nassau_St.json",
+      "old_total_height_m": 10.79,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "122R_Nassau_St.json",
+      "old_total_height_m": 10.79,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "122_Nassau_St.json",
+      "old_total_height_m": 10.79,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "125_Oxford_St.json",
+      "old_total_height_m": 10.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "12A_Kensington_Ave.json",
+      "old_total_height_m": 17.23,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "12_Denison_Sq.json",
+      "old_total_height_m": 10.87,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "12_Hickory_St.json",
+      "old_total_height_m": 10.2,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "12_Kensington_Ave_Last_Temptation.json",
+      "old_total_height_m": 15.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "12_Nassau_St.json",
+      "old_total_height_m": 11.94,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "12_Oxford_St.json",
+      "old_total_height_m": 11.97,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "130_Denison_Ave.json",
+      "old_total_height_m": 5.31,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "132_Denison_Ave.json",
+      "old_total_height_m": 5.31,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "134_Denison_Ave.json",
+      "old_total_height_m": 5.31,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "136_Denison_Ave.json",
+      "old_total_height_m": 10.19,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "136_Nassau_St.json",
+      "old_total_height_m": 7.14,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "138_Denison_Ave.json",
+      "old_total_height_m": 10.19,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "138_Nassau_St.json",
+      "old_total_height_m": 7.14,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "13_Glen_Baillie_Pl.json",
+      "old_total_height_m": 6.58,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "13_Kensington_Ave_Causa_Culture_11.json",
+      "old_total_height_m": 20.71,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "13_Oxford_St.json",
+      "old_total_height_m": 10.51,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "13_Wales_Ave.json",
+      "old_total_height_m": 13.11,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "140_Denison_Ave.json",
+      "old_total_height_m": 10.19,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "141_Augusta_Ave.json",
+      "old_total_height_m": 14.81,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "142R_Denison_Ave.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "142_Denison_Ave.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "143_Augusta_Ave.json",
+      "old_total_height_m": 14.81,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "144_Baldwin_St.json",
+      "old_total_height_m": 12.29,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "144_Denison_Ave.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "145_Augusta_Ave.json",
+      "old_total_height_m": 14.81,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "145_Denison_Ave.json",
+      "old_total_height_m": 14.68,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "146A_Denison_Ave.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "146_Denison_Ave.json",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "147_Augusta_Ave.json",
+      "old_total_height_m": 14.81,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "147_Baldwin_St.json",
+      "old_total_height_m": 13.35,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "147_Denison_Ave.json",
+      "old_total_height_m": 14.68,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "148_Augusta_Ave.json",
+      "old_total_height_m": 8.89,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "148_Denison_Ave.json",
+      "old_total_height_m": 15.99,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "149_Augusta_Ave.json",
+      "old_total_height_m": 14.81,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "149_Baldwin_St.json",
+      "old_total_height_m": 13.35,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "149_Denison_Ave.json",
+      "old_total_height_m": 12.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "14A_Hickory_St.json",
+      "old_total_height_m": 7.85,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "14_Denison_Sq.json",
+      "old_total_height_m": 10.87,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "14_Hickory_St.json",
+      "old_total_height_m": 10.2,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "14_Kensington_Ave_Courage_My_Love.json",
+      "old_total_height_m": 15.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "14_Nassau_St.json",
+      "old_total_height_m": 11.94,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "14_Oxford_St.json",
+      "old_total_height_m": 11.97,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "14_St_Andrew_St.json",
+      "old_total_height_m": 13.17,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "151_Denison_Ave.json",
+      "old_total_height_m": 12.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "153_Augusta_Ave.json",
+      "old_total_height_m": 14.81,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "153_Denison_Ave.json",
+      "old_total_height_m": 12.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "15_Carlyle_St.json",
+      "old_total_height_m": 5.73,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "15_Carlyle_St_Starling_Automotive.json",
+      "old_total_height_m": 11.73,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "15_Glen_Baillie_Pl.json",
+      "old_total_height_m": 6.58,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "15_Oxford_St.json",
+      "old_total_height_m": 10.51,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "15_St_Andrew_St.json",
+      "old_total_height_m": 13.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "15_Wales_Ave.json",
+      "old_total_height_m": 14.47,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "160_Baldwin_St.json",
+      "old_total_height_m": 30.18,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "165-169_Augusta_Ave.json",
+      "old_total_height_m": 6.99,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "168_Baldwin_St.json",
+      "old_total_height_m": 12.06,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "16_Denison_Sq.json",
+      "old_total_height_m": 11.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "16_Kensington_Ave.json",
+      "old_total_height_m": 15.37,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "16_Lippincott_St.json",
+      "old_total_height_m": 11.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "16_Nassau_St.json",
+      "old_total_height_m": 12.48,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "16_Oxford_St.json",
+      "old_total_height_m": 11.97,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "170_Baldwin_St.json",
+      "old_total_height_m": 12.06,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "171_Augusta_Ave.json",
+      "old_total_height_m": 14.65,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "172_Baldwin_St.json",
+      "old_total_height_m": 12.06,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "173_Augusta_Ave.json",
+      "old_total_height_m": 14.65,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "175_Augusta_Ave.json",
+      "old_total_height_m": 14.65,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "176_Baldwin_St.json",
+      "old_total_height_m": 6.98,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "177_Augusta_Ave.json",
+      "old_total_height_m": 14.65,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "178_Baldwin_St.json",
+      "old_total_height_m": 6.98,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "179_Augusta_Ave.json",
+      "old_total_height_m": 14.65,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "17_Kensington_Ave_Dancing_Days_15.json",
+      "old_total_height_m": 20.71,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "17_Wales_Ave.json",
+      "old_total_height_m": 14.47,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "180_Baldwin_St.json",
+      "old_total_height_m": 6.98,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "182_Baldwin_St.json",
+      "old_total_height_m": 6.98,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "185D_Baldwin_St.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "185_Baldwin_St.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "189A_Baldwin_St.json",
+      "old_total_height_m": 3.44,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "18_Bellevue_Ave.json",
+      "old_total_height_m": 5.52,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "18_Denison_Sq.json",
+      "old_total_height_m": 11.22,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "18_Kensington_Ave.json",
+      "old_total_height_m": 15.37,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "18_Lippincott_St.json",
+      "old_total_height_m": 11.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "190_Augusta_Ave.json",
+      "old_total_height_m": 4.04,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "191_Augusta_Ave.json",
+      "old_total_height_m": 13.93,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "193_1_2_Baldwin_St.json",
+      "old_total_height_m": 11.64,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "196_Augusta_Ave.json",
+      "old_total_height_m": 13.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "197_1_2_Baldwin_St.json",
+      "old_total_height_m": 5.68,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "198_Baldwin_St.json",
+      "old_total_height_m": 6.97,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "199A_Augusta_Ave.json",
+      "old_total_height_m": 11.42,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "199_Augusta_Ave.json",
+      "old_total_height_m": 11.42,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "199_Baldwin_St.json",
+      "old_total_height_m": 5.68,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "19_Wales_Ave.json",
+      "old_total_height_m": 14.47,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "1A_Leonard_Ave.json",
+      "old_total_height_m": 13.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "1_Fitzroy_Ter.json",
+      "old_total_height_m": 17.23,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "1_Leonard_Pl.json",
+      "old_total_height_m": 16.88,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "1_Wales_Ave.json",
+      "old_total_height_m": 12.94,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "200_Baldwin_St.json",
+      "old_total_height_m": 11.58,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "201_Augusta_Ave.json",
+      "old_total_height_m": 11.42,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "201_Baldwin_St.json",
+      "old_total_height_m": 5.68,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "202_Baldwin_St.json",
+      "old_total_height_m": 11.58,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "203_Baldwin_St.json",
+      "old_total_height_m": 5.68,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "204_Baldwin_St.json",
+      "old_total_height_m": 11.58,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "206_Baldwin_St.json",
+      "old_total_height_m": 11.58,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "207_Augusta_Ave.json",
+      "old_total_height_m": 10.02,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "209_Augusta_Ave.json",
+      "old_total_height_m": 10.02,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "20_Kensington_Ave.json",
+      "old_total_height_m": 6.27,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "213_Augusta_Ave.json",
+      "old_total_height_m": 4.76,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "214_Augusta_Ave.json",
+      "old_total_height_m": 6.62,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "215_Augusta_Ave.json",
+      "old_total_height_m": 4.76,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "219_Augusta_Ave.json",
+      "old_total_height_m": 6.51,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "21_Wales_Ave.json",
+      "old_total_height_m": 14.47,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "223_Augusta_Ave.json",
+      "old_total_height_m": 5.68,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "225_Augusta_Ave.json",
+      "old_total_height_m": 5.68,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "22_Kensington_Ave.json",
+      "old_total_height_m": 6.27,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "234_Augusta_Ave_Dolce_Gelato.json",
+      "old_total_height_m": 16.45,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "235_Augusta_Ave.json",
+      "old_total_height_m": 11.58,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "23_St_Andrew_St.json",
+      "old_total_height_m": 6.58,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "23_Wales_Ave.json",
+      "old_total_height_m": 14.47,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "241_Augusta_Ave.json",
+      "old_total_height_m": 9.12,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "243_Augusta_Ave.json",
+      "old_total_height_m": 11.68,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "245_Augusta_Ave.json",
+      "old_total_height_m": 11.68,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "250_Augusta_Ave.json",
+      "old_total_height_m": 15.82,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "251_Augusta_Ave.json",
+      "old_total_height_m": 10.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "252_Augusta_Ave.json",
+      "old_total_height_m": 14.5,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "254_Augusta_Ave.json",
+      "old_total_height_m": 4.1,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "255_Augusta_Ave.json",
+      "old_total_height_m": 10.14,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "256C_Augusta_Ave.json",
+      "old_total_height_m": 11.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "256D_Augusta_Ave.json",
+      "old_total_height_m": 10.78,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "257_Augusta_Ave.json",
+      "old_total_height_m": 3.3,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "259_Augusta_Ave.json",
+      "old_total_height_m": 3.3,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "25_Bellevue_Ave.json",
+      "old_total_height_m": 14.21,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "25_Casimir_St.json",
+      "old_total_height_m": 11.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "25_Wales_Ave.json",
+      "old_total_height_m": 14.47,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "260_Augusta_Ave.json",
+      "old_total_height_m": 11.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "261_Augusta_Ave.json",
+      "old_total_height_m": 10.31,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "263_Augusta_Ave.json",
+      "old_total_height_m": 10.31,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "265_Augusta_Ave.json",
+      "old_total_height_m": 10.31,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "267_Augusta_Ave.json",
+      "old_total_height_m": 10.31,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "269_Augusta_Ave.json",
+      "old_total_height_m": 10.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "26A_Oxford_St.json",
+      "old_total_height_m": 12.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "26B_Oxford_St.json",
+      "old_total_height_m": 12.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "26C_Oxford_St.json",
+      "old_total_height_m": 12.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "26_Lippincott_St.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "271_Augusta_Ave.json",
+      "old_total_height_m": 10.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "272_Augusta_Ave.json",
+      "old_total_height_m": 14.87,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "273_Augusta_Ave.json",
+      "old_total_height_m": 10.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "274_Augusta_Ave.json",
+      "old_total_height_m": 14.87,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "275_Augusta_Ave.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "277A_Augusta_Ave.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "277_Augusta_Ave.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "279_Augusta_Ave.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "27_Bellevue_Ave.json",
+      "old_total_height_m": 3.74,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "27_Kensington_Ave_Fashion_Old_and_New_-_Da_Vintage_Code_A.json",
+      "old_total_height_m": 11.5,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "27_Lippincott_St.json",
+      "old_total_height_m": 14.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "285_Augusta_Ave.json",
+      "old_total_height_m": 11.05,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "287_Augusta_Ave.json",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "28A_Oxford_St.json",
+      "old_total_height_m": 14.06,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "28B_Oxford_St.json",
+      "old_total_height_m": 14.06,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "28_Denison_Sq.json",
+      "old_total_height_m": 14.21,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "28_Kensington_Pl.json",
+      "old_total_height_m": 11.36,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "28_Lippincott_St.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "291_Augusta_Ave.json",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "292_Spadina_Ave.json",
+      "old_total_height_m": 11.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "293_Augusta_Ave.json",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "294-296_Spadina_Ave.json",
+      "old_total_height_m": 11.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "294_Spadina_Ave.json",
+      "old_total_height_m": 11.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "295_Augusta_Ave.json",
+      "old_total_height_m": 10.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "295_College_St.json",
+      "old_total_height_m": 14.3,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "295_College_St_Royal_Care_Walk-in_Clinic_others.json",
+      "old_total_height_m": 14.3,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "296_Spadina_Ave.json",
+      "old_total_height_m": 11.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "297_Augusta_Ave.json",
+      "old_total_height_m": 10.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "298-300_Spadina_Ave.json",
+      "old_total_height_m": 9.43,
+      "new_total_height_m": 12.0,
+      "floors": 5.0
+    },
+    {
+      "file": "299_Augusta_Ave.json",
+      "old_total_height_m": 4.53,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "29_Lippincott_St.json",
+      "old_total_height_m": 14.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "29_Nassau_St.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "29_Wales_Ave.json",
+      "old_total_height_m": 15.99,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "2A_Kensington_Ave.json",
+      "old_total_height_m": 11.46,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "2_Hickory_St.json",
+      "old_total_height_m": 9.95,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "2_St_Andrew_St.json",
+      "old_total_height_m": 5.76,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "300_Spadina_Ave.json",
+      "old_total_height_m": 9.43,
+      "new_total_height_m": 12.0,
+      "floors": 5.0
+    },
+    {
+      "file": "301_Augusta_Ave.json",
+      "old_total_height_m": 4.53,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "302_Spadina_Ave.json",
+      "old_total_height_m": 26.24,
+      "new_total_height_m": 19.2,
+      "floors": 4.0
+    },
+    {
+      "file": "305_Augusta_Ave.json",
+      "old_total_height_m": 3.21,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "307_Augusta_Ave.json",
+      "old_total_height_m": 3.21,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "309_Augusta_Ave.json",
+      "old_total_height_m": 5.31,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "30_Kensington_Ave.json",
+      "old_total_height_m": 12.3,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "30_Kensington_Pl.json",
+      "old_total_height_m": 11.36,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "30_Lippincott_St.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "310_Spadina_Ave.json",
+      "old_total_height_m": 28.2,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "311_Augusta_Ave.json",
+      "old_total_height_m": 11.36,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "315_Augusta_Ave.json",
+      "old_total_height_m": 11.36,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "318_Spadina_Ave.json",
+      "old_total_height_m": 28.31,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "319_Augusta_Ave.json",
+      "old_total_height_m": 15.24,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "319_College_St.json",
+      "old_total_height_m": 17.75,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "31_Lippincott_St.json",
+      "old_total_height_m": 14.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "31_Nassau_St.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "322_Spadina_Ave.json",
+      "old_total_height_m": 17.2,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "323_College_St.json",
+      "old_total_height_m": 4.92,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "324_Spadina_Ave.json",
+      "old_total_height_m": 17.2,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "326_Spadina_Ave.json",
+      "old_total_height_m": 17.2,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "328_Spadina_Ave.json",
+      "old_total_height_m": 17.2,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "32_Kensington_Ave.json",
+      "old_total_height_m": 11.94,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "32_Lippincott_St.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "332_Spadina_Ave.json",
+      "old_total_height_m": 5.87,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "333_College_St.json",
+      "old_total_height_m": 4.92,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "334_Spadina_Ave.json",
+      "old_total_height_m": 5.87,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "335_College_St.json",
+      "old_total_height_m": 4.92,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "335_College_St_ASTRO_house_of_vapes_view_43657624_-79402228.json",
+      "old_total_height_m": 4.92,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "337_College_St.json",
+      "old_total_height_m": 6.78,
+      "new_total_height_m": 12.0,
+      "floors": 5.0
+    },
+    {
+      "file": "338_Spadina_Ave.json",
+      "old_total_height_m": 15.66,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "339A_College_St.json",
+      "old_total_height_m": 6.78,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "339_College_St.json",
+      "old_total_height_m": 4.92,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "33_Oxford_St.json",
+      "old_total_height_m": 10.3,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "33_Wales_Ave.json",
+      "old_total_height_m": 11.53,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "340_Spadina_Ave.json",
+      "old_total_height_m": 15.66,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "341_College_St.json",
+      "old_total_height_m": 6.78,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "346_Spadina_Ave.json",
+      "old_total_height_m": 15.66,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "347_Bathurst_St.json",
+      "old_total_height_m": 11.31,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "34_Bellevue_Ave.json",
+      "old_total_height_m": 10.09,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "34_Kensington_Ave.json",
+      "old_total_height_m": 11.94,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "34_Lippincott_St.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "34_Oxford_St.json",
+      "old_total_height_m": 18.69,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "353_College_St.json",
+      "old_total_height_m": 11.77,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "355_College_St.json",
+      "old_total_height_m": 16.25,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "357_College_St.json",
+      "old_total_height_m": 20.13,
+      "new_total_height_m": 19.2,
+      "floors": 4.0
+    },
+    {
+      "file": "35_Bellevue_Ave.json",
+      "old_total_height_m": 1.03,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "35_Kensington_Ave.json",
+      "old_total_height_m": 6.89,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "35_Nassau_St.json",
+      "old_total_height_m": 9.39,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "35_Wales_Ave.json",
+      "old_total_height_m": 11.53,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "362_Spadina_Ave.json",
+      "old_total_height_m": 16.03,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "365_College_St.json",
+      "old_total_height_m": 9.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "366A_Spadina_Ave.json",
+      "old_total_height_m": 6.8,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "36_Kensington_Ave.json",
+      "old_total_height_m": 11.94,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "36_Lippincott_St.json",
+      "old_total_height_m": 11.25,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "374_Spadina_Ave.json",
+      "old_total_height_m": 3.88,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "376_Spadina_Ave.json",
+      "old_total_height_m": 14.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "37_Kensington_Ave.json",
+      "old_total_height_m": 6.89,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "37_Wales_Ave.json",
+      "old_total_height_m": 11.53,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "38_Kensington_Ave.json",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "38_Kensington_Pl.json",
+      "old_total_height_m": 11.36,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "392_Spadina_Ave.json",
+      "old_total_height_m": 10.22,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "394_Spadina_Ave.json",
+      "old_total_height_m": 10.22,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "396_Spadina_Ave.json",
+      "old_total_height_m": 10.22,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "39_Kensington_Ave.json",
+      "old_total_height_m": 6.89,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "39_Oxford_St.json",
+      "old_total_height_m": 10.92,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "39_Wales_Ave.json",
+      "old_total_height_m": 11.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "3_Kensington_Ave.json",
+      "old_total_height_m": 13.34,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "3_Leonard_Ave.json",
+      "old_total_height_m": 10.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "3_Leonard_Pl.json",
+      "old_total_height_m": 16.88,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "3_Nassau_St.json",
+      "old_total_height_m": 3.38,
+      "new_total_height_m": 9.6,
+      "floors": 4.0
+    },
+    {
+      "file": "3_Oxford_St.json",
+      "old_total_height_m": 13.81,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "3_Wales_Ave.json",
+      "old_total_height_m": 12.94,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "400_Spadina_Ave.json",
+      "old_total_height_m": 6.77,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "401_College_St.json",
+      "old_total_height_m": 16.98,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "401_College_St_Kensington_Kids_Early_Learning_Centre.json",
+      "old_total_height_m": 16.98,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "402_Spadina_Ave.json",
+      "old_total_height_m": 6.77,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "404_Spadina_Ave.json",
+      "old_total_height_m": 6.77,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "406_Spadina_Ave.json",
+      "old_total_height_m": 6.77,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "408_Spadina_Ave.json",
+      "old_total_height_m": 6.77,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "409_1_2_College_St.json",
+      "old_total_height_m": 11.92,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "40_Kensington_Ave.json",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "410_Spadina_Ave.json",
+      "old_total_height_m": 15.8,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "411_College_St_Toby_s_Pub_Eatery.json",
+      "old_total_height_m": 12.0,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "412_Spadina_Ave.json",
+      "old_total_height_m": 15.8,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "415_College_St_TTB_Trading_Co_Ltd_Food_Market_and_Hardware.json",
+      "old_total_height_m": 12.0,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "418_Spadina_Ave.json",
+      "old_total_height_m": 10.33,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "419_College_St.json",
+      "old_total_height_m": 11.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "419_College_St_Quetzal.json",
+      "old_total_height_m": 11.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "41_Kensington_Ave.json",
+      "old_total_height_m": 6.89,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "41_Oxford_St.json",
+      "old_total_height_m": 10.92,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "41_Wales_Ave.json",
+      "old_total_height_m": 11.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "420_Spadina_Ave.json",
+      "old_total_height_m": 10.33,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "423_College_St.json",
+      "old_total_height_m": 13.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "423_College_St_NEST_Myst.json",
+      "old_total_height_m": 13.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "429_College_St.json",
+      "old_total_height_m": 8.09,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "429_College_St_RBC_Royal_Bank.json",
+      "old_total_height_m": 8.09,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "42_Kensington_Ave.json",
+      "old_total_height_m": 12.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "42_Lippincott_St.json",
+      "old_total_height_m": 5.11,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "42_Nassau_St.json",
+      "old_total_height_m": 10.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "43_Bellevue_Ave.json",
+      "old_total_height_m": 6.94,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "43_Kensington_Ave.json",
+      "old_total_height_m": 3.91,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "43_Oxford_St.json",
+      "old_total_height_m": 11.98,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "44_Kensington_Ave.json",
+      "old_total_height_m": 12.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "44_Lippincott_St.json",
+      "old_total_height_m": 5.11,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "44_Nassau_St.json",
+      "old_total_height_m": 10.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "45_Oxford_St.json",
+      "old_total_height_m": 11.98,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "46_Kensington_Ave.json",
+      "old_total_height_m": 12.15,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "46_Lippincott_St.json",
+      "old_total_height_m": 5.11,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "46_Nassau_St.json",
+      "old_total_height_m": 11.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "471_Bathurst_St.json",
+      "old_total_height_m": 9.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "473_Bathurst_St.json",
+      "old_total_height_m": 9.96,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "47_Bellevue_Ave.json",
+      "old_total_height_m": 6.94,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "47_Kensington_Ave.json",
+      "old_total_height_m": 13.27,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "47_Nassau_St.json",
+      "old_total_height_m": 9.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "47_Oxford_St.json",
+      "old_total_height_m": 12.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "48_Lippincott_St.json",
+      "old_total_height_m": 5.11,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "48_Nassau_St.json",
+      "old_total_height_m": 11.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "49_Kensington_Ave.json",
+      "old_total_height_m": 13.27,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "49_Nassau_St.json",
+      "old_total_height_m": 9.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "49_Oxford_St.json",
+      "old_total_height_m": 12.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "4_Bellevue_Ave.json",
+      "old_total_height_m": 10.26,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "4_Casimir_St.json",
+      "old_total_height_m": 11.83,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "4_Hickory_St.json",
+      "old_total_height_m": 9.95,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "4_Kensington_Ave_Hi_6_Tibetan_Village_Store.json",
+      "old_total_height_m": 16.41,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "50_Nassau_St.json",
+      "old_total_height_m": 11.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "51_Nassau_St.json",
+      "old_total_height_m": 10.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "52_Lippincott_St.json",
+      "old_total_height_m": 13.27,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "53_Kensington_Ave.json",
+      "old_total_height_m": 3.15,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "53_Nassau_St.json",
+      "old_total_height_m": 10.43,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "53_Oxford_St.json",
+      "old_total_height_m": 12.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "546_Dundas_St_W.json",
+      "old_total_height_m": 12.01,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "548A_Dundas_St_W.json",
+      "old_total_height_m": 12.01,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "548_Dundas_St_W.json",
+      "old_total_height_m": 12.01,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "54_Wales_Ave.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "558_Dundas_St_W.json",
+      "old_total_height_m": 12.01,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "562A_Dundas_St_W.json",
+      "old_total_height_m": 11.46,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "562_Dundas_St_W.json",
+      "old_total_height_m": 11.46,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "564_Dundas_St_W.json",
+      "old_total_height_m": 11.46,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "568_Dundas_St_W.json",
+      "old_total_height_m": 11.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "56_Lippincott_St.json",
+      "old_total_height_m": 13.84,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "56_Wales_Ave.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "570_Dundas_St_W.json",
+      "old_total_height_m": 11.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "574_Dundas_St_W.json",
+      "old_total_height_m": 11.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "576_Dundas_St_W.json",
+      "old_total_height_m": 11.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "578_Dundas_St_W.json",
+      "old_total_height_m": 11.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "57_Oxford_St.json",
+      "old_total_height_m": 12.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "580_Dundas_St_W.json",
+      "old_total_height_m": 11.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "580_Dundas_St_W_Beauty_Salon_Heng_Salon.json",
+      "old_total_height_m": 11.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "584_Dundas_St_W.json",
+      "old_total_height_m": 16.68,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "584_Dundas_St_W_Hair_Fashion_明輝髮廊.json",
+      "old_total_height_m": 16.68,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "586_Dundas_St_W.json",
+      "old_total_height_m": 16.68,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "588_Dundas_St_W.json",
+      "old_total_height_m": 16.68,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "58_Bellevue_Ave.json",
+      "old_total_height_m": 4.92,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "58_Wales_Ave.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "594_Dundas_St_W.json",
+      "old_total_height_m": 14.81,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "59_Oxford_St.json",
+      "old_total_height_m": 12.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "5_Bellevue_Ave.json",
+      "old_total_height_m": 11.42,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "5_Kensington_Ave.json",
+      "old_total_height_m": 13.34,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "5_Leonard_Ave.json",
+      "old_total_height_m": 10.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "5_Wales_Ave.json",
+      "old_total_height_m": 12.7,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "602A_Dundas_St_W.json",
+      "old_total_height_m": 9.99,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "602_Dundas_St_W.json",
+      "old_total_height_m": 9.99,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "604_Dundas_St_W.json",
+      "old_total_height_m": 9.99,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "606-608_Dundas_St_W.json",
+      "old_total_height_m": 9.99,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "606_Dundas_St_W.json",
+      "old_total_height_m": 10.16,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "608_Dundas_St_W.json",
+      "old_total_height_m": 10.16,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "60A_Nassau_St.json",
+      "old_total_height_m": 9.71,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "60_Bellevue_Ave.json",
+      "old_total_height_m": 10.0,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "60_Kensington_Ave.json",
+      "old_total_height_m": 4.36,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "60_Oxford_St.json",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "60_Wales_Ave.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "610_Dundas_St_W.json",
+      "old_total_height_m": 10.16,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "61A_Bellevue_Ave.json",
+      "old_total_height_m": 13.55,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "622_Dundas_St_W.json",
+      "old_total_height_m": 4.9,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "626_Dundas_St_W.json",
+      "old_total_height_m": 4.9,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "62_Bellevue_Ave.json",
+      "old_total_height_m": 10.0,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "62_Nassau_St.json",
+      "old_total_height_m": 3.3,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "62_Wales_Ave.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "63_Bellevue_Ave.json",
+      "old_total_height_m": 12.66,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "63_Oxford_St.json",
+      "old_total_height_m": 6.3,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "64_Bellevue_Ave.json",
+      "old_total_height_m": 10.59,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "64_Kensington_Ave.json",
+      "old_total_height_m": 4.36,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "64_Nassau_St.json",
+      "old_total_height_m": 3.3,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "64_Oxford_St.json",
+      "old_total_height_m": 11.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "64_Wales_Ave.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "658_Dundas_St_W.json",
+      "old_total_height_m": 3.82,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "65_Bellevue_Ave.json",
+      "old_total_height_m": 12.66,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "65_Nassau_St.json",
+      "old_total_height_m": 10.83,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "66_1_2_Nassau_St.json",
+      "old_total_height_m": 16.26,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "66_Bellevue_Ave.json",
+      "old_total_height_m": 10.59,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "66_Kensington_Ave.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "66_Nassau_St.json",
+      "old_total_height_m": 16.45,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "66_Nassau_St_Ozzy_s_Burgers.json",
+      "old_total_height_m": 16.45,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "66_Oxford_St.json",
+      "old_total_height_m": 11.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "66_Wales_Ave.json",
+      "old_total_height_m": 11.91,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "67_Oxford_St.json",
+      "old_total_height_m": 6.3,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "686_Dundas_St_W.json",
+      "old_total_height_m": 11.83,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "68A_Oxford_St.json",
+      "old_total_height_m": 10.42,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "68_Nassau_St.json",
+      "old_total_height_m": 16.26,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "68_Wales_Ave.json",
+      "old_total_height_m": 13.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "69R_Nassau_St.json",
+      "old_total_height_m": 4.86,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "69_Bellevue_Ave.json",
+      "old_total_height_m": 9.84,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "69_Oxford_St.json",
+      "old_total_height_m": 11.05,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "6_Bellevue_Ave.json",
+      "old_total_height_m": 10.26,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "6_Casimir_St.json",
+      "old_total_height_m": 11.83,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "6_Denison_Sq.json",
+      "old_total_height_m": 4.04,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "6_Hickory_St.json",
+      "old_total_height_m": 9.95,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "6_Lippincott_St.json",
+      "old_total_height_m": 10.09,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "6_Nassau_St.json",
+      "old_total_height_m": 3.73,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "70_Bellevue_Ave.json",
+      "old_total_height_m": 14.19,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "70_Kensington_Ave.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "70_Nassau_St.json",
+      "old_total_height_m": 16.26,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "71_Bellevue_Ave.json",
+      "old_total_height_m": 9.84,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "71_Oxford_St.json",
+      "old_total_height_m": 15.6,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "72_Bellevue_Ave.json",
+      "old_total_height_m": 14.19,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "72_Kensington_Ave.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "73_Oxford_St.json",
+      "old_total_height_m": 15.6,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "74_Kensington_Ave.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "75_Oxford_St.json",
+      "old_total_height_m": 11.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "76_Kensington_Ave.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "77_Wales_Ave.json",
+      "old_total_height_m": 13.07,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "78_Kensington_Ave.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "78_Oxford_St.json",
+      "old_total_height_m": 13.63,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "79_Bellevue_Ave.json",
+      "old_total_height_m": 16.75,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "7_Glen_Baillie_Pl.json",
+      "old_total_height_m": 6.58,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "7_Kensington_Ave.json",
+      "old_total_height_m": 13.34,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "7_Kensington_Ave_Dreamland_Hair_Salon_5-3_Kensington_Side_of_560_Dundas_St_People_Hair_Salon.json",
+      "old_total_height_m": 13.34,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "7_Leonard_Ave.json",
+      "old_total_height_m": 10.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "7_Oxford_St.json",
+      "old_total_height_m": 10.51,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "7_Wales_Ave.json",
+      "old_total_height_m": 12.7,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "80_Bellevue_Ave.json",
+      "old_total_height_m": 6.16,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "80_Kensington_Ave.json",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "80_Nassau_St.json",
+      "old_total_height_m": 10.76,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "81_Bellevue_Ave.json",
+      "old_total_height_m": 16.75,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "82_Bellevue_Ave.json",
+      "old_total_height_m": 6.16,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "82_Nassau_St.json",
+      "old_total_height_m": 13.65,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "85_Oxford_St.json",
+      "old_total_height_m": 13.54,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "85_Wales_Ave.json",
+      "old_total_height_m": 5.73,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "86A_Nassau_St.json",
+      "old_total_height_m": 13.55,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "86_Nassau_St.json",
+      "old_total_height_m": 13.55,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "87_Oxford_St.json",
+      "old_total_height_m": 16.95,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "88_Nassau_St.json",
+      "old_total_height_m": 13.55,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "89_Oxford_St.json",
+      "old_total_height_m": 16.95,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "8B_Oxford_St.json",
+      "old_total_height_m": 11.97,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "8R_Oxford_St.json",
+      "old_total_height_m": 11.8,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "8_Casimir_St.json",
+      "old_total_height_m": 11.83,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "8_Hickory_St.json",
+      "old_total_height_m": 9.95,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "8_St_Andrew_St.json",
+      "old_total_height_m": 15.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "90_Nassau_St.json",
+      "old_total_height_m": 14.19,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "91_Oxford_St.json",
+      "old_total_height_m": 17.73,
+      "new_total_height_m": 14.4,
+      "floors": 3.0
+    },
+    {
+      "file": "93_Oxford_St.json",
+      "old_total_height_m": 12.55,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "94_Oxford_St.json",
+      "old_total_height_m": 12.24,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "95_Oxford_St.json",
+      "old_total_height_m": 12.32,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "96_Nassau_St.json",
+      "old_total_height_m": 10.12,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "97_Oxford_St.json",
+      "old_total_height_m": 12.32,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "98_Nassau_St.json",
+      "old_total_height_m": 10.12,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "98_Oxford_St.json",
+      "old_total_height_m": 12.24,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "9A_Casimir_St.json",
+      "old_total_height_m": 4.45,
+      "new_total_height_m": 4.8,
+      "floors": 2.0
+    },
+    {
+      "file": "9_Glen_Baillie_Pl.json",
+      "old_total_height_m": 6.58,
+      "new_total_height_m": 7.2,
+      "floors": 3.0
+    },
+    {
+      "file": "9_Kensington_Ave.json",
+      "old_total_height_m": 13.34,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "9_Kensington_Ave_Soma_I_7_Dreamland_Hair_Salon.json",
+      "old_total_height_m": 13.34,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    },
+    {
+      "file": "9_Lippincott_St.json",
+      "old_total_height_m": 8.92,
+      "new_total_height_m": 4.8,
+      "floors": 1.0
+    },
+    {
+      "file": "9_Oxford_St.json",
+      "old_total_height_m": 10.51,
+      "new_total_height_m": 9.6,
+      "floors": 2.0
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,508 @@
+{
+  "timestamp": "2026-03-25T14:42:39",
+  "mode": "apply",
+  "qa_report": "C:\\Users\\liam1\\blender_buildings\\outputs\\qa_fail_list_20260325_144118.json",
+  "changed_count": 83,
+  "skipped_count": 0,
+  "changed_files": [
+    {
+      "file": "30A-32E_Oxford_St.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "32D-32A_Oxford_St.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "32E-32C_Oxford_St.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "57_Kensington_school_building.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "594_Dundas_St_West.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "Bellevue_Ave_brick_duplex_behind_chain-link_fence.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "Bellevue_Ave_flat-roof_duplex_with_balcony.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "Kensington_Community_School_242_Augusta_Ave.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "Kensington_Kids_Early_Learning_Centre.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "No_8_Hose_Station_Bellevue_Ave.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "Toronto_Fire_Station_315.json",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    {
+      "file": "10R_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "112_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "11_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "122_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "12A_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "12_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "12_Kensington_Ave_Last_Temptation.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "133_Denison_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "13_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "13_Kensington_Ave_Causa_Culture_11.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "13_St_Andrew_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "146_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "146_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "14_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "14_Kensington_Ave_Courage_My_Love.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "171_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "173_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "175_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "175_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "177_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "177_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "179_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "179_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "191A_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "193_Baldwin_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "1A_Leonard_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "20_Nassau_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "20_St_Andrew_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "23_St_Andrew_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "260_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "264_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "291_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "293_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "30_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "310_Spadina_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "315_Augusta_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "328_Spadina_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "32_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "346_Spadina_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "34_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "357_College_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "35_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "36_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "376_Spadina_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "388_Spadina_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "38_Kensington_Pl.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "399_Bathurst_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "39_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "418_Spadina_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "41_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "43_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "45_Kensington_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "463_Bathurst_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "48_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "568_Dundas_St_W.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "60_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "61-75_Wales_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "61A_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "64_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "64_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "658_Dundas_St_W.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "71_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "72_Nassau_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "78R_Nassau_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "78_Nassau_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "7_Leonard_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "81_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "8R_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "91_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "91_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "95_Bellevue_Ave.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    },
+    {
+      "file": "98_Oxford_St.json",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  ],
+  "skipped": []
+}
