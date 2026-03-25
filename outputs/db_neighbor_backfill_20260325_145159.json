@@ -1,0 +1,296 @@
+{
+  "timestamp": "2026-03-25T14:51:59",
+  "mode": "apply",
+  "files_total": 2023,
+  "eligible_unmatched_files": 28,
+  "changed_count": 28,
+  "reasons": {
+    "skipped": 706,
+    "matched": 1149,
+    "no_street_neighbors": 41,
+    "unparseable_address": 96,
+    "neighbor_too_far": 3
+  },
+  "changed_files": [
+    {
+      "file": "299_Spadina_Ave_Hua_Sheng_Supermarket.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "300A Spadina Ave"
+    },
+    {
+      "file": "333_Spadina_Ave_Mr_Fish_Chinese_Restaurant.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "332 Spadina Ave"
+    },
+    {
+      "file": "335_Spadina_Ave_Chopfire_西门炊烟.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "334 Spadina Ave"
+    },
+    {
+      "file": "337_Spadina_Ave_LCBO.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "338 Spadina Ave"
+    },
+    {
+      "file": "340_College_St.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "339 College St"
+    },
+    {
+      "file": "341_Spadina_Ave_ChaTraMue.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "340 Spadina Ave"
+    },
+    {
+      "file": "343_Spadina_Ave_Sang_s_Great_Seafood_Restaurant.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 3,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "346 Spadina Ave"
+    },
+    {
+      "file": "345_College_St.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 2,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "343 College St"
+    },
+    {
+      "file": "353_Spadina_Ave_New_Sky_Restaurant.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "352 Spadina Ave"
+    },
+    {
+      "file": "355_Spadina_Ave_Daldongnae_Project_Seoul.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "354 Spadina Ave"
+    },
+    {
+      "file": "361_Spadina_Ave_Ramen_Station.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "362 Spadina Ave"
+    },
+    {
+      "file": "363_Spadina_Ave_CREEPS.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "362 Spadina Ave"
+    },
+    {
+      "file": "365_Spadina_Ave_YSM_Evergreen_Centre_for_Street-Involved_Youth.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "366 Spadina Ave"
+    },
+    {
+      "file": "369_Spadina_Ave_Yin_Ji_Chang_Fen_銀記腸粉.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "368 Spadina Ave"
+    },
+    {
+      "file": "371_Spadina_Ave_CoCo_Fresh_Tea_Juice.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "370 Spadina Ave"
+    },
+    {
+      "file": "373_Spadina_Ave_FLAMING_NOODLES_成嘟嘟燃面.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "374 Spadina Ave"
+    },
+    {
+      "file": "375_Spadina_Ave_Bảnk_Bao.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "376 Spadina Ave"
+    },
+    {
+      "file": "377_Spadina_Ave_Grossman_s_Tavern.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "376 Spadina Ave"
+    },
+    {
+      "file": "381_Spadina_Ave_Sizzler_Kabab.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "380 Spadina Ave"
+    },
+    {
+      "file": "383_Spadina_Ave_Anh_Dao_Restaurant.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "384 Spadina Ave"
+    },
+    {
+      "file": "389_Spadina_Ave_Collective.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "388 Spadina Ave"
+    },
+    {
+      "file": "393_Spadina_Ave_Heval_cafe.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "392 Spadina Ave"
+    },
+    {
+      "file": "400_Bathurst_St_St_Volodymyr_Cathedral_of_Toronto.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "399 Bathurst St"
+    },
+    {
+      "file": "405_Spadina_Ave_Tasty_s_Caribbean_Cuisine.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "406 Spadina Ave"
+    },
+    {
+      "file": "410_College_St_St_George_s_Evangelical_Lutheran_Church_Berea_Seventh-Day_Adventist_Church.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "409 College St"
+    },
+    {
+      "file": "411_Spadina_Ave_Play_De_Record.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "410 Spadina Ave"
+    },
+    {
+      "file": "417_Spadina_Ave_Mexi-Pak_FusionTaco_S.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 1,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "416 Spadina Ave"
+    },
+    {
+      "file": "440_College_St_DaNico.json",
+      "eligible": true,
+      "changed": true,
+      "gap": 9,
+      "changes": [
+        "_meta:db_neighbor_backfill"
+      ],
+      "source_address": "431 College St"
+    }
+  ]
+}
