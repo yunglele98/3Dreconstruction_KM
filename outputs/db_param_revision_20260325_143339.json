@@ -1,0 +1,6920 @@
+{
+  "timestamp": "2026-03-25T14:33:39",
+  "mode": "apply",
+  "files_total": 2023,
+  "matched_raw": 1057,
+  "matched_loose": 49,
+  "matched_candidate": 0,
+  "matched_candidate_scored": 0,
+  "matched_candidate_range_anchor": 37,
+  "matched_manual_override": 6,
+  "candidate_ambiguous": 0,
+  "unmatched": 168,
+  "changed_count": 1149,
+  "changed_files": [
+    {
+      "file": "10-8_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "100_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "100_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "100_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "101_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "102_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "102_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "102_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "103_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "103_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "104_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "104_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "104_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "105_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "106_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "106_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "106_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "107_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "108_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "108_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "108_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "109_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Kensington_Ave_Urban_Catwalk.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10A_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "10R_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11-13_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "110_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "110_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "110_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "111_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "112_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "112_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "112_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "112_Oxford_St_area_brick_duplex.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "113_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "114_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "114_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "114_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "115_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "116_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "116_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "116_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "117_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "118_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "118_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "118_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "119_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_1_2_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Carlyle_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "11_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12-10_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12-14_Hickory_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "120_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "120_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "121_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "122_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "122_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "122R_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "123_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "124_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "125_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "126_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "128_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Kensington_Ave_Last_Temptation.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "12A_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13-15_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "130_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "132_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "132_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "132_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "133_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "134_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "135_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "136_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "136_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "137_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "138_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "138_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "138_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "138_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "139_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13_Kensington_Ave_Causa_Culture_11.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "13_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "140_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "141_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "141_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "142-144_Denison_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "142_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "142_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "142R_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "143_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "144-148_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "144_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "144_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "144_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "144_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "145_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "145_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "146_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "146_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "146_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "146_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "146A_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "147_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "147_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "147_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "148_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "148_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "148_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "149_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "149_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "149_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Kensington_Ave_Courage_My_Love.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "14A_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "150-152_Nassau_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "150_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "150_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "151_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "151_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "152_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "152_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "153_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "153_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "153A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "153B_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "154_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "155_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "155_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "155A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "156_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "157_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "157_Denison_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "158_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "159_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Carlyle_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Carlyle_St_Starling_Automotive.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "15A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16-18_Kensington_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "160_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "160_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "161_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "161_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "163_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "165-169_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "165_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "167_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "168_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "169_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "169A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_1_2_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Bellevue_Ave_cream_Victorian_balcony.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "16_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "170_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "171_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "171_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "172_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "173_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "173_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "173R_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "174_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "175_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "175_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "176_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "177_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "177_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "178_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "179_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "179_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_Kensington_Ave_Dancing_Days_15.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "17A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "180_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "181_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "181_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "181_Baldwin_St_Fun_Guyz_77_Kensington_Ave_Blaze_District.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "182_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "182_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "183_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "184_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "184_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "185_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "185_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "185D_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "186_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "186_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "187_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "187_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "188_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "188_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "189_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "189_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "189A_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_1_2_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_1_2_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Bellevue_Ave_twin_gables_copper_canopy.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "18_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "190_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "190_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "191_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "191_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "191A_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "192-194_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "192_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "192_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "193_1_2_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "193_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "193_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "194_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "194_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "195_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "195_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "196_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "196_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "197_1_2_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "197_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "198_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "198_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "199_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "199_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "199A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "19_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "19_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "19_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "19_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "19_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "19A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "1_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "1_Leonard_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "1_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "1_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "1A_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20-22_Kensington_Ave_Cocktail_Emporium.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "200_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "200_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "200A_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "201_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "201_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "202_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "202_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "203_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "203_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "204_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "204_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "205_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "205A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "206_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "206_Baldwin_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "207_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "208_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "209_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_1_2_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "20_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "210_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "213_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "214_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "215_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "217_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "218_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "218R_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "219_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "21_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "21_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "21_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "21_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "21_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "21_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "21A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "220_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "221_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "222_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "223_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "224_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "225_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "226_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "227_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "228_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "229_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "22_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "22_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "22_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "22_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "22_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "22_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "22_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23-15_Casimir_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "230_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "234_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "234_Augusta_Ave_Dolce_Gelato.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "235_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "236_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "237_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "238_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "23A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "240_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "241_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "242_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "243_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "244_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "245_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "247_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "249_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "24_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "24_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "24_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "24_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "24_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "24_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "250_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "251_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "252_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "253_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "254_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "255_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "256_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "256C_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "256D_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "257_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "258_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "259_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25_Kensington_Ave_Kensington_Market_Dispensary_23_21_Placos_Tacos_Mexican_Food_Bar.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "25A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "260_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "261_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "263_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "264_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "265_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "267_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "268_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "269_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26A_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26B_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "26C_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "270_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "271_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "271_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "272_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "273_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "273_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "274_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "275_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "275_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "276_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "277_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "277_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "277A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "278_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "279_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "279_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Kensington_Ave_Fashion_Old_and_New_-_Da_Vintage_Code_A.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "27A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "280_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "281_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "281_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "281A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "282_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "283-289_College_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "283_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "283_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "285_1_2_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "285_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "285_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "287_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "287_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "289_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "289A_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28A_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "28B_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29-25_Casimir_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29-27_Casimir_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "291_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "291_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "292_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "293_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "294-296_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "294_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "295_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "295_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "295_College_St_Royal_Care_Walk-in_Clinic_others.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "296_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "297_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "297_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "297_College_St_T_T_Supermarket_others.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "298-300_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "298_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "298A_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "299_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "29A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Kensington_Ave_Crows_Nest_Barbershop.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2A_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2a_Kensington_Ave_El_Rey_Mezcal_Bar.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "2a_Kensington_Ave_End_of_El_Rey_2_Crows_Nest_Barbershop.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "300_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "300A_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "301_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "301_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "302_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "303_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "305_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "306_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "307_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "309_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30_Bellevue_Ave_twin_gables_arched_bay_windows.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30A_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30B_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "30C_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "310-316_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "310_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "311_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "315_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "317-323_College_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "317_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "318_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "319_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "319_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "31_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "31_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "31_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "31_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "321_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "321_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "321A_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "322_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "323_Augusta_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "323_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "324_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "326_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "328_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32A_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32B_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32C_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32D_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "32E_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "332_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "333_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "334_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "335_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "335_College_St_ASTRO_house_of_vapes_view_43657624_-79402228.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "336_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "337_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "338_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "339_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "339A_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "33_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "33_Kensington_Ave_Uncle_Vintage.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "33_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "33_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "33_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "340_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "341_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "343_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "346_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "347-351_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "347_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "347_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "349_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "349A_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34A_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "34A_Bellevue_Ave_teal_door_bay_window.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "350_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "351_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "352_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "353_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "354_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "355_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "356_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "357_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "358_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "35_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "35_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "35_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "35_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "35_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "360_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "362_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "365_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "366_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "366A_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "368_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "36_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "36_Bellevue_Ave_maroon_Victorian_peaked_gable.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "36_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "36_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "36_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "36_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "370_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "372_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "374_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "376_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "37_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "37_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "37_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "37_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "37A_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "380_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "382_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "384_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "386_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "387_Spadina_Ave_Jo_s_Cha_\u8336\u6551\u661f\u7403_385_Soul_Made_Cafe.json",
+      "match_mode": "manual_override",
+      "changed": true,
+      "changes": [
+        "db_match_mode:candidate->manual_override"
+      ]
+    },
+    {
+      "file": "388_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "38_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "38_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "38_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "38_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "38_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "390_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "392_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "394_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "396_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "398_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "399_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "39_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "39_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "39_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "39_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Leonard_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "3A_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4-6_Casimir_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "40-42_Bellevue_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "400_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "401_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "401_College_St_Kensington_Kids_Early_Learning_Centre.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "401_Spadina_Ave_Tankx_Ebike_399_Reiwatakiya_397_HANBINGO_\ud55c\ube59\uace0.json",
+      "match_mode": "manual_override",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "402_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "404-398_College_St.json",
+      "match_mode": "manual_override",
+      "changed": true,
+      "changes": [
+        "db_match_mode:candidate->manual_override"
+      ]
+    },
+    {
+      "file": "404_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "406_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "408_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "409_1_2_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "409_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "409_College_St_C_D_Group.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "409_Spadina_Ave_A_Chinese_Cuisine_\u8001\u5473\u7802\u9505_407_\u8336\u5bb4_CHAYAN.json",
+      "match_mode": "manual_override",
+      "changed": true,
+      "changes": [
+        "db_match_mode:candidate->manual_override"
+      ]
+    },
+    {
+      "file": "40_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "40_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "40_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "40_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "40_Nassau_St_striped_awning_24h_video_sign.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "410_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "411_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "411_College_St_Toby_s_Pub_Eatery.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "412_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "414_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "415-417_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "415_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "415_College_St_TTB_Trading_Co_Ltd_Food_Market_and_Hardware.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "416_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "417_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "418_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "419_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "419_College_St_Quetzal.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "41_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "41_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "41_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "420_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "421_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "421_College_St_Ramen_Isshin.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "422_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "423_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "423_College_St_NEST_Myst.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "424_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "426_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "428-430_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "428_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "429_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "429_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "429_College_St_RBC_Royal_Bank.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "42_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "42_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "42_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "42_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "430_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "431_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "431_College_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "431_College_St_Sneaky_Dee_s.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "433_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "435A_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "435B_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "437_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "438_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "439_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "43_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "43_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "43_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "43_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "43_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "440_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "441_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "442_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "443_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "444_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "445_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "446_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "447_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "448_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "449_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "44_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "44_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "44_Kensington_Ave_CrazyLoko_Vintage.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "44_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "44_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "450_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "451_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "452_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "453_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "454_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "455_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "456_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "457_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "458_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "459_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "45_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "45_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "45_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "45_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "460_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "461_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "462_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "463_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "464_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "465_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "466_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "467_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "468_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "469_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "46_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "46_Kensington_Ave_Fong_On_Foods_Ltd.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "46_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "46_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "46_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "471_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "473_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "474_Spadina_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "474_Spadina_Ave_Rexall_277_College_St.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "475_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "477_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "479_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "47_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "47_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "47_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "47_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "47_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "48-52_Kensington_Ave_Essence_of_Life_Organics.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "481_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "483_Bathurst_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "48_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "48_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "48_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "48_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "48_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "48_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "49_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "49_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "49_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "49_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "49_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Kensington_Ave_Hi_6_Tibetan_Village_Store.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "4_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "50_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "50_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "50_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "50_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "50_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "50_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "51_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "51_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "51_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "51_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "51_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "526_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "52_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "52_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "52_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "52_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "52_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "52_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "52B_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "53-51_Bellevue_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "530_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "532_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "536_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "538_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "53_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "53_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "53_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "53_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "53_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "54-56_Kensington_Ave_Clothin_by_AIM_Kensington_Hall_Acid_Reign_Productions_Brimz_Hat_Boutique.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "542_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "544_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "546_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "548_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "548A_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "54_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "54_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "54_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "54_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "556_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "558_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "558A_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "55_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "55_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "55_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "55_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "55_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "55_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "560_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "560A_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "562_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "562A_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "564_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "568_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "56_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "56_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "56_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "56_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "56_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "56B_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "56D_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "570_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "574_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "576_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "578_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "57_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "57_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "57_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "57_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "58-60_Kensington_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "580_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "580_Dundas_St_W_Beauty_Salon_Heng_Salon.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "584_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "584_Dundas_St_W_Hair_Fashion_\u660e\u8f1d\u9aee\u5eca.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "586_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "588_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "58_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "58_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "58_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "58_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "58_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "59-57_Kensington_Ave.json",
+      "match_mode": "manual_override",
+      "changed": true,
+      "changes": [
+        "db_match_mode:candidate->manual_override"
+      ]
+    },
+    {
+      "file": "594_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "59_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "59_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "59_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "59_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Leonard_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "5_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6-4_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6-8_Hickory_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "602_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "602A_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "604_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "606-608_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "606_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "608_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60_Kensington_Ave_Exile_Vintage.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "60A_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61-57_Kensington_Ave_Kensington_Jerk_Pasta_Fruit_Market.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61-75_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "610_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "614_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "618_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61_1_2_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61A_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "61A_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "620_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "622_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "626_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "62_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "62_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "62_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "62_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "634_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "638_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "63_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "63_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "63_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "63_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "63A_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "640_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "64_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "64_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "64_Kensington_Ave_Tutti_Frutti.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "64_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "64_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "64_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "64_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "650_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "658_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "65_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "65_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "65_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "65_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "65A_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "660_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "662_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "664_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "666_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "668_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_1_2_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Kensington_Ave_BAZAAR_Gift_Shop.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Nassau_St_Ozzy_s_Burgers.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "66A_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "670_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "674_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "67_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "67_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "67_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "67_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "67A_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "686_Dundas_St_W.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "68_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "68_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "68_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "68_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "68_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "68A_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "69_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "69_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "69_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "69_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "69R_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Denison_Sq.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Littlehayes_Lane.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "6_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7-9_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "70_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "70_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "70_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "70_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "70_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "71-69_Bellevue_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "71_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "71_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "71_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "71_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "71A_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "72_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "72_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "72_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "72_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "73_75_Bellevue_Ave_twin_Gothic_gables_purple_door.json",
+      "match_mode": "manual_override",
+      "changed": true,
+      "changes": [
+        "db_match_mode:candidate->manual_override"
+      ]
+    },
+    {
+      "file": "73_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "73_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "73_Kensington_Ave_TribalEye.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "73_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "73_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "73_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "73A_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "74_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "74_Kensington_Ave_Blissie.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "74_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "74_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "75-73_Bellevue_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "75_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "75_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "75_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "75_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "75_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "75A_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "76-78_Bellevue_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "76_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "76_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "76_Kensington_Ave_Global_Cheese_Shoppe.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "76_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "77-79_Kensington_Ave_Blaze_District_The_Dirty_Bird_Chicken_Waffles_closed.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "77-79_Oxford_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "77_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "77_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "77_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "77_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "77_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "78_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "78_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "78_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "78_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "78R_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "79_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "79_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "79_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "79_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "79_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Kensington_Ave_Dreamland_Hair_Salon_5-3_Kensington_Side_of_560_Dundas_St_People_Hair_Salon.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "7_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8-6_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "80_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "80_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "80_Kensington_Ave_Love_Calista.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "80_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "81-83_Oxford_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "81_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "81_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "81_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "82_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "82_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "83_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "83_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "84-86_Bellevue_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "84_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "85-87_Oxford_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "85_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "85_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "86-88_Bellevue_Ave.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "86_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "86_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "86_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "86A_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "87_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "87_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "87_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "88-86_Nassau_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "88_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "88_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "88_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "89_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Fitzroy_Ter.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Hickory_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Kensington_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8_St_Andrew_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8A_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8B_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "8R_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9-11_Glen_Baillie_Pl.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9-7_Casimir_St.json",
+      "match_mode": "candidate_range_anchor",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "90_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "90_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "90_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "91_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "91_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "92_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "92_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "93_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "94_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "94_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "95_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "95_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "96_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "96_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "97_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "98_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "98_Nassau_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "98_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "99_Bellevue_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "99_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Glen_Baillie_Pl.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Kensington_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Kensington_Ave_Soma_I_7_Dreamland_Hair_Salon.json",
+      "match_mode": "loose",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Leonard_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Lippincott_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Oxford_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9_Wales_Ave.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    },
+    {
+      "file": "9A_Casimir_St.json",
+      "match_mode": "raw",
+      "changed": true,
+      "changes": []
+    }
+  ]
+}
