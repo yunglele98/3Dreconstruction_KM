@@ -21,7 +21,7 @@
   "roof_type": "Gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
   "windows_per_floor": [
     0
@@ -35,15 +35,15 @@
   "hcd_data": {
     "typology": "Parks/Open Space",
     "construction_date": "",
-    "architectural_style": "Parks/Open Space (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "n/a (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Parks/Open Space (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "n/a (confirmed – HCD Plan Vol. 2)",
     "construction_decade": null,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
-    "statement_of_contribution": "Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A ",
+    "statement_of_contribution": "Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A ",
     "building_features": [],
-    "heritage_register": "N/A \u2013 Open Space",
+    "heritage_register": "N/A – Open Space",
     "protection_level": 0
   },
   "context": {
@@ -207,7 +207,7 @@
     "trim_colour_hex": "#E8E0D0",
     "composition": "The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology.",
     "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed.",
-    "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+    "heritage_summary": "A. Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
     "heritage_expression": "Character-defining facade elements include cornice."
   },
   "roof_colour": "#5A5A5A",
@@ -233,8 +233,8 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "63 Oxford St presents a parks/open space facade within the Kensington Market HCD. The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology. The facade reads primarily as mixed in a open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed. Character-defining facade elements include cornice. HCD note: Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A",
-  "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+  "facade_description": "63 Oxford St presents a parks/open space facade within the Kensington Market HCD. The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology. The facade reads primarily as mixed in a open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed. Character-defining facade elements include cornice. HCD note: Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A",
+  "heritage_summary": "A. Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

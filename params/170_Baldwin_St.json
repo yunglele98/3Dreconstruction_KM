@@ -24,7 +24,7 @@
   "roof_features": [
     "awning"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "dark charcoal-painted facade with a red scalloped awning and silver upper cladding band",
   "windows_per_floor": [
     2,
@@ -40,12 +40,12 @@
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 79,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development f",
     "building_features": [
       "original_windows",
       "cornice"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -230,7 +230,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, cornice.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f."
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development f."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -283,7 +283,7 @@
   },
   "street_setback_m": 0.0,
   "facade_description": "Heavily modernized two-storey converted house-form now operating as The Heartbreak Chef restaurant. The original pre-1889 brick structure is largely obscured by dark charcoal paint, a red scalloped awning, and a silver upper cladding band. A single broad upper window band sits above a glazed storefront with one recessed commercial entry. The awning and metal cladding replace any traditional cornice expression. Party walls on both sides. Extensive recladding and signage obscure earlier heritage storefront details.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development f.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

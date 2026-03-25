@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
@@ -64,8 +64,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -84,7 +84,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -196,8 +196,8 @@
     "roof_type_observed": "flat (not visible from street)",
     "roof_features": [],
     "has_storefront_observed": true,
-    "storefront_description": "Ground floor with security lattice grille. Blue sign with gold Chinese characters \u660e\u73e0\u73e0\u5bf6\u9418\u9336\u91d1\u884c / MINH CHAU JEWELLERY & WATCHES / 352 SPADINA AVE / TEL:416-979-3882",
-    "signage_observed": "Minh Chau Jewellery & Watches / \u660e\u73e0\u73e0\u5bf6\u9418\u9336\u91d1\u884c / blue sign with gold characters. Adjacent: Milland Realty blue sign.",
+    "storefront_description": "Ground floor with security lattice grille. Blue sign with gold Chinese characters 明珠珠寶鐘錶金行 / MINH CHAU JEWELLERY & WATCHES / 352 SPADINA AVE / TEL:416-979-3882",
+    "signage_observed": "Minh Chau Jewellery & Watches / 明珠珠寶鐘錶金行 / blue sign with gold characters. Adjacent: Milland Realty blue sign.",
     "overall_style": "Edwardian",
     "alterations_visible": "Ground floor modified for commercial use with security grille. Upper storeys retain original brick and arched window.",
     "matches_hcd_typology": true,
@@ -216,7 +216,7 @@
   "string_course": false,
   "decorative_lintels": true,
   "overall_style": "Edwardian",
-  "storefront_description": "Ground floor with security lattice grille. Blue sign with gold Chinese characters \u660e\u73e0\u73e0\u5bf6\u9418\u9336\u91d1\u884c / MINH CHAU JEWELLERY & WATCHES / 352 SPADINA AVE / TEL:416-979-3882",
+  "storefront_description": "Ground floor with security lattice grille. Blue sign with gold Chinese characters 明珠珠寶鐘錶金行 / MINH CHAU JEWELLERY & WATCHES / 352 SPADINA AVE / TEL:416-979-3882",
   "confidence": 0.8500000000000001,
   "notes": "Nighttime photo. Notable arched 2nd-floor window with fan-pattern glazing is a distinctive heritage feature. Security grille obscures ground floor.",
   "porch_present": false,

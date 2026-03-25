@@ -24,7 +24,7 @@
   "roof_features": [
     "rear_porch"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "white-painted rear facade with brown trim and simple porch framing",
   "windows_per_floor": [
     1,
@@ -40,12 +40,12 @@
     "typology": "House-form, Row, Ontario Cottage",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 259,
-    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early",
+    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early",
     "building_features": [
       "original_windows"
     ],
@@ -55,15 +55,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 1
   },
   "_meta": {
@@ -233,7 +233,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, cornice.",
-    "heritage_summary": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early."
+    "heritage_summary": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -295,8 +295,8 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "52 Oxford St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as mixed in a white-painted rear facade with brown trim and simple porch framing palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice. HCD note: Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early",
-  "heritage_summary": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+  "facade_description": "52 Oxford St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as mixed in a white-painted rear facade with brown trim and simple porch framing palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice. HCD note: Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early",
+  "heritage_summary": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#7A5C44",

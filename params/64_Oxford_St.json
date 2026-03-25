@@ -24,7 +24,7 @@
   "roof_features": [
     "commercial_addition"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "red brick upper facade with a white wraparound storefront and dark brown canopy",
   "windows_per_floor": [
     0,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Converted House-form, House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form (64 Oxford Street), House-form (66 Oxford Street), Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form (64 Oxford Street), House-form (66 Oxford Street), Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market (64 Oxford Street), n/a (66 Oxford Street)",
     "contributing": "Yes",
     "hcd_plan_index": 333,
-    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 64 Oxford Street also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. 66 Oxford also retains the projecting bay window and entrance at its first storey. 64 Oxford Street also has a brick clad side elevation featuring flat headed window openings and gambrel gable facing Augusta Avenue. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property at 64 Oxford Street also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. 66 Oxford also retains the projecting bay window and entrance at its first storey. 64 Oxford Street also has a brick clad side elevation featuring flat headed window openings and gambrel gable facing Augusta Avenue. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -298,7 +298,7 @@
     }
   ],
   "street_setback_m": 3.0,
-  "facade_description": "64 Oxford St presents a converted house-form, house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form, semi-detached typology. The facade reads primarily as mixed in a red brick upper facade with a white wraparound storefront and dark brown canopy palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 64 Oxford Street also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. 66 Oxford also retains the projecting bay window and entrance at its first storey. 64 Oxford Street also has a brick clad side elevation featuring flat headed window openings and gambrel gable facing Augusta Avenue. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "64 Oxford St presents a converted house-form, house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form, semi-detached typology. The facade reads primarily as mixed in a red brick upper facade with a white wraparound storefront and dark brown canopy palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property at 64 Oxford Street also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. 66 Oxford also retains the projecting bay window and entrance at its first storey. 64 Oxford Street also has a brick clad side elevation featuring flat headed window openings and gambrel gable facing Augusta Avenue. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
   "heritage_summary": "Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
   "roof_material": "Slate shingles",
   "colour_palette": {

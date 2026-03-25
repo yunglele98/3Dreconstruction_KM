@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "duplicate \u2014 pair photo",
+  "reason": "duplicate — pair photo",
   "photo": "IMG_20260316_114358147_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -125,5 +125,7 @@
     "height_above_ridge_m": 0.8,
     "material": "brick",
     "colour_hex": "#B85A3A"
-  }
+  },
+  "facade_material": "brick",
+  "roof_type": "gable"
 }

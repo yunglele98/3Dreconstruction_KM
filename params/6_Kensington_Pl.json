@@ -22,7 +22,7 @@
   "roof_type": "Flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     0,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 233,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "mixed_use",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Laneway | Pedestrian-scale | Worker cottages | Historic character",
-    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
-    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
+    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850–1880)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -78,7 +78,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -135,7 +135,7 @@
     "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District."
+    "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -170,8 +170,8 @@
   },
   "street_setback_m": 0.5,
   "confidence": 0.7000000000000001,
-  "facade_description": "6 Kensington Pl presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
-  "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District.",
+  "facade_description": "6 Kensington Pl presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
+  "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
     "facade_hex": "#B85A3A",

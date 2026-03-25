@@ -25,7 +25,7 @@
   "roof_features": [
     "shutter_mural"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "black storefront frame with white Wok Theory fascia, pink mural shutter, and pale stone base panels",
   "windows_per_floor": [
     0,
@@ -42,14 +42,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -62,15 +62,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 20,
-    "signage": "Wok Theory (\u65b0\u5929\u8679), KL Kitchen Seafood Cuisine (\u805a\u9bae\u6a13)",
+    "signage": "Wok Theory (新天虹), KL Kitchen Seafood Cuisine (聚鮮樓)",
     "street_presence": "neutral"
   },
   "city_data": {
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 8,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {

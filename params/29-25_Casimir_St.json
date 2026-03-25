@@ -1,11 +1,11 @@
 {
   "building_name": "29-25 Casimir St",
   "floors": 2,
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "red brick with white dormer-like upper bays and a paved interior court",
   "windows_per_floor": [
-    8,
-    8
+    3,
+    3
   ],
   "window_type": "mixed",
   "door_count": 4,

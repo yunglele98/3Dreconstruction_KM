@@ -23,7 +23,7 @@
   "roof_type": "Gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     0,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 29,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -210,7 +210,7 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
-  "facade_description": "258 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "258 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
   "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
   "roof_material": "Slate shingles",
   "colour_palette": {

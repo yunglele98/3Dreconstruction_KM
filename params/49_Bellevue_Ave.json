@@ -24,7 +24,7 @@
   "roof_features": [
     "cross-gable"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "warm red-orange brick with cream/beige vertical siding on upper gable section",
   "windows_per_floor": [
     2,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "House-form, Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 73,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "decorative_brick",
       "original_windows",
@@ -57,15 +57,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 3
   },
   "_meta": {

@@ -40,12 +40,12 @@
     "typology": "Converted House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable",
-    "construction_period": "c. 1870\u20131900 (estimated)",
+    "construction_period": "c. 1870–1900 (estimated)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 170,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from t",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from t",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -56,15 +56,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Detached House",
+    "land_use": "Residential – Detached House",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Short residential | West edge of market",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -145,7 +145,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from t."
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from t."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -217,8 +217,8 @@
   },
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
-  "facade_description": "17 Leonard Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from t",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from t.",
+  "facade_description": "17 Leonard Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from t",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from t.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

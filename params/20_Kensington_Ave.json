@@ -24,7 +24,7 @@
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "Brick",
-  "facade_colour": "not clearly visible \u2014 night photo",
+  "facade_colour": "not clearly visible — night photo",
   "windows_per_floor": [
     0,
     2,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Semi-Detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-Detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 186,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including mirrored facades, cross-gabled roofline, double-height bay windows, round-arched attic windows, and segmentally arched fenestration at the first and second storeys. 20 Kensington Avenue also retains its decorative wooden bargeboard. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including mirrored facades, cross-gabled roofline, double-height bay windows, round-arched attic windows, and segmentally arched fenestration at the first and second storeys. 20 Kensington Avenue also retains its decorative wooden bargeboard. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows",
@@ -64,8 +64,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -151,8 +151,8 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.45,
-    "facade_colour_observed": "not clearly visible \u2014 night photo",
-    "facade_material_observed": "brick \u2014 typical for Kensington Ave",
+    "facade_colour_observed": "not clearly visible — night photo",
+    "facade_material_observed": "brick — typical for Kensington Ave",
     "condition_observed": "fair",
     "has_storefront_observed": true,
     "signage_observed": "Cocktail Emporium",
@@ -256,7 +256,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "20 Kensington Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick \u2014 typical for kensington ave in a not clearly visible \u2014 night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including mirrored facades, cross-gabled roofline, double-height bay windows, round-arched attic windows, and segmentally arched fenestration at the first and second storeys. 20 Kensington Avenue also retains its decorative wooden bargeboard. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "20 Kensington Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick — typical for kensington ave in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including mirrored facades, cross-gabled roofline, double-height bay windows, round-arched attic windows, and segmentally arched fenestration at the first and second storeys. 20 Kensington Avenue also retains its decorative wooden bargeboard. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
   "heritage_summary": "Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including mirrored facades, cross-gabled roofline, double-height bay windows, round-arched attic windows, and segmentally arched fenestration at the first and second storeys. 20 Kensington Avenue also retains its decorative wooden bargeboard.",
   "roof_material": "Slate shingles",
   "colour_palette": {

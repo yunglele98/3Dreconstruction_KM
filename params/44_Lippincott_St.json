@@ -23,7 +23,7 @@
   "roof_type": "Cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     2,
@@ -40,12 +40,12 @@
     "typology": "Converted House-form, Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 192,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Semi-Detached",
+    "land_use": "Residential – Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Victorian semi-detached",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -138,7 +138,7 @@
     "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, detached, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the."
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -220,8 +220,8 @@
   },
   "street_setback_m": 3.0,
   "confidence": 0.7500000000000001,
-  "facade_description": "44 Lippincott St presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, detached, bay-and-gable typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the",
-  "heritage_summary": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the.",
+  "facade_description": "44 Lippincott St presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, detached, bay-and-gable typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

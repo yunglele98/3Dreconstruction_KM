@@ -39,8 +39,8 @@
   "hcd_data": {
     "typology": "Institutional",
     "construction_date": "1878",
-    "architectural_style": "Institutional (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1878 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Institutional (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1878 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1910,
     "sub_area": "",
     "contributing": "Yes",
@@ -57,15 +57,15 @@
   "context": {
     "building_type": "institutional",
     "general_use": "Institutional",
-    "land_use": "Institutional \u2013 Civic",
+    "land_use": "Institutional – Civic",
     "commercial_use": "Other Commercial",
     "business_name": "Toronto Fire Station 315",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 5,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": null,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {

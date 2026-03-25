@@ -22,7 +22,7 @@
   "roof_type": "Cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "Facade largely obscured by Bristol rental trucks; green-painted upper trim visible; brown horizontal siding on patio enclosure",
   "windows_per_floor": [
     0,
@@ -38,12 +38,12 @@
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889, 1914-1930",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 218,
-    "statement_of_contribution": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 190",
+    "statement_of_contribution": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 190",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -58,8 +58,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -215,7 +215,7 @@
     "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
-    "heritage_summary": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 190.",
+    "heritage_summary": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 190.",
     "heritage_expression": "Character-defining facade elements include cornice."
   },
   "roof_colour": "#5A5A5A",
@@ -256,7 +256,7 @@
   },
   "street_setback_m": 0.0,
   "facade_description": "Converted semi-detached house-form with commercial ground floor, now operating as Bristol Car and Truck Rental. Cross-gable roof over two storeys with party walls on both sides. Facade largely obscured by parked rental trucks and an enclosed seasonal patio structure; green-painted upper trim and brown horizontal siding are partially visible. Limited confidence in facade details due to obstruction.",
-  "heritage_summary": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 190.",
+  "heritage_summary": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 190.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

@@ -23,7 +23,7 @@
   "roof_type": "Cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "painted",
+  "facade_material": "paint",
   "facade_colour": "dark charcoal/black painted",
   "windows_per_floor": [
     2,
@@ -40,12 +40,12 @@
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 126,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructe",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,8 +60,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {

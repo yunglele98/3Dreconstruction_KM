@@ -22,7 +22,7 @@
   "roof_type": "Gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     2,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
-    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 351,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair, the properties have retained original building features, including their shared second story mansard roofline, brick cladding and segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair, the properties have retained original building features, including their shared second story mansard roofline, brick cladding and segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "original_windows",
       "bay_window"
@@ -54,15 +54,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -208,7 +208,7 @@
   },
   "street_setback_m": 3.0,
   "confidence": 0.7500000000000001,
-  "facade_description": "95 Oxford St presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include original windows, bay window. HCD note: Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair, the properties have retained original building features, including their shared second story mansard roofline, brick cladding and segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "facade_description": "95 Oxford St presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include original windows, bay window. HCD note: Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair, the properties have retained original building features, including their shared second story mansard roofline, brick cladding and segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
   "heritage_summary": "Constructed as a pair, the properties have retained original building features, including their shared second story mansard roofline, brick cladding and segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {

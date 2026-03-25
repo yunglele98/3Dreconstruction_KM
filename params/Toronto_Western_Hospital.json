@@ -1,17 +1,17 @@
 {
   "building_name": "Toronto Western Hospital campus",
   "floors": 8,
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "red brick structural piers and end walls with beige concrete floor bands, dark strip windows, silver-gray mechanical enclosures, and a pale glazed emergency base",
   "windows_per_floor": [
-    10,
-    10,
-    10,
-    10,
-    10,
-    10,
-    10,
-    10
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
   ],
   "window_type": "mixed",
   "window_width_m": 1.4,

@@ -40,12 +40,12 @@
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 33,
-    "statement_of_contribution": "The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its v",
+    "statement_of_contribution": "The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its v",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,15 +60,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 20,
-    "signage": "Hainan Community Centre (\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u4e61\u4f1a); Lao-Chinese Association of Ontario (\u8001\u7701\u5ba2\u534e\u8054\u8c0a\u4f1a); Pow Wow Cafe (adjacent)",
+    "signage": "Hainan Community Centre (加拿大安省海南同乡会); Lao-Chinese Association of Ontario (老省客华联谊会); Pow Wow Cafe (adjacent)",
     "street_presence": "neutral"
   },
   "city_data": {
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 4,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -127,7 +127,7 @@
   "photo_observations": {
     "facade_colour_observed": "brown brick with red/yellow Chinese community association signage",
     "facade_material_observed": "brick",
-    "facade_condition_notes": "2-storey brown brick commercial building; ground floor large red/yellow bilingual sign '\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u9109\u6703 / Lao Chinese Association of Ontario Canada / 215 Augusta Ave / HAINAN COMMUNITY CENTRE / Tel: 416-346-7477'; silver roll-down security shutter over storefront window (closed); small barred window at ground level; upper floor dark neon-style sign with Chinese characters (gold/red on dark background); brown brick facade throughout; graffiti on lower walls",
+    "facade_condition_notes": "2-storey brown brick commercial building; ground floor large red/yellow bilingual sign '加拿大安省海南同鄉會 / Lao Chinese Association of Ontario Canada / 215 Augusta Ave / HAINAN COMMUNITY CENTRE / Tel: 416-346-7477'; silver roll-down security shutter over storefront window (closed); small barred window at ground level; upper floor dark neon-style sign with Chinese characters (gold/red on dark background); brown brick facade throughout; graffiti on lower walls",
     "condition": "fair",
     "windows_per_floor": [
       1,
@@ -167,7 +167,7 @@
     ],
     "has_storefront_observed": true,
     "storefront_description": "community association/centre storefront with security shutters and red/gold signage",
-    "signage_observed": "\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u9109\u6703 / Lao Chinese Association of Ontario Canada / 215 Augusta Ave / HAINAN COMMUNITY CENTRE / Tel: 416-346-7477; upper floor neon-style sign with gold/red Chinese characters on dark background",
+    "signage_observed": "加拿大安省海南同鄉會 / Lao Chinese Association of Ontario Canada / 215 Augusta Ave / HAINAN COMMUNITY CENTRE / Tel: 416-346-7477; upper floor neon-style sign with gold/red Chinese characters on dark background",
     "overall_style": "Commercial",
     "alterations_visible": "security shutters, modern signage, replacement storefront components",
     "matches_hcd_typology": false,
@@ -284,7 +284,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "215 Augusta Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its v",
+  "facade_description": "215 Augusta Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its v",
   "heritage_summary": "With its v. The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion.",
   "roof_material": "Slate shingles",
   "colour_palette": {

@@ -1,12 +1,12 @@
 {
   "building_name": "275-289 College St (Jump+ block view)",
   "floors": 3,
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "black-painted commercial block beside a faded white-painted brick heritage row with mixed illuminated storefront signs",
   "windows_per_floor": [
     5,
-    8,
-    8
+    3,
+    3
   ],
   "window_type": "mixed",
   "window_width_m": 1.1,

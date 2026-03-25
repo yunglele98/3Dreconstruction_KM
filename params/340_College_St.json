@@ -1,14 +1,14 @@
 {
   "building_name": "340 College St",
   "floors": 6,
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "red brick mid-rise with beige accent bands, green-tinted glazing, and a pale metal-clad upper setback",
   "windows_per_floor": [
-    8,
-    8,
-    8,
-    8,
-    8,
+    3,
+    3,
+    3,
+    3,
+    3,
     6
   ],
   "window_type": "rectangular",

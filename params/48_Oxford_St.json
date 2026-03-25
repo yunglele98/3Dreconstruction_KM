@@ -24,7 +24,7 @@
   "roof_features": [
     "projecting_balconies"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "dark charcoal modern infill facade with large square windows and black balcony rails",
   "windows_per_floor": [
     2,
@@ -40,12 +40,12 @@
     "typology": "House-form, Row",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 256,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development f",
     "building_features": [
       "original_windows"
     ],
@@ -62,8 +62,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 1
   },
   "_meta": {
@@ -249,7 +249,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, cornice.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f."
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development f."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -316,8 +316,8 @@
     }
   },
   "street_setback_m": 3.0,
-  "facade_description": "48 Oxford St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as mixed in a dark charcoal modern infill facade with large square windows and black balcony rails palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f.",
+  "facade_description": "48 Oxford St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as mixed in a dark charcoal modern infill facade with large square windows and black balcony rails palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development f",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development f.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

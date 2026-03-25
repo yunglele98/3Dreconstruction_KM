@@ -22,7 +22,7 @@
   "roof_type": "Flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     2,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 237,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain many of their original building features, including shared rooflines with prominent cross-gables, round arch openings at ground level, recessed entrances, and brick cladding. 3 Leonard Avenue additionally retains decorative woodwork features on its gable and bay window, portions of which also remain intact on 5 Leonard Avenue. Contextually, each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain many of their original building features, including shared rooflines with prominent cross-gables, round arch openings at ground level, recessed entrances, and brick cladding. 3 Leonard Avenue additionally retains decorative woodwork features on its gable and bay window, portions of which also remain intact on 5 Leonard Avenue. Contextually, each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "original_windows",
       "decorative_brick"
@@ -61,8 +61,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Short residential | West edge of market",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -189,7 +189,7 @@
   ],
   "street_setback_m": 3.0,
   "confidence": 0.7500000000000001,
-  "facade_description": "7 Leonard Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include original windows, decorative brick. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain many of their original building features, including shared rooflines with prominent cross-gables, round arch openings at ground level, recessed entrances, and brick cladding. 3 Leonard Avenue additionally retains decorative woodwork features on its gable and bay window, portions of which also remain intact on 5 Leonard Avenue. Contextually, each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "facade_description": "7 Leonard Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include original windows, decorative brick. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain many of their original building features, including shared rooflines with prominent cross-gables, round arch openings at ground level, recessed entrances, and brick cladding. 3 Leonard Avenue additionally retains decorative woodwork features on its gable and bay window, portions of which also remain intact on 5 Leonard Avenue. Contextually, each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
   "heritage_summary": "3 Leonard Avenue additionally retains decorative woodwork features on its gable and bay window, portions of which also remain intact on 5 Leonard Avenue. Constructed as a row, the properties retain many of their original building features, including shared rooflines with prominent cross-gables, round arch openings at ground level, recessed entrances, and brick cladding.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {

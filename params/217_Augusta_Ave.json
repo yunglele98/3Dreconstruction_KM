@@ -40,7 +40,7 @@
     "typology": "Converted House-form, Detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -120,7 +120,7 @@
   "photo_observations": {
     "facade_colour_observed": "brown brick with red/yellow Chinese community signage at upper level",
     "facade_material_observed": "brick",
-    "facade_condition_notes": "2-storey brown brick commercial building; ground floor LEFT: KING OF KENSINGTON vintage clothing store with open storefront, clothing racks on sidewalk, graffiti-covered walls; ground floor RIGHT: brown brick, dark glass door with gold Chinese characters '\u5927\u9e4f' above, security grille; upper floor: large red/yellow sign '\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u9109\u6703 / THE HAINAN ASSOCIATION OF ONTARIO CANADA / 217 AUGUSTA AVE / HAINAN COMMUNITY CENTRE / TEL. 416-346-7477'; brown brick throughout, concrete party wall visible on right",
+    "facade_condition_notes": "2-storey brown brick commercial building; ground floor LEFT: KING OF KENSINGTON vintage clothing store with open storefront, clothing racks on sidewalk, graffiti-covered walls; ground floor RIGHT: brown brick, dark glass door with gold Chinese characters '大鹏' above, security grille; upper floor: large red/yellow sign '加拿大安省海南同鄉會 / THE HAINAN ASSOCIATION OF ONTARIO CANADA / 217 AUGUSTA AVE / HAINAN COMMUNITY CENTRE / TEL. 416-346-7477'; brown brick throughout, concrete party wall visible on right",
     "condition": "fair",
     "windows_per_floor": [
       2,
@@ -135,7 +135,7 @@
     "door_type": "storefront",
     "door_width_m": 0.9,
     "door_height_m": 2.2,
-    "door_details": "two entries: one for King of Kensington store (open storefront), one dark glass door with gold Chinese characters '\u5927\u9e4f' and security grille for Hainan Association",
+    "door_details": "two entries: one for King of Kensington store (open storefront), one dark glass door with gold Chinese characters '大鹏' and security grille for Hainan Association",
     "ground_floor_arches": "none",
     "ground_floor_arch_count": 0,
     "cornice": "simple",
@@ -153,19 +153,19 @@
     "pilasters": false,
     "string_course": false,
     "decorative_lintels": false,
-    "decorative_details": "large red/yellow association sign covering upper facade; gold Chinese characters '\u5927\u9e4f' above dark glass door; concrete party wall on right",
+    "decorative_details": "large red/yellow association sign covering upper facade; gold Chinese characters '大鹏' above dark glass door; concrete party wall on right",
     "roof_type_observed": "flat roof behind parapet",
     "roof_features": [
       "parapet_wall"
     ],
     "has_storefront_observed": true,
     "storefront_description": "dual-unit ground floor: KING OF KENSINGTON vintage clothing store (open storefront with clothing racks on sidewalk, graffiti-covered walls) and Hainan Association entry (dark glass door with security grille)",
-    "signage_observed": "\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u9109\u6703 / THE HAINAN ASSOCIATION OF ONTARIO CANADA / 217 AUGUSTA AVE / HAINAN COMMUNITY CENTRE / TEL. 416-346-7477; KING OF KENSINGTON",
+    "signage_observed": "加拿大安省海南同鄉會 / THE HAINAN ASSOCIATION OF ONTARIO CANADA / 217 AUGUSTA AVE / HAINAN COMMUNITY CENTRE / TEL. 416-346-7477; KING OF KENSINGTON",
     "overall_style": "Commercial",
     "alterations_visible": "multi-tenant storefront; King of Kensington open storefront with graffiti-covered walls; large association sign covers upper facade; concrete party wall visible on right",
     "matches_hcd_typology": false,
     "confidence": 0.9,
-    "notes": "Batch 003 daytime photos (2026-03-15 ~3:47pm). Excellent view of both association and King of Kensington frontage. Updated with dual-unit details, '\u5927\u9e4f' characters, and corrected upper floor windows to 0 (sign covers entire upper facade).",
+    "notes": "Batch 003 daytime photos (2026-03-15 ~3:47pm). Excellent view of both association and King of Kensington frontage. Updated with dual-unit details, '大鹏' characters, and corrected upper floor windows to 0 (sign covers entire upper facade).",
     "batch": "batch_003",
     "photo_date": "2026-03-15",
     "photo_time": "~15:47",
@@ -192,7 +192,7 @@
   "overall_style": "Commercial",
   "storefront_description": "The ground floor is divided between an open King of Kensington vintage storefront with clothing racks spilling toward the sidewalk and a darker Hainan Association entry secured by glass and grille elements.",
   "confidence": 0.9,
-  "notes": "Batch 003 daytime photos (2026-03-15 ~3:47pm). Excellent view of both association and King of Kensington frontage. Updated with dual-unit details, '\u5927\u9e4f' characters, and corrected upper floor windows to 0 (sign covers entire upper facade).",
+  "notes": "Batch 003 daytime photos (2026-03-15 ~3:47pm). Excellent view of both association and King of Kensington frontage. Updated with dual-unit details, '大鹏' characters, and corrected upper floor windows to 0 (sign covers entire upper facade).",
   "porch_present": false,
   "porch_type": "none",
   "chimney_count": 0,

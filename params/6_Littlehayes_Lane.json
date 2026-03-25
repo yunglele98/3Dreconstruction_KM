@@ -22,7 +22,7 @@
   "roof_type": "Gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     0,
@@ -37,8 +37,8 @@
   "hcd_data": {
     "typology": "",
     "construction_date": "",
-    "architectural_style": "Victorian Vernacular \u2013 Workers Cottage",
-    "construction_period": "c. 1870\u20131889",
+    "architectural_style": "Victorian Vernacular – Workers Cottage",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "commercial",
     "general_use": "Commercial",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Laneway | Single address",
-    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -78,7 +78,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 7,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {

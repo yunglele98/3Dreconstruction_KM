@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "dirty beige-grey stucco with graffiti tags",
   "windows_per_floor": [
     0,
@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
@@ -49,7 +49,7 @@
     "building_features": [
       "decorative_brick"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 23,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 1
   },
   "_meta": {
@@ -190,7 +190,7 @@
     ],
     "has_storefront_observed": true,
     "storefront_description": "Entire ground floor covered by security lattice grille. Large signage above.",
-    "signage_observed": "THE HERB DEPOT / \u4e2d\u56fd\u8336\u53f6\u56ed / Acup. Needle, Dried Herbs, Medicine & Health Products / 396 Spadina Ave",
+    "signage_observed": "THE HERB DEPOT / 中国茶叶园 / Acup. Needle, Dried Herbs, Medicine & Health Products / 396 Spadina Ave",
     "overall_style": "Commercial",
     "alterations_visible": "Ground floor heavily modified with full-width security grille. Upper storey stucco may be later addition over original brick.",
     "matches_hcd_typology": false,

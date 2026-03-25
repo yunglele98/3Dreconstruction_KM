@@ -51,15 +51,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Laneway / Secondary Suite",
+    "land_use": "Residential – Laneway / Secondary Suite",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 6: Heritage & Infill (1990\u2013present)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 6: Heritage & Infill (1990–present)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {

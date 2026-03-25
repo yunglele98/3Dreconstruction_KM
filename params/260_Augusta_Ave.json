@@ -29,7 +29,7 @@
   "facade_colour": "tan-buff brick institutional facade with silver sign band and white-framed glazing",
   "windows_per_floor": [
     5,
-    8
+    3
   ],
   "window_type": "fixed",
   "window_width_m": 1.2,
@@ -41,12 +41,12 @@
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 59,
-    "statement_of_contribution": "The property has value as a House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built fo",
+    "statement_of_contribution": "The property has value as a House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built fo",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -292,7 +292,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "260 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 5, 8 window bays from lower to upper levels, using fixed, and 2 principal entrances. Character-defining facade elements include cornice. HCD note: The property has value as a House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built fo",
+  "facade_description": "260 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 5, 8 window bays from lower to upper levels, using fixed, and 2 principal entrances. Character-defining facade elements include cornice. HCD note: The property has value as a House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built fo",
   "heritage_summary": "With its visibly layered built fo. The property has value as a House-form building that has been modified to accommodate a commercial conversion.",
   "roof_material": "Slate shingles",
   "colour_palette": {

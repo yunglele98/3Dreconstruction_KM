@@ -41,8 +41,8 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "",
     "contributing": "Yes",
@@ -59,15 +59,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -86,13 +86,13 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 3
   },
   "photo_observations": {
     "facade_colour_observed": "red-brown brick (partially visible through scaffolding and protective netting)",
     "facade_material_observed": "brick",
-    "facade_condition_notes": "Building under active renovation or restoration \u2014 fully scaffolded with protective netting. Facade details cannot be reliably assessed.",
+    "facade_condition_notes": "Building under active renovation or restoration — fully scaffolded with protective netting. Facade details cannot be reliably assessed.",
     "condition": "fair",
     "windows_per_floor": [
       2,
@@ -103,12 +103,12 @@
     "window_width_m": 0.85,
     "window_height_m": 1.3,
     "window_arrangement": "symmetric",
-    "window_details": "Cannot reliably assess \u2014 facade obscured by scaffolding and protective netting",
+    "window_details": "Cannot reliably assess — facade obscured by scaffolding and protective netting",
     "door_count": 1,
     "door_type": "single",
     "door_width_m": 0.9,
     "door_height_m": 2.2,
-    "door_details": "Not visible \u2014 obscured by scaffolding",
+    "door_details": "Not visible — obscured by scaffolding",
     "ground_floor_arches": "none",
     "ground_floor_arch_count": 0,
     "cornice": "simple",
@@ -126,7 +126,7 @@
     "pilasters": false,
     "string_course": false,
     "decorative_lintels": false,
-    "decorative_details": "Cannot assess \u2014 scaffolding covers facade",
+    "decorative_details": "Cannot assess — scaffolding covers facade",
     "roof_type_observed": "Gable peak partially visible above scaffolding",
     "roof_features": [
       "gable_peak"
@@ -135,7 +135,7 @@
     "storefront_description": "none",
     "signage_observed": "Community Protected / Neighbourhood Watch sign at front",
     "overall_style": "Victorian",
-    "alterations_visible": "Building fully scaffolded \u2014 appears to be under renovation or restoration",
+    "alterations_visible": "Building fully scaffolded — appears to be under renovation or restoration",
     "matches_hcd_typology": true,
     "confidence": 0.35,
     "notes": "Building under renovation with full scaffolding and protective netting. Photo is rotated sideways. Almost no facade detail visible. DB and HCD data remain the primary source for this building.",

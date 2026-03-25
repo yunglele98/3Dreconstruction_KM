@@ -30,7 +30,7 @@
   "roof_type": "Gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     2,
@@ -54,7 +54,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -67,15 +67,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -94,7 +94,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 76,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {

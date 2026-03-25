@@ -22,7 +22,7 @@
   "roof_type": "Gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     2,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "1890-1903",
-    "architectural_style": "Victorian Vernacular \u2013 Ontario Cottage",
-    "construction_period": "c. 1870\u20131889",
+    "architectural_style": "Victorian Vernacular – Ontario Cottage",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 150,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Short residential",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -143,7 +143,7 @@
     "trim_colour_hex": "#E8E0D0",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in."
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -190,8 +190,8 @@
   },
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
-  "facade_description": "12 Hickory St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in.",
+  "facade_description": "12 Hickory St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

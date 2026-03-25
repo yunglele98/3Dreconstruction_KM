@@ -1,12 +1,12 @@
 {
   "building_name": "422-412a College St",
   "floors": 3,
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "mixed painted brick storefront row with cream, black, gray, and red facade segments",
   "windows_per_floor": [
-    7,
-    7,
-    7
+    3,
+    3,
+    3
   ],
   "window_type": "mixed",
   "door_count": 7,

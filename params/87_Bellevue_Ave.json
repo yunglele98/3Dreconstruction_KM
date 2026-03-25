@@ -42,13 +42,13 @@
   "hcd_data": {
     "typology": "House-form, Detached",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 96,
-    "statement_of_contribution": "The property has value as a House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian and early-twentieth-century architectural styles. Originally built as a private hospital and residence for Dr. Algernon Temple, in 1906, the building was altered and enlarged when it was converted into a senior\u2019s residence known as Bellevue House. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property is also associated with the development of the District as a complete community that included residential, institutional, civic, and commercial uses. The property retains many of its original building features, including mansard roofline with dormer windows, two-storey bay window, three-point arched window, flat headed window and door openings, brick cladding with decorative brickwork, and prominent three-storey open porch with pyramidal roof. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "The property has value as a House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian and early-twentieth-century architectural styles. Originally built as a private hospital and residence for Dr. Algernon Temple, in 1906, the building was altered and enlarged when it was converted into a senior’s residence known as Bellevue House. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property is also associated with the development of the District as a complete community that included residential, institutional, civic, and commercial uses. The property retains many of its original building features, including mansard roofline with dormer windows, two-storey bay window, three-point arched window, flat headed window and door openings, brick cladding with decorative brickwork, and prominent three-storey open porch with pyramidal roof. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "bay_window",
       "decorative_brick",
@@ -61,15 +61,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -88,7 +88,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 15,
-    "residential_floors": "All floors (1\u20133)",
+    "residential_floors": "All floors (1–3)",
     "heritage_feature_count": 4
   },
   "_meta": {

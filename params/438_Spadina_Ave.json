@@ -25,7 +25,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys",
   "windows_per_floor": [
     0,
@@ -42,14 +42,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 12,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -143,7 +143,7 @@
     "door_type": "storefront",
     "door_width_m": 0.9,
     "door_height_m": 2.4,
-    "door_details": "Multiple commercial entries \u2014 Sahar International double-width entry, Yesrider entry with security gate, and likely a separate residential lobby",
+    "door_details": "Multiple commercial entries — Sahar International double-width entry, Yesrider entry with security gate, and likely a separate residential lobby",
     "ground_floor_arches": "none",
     "ground_floor_arch_count": 0,
     "cornice": "simple",

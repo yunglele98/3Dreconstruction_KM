@@ -22,7 +22,7 @@
   "roof_type": "Gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "weathered white upper facade with a green commercial base and purple trim bands",
   "windows_per_floor": [
     2,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 21,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -52,14 +52,14 @@
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "FILM CAFE",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -258,7 +258,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "230 Augusta Ave presents a converted house-form, detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed in a weathered white upper facade with a green commercial base and purple trim bands palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 0 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
+  "facade_description": "230 Augusta Ave presents a converted house-form, detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed in a weathered white upper facade with a green commercial base and purple trim bands palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 0 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
   "heritage_summary": "With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
   "roof_material": "Slate shingles",
   "colour_palette": {

@@ -23,7 +23,7 @@
   "roof_type": "Cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     2,
@@ -40,7 +40,7 @@
     "typology": "Converted House-Form, Semi-Detached, Bay-and-Gable",
     "construction_date": "Pre-1889, 1914-1930",
     "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Semi-Detached",
+    "land_use": "Residential – Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Victorian semi-detached",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {

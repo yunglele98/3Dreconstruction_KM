@@ -1,13 +1,13 @@
 {
   "building_name": "400-414 Spadina Ave",
   "floors": 4,
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "tan, brown, and red-brown mixed masonry with a rounded-corner upper mass and varied tenant storefronts below",
   "windows_per_floor": [
-    8,
-    8,
-    8,
-    8
+    3,
+    3,
+    3,
+    3
   ],
   "window_type": "mixed",
   "window_width_m": 1.2,
