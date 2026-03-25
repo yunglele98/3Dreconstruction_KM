@@ -1,0 +1,295 @@
+{
+  "building_name": "345 College St",
+  "floors": 3,
+  "floor_heights_m": [
+    4.5,
+    4.0,
+    3.5
+  ],
+  "total_height_m": 12.0,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": null,
+    "lat": null,
+    "street": "College St",
+    "street_number": 345,
+    "setback_m": 0.5,
+    "lot_area_sqm": null,
+    "footprint_sqm": null,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": null
+  },
+  "roof_type": "flat roof",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "sign_band"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "black sign band and dark storefront frame over a brown brick ground floor",
+  "windows_per_floor": [
+    0,
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.45,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Commercial row building",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900-1930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "Unknown",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Unknown",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Food Service",
+    "business_name": "Flava Ceen Express",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
+    "morphological_zone": "Perimeter Arterial - Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900-1930)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "papered_display",
+    "structural_concern": false,
+    "risk_score": 25,
+    "signage": "Flava Ceen Express",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 12.0,
+    "height_avg_m": 8.0,
+    "footprint_sqm": null,
+    "gfa_sqm": null,
+    "fsi": null,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 0,
+    "residential_floors": "Floors 2-3 above commercial",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "345 College St",
+    "source": "photo_interpretation",
+    "db": "kensington",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_neighbor_backfill": {
+      "source_address": "343 College St",
+      "source_street": "COLLEGE ST",
+      "house_number_gap": 2,
+      "confidence": "medium",
+      "timestamp": "2026-03-25T14:51:53",
+      "proxy_defaults": {
+        "facade_width_m": 6.1,
+        "facade_depth_m": 36.58,
+        "floors": 3,
+        "total_height_m": 10.78,
+        "has_storefront": true
+      }
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "black sign band and dark storefront frame over a brown brick ground floor",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "storefront is active but one opening is papered over and the glazing appears partially vacant or being refitted",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.45,
+    "window_arrangement": "symmetric",
+    "window_details": "upper floors have paired dark-framed windows; lower left display is clear glazed while centre opening is papered",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "single glazed commercial door set toward the centre-right",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "plain sign fascia without historic cornice expression",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "no porch",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "large Flava Ceen sign dominates the storefront",
+    "roof_type_observed": "flat roof",
+    "roof_features": [
+      "sign_band"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "restaurant storefront with broad glazing and one papered display panel",
+    "signage_observed": "Flava Ceen Express; Jamaican & International Flava",
+    "overall_style": "Commercial",
+    "alterations_visible": "modern storefront infill and tenant signage",
+    "matches_hcd_typology": false,
+    "confidence": 0.5,
+    "photo_date": "2026-03-18",
+    "photo_time": "~14:17",
+    "weather": "light snow",
+    "notes": "Batch 009 daytime photo partially visible. Flava Ceen Express commercial storefront. Part of College St commercial row."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "restaurant storefront with broad glazing and one papered display panel",
+  "confidence": 0.6500000000000001,
+  "notes": "Batch 009 daytime photo partially visible. Flava Ceen Express commercial storefront. Part of College St commercial row.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat roof, consistent with its commercial row building typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.5,
+  "facade_description": "345 College St presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat roof, consistent with its commercial row building typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using mixed, and 1 principal entrance. Key storefront and facade features include cornice.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

@@ -1,0 +1,18 @@
+{
+  "building_name": "Ellen Ave (43.656664, -79.401902)",
+  "skipped": true,
+  "skip_reason": "service-lane and garage-area view rather than a primary facade",
+  "_meta": {
+    "address": "Ellen Ave (43.656664, -79.401902)",
+    "photo": "IMG_20260318_145835772_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:21:39-04:00",
+    "reference_photos": [
+      "IMG_20260318_145835772_HDR.jpg",
+      "IMG_20260318_145838956_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

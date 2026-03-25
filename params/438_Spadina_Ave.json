@@ -1,0 +1,344 @@
+{
+  "building_name": "438 Spadina Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    3.9,
+    3.0,
+    2.5
+  ],
+  "total_height_m": 9.0,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.39998063,
+    "lat": 43.65683396,
+    "street": "Spadina Ave",
+    "street_number": 438,
+    "setback_m": 0.5,
+    "lot_area_sqm": 471.3528842697371,
+    "footprint_sqm": 334.1,
+    "lot_coverage_pct": 70.9,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys",
+  "windows_per_floor": [
+    0,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.4,
+  "door_count": 3,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Toronto Hair Care Inc. | JJ INTERNATIONAL | Emmo Ebikes Toronto | Dragon World Trading",
+    "business_category": "Retail/Shop",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Toronto Hair Care / Beauty Supply; Aroma Chinese cuisine; EMMO scooters",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 0.0,
+    "height_avg_m": 17.9,
+    "footprint_sqm": 334.1,
+    "gfa_sqm": 1002.3,
+    "fsi": 2.13,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 12,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "438 Spadina Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260316_003630342_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T21:00:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "438 Spadina Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "438 SPADINA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 3.9,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Ground-floor storefronts heavily graffitied on windows and signage panels; upper brick facade appears intact from across-street view; round balconies in good condition",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      4,
+      4,
+      4
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.4,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor is all storefront glazing; upper floors have regular rectangular windows between round projecting balconies",
+    "door_count": 3,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.4,
+    "door_details": "Multiple commercial entries \u2014 Sahar International double-width entry, Yesrider entry with security gate, and likely a separate residential lobby",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Flat parapet above top floor; horizontal string course/band divides commercial ground floor from upper residential/office levels",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 12,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimneys visible",
+    "quoins": false,
+    "pilasters": true,
+    "string_course": true,
+    "decorative_lintels": false,
+    "decorative_details": "Round structural columns between storefronts; curved/round projecting balconies on upper floors give the building an Art Deco or early-modern character",
+    "roof_type_observed": "Flat roof behind parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Two distinct ground-floor commercial units: Sahar International (luggage, perfumes, Canada souvenirs with Canadian flag window posters) and Yesrider e-bike Parts & Service Center with security gate",
+    "signage_observed": "SAHAR INTERNATIONAL (red/white with Canadian flags), YESRIDER Parts & Service Center, EMMO logo, BOOK AN APPOINTMENT, Canada Souvenirs, Luggage/Perfume/Mala/Maleta",
+    "overall_style": "Commercial",
+    "alterations_visible": "Modern commercial storefronts with contemporary signage; extensive graffiti on ground-floor glazing; security gate on Yesrider unit",
+    "matches_hcd_typology": true,
+    "confidence": 0.72,
+    "notes": "Night photos limit colour accuracy. Best views from IMG_20260316_003541905_HDR.jpg (across street) and IMG_20260316_003630342_HDR.jpg (Sahar storefront close-up)."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.4,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 12,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": true,
+  "string_course": true,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Two distinct ground-floor commercial units: Sahar International (luggage, perfumes, Canada souvenirs with Canadian flag window posters) and Yesrider e-bike Parts & Service Center with security gate",
+  "confidence": 0.8700000000000001,
+  "notes": "Night photos limit colour accuracy. Best views from IMG_20260316_003541905_HDR.jpg (across street) and IMG_20260316_003630342_HDR.jpg (Sahar storefront close-up).",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "left",
+      "width_m": 0.9,
+      "height_m": 2.4,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 0.9,
+      "height_m": 2.4,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_2",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 0.9,
+      "height_m": 2.4,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "decorative_elements": {
+    "pilasters": {
+      "present": true,
+      "width_mm": 180,
+      "projection_mm": 40,
+      "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 140,
+      "projection_mm": 25,
+      "colour_hex": "#D4C9A8"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 12
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
+    "opening_rhythm": "The facade is organized as a storefront base with 4 upper-window bays and 8 additional bays above, using mixed, and 3 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include string courses, cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.1,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.5,
+          "height_m": 0.6,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 0.5,
+  "facade_description": "438 Spadina Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as mixed in a beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 8 additional bays above, using mixed, and 3 principal entrances. Character-defining facade elements include string courses, cornice.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

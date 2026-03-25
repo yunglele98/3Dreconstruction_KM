@@ -1,0 +1,356 @@
+{
+  "building_name": "47 Bellevue Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 7.2,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40321586,
+    "lat": 43.65453977,
+    "street": "Bellevue Ave",
+    "street_number": 47,
+    "setback_m": 3.0,
+    "lot_area_sqm": 1059.377597871534,
+    "footprint_sqm": 32.5,
+    "lot_coverage_pct": 3.1,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "cross_gable",
+    "tower"
+  ],
+  "facade_material": "stucco",
+  "facade_colour": "cream/tan/yellow stucco with dark brown window trim; worn appearance",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "House-form, Detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "House-form, Detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 72,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding with decorative brickwork. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "original_windows",
+      "turret"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "damaged_masonry; overgrown; missing_elements",
+    "structural_concern": false,
+    "risk_score": 80,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 14.18,
+    "height_avg_m": 6.94,
+    "footprint_sqm": 32.5,
+    "gfa_sqm": 81.2,
+    "fsi": 0.08,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "47 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "bay_window",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_160456341_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_160456341_HDR.jpg",
+      "IMG_20260320_160457768_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "47 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "47 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 6.94,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "cream/tan/yellow stucco with dark brown window trim; worn appearance",
+    "facade_material_observed": "stucco",
+    "facade_condition_notes": "Stucco over original brick; signs of age and neglect; dark trim peeling; vegetation overgrown",
+    "condition": "poor",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "asymmetric",
+    "window_details": "Ground floor bay window; second floor windows; gable window at third level; dark frames; deteriorating",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Single entry beside bay window; partially obscured",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple eave returns at gable; worn",
+    "bay_windows": 1,
+    "bay_window_details": "Double-height projecting bay spanning ground and second floor; stuccoed",
+    "balconies": 1,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "",
+    "chimneys": 0,
+    "chimney_details": "Not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Bay-and-gable form preserved under stucco",
+    "roof_type_observed": "Cross-gable with steep pitch",
+    "roof_features": [
+      "cross_gable"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "None",
+    "overall_style": "Victorian",
+    "alterations_visible": "Stucco over original brick; balcony/deck added; deteriorating trim; overgrown vegetation",
+    "matches_hcd_typology": true,
+    "confidence": 0.7,
+    "notes": "Bay-and-gable form recognizable but in poor condition"
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 1,
+  "balconies": 1,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "",
+  "confidence": 0.8500000000000001,
+  "notes": "Bay-and-gable form recognizable but in poor condition",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "bay_window": {
+    "present": true,
+    "count": 1,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 1
+  },
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, turret, cornice.",
+    "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding with decorative brickwork. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.5,
+          "sill_height_m": 1.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    },
+    "turreted_element": {
+      "present": true
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#D8D0C0"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Row three-storey bay-and-gable in cream/tan/yellow stucco with dark brown window trim; worn appearance under a cross-gable roof. Features include a double-height three-sided projecting bay, simple bargeboards and a simple cornice. Stucco over original brick; balcony/deck added; deteriorating trim; overgrown vegetation. Pre-1889 construction.",
+  "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding with decorative brickwork. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

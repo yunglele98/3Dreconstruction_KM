@@ -1,0 +1,308 @@
+{
+  "building_name": "207 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40151783,
+    "lat": 43.65401232,
+    "street": "Augusta Ave",
+    "street_number": null,
+    "setback_m": 0.0,
+    "lot_area_sqm": 236.7802310649102,
+    "footprint_sqm": 194.1,
+    "lot_coverage_pct": 82.0,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "patio"
+  ],
+  "facade_material": "Brick",
+  "facade_colour": "buff/golden-yellow brick upper, dark grey commercial ground floor",
+  "windows_per_floor": [
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.35,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 29,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Knockout Chicken | Top Gun Burger",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 10.02,
+    "height_avg_m": 6.56,
+    "footprint_sqm": 194.1,
+    "gfa_sqm": 485.2,
+    "fsi": 2.05,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 5,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "207 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "207 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "207 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.02,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "buff/golden-yellow brick upper, dark grey commercial ground floor",
+    "facade_material_observed": "brick (upper), painted (ground)",
+    "facade_condition_notes": "2-storey building; ground floor dark grey/black painted commercial storefront with KNOCKOUT CHICKEN sign (retro boxing chicken logo); large storefront windows below sign; upper floor warm golden-buff brick with large multi-pane window (white frame, appears original Victorian); wooden patio/scaffold structure in front with yellow elements; $14.99 price sign visible",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.35,
+    "window_arrangement": "asymmetric",
+    "window_details": "ground floor: storefront glazing; upper floor: 1 large multi-pane window with white frame, appears original Victorian",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "single commercial entry in dark storefront system",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "plain fascia/sign band",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "wooden patio/scaffold structure occupies frontage",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "original Victorian multi-pane window survives on upper floor",
+    "roof_type_observed": "flat or shallow roof hidden behind front wall",
+    "roof_features": [
+      "patio"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "dark grey/black painted commercial storefront with KNOCKOUT CHICKEN retro boxing chicken logo sign and large storefront windows",
+    "signage_observed": "KNOCKOUT CHICKEN (retro boxing chicken logo); $14.99 price sign",
+    "overall_style": "Commercial",
+    "alterations_visible": "modern dark painted storefront overlay on Victorian brick building; wooden patio structure",
+    "matches_hcd_typology": false,
+    "confidence": 0.82,
+    "notes": "Batch 003 daytime photos (2026-03-15 ~3:45pm). Good view of upper buff brick and commercial ground floor. Additional batch_003 photo (partially visible, confidence 0.5) confirms Knockout Chicken signage and commercial storefront at ground level; no new facade details extracted.",
+    "batch": "batch_003",
+    "photo_date": "2026-03-15",
+    "photo_time": "~15:45",
+    "photo_count": 1
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "A dark grey-black storefront spans the ground floor with large display windows and the highly visible Knockout Chicken sign featuring a retro boxing-chicken logo.",
+  "confidence": 0.9,
+  "notes": "Batch 003 daytime photos (2026-03-15 ~3:45pm). Good view of upper buff brick and commercial ground floor. Additional batch_003 photo (partially visible, confidence 0.5) confirms Knockout Chicken signage and commercial storefront at ground level; no new facade details extracted.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 4.4,
+    "height_m": 3.1,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": "dark grey/black painted commercial storefront with KNOCKOUT CHICKEN retro boxing chicken logo sign and large storefront windows",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.7,
+          "sill_height_m": 2.1,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "207 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as brick (upper), painted (ground) in a buff/golden-yellow brick upper, dark grey commercial ground floor palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#D4B896",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

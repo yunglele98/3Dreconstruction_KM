@@ -1,0 +1,203 @@
+{
+  "building_name": "5 Kensington Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.399721,
+    "lat": 43.65278886,
+    "street": "Kensington Ave",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 120.0022672343093,
+    "footprint_sqm": 75.9,
+    "lot_coverage_pct": 63.2,
+    "lots_sharing_footprint": 8
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Converted House-form",
+    "construction_date": "1890-1903",
+    "architectural_style": "Victorian Bay-and-Gable (Converted)",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 144,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The properties at 7 and 9 Kensington Avenue and 560 Dundas Street also have value for the modifications made to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, each of these properties is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row of five buildings, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, projecting bays, scallop clad gables, and flat headed fenestration with stone lintels and sills. 560 Dundas Street West and 9 Kensington Avenue, which bookend the row, also retain their decorative gable brackets while 3 and 5 Kensington Avenue have retained the projecting bay with window at the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 167. 3 Kensington Avenue N/A 169. 5 Kensington Avenue N/A 171. 7 Kensington Avenue N/A 173. 9 Kensington Avenue N/A 144. 560 Dundas Street West 556, 558, 558A, 560A Dundas Street West 103 DCH | FO :D FO YTIC 5202 4 & 6 Kensington Avenue (L-R) 4 & 6 KENSINGTON AVENUE",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Mixed Use",
+    "land_use": "Residential with Commercial Potential",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 13.34,
+    "height_avg_m": 8.82,
+    "footprint_sqm": 75.9,
+    "gfa_sqm": 189.8,
+    "fsi": 1.58,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "5 Kensington Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "5 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "5 KENSINGTON AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 13.34,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, converted house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a row of five buildings, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, projecting bays, scallop clad gables, and flat headed fenestration with stone lintels and sills. 560 Dundas Street West and 9 Kensington Avenue, which bookend the row, also retain their decorative gable brackets while 3 and 5 Kensington Avenue have retained the projecting bay with window at the first storey."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 4.0,
+          "sill_height_m": 3.1,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "5 Kensington Ave presents a house-form, converted house-form facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, converted house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The properties at 7 and 9 Kensington Avenue and 560 Dundas Street also have value for the modifications made to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, each of these properties is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row of five buildings, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, projecting bays, scallop clad gables, and flat headed fenestration with stone lintels and sills. 560 Dundas Street West and 9 Kensington Avenue, which bookend the row, also retain their decorative gable brackets while 3 and 5 Kensington Avenue have retained the projecting bay with window at the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 167. 3 Kensington Avenue N/A 169. 5 Kensington Avenue N/A 171. 7 Kensington Avenue N/A 173. 9 Kensington Avenue N/A 144. 560 Dundas Street West 556, 558, 558A, 560A Dundas Street West 103 DCH | FO :D FO YTIC 5202 4 & 6 Kensington Avenue (L-R) 4 & 6 KENSINGTON AVENUE",
+  "heritage_summary": "Constructed as a row of five buildings, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, projecting bays, scallop clad gables, and flat headed fenestration with stone lintels and sills. 560 Dundas Street West and 9 Kensington Avenue, which bookend the row, also retain their decorative gable brackets while 3 and 5 Kensington Avenue have retained the projecting bay with window at the first storey.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

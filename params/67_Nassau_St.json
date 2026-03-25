@@ -1,0 +1,279 @@
+{
+  "building_name": "67 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.4,
+    2.6
+  ],
+  "total_height_m": 6.06,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40242933,
+    "lat": 43.65507937,
+    "street": "Nassau St",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 149.6782795089375,
+    "footprint_sqm": 31.0,
+    "lot_coverage_pct": 20.7,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "dark navy blue painted commercial storefront at ground, white/light painted upper floor",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 21,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. Summary: Reference Primary Address Entrance Address(es) Number 21. 230 Augusta Avenue 228 Augusta Avenue 67 Nassau Street 27 DCH | FO :D FO YTIC 5202 234 Augusta Avenue 234 AUGUSTA AVENUE",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Mixed Use",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "BAR 67",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 11.72,
+    "height_avg_m": 6.06,
+    "footprint_sqm": 31.0,
+    "gfa_sqm": 77.5,
+    "fsi": 0.52,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "67 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_155707219_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_155707219_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "67 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "67 NASSAU ST"
+    ]
+  },
+  "photo_observations": {
+    "photo_reference": "IMG_20260320_155707219_HDR.jpg",
+    "facade_colour_observed": "dark navy blue painted storefront at ground level, white/cream painted brick at upper floors",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Fair condition. Ground floor entirely painted navy blue for commercial use (BAR 67). Upper floor painted white/cream. Original brick likely underneath paint. Wooden patio barriers on sidewalk.",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      1
+    ],
+    "window_type": "storefront",
+    "window_width_m": 1.2,
+    "window_height_m": 1.8,
+    "window_arrangement": "asymmetric",
+    "window_details": "Ground floor has large storefront glazing within navy painted surround. Upper floor has at least one window visible, white painted surround.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.2,
+    "door_details": "Commercial entry door within navy painted storefront. Some graffiti visible on lower walls.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "bay_windows": 0,
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "chimneys": 0,
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Original decorative elements obscured by paint. The gable-ended roof form above the storefront retains the legibility of the original house form.",
+    "roof_type_observed": "Gable end visible above storefront, flat section at rear",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Navy blue painted commercial storefront with large display windows. BAR 67. Wooden patio barriers on sidewalk. Commercial use since 1889 per HCD records. Corner location at Augusta Ave and Nassau St.",
+    "signage_observed": "BAR 67 signage. Pink/neon poster in window. Some graffiti on lower walls.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Significant: entire facade painted (navy blue ground floor, white upper). Original brick concealed. Commercial storefront replaces original domestic ground floor. Wooden patio barriers added. However, gable-ended roof retains legibility of original form.",
+    "matches_hcd_typology": true,
+    "confidence": 0.78,
+    "notes": "Converted house-form at corner of Augusta Ave and Nassau St. Ground floor fully commercialized (BAR 67) with navy blue painted storefront. Upper floor painted white/cream. Original house form legible through gable-ended roof. Commercial since 1889 per city directories. HCD typology as 'Converted House-form' is accurate.",
+    "photo_date": "2026-03-20",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T12:00:00-04:00"
+  },
+  "overall_style": "Victorian",
+  "confidence": 0.8800000000000001,
+  "notes": "Converted house-form at Augusta/Nassau corner. Navy blue commercial storefront (BAR 67) at ground, white painted upper floor. Gable roof retains original form. Commercial since 1889.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Summary: Reference Primary Address Entrance Address(es) Number 21. 230 Augusta Avenue 228 Augusta Avenue 67 Nassau Street 27 DCH | FO :D FO YTIC 5202 234 Augusta Avenue 234 AUGUSTA AVENUE."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 3.3,
+          "sill_height_m": 2.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Converted detached house-form (pre-1889) at the corner of Augusta Avenue and Nassau Street, operating as BAR 67. Navy blue painted commercial storefront at ground level with white/cream painted upper floor. Two storeys under a cross-gable; the gable-ended roof retains the legibility of the original house form. Storefront with plate-glass display windows and wooden patio barriers. Party walls on both sides; 1 dwelling unit.",
+  "heritage_summary": "Summary: Reference Primary Address Entrance Address(es) Number 21. 230 Augusta Avenue 228 Augusta Avenue 67 Nassau Street 27 DCH | FO :D FO YTIC 5202 234 Augusta Avenue 234 AUGUSTA AVENUE.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "width_m": 4.4,
+    "height_m": 3.3,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

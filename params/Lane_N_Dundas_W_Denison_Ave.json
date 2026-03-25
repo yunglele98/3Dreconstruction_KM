@@ -1,0 +1,21 @@
+{
+  "building_name": "Lane N Dundas W Denison Ave",
+  "skipped": true,
+  "skip_reason": "lane context, not a single building facade",
+  "_meta": {
+    "address": "Lane N Dundas W Denison Ave",
+    "photo": "IMG_20260320_163810357_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:25:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_163810357_HDR.jpg",
+      "IMG_20260320_163814171_HDR.jpg",
+      "IMG_20260320_163837830_HDR.jpg",
+      "IMG_20260320_163846419_HDR.jpg",
+      "IMG_20260320_163851435_HDR.jpg"
+    ],
+    "reference_photo_count": 10,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

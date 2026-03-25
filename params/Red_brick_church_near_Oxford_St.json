@@ -1,0 +1,228 @@
+{
+  "building_name": "Red brick church, near Oxford St",
+  "floors": 1,
+  "floor_heights_m": [
+    3.5
+  ],
+  "facade_material": "brick",
+  "facade_colour": "dark red brick, aged and weathered",
+  "windows_per_floor": [
+    2
+  ],
+  "window_type": "casement",
+  "window_width_m": 1.0,
+  "window_height_m": 1.8,
+  "door_count": 1,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "fair",
+  "roof_type": "Gable with white steeple/spire",
+  "roof_pitch_deg": 35,
+  "roof_features": [
+    "steeple"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "dark red brick, aged and weathered",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Side/rear elevation visible. Brick shows significant weathering and cracking. Vertical crack visible running down the facade. Some repointing evident. White steeple/spire visible above roofline.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2
+    ],
+    "window_type": "casement",
+    "window_width_m": 1.0,
+    "window_height_m": 1.8,
+    "window_arrangement": "symmetric",
+    "window_details": "White-framed multi-pane windows with stone or concrete sills and lintels. Windows appear to be replacements in original openings.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Side entrance visible on this elevation",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple eave, painted white trim",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "none visible from this angle",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "White steeple/spire rising from roof. Small white plaque or cornerstone on wall. 'NO PARKING' sign on wall.",
+    "roof_type_observed": "Gable with white steeple/spire",
+    "roof_features": [
+      "steeple"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "No storefront; this is a small church building with a side entrance rather than a commercial frontage.",
+    "signage_observed": "'NO PARKING' sign. Small white plaque on wall (text not legible).",
+    "overall_style": "Victorian",
+    "alterations_visible": "Replacement windows. Some brick repair/repointing. Paved parking area at side.",
+    "matches_hcd_typology": true,
+    "confidence": 0.7,
+    "notes": "Side/rear elevation of a small red brick church. Only this oblique view available - front facade not captured. White steeple visible. Vertical crack in brickwork suggests some structural movement."
+  },
+  "_meta": {
+    "address": "Red brick church, near Oxford St",
+    "photo": "IMG_20260315_152000297_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T00:00:00Z",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "dimensions_source": "default",
+    "reference_photos": [
+      "IMG_20260315_152000297_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "window_arrangement": "symmetric",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "No storefront; this is a small church building with a side entrance rather than a commercial frontage.",
+  "confidence": 0.8500000000000001,
+  "notes": "Side/rear elevation of a small red brick church. Only this oblique view available - front facade not captured. White steeple visible. Vertical crack in brickwork suggests some structural movement.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 1 storeys and is capped by a gable with white steeple/spire, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 2.7,
+          "sill_height_m": 1.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "Red brick church, near Oxford St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 1 storeys and is capped by a gable with white steeple/spire, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form, row",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 3.5,
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {}
+}

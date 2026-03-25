@@ -1,0 +1,282 @@
+{
+  "building_name": "15 St Andrew St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39947213,
+    "lat": 43.65405509,
+    "street": "St Andrew St",
+    "street_number": 15,
+    "setback_m": 3.0,
+    "lot_area_sqm": 128.9977957308832,
+    "footprint_sqm": 76.2,
+    "lot_coverage_pct": 59.1,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "turret",
+    "central_gable",
+    "finials"
+  ],
+  "facade_material": "Brick",
+  "facade_colour": "dark red-orange brick with white/cream stone trim",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1904-1913",
+    "architectural_style": "Victorian Bay-and-Gable",
+    "construction_period": "c. 1870\u20131900 (estimated)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties retain most of their original building features including the shared roofline with central gable, and mirrored facades featuring brick cladding and decorative brickwork, flat headed and round arched window and door opening, and shingle clad turrets with decorative woodwork. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 367. 13 St. Andrew Street N/A 369. 15 St. Andrew Street N/A 195 | FO :D FO 5202 14 St. Andrew Street",
+    "building_features": [
+      "decorative_brick",
+      "original_windows",
+      "cornice"
+    ],
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "institutional",
+    "general_use": "Commercial",
+    "land_use": "Residential \u2013 Detached House",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Two-way | 30 km/h | Wide roadway exceeds minimum | Short commercial node",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "Chinese-language signage in red and yellow; 'Society of Toronto Canada' English text; decorative Chinese characters",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 13.72,
+    "height_avg_m": 9.33,
+    "footprint_sqm": 76.2,
+    "gfa_sqm": 190.5,
+    "fsi": 1.48,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "15 St Andrew St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "15 St Andrew St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "15 ST ANDREW ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 13.72,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#2A2A2A",
+      "style": "decorative"
+    }
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 300,
+    "projection_mm": 180,
+    "colour_hex": "#D4C9A8"
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.4,
+    "status_source": "normalized_fix"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#C8B898",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
+    "heritage_summary": "Constructed as a semi-detached pair, the properties retain most of their original building features including the shared roofline with central gable, and mirrored facades featuring brick cladding and decorative brickwork, flat headed and round arched window and door opening, and shingle clad turrets with decorative woodwork. 13 St."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 3.7,
+          "sill_height_m": 2.9,
+          "frame_colour": "#2A2A2A",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#C8B898"
+  },
+  "photo_observations": {
+    "batch": "batch_006",
+    "photo": "IMG_20260316_005840814_HDR.jpg",
+    "timestamp": "2026-03-16T00:58:40",
+    "lighting": "night",
+    "confidence": 0.85,
+    "facade_colour_observed": "dark red-orange brick with white/cream stone trim and green-shingled turret roof",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "heritage building in fair condition; brick intact, decorative elements preserved; some ground floor openings may have altered glazing or boarding; wooden fence and construction materials in front yard",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.5,
+    "window_arrangement": "symmetric",
+    "window_details": "ground floor: 2 large round arched openings (one appears to have arched multi-pane glazing, one possibly boarded/covered with tarp); second floor: 2 rectangular windows with flat stone lintels visible, white-painted frames; small gable window at attic level. Turret has narrow windows on each face.",
+    "door_count": 1,
+    "door_type": "arched",
+    "door_width_m": 1.0,
+    "door_height_m": 2.5,
+    "door_details": "entry within one of the ground floor arched openings; exact door configuration unclear at night",
+    "ground_floor_arches": "round",
+    "ground_floor_arch_count": 2,
+    "cornice": "decorative",
+    "cornice_details": "brick corbelling and decorative brickwork at cornice level; white stone or painted trim bands",
+    "bay_windows": 1,
+    "bay_window_details": "polygonal (hexagonal/octagonal) turret functions as a projecting bay on right side, spanning from ground to roof with conical green-shingled cap and decorative finial. Mirrored with #13 on the left.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "wooden picket fence at front with construction/storage materials in yard; no formal porch structure",
+    "chimneys": 0,
+    "chimney_details": "not visible from this angle (night photo, rear chimneys may exist)",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": true,
+    "decorative_details": "soldier courses above arched openings, stone or painted trim string courses, shingle-clad turret with green paint/stain, decorative finial atop turret, shared central gable with #13, decorative woodwork in gable peak",
+    "roof_type_observed": "cross-gable with conical turret cap",
+    "roof_features": [
+      "turret",
+      "central_gable",
+      "finials"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "not a storefront; residential ground floor with arched openings",
+    "signage_observed": "none visible on #15 side",
+    "overall_style": "Victorian",
+    "alterations_visible": "one ground floor arched opening partially covered with tarp/boarding; wooden fence added; some yard clutter",
+    "matches_hcd_typology": true,
+    "notes": "EXCELLENT night photo showing the right half of a Victorian semi-detached pair (13 & 15 St Andrew St). Building is 2.5 storeys plus polygonal turret with conical green-shingled roof. Dark red-orange brick with white stone trim bands. Large round arched ground-floor openings (2 on #15 side). Shared central gable with decorative woodwork. This is one of the most architecturally distinctive buildings in the Kensington Market area -- Queen Anne Revival style with turrets and decorative brickwork."
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.9,
+  "facade_description": "15 St Andrew St presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties retain most of their original building features including the shared roofline with central gable, and mirrored facades featuring brick cladding and decorative brickwork, flat headed and round arched window and door opening, and shingle clad turrets with decorative woodwork. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 367. 13 St. Andrew Street N/A 369. 15 St. Andrew Street N/A 195 | FO :D FO 5202 14 St. Andrew Street",
+  "heritage_summary": "Constructed as a semi-detached pair, the properties retain most of their original building features including the shared roofline with central gable, and mirrored facades featuring brick cladding and decorative brickwork, flat headed and round arched window and door opening, and shingle clad turrets with decorative woodwork. 13 St.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#C8B898",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#2A2A2A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

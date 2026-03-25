@@ -1,0 +1,213 @@
+{
+  "building_name": "11 1/2 Lippincott St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.59,
+    3.59
+  ],
+  "total_height_m": 7.18,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40561644999998,
+    "lat": 43.65509881,
+    "street": "Lippincott St",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 169.7254541466109,
+    "footprint_sqm": 196.1,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Row, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
+    "construction_period": "c. 1870\u20131900 (estimated)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 242,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Semi-Detached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Victorian semi-detached",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 19.02,
+    "height_avg_m": 6.24,
+    "footprint_sqm": 196.1,
+    "gfa_sqm": 490.2,
+    "fsi": 2.89,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "11 1/2 Lippincott St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "11 1/2 Lippincott St",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "11 1",
+      "2 LIPPINCOTT ST"
+    ]
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 6.3,
+          "sill_height_m": 4.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "11 1/2 Lippincott St presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

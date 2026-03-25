@@ -1,0 +1,17 @@
+{
+  "building_name": "Spadina Ave (Space for Lease)",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Spadina Ave (Space for Lease)",
+    "photo": "IMG_20260316_010346116_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T12:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_010346116_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "building_name": "Side of Sams Food Store on Augusta Ave",
+  "skipped": true,
+  "skip_reason": "duplicate address",
+  "_meta": {
+    "address": "Side of Sams Food Store on Augusta Ave",
+    "photo": "IMG_20260318_141938450_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_141938450_HDR.jpg",
+      "IMG_20260318_141946886_HDR.jpg",
+      "IMG_20260318_141955425_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

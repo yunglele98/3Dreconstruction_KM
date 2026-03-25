@@ -1,0 +1,218 @@
+{
+  "building_name": "3 Nassau St",
+  "floors": 4,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39973224,
+    "lat": 43.65555265,
+    "street": "Nassau St",
+    "street_number": 3,
+    "setback_m": 3.0,
+    "lot_area_sqm": 5219.899030452712,
+    "footprint_sqm": 48.4,
+    "lot_coverage_pct": 0.9,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    0,
+    2,
+    2,
+    1
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Institutional",
+    "construction_date": "1914-1930",
+    "architectural_style": "Institutional (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
+    "construction_decade": 1920,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 260,
+    "statement_of_contribution": "The property has value as a rare example of an early-twentieth-century Institutional building within the District. The property has cultural heritage value for its direct association with the development of the district as a complete community. Since the 1930s it has housed various organizations and served as one of the original two campuses of George Brown College. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings. Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed as an elementary school for the surrounding area, the property is physically, functionally, and historically linked to its surroundings where it is important and defining, maintaining, and supporting the distinct built form of the District as a complete community.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "institutional",
+    "general_use": "Residential",
+    "land_use": "Residential – Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "Art/Culture",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+  },
+  "assessment": {
+    "condition_rating": 5,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 0,
+    "signage": "Partially legible text above entrance canopy (appears to be an organization name)",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 8.54,
+    "height_avg_m": 3.38,
+    "footprint_sqm": 48.4,
+    "gfa_sqm": 121.0,
+    "fsi": 0.02,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1–2)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "3 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "3 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "3 NASSAU ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:52:01",
+      "old_total_height_m": 3.38,
+      "new_total_height_m": 9.6,
+      "floors": 4.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 2.8,
+    "status_source": "normalized_fix"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#4A4A4A",
+    "composition": "The principal elevation spans roughly 5.2 metres across 4 storeys and is capped by a gable, consistent with its institutional typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 0.9,
+          "sill_height_m": 0.7,
+          "frame_colour": "#4A4A4A",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 0.9,
+          "sill_height_m": 0.7,
+          "frame_colour": "#4A4A4A",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 1,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 0.8,
+          "sill_height_m": 0.6,
+          "frame_colour": "#4A4A4A",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#4A4A4A",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "Four-storey former institutional building (c. 1914-1930), now residential, with gable roof and commercial ground floor. Brick facade in running bond with simple bargeboard at the gable. Party walls on both sides. Two dwelling units. Condition is good.",
+  "heritage_summary": "Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#4A4A4A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#4A4A4A",
+    "door_hex": "#4A4A4A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

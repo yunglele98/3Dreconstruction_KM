@@ -1,0 +1,329 @@
+{
+  "building_name": "24 Denison Sq",
+  "floors": 3,
+  "floor_heights_m": [
+    3.8,
+    4.3,
+    3.6
+  ],
+  "total_height_m": 11.75,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40280644,
+    "lat": 43.6538361,
+    "street": "Denison Sq",
+    "street_number": 22,
+    "setback_m": 3.0,
+    "lot_area_sqm": 149.4550395999628,
+    "footprint_sqm": 85.7,
+    "lot_coverage_pct": 57.3,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "deck"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "light cream facade with contemporary balcony/deck elements",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.25,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Row",
+    "construction_date": "1904-1913",
+    "architectural_style": "House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 143,
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row of three, the properties retain original building features including shared roofline with prominent cross- gable, second storey bay windows, segmentally arched openings, and brick cladding. 22 and 24 Denison Square additionally retain decorative woodwork around the second storey bay window, wood brackets, and shingles in the gable above. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "bay_window",
+      "decorative_brick",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Semi-Detached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Local | Institutional (synagogues) | Bellevue Park adjacent",
+    "morphological_zone": "Institutional / Residential Node",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "missing_elements",
+    "structural_concern": false,
+    "risk_score": 35,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.75,
+    "height_avg_m": 7.37,
+    "footprint_sqm": 85.7,
+    "gfa_sqm": 214.2,
+    "fsi": 1.43,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "24 Denison Sq",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "24 Denison Sq",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "24 DENISON SQ"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "light cream facade with contemporary balcony/deck elements",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "front facade is heavily modernized with new railings and cladding; original narrow house-form massing remains legible",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.85,
+    "window_height_m": 1.25,
+    "window_arrangement": "asymmetric",
+    "window_details": "replacement windows associated with altered upper-level deck doors/openings",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "residential entry integrated into altered front composition",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "historic trim not evident",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 2,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "front taken over by contemporary balcony/deck structure",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "none prominent",
+    "roof_type_observed": "flat or shallow roof hidden behind altered front",
+    "roof_features": [
+      "deck"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "none",
+    "overall_style": "Mixed",
+    "alterations_visible": "modern balcony/deck additions and replacement cladding/windows",
+    "matches_hcd_typology": false,
+    "confidence": 0.55,
+    "batch": "batch_003",
+    "photo_date": "2026-03-15T15:40:00",
+    "lighting": "daytime",
+    "notes": "2.5-storey Victorian semi-detached houses. Various cladding: brown/rust painted siding, wood, some brick visible. Bay windows, wooden stairs/decks at rear/side. Trees obscure much of facade. Multiple window AC units visible. Partially obscured by trees."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "single",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 2,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Mixed",
+  "storefront_description": "none",
+  "confidence": 0.8000000000000003,
+  "notes": "2.5-storey Victorian semi-detached houses. Various cladding: brown/rust painted siding, wood, some brick visible. Bay windows, wooden stairs/decks at rear/side. Trees obscure much of facade. Multiple window AC units visible. Partially obscured by trees.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 2
+  },
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, decorative brick, original windows, cornice.",
+    "heritage_summary": "22 and 24 Denison Square additionally retain decorative woodwork around the second storey bay window, wood brackets, and shingles in the gable above. Constructed as a row of three, the properties retain original building features including shared roofline with prominent cross- gable, second storey bay windows, segmentally arched openings, and brick cladding."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.7,
+          "sill_height_m": 1.1,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.3,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "24 Denison Sq presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed in a light cream facade with contemporary balcony/deck elements palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, original windows, cornice. HCD note: Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row of three, the properties retain original building features including shared roofline with prominent cross- gable, second storey bay windows, segmentally arched openings, and brick cladding. 22 and 24 Denison Square additionally retain decorative woodwork around the second storey bay window, wood brackets, and shingles in the gable above. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "heritage_summary": "22 and 24 Denison Square additionally retain decorative woodwork around the second storey bay window, wood brackets, and shingles in the gable above. Constructed as a row of three, the properties retain original building features including shared roofline with prominent cross- gable, second storey bay windows, segmentally arched openings, and brick cladding.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#2A2A2A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

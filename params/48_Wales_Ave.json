@@ -1,0 +1,220 @@
+{
+  "building_name": "48 Wales Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.5,
+    4.0
+  ],
+  "total_height_m": 7.98,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40355425,
+    "lat": 43.65313889,
+    "street": "Wales Ave",
+    "street_number": 46,
+    "setback_m": 3.0,
+    "lot_area_sqm": 138.0299151939823,
+    "footprint_sqm": 65.8,
+    "lot_coverage_pct": 47.7,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Row, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "House-form, Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 395,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, they retain most of their original building features including their shared roofline, and mirrored facades featuring brick cladding with decorative brickwork and stonework, flat headed and segmentally arched window and door openings, stained glass transoms, and double-height projecting bay windows set under gables. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "decorative_brick",
+      "original_windows",
+      "bay_window"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 House / Townhouse",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Active laneway housing development",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 15.31,
+    "height_avg_m": 7.98,
+    "footprint_sqm": 65.8,
+    "gfa_sqm": 164.5,
+    "fsi": 1.19,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "48 Wales Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "48 Wales Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "48 WALES AVE"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window.",
+    "heritage_summary": "Constructed as a row, they retain most of their original building features including their shared roofline, and mirrored facades featuring brick cladding with decorative brickwork and stonework, flat headed and segmentally arched window and door openings, stained glass transoms, and double-height projecting bay windows set under gables. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 4.7,
+          "sill_height_m": 3.7,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "48 Wales Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, they retain most of their original building features including their shared roofline, and mirrored facades featuring brick cladding with decorative brickwork and stonework, flat headed and segmentally arched window and door openings, stained glass transoms, and double-height projecting bay windows set under gables. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "heritage_summary": "Constructed as a row, they retain most of their original building features including their shared roofline, and mirrored facades featuring brick cladding with decorative brickwork and stonework, flat headed and segmentally arched window and door openings, stained glass transoms, and double-height projecting bay windows set under gables. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

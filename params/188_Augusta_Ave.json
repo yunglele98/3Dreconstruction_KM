@@ -1,0 +1,268 @@
+{
+  "building_name": "188 Augusta Ave",
+  "floors": 1,
+  "floor_heights_m": [
+    4.5
+  ],
+  "total_height_m": 4.5,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40203963,
+    "lat": 43.65408085,
+    "street": "Augusta Ave",
+    "street_number": 188,
+    "setback_m": 0.0,
+    "lot_area_sqm": 278.14726273283,
+    "footprint_sqm": 167.1,
+    "lot_coverage_pct": 60.1,
+    "lots_sharing_footprint": 6
+  },
+  "roof_type": "flat",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "Stucco",
+  "facade_colour": "white/cream painted facade with blue sign and grey trim",
+  "windows_per_floor": [
+    4
+  ],
+  "window_type": "storefront",
+  "window_width_m": 1.2,
+  "window_height_m": 2.0,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 29,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Pizzeria Via Mercanti | Fresh Meals Solutions",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Via Mercanti (teal fascia with clock); House of Spice (partially visible)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 9.37,
+    "height_avg_m": 4.04,
+    "footprint_sqm": 167.1,
+    "gfa_sqm": 417.8,
+    "fsi": 1.5,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 5,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "188 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "188 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "188 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 9.4,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "white/cream painted facade with blue sign and grey trim",
+    "facade_material_observed": "painted masonry/stucco",
+    "facade_condition_notes": "well-maintained restaurant, clean signage; white/cream painted facade with large blue illuminated Via Mercanti sign",
+    "condition": "good",
+    "windows_per_floor": [
+      4
+    ],
+    "window_type": "storefront",
+    "window_width_m": 1.2,
+    "window_height_m": 2.0,
+    "window_arrangement": "symmetric",
+    "window_details": "large storefront windows with black metal railing patio in front; small pendant globe lights along fascia",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "single glazed restaurant entry",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "flat storefront fascia with illuminated sign and pendant globe lights",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "metal railing patio with green hedge",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "large blue illuminated sign: PIZZERIA VIA MERCANTI / 188 Augusta Ave / 647-343-6647 with round gold Via Mercanti logos; pendant globe lights along fascia",
+    "roof_type_observed": "flat",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "1-storey commercial building with large storefront windows, black metal railing patio, green hedge; adjacent to BURDOCK BREWERY on left, P&P CO on right",
+    "signage_observed": "PIZZERIA VIA MERCANTI / 188 Augusta Ave / 647-343-6647",
+    "overall_style": "Commercial",
+    "alterations_visible": "fully commercial storefront replacement",
+    "matches_hcd_typology": false,
+    "confidence": 0.9,
+    "photo_date": "2026-03-15",
+    "photo_time": "~3:47-3:55pm",
+    "lighting": "daytime, excellent",
+    "photo_count": 3,
+    "notes": "Daytime batch_003 observations. 1-storey commercial with flat roof. Adjacent to BURDOCK BREWERY signage on left and P&P CO on right."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "1-storey commercial building with large storefront windows, black metal railing patio, green hedge; adjacent to BURDOCK BREWERY on left, P&P CO on right",
+  "confidence": 0.9,
+  "notes": "Daytime batch_003 observations. 1-storey commercial with flat roof. Adjacent to BURDOCK BREWERY signage on left and P&P CO on right.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a flat, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 4 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 4.2,
+          "sill_height_m": 2.8,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "188 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a flat, consistent with its converted house-form, semi-detached typology. The facade reads primarily as painted masonry/stucco in a white/cream painted facade with blue sign and grey trim palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 4 window bays from lower to upper levels, using storefront, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

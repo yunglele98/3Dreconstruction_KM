@@ -1,0 +1,351 @@
+{
+  "building_name": "180 Baldwin St",
+  "floors": 3,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 7.2,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40091769,
+    "lat": 43.65486489,
+    "street": "Baldwin St",
+    "street_number": 178,
+    "setback_m": 0.0,
+    "lot_area_sqm": 130.6392131542455,
+    "footprint_sqm": 250.2,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "front_gable"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "yellow-painted brick side walls with a black-painted storefront insertion",
+  "windows_per_floor": [
+    1,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Row, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 49,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and window openings above the first storey, and cross-gabled roofline. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [
+      "decorative_brick",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "COAL AND CURRY",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 30,
+    "signage": "Cheese Magic; Leaf Doner; Tacos 101 (partial)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 13.24,
+    "height_avg_m": 6.98,
+    "footprint_sqm": 250.2,
+    "gfa_sqm": 625.5,
+    "fsi": 4.79,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 7,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "180 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "180 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "180 BALDWIN ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 6.98,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "window_hoods": {
+      "present": true,
+      "arch_type": "flat",
+      "colour_hex": "#D4C9A8"
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.7,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "yellow-painted brick side walls with a black-painted storefront insertion",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Storefront is modern and active, while the older painted brick above shows patching, weathering, and mismatch at party walls.",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.3,
+    "window_arrangement": "asymmetric",
+    "window_details": "Modern full-height storefront glazing below older upper-storey domestic windows and a small gable opening.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Single glazed entry set within a black shopfront frame.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Flat sign band with no elaborate trim.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney clearly visible from this cropped view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": true,
+    "decorative_details": "Arched upper window surround and steep house-form roofline remain the key heritage cues.",
+    "roof_type_observed": "Steep front-gabled roof",
+    "roof_features": [
+      "front_gable"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Modern restaurant storefront in black cladding with large front glazing.",
+    "signage_observed": "Coal and Curry script sign and circular logo.",
+    "overall_style": "Mixed",
+    "alterations_visible": "Ground floor is fully rebuilt as a contemporary restaurant storefront.",
+    "matches_hcd_typology": true,
+    "confidence": 0.82,
+    "notes": "View is partly blocked by bins, but the facade composition is still clear."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": true,
+  "overall_style": "Mixed",
+  "storefront_description": "Modern restaurant storefront in black cladding with large front glazing.",
+  "confidence": 0.9,
+  "notes": "View is partly blocked by bins, but the facade composition is still clear.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, row, bay-and-gable typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
+    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and window openings above the first storey, and cross-gabled roofline. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Three-storey converted row house with a steep front-gabled roof. Yellow-painted brick side walls frame a black-clad modern restaurant storefront (Coal and Curry) at grade. Upper floors retain an asymmetric 1-2-1 window pattern with arched surrounds and decorative lintels visible on the second storey. The ground floor has been fully rebuilt as a contemporary glazed shopfront with a flat sign band replacing traditional trim. Patching and weathering are visible where the older painted brick meets adjacent party walls.",
+  "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and window openings above the first storey, and cross-gabled roofline. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#C8B060",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "flat",
+    "count": 1,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": []
+}

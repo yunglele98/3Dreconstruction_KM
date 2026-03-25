@@ -1,0 +1,18 @@
+{
+  "building_name": "Baldwin St / Spadina",
+  "skipped": true,
+  "skip_reason": "intersection streetscape/context view, not a single building facade",
+  "_meta": {
+    "address": "Baldwin St / Spadina",
+    "photo": "PXL_20260318_224133826.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "PXL_20260318_224133826.jpg",
+      "PXL_20260318_224149351.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

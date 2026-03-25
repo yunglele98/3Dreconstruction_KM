@@ -1,0 +1,211 @@
+{
+  "building_name": "Bellevue Ave (house with teal balcony)",
+  "floors": 2.5,
+  "floor_heights_m": [
+    3.9,
+    4.6
+  ],
+  "total_height_m": 8.5,
+  "facade_width_m": 5.5,
+  "facade_depth_m": 15.0,
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "dormer"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "red brick with white columns, teal/green painted balcony railing and porch bench, lattice screen below porch",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.8,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "red brick with white columns, teal/green painted balcony railing and porch bench, lattice screen below porch",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "balconies": 1,
+    "balcony_type": "projecting",
+    "porch_present": true,
+    "porch_type": "open",
+    "porch_details": "full-width porch with white columns, teal/green railing, white bench, teal lattice screening below, steps with teal railing",
+    "roof_features": [
+      "dormer"
+    ],
+    "overall_style": "Victorian",
+    "confidence": 0.8,
+    "notes": "daytime; adjacent/same pair as teal porch columns house; dormer visible; chain-link fence at front"
+  },
+  "_meta": {
+    "address": "Bellevue Ave (teal balcony)",
+    "photo": "PXL_20260318_215410656.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "dormer",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "PXL_20260318_215410656.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "balconies": 1,
+  "balcony_type": "projecting",
+  "overall_style": "Victorian",
+  "confidence": 0.9,
+  "notes": "daytime; adjacent/same pair as teal porch columns house; dormer visible; chain-link fence at front",
+  "porch_present": true,
+  "porch_type": "open",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 1
+  },
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.5 metres across 2.5 storeys and is capped by a gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.2,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 0.9,
+          "sill_height_m": 0.7,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "Bellevue Ave (house with teal balcony) presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.5 metres across 2.5 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "house-form, row",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "dormer": {
+    "present": true,
+    "type": "Gable dormer",
+    "count": 1,
+    "width_m": 1.0,
+    "height_m": 1.2,
+    "has_window": true
+  },
+  "volumes": [],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {}
+}

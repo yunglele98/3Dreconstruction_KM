@@ -1,0 +1,205 @@
+{
+  "building_name": "483 Bathurst St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.5,
+    3.8
+  ],
+  "total_height_m": 7.57,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.40726110999998,
+    "lat": 43.65604694,
+    "street": "Bathurst St",
+    "street_number": 483,
+    "setback_m": 0.5,
+    "lot_area_sqm": 185.1607704700502,
+    "footprint_sqm": 64.7,
+    "lot_coverage_pct": 34.9,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Stone",
+  "facade_colour": "buff stone",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "No",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [
+      "original_windows",
+      "bay_window"
+    ],
+    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (511) | Commercial",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 55,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 7.57,
+    "height_avg_m": 5.11,
+    "footprint_sqm": 64.7,
+    "gfa_sqm": 194.1,
+    "fsi": 1.05,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20133)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "483 Bathurst St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "photo": "IMG_20260320_173330517_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_173330517_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "483 Bathurst St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "483 BATHURST ST"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.4,
+    "projection_m": 0.6
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#C8B898",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, bay window."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.1,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.7,
+          "sill_height_m": 1.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "street_setback_m": 0.5,
+  "confidence": 0.7500000000000001,
+  "facade_description": "483 Bathurst St presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as stone, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include original windows, bay window.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#C8B898",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

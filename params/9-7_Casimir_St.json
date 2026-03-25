@@ -1,0 +1,190 @@
+{
+  "building_name": "9-7 Casimir St",
+  "floors": 2,
+  "facade_material": "brick",
+  "facade_colour": "red brick with white gable caps and a shared courtyard drive",
+  "windows_per_floor": [
+    6,
+    6
+  ],
+  "window_type": "rectangular",
+  "door_count": 4,
+  "door_type": "residential",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "gable",
+  "roof_features": [
+    "courtyard_block"
+  ],
+  "photo_observations": {
+    "overall_style": "Residential",
+    "notes": "Section of the same multi-unit Casimir courtyard row."
+  },
+  "_meta": {
+    "address": "9-7 Casimir St",
+    "photo": "IMG_20260320_162108029_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:40:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260320_162108029_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "candidate_range_anchor",
+    "db_address_full": "9 Casimir St",
+    "db_address_candidates": [
+      "9-7 CASIMIR ST",
+      "7 CASIMIR ST",
+      "8 CASIMIR ST",
+      "9 CASIMIR ST"
+    ],
+    "db_revision_ts": "2026-03-25T14:51:46"
+  },
+  "overall_style": "Residential",
+  "notes": "Section of the same multi-unit Casimir courtyard row.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "residential",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_1",
+      "type": "residential",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_2",
+      "type": "residential",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_3",
+      "type": "residential",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 2 storeys and is capped by a gable, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 6, 6 window bays from lower to upper levels, using rectangular, and 4 principal entrances."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 6,
+          "type": "rectangular",
+          "width_m": 0.7,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 6,
+          "type": "rectangular",
+          "width_m": 0.7,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "9-7 Casimir St presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 2 storeys and is capped by a gable, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 6, 6 window bays from lower to upper levels, using rectangular, and 4 principal entrances.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 6.4,
+  "floor_heights_m": [
+    3.2,
+    3.2
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "roof_pitch_deg": 40,
+  "site": {
+    "lon": -79.40384894,
+    "lat": 43.65223679,
+    "street": "Casimir St",
+    "street_number": 9
+  }
+}

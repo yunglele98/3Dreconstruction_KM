@@ -1,0 +1,18 @@
+{
+  "building_name": "172 Baldwin St (Blackbird Baking Co.)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "172_Baldwin_St.json",
+  "_meta": {
+    "address": "172 Baldwin St (Blackbird Baking Co.)",
+    "photo": "IMG_20260318_183354499_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T14:46:25-04:00",
+    "reference_photos": [
+      "IMG_20260318_183354499_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

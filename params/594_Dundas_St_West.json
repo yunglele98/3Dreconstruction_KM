@@ -1,0 +1,165 @@
+{
+  "building_name": "594 Dundas Street West",
+  "year_built_approx": "Pre-1889",
+  "overall_style": "Victorian Vernacular, Commercial",
+  "building_type": "Residential (Commercial)",
+  "condition": "fair",
+  "confidence": 0.9,
+  "source": "hcd_plan_only",
+  "site": {
+    "total_facade_width_m": 6.0,
+    "street_setback_m": 0.0,
+    "orientation": "Facade faces street",
+    "context": "Kensington Market HCD, Character Sub-Area: Market"
+  },
+  "floors": 2,
+  "floor_heights_m": [
+    3.75,
+    3.75
+  ],
+  "total_height_m": 7.5,
+  "roof_type": "Flat with parapet",
+  "roof_pitch_deg": 0,
+  "roof_material": "Built-up flat roof",
+  "facade_width_m": 6.0,
+  "facade_material": "Brick",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "Commercial plate glass ground, double-hung upper",
+  "door_count": 1,
+  "has_storefront": true,
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 6.0,
+    "height_m": 3.5,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "projection_mm": 180,
+      "height_mm": 220,
+      "colour_hex": "#D4C9A8"
+    },
+    "stained_glass_transoms": {
+      "present": true,
+      "colour_palette": "amber_green_red"
+    },
+    "window_hoods": {
+      "present": true,
+      "arch_type": "segmental",
+      "colour_hex": "#D4C9A8"
+    },
+    "storefront_context": {
+      "present": true
+    }
+  },
+  "hcd_data": {
+    "hcd_reference_number": 145,
+    "hcd_page": 96,
+    "character_sub_area": "Market",
+    "typology": "Commercial",
+    "construction_date": "Pre-1889",
+    "statement_of_contribution": "Rare purpose-built Victorian commercial structure at gateway to Augusta Avenue. Associated with George Eakin Gibbard, founder of Canadian Pharmaceutical Association.",
+    "building_features": [
+      "brick cladding",
+      "decorative brickwork and stonework",
+      "flat-headed and segmental-arched window and door openings",
+      "leaded glass transoms",
+      "ornamented cornice",
+      "chamfered corner",
+      "commercial storefront"
+    ],
+    "discrepancies": []
+  },
+  "_meta": {
+    "address": "594 Dundas Street West, Toronto, ON",
+    "neighbourhood": "Kensington Market",
+    "heritage_designation": "Within Kensington Market Heritage Conservation District",
+    "hcd_reference": "HCD #145",
+    "hcd_typology": "Commercial",
+    "hcd_construction_date": "Pre-1889",
+    "hcd_page": 96,
+    "model": "hcd_plan_skeleton",
+    "timestamp": "2026-03-12T23:19:59",
+    "notes": "Skeleton params generated from HCD Plan Vol.2 Appendix D. No photo analysis. confidence=0.40.",
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes"
+    ],
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "all_upper",
+      "head_shape": "segmental_arch"
+    }
+  ],
+  "facade_depth_m": 10.0,
+  "facade_colour": "Brick with commercial storefront",
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street frontage spans roughly 6 metres across 2 storeys beneath a flat roof with a parapet, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using commercial plate-glass openings at ground level and double-hung sash windows above, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include brick cladding, decorative brickwork and stonework, flat-headed and segmental-arched window and door openings, leaded glass transoms, ornamented cornice, chamfered corner.",
+    "heritage_summary": "A rare purpose-built Victorian commercial building at the gateway to Augusta Avenue. Associated with George Eakin Gibbard, founder of Canadian Pharmaceutical Association."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "colour_hex": "#3A2A20",
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "facade_description": "594 Dundas Street West presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 6 metres across 2 storeys beneath a flat roof with a parapet, consistent with its commercial typology. The frontage is defined primarily by brick above a commercial storefront in a warm brick and storefront glazing palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using commercial plate-glass openings at ground level and double-hung sash windows above, and 1 principal entrance. Key storefront and facade features include brick cladding, decorative brickwork and stonework, flat-headed and segmental-arched window and door openings, leaded glass transoms, ornamented cornice, chamfered corner. HCD note: Rare purpose-built Victorian commercial structure at gateway to Augusta Avenue. Associated with George Eakin Gibbard, founder of Canadian Pharmaceutical Association.",
+  "heritage_summary": "A rare purpose-built Victorian commercial building at the gateway to Augusta Avenue. Associated with George Eakin Gibbard, founder of Canadian Pharmaceutical Association.",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "street_setback_m": 2.0,
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "segmental",
+    "count": 0,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": [],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3
+}

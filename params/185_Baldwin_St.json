@@ -1,0 +1,200 @@
+{
+  "building_name": "185 Baldwin St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40096672999998,
+    "lat": 43.65464008,
+    "street": "Baldwin St",
+    "street_number": 185,
+    "setback_m": 3.0,
+    "lot_area_sqm": 55.79109805264728,
+    "footprint_sqm": 129.7,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 9
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 85,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "CHOCOLATE ADDICT",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Mare Pizzeria (large blue sign with illustrated graphics)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 10.57,
+    "height_avg_m": 6.5,
+    "footprint_sqm": 129.7,
+    "gfa_sqm": 324.2,
+    "fsi": 5.81,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 6,
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "185 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "185 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "185 BALDWIN ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.57,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.9,
+    "status_source": "normalized_fix"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.6,
+          "sill_height_m": 2.0,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "Two-storey converted row house in brick with a cross-gable roof, set back approximately 3 metres from the street. The ground floor is occupied by an active commercial storefront (Chocolate Addict / Mare Pizzeria signage observed). Two double-hung sash windows are visible on the second floor above the shopfront. No dedicated photo observations are available for this address; description relies on database records and typology defaults.",
+  "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

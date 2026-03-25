@@ -1,0 +1,332 @@
+{
+  "building_name": "57 Bellevue Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.5,
+    3.7
+  ],
+  "total_height_m": 7.48,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.403341,
+    "lat": 43.65481939,
+    "street": "Bellevue Ave",
+    "street_number": 57,
+    "setback_m": 3.0,
+    "lot_area_sqm": 113.9342945997617,
+    "footprint_sqm": 93.2,
+    "lot_coverage_pct": 81.8,
+    "lots_sharing_footprint": 7
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "mansard",
+    "dormer"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "grey-green painted exterior; heavily obscured by large evergreen trees",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 79,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as part of a row with the adjacent property at 61 Bellevue Avenue, the properties retain many of their original building features, including their shared mansard roofline, round-arched dormers with wood scrollwork trim, brick cladding, and single-storey bay windows, and segmentally arched window and door openings at the first storey. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "decorative_brick",
+      "original_windows",
+      "bay_window",
+      "cornice"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 40,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 18.64,
+    "height_avg_m": 7.48,
+    "footprint_sqm": 93.2,
+    "gfa_sqm": 233.0,
+    "fsi": 2.05,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 4
+  },
+  "_meta": {
+    "address": "57 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "dormer",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_160010208_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_160010208_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "57 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "57 BELLEVUE AVE"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "grey-green painted exterior; heavily obscured by large evergreen trees",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Facade mostly hidden behind dense evergreen vegetation; mansard roof shape detectable above tree line",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "Windows barely visible through vegetation",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Entry not visible; obscured by vegetation",
+    "ground_floor_arches": "segmental",
+    "ground_floor_arch_count": 1,
+    "cornice": "decorative",
+    "cornice_details": "Not clearly visible through vegetation",
+    "bay_windows": 1,
+    "bay_window_details": "Bay window presumed present per HCD; not visible through vegetation",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "",
+    "chimneys": 0,
+    "chimney_details": "Not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Largely obscured by vegetation",
+    "roof_type_observed": "Mansard roof shape visible above tree line",
+    "roof_features": [
+      "mansard",
+      "dormer"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "None",
+    "overall_style": "Victorian",
+    "alterations_visible": "Heavy vegetation growth obscuring facade; painted exterior over original brick",
+    "matches_hcd_typology": true,
+    "confidence": 0.45,
+    "notes": "Very low confidence - facade almost entirely obscured by large evergreen trees"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "",
+  "confidence": 0.6000000000000001,
+  "notes": "Very low confidence - facade almost entirely obscured by large evergreen trees",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "segmental",
+  "ground_floor_arch_count": 1,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
+    "heritage_summary": "Constructed as part of a row with the adjacent property at 61 Bellevue Avenue, the properties retain many of their original building features, including their shared mansard roofline, round-arched dormers with wood scrollwork trim, brick cladding, and single-storey bay windows, and segmentally arched window and door openings at the first storey. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 6.1,
+          "sill_height_m": 4.7,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Semi-detached two-storey house-form in grey-green painted exterior; heavily obscured by large evergreen trees with a gable roof. Features include a double-height projecting bay, decorative bargeboards and a decorative cornice. Limited photo visibility; details are approximate. Pre-1889 construction.",
+  "heritage_summary": "Constructed as part of a row with the adjacent property at 61 Bellevue Avenue, the properties retain many of their original building features, including their shared mansard roofline, round-arched dormers with wood scrollwork trim, brick cladding, and single-storey bay windows, and segmentally arched window and door openings at the first storey. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "dormer": {
+    "present": true,
+    "type": "Gable dormer",
+    "count": 1,
+    "width_m": 1.0,
+    "height_m": 1.2,
+    "has_window": true
+  },
+  "volumes": []
+}

@@ -1,0 +1,18 @@
+{
+  "building_name": "Historical plaque (Bellevue Square Park) 43.653802, -79.401982",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Historical plaque (Bellevue Square Park) 43.653802, -79.401982",
+    "photo": "IMG_20260315_154336986_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T12:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260315_154336986_HDR.jpg",
+      "IMG_20260315_154344177_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

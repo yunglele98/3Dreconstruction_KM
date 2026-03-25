@@ -1,0 +1,17 @@
+{
+  "building_name": "Spadina Ave / College St (South East corner facing North)",
+  "skipped": true,
+  "skip_reason": "blurry night intersection context, not a single readable building facade",
+  "_meta": {
+    "address": "Spadina Ave / College St (South East corner facing North)",
+    "photo": "IMG_20260321_012727606_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260321_012727606_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

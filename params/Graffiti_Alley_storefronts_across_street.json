@@ -1,0 +1,17 @@
+{
+  "building_name": "Graffiti Alley, storefronts across street",
+  "skipped": true,
+  "skip_reason": "duplicate — shows 438 Spadina Ave from across street; observations merged into 438_Spadina_Ave.json",
+  "_meta": {
+    "address": "Graffiti Alley, storefronts across street",
+    "photo": "IMG_20260316_003541905_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T21:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_003541905_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

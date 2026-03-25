@@ -1,0 +1,22 @@
+{
+  "building_name": "257 Augusta Ave (The Organic Press)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "257_Augusta_Ave.json",
+  "_meta": {
+    "address": "257 Augusta Ave (The Organic Press)",
+    "photo": "IMG_20260318_185054611_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_180510835_HDR.jpg",
+      "IMG_20260318_180513812_HDR.jpg",
+      "IMG_20260318_180520822_HDR.jpg",
+      "IMG_20260318_180528618_HDR.jpg",
+      "IMG_20260318_185054611_HDR.jpg"
+    ],
+    "reference_photo_count": 6,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

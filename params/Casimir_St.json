@@ -1,0 +1,18 @@
+{
+  "building_name": "Casimir St",
+  "skipped": true,
+  "skip_reason": "grafitti-covered alley wall and service context, not a distinct building facade",
+  "_meta": {
+    "address": "Casimir St",
+    "photo": "IMG_20260320_162246054_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_162246054_HDR.jpg",
+      "IMG_20260320_162312340_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

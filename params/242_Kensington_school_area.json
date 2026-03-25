@@ -1,0 +1,17 @@
+{
+  "building_name": "242 (Kensington school area)",
+  "skipped": true,
+  "skip_reason": "duplicate alias; observations already captured in Kensington Community School, ~242 Augusta Ave",
+  "_meta": {
+    "address": "242 (Kensington school area)",
+    "photo": "IMG_20260315_150320317_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:18:30-04:00",
+    "reference_photos": [
+      "IMG_20260315_150320317_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

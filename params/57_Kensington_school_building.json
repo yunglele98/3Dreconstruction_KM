@@ -1,0 +1,232 @@
+{
+  "building_name": "57 Kensington school building",
+  "floors": 2,
+  "floor_heights_m": [
+    3.2,
+    3.2
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "brown brick ground floor with blue corrugated metal cladding on upper storey",
+  "windows_per_floor": [
+    4,
+    3
+  ],
+  "window_type": "fixed",
+  "window_width_m": 1.2,
+  "window_height_m": 1.5,
+  "door_count": 1,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "Multiple gables with blue metal cladding",
+  "roof_pitch_deg": 35,
+  "roof_features": [
+    "metal_cladding",
+    "rooftop_signage"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "brown brick ground floor with blue corrugated metal cladding on upper storey",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Good condition. Part of Kensington Community School complex. Blue cladding intact. 'KENSING' letters visible (partial view of 'KENSINGTON').",
+    "condition": "good",
+    "windows_per_floor": [
+      4,
+      3
+    ],
+    "window_type": "fixed",
+    "window_width_m": 1.2,
+    "window_height_m": 1.5,
+    "window_arrangement": "irregular",
+    "window_details": "Modern fixed windows on ground floor. Upper gables have projecting dormers.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Standard institutional entrance",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "none",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "none",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Colourful mosaic/mural panels on exterior walls. Part of school complex.",
+    "roof_type_observed": "Multiple gables with blue metal cladding",
+    "roof_features": [
+      "metal_cladding",
+      "rooftop_signage"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "N/A",
+    "signage_observed": "'KENSING' partial view of rooftop letters. Number '51' visible on brick.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Modern institutional construction",
+    "matches_hcd_typology": false,
+    "confidence": 0.75,
+    "notes": "Part of Kensington Community School complex, viewed from a different angle. Two photos taken. This may be a separate wing or adjacent section numbered 57."
+  },
+  "_meta": {
+    "address": "57 Kensington school building",
+    "photo": "IMG_20260315_150353013_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T00:00:00Z",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    }
+  },
+  "window_arrangement": "irregular",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "N/A",
+  "confidence": 0.9,
+  "notes": "Part of Kensington Community School complex, viewed from a different angle. Two photos taken. This may be a separate wing or adjacent section numbered 57.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 2 storeys and is capped by a multiple gables with blue metal cladding, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 4, 3 window bays from lower to upper levels, using fixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.6,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "57 Kensington school building presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 2 storeys and is capped by a multiple gables with blue metal cladding, consistent with its house-form typology. The facade reads primarily as mixed in a brown brick ground floor with blue corrugated metal cladding on upper storey palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 3 window bays from lower to upper levels, using fixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 6.4,
+  "site": {}
+}

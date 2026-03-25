@@ -1,0 +1,289 @@
+{
+  "building_name": "90 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40391877,
+    "lat": 43.65501929,
+    "street": "Nassau St",
+    "street_number": null,
+    "setback_m": 0.0,
+    "lot_area_sqm": 95.75937951450656,
+    "footprint_sqm": 78.2,
+    "lot_coverage_pct": 81.7,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "pink/salmon painted ground floor storefront, buff brick upper floors",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached ; Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 295,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. The first storey at 72 Bellevue Avenue and attic gable at 90 Nassau feature rounded arch openings. The eastern half of the first storey at 90 Nassau Street has housed commercial uses since 1878 according to City Directories and features a commercial storefront facing Bellevue Avenue and Nassau Street. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 89. 70 Bellevue Avenue N/A 90. 72 Bellevue Avenue N/A 295. 90 Nassau Street N/A 68 DCH | FO :D 78 Bellevue Avenue 78 BELLEVUE AVENUE",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "General Retail / Specialty",
+    "business_name": "The Honeybea Shop",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 14.19,
+    "height_avg_m": 8.68,
+    "footprint_sqm": 78.2,
+    "gfa_sqm": 195.5,
+    "fsi": 2.04,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "90 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_155050800_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_155050800_HDR.jpg",
+      "IMG_20260320_155056787_HDR.jpg",
+      "IMG_20260320_155111167_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "90 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "90 NASSAU ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 14.19,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "photo_reference": "IMG_20260320_155050800_HDR.jpg",
+    "facade_colour_observed": "pink/salmon painted ground floor storefront, buff/cream brick upper floors with green trim accents",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Fair condition. Ground floor commercial storefront with pink/salmon paint. Upper floors retain original buff brick. Some weathering visible. Partially obscured by mature tree.",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.5,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor is storefront glazing. Second floor has two windows with segmental arched brick voussoirs consistent with HCD description. Attic gable may have rounded arch opening per HCD.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 1.0,
+    "door_height_m": 2.4,
+    "door_details": "Commercial storefront entrance, recessed, with large display windows flanking",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "bracketed",
+    "cornice_details": "Brick eaves brackets at roofline per HCD description",
+    "bay_windows": 0,
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "chimneys": 0,
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": true,
+    "decorative_details": "String courses between floors. Segmental arched window openings with brick voussoirs at second storey. Rounded arch opening at attic gable per HCD description.",
+    "roof_type_observed": "Cross-gable, shared roofline with 70/72 Bellevue Ave",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Pink/salmon painted commercial storefront with large display windows. The Honeybea Shop. Commercial use since 1878 per HCD records. Storefront faces both Bellevue Ave and Nassau St.",
+    "signage_observed": "Business signage visible but partially obscured by tree",
+    "overall_style": "Victorian",
+    "alterations_visible": "Ground floor converted to commercial storefront (historic - since 1878). Pink/salmon paint on storefront area not original but part of ongoing commercial character. Upper floors largely intact.",
+    "matches_hcd_typology": true,
+    "confidence": 0.8,
+    "notes": "2.5-storey converted house-form. Corner building at Bellevue Ave and Nassau St. Ground floor commercial (The Honeybea Shop) with pink/salmon painted storefront, upper floors buff brick with segmental arched windows. Cross-gable shared with 70/72 Bellevue Ave. Commercial use documented since 1878 per city directories. Partially obscured by mature tree.",
+    "photo_date": "2026-03-20",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T12:00:00-04:00"
+  },
+  "overall_style": "Victorian",
+  "confidence": 0.9,
+  "notes": "Converted house-form. Pink/salmon commercial storefront at ground, buff brick upper floors. Corner at Bellevue/Nassau. The Honeybea Shop. Commercial since 1878.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached ; converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. 70 Bellevue Avenue N/A 90."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 4.3,
+          "sill_height_m": 3.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Pre-1889 converted semi-detached at the corner of Bellevue Avenue and Nassau Street, sharing a roofline with 70/72 Bellevue. Pink/salmon painted commercial storefront at grade (The Honeybea Shop, commercial use since 1878), buff brick upper floors with segmental arched window openings and brick voussoirs. Cross-gable roof, string courses, and brick eaves brackets. Partially obscured by a mature street tree.",
+  "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. 70 Bellevue Avenue N/A 90.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "width_m": 4.4,
+    "height_m": 3.5,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

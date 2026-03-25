@@ -1,0 +1,17 @@
+{
+  "building_name": "43.656586, -79.400446 (vacant lot)",
+  "skipped": true,
+  "skip_reason": "vacant lot and construction edge; no building facade to analyze",
+  "_meta": {
+    "address": "43.656586, -79.400446 (vacant lot)",
+    "photo": "IMG_20260318_151816648_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:21:39-04:00",
+    "reference_photos": [
+      "IMG_20260318_151816648_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

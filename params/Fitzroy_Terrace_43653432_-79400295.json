@@ -1,0 +1,19 @@
+{
+  "building_name": "Fitzroy Terrace (43.653432, -79.400295)",
+  "skipped": true,
+  "skip_reason": "vague coordinates — Fitzroy Terrace area",
+  "_meta": {
+    "address": "Fitzroy Terrace",
+    "photo": "IMG_20260320_012359603_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T23:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_012359603_HDR.jpg",
+      "IMG_20260320_012409028_HDR.jpg",
+      "IMG_20260320_012422542_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

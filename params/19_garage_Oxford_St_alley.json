@@ -1,0 +1,17 @@
+{
+  "building_name": "19 (garage), Oxford St alley",
+  "skipped": true,
+  "skip_reason": "garage/accessory structure in alley, not a principal building facade",
+  "_meta": {
+    "address": "19 (garage), Oxford St alley",
+    "photo": "IMG_20260315_151635829_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:18:30-04:00",
+    "reference_photos": [
+      "IMG_20260315_151635829_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "building_name": "185A/186A Augusta Ave",
+  "floors": 2,
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick with cream recessed entry surround and black balcony railings",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.35,
+  "door_count": 2,
+  "door_type": "mixed",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "Flat roof",
+  "roof_pitch_deg": 2,
+  "roof_features": [
+    "balcony",
+    "parapet_wall"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "red-brown brick with cream recessed entry surround and black balcony railings",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Facade appears occupied and in decent repair, with a contemporary balcony addition above a recessed shared entrance.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.35,
+    "window_arrangement": "symmetric",
+    "window_details": "Two upper windows flank a central balcony/deck, while the ground floor is largely recessed glazing and entry doors.",
+    "door_count": 2,
+    "door_type": "mixed",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Shared recessed glazed doorway and adjacent side commercial/residential entrance visible at grade.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Minimal coping at the top of the flat facade.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 1,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Facade interest comes from the central balcony/deck over the recessed entry.",
+    "roof_type_observed": "Flat roof",
+    "roof_features": [
+      "balcony",
+      "parapet_wall"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "185A address marking visible near the entrance.",
+    "overall_style": "Mixed",
+    "alterations_visible": "Contemporary balcony and entrance modifications.",
+    "matches_hcd_typology": false,
+    "confidence": 0.68,
+    "notes": "Combined-address record created from a single frontal image showing one shared facade."
+  },
+  "_meta": {
+    "address": "185A/186A Augusta Ave",
+    "photo": "IMG_20260319_165430428_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260319_165430428_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "window_arrangement": "symmetric",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 1,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Mixed",
+  "storefront_description": "No true storefront is emphasized here; the shared ground floor reads more as a paired residential or mixed-entry frontage with recessed doors rather than as a display-oriented retail facade.",
+  "confidence": 0.9,
+  "notes": "Combined-address record created from a single frontal image showing one shared facade.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "mixed",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_1",
+      "type": "mixed",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 1
+  },
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 2 storeys and is capped by a flat roof, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "185A/186A Augusta Ave presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 2 storeys and is capped by a flat roof, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 6.4,
+  "floor_heights_m": [
+    3.2,
+    3.2
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {}
+}

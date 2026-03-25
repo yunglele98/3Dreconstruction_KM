@@ -1,0 +1,204 @@
+{
+  "building_name": "103 Bellevue Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40398014999998,
+    "lat": 43.65695889,
+    "street": "Bellevue Ave",
+    "street_number": 103,
+    "setback_m": 3.0,
+    "lot_area_sqm": 877.6838252269102,
+    "footprint_sqm": 317.9,
+    "lot_coverage_pct": 36.2,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "Institutional",
+    "construction_date": "1858",
+    "architectural_style": "Institutional (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1858 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1850,
+    "sub_area": "Residential",
+    "contributing": "Yes",
+    "hcd_plan_index": 105,
+    "statement_of_contribution": "St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromatic roof, and polychromatic brickwork with stone detailing and bellcote. Completed in 1858 and rebuilt in 1965, it is the oldest place of worship in the District. Constructed in 1858 by Robert Denison following the subdivision of his family\u2019s estate into residential lots, the property is directly associated with the District\u2019s early development. The property is also associated two of Canada\u2019s preeminent nineteenth- century architects: Thomas Fuller, who designed the original church in 1858, and the prolific church architect, Henry Langley, who oversaw the rebuilding of the church in 1865 following a fire. Located on the southeast corner of Bellevue Avenue and College Street, the property anchors the entrance to Bellevue Avenue and is considered a landmark within the District. Among the earliest institutional buildings in the area, it is physically, functionally, and historically linked to its surroundings where it is important and defining, maintaining, and supporting the distinct built form of the District as a complete community. The property also holds community value as a continuing place of worship and for its community outreach programming.",
+    "building_features": [
+      "decorative_brick"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "institutional",
+    "general_use": "Institutional",
+    "land_use": "Institutional \u2013 Religious",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "roof_damage; damaged_masonry; missing_elements",
+    "structural_concern": false,
+    "risk_score": 80,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 23.75,
+    "height_avg_m": 8.57,
+    "footprint_sqm": 317.9,
+    "gfa_sqm": 794.8,
+    "fsi": 0.91,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": null,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "103 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "103 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "103 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 9.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "decorative"
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The principal elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its institutional typology.",
+    "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 2, 2 opening rhythm from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Key heritage elements on the principal elevation include decorative brick.",
+    "heritage_summary": "Located on the southeast corner of Bellevue Avenue and College Street, the property anchors the entrance to Bellevue Avenue and is considered a landmark within the District. St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromatic roof, and polychromatic brickwork with stone detailing and bellcote."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.4,
+          "sill_height_m": 1.6,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 8.3,
+          "sill_height_m": 6.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "Row two-storey house in brick with a gable roof and decorative bargeboards. Pre-1889 construction.",
+  "heritage_summary": "Located on the southeast corner of Bellevue Avenue and College Street, the property anchors the entrance to Bellevue Avenue and is considered a landmark within the District. St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromatic roof, and polychromatic brickwork with stone detailing and bellcote.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

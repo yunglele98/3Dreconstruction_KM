@@ -1,0 +1,18 @@
+{
+  "building_name": "327 Bathurst (Sanderson public library)",
+  "skipped": true,
+  "skip_reason": "duplicate building alias; observations already captured in 327_Bathurst_St_Sanderson_Library.json",
+  "_meta": {
+    "address": "327 Bathurst (Sanderson public library)",
+    "photo": "IMG_20260320_172015275_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_172015275_HDR.jpg",
+      "IMG_20260320_172019237_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

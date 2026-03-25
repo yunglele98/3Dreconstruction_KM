@@ -1,0 +1,19 @@
+{
+  "building_name": "353-355 College St",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "353-355 College St",
+    "photo": "IMG_20260318_141633023_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_141633023_HDR.jpg",
+      "IMG_20260320_151856530_HDR.jpg",
+      "IMG_20260320_151916757_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

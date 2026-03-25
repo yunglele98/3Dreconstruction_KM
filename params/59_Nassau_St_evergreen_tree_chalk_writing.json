@@ -1,0 +1,17 @@
+{
+  "building_name": "59 Nassau St (evergreen tree, chalk writing)",
+  "skipped": true,
+  "skip_reason": "same building as 59 Nassau St; primary update stored on the canonical address file",
+  "_meta": {
+    "address": "59 Nassau St (evergreen tree, chalk writing)",
+    "photo": "IMG_20260318_175803826_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "reference_photos": [
+      "IMG_20260318_175803826_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

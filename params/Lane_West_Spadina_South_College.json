@@ -1,0 +1,21 @@
+{
+  "building_name": "Lane West Spadina South College",
+  "skipped": true,
+  "skip_reason": "alley and graffiti wall sequence; no discrete street-facing building facade",
+  "_meta": {
+    "address": "Lane West Spadina South College",
+    "photo": "IMG_20260316_002130853_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:10:48-04:00",
+    "reference_photos": [
+      "IMG_20260316_002130853_HDR.jpg",
+      "IMG_20260316_002138486_HDR.jpg",
+      "IMG_20260316_002148164_HDR.jpg",
+      "IMG_20260316_002218242_HDR.jpg",
+      "IMG_20260316_002246265_HDR.jpg"
+    ],
+    "reference_photo_count": 42,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

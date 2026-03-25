@@ -1,0 +1,287 @@
+{
+  "building_name": "39 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.0,
+    5.3
+  ],
+  "total_height_m": 9.26,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40110545999998,
+    "lat": 43.65528765,
+    "street": "Nassau St",
+    "street_number": 39,
+    "setback_m": 3.0,
+    "lot_area_sqm": 213.5078045175473,
+    "footprint_sqm": 98.8,
+    "lot_coverage_pct": 46.3,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "dark mottled red-brown brick with white-framed modern windows and white porch trim",
+  "windows_per_floor": [
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.2,
+  "window_height_m": 1.4,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Commercial, Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889, 1914-1930",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 204,
+    "statement_of_contribution": "The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure. The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate ",
+    "building_features": [
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 35,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 9.26,
+    "height_avg_m": 6.27,
+    "footprint_sqm": 98.8,
+    "gfa_sqm": 247.0,
+    "fsi": 1.16,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "39 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_175506657_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260318_175506657_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "39 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "39 NASSAU ST"
+    ]
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark mottled red-brown brick with white-framed modern windows and white porch trim",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Facade appears occupied but visually compromised by accumulated bins, simplified trim, and altered openings.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.2,
+    "window_height_m": 1.4,
+    "window_arrangement": "asymmetric",
+    "window_details": "Large modern lower windows and a smaller upper window sit within an altered brick frontage.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.0,
+    "door_details": "Entry is slightly recessed beside the front window and reached by a short run of steps.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Minimal fascia and trim remain visible at the roof edge.",
+    "bay_windows": 0,
+    "bay_window_details": "Historic bay form is no longer clearly legible on this altered front elevation.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "Short stoop with small landing and simple railing elements.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible from this cropped view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Very little original decoration remains visible due to the altered windows and infill.",
+    "roof_type_observed": "Shallow front roof slope",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "No signage visible.",
+    "overall_style": "Mixed",
+    "alterations_visible": "Large replacement windows, simplified porch treatment, and facade remodelling obscure the original house-form character.",
+    "matches_hcd_typology": false,
+    "confidence": 0.75,
+    "notes": "Observed from a cropped frontage view at the west end of the Nassau Street sequence."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.0,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Mixed",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Observed from a cropped frontage view at the west end of the Nassau Street sequence.",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.0,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial, converted house-form, semi-detached typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include original windows, cornice.",
+    "heritage_summary": "The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.4,
+          "sill_height_m": 1.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Two-storey converted semi-detached house, pre-1889 origins with 1914-1930 alterations. Dark mottled red-brown brick with replacement windows and simplified trim. Asymmetric opening pattern (2 ground, 1 upper). Cross-gable roof, party walls on both sides; 3 dwelling units. Fair condition with overgrown front and altered openings.",
+  "heritage_summary": "The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

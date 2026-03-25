@@ -1,0 +1,17 @@
+{
+  "building_name": "430-418 College St",
+  "skipped": true,
+  "skip_reason": "duplicate broad-view alias of the already-recorded 434-420 College St mixed-use row",
+  "_meta": {
+    "address": "430-418 College St",
+    "photo": "IMG_20260320_174029762_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:50:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_174029762_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

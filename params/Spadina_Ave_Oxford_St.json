@@ -1,0 +1,17 @@
+{
+  "building_name": "Spadina Ave / Oxford St",
+  "skipped": true,
+  "skip_reason": "intersection context view, not a single building facade",
+  "_meta": {
+    "address": "Spadina Ave / Oxford St",
+    "photo": "IMG_20260321_012422660_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:35:00-04:00",
+    "reference_photos": [
+      "IMG_20260321_012422660_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

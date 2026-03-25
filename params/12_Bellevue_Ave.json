@@ -1,0 +1,256 @@
+{
+  "building_name": "12 Bellevue Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    2.6,
+    2.4,
+    2.0
+  ],
+  "total_height_m": 7.21,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40330387,
+    "lat": 43.65342665,
+    "street": "Bellevue Ave",
+    "street_number": 12,
+    "setback_m": 3.0,
+    "lot_area_sqm": 194.7460472382487,
+    "footprint_sqm": 105.5,
+    "lot_coverage_pct": 54.2,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 64,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, they have retained many of their original building features including their shared roofline with central gable, brick cladding, first-storey bay windows, and fenestration pattern with segmentally arched openings. The polychromatic brickwork at 12 Bellevue Avenue also remains visible. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "decorative_brick",
+      "original_windows",
+      "bay_window"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "missing_elements",
+    "structural_concern": false,
+    "risk_score": 35,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 17.1,
+    "height_avg_m": 7.21,
+    "footprint_sqm": 105.5,
+    "gfa_sqm": 263.8,
+    "fsi": 1.35,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "12 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_161014357_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_161014357_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "12 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "12 BELLEVUE AVE"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window.",
+    "heritage_summary": "The polychromatic brickwork at 12 Bellevue Avenue also remains visible. Constructed as a semi-detached pair, they have retained many of their original building features including their shared roofline with central gable, brick cladding, first-storey bay windows, and fenestration pattern with segmentally arched openings."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 3.1,
+          "sill_height_m": 2.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.7,
+          "sill_height_m": 2.1,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "Three-storey semi-detached house (paired with 14 Bellevue Ave) in brick with visible polychromatic brickwork and a shared gable roofline. Features a two-storey canted projecting bay, decorative bargeboard, and segmentally arched window openings. The third storey has a single window in the gable. Condition is fair with some missing elements noted; a porch is present at street level.",
+  "heritage_summary": "The polychromatic brickwork at 12 Bellevue Avenue also remains visible. Constructed as a semi-detached pair, they have retained many of their original building features including their shared roofline with central gable, brick cladding, first-storey bay windows, and fenestration pattern with segmentally arched openings.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "photo_observations": {
+    "facade_material_observed": "brick",
+    "overall_style": "Victorian",
+    "confidence": 0.72,
+    "notes": "Daytime photo from Bellevue Ave walking pass, March 20 2026.",
+    "porch_present": true,
+    "roof_type_observed": "Gable",
+    "has_storefront_observed": false,
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T01:30:00-04:00",
+    "photo_source": "Bellevue_Ave_south_end_March_2026_fieldwork",
+    "lighting": "daytime"
+  }
+}

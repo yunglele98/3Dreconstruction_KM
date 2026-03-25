@@ -1,0 +1,240 @@
+{
+  "building_name": "121 Oxford St",
+  "floors": 3,
+  "floor_heights_m": [
+    3.5,
+    3.4,
+    2.9
+  ],
+  "total_height_m": 10.13,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40524958999998,
+    "lat": 43.65541044,
+    "street": "Oxford St",
+    "street_number": 121,
+    "setback_m": 3.0,
+    "lot_area_sqm": 227.7837537925914,
+    "footprint_sqm": 94.3,
+    "lot_coverage_pct": 41.4,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Stone",
+  "facade_colour": "buff stone",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "1890-1903",
+    "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 278,
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th",
+    "building_features": [
+      "decorative_brick",
+      "original_windows",
+      "cornice"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Multi-Unit",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "Other",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 5,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 0,
+    "signage": "Residential address plaque visible",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 10.13,
+    "height_avg_m": 6.02,
+    "footprint_sqm": 94.3,
+    "gfa_sqm": 235.8,
+    "fsi": 1.04,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 4,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "121 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "121 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "121 OXFORD ST"
+    ]
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "decorative"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 300,
+    "projection_mm": 180,
+    "colour_hex": "#D4C9A8"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#C8B898",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
+    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.1,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.5,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "121 Oxford St presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as stone, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th",
+  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#C8B898",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

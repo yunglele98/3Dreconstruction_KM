@@ -1,0 +1,302 @@
+{
+  "building_name": "18 Denison Sq",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40260956999998,
+    "lat": 43.65389068,
+    "street": "Denison Sq",
+    "street_number": 16,
+    "setback_m": 3.0,
+    "lot_area_sqm": 212.7177641177452,
+    "footprint_sqm": 56.3,
+    "lot_coverage_pct": 26.5,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "gable_front"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "brown-clad and cream-trimmed altered semi-detached facade",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.8,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "1890-1903",
+    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (16 Denison Square) (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1890,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 139,
+    "statement_of_contribution": "Each property has value as a House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Each property retains original building features including a cross-gabled roofline, double-height bay, and fenestration pattern. 16 Denison Square has retained its decorative wooden gable brackets while 18 Denison Square has retained its segmentally arched window openings with brick voussoirs and cladding. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "bay_window",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Semi-Detached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Local | Institutional (synagogues) | Bellevue Park adjacent",
+    "morphological_zone": "Institutional / Residential Node",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 30,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.22,
+    "height_avg_m": 7.11,
+    "footprint_sqm": 56.3,
+    "gfa_sqm": 140.8,
+    "fsi": 0.66,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "18 Denison Sq",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "18 Denison Sq",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "18 DENISON SQ"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.22,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "photo_observations": {
+    "facade_colour_observed": "brown-clad and cream-trimmed altered semi-detached facade",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "upper front gable and wall plane are reclad; original massing survives but most visible heritage fabric is covered",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.8,
+    "window_height_m": 1.2,
+    "window_arrangement": "asymmetric",
+    "window_details": "replacement windows with simple trim; lower facade partially obscured by neighbouring porch line",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.0,
+    "door_details": "single residential entry",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "no substantial historic cornice visible",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "small raised entrance area",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "front gable shape remains the primary historic cue",
+    "roof_type_observed": "front gable with small dormer-like projection",
+    "roof_features": [
+      "gable_front"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "none",
+    "overall_style": "Vernacular",
+    "alterations_visible": "modern cladding, replacement windows, simplified front",
+    "matches_hcd_typology": false,
+    "confidence": 0.72,
+    "notes": "Observed in the paired 16-18 Denison photo."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.0,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Vernacular",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Observed in the paired 16-18 Denison photo.",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.0,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
+    "heritage_summary": "Each property retains original building features including a cross-gabled roofline, double-height bay, and fenestration pattern. 16 Denison Square has retained its decorative wooden gable brackets while 18 Denison Square has retained its segmentally arched window openings with brick voussoirs and cladding."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.1,
+          "sill_height_m": 2.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "18 Denison Sq presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as mixed in a brown-clad and cream-trimmed altered semi-detached facade palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice. HCD note: Each property has value as a House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Each property retains original building features including a cross-gabled roofline, double-height bay, and fenestration pattern. 16 Denison Square has retained its decorative wooden gable brackets while 18 Denison Square has retained its segmentally arched window openings with brick voussoirs and cladding. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "heritage_summary": "Each property retains original building features including a cross-gabled roofline, double-height bay, and fenestration pattern. 16 Denison Square has retained its decorative wooden gable brackets while 18 Denison Square has retained its segmentally arched window openings with brick voussoirs and cladding.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

@@ -1,0 +1,342 @@
+{
+  "building_name": "35 Bellevue Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 7.2,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40307065999998,
+    "lat": 43.65424847,
+    "street": "Bellevue Ave",
+    "street_number": 35,
+    "setback_m": 3.0,
+    "lot_area_sqm": 2466.885653872748,
+    "footprint_sqm": 10.4,
+    "lot_coverage_pct": 0.4,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "cross_gable"
+  ],
+  "facade_material": "stucco",
+  "facade_colour": "light stucco-clad bay-and-gable house-form facade",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "1890-1903",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880–1920",
+    "construction_decade": 1880,
+    "sub_area": "Residential",
+    "contributing": "Yes",
+    "hcd_plan_index": 104,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Green P Parking",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 2.95,
+    "height_avg_m": 1.03,
+    "footprint_sqm": 10.4,
+    "gfa_sqm": 26.0,
+    "fsi": 0.01,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 78,
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "35 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "bay_window",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_002903216_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_002903216_HDR.jpg",
+      "IMG_20260320_002912460_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "35 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "35 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:52:01",
+      "old_total_height_m": 1.03,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "light stucco-clad bay-and-gable house-form facade",
+    "facade_material_observed": "stucco",
+    "facade_condition_notes": "Facade appears maintained, with the historic house-form massing and gables still legible.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "double_hung",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "Stacked residential windows arranged regularly within a narrow bay-and-gable frontage.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Single residential-style entrance at grade.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Trim is subordinate to the gable form rather than a strong commercial cornice.",
+    "bay_windows": 1,
+    "bay_window_details": "Victorian bay-and-gable composition implied by the house-form frontage.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No full porch visible from the street-facing elevation used here.",
+    "chimneys": 0,
+    "chimney_details": "No chimney clearly visible in the selected view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Historic character is carried mainly by the narrow bay-and-gable massing and roofline.",
+    "roof_type_observed": "cross-gabled house-form roof",
+    "roof_features": [
+      "cross_gable"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "",
+    "overall_style": "Victorian",
+    "alterations_visible": "Stucco cladding and current site context suggest some alteration, but the historic form remains evident.",
+    "matches_hcd_typology": true,
+    "confidence": 0.76,
+    "notes": "Batch 18 photo shows Gillam construction site fencing, not the building facade. The building at 35 Bellevue Ave may be under construction/renovation or the photo captures the wrong location. Previous observations from earlier batches retained.",
+    "photo": "IMG_20260320_002903216_HDR.jpg",
+    "photo_datetime": "2026-03-20T00:29:03",
+    "_batch_agent": "claude-opus-4-6-batch18-22",
+    "_batch_timestamp": "2026-03-25T02:07:04Z"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "bay_window": {
+    "present": true,
+    "count": 1,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#E8E0D0"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 0.5,
+          "sill_height_m": 0.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 0.5,
+          "sill_height_m": 0.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 0.4,
+          "sill_height_m": 0.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Three-storey semi-detached bay-and-gable with stucco cladding over the original facade. The cross-gable roofline and narrow bay-and-gable massing remain legible despite the stucco application. The site is currently associated with Green P Parking and the lot is disproportionately large for the building footprint (10.4 sqm on a 2,467 sqm lot). Photo analysis noted construction fencing (Gillam) obscuring the facade, so condition details are uncertain.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

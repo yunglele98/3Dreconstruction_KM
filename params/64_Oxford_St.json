@@ -1,0 +1,313 @@
+{
+  "building_name": "64 Oxford St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40286394,
+    "lat": 43.65619771,
+    "street": "Oxford St",
+    "street_number": 64,
+    "setback_m": 3.0,
+    "lot_area_sqm": 94.1935818554467,
+    "footprint_sqm": 46.4,
+    "lot_coverage_pct": 49.3,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "commercial_addition"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "red brick upper facade with a white wraparound storefront and dark brown canopy",
+  "windows_per_floor": [
+    0,
+    4
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.2,
+  "window_height_m": 1.4,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Converted House-form, House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form (64 Oxford Street), House-form (66 Oxford Street), Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market (64 Oxford Street), n/a (66 Oxford Street)",
+    "contributing": "Yes",
+    "hcd_plan_index": 333,
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 64 Oxford Street also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. 66 Oxford also retains the projecting bay window and entrance at its first storey. 64 Oxford Street also has a brick clad side elevation featuring flat headed window openings and gambrel gable facing Augusta Avenue. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [
+      "decorative_brick",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Food Retail / Grocer",
+    "business_name": "The Cottage Cheese - Urban Indian",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "missing_elements",
+    "structural_concern": false,
+    "risk_score": 35,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.86,
+    "height_avg_m": 8.5,
+    "footprint_sqm": 46.4,
+    "gfa_sqm": 116.0,
+    "fsi": 1.23,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "64 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "64 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "64 OXFORD ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "red brick upper facade with a white wraparound storefront and dark brown canopy",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "cafe frontage is active and visually tidy, though extensive storefront glazing and side extension heavily alter the original house-form ground floor",
+    "condition": "good",
+    "windows_per_floor": [
+      0,
+      4
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.2,
+    "window_height_m": 1.4,
+    "window_arrangement": "irregular",
+    "window_details": "upper floor has four visible windows across the cornered house-form; ground floor is mostly continuous storefront glazing",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "single recessed cafe entry within the wraparound storefront",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "flat canopy line over the commercial glazing",
+    "bay_windows": 0,
+    "bay_window_details": "bay form is obscured by the commercial addition",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "frontage is fully commercialized",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "vine growth and full-height glazing define the current facade more than heritage detail",
+    "roof_type_observed": "cross-gable roof behind wraparound addition",
+    "roof_features": [
+      "commercial_addition"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "corner cafe/restaurant storefront wrapping the Augusta/Oxford corner with broad glazing",
+    "signage_observed": "The Cottage Cheese - Urban Indian",
+    "overall_style": "Commercial",
+    "alterations_visible": "one-storey wraparound storefront addition and modern glazing",
+    "matches_hcd_typology": false,
+    "confidence": 0.85,
+    "notes": "Top-level has_storefront updated from false to true.",
+    "prior_batches": [
+      {
+        "batch": "batch_010",
+        "date": "2026-03-18",
+        "time": "~14:45",
+        "conditions": "daytime, snowy",
+        "photos": 2,
+        "confidence": 0.6,
+        "notes": "Consistent with earlier observations; storefront and upper brick confirmed in snow conditions"
+      }
+    ]
+  },
+  "window_arrangement": "irregular",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "corner cafe/restaurant storefront wrapping the Augusta/Oxford corner with broad glazing",
+  "confidence": 0.9,
+  "notes": "Top-level has_storefront updated from false to true.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 4.4,
+    "height_m": 3.3,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": "corner cafe/restaurant storefront wrapping the Augusta/Oxford corner with broad glazing",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 4 upper-window bays, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
+    "heritage_summary": "Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.3,
+          "sill_height_m": 2.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "facade_description": "64 Oxford St presents a converted house-form, house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form, semi-detached typology. The facade reads primarily as mixed in a red brick upper facade with a white wraparound storefront and dark brown canopy palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 64 Oxford Street also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. 66 Oxford also retains the projecting bay window and entrance at its first storey. 64 Oxford Street also has a brick clad side elevation featuring flat headed window openings and gambrel gable facing Augusta Avenue. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
+  "heritage_summary": "Constructed as a pair, they retain most of their original building features including their shared roofline, and mirrored facades above the first storey featuring brick cladding with decorative brickwork, flat headed window and door openings, and double- height projecting bay windows set under gables. With its visible layering of residential and commercial built forms, 64 Oxford Street is also physically, functionally, visually, and historically linked to the surrounding market area.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

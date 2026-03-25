@@ -1,0 +1,20 @@
+{
+  "building_name": "Spadina Ave Baldwin St",
+  "skipped": true,
+  "skip_reason": "generic intersection — no discrete building facade",
+  "_meta": {
+    "address": "Spadina Ave Baldwin St",
+    "photo": "IMG_20260316_005217940_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T22:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_005217940_HDR.jpg",
+      "IMG_20260316_005238775_HDR.jpg",
+      "IMG_20260316_005246266_HDR.jpg",
+      "IMG_20260316_005318189_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

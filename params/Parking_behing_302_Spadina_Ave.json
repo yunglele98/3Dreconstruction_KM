@@ -1,0 +1,18 @@
+{
+  "building_name": "Parking behing 302 Spadina Ave",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Parking behing 302 Spadina Ave",
+    "photo": "IMG_20260317_123807768_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260317_123807768_HDR.jpg",
+      "IMG_20260317_123813589_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "building_name": "Spadina Ave",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Spadina Ave",
+    "photo": "IMG_20260316_010216680_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T12:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_005422992_HDR.jpg",
+      "IMG_20260316_005641865_HDR.jpg",
+      "IMG_20260316_010216680_HDR.jpg",
+      "IMG_20260316_010302014_HDR.jpg",
+      "IMG_20260321_012618864_HDR.jpg"
+    ],
+    "reference_photo_count": 5,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

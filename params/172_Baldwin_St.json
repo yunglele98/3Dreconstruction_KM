@@ -1,0 +1,300 @@
+{
+  "building_name": "172 Baldwin St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40063154,
+    "lat": 43.65497333,
+    "street": "Baldwin St",
+    "street_number": 172,
+    "setback_m": 0.0,
+    "lot_area_sqm": 190.7221944945982,
+    "footprint_sqm": 40.0,
+    "lot_coverage_pct": 21.0,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "dark charcoal-painted brick facade with black storefront canopy",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Commercial",
+    "construction_date": "1914-1930",
+    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1920,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 44,
+    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated with the Imperial Bakery. Founded in the early 1920s by the Lottman family, the bakery was an important meeting place for the Jewish women of Kensington Market who would meet and use the large ovens to keep their cholent (slow cooked stew) warm overnight for Sabbath. In 1947, the bakery relocated across the street. The property has retained building features reflecting vernacular interpretations of early-twentieth-century architectural styles, including its brick cladding and segmentally arched window openings with brick voussoirs at the second storey. Contextually, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Food Retail / Grocer",
+    "business_name": "Blackbird Baking Co. Kensington Market",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "Blackbird Baking Co.",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 12.06,
+    "height_avg_m": 7.94,
+    "footprint_sqm": 40.0,
+    "gfa_sqm": 100.0,
+    "fsi": 0.52,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "172 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "172 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "172 BALDWIN ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 12.06,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.2,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark charcoal-painted brick facade with black storefront canopy",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Facade is recently repainted and generally well kept, with some tagging on the side entry surround.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "Two upper windows with dark trim over a broad bakery storefront and adjacent black side door.",
+    "door_count": 2,
+    "door_type": "mixed",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "One glazed bakery entry plus one solid black side door.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Minimal canopy and flush parapet line.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible in the frontal view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Facade relies on simple massing rather than ornament after repainting.",
+    "roof_type_observed": "Flat roof behind a simple parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Clean, mostly glazed bakery storefront with black canopy and side service door.",
+    "signage_observed": "Blackbird Baking Co. sign on the canopy.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Facade has been fully repainted and simplified with contemporary storefront glazing.",
+    "matches_hcd_typology": false,
+    "confidence": 0.92,
+    "notes": "This frontage is one of the clearest and best-aligned views in the batch."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "mixed",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Clean, mostly glazed bakery storefront with black canopy and side service door.",
+  "confidence": 0.9,
+  "notes": "This frontage is one of the clearest and best-aligned views in the batch.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "mixed",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "mixed",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#4A4A4A",
+    "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_summary": "In 1947, the bakery relocated across the street. The property has value as an early-twentieth-century two-storey Commercial building.",
+    "heritage_expression": "Key storefront and facade features include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.6,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.1,
+          "sill_height_m": 2.4,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Two-storey early-twentieth-century commercial building, now Blackbird Baking Co. The facade is recently repainted in dark charcoal with a black storefront canopy. Two upper windows with dark trim sit above a broad, mostly glazed bakery storefront with one glazed entry and one solid black side door. A simple parapet caps the flat roof. The facade has been simplified by repainting but retains its two-storey commercial massing. Some tagging visible on the side entry surround. Formerly the site of the Imperial Bakery (1920s, Lottman family).",
+  "heritage_summary": "In 1947, the bakery relocated across the street. The property has value as an early-twentieth-century two-storey Commercial building.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#4A4A4A",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#4A4A4A",
+    "door_hex": "#4A4A4A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

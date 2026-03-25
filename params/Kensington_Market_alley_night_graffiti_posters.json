@@ -1,0 +1,20 @@
+{
+  "building_name": "Kensington Market alley (night, graffiti, posters)",
+  "skipped": true,
+  "skip_reason": "alley/lane",
+  "_meta": {
+    "address": "Kensington Market alley (night, graffiti, posters)",
+    "photo": "IMG_20260318_004821318_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_004821318_HDR.jpg",
+      "IMG_20260318_004855840_HDR.jpg",
+      "IMG_20260318_004907174_HDR.jpg",
+      "IMG_20260318_004935920_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

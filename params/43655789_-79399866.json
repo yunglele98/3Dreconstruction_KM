@@ -1,0 +1,17 @@
+{
+  "building_name": "43.655789, -79.399866",
+  "skipped": true,
+  "skip_reason": "coordinate-only rear-lane or service-yard view with no clear facade",
+  "_meta": {
+    "address": "43.655789, -79.399866",
+    "photo": "IMG_20260318_154631901_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "reference_photos": [
+      "IMG_20260318_154631901_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "building_name": "Augusta Ave / Dundas St W area",
+  "skipped": true,
+  "skip_reason": "area/context shot rather than a single building facade",
+  "_meta": {
+    "address": "Augusta Ave / Dundas St W area",
+    "photo": "IMG_20260319_170034362_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260319_170034362_HDR.jpg",
+      "IMG_20260319_170038976_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "building_name": "133 Denison Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    2.8,
+    2.1
+  ],
+  "total_height_m": 4.9,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40218073,
+    "lat": 43.65238182,
+    "street": "Denison Ave",
+    "street_number": 133,
+    "setback_m": 3.0,
+    "lot_area_sqm": 207.2753301154024,
+    "footprint_sqm": 78.7,
+    "lot_coverage_pct": 38.0,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "1890-1903",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 139,
+    "statement_of_contribution": "Each property has value as a House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s t",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Elite Spark Mobile Car Detailing Toronto",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Local | Residential | Transition to Bellevue Park",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 10.2,
+    "height_avg_m": 4.9,
+    "footprint_sqm": 78.7,
+    "gfa_sqm": 196.8,
+    "fsi": 0.95,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "133 Denison Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "133 Denison Ave",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "133 DENISON AVE"
+    ],
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s t."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.7,
+          "sill_height_m": 2.1,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "133 Denison Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s t",
+  "heritage_summary": "Each property has value as a House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s t.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

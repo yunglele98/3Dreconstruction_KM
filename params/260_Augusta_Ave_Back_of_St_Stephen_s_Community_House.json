@@ -1,0 +1,20 @@
+{
+  "building_name": "260 Augusta Ave (Back of St Stephen's Community House)",
+  "skipped": true,
+  "skip_reason": "rear facade and lane context, not a primary street-facing facade",
+  "_meta": {
+    "address": "260 Augusta Ave (Back of St Stephen's Community House)",
+    "photo": "IMG_20260320_175632803_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T18:25:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_175632803_HDR.jpg",
+      "IMG_20260320_175718747_HDR.jpg",
+      "IMG_20260320_175723224_HDR.jpg",
+      "IMG_20260320_175742215_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

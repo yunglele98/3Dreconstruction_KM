@@ -1,0 +1,18 @@
+{
+  "building_name": "465 Bathurst St (in front of)",
+  "skipped": true,
+  "skip_reason": "in-front-of/context shot, not a distinct building record",
+  "_meta": {
+    "address": "465 Bathurst St (in front of)",
+    "photo": "IMG_20260320_173204936_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:50:45-04:00",
+    "reference_photos": [
+      "IMG_20260320_173204936_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "canonical_params_file": "465_Bathurst_St.json"
+}

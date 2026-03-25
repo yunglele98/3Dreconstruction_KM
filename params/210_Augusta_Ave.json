@@ -1,0 +1,283 @@
+{
+  "building_name": "210 Augusta Ave",
+  "floors": 1,
+  "floor_heights_m": [
+    4.25
+  ],
+  "total_height_m": 4.25,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40239527,
+    "lat": 43.65465905,
+    "street": "Augusta Ave",
+    "street_number": 210,
+    "setback_m": 0.0,
+    "lot_area_sqm": 675.0333451557448,
+    "footprint_sqm": 445.2,
+    "lot_coverage_pct": 66.0,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "vent_stack"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "bright pink and red commercial signage with black storefront framing and layered food branding",
+  "windows_per_floor": [
+    0
+  ],
+  "window_type": "storefront",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 63,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "La Barbacha Mexican Food | Splashceleztial",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "4 Life Natural Foods; Churros Empanadas (adjacent)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.49,
+    "height_avg_m": 3.7,
+    "footprint_sqm": 445.2,
+    "gfa_sqm": 1113.0,
+    "fsi": 1.65,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 12,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "210 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_181250158_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260318_181250158_HDR.jpg",
+      "IMG_20260318_181302225_HDR.jpg",
+      "IMG_20260318_181308241_HDR.jpg",
+      "IMG_20260318_181313009_HDR.jpg",
+      "IMG_20260318_181319339_HDR.jpg"
+    ],
+    "reference_photo_count": 5,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "210 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "210 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 11.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "black-framed commercial storefront completely covered in layered commercial signage (Barbacha, Mochi Moshi, Kensington Market Collection, Al and Al Enterprises, Splash Celestial, Crystal Visions, Blaque Wellness, Churros)",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Busy active food storefront with extensive signage and posters; overall condition appears maintained despite the dense visual clutter.",
+    "condition": "good",
+    "windows_per_floor": [
+      0
+    ],
+    "window_type": "storefront",
+    "window_width_m": 0.0,
+    "window_height_m": 0.0,
+    "window_arrangement": "irregular",
+    "window_details": "Ground floor is almost entirely storefront glazing, service windows, and doors hidden behind layered signs and displays.",
+    "door_count": 2,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Two commercial entries or service openings are visible across the tightly packed food storefront.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Flat sign band and parapet-like fascia built up by multiple business signs.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; storefront sits directly on the sidewalk.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible; vent stacks are present above the roofline.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "The facade is defined by stacked commercial signs rather than architectural ornament.",
+    "roof_type_observed": "Low commercial roofline behind layered sign bands",
+    "roof_features": [
+      "vent_stack"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Dense multi-brand food storefront with bright menu boards, posters, and black-framed glazing.",
+    "signage_observed": "Diablos Tacos, Taco Love, Birria Ayirin, Koi Hana, Churros, and related menu signs.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Original Victorian house-form entirely concealed behind commercial additions and layered signage. No original facade features visible from street level.",
+    "matches_hcd_typology": false,
+    "confidence": 0.8,
+    "notes": "HCD typology is House-form, Semi-detached, but the original form is completely obscured by commercial additions. Multiple food vendors and shops at street level. matches_hcd_typology remains false because the original building form is not legible from the public realm.",
+    "photo": "IMG_20260318_181302225_HDR.jpg",
+    "photo_datetime": "2026-03-18T18:13:02"
+  },
+  "window_arrangement": "irregular",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Dense multi-brand food storefront with bright menu boards, posters, and black-framed glazing.",
+  "confidence": 0.9,
+  "notes": "Observed from the strongest frontal storefront view in the batch.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using storefront, and 2 principal entrances.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "210 Augusta Ave presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed in a bright pink and red commercial signage with black storefront framing and layered food branding palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using storefront, and 2 principal entrances. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

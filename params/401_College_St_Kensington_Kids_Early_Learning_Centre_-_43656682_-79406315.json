@@ -1,0 +1,17 @@
+{
+  "building_name": "401 College St (Kensington Kids Early Learning Centre - 43.656682, -79.406315)",
+  "skipped": true,
+  "skip_reason": "duplicate address/view of the already-recorded 401 College St (Kensington Kids Early Learning Centre)",
+  "_meta": {
+    "address": "401 College St (Kensington Kids Early Learning Centre - 43.656682, -79.406315)",
+    "photo": "IMG_20260320_174230805_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:50:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_174230805_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "building_name": "332 Spadina Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 7.2,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.39880350999998,
+    "lat": 43.65388269,
+    "street": "Spadina Ave",
+    "street_number": 332,
+    "setback_m": 0.5,
+    "lot_area_sqm": 289.3581167428878,
+    "footprint_sqm": 58.0,
+    "lot_coverage_pct": 20.0,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "cornice"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "cream-trimmed narrow facade with dark storefront and red-brown corrugated side wall",
+  "windows_per_floor": [
+    1,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.35,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [
+      "cornice",
+      "decorative_brick"
+    ],
+    "heritage_register": "Listed (Non-Designated)",
+    "protection_level": 2
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "General Retail / Specialty",
+    "business_name": "You & Me Canada Gifts",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 30,
+    "signage": "Chinese noodle/ramen shop (\u62c9\u9762); Dumpling House Restaurant visible adjacent",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 12.57,
+    "height_avg_m": 5.87,
+    "footprint_sqm": 58.0,
+    "gfa_sqm": 174.0,
+    "fsi": 0.6,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "photo_observations": {
+    "facade_colour_observed": "cream-trimmed narrow facade with dark storefront and red-brown corrugated side wall",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "historic frame and cornice survive but side cladding and storefront are heavily altered; building appears occupied and stable",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.35,
+    "window_arrangement": "symmetric",
+    "window_details": "narrow upper openings above a deep commercial frontage; side photo shows additional glazing on the Glen Baillie elevation",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "single commercial entry associated with ramen shop frontage",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "decorative",
+    "cornice_details": "cream-painted projecting cornice frame remains visible around the upper facade edge",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "no porch, direct sidewalk frontage",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "projecting sign structures and neon vertical blade sign add to the commercial character",
+    "roof_type_observed": "flat roof",
+    "roof_features": [
+      "cornice"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "narrow restaurant storefront with illuminated signage and side wall facing Glen Baillie Place",
+    "signage_observed": "Ajisen Ramen; Family Canada Gift",
+    "overall_style": "Commercial",
+    "alterations_visible": "modern storefront insert, heavy signage, corrugated side cladding",
+    "matches_hcd_typology": false,
+    "confidence": 0.72,
+    "notes": "Used both the front and side views to describe this corner-lot commercial facade. | [batch_007_nighttime] Side-view nighttime photo only. Ajisen Ramen signage visible. Limited facade detail due to angle and darkness. No new measurements extracted."
+  },
+  "_meta": {
+    "address": "332 Spadina Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260316_010233874_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T22:00:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "332 Spadina Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "332 SPADINA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 5.87,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    }
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "narrow restaurant storefront with illuminated signage and side wall facing Glen Baillie Place",
+  "confidence": 0.9,
+  "notes": "Used both the front and side views to describe this corner-lot commercial facade.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 1, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice, decorative brick."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 0.5,
+  "facade_description": "332 Spadina Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as brick in a cream-trimmed narrow facade with dark storefront and red-brown corrugated side wall palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice, decorative brick.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

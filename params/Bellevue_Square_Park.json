@@ -1,0 +1,19 @@
+{
+  "building_name": "Bellevue Square Park",
+  "skipped": true,
+  "skip_reason": "park / landscape view, not a building facade",
+  "_meta": {
+    "address": "Bellevue Square Park",
+    "photo": "IMG_20260319_005219620.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_012821219_HDR.jpg",
+      "IMG_20260319_005219620.jpg",
+      "IMG_20260319_005628907_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

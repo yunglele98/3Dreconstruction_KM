@@ -1,0 +1,306 @@
+{
+  "building_name": "33 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.0,
+    5.4
+  ],
+  "total_height_m": 9.39,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40090411,
+    "lat": 43.65533271,
+    "street": "Nassau St",
+    "street_number": 29,
+    "setback_m": 3.0,
+    "lot_area_sqm": 239.370451668962,
+    "footprint_sqm": 49.0,
+    "lot_coverage_pct": 20.5,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Clapboard",
+  "facade_colour": "cream-white painted wood siding with brown trim, porch posts, and dark brown roof edges",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.9,
+  "window_height_m": 1.45,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Row, Bay-and-Gable",
+    "construction_date": "1890-1903",
+    "architectural_style": "House-form, Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1890,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 273,
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines, double- height bay windows, brick cladding (at 31 and 33 Nassau Street), decorative wooden gable brackets and pediments, and fenestration pattern with flat headed openings featuring stone lintels and sills. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "bay_window",
+      "original_windows",
+      "cornice"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 9.39,
+    "height_avg_m": 6.02,
+    "footprint_sqm": 49.0,
+    "gfa_sqm": 122.5,
+    "fsi": 0.51,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "33 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_175406237_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260318_175427437_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "33 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "33 NASSAU ST"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "cream-white painted wood siding with brown trim, porch posts, and dark brown roof edges",
+    "facade_material_observed": "wood_clapboard",
+    "facade_condition_notes": "Facade appears occupied and reasonably maintained, though porch woodwork and paint show mild wear.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_width_m": 0.9,
+    "window_height_m": 1.45,
+    "window_arrangement": "symmetric",
+    "window_details": "Tall narrow upper windows and paired lower windows sit within a traditional bay-and-gable rowhouse composition.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.0,
+    "door_details": "Main entry is recessed under the full-width porch, partially hidden behind posts and railing.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "decorative",
+    "cornice_details": "Decorative gable trim and porch fascia provide the main ornamentation.",
+    "bay_windows": 1,
+    "bay_window_details": "Front bay-and-gable massing remains legible, though the bay is relatively shallow from this angle.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "open",
+    "porch_details": "Open front porch spanning the facade with wood posts and low railings behind an ornate metal fence.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Painted wood ornament in the gable, porch detailing, and decorative metal fence contribute to the Victorian character.",
+    "roof_type_observed": "Steep front gable",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "No signage visible.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Replacement windows and modest porch repairs are visible, but the overall form remains intact.",
+    "matches_hcd_typology": true,
+    "confidence": 0.79,
+    "notes": "Observed as part of the contiguous 29-33 Nassau Street rowhouse group."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.0,
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Observed as part of the contiguous 29-33 Nassau Street rowhouse group.",
+  "porch_present": true,
+  "porch_type": "open",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.0,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
+    "heritage_summary": "Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines, double- height bay windows, brick cladding (at 31 and 33 Nassau Street), decorative wooden gable brackets and pediments, and fenestration pattern with flat headed openings featuring stone lintels and sills. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#E8E0D0"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 2.4,
+          "sill_height_m": 1.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Two-storey bay-and-gable row house, c. 1890-1903, clad in cream-white painted wood clapboard with brown trim. Open front porch with decorative gable trim and metal fence. Part of the contiguous 29-33 Nassau St row. Party walls on both sides; 2 dwelling units. Good condition with replacement windows and mild porch wear.",
+  "heritage_summary": "Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines, double- height bay windows, brick cladding (at 31 and 33 Nassau Street), decorative wooden gable brackets and pediments, and fenestration pattern with flat headed openings featuring stone lintels and sills. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

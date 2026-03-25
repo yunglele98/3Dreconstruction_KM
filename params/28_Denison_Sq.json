@@ -1,0 +1,196 @@
+{
+  "building_name": "28 Denison Sq",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40293397,
+    "lat": 43.65377538,
+    "street": "Denison Sq",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 322.4653956146184,
+    "footprint_sqm": 124.0,
+    "lot_coverage_pct": 38.5,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Byzantine Revival",
+    "construction_period": "c. 1910\u20131920",
+    "construction_decade": 1910,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Part IV Designated (Individual) + Part V HCD",
+    "protection_level": 5
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Institutional",
+    "land_use": "Institutional \u2013 Religious",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Local | Institutional (synagogues) | Bellevue Park adjacent",
+    "morphological_zone": "Institutional / Residential Node",
+    "development_phase": "Phase 3: Jewish Market (1900\u20131950)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 14.21,
+    "height_avg_m": 9.43,
+    "footprint_sqm": 124.0,
+    "gfa_sqm": 310.0,
+    "fsi": 0.96,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": null,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "28 Denison Sq",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "28 Denison Sq",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "28 DENISON SQ"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 14.21,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 4.3,
+          "sill_height_m": 3.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "28 Denison Sq presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

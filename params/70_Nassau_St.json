@@ -1,0 +1,201 @@
+{
+  "building_name": "70 Nassau St",
+  "floors": 3,
+  "facade_material": "brick",
+  "facade_colour": "warm red-brown brick with dark brown trim",
+  "door_count": 1,
+  "door_type": "residential",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "gable",
+  "photo_observations": {
+    "photo_reference": "IMG_20260320_155515415_HDR.jpg",
+    "facade_colour_observed": "warm red-brown brick with dark brown trim, buff brick accent bands",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Fair to good condition. Brick facade well-preserved. Some weathering at ground level. Large arched opening at ground floor is distinctive. Dark brown painted window frames and trim.",
+    "condition": "good",
+    "windows_per_floor": [
+      1,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.85,
+    "window_height_m": 1.4,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor has large rounded arch opening. Second floor has two windows with segmental arched heads. Gable has single pointed-arch or rectangular window. Dark brown painted frames.",
+    "door_count": 1,
+    "door_type": "arched",
+    "door_width_m": 1.0,
+    "door_height_m": 2.4,
+    "door_details": "Main entrance within large rounded arch opening at ground floor. Glass panelled door visible.",
+    "ground_floor_arches": "round",
+    "ground_floor_arch_count": 1,
+    "cornice": "simple",
+    "bay_windows": 0,
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "Small stoop with steps up from sidewalk. White picket fence/railing visible at front.",
+    "chimneys": 0,
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": true,
+    "decorative_details": "Prominent rounded arch at ground floor. Segmental arched window heads at second floor. Pointed gable peak with decorative trim.",
+    "roof_type_observed": "Steep front gable, classic bay-and-gable form",
+    "roof_features": [
+      "bargeboard"
+    ],
+    "has_storefront_observed": false,
+    "signage_observed": "None",
+    "overall_style": "Victorian",
+    "alterations_visible": "Some modifications at ground level but overall form well-preserved. White picket fence/railing appears to be an addition.",
+    "matches_hcd_typology": true,
+    "confidence": 0.82,
+    "notes": "2.5-storey Victorian bay-and-gable house in warm red-brown brick. Distinctive rounded arch at ground floor. Steep front gable with pointed window. Dark brown trim. White picket railing at front stoop. Well-preserved heritage character."
+  },
+  "_meta": {
+    "address": "70 Nassau St",
+    "photo": "IMG_20260320_155515415_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:30:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260320_155515415_HDR.jpg",
+      "IMG_20260320_155524505_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "70 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "70 NASSAU ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 16.26,
+      "new_total_height_m": 14.4,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "notes": "2.5-storey Victorian bay-and-gable. Red-brown brick, dark trim. Rounded arch at ground floor. Steep front gable.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "residential",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form typology.",
+    "opening_rhythm": "The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "Three-storey detached house-form (c. 1889-1903), 5.2 m wide, in warm red-brown brick with a steep front gable. Distinctive rounded arch at ground floor with segmental arched window heads above. Dark brown trim, simple bargeboard at gable. Set back 2.0 m from the sidewalk with a front stoop and white picket railing.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "total_height_m": 14.4,
+  "facade_width_m": 5.2,
+  "floor_heights_m": [
+    4.8,
+    4.8,
+    4.8
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "roof_pitch_deg": 40,
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "Double-hung sash",
+  "site": {
+    "lon": -79.40276287999998,
+    "lat": 43.65531082,
+    "street": "Nassau St",
+    "street_number": 68
+  }
+}

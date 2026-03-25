@@ -1,0 +1,18 @@
+{
+  "building_name": "College St bike lane DO NOT PASS OPEN DOORS marking",
+  "skipped": true,
+  "skip_reason": "pavement marking and street context rather than a building facade",
+  "_meta": {
+    "address": "College St bike lane DO NOT PASS OPEN DOORS marking",
+    "photo": "IMG_20260320_180619848.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T18:25:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_180619848.jpg",
+      "IMG_20260320_180623305_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

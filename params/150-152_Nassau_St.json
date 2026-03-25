@@ -1,0 +1,271 @@
+{
+  "building_name": "150-152 Nassau St",
+  "floors": 3,
+  "facade_material": "Mixed masonry",
+  "facade_colour": "red brick with buff brick panel inserts and white-painted trim",
+  "windows_per_floor": [
+    2,
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.35,
+  "door_count": 2,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "Sloped side-gable roof",
+  "roof_pitch_deg": 35,
+  "roof_features": [
+    "side_gable"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "red brick with buff brick panel inserts and white-painted trim",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Residential row building appears occupied and maintained, though the recorded angle shows primarily the side elevation behind a decorative iron fence.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.35,
+    "window_arrangement": "regular",
+    "window_details": "Rectangular residential windows are evenly spaced along the side wall; front bay and entry details are mostly obscured from this angle.",
+    "door_count": 2,
+    "door_type": "single",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Individual residential entries are implied at grade but not fully legible in the side view.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple eave trim under a sloped roof.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible from this angle",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "Raised front stoops likely exist behind the iron fence but are mostly hidden from the side-oblique view.",
+    "chimneys": 0,
+    "chimney_details": "No chimney clearly visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Visual interest comes from contrasting buff brick panels and the iron fence rather than ornate trim.",
+    "roof_type_observed": "Sloped side-gable roof",
+    "roof_features": [
+      "side_gable"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "No storefront signage visible.",
+    "overall_style": "Vernacular",
+    "alterations_visible": "Replacement windows and security cameras are visible along the side elevation.",
+    "matches_hcd_typology": true,
+    "confidence": 0.63,
+    "notes": "Observed primarily from the Bathurst-side elevation in IMG_20260320_172728292_HDR.jpg."
+  },
+  "_meta": {
+    "address": "150-152 Nassau St",
+    "photo": "IMG_20260320_172728292_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260320_172728292_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "candidate_range_anchor",
+    "db_address_full": "150 Nassau St",
+    "db_address_candidates": [
+      "150-152 NASSAU ST",
+      "150 NASSAU ST",
+      "151 NASSAU ST",
+      "152 NASSAU ST"
+    ],
+    "db_revision_ts": "2026-03-25T14:51:45"
+  },
+  "window_arrangement": "regular",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Vernacular",
+  "storefront_description": "",
+  "confidence": 0.8800000000000002,
+  "notes": "Observed primarily from the Bathurst-side elevation in IMG_20260320_172728292_HDR.jpg.",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 3 storeys and is capped by a sloped side-gable roof, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "Aggregate file for the 150-152 Nassau pair. Three-storey brick house-form dating to 1889-1903 with a side-gable roof, bargeboard, and cornice. Chimney at the rear. Good condition.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 9.600000000000001,
+  "floor_heights_m": [
+    3.2,
+    3.2,
+    3.2
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {
+    "lon": -79.40665312999998,
+    "lat": 43.65454377,
+    "street": "Nassau St",
+    "street_number": 150
+  }
+}

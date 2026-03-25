@@ -1,0 +1,19 @@
+{
+  "building_name": "526 Dundas St (K-ONE KTV)",
+  "skipped": true,
+  "skip_reason": "duplicate business-name variant of an already-covered address",
+  "_meta": {
+    "address": "526 Dundas St (K-ONE KTV)",
+    "photo": "IMG_20260320_213812645_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:50:45-04:00",
+    "reference_photos": [
+      "IMG_20260320_213812645_HDR.jpg",
+      "IMG_20260320_213843517_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "canonical_params_file": "526_Dundas_St_W.json"
+}

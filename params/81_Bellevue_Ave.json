@@ -1,0 +1,320 @@
+{
+  "building_name": "81 Bellevue Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    4.8,
+    4.8,
+    4.8
+  ],
+  "total_height_m": 14.4,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40363499,
+    "lat": 43.65563202,
+    "street": "Bellevue Ave",
+    "street_number": 81,
+    "setback_m": 3.0,
+    "lot_area_sqm": 621.3066968470182,
+    "footprint_sqm": 49.5,
+    "lot_coverage_pct": 8.0,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "painted",
+  "facade_colour": "dark charcoal/black painted",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "modern replacement",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1904-1913",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 126,
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Yourgirllick",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 16.75,
+    "height_avg_m": 9.36,
+    "footprint_sqm": 49.5,
+    "gfa_sqm": 123.8,
+    "fsi": 0.2,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "81 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "81 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "81 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 16.75,
+      "new_total_height_m": 14.4,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark charcoal/black painted",
+    "facade_material_observed": "painted",
+    "facade_condition_notes": "Modern dark paint renovation over original facade; good condition",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "modern replacement",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "regular",
+    "window_details": "White window frames against dark painted facade",
+    "door_count": 1,
+    "door_type": "residential",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Arched entrance at ground level",
+    "ground_floor_arches": "arched entrance",
+    "ground_floor_arch_count": 1,
+    "cornice": "none",
+    "cornice_details": "Obscured by dark paint",
+    "bay_windows": 0,
+    "bay_window_details": "None visible; may be obscured by renovation",
+    "balconies": 1,
+    "balcony_type": "wooden deck",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "Not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Original details obscured by modern dark paint; white window frames provide contrast",
+    "roof_type_observed": "cross-gable",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "none",
+    "overall_style": "Vernacular",
+    "alterations_visible": "Modern dark paint renovation; wooden deck/balcony at upper level; arched entrance; white window frames",
+    "matches_hcd_typology": false,
+    "confidence": 0.78,
+    "notes": "Daytime photo (IMG_20260320_154805817_HDR.jpg), rotated. 2-storey building with dark charcoal/black painted facade. Modern renovation significantly alters heritage character. Adjacent to red brick Victorian. Good photo quality."
+  },
+  "window_arrangement": "regular",
+  "door_type": "residential",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 1,
+  "balcony_type": "wooden deck",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Vernacular",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Daytime photo (IMG_20260320_154805817_HDR.jpg), rotated. 2-storey building with dark charcoal/black painted facade. Modern renovation significantly alters heritage character. Adjacent to red brick Victorian. Good photo quality.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "arched entrance",
+  "ground_floor_arch_count": 1,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "residential",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using modern replacement, and 1 principal entrance.",
+    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "modern replacement",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "modern replacement",
+          "width_m": 0.9,
+          "height_m": 3.1,
+          "sill_height_m": 2.4,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "modern replacement",
+          "width_m": 0.9,
+          "height_m": 2.6,
+          "sill_height_m": 2.0,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#2A2A2A",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#D8D0C0"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Semi-detached three-storey house-form in dark charcoal/black painted with a cross-gable roof. Features include simple bargeboards. Modern dark paint renovation; wooden deck/balcony at upper level; arched entrance; white window frames. Constructed 1904-1913.",
+  "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#2A2A2A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

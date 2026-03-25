@@ -1,0 +1,21 @@
+{
+  "building_name": "Kensington Market laneway (rear of houses, fire escape)",
+  "skipped": true,
+  "skip_reason": "rear-laneway / service-side view rather than a primary building facade",
+  "_meta": {
+    "address": "Kensington Market laneway (rear of houses, fire escape)",
+    "photo": "IMG_20260318_182526444_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T14:46:25-04:00",
+    "reference_photos": [
+      "IMG_20260318_182558444_HDR.jpg",
+      "IMG_20260318_182526444_HDR.jpg",
+      "IMG_20260318_182542025_HDR.jpg",
+      "IMG_20260318_182550725_HDR.jpg",
+      "IMG_20260318_182554018_HDR.jpg"
+    ],
+    "reference_photo_count": 5,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

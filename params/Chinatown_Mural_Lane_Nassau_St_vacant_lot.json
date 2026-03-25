@@ -1,0 +1,21 @@
+{
+  "building_name": "Chinatown Mural Lane / Nassau St (vacant lot)",
+  "skipped": true,
+  "skip_reason": "not a building facade — vacant lot at intersection of mural lane and Nassau St",
+  "_meta": {
+    "address": "Chinatown Mural Lane / Nassau St (vacant lot)",
+    "photo": "IMG_20260316_004350394_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T21:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_004350394_HDR.jpg",
+      "IMG_20260316_004359466_HDR.jpg",
+      "IMG_20260316_004418726_HDR.jpg",
+      "IMG_20260316_004429318_HDR.jpg",
+      "IMG_20260316_004607833_HDR.jpg"
+    ],
+    "reference_photo_count": 5,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

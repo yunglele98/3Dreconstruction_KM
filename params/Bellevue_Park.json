@@ -1,0 +1,19 @@
+{
+  "building_name": "Bellevue Park",
+  "skipped": true,
+  "skip_reason": "park / landscape view, not a building facade",
+  "_meta": {
+    "address": "Bellevue Park",
+    "photo": "IMG_20260320_002630407_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:23:36-04:00",
+    "reference_photos": [
+      "IMG_20260320_002630407_HDR.jpg",
+      "IMG_20260320_002701808_HDR.jpg",
+      "IMG_20260320_002710945_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

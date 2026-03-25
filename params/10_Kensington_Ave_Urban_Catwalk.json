@@ -1,0 +1,203 @@
+{
+  "building_name": "10 Kensington Ave (Urban Catwalk)",
+  "floors": 2,
+  "facade_material": "Mixed masonry",
+  "facade_colour": "warm red-brown brick upper, dark-painted storefront ground floor",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "double_hung",
+  "door_count": 1,
+  "door_type": "storefront",
+  "has_storefront": true,
+  "condition": "fair",
+  "roof_type": "gable",
+  "photo_observations": {
+    "facade_colour_observed": "warm red-brown brick upper storey, dark-painted ground floor storefront with black metal framing",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Upper brick in fair condition with some weathering; storefront glazing intact; signage well-maintained",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_width_m": 0.7,
+    "window_height_m": 1.1,
+    "window_arrangement": "symmetric",
+    "window_details": "Two narrow double-hung sash windows on second floor, dark frames, flanking the gable peak area",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.3,
+    "door_details": "Glass storefront entry door, right side of ground floor, dark metal frame",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple brick cornice at roofline, no elaborate moulding visible",
+    "bay_windows": 0,
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "chimneys": 0,
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Large yellow-on-green painted signage reading 'URBAN CATWALK WHOLESALE & RETAIL' across storefront fascia; secondary A-frame sidewalk sign",
+    "roof_type_observed": "gable",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "A full-width Urban Catwalk storefront fills the ground floor with large display glazing, dark metal framing, visible merchandise, and a security grille layered over the shopfront after hours.",
+    "signage_observed": "URBAN CATWALK - yellow lettering on green background, mounted on fascia above storefront; secondary ground-level A-frame sign with same branding",
+    "overall_style": "Commercial",
+    "alterations_visible": "Ground floor fully converted to commercial storefront; original residential fenestration likely removed at ground level; security grille added",
+    "matches_hcd_typology": true,
+    "confidence": 0.75,
+    "notes": "Night photo. Narrow 2-storey commercial on Kensington Ave pedestrian strip. Typical converted Victorian house-form with ground-floor retail. Adjacent to similar row of converted houses. Party wall visible on right side (shared with neighbour)."
+  },
+  "_meta": {
+    "address": "10 Kensington Ave (Urban Catwalk)",
+    "photo": "IMG_20260320_012216600_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:20:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260320_012216600_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "10 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "10 KENSINGTON AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "notes": "Narrow 2-storey commercial on Kensington Ave pedestrian strip. Typical converted Victorian house-form with full ground-floor retail storefront. Night photo, party walls both sides.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 5.1,
+    "height_m": 2.6,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#1A1A1A"
+    },
+    "recessed_entry": false,
+    "security_grille": true,
+    "description": "A full-width Urban Catwalk storefront spans the grade level with large display glazing, dark metal framing, visible merchandise, and a bold yellow-on-green fascia sign above.",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "10 Kensington Ave (Urban Catwalk) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by mixed in a warm red-brown brick upper, dark-painted storefront ground floor palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "roof_pitch_deg": 40,
+  "site": {
+    "lon": -79.40031363,
+    "lat": 43.65309175,
+    "street": "Kensington Ave",
+    "street_number": 8
+  }
+}

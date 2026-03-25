@@ -1,0 +1,377 @@
+{
+  "building_name": "278 Augusta Ave",
+  "floors": 5,
+  "floor_heights_m": [
+    4.5,
+    3.6,
+    3.6,
+    3.6,
+    3.1
+  ],
+  "total_height_m": 18.25,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40326795999998,
+    "lat": 43.65680917,
+    "street": "Augusta Ave",
+    "street_number": 278,
+    "setback_m": 0.0,
+    "lot_area_sqm": 546.685856700566,
+    "footprint_sqm": 233.8,
+    "lot_coverage_pct": 42.8,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "projecting_balconies",
+    "patio"
+  ],
+  "facade_material": "concrete",
+  "facade_colour": "beige/tan brick upper floors with green artificial turf balcony panels on 2nd and 3rd floors, colorful polka-dot painted ground floor (red, yellow, green, purple)",
+  "windows_per_floor": [
+    2,
+    3,
+    3,
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.4,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 66,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Samesun Toronto",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "College Backpackers hostel",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 18.25,
+    "height_avg_m": 10.4,
+    "footprint_sqm": 233.8,
+    "gfa_sqm": 584.5,
+    "fsi": 1.07,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 6,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "278 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "278 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "278 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "beige/tan brick upper floors with green artificial turf balcony panels on 2nd and 3rd floors, colorful polka-dot painted ground floor (red, yellow, green, purple)",
+    "facade_material_observed": "concrete",
+    "facade_condition_notes": "3-storey building with colorful hostel-style modifications; green artificial turf/hedge panels on upper balconies; ground floor has mosaic/polka-dot pattern; red awning over left storefront; wrought iron gate on right side",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      3,
+      3,
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.4,
+    "window_arrangement": "symmetric",
+    "window_details": "white/cream ground floor with sliding glass doors; stacked modern windows and balcony doors above",
+    "door_count": 2,
+    "door_type": "storefront",
+    "door_width_m": 1.0,
+    "door_height_m": 2.2,
+    "door_details": "sliding glass doors at ground floor; hostel entry and adjacent commercial entry",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "modern slab edges and balcony fronts replace any traditional cornice",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 4,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "front patio/deck enclosure at sidewalk",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "colorful polka-dot mosaic pattern on ground floor; green artificial turf balcony panels; red awning; wrought iron gate",
+    "roof_type_observed": "flat roof",
+    "roof_features": [
+      "projecting_balconies",
+      "patio"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "hostel/commercial frontage with colorful polka-dot painted walls, sliding glass doors, red awning, and deck enclosure",
+    "signage_observed": "Samesun Backpackers",
+    "overall_style": "Commercial",
+    "alterations_visible": "complete modern cladding, polka-dot painted ground floor, artificial-turf balcony screens, red awning, wrought iron gate",
+    "matches_hcd_typology": false,
+    "confidence": 0.85,
+    "photo_date": "2026-03-18T14:20",
+    "weather": "light snow",
+    "batch": "batch_009",
+    "photo_count": 5,
+    "notes": "Daytime photos with excellent visibility. 5 photos available. Green construction bin visible at street level."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 1.0,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 4,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "hostel/commercial frontage with colorful polka-dot painted walls, sliding glass doors, red awning, and deck enclosure",
+  "confidence": 0.9,
+  "notes": "Daytime photos with excellent visibility. 5 photos available. Green construction bin visible at street level.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "left",
+      "width_m": 1.0,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 1.0,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 4
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 5 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 3, 3, 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 5",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.1,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "278 Augusta Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 5 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as concrete in a beige/tan brick upper floors with green artificial turf balcony panels on 2nd and 3rd floors, colorful polka-dot painted ground floor (red, yellow, green, purple) palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 3, 3, 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

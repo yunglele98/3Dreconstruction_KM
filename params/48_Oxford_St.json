@@ -1,0 +1,336 @@
+{
+  "building_name": "48 Oxford St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.5,
+    2.6
+  ],
+  "total_height_m": 6.09,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40189988999998,
+    "lat": 43.65644777,
+    "street": "Oxford St",
+    "street_number": 48,
+    "setback_m": 3.0,
+    "lot_area_sqm": 210.3451731696538,
+    "footprint_sqm": 102.0,
+    "lot_coverage_pct": 48.5,
+    "lots_sharing_footprint": 6
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "projecting_balconies"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "dark charcoal modern infill facade with large square windows and black balcony rails",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.1,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 256,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f",
+    "building_features": [
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Cez Inc",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 30,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 12.8,
+    "height_avg_m": 6.09,
+    "footprint_sqm": 102.0,
+    "gfa_sqm": 255.0,
+    "fsi": 1.21,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "48 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260318_145448913_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260318_145448913_HDR.jpg",
+      "IMG_20260318_145453094_HDR.jpg",
+      "IMG_20260318_145545175_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "48 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "48 OXFORD ST"
+    ],
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark charcoal modern infill facade with large square windows and black balcony rails",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "contemporary infill building appears in good condition with crisp finishes and modern fenestration",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.1,
+    "window_height_m": 1.2,
+    "window_arrangement": "asymmetric",
+    "window_details": "large square and horizontal modern windows with minimal trim",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 1.0,
+    "door_height_m": 2.2,
+    "door_details": "single modern residential entry with sidelight and small stoop",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "flat parapet and crisp modern eaves",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 2,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "small entry stoop only",
+    "chimneys": 0,
+    "chimney_details": "one chimney visible on neighbouring roof, not on subject",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "minimalist contemporary massing is the defining character",
+    "roof_type_observed": "flat roof",
+    "roof_features": [
+      "projecting_balconies"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "none",
+    "overall_style": "Modern",
+    "alterations_visible": "new-build contemporary infill",
+    "matches_hcd_typology": false,
+    "confidence": 0.9,
+    "notes": "This batch captured the rear/yard-facing elevation of the modern infill at 48 Oxford.",
+    "prior_batches": [
+      {
+        "batch": "batch_010",
+        "date": "2026-03-18",
+        "time": "~14:55",
+        "conditions": "daytime, snowy",
+        "photos": 3,
+        "confidence": 0.6,
+        "notes": "Includes backyard view; dark charcoal modern infill with projecting balconies confirmed from multiple angles"
+      }
+    ]
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "single",
+  "door_width_m": 1.0,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 2,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Modern",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "This batch captured the rear/yard-facing elevation of the modern infill at 48 Oxford.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 1.0,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 2
+  },
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, cornice.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.7,
+          "sill_height_m": 2.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.5,
+          "height_m": 0.6,
+          "sill_height_m": 1.0,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "48 Oxford St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as mixed in a dark charcoal modern infill facade with large square windows and black balcony rails palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development f.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

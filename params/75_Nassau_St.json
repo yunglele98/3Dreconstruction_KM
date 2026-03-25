@@ -1,0 +1,281 @@
+{
+  "building_name": "75 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.5,
+    4.2
+  ],
+  "total_height_m": 8.35,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40288257999998,
+    "lat": 43.65495929,
+    "street": "Nassau St",
+    "street_number": 71,
+    "setback_m": 0.0,
+    "lot_area_sqm": 79.5505923783438,
+    "footprint_sqm": 36.5,
+    "lot_coverage_pct": 45.9,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "dark charcoal/black painted ground floor storefront; upper floor dark with existing window openings",
+  "windows_per_floor": [
+    1,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 292,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has contextual value because it supports and maintain the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "The Harmony Cafe/Bar",
+    "business_category": "Art/Culture",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "roof_damage; missing_elements",
+    "structural_concern": false,
+    "risk_score": 45,
+    "signage": "Fun [partially visible billboard advertisement on roofline]; Armacy [storefront signage on right unit]",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 8.35,
+    "height_avg_m": 6.29,
+    "footprint_sqm": 36.5,
+    "gfa_sqm": 91.2,
+    "fsi": 1.15,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "75 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "75 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "75 NASSAU ST"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark charcoal/black painted ground floor storefront; upper floor dark with existing window openings",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Heavily altered commercial facade; Harmony Cafe bar branding with gold medallion logo on black awning; decorative string lights and colourful ornaments in storefront window",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "asymmetric",
+    "window_details": "Large storefront display window at ground level with colourful decorations; upper floor has traditional double-hung windows in darker frames",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.3,
+    "door_details": "Commercial entry door within storefront facade; dark framing",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple roofline at parapet; obscured by signage",
+    "bay_windows": 0,
+    "bay_window_details": "",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "",
+    "chimneys": 0,
+    "chimney_details": "Not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Gold Harmony Cafe logo/medallion on awning; colourful window decorations",
+    "roof_type_observed": "Flat with parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Full-width commercial storefront with large display window; black awning with gold branding; patio fence adjacent",
+    "signage_observed": "Harmony Cafe gold logo on black awning; Bristol Truck Rentals visible in background",
+    "overall_style": "Commercial",
+    "alterations_visible": "Entire ground floor heavily modified for commercial bar/cafe use; original Victorian residential character completely obscured",
+    "matches_hcd_typology": false,
+    "confidence": 0.75,
+    "notes": "Part of the converted house-form row on Nassau St; rainbow pride flag on adjacent patio"
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.3,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Full-width commercial storefront with large display window; black awning with gold branding; patio fence adjacent",
+  "confidence": 0.9,
+  "notes": "Part of the converted house-form row on Nassau St; rainbow pride flag on adjacent patio",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.3,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Two-storey converted row house (pre-1889) with flat roof and parapet, 5.2 m wide. Party walls on both sides. Ground floor entirely reworked as a commercial storefront (The Harmony Cafe/Bar) with dark charcoal/black painted facade and black awning. Upper floor retains traditional double-hung windows in dark frames. Simple cornice at parapet line.",
+  "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

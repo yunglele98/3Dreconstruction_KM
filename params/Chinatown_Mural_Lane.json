@@ -1,0 +1,21 @@
+{
+  "building_name": "Chinatown Mural Lane",
+  "skipped": true,
+  "skip_reason": "alley/lane — series of mural and graffiti photos in Chinatown mural lane, no building facades",
+  "_meta": {
+    "address": "Chinatown Mural Lane",
+    "photo": "IMG_20260316_004213611_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T21:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_004213611_HDR.jpg",
+      "IMG_20260316_004220875_HDR.jpg",
+      "IMG_20260316_004229420_HDR.jpg",
+      "IMG_20260316_004237500_HDR.jpg",
+      "IMG_20260316_004245642_HDR.jpg"
+    ],
+    "reference_photo_count": 40,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "College St / Lippincott St (Northbound)",
+  "skipped": true,
+  "skip_reason": "street-view context rather than a single building facade",
+  "_meta": {
+    "address": "College St / Lippincott St (Northbound)",
+    "photo": "IMG_20260320_174236374_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:50:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_174236374_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

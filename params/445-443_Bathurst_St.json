@@ -1,0 +1,18 @@
+{
+  "building_name": "445-443 Bathurst St",
+  "skipped": true,
+  "skip_reason": "duplicate range view of already-covered adjacent storefronts",
+  "_meta": {
+    "address": "445-443 Bathurst St",
+    "photo": "IMG_20260320_172943762_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:50:45-04:00",
+    "reference_photos": [
+      "IMG_20260320_172943762_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "canonical_params_file": "443_Bathurst_St.json"
+}

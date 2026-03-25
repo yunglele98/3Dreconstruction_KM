@@ -1,0 +1,17 @@
+{
+  "building_name": "West side of 32 Oxford St",
+  "skipped": true,
+  "skip_reason": "blank side wall only; no readable facade composition",
+  "_meta": {
+    "address": "West side of 32 Oxford St",
+    "photo": "IMG_20260318_151121126_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:21:39-04:00",
+    "reference_photos": [
+      "IMG_20260318_151121126_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

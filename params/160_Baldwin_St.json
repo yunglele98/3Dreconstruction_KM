@@ -1,0 +1,315 @@
+{
+  "building_name": "160 Baldwin St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40001277999998,
+    "lat": 43.65512849,
+    "street": "Baldwin St",
+    "street_number": null,
+    "setback_m": 0.0,
+    "lot_area_sqm": 5219.899030452712,
+    "footprint_sqm": 1369.8,
+    "lot_coverage_pct": 26.2,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "buff-beige brick with dark grey entry surround and large aluminum-framed windows",
+  "windows_per_floor": [
+    3,
+    5
+  ],
+  "window_type": "fixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Row, Ontario Cottage",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 260,
+    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 258. 50 Lippincott Street N/A 259. 52 Lippincott Street N/A 141 DCH | FO :D FO YTIC 5202 3 Nassau Street 3 NASSAU STREET",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Food Retail / Grocer",
+    "business_name": "LITTLE PEBBLES CAFE | CRUMBS GOURMET PATTIES | Kensington Market BIA | Takoyaki6ix | Taco Loco | LVL UP Studios",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 30.18,
+    "height_avg_m": 24.18,
+    "footprint_sqm": 1369.8,
+    "gfa_sqm": 3424.5,
+    "fsi": 0.66,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 37,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "160 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260318_183702241_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260318_183702241_HDR.jpg",
+      "IMG_20260318_183714862_HDR.jpg",
+      "IMG_20260318_183723900_HDR.jpg",
+      "IMG_20260318_183733467_HDR.jpg",
+      "IMG_20260318_183741240_HDR.jpg"
+    ],
+    "reference_photo_count": 12,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "160 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "160 BALDWIN ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 30.18,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_condition_notes": "Facade is occupied and readable from the street, with contemporary storefront alterations layered onto the historic building form.",
+    "window_width_m": 0.95,
+    "window_height_m": 1.3,
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "No traditional cornice; building terminates in a clean modern roof edge.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney clearly visible from the selected frontage view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Decorative character is primarily expressed through the storefront treatment and surviving upper-storey massing.",
+    "has_storefront_observed": true,
+    "storefront_description": "Modern residential/commercial base with lobby entrance rather than a traditional storefront.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Contemporary infill construction rather than a lightly altered heritage facade.",
+    "matches_hcd_typology": false,
+    "confidence": 0.9,
+    "notes": "This photo is a tighter view of the same modern 160 Baldwin facade already documented in the prior batch.",
+    "facade_colour_observed": "buff-beige brick with dark grey entry surround and large aluminum-framed windows",
+    "facade_material_observed": "brick",
+    "condition": "good",
+    "windows_per_floor": [
+      3,
+      5
+    ],
+    "window_type": "fixed",
+    "window_arrangement": "symmetric",
+    "window_details": "Large modern window bands and glass-block panels emphasize the contemporary apartment facade.",
+    "door_count": 1,
+    "door_type": "recessed",
+    "door_details": "Recessed glazed apartment lobby entry marked 160 Baldwin.",
+    "roof_type_observed": "Flat-roofed contemporary apartment building",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "signage_observed": "Kensington Lofts vertical sign at the entrance."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "recessed",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Modern residential/commercial base with lobby entrance rather than a traditional storefront.",
+  "confidence": 0.9,
+  "notes": "This photo is a tighter view of the same modern 160 Baldwin facade already documented in the prior batch.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Recessed entry door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 4.4,
+    "height_m": 4.3,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": "Modern residential/commercial base with lobby entrance rather than a traditional storefront.",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, ontario cottage typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 5 window bays from lower to upper levels, using fixed, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. 50 Lippincott Street N/A 259.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 2.6,
+          "sill_height_m": 1.7,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 5,
+          "type": "fixed",
+          "width_m": 0.7,
+          "height_m": 11.0,
+          "sill_height_m": 8.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Contemporary mid-rise apartment building (Kensington Lofts) in buff-beige brick, replacing the original pre-1889 building form on this lot. The ground level has a recessed glazed lobby entrance marked '160 Baldwin' with a dark grey surround, flanked by large aluminum-framed windows. Upper storeys feature modern window bands and glass-block panels in a symmetrical arrangement. A flat roof terminates in a clean parapet with no traditional cornice. Despite the HCD contributing designation, the current structure is entirely contemporary infill with no surviving historic fabric visible from the street.",
+  "heritage_summary": "Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. 50 Lippincott Street N/A 259.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#D4B896",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

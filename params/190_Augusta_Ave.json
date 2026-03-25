@@ -1,0 +1,281 @@
+{
+  "building_name": "190 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    2.4,
+    2.4
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40207307999998,
+    "lat": 43.65412945,
+    "street": "Augusta Ave",
+    "street_number": 190,
+    "setback_m": 0.0,
+    "lot_area_sqm": 74.26561946000831,
+    "footprint_sqm": 167.1,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 6
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "canopy"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "dark maroon/brown shuttered storefront with a red House of Spice banner sign",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.9,
+  "window_height_m": 1.25,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 20,
+    "statement_of_contribution": "The properties at 219 and 225 Augusta Avenue each have value as a nineteenth-century Houseform building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early re",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Food Retail / Grocer",
+    "business_name": "House of Spice",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "House of Spice (Since 1975); KinGay Cafe Vegetarian Restaurant (adjacent)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 9.37,
+    "height_avg_m": 4.04,
+    "footprint_sqm": 167.1,
+    "gfa_sqm": 417.8,
+    "fsi": 5.63,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 5,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "190 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "190 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "190 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 4.04,
+      "new_total_height_m": 4.8,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark maroon/brown shuttered storefront with a red House of Spice banner sign",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "storefront is fully shuttered and heavily tagged with graffiti, but the sign band and frame remain intact",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.25,
+    "window_arrangement": "symmetric",
+    "window_details": "upper floor not fully visible in the close view; facade reads as a two-storey converted commercial frontage",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "entry is absorbed into the shuttered frontage and difficult to distinguish in the night image",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "thin soffit and sign frame at the canopy line",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "direct sidewalk frontage",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "long banner sign and layered graffiti dominate the facade",
+    "roof_type_observed": "flat or shallow roof behind storefront canopy",
+    "roof_features": [
+      "canopy"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "wide shuttered spice-shop storefront with no visible display glazing at night",
+    "signage_observed": "Carlos House of Spice; Spice of Your Life",
+    "overall_style": "Commercial",
+    "alterations_visible": "roll-down shutters, banner signage, layered repainting/graffiti",
+    "matches_hcd_typology": false,
+    "confidence": 0.73,
+    "notes": "The close-up emphasizes the current shutter condition more than the upper house-form massing."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "wide shuttered spice-shop storefront with no visible display glazing at night",
+  "confidence": 0.9,
+  "notes": "The close-up emphasizes the current shutter condition more than the upper house-form massing.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
+    "heritage_summary": "The properties at 219 and 225 Augusta Avenue each have value as a nineteenth-century Houseform building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early re.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "190 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as mixed in a dark maroon/brown shuttered storefront with a red house of spice banner sign palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The properties at 219 and 225 Augusta Avenue each have value as a nineteenth-century Houseform building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early re",
+  "heritage_summary": "The properties at 219 and 225 Augusta Avenue each have value as a nineteenth-century Houseform building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early re.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

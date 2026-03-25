@@ -1,0 +1,95 @@
+{
+  "pipeline_step": 1,
+  "description": "Building photo analysis - extract architectural parameters from HCD photos",
+  "model": "claude-opus-4-6-visual (primary), moondream:latest (Ollama fallback)",
+  "timestamp": "2026-03-12T23:48:14",
+  "total": 92,
+  "success": 10,
+  "failed": 0,
+  "ollama_status": "llava:13b crashes on VRAM (RTX 2080 Super 8GB). moondream:latest (1.7GB) works but output is basic. Vision analysis done by Claude Opus instead.",
+  "buildings": [
+    {
+      "address": "132 Bellevue Ave",
+      "file": "132_Bellevue_Ave.json",
+      "style": "Victorian Civic / Romanesque Revival",
+      "type": "fire_station",
+      "confidence": 0.88,
+      "complexity": "high"
+    },
+    {
+      "address": "141 Augusta Ave",
+      "file": "141_Augusta_Ave.json",
+      "style": "Victorian Vernacular",
+      "type": "mixed_use",
+      "confidence": 0.82,
+      "complexity": "medium"
+    },
+    {
+      "address": "198 Baldwin St",
+      "file": "198_Baldwin_St.json",
+      "style": "Victorian Vernacular (altered)",
+      "type": "commercial_residential",
+      "confidence": 0.78,
+      "complexity": "low"
+    },
+    {
+      "address": "22 Lippincott St",
+      "file": "22_Lippincott_St.json",
+      "style": "Victorian Vernacular (restrained)",
+      "type": "row_house",
+      "confidence": 0.85,
+      "complexity": "low"
+    },
+    {
+      "address": "28 Kensington Ave",
+      "file": "28_Kensington_Ave.json",
+      "style": "Victorian Vernacular with decorative gable",
+      "type": "mixed_use",
+      "confidence": 0.84,
+      "complexity": "medium"
+    },
+    {
+      "address": "1A Leonard Ave",
+      "file": "1A_Leonard_Ave.json",
+      "style": "Edwardian Neoclassical",
+      "type": "apartment",
+      "confidence": 0.82,
+      "complexity": "medium"
+    },
+    {
+      "address": "2 Kensington Pl",
+      "file": "2_Kensington_Pl.json",
+      "style": "Vernacular cottage",
+      "type": "workers_cottage",
+      "confidence": 0.55,
+      "complexity": "low"
+    },
+    {
+      "address": "20 Denison Sq",
+      "file": "20_Denison_Sq.json",
+      "style": "Victorian Romanesque Revival",
+      "type": "semi_detached",
+      "confidence": 0.9,
+      "complexity": "high"
+    },
+    {
+      "address": "21 Nassau St",
+      "file": "21_Nassau_St.json",
+      "style": "Modern institutional (1920s school, converted to lofts)",
+      "type": "institutional",
+      "confidence": 0.75,
+      "complexity": "low"
+    },
+    {
+      "address": "43 Oxford St",
+      "file": "43_Oxford_St.json",
+      "style": "Victorian Gothic Revival",
+      "type": "semi_detached",
+      "confidence": 0.8,
+      "complexity": "high"
+    }
+  ],
+  "next_step": "Step 2: Parametric Blender generator (generate_building.py)",
+  "photo_analyzed": 10,
+  "hcd_skeleton": 82
+}

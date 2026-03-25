@@ -1,0 +1,17 @@
+{
+  "building_name": "215 Augusta Ave (Lao Chinese Association of Ontario)",
+  "skipped": true,
+  "skip_reason": "duplicate storefront alias; observations belong under 215_Augusta_Ave.json",
+  "_meta": {
+    "address": "215 Augusta Ave (Lao Chinese Association of Ontario)",
+    "photo": "IMG_20260315_154712551_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260315_154712551_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

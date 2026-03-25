@@ -1,0 +1,349 @@
+{
+  "building_name": "91 Oxford St",
+  "floors": 3,
+  "floor_heights_m": [
+    4.8,
+    4.8,
+    4.8
+  ],
+  "total_height_m": 14.4,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40360155,
+    "lat": 43.65574361,
+    "street": "Oxford St",
+    "street_number": 91,
+    "setback_m": 3.0,
+    "lot_area_sqm": 621.3066968470182,
+    "footprint_sqm": 555.6,
+    "lot_coverage_pct": 89.4,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "buff/yellow brick with stone banding and decorative stonework",
+  "windows_per_floor": [
+    4,
+    6,
+    6
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.45,
+  "door_count": 2,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Commercial",
+    "construction_date": "1904-1913",
+    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 348,
+    "statement_of_contribution": "The property has value as a unique Commercial building within the District with building features suggesting Edwardian and early-twentieth-century architectural styles. As a place of employment for the working class, the property has cultural heritage value for its direct association with the development of the district as a complete community. Constructed in 1906 as a telephone exchange building, the property is notable for its scale, form, and massing which is unique within the surrounding residential neighbourhood. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation. Constructed to meet the infrastructure needs of the surrounding area, the property is visually, historically, and functionally linked to its surroundings. For its unique characteristics and history, the building is considered a landmark within the District.",
+    "building_features": [
+      "cornice",
+      "decorative_brick",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "institutional",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Modern Rascals | BLS International Services Canada",
+    "business_category": "Retail/Shop",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "Small notices/signage on storefront-level units but not clearly legible",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 17.73,
+    "height_avg_m": 13.08,
+    "footprint_sqm": 555.6,
+    "gfa_sqm": 1389.0,
+    "fsi": 2.24,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 15,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "91 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes"
+    ],
+    "photo": "IMG_20260316_104629480_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260316_104629480_HDR.jpg",
+      "IMG_20260320_004626448_HDR.jpg",
+      "IMG_20260320_004805104_HDR.jpg",
+      "IMG_20260320_154646460_HDR.jpg",
+      "IMG_20260320_154653248_HDR.jpg"
+    ],
+    "reference_photo_count": 6,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "91 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "91 OXFORD ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 17.73,
+      "new_total_height_m": 14.4,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 140,
+      "projection_mm": 25,
+      "colour_hex": "#D4C9A8"
+    },
+    "window_hoods": {
+      "present": true,
+      "arch_type": "flat",
+      "colour_hex": "#D4C9A8"
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    }
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "buff/yellow brick with darker stone banding and decorative stonework accents; landmark former Bell Telephone Exchange building",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Excellent condition. Well-maintained landmark building. For Lease (Lennard) signage on corner. Decorative brickwork and stonework fully intact.",
+    "condition": "good",
+    "windows_per_floor": [
+      4,
+      6,
+      6
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.6,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor: 4 large rectangular storefront-style windows with stone surrounds. Second floor: 6 windows with segmentally arched heads and decorative stonework voussoirs. Third floor: 6 windows with round-arched heads, particularly on the north elevation. All windows appear to retain original proportions.",
+    "door_count": 2,
+    "door_type": "arched",
+    "door_width_m": 1.1,
+    "door_height_m": 2.4,
+    "door_details": "Central round-arched entrance on north elevation (visible in HCD description). Secondary entrance at corner. Both with stone surrounds.",
+    "ground_floor_arches": "round",
+    "ground_floor_arch_count": 1,
+    "cornice": "decorative",
+    "cornice_details": "Prominent decorative cornice with stone and brick detailing at roofline. Full-width stone string courses between floors.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible on the principal facade represented here",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney clearly visible from this view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": true,
+    "decorative_details": "Extensive decorative stonework including voussoirs over windows, string courses between floors, stone pilasters at corners, and ornamental panels. Decorative brickwork throughout.",
+    "roof_type_observed": "flat with parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Ground floor has large commercial-style windows but reads more as an institutional/office entrance than a retail storefront. For Lease signage from Lennard realty.",
+    "signage_observed": "For Lease Office - 416.649.5939 - Andrea Kraus - Lennard realty sign on upper floor.",
+    "overall_style": "Edwardian",
+    "alterations_visible": "Current tenant signage is secondary to the largely intact historic facade composition.",
+    "matches_hcd_typology": true,
+    "confidence": 0.92,
+    "notes": "Daytime photo from batch 22 replaces poor nighttime photos from batches 8 and 18. This is the former Bell Telephone Exchange building (1906), a landmark within the HCD. Corner building with two exposed facades. Buff/yellow brick corrected from previous observation of red-brown.",
+    "photo": "IMG_20260320_154646460_HDR.jpg",
+    "photo_datetime": "2026-03-20T15:46:46",
+    "_batch_agent": "claude-opus-4-6-batch18-22",
+    "_batch_timestamp": "2026-03-25T02:07:04Z"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "arched",
+  "door_width_m": 1.1,
+  "door_height_m": 2.4,
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": true,
+  "decorative_lintels": true,
+  "overall_style": "Edwardian",
+  "storefront_description": "Ground floor contains tenant entries/signage but does not read as a conventional storefront bay.",
+  "confidence": 0.9,
+  "notes": "",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "round",
+  "ground_floor_arch_count": 1,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Arched-head door",
+      "position": "center",
+      "width_m": 1.1,
+      "height_m": 2.4,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street frontage spans roughly 5.2 metres across 3 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 4, 6, 6 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice, decorative brick, original windows, string courses.",
+    "heritage_summary": "For its unique characteristics and history, the building is considered a landmark within the District. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.3,
+          "sill_height_m": 2.6,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.8,
+          "sill_height_m": 2.2,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "facade_description": "91 Oxford St presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 6, 6 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice, decorative brick, original windows, string courses. HCD note: The property has value as a unique Commercial building within the District with building features suggesting Edwardian and early-twentieth-century architectural styles. As a place of employment for the working class, the property has cultural heritage value for its direct association with the development of the district as a complete community. Constructed in 1906 as a telephone exchange building, the property is notable for its scale, form, and massing which is unique within the surrounding residential neighbourhood. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation. Constructed to meet the infrastructure needs of the surrounding area, the property is visually, historically, and functionally linked to its surroundings. For its unique characteristics and history, the building is considered a landmark within the District.",
+  "heritage_summary": "For its unique characteristics and history, the building is considered a landmark within the District. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "flat",
+    "count": 2,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

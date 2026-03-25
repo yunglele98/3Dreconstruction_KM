@@ -1,0 +1,274 @@
+{
+  "building_name": "65 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40189671999998,
+    "lat": 43.65518649,
+    "street": "Nassau St",
+    "street_number": null,
+    "setback_m": 0.0,
+    "lot_area_sqm": 187.6739519938051,
+    "footprint_sqm": 248.1,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "white-painted brick overlaid with turquoise and red mural-like paint, black fascia, and extensive graffiti tagging",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "storefront",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "Converted House-form, Detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 26,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. Anchoring the southeast corner of Augusta Avenue and Nassau Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. Summary: Reference Primary Address Entrance Address(es) Number 26. 255 Augusta Avenue 65 Nassau Street 31 DCH | FO :D FO YTIC 5202 256 & 258 Augusta Avenue (L-R) 256 & 258 AUGUSTA AVENUE",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Food Retail / Grocer",
+    "business_name": "Augusta Fruit Market | Kensington Market Sourdough",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 10.83,
+    "height_avg_m": 6.59,
+    "footprint_sqm": 248.1,
+    "gfa_sqm": 620.2,
+    "fsi": 3.3,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 7,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "65 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_175852375_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "65 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "65 NASSAU ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.83,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "white-painted brick overlaid with turquoise and red mural-like paint, black fascia, and extensive graffiti tagging",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Former fruit-market storefront appears shuttered or underused, with graffiti, worn doors, patched surfaces, and no active display.",
+    "condition": "poor",
+    "windows_per_floor": [
+      0
+    ],
+    "window_type": "storefront",
+    "window_width_m": 0.0,
+    "window_height_m": 0.0,
+    "window_arrangement": "irregular",
+    "window_details": "Original storefront glazing appears removed or covered; the current frontage is dominated by double service doors and boarded or painted-over openings.",
+    "door_count": 2,
+    "door_type": "storefront",
+    "door_width_m": 1.6,
+    "door_height_m": 2.1,
+    "door_details": "Central double metal-and-glass doors are flanked by narrow service openings and tagged panels.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple modern fascia with AUGUSTA FRUIT MARKET signage.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; storefront meets the sidewalk directly.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible in the cropped view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Round projecting Augusta Fruit Market sign and layered paint/graffiti are the main visible facade features.",
+    "roof_type_observed": "Low roof behind a simple fascia",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Heavily tagged former retail frontage with faded signage, double doors, and painted-over facade panels.",
+    "signage_observed": "AUGUSTA FRUIT MARKET, Augusta Fruit Market round sign, RETAIL BULK FOOD STORE.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Storefront glazing replaced or infilled, extensive graffiti, and ad hoc repainting obscure the original commercial facade.",
+    "matches_hcd_typology": false,
+    "confidence": 0.86,
+    "notes": "Best frontal view of the former Augusta Fruit Market storefront."
+  },
+  "window_arrangement": "irregular",
+  "door_type": "storefront",
+  "door_width_m": 1.6,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Heavily tagged former retail frontage with faded signage, double doors, and painted-over facade panels.",
+  "confidence": 0.9,
+  "notes": "Best frontal view of the former Augusta Fruit Market storefront.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "left",
+      "width_m": 1.6,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 1.6,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using storefront, and 2 principal entrances.",
+    "heritage_summary": "First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. Summary: Reference Primary Address Entrance Address(es) Number 26.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Converted detached house-form (pre-1889) at the southeast corner of Augusta Avenue and Nassau Street, operating as Augusta Fruit Market / Kensington Market Sourdough. White-painted brick overlaid with turquoise and red mural-like paint and extensive graffiti. Two storeys under a cross-gable with double storefront doors and no visible upper windows from the street. Zero setback; 7 dwelling units above. Poor condition.",
+  "heritage_summary": "First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. Summary: Reference Primary Address Entrance Address(es) Number 26.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

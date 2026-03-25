@@ -1,0 +1,17 @@
+{
+  "building_name": "Dundas / Bathurst (in front of Sanderson Library)",
+  "skipped": true,
+  "skip_reason": "intersection context view, not a single building facade",
+  "_meta": {
+    "address": "Dundas / Bathurst (in front of Sanderson Library)",
+    "photo": "IMG_20260320_171923724_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_171923724_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

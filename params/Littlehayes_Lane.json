@@ -1,0 +1,21 @@
+{
+  "building_name": "Littlehayes Lane",
+  "skipped": true,
+  "skip_reason": "lane view rather than a building facade",
+  "_meta": {
+    "address": "Littlehayes Lane",
+    "photo": "IMG_20260318_182428702_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T14:46:25-04:00",
+    "reference_photos": [
+      "IMG_20260316_013445973_HDR.jpg",
+      "IMG_20260316_013457816_HDR.jpg",
+      "IMG_20260318_182428702_HDR.jpg",
+      "IMG_20260318_182439023_HDR.jpg",
+      "IMG_20260318_182443991_HDR.jpg"
+    ],
+    "reference_photo_count": 9,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

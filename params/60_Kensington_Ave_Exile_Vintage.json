@@ -1,0 +1,187 @@
+{
+  "building_name": "60 Kensington Ave (Exile Vintage)",
+  "floors": 3,
+  "floor_heights_m": [
+    4.0,
+    3.0,
+    3.0
+  ],
+  "total_height_m": 10.0,
+  "facade_width_m": 5.5,
+  "facade_depth_m": 20.0,
+  "roof_type": "Gable",
+  "roof_pitch_deg": 35,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "brown/maroon painted upper with pegasus/star murals, yellow trim, blue striped awning",
+  "windows_per_floor": [
+    0,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.8,
+  "window_height_m": 1.1,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "brown/maroon painted upper with pegasus/star murals, yellow trim, blue striped awning",
+    "facade_material_observed": "mixed",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      1
+    ],
+    "has_storefront_observed": true,
+    "signage_observed": "EXILE (red text), Exile Vintage",
+    "overall_style": "Vernacular",
+    "confidence": 0.7,
+    "notes": "nighttime; number 60 visible; decorative painted facade"
+  },
+  "_meta": {
+    "address": "60 Kensington Ave",
+    "photo": "IMG_20260320_013121944_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260320_013121944_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "60 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "60 KENSINGTON AVE"
+    ]
+  },
+  "overall_style": "Vernacular",
+  "confidence": 0.8500000000000001,
+  "notes": "nighttime; number 60 visible; decorative painted facade",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 4.7,
+    "height_m": 3.0,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 5.5 metres across 3 storeys beneath a gable, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "60 Kensington Ave (Exile Vintage) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.5 metres across 3 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by mixed in a brown/maroon painted upper with pegasus/star murals, yellow trim, blue striped awning palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "site": {
+    "lon": -79.4009589,
+    "lat": 43.65420159,
+    "street": "Kensington Ave",
+    "street_number": 60
+  }
+}

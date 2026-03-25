@@ -1,0 +1,320 @@
+{
+  "building_name": "293 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40253468,
+    "lat": 43.65634716,
+    "street": "Augusta Ave",
+    "street_number": 291,
+    "setback_m": 0.0,
+    "lot_area_sqm": 113.0475985224206,
+    "footprint_sqm": 91.6,
+    "lot_coverage_pct": 81.0,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "deck",
+    "canopy"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "sage-green and cream painted facade with black entry surround and timber deck",
+  "windows_per_floor": [
+    1,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.9,
+  "window_height_m": 1.25,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "1890-1903",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1890,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 36,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared cross gabled roofline, double-height projecting bay, and segmentally arched window openings at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "The Arch Caf\u00e9/Bar",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.13,
+    "height_avg_m": 7.38,
+    "footprint_sqm": 91.6,
+    "gfa_sqm": 229.0,
+    "fsi": 2.03,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "293 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "storefront",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "293 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "293 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "sage-green and cream painted facade with black entry surround and timber deck",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "small cafe/bar frontage is active but heavily altered, with exposed deck framing and painted brickwork",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.25,
+    "window_arrangement": "asymmetric",
+    "window_details": "small upper residential windows above a narrow ground-floor commercial entrance",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "single black-framed commercial entry with string lights and shallow canopy",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "small projecting canopy over entrance",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 1,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "raised timber deck/patio at front",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "string lights and painted facade provide most of the visual character",
+    "roof_type_observed": "front gable hidden behind altered front",
+    "roof_features": [
+      "deck",
+      "canopy"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "tiny bar/cafe storefront with narrow black door, front deck, and minimal glazing",
+    "signage_observed": "The Arch Cafe/Bar",
+    "overall_style": "Commercial",
+    "alterations_visible": "painted facade, new deck, replacement windows and door",
+    "matches_hcd_typology": false,
+    "confidence": 0.78,
+    "notes": "Top-level has_storefront updated from false to true. | [batch_010] Two daytime photos confirm sage-green and cream facade. The Arch Cafe/Bar signage visible. Front timber deck with string lights. Narrow black entry door. Upper windows small residential type. Cross-gable roofline visible from oblique angle."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 1,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "tiny bar/cafe storefront with narrow black door, front deck, and minimal glazing",
+  "confidence": 0.9,
+  "notes": "Top-level has_storefront updated from false to true.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 4.4,
+    "height_m": 3.2,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": "tiny bar/cafe storefront with narrow black door, front deck, and minimal glazing",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 1
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared cross gabled roofline, double-height projecting bay, and segmentally arched window openings at the second storey. Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.1,
+          "sill_height_m": 2.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "293 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as mixed in a sage-green and cream painted facade with black entry surround and timber deck palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared cross gabled roofline, double-height projecting bay, and segmentally arched window openings at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared cross gabled roofline, double-height projecting bay, and segmentally arched window openings at the second storey. Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

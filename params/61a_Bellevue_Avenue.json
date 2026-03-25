@@ -1,0 +1,17 @@
+{
+  "building_name": "61a Bellevue Avenue",
+  "skipped": true,
+  "skip_reason": "alternate Bellevue angle already covered by the row files",
+  "_meta": {
+    "address": "61a Bellevue Avenue",
+    "photo": "IMG_20260320_155132721_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_155132721_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

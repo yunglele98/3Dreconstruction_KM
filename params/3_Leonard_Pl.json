@@ -1,0 +1,222 @@
+{
+  "building_name": "3 Leonard Pl",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 4.0,
+  "facade_depth_m": 18.3,
+  "site": {
+    "lon": -79.40376448,
+    "lat": 43.6533449,
+    "street": "Leonard Pl",
+    "street_number": 3,
+    "setback_m": 0.5,
+    "lot_area_sqm": 93.36310905054928,
+    "footprint_sqm": 67.5,
+    "lot_coverage_pct": 72.3,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Stucco",
+  "facade_colour": "off-white stucco",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Vernacular \u2013 Workers Cottage",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1870,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 173,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+    "building_features": [
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Laneway | Pedestrian-scale | Very small",
+    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "water_damage; overgrown",
+    "structural_concern": false,
+    "risk_score": 75,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 16.88,
+    "height_avg_m": 13.13,
+    "footprint_sqm": 67.5,
+    "gfa_sqm": 101.2,
+    "fsi": 1.08,
+    "lot_width_ft": 13.0,
+    "lot_depth_ft": 60.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "3 Leonard Pl",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "3 Leonard Pl",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "3 LEONARD PL"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 16.88,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 4 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 5.4,
+          "sill_height_m": 4.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 1.6,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#D8D0C0"
+  },
+  "street_setback_m": 0.5,
+  "confidence": 0.7500000000000001,
+  "facade_description": "3 Leonard Pl presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 4 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include original windows. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

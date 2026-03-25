@@ -1,0 +1,17 @@
+{
+  "building_name": "339-341 College St",
+  "skipped": true,
+  "skip_reason": "blurry night view with no clearly readable single facade",
+  "_meta": {
+    "address": "339-341 College St.",
+    "photo": "IMG_20260321_013428355_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260321_013428355_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "building_name": "222 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.2,
+    2.5
+  ],
+  "total_height_m": 5.61,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40239511,
+    "lat": 43.6548937,
+    "street": "Augusta Ave",
+    "street_number": 222,
+    "setback_m": 0.0,
+    "lot_area_sqm": 160.9547873277,
+    "footprint_sqm": 68.9,
+    "lot_coverage_pct": 42.8,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "multicolour graffiti-painted storefront with turquoise, pink, and black tones under a dark brown canopy",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "storefront",
+  "window_width_m": 1.2,
+  "window_height_m": 0.45,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1890-1903",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 38,
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early resid",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Vintage / Clothing Retail",
+    "business_name": "Shoneys Clothing",
+    "business_category": "Fashion/Clothing",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Harry David Ltd; David workwear (large lettering); Daniel Safety Workwear 226 Augusta Ave (adjacent)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.91,
+    "height_avg_m": 5.61,
+    "footprint_sqm": 68.9,
+    "gfa_sqm": 172.2,
+    "fsi": 1.07,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "222 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_181058402_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "222 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "222 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.1,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "multicolour graffiti-painted storefront with turquoise, pink, and black tones under a dark brown canopy",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Open clothing stall appears active, though the facade is highly improvised and heavily painted.",
+    "condition": "fair",
+    "windows_per_floor": [
+      1
+    ],
+    "window_type": "storefront",
+    "window_width_m": 1.2,
+    "window_height_m": 0.45,
+    "window_arrangement": "irregular",
+    "window_details": "One small high transom-like opening is visible above the left side of the stall.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 2.0,
+    "door_height_m": 2.3,
+    "door_details": "Large open retail bay functions as the primary entrance rather than a conventional door.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple canopy and fascia with little architectural detail.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Street art and hanging merchandise define the facade more than the architecture.",
+    "roof_type_observed": "Low one-storey commercial roofline",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Open-front clothing stall with racks spilling to the sidewalk and graffiti-painted wall surfaces.",
+    "signage_observed": "Address 224 visible adjacent; Shoneys Clothing label inferred from batch annotation rather than strong facade sign.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Facade is largely an open retail bay with painted walls and minimal original storefront detail remaining.",
+    "matches_hcd_typology": false,
+    "confidence": 0.7,
+    "notes": "Observed from a direct sidewalk view of the open clothing stall."
+  },
+  "window_arrangement": "irregular",
+  "door_type": "storefront",
+  "door_width_m": 2.0,
+  "door_height_m": 2.3,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Open-front clothing stall with racks spilling to the sidewalk and graffiti-painted wall surfaces.",
+  "confidence": 0.9,
+  "notes": "Observed from a direct sidewalk view of the open clothing stall.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 2.0,
+      "height_m": 2.3,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early resid.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "222 Augusta Ave presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed in a multicolour graffiti-painted storefront with turquoise, pink, and black tones under a dark brown canopy palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1 window bays from lower to upper levels, using storefront, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early resid",
+  "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early resid.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

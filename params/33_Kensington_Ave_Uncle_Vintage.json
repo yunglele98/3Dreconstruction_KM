@@ -1,0 +1,199 @@
+{
+  "building_name": "33 Kensington Ave (Uncle Vintage)",
+  "floors": 3,
+  "floor_heights_m": [
+    4.0,
+    3.0,
+    3.0
+  ],
+  "total_height_m": 10.0,
+  "facade_width_m": 6.0,
+  "facade_depth_m": 20.0,
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "warm yellow-brown brick on upper floors, dark painted commercial ground floor with illuminated Uncle Vintage Co sign",
+  "windows_per_floor": [
+    0,
+    2,
+    2
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.8,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "warm yellow-brown brick on upper floors, dark painted commercial ground floor with illuminated Uncle Vintage Co sign",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_arrangement": "symmetric",
+    "door_count": 1,
+    "door_type": "storefront",
+    "has_storefront_observed": true,
+    "signage_observed": "UNCLE VINTAGE CO Quality Garment",
+    "overall_style": "Victorian",
+    "confidence": 0.7,
+    "notes": "nighttime photo; Victorian house-form with cross-gable"
+  },
+  "_meta": {
+    "address": "33 Kensington Ave",
+    "photo": "IMG_20260320_012656551_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260320_012656551_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "33 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "33 KENSINGTON AVE"
+    ]
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "overall_style": "Victorian",
+  "confidence": 0.9,
+  "notes": "nighttime photo; Victorian house-form with cross-gable",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 5.1,
+    "height_m": 3.0,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 3,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 6 metres across 3 storeys beneath a cross-gable, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using double hung, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "33 Kensington Ave (Uncle Vintage) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 6 metres across 3 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using double hung, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "site": {
+    "lon": -79.39989584,
+    "lat": 43.65348617,
+    "street": "Kensington Ave",
+    "street_number": 27
+  }
+}

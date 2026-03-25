@@ -1,0 +1,159 @@
+{
+  "building_name": "80 Kensington Ave (Love, Calista)",
+  "floors": 2,
+  "floor_heights_m": [
+    4.0,
+    3.0
+  ],
+  "total_height_m": 7.0,
+  "facade_width_m": 5.0,
+  "facade_depth_m": 20.0,
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "yellow-brown brick upper, pink painted storefront with checkered sign",
+  "windows_per_floor": [
+    0,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.8,
+  "window_height_m": 1.0,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "yellow-brown brick upper, pink painted storefront with checkered sign",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "has_storefront_observed": true,
+    "signage_observed": "LOVE, CALISTA - Bows, Clips, Curious Things",
+    "overall_style": "Vernacular",
+    "confidence": 0.7,
+    "notes": "nighttime; charming pink-themed storefront"
+  },
+  "_meta": {
+    "address": "80 Kensington Ave",
+    "photo": "IMG_20260320_013514331_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "reference_photos": [
+      "IMG_20260320_013514331_HDR.jpg",
+      "PXL_20260318_223334974.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "80 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "80 KENSINGTON AVE"
+    ]
+  },
+  "overall_style": "Vernacular",
+  "confidence": 0.8500000000000001,
+  "notes": "nighttime; charming pink-themed storefront",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 4.2,
+    "height_m": 3.0,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 5 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {},
+  "street_setback_m": 2.0,
+  "facade_description": "80 Kensington Ave (Love, Calista) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "site": {
+    "lon": -79.40081533999998,
+    "lat": 43.65464292,
+    "street": "Kensington Ave",
+    "street_number": 80
+  }
+}

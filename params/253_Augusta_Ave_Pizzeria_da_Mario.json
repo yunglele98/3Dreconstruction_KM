@@ -1,0 +1,18 @@
+{
+  "building_name": "253 Augusta Ave (Pizzeria da Mario)",
+  "skipped": true,
+  "skip_reason": "duplicate storefront alias; observations belong under 253_Augusta_Ave.json",
+  "_meta": {
+    "address": "253 Augusta Ave (Pizzeria da Mario)",
+    "photo": "PXL_20260318_220917647.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_180953684_HDR.jpg",
+      "PXL_20260318_220917647.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

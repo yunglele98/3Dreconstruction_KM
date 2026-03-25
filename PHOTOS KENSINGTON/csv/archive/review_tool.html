@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kensington Photo Review Tool</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 16px 24px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 20px; margin-bottom: 4px; }
+.stats { font-size: 13px; color: #a0a0c0; }
+.controls { display: flex; gap: 12px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
+.controls button { padding: 6px 14px; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }
+.btn-export { background: #e94560; color: white; }
+.btn-collapse { background: #0f3460; color: white; }
+.filter-input { padding: 6px 12px; border: 1px solid #333; border-radius: 4px; background: #0d1b2a; color: #eee; width: 250px; font-size: 13px; }
+.group { margin: 16px; border: 1px solid #333; border-radius: 8px; overflow: hidden; }
+.group-header { background: #16213e; padding: 12px 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.group-header:hover { background: #1a2a4e; }
+.group-header h2 { font-size: 15px; font-weight: 500; }
+.count { background: #0f3460; padding: 2px 10px; border-radius: 12px; font-size: 12px; }
+.group-body { display: none; padding: 8px; }
+.group.open .group-body { display: flex; flex-wrap: wrap; gap: 8px; }
+.photo-card { width: 280px; border: 2px solid #333; border-radius: 6px; overflow: hidden; background: #0d1b2a; }
+.photo-card.reviewed { border-color: #2ecc71; }
+.photo-card.flagged { border-color: #e94560; }
+.photo-card img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; }
+.info { padding: 8px; font-size: 11px; }
+.filename { color: #a0a0c0; word-break: break-all; }
+.label-row { display: flex; gap: 4px; margin-top: 6px; }
+.label-row input { flex: 1; padding: 4px 6px; border: 1px solid #444; border-radius: 3px; background: #1a1a2e; color: #eee; font-size: 11px; }
+.btn-row { display: flex; gap: 4px; margin-top: 4px; }
+.btn-ok { padding: 3px 8px; border: none; border-radius: 3px; cursor: pointer; font-size: 11px; background: #2ecc71; color: white; }
+.btn-flag { padding: 3px 8px; border: none; border-radius: 3px; cursor: pointer; font-size: 11px; background: #e94560; color: white; }
+.btn-apply { padding: 3px 8px; border: none; border-radius: 3px; cursor: pointer; font-size: 11px; background: #3498db; color: white; }
+.lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 200; justify-content: center; align-items: center; cursor: pointer; }
+.lightbox.show { display: flex; }
+.lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; }
+.progress { height: 3px; background: #333; margin-top: 8px; border-radius: 2px; overflow: hidden; }
+.progress-bar { height: 100%; background: #2ecc71; transition: width 0.3s; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Kensington Photo Review Tool (remaining 24)</h1>
+  <div class="stats">
+    24 photos in 8 groups |
+    Reviewed: <span id="rc">0</span> |
+    Flagged: <span id="fc">0</span>
+  </div>
+  <div class="progress"><div class="progress-bar" id="pb" style="width:0%"></div></div>
+  <div class="controls">
+    <input class="filter-input" id="filter" placeholder="Filter groups by label..." oninput="filt()">
+    <button class="btn-collapse" onclick="document.querySelectorAll('.group').forEach(g=>g.classList.remove('open'))">Collapse All</button>
+    <button class="btn-collapse" onclick="document.querySelectorAll('.group').forEach(g=>g.classList.add('open'))">Expand All</button>
+    <button class="btn-export" onclick="exp()">Export Corrections CSV</button>
+  </div>
+</div>
+<div id="groups">
+<div class="group open" id="g_Kensington_Market_alley__night__graffiti" data-label="Kensington Market alley (night, graffiti, rear yards)">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Kensington Market alley (night, graffiti, rear yards)</h2><span class="count">7</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260320_011024375_HDR.jpg">      <img src="../IMG_20260320_011024375_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_011024375_HDR.jpg<br><small>01:10:24</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, rear yards)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260320_011030816_HDR.jpg">      <img src="../IMG_20260320_011030816_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_011030816_HDR.jpg<br><small>01:10:30</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, rear yards)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260320_011048375_HDR.jpg">      <img src="../IMG_20260320_011048375_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_011048375_HDR.jpg<br><small>01:10:48</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, rear yards)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260320_011104655_HDR.jpg">      <img src="../IMG_20260320_011104655_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_011104655_HDR.jpg<br><small>01:11:04</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, rear yards)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260320_011141704_HDR.jpg">      <img src="../IMG_20260320_011141704_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_011141704_HDR.jpg<br><small>01:11:41</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, rear yards)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260320_011149337_HDR.jpg">      <img src="../IMG_20260320_011149337_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_011149337_HDR.jpg<br><small>01:11:49</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, rear yards)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260320_011232512_HDR.jpg">      <img src="../IMG_20260320_011232512_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_011232512_HDR.jpg<br><small>01:12:32</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, rear yards)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+<div class="group open" id="g_Kensington_Market_alley__night__graffiti" data-label="Kensington Market alley (night, graffiti, posters)">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Kensington Market alley (night, graffiti, posters)</h2><span class="count">4</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260318_004821318_HDR.jpg">      <img src="../IMG_20260318_004821318_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_004821318_HDR.jpg<br><small>00:48:21</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, posters)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_004855840_HDR.jpg">      <img src="../IMG_20260318_004855840_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_004855840_HDR.jpg<br><small>00:48:55</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, posters)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_004907174_HDR.jpg">      <img src="../IMG_20260318_004907174_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_004907174_HDR.jpg<br><small>00:49:07</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, posters)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_004935920_HDR.jpg">      <img src="../IMG_20260318_004935920_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_004935920_HDR.jpg<br><small>00:49:35</small></div>        <div class="label-row"><input type="text" value="Kensington Market alley (night, graffiti, posters)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+<div class="group open" id="g_Rear_lane_behind_Baldwin_Augusta__RICKY_" data-label="Rear lane behind Baldwin/Augusta (RICKY mural)">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Rear lane behind Baldwin/Augusta (RICKY mural)</h2><span class="count">4</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260318_152140663_HDR.jpg">      <img src="../IMG_20260318_152140663_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_152140663_HDR.jpg<br><small>15:21:40</small></div>        <div class="label-row"><input type="text" value="Rear lane behind Baldwin/Augusta (RICKY mural)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_152321300_HDR.jpg">      <img src="../IMG_20260318_152321300_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_152321300_HDR.jpg<br><small>15:23:21</small></div>        <div class="label-row"><input type="text" value="Rear lane behind Baldwin/Augusta (RICKY mural)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_152330797_HDR.jpg">      <img src="../IMG_20260318_152330797_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_152330797_HDR.jpg<br><small>15:23:30</small></div>        <div class="label-row"><input type="text" value="Rear lane behind Baldwin/Augusta (RICKY mural)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_152340182_HDR.jpg">      <img src="../IMG_20260318_152340182_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_152340182_HDR.jpg<br><small>15:23:40</small></div>        <div class="label-row"><input type="text" value="Rear lane behind Baldwin/Augusta (RICKY mural)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+<div class="group open" id="g_Kensington_Market_laneway__rear_of_house" data-label="Kensington Market laneway (rear of houses, fire escape)">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Kensington Market laneway (rear of houses, fire escape)</h2><span class="count">4</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260318_182526444_HDR.jpg">      <img src="../IMG_20260318_182526444_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_182526444_HDR.jpg<br><small>18:25:26</small></div>        <div class="label-row"><input type="text" value="Kensington Market laneway (rear of houses, fire escape)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_182542025_HDR.jpg">      <img src="../IMG_20260318_182542025_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_182542025_HDR.jpg<br><small>18:25:42</small></div>        <div class="label-row"><input type="text" value="Kensington Market laneway (rear of houses, fire escape)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_182550725_HDR.jpg">      <img src="../IMG_20260318_182550725_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_182550725_HDR.jpg<br><small>18:25:50</small></div>        <div class="label-row"><input type="text" value="Kensington Market laneway (rear of houses, fire escape)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260318_182554018_HDR.jpg">      <img src="../IMG_20260318_182554018_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_182554018_HDR.jpg<br><small>18:25:54</small></div>        <div class="label-row"><input type="text" value="Kensington Market laneway (rear of houses, fire escape)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+<div class="group open" id="g_Kensington_Ave_area__night__Victorian_ho" data-label="Kensington Ave area (night, Victorian houses, Breathless storefront)">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Kensington Ave area (night, Victorian houses, Breathless storefront)</h2><span class="count">2</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260320_012841865_HDR.jpg">      <img src="../IMG_20260320_012841865_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_012841865_HDR.jpg<br><small>01:28:41</small></div>        <div class="label-row"><input type="text" value="Kensington Ave area (night, Victorian houses, Breathless storefront)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+    <div class="photo-card" data-fn="IMG_20260320_012852370_HDR.jpg">      <img src="../IMG_20260320_012852370_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260320_012852370_HDR.jpg<br><small>01:28:52</small></div>        <div class="label-row"><input type="text" value="Kensington Ave area (night, Victorian houses, Breathless storefront)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+<div class="group open" id="g_Rear_lane_bend__TACO_TIME_fence__grey_ho" data-label="Rear lane bend (TACO TIME fence, grey house, conifers)">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Rear lane bend (TACO TIME fence, grey house, conifers)</h2><span class="count">1</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260318_152625643_HDR.jpg">      <img src="../IMG_20260318_152625643_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_152625643_HDR.jpg<br><small>15:26:25</small></div>        <div class="label-row"><input type="text" value="Rear lane bend (TACO TIME fence, grey house, conifers)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+<div class="group open" id="g_43_655825___79_399891" data-label="43.655825, -79.399891">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>43.655825, -79.399891</h2><span class="count">1</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260318_154616274_HDR.jpg">      <img src="../IMG_20260318_154616274_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_154616274_HDR.jpg<br><small>15:46:16</small></div>        <div class="label-row"><input type="text" value="43.655825, -79.399891" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+<div class="group open" id="g_Kensington_Market_area__green_gable_hous" data-label="Kensington Market area (green gable house, art/graffiti panels)">
+  <div class="group-header" onclick="this.parentElement.classList.toggle('open')">
+    <h2>Kensington Market area (green gable house, art/graffiti panels)</h2><span class="count">1</span>
+  </div><div class="group-body">
+    <div class="photo-card" data-fn="IMG_20260318_185106558_HDR.jpg">      <img src="../IMG_20260318_185106558_HDR.jpg" loading="lazy" onclick="lb(this.src)" onerror="this.alt='Not found';this.style.background='#333'">      <div class="info"><div class="filename">IMG_20260318_185106558_HDR.jpg<br><small>18:51:06</small></div>        <div class="label-row"><input type="text" value="Kensington Market area (green gable house, art/graffiti panels)" class="nl"></div>        <div class="btn-row"><button class="btn-ok" onclick="ok(this)">OK</button>        <button class="btn-flag" onclick="fl(this)">Flag</button>        <button class="btn-apply" onclick="ap(this)">Apply to group</button></div>      </div></div>
+  </div></div>
+</div>
+<div class="lightbox" id="lbx" onclick="this.classList.remove('show')"><img id="lbi"></div>
+<script>
+const T=document.querySelectorAll('.photo-card').length;
+function upd(){
+  const r=document.querySelectorAll('.photo-card.reviewed').length;
+  const f=document.querySelectorAll('.photo-card.flagged').length;
+  document.getElementById('rc').textContent=r;
+  document.getElementById('fc').textContent=f;
+  document.getElementById('pb').style.width=((r+f)/T*100)+'%';
+}
+function ok(b){const c=b.closest('.photo-card');c.classList.remove('flagged');c.classList.add('reviewed');upd();}
+function fl(b){const c=b.closest('.photo-card');c.classList.remove('reviewed');c.classList.add('flagged');upd();}
+function ap(b){
+  const card=b.closest('.photo-card');
+  const val=card.querySelector('.nl').value;
+  const group=card.closest('.group-body');
+  group.querySelectorAll('.nl').forEach(inp=>{inp.value=val;});
+}
+function lb(s){document.getElementById('lbi').src=s;document.getElementById('lbx').classList.add('show');}
+function filt(){
+  const q=document.getElementById('filter').value.toLowerCase();
+  document.querySelectorAll('.group').forEach(g=>{
+    g.style.display=g.dataset.label.toLowerCase().includes(q)?'':'none';
+  });
+}
+function exp(){
+  let csv='filename,new_address,status\n';
+  document.querySelectorAll('.photo-card').forEach(c=>{
+    let st='unchanged';
+    if(c.classList.contains('reviewed'))st='reviewed';
+    if(c.classList.contains('flagged'))st='flagged';
+    if(st!=='unchanged'){
+      const fn=c.dataset.fn;
+      const lb=c.querySelector('.nl').value.replace(/"/g,'""');
+      csv+='"'+fn+'","'+lb+'","'+st+'"\n';
+    }
+  });
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='photo_review_corrections.csv';
+  a.click();
+}
+</script>
+</body></html>

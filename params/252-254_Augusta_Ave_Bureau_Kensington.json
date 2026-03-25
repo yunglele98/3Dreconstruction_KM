@@ -1,0 +1,18 @@
+{
+  "building_name": "252-254 Augusta Ave (Bureau Kensington)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "254_Augusta_Ave.json",
+  "_meta": {
+    "address": "252-254 Augusta Ave (Bureau Kensington)",
+    "photo": "IMG_20260318_185551795_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_185551795_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

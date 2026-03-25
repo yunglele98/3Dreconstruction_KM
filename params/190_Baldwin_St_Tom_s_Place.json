@@ -1,0 +1,19 @@
+{
+  "building_name": "190 Baldwin St (Tom's Place)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "190_Baldwin_St.json",
+  "_meta": {
+    "address": "190 Baldwin St (Tom's Place)",
+    "photo": "IMG_20260318_182751778_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T14:46:25-04:00",
+    "reference_photos": [
+      "IMG_20260318_182751778_HDR.jpg",
+      "IMG_20260318_182759757_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

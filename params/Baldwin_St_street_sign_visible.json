@@ -1,0 +1,17 @@
+{
+  "building_name": "Baldwin St (street sign visible)",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Baldwin St (street sign visible)",
+    "photo": "IMG_20260316_005141467_HDR.jpg",
+    "agent": "gemini-cli",
+    "timestamp": "2026-03-24T14:30:50.913624",
+    "reference_photos": [
+      "IMG_20260316_005141467_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

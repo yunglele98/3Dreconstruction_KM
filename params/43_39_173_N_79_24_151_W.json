@@ -1,0 +1,18 @@
+{
+  "building_name": "43°39'17.3\"N 79°24'15.1\"W",
+  "skipped": true,
+  "skip_reason": "location/utility-box detail, not a building facade",
+  "_meta": {
+    "address": "43°39'17.3\"N 79°24'15.1\"W",
+    "photo": "IMG_20260315_153150193_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:40:00-04:00",
+    "reference_photos": [
+      "IMG_20260315_153150193_HDR.jpg",
+      "IMG_20260315_153157980_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

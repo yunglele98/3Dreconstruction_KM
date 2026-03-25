@@ -1,0 +1,299 @@
+{
+  "building_name": "196 Baldwin St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.9,
+    3.0
+  ],
+  "total_height_m": 6.97,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40147681,
+    "lat": 43.65480828,
+    "street": "Baldwin St",
+    "street_number": 196,
+    "setback_m": 3.0,
+    "lot_area_sqm": 125.6016434624689,
+    "footprint_sqm": 109.9,
+    "lot_coverage_pct": 87.5,
+    "lots_sharing_footprint": 8
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "chimney",
+    "front_gable"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "light blue painted upper facade over a black-painted commercial storefront",
+  "windows_per_floor": [
+    1,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 89,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Commercial",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "SEVEN SEAS FISH MARKET",
+    "business_category": "Art/Culture",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "boarded_up",
+    "structural_concern": false,
+    "risk_score": 50,
+    "signage": "Tom's Place (adjacent at 194); partial numbers visible",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 13.85,
+    "height_avg_m": 6.97,
+    "footprint_sqm": 109.9,
+    "gfa_sqm": 274.8,
+    "fsi": 2.19,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 5,
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "196 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260318_182708795_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260318_182708795_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "196 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "196 BALDWIN ST"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "vacant",
+    "width_m": 4.4,
+    "height_m": 5.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "light blue painted upper facade over a black-painted commercial storefront",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Ground floor is shuttered and heavily tagged; upper brickwork survives but reads neglected from the street.",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.2,
+    "window_arrangement": "asymmetric",
+    "window_details": "Main visible glazing is the shuttered storefront below with a small upper opening or glass-block light above.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Commercial opening sits within the shuttered black storefront assembly.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Minimal metal coping at the top of the facade.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 1,
+    "chimney_details": "Brick chimney visible toward the left roof edge of the attached row.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Steep roof form survives behind the altered storefront.",
+    "roof_type_observed": "Steep gabled roof behind a shallow storefront parapet",
+    "roof_features": [
+      "chimney",
+      "front_gable"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Closed storefront with roll-down shutter and black-painted fascia.",
+    "signage_observed": "No active storefront sign visible in this view.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Ground floor converted to commercial use with roll-down shutters; upper facade painted blue over original brick. Gabled roofline and chimney remain intact.",
+    "matches_hcd_typology": true,
+    "confidence": 0.74,
+    "notes": "HCD typology is House-form, Semi-detached. Despite commercial conversion and painted brick, the original house-form massing with gabled roof and chimney is clearly legible.",
+    "photo": "IMG_20260318_182708795_HDR.jpg",
+    "photo_datetime": "2026-03-18T18:27:08"
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "Closed storefront with roll-down shutter and black-painted fascia.",
+  "confidence": 0.8900000000000001,
+  "notes": "Photo captures only part of the frontage and roofline.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 1,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.5,
+          "sill_height_m": 1.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.8,
+          "sill_height_m": 2.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Two-storey facade with a cross-gable roof, approximately 5.2 m wide. Photo observation shows a light blue painted upper facade over a black-painted commercial storefront with roll-down shutter. The original brick has been painted over, obscuring the underlying masonry. The ground floor is shuttered and heavily tagged; the storefront is currently vacant. The pre-1889 house-form massing with gabled roof and brick chimney remains clearly legible despite the commercial conversion and painted exterior. Asymmetric window arrangement with one opening per floor and minimal metal coping at the roofline.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

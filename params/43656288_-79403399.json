@@ -1,0 +1,19 @@
+{
+  "building_name": "43.656288, -79.403399",
+  "skipped": true,
+  "skip_reason": "rear-lot and back-fence context",
+  "_meta": {
+    "address": "43.656288, -79.403399",
+    "photo": "IMG_20260320_175731310_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T18:25:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_175731310_HDR.jpg",
+      "IMG_20260320_175749210_HDR.jpg",
+      "IMG_20260320_175755321_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

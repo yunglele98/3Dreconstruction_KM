@@ -1,0 +1,20 @@
+{
+  "building_name": "299 Augusta Ave (Bikes on Wheels)",
+  "skipped": true,
+  "skip_reason": "duplicate address",
+  "_meta": {
+    "address": "299 Augusta Ave (Bikes on Wheels)",
+    "photo": "IMG_20260318_142215917_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_142215917_HDR.jpg",
+      "IMG_20260318_142417893_HDR.jpg",
+      "IMG_20260318_142420450_HDR.jpg",
+      "IMG_20260318_142431145_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

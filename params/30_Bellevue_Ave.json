@@ -1,0 +1,325 @@
+{
+  "building_name": "30 Bellevue Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    3.5,
+    3.2,
+    2.7
+  ],
+  "total_height_m": 9.64,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40354288999998,
+    "lat": 43.65379713,
+    "street": "Bellevue Ave",
+    "street_number": 30,
+    "setback_m": 3.0,
+    "lot_area_sqm": 400.0377933195961,
+    "footprint_sqm": 132.9,
+    "lot_coverage_pct": 33.2,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "decorative_bargeboard",
+    "gable_peak"
+  ],
+  "facade_material": "Brick",
+  "facade_colour": "red brick with white stone trim",
+  "windows_per_floor": [
+    3,
+    2,
+    1
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 101,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles, particularly Queen Anne Revival. Through its construction date and typology, the property is directly associated with the District\u2019s early residential develo",
+    "building_features": [
+      "bay_window",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 9.64,
+    "height_avg_m": 5.9,
+    "footprint_sqm": 132.9,
+    "gfa_sqm": 332.2,
+    "fsi": 0.83,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "30 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_160802868_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_160802868_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "30 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "30 BELLEVUE AVE"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Arched bay",
+    "floors": [
+      0
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "count": 2,
+    "details": "Large arched bay windows at ground level, one per semi-detached unit"
+  },
+  "photo_observations": {
+    "photo_file": "PXL_20260318_215943589.jpg",
+    "photo_quality": "excellent",
+    "windows_per_floor": [
+      3,
+      2,
+      1
+    ],
+    "window_type": "double_hung",
+    "window_arrangement": "symmetric",
+    "bay_windows": 2,
+    "bay_window_details": "Large arched bay windows at ground level, one per semi-detached unit",
+    "porch_present": true,
+    "porch_type": "open",
+    "porch_details": "Central covered porch with decorative wood brackets and columns",
+    "quoins": false,
+    "decorative_lintels": true,
+    "roof_type_observed": "Gable",
+    "roof_features": [
+      "decorative_bargeboard",
+      "gable_peak"
+    ],
+    "overall_style": "Victorian",
+    "has_storefront_observed": false,
+    "ground_floor_arches": "round arch heads on bay windows",
+    "cornice": "simple",
+    "chimneys": "none",
+    "pilasters": false,
+    "string_course": false,
+    "confidence": 0.9,
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T00:00:00-04:00",
+    "photo_source": "PXL_March_2026_Bellevue_fieldwork",
+    "lighting": "daytime"
+  },
+  "window_arrangement": "symmetric",
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 2,
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": true,
+  "overall_style": "Victorian",
+  "confidence": 0.9,
+  "porch_present": true,
+  "porch_type": "open",
+  "chimney_count": "none",
+  "ground_floor_arch_type": "round arch heads on bay windows",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "decorative_elements": {
+    "window_hoods": {
+      "present": true,
+      "arch_type": "flat",
+      "colour_hex": "#D4C9A8"
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 1,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles, particularly Queen Anne Revival. Through its construction date and typology, the property is directly associated with the District\u2019s early residential develo."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 2.5,
+          "sill_height_m": 2.0,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Detached Victorian house-form in red brick with white stone trim, featuring two large arched bay windows at ground level and a central covered porch with decorative wood brackets and columns. The gable roof has a decorative bargeboard at the peak. Window heads have round arched brick lintels. The building reads as a pre-1889 Queen Anne Revival composition and is in good condition.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles, particularly Queen Anne Revival. Through its construction date and typology, the property is directly associated with the District\u2019s early residential develo.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "flat",
+    "count": 3,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": []
+}

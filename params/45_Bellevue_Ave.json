@@ -1,0 +1,335 @@
+{
+  "building_name": "45 Bellevue Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.5,
+    3.5
+  ],
+  "total_height_m": 6.94,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40317272,
+    "lat": 43.65449419,
+    "street": "Bellevue Ave",
+    "street_number": 45,
+    "setback_m": 3.0,
+    "lot_area_sqm": 368.2859643072252,
+    "footprint_sqm": 32.5,
+    "lot_coverage_pct": 8.8,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "flat"
+  ],
+  "facade_material": "Vinyl siding",
+  "facade_colour": "beige/cream horizontal vinyl/aluminum siding; modern 3-storey appearance",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "casement",
+  "window_width_m": 0.9,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 111,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early",
+    "building_features": [
+      "original_windows",
+      "bay_window"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 30,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 14.18,
+    "height_avg_m": 6.94,
+    "footprint_sqm": 32.5,
+    "gfa_sqm": 81.2,
+    "fsi": 0.22,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "45 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_160430131_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_160430131_HDR.jpg",
+      "IMG_20260320_160435829_HDR.jpg",
+      "IMG_20260320_160445755_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "45 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "45 BELLEVUE AVE"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "photo_observations": {
+    "facade_colour_observed": "beige/cream horizontal vinyl/aluminum siding; modern 3-storey appearance",
+    "facade_material_observed": "vinyl_siding",
+    "facade_condition_notes": "Modern vinyl siding; 3 storeys; looks like modern infill or heavy renovation; construction barrier nearby",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      2
+    ],
+    "window_type": "casement",
+    "window_width_m": 0.9,
+    "window_height_m": 1.2,
+    "window_arrangement": "symmetric",
+    "window_details": "Modern casement or slider windows with dark frames",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Ground floor entry; partially obscured by construction barrier",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "Flat roofline; no cornice",
+    "bay_windows": 0,
+    "bay_window_details": "",
+    "balconies": 1,
+    "balcony_type": "juliet",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "",
+    "chimneys": 0,
+    "chimney_details": "Not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "None - modern appearance",
+    "roof_type_observed": "Flat",
+    "roof_features": [
+      "flat"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "Tierra construction banner at sidewalk",
+    "overall_style": "Mixed",
+    "alterations_visible": "Appears to be modern construction or complete renovation; no original Victorian features visible",
+    "matches_hcd_typology": false,
+    "confidence": 0.7,
+    "notes": "Does not match HCD bay-and-gable typology; appears modern infill or complete rebuild"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 1,
+  "balcony_type": "juliet",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Mixed",
+  "storefront_description": "",
+  "confidence": 0.8500000000000001,
+  "notes": "Does not match HCD bay-and-gable typology; appears modern infill or complete rebuild",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "balcony_detail": {
+    "type": "juliet",
+    "width_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 1
+  },
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, bay window, cornice.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 4.3,
+          "sill_height_m": 3.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.5,
+          "height_m": 0.6,
+          "sill_height_m": 1.0,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Row two-storey bay-and-gable in beige/cream horizontal vinyl/aluminum siding; modern 3-storey appearance under a cross-gable roof. Features include a double-height three-sided projecting bay and simple bargeboards. Appears to be modern construction or complete renovation; no original Victorian features visible. Pre-1889 construction.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

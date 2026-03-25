@@ -1,0 +1,17 @@
+{
+  "building_name": "160 Baldwin St (in front of)",
+  "skipped": true,
+  "skip_reason": "street object / planter in front of building, not a building facade",
+  "_meta": {
+    "address": "160 Baldwin St (in front of)",
+    "photo": "IMG_20260318_183843681_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_183843681_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

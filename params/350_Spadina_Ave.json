@@ -1,0 +1,319 @@
+{
+  "building_name": "350 Spadina Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    4.8,
+    4.9,
+    4.2
+  ],
+  "total_height_m": 13.91,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.3990272,
+    "lat": 43.65444157,
+    "street": "Spadina Ave",
+    "street_number": 350,
+    "setback_m": 0.5,
+    "lot_area_sqm": 147.0051410139375,
+    "footprint_sqm": 81.5,
+    "lot_coverage_pct": 55.4,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "dark brick upper storeys with yellow/red illuminated restaurant signage and red-painted pilaster at ground level",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [
+      "decorative_brick",
+      "cornice"
+    ],
+    "heritage_register": "Listed (Non-Designated)",
+    "protection_level": 2
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Pho Hung Vietnamese Restaurant",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "Pho Hung Vietnamese Restaurant; Minh Chau Jewellery & Watches bilingual signage in English and Chinese",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 13.91,
+    "height_avg_m": 11.49,
+    "footprint_sqm": 81.5,
+    "gfa_sqm": 244.5,
+    "fsi": 1.66,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "350 Spadina Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "photo": "IMG_20260316_005458268_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260316_005458268_HDR.jpg",
+      "IMG_20260316_005517701_HDR.jpg",
+      "IMG_20260316_005634158_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "350 Spadina Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "350 SPADINA AVE"
+    ]
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "pilasters": {
+      "present": true,
+      "width_mm": 180,
+      "projection_mm": 40,
+      "colour_hex": "#D4C9A8"
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    }
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 4.8,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "photo": [
+      "IMG_20260316_005458268_HDR.jpg",
+      "IMG_20260316_005517701_HDR.jpg"
+    ],
+    "photo_datetime": "2026-03-16T00:55:00",
+    "lighting": "nighttime",
+    "facade_colour_observed": "dark brick upper storeys with yellow/red illuminated restaurant signage and red-painted pilaster at ground level",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Active restaurant, well-lit signage. Red-painted structural column/pilaster at corner. Upper storeys barely visible in darkness but appear to be brick.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor: 2 large storefront windows with some visible interior fixtures. Upper floors barely visible in darkness.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 1.0,
+    "door_height_m": 2.4,
+    "door_details": "Main restaurant entrance at corner location",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "decorative",
+    "cornice_details": "Consistent with HCD building_features listing. Not clearly visible at night.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "none visible",
+    "quoins": false,
+    "pilasters": true,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Red-painted structural column/pilaster at corner. Projecting sign box on pole perpendicular to facade.",
+    "roof_type_observed": "flat (not visible from street)",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Corner restaurant with large storefront windows. Large illuminated yellow/red sign. Projecting pole sign (yellow, PHO HUNG) perpendicular to facade.",
+    "signage_observed": "PHO HUNG VIETNAMESE RESTAURANT / 350 SPADINA AVE / (416) 593-4274 / illuminated yellow/red sign. Projecting yellow pole sign: PHO HUNG.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Ground floor renovated for restaurant use. Red-painted pilaster at corner. Upper storeys retain original brick.",
+    "matches_hcd_typology": true,
+    "confidence": 0.6,
+    "notes": "Nighttime photos (2 images). Corner building at Spadina & St Andrew St. Restaurant active and well-lit. Upper storeys barely visible in darkness."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 1.0,
+  "door_height_m": 2.4,
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": true,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Corner restaurant with large storefront windows. Large illuminated yellow/red sign. Projecting pole sign (yellow, PHO HUNG) perpendicular to facade.",
+  "confidence": 0.7500000000000001,
+  "notes": "Nighttime photos (2 images). Corner building at Spadina & St Andrew St. Restaurant active and well-lit. Upper storeys barely visible in darkness.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 1.0,
+      "height_m": 2.4,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.7,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 0.5,
+  "facade_description": "350 Spadina Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, cornice.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

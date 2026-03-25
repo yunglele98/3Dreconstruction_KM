@@ -1,0 +1,29 @@
+{
+  "building_name": "84 Nassau St",
+  "skipped": true,
+  "skip_reason": "alternate Nassau angle already covered by the Nassau row files",
+  "_meta": {
+    "address": "84 Nassau St",
+    "photo": "IMG_20260320_155327565_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_155327565_HDR.jpg",
+      "IMG_20260320_155335427_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "photo_observations": {
+    "facade_material_observed": "brick",
+    "overall_style": "Victorian",
+    "notes": "Daytime photo from Nassau St walking pass.",
+    "confidence": 0.7,
+    "photo_date": "2026-03-20",
+    "photo_time_range": "3:48-3:57 PM",
+    "lighting": "daytime",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T01:00:00-04:00"
+  }
+}

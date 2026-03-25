@@ -1,0 +1,253 @@
+{
+  "building_name": "11 Carlyle St",
+  "floors": 2,
+  "facade_material": "Mixed masonry",
+  "facade_colour": "dark red-brown brick, unpainted natural patina",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "door_count": 1,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "fair",
+  "roof_type": "gable",
+  "roof_features": [
+    "dormer",
+    "rear_lane_access"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "dark red-brown brick, unpainted, natural patina with age darkening",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Brick in fair condition with visible weathering; some repointing needed at lower courses; colourful mural/graffiti art on ground-floor wall below porch; front hedge overgrown",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.8,
+    "window_height_m": 1.2,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor: 2 rectangular windows with dark frames. Second floor: 2 taller windows, one appears to be a replacement casement. Attic/gable: 1 small window in gable peak. Second-floor windows have stone or concrete lintels.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.85,
+    "door_height_m": 2.1,
+    "door_details": "Single entry door at ground level, partially obscured by vegetation. Number '11' visible on facade.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "No prominent cornice; simple eave line at gable",
+    "bay_windows": 0,
+    "balconies": 1,
+    "balcony_type": "projecting",
+    "balcony_details": "Green-painted metal balcony at second floor, full width of facade, with vertical metal railings and diagonal cross-bracing. Appears to be an addition, not original to the building.",
+    "porch_present": true,
+    "porch_type": "open",
+    "porch_details": "The green metal balcony at second floor doubles as a covered porch/entry canopy for the ground floor entrance. Metal posts support the structure. Front garden with dense boxwood hedge.",
+    "chimneys": 0,
+    "chimney_details": "None visible from street (may be on rear)",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": true,
+    "decorative_details": "Stone or concrete lintels above second-floor windows. Colourful street art/mural covers lower portion of facade. Simple brick detailing at gable.",
+    "roof_type_observed": "gable",
+    "roof_features": [
+      "chimney"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": null,
+    "signage_observed": "None (residential). Colourful mural/graffiti art on lower wall.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Green metal balcony/porch is a later addition (not original Victorian). Some replacement windows. Mural/graffiti art on lower facade. Front garden with mature hedge.",
+    "matches_hcd_typology": true,
+    "confidence": 0.8,
+    "notes": "2.5-storey Victorian house-form with steep gable. Red-brown brick, partially obscured by bare tree in March photo. Green metal projecting balcony at 2nd floor is the most distinctive feature. Front garden with dense hedge. Mural art on lower wall adds character. Party wall visible on right side."
+  },
+  "_meta": {
+    "address": "11 Carlyle St",
+    "photo": "IMG_20260320_161844339_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:05:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "dormer",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260320_161844339_HDR.jpg",
+      "IMG_20260320_161853023_HDR.jpg",
+      "IMG_20260320_171259426_HDR.jpg",
+      "IMG_20260320_171307501_HDR.jpg",
+      "IMG_20260320_171325196_HDR.jpg"
+    ],
+    "reference_photo_count": 6,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "11 Carlyle St",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "11 CARLYLE ST"
+    ]
+  },
+  "overall_style": "Victorian",
+  "notes": "2.5-storey Victorian house-form with steep gable. Distinctive green metal projecting balcony at 2nd floor. Front garden with dense hedge. Mural art on lower wall. Party wall on right.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "residential",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": true,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.8,
+          "height_m": 1.2,
+          "sill_height_m": 0.9,
+          "frame_colour": "#3A3A3A",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.8,
+          "height_m": 1.3,
+          "sill_height_m": 0.9,
+          "frame_colour": "#3A3A3A",
+          "glazing": "1-over-1",
+          "lintels": "stone or concrete"
+        }
+      ]
+    },
+    {
+      "floor": "Attic/Gable",
+      "windows": [
+        {
+          "count": 1,
+          "type": "fixed",
+          "width_m": 0.5,
+          "height_m": 0.6,
+          "sill_height_m": 0.5,
+          "frame_colour": "#3A3A3A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.9,
+  "balcony": {
+    "present": true,
+    "type": "projecting",
+    "floor": 2,
+    "width_m": 4.5,
+    "depth_m": 1.2,
+    "material": "metal",
+    "colour_hex": "#2A6B3A",
+    "railing_type": "vertical bars with cross-bracing",
+    "is_addition": true
+  },
+  "facade_description": "11 Carlyle St presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form typology. The facade reads primarily as mixed in a dark red-brown brick, unpainted natural patina palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "dormer": {
+    "present": true,
+    "type": "Gable dormer",
+    "count": 1,
+    "width_m": 1.0,
+    "height_m": 1.2,
+    "has_window": true
+  },
+  "volumes": [],
+  "total_height_m": 9.38,
+  "facade_width_m": 5.2,
+  "floor_heights_m": [
+    4.7,
+    4.7
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "roof_pitch_deg": 40,
+  "site": {
+    "lon": -79.40446901,
+    "lat": 43.65218399,
+    "street": "Carlyle St",
+    "street_number": 11
+  }
+}

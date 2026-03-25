@@ -1,0 +1,313 @@
+{
+  "building_name": "49 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40134664,
+    "lat": 43.65524709,
+    "street": "Nassau St",
+    "street_number": 49,
+    "setback_m": 3.0,
+    "lot_area_sqm": 230.8189337508837,
+    "footprint_sqm": 77.0,
+    "lot_coverage_pct": 33.4,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "red brick with turquoise-painted trim bands and white gable infill panels",
+  "windows_per_floor": [
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.4,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Commercial, Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889, 1914-1930",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 208,
+    "statement_of_contribution": "The property at 42 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure. The property at 44 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate ",
+    "building_features": [
+      "original_windows",
+      "bay_window"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 55,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 9.8,
+    "height_avg_m": 6.42,
+    "footprint_sqm": 77.0,
+    "gfa_sqm": 192.5,
+    "fsi": 0.83,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "49 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_175655294_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260318_175655294_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "49 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "49 NASSAU ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 9.8,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "photo_observations": {
+    "facade_colour_observed": "red brick with turquoise-painted trim bands and white gable infill panels",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Facade appears occupied but modestly maintained, with visible wear at the porch and stair elements and bins stored in the front yard.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.4,
+    "window_arrangement": "symmetric",
+    "window_details": "Large front windows with replacement frames sit below a front gable containing a pair of upper windows.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.0,
+    "door_details": "Main entry is recessed under a simple porch roof and approached by worn wood stairs.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "decorative",
+    "cornice_details": "Painted trim at the gable and porch edges provides modest ornament.",
+    "bay_windows": 1,
+    "bay_window_details": "Ground-floor bay form remains visible though simplified.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "open",
+    "porch_details": "Open porch with simple posts and a short run of timber steps.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Turquoise trim and a small decorative window echo the late-Victorian bay-and-gable pattern.",
+    "roof_type_observed": "Steep front gable",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "No signage visible.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Replacement windows, porch rebuilding, and bright painted trim modify the original house-form facade.",
+    "matches_hcd_typology": true,
+    "confidence": 0.76,
+    "notes": "Observed from a frontal view focused on the turquoise-trimmed house."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.0,
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Observed from a frontal view focused on the turquoise-trimmed house.",
+  "porch_present": true,
+  "porch_type": "open",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.0,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial, converted house-form, semi-detached typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include original windows, bay window, cornice.",
+    "heritage_summary": "The property at 44 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 42 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.6,
+          "sill_height_m": 2.0,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "decorative",
+      "height_mm": 350,
+      "projection_mm": 200,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Two-storey converted semi-detached house-form (pre-1889) in red brick with turquoise-painted trim and white gable infill panels. The facade features a projecting bay, open porch with timber steps, and decorative cornice. Condition is fair with visible replacement windows and overgrown front yard. Party walls on both sides; single dwelling unit.",
+  "heritage_summary": "The property at 44 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 42 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

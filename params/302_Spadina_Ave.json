@@ -1,0 +1,323 @@
+{
+  "building_name": "302 Spadina Ave",
+  "floors": 4,
+  "floor_heights_m": [
+    4.8,
+    4.8,
+    4.8,
+    4.8
+  ],
+  "total_height_m": 19.2,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.39859011,
+    "lat": 43.65334151,
+    "street": "Spadina Ave",
+    "street_number": 302,
+    "setback_m": 0.5,
+    "lot_area_sqm": 1489.947114467832,
+    "footprint_sqm": 299.3,
+    "lot_coverage_pct": 20.1,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "sign_band"
+  ],
+  "facade_material": "concrete",
+  "facade_colour": "white commercial facade with red 3D UCanada lettering, Chinese professional office signs above",
+  "windows_per_floor": [
+    1,
+    2,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.1,
+  "window_height_m": 1.6,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "No",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "UCanada Gifts (Unit G102); 10 additional commercial units incl. offices (KMCLT, 11 commercial spaces total)",
+    "business_category": "Retail/Shop",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "W & H.S Commercial Building / \u80e1\u90b5\u5546\u696d\u5927\u5ec8 large banner; UCANADA Gifts; multiple Chinese-language retail signs; Space for Lease",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 26.24,
+    "height_avg_m": 18.77,
+    "footprint_sqm": 299.3,
+    "gfa_sqm": 897.9,
+    "fsi": 0.6,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 11,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "photo_observations": {
+    "facade_colour_observed": "white commercial facade with red 3D UCanada lettering, Chinese professional office signs above",
+    "facade_material_observed": "concrete",
+    "facade_condition_notes": "ground-floor retail frontage appears active and well-maintained; upper office sign band is dense but orderly; well-lit at night with active businesses",
+    "condition": "good",
+    "windows_per_floor": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.1,
+    "window_height_m": 1.6,
+    "window_arrangement": "symmetric",
+    "window_details": "large glazed storefront below, office signage and smaller upper windows above",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 1.0,
+    "door_height_m": 2.2,
+    "door_details": "double-leaf glazed retail entry centered beneath the awning",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "flat storefront awning and sign band define the horizontal line",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "flush urban storefront",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "upper tenant-board and oversized retail letters dominate the facade",
+    "roof_type_observed": "flat roof",
+    "roof_features": [
+      "sign_band"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "gift shop storefront with large display window, centered glazed doors, security accordion grille (partially extended), white pillars/columns flanking entrance, large bear statue outside",
+    "signage_observed": "UCanada Gifts with large red 3D lettering, WWW.UCANADA.COM, moose mascot logo; 302 SUNWAY PROFESSIONAL BUILDING / DR. ANDREW SHEM + Chinese characters; multiple upper-floor office panels (medical, immigration services)",
+    "overall_style": "Commercial",
+    "alterations_visible": "modern storefront infill and tenant board system",
+    "matches_hcd_typology": false,
+    "confidence": 0.78,
+    "notes": "Night photo mainly captured the ground floor and tenant signage."
+  },
+  "_meta": {
+    "address": "302 Spadina Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260316_010333819_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T22:00:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "302 Spadina Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "302 SPADINA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 26.24,
+      "new_total_height_m": 19.2,
+      "floors": 4.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 5.1,
+    "status_source": "normalized_fix"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 1.0,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "gift shop storefront with large display window, centered glazed doors, security accordion grille (partially extended), white pillars/columns flanking entrance, large bear statue outside",
+  "confidence": 0.9,
+  "notes": "Night photo mainly captured the ground floor and tenant signage.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 1.0,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 4 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 1, 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.3,
+          "sill_height_m": 2.6,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.3,
+          "sill_height_m": 2.6,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.8,
+          "sill_height_m": 2.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.5,
+  "facade_description": "302 Spadina Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 4 storeys and is capped by a flat. The facade reads primarily as concrete in a white commercial facade with red 3d ucanada lettering, chinese professional office signs above palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

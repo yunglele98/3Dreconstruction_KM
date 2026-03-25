@@ -1,0 +1,315 @@
+{
+  "building_name": "128 Denison Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.5,
+    3.4
+  ],
+  "total_height_m": 6.73,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40260909,
+    "lat": 43.65215476,
+    "street": "Denison Ave",
+    "street_number": 128,
+    "setback_m": 3.0,
+    "lot_area_sqm": 208.4394739300645,
+    "footprint_sqm": 71.8,
+    "lot_coverage_pct": 34.4,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "red brick upper storey, white painted trim, wooden deck/fence additions at ground level",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.8,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 138,
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Semi-Detached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Local | Residential | Transition to Bellevue Park",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 40,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 15.04,
+    "height_avg_m": 6.73,
+    "footprint_sqm": 71.8,
+    "gfa_sqm": 179.5,
+    "fsi": 0.86,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "128 Denison Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo_agent": "claude-opus-4-6",
+    "photo_timestamp": "2026-03-24T21:20:41Z",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "bay_window",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_164727900_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_164727900_HDR.jpg",
+      "IMG_20260320_164736156_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "128 Denison Ave",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "128 DENISON AVE"
+    ]
+  },
+  "photo_observations": {
+    "facade_colour_observed": "red brick upper storey, white painted trim, wooden deck/fence additions at ground level",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Fair condition, wooden deck/fence additions appear newer but facade shows age, DB listed as wood_siding but upper storey is clearly brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_width_m": 0.8,
+    "window_height_m": 1.2,
+    "window_arrangement": "symmetric",
+    "window_details": "White-framed windows, second floor bay with multi-pane upper sash, round window in gable",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Entry behind wooden deck/fence structure, not clearly visible",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple eave with gable returns",
+    "bay_windows": 1,
+    "bay_window_details": "Second floor projecting bay with white frames, multi-pane upper sash suggesting original or heritage-style windows",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "open",
+    "porch_details": "Large wooden deck/platform added at front with cedar board fencing, obscuring ground floor",
+    "chimneys": 0,
+    "chimney_details": "Not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Round/oval window in gable peak, cross-gable form",
+    "roof_type_observed": "cross-gable",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "Colourful restaurant sign (yellow/green) visible on neighbouring building at ground level",
+    "overall_style": "Victorian",
+    "alterations_visible": "Large wooden deck/fence structure added at front obscuring ground floor, replacement windows on some openings",
+    "matches_hcd_typology": true,
+    "confidence": 0.7,
+    "notes": "Bay-and-gable semi-detached. DB lists facade_material as Wood_siding but upper storey is clearly original brick. Ground floor obscured by wooden deck additions. Number 128 visible on facade."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "",
+  "confidence": 0.9,
+  "notes": "Bay-and-gable semi-detached. DB lists facade_material as Wood_siding but upper storey is clearly original brick. Ground floor obscured by wooden deck additions. Number 128 visible on facade.",
+  "porch_present": true,
+  "porch_type": "open",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "bay_window": {
+    "present": true,
+    "count": 1,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 4.6,
+          "sill_height_m": 3.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "128 Denison Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

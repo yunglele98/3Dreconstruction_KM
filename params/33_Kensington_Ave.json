@@ -1,0 +1,216 @@
+{
+  "building_name": "33 Kensington Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.0,
+    2.3
+  ],
+  "total_height_m": 5.35,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39989584,
+    "lat": 43.65348617,
+    "street": "Kensington Ave",
+    "street_number": 27,
+    "setback_m": 3.0,
+    "lot_area_sqm": 202.8952634185434,
+    "footprint_sqm": 146.3,
+    "lot_coverage_pct": 72.1,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "buff/brown brick with dark gable trim",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form (27, & 33 Kensington Avenue) House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 197,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The properties at 27, 29, and 33 Kensington Avenue also have value for the modifications made to accommodate a commercial conversion through ground floor alterations, including a one- storey commercial addition at 33 Kensington Avenue. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified). 33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [
+      "decorative_brick",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Residential with Commercial Potential",
+    "commercial_use": "",
+    "business_name": "FLASHBACK",
+    "business_category": "Vintage/Thrift",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 30,
+    "signage": "Uncle Vintage Co; King of Kensington; Old & New",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 11.5,
+    "height_avg_m": 5.35,
+    "footprint_sqm": 146.3,
+    "gfa_sqm": 365.8,
+    "fsi": 1.8,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 4,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "33 Kensington Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "33 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "33 KENSINGTON AVE"
+    ]
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.0,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T00:00:00-04:00",
+    "photo_conditions": "Night photos (1:26-1:35 AM March 20, 2026)",
+    "source_photo": "IMG_20260320_012656551_HDR.jpg",
+    "photo_quality": "rotated",
+    "facade_colour_observed": "buff/brown brick with dark gable trim",
+    "facade_material_observed": "brick",
+    "condition_observed": "fair",
+    "has_storefront_observed": true,
+    "signage_observed": "UNCLE VINTAGE CO. QUALITY GARMENT",
+    "overall_style_observed": "Victorian",
+    "description": "2.5-storey Victorian bay-and-gable converted to commercial. Buff/brown brick with dark brown gable trim. UNCLE VINTAGE CO. QUALITY GARMENT illuminated sign. Large display window. Rose/flower mural on adjacent wall. Graffiti on lower wall.",
+    "confidence": 0.75
+  },
+  "confidence": 0.9,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
+    "heritage_summary": "33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified)."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.9,
+          "sill_height_m": 2.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "33 Kensington Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The properties at 27, 29, and 33 Kensington Avenue also have value for the modifications made to accommodate a commercial conversion through ground floor alterations, including a one- storey commercial addition at 33 Kensington Avenue. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified). 33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "heritage_summary": "33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified).",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

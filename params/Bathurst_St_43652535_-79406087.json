@@ -1,0 +1,17 @@
+{
+  "building_name": "Bathurst St 43.652535, -79.406087",
+  "skipped": true,
+  "skip_reason": "street context view with hospital complex, not a single unique facade",
+  "_meta": {
+    "address": "Bathurst St 43.652535, -79.406087",
+    "photo": "IMG_20260320_172209897_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_172209897_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

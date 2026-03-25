@@ -1,0 +1,306 @@
+{
+  "building_name": "335 College St (ASTRO / House of Vapes view)",
+  "floors": 3,
+  "facade_material": "Mixed masonry",
+  "facade_colour": "dark charcoal-black upper facade with white House of Vapes signage and a lower weathered white side building beside a fenced lot",
+  "windows_per_floor": [
+    0,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.2,
+  "window_height_m": 1.5,
+  "door_count": 2,
+  "door_type": "storefront",
+  "has_storefront": true,
+  "condition": "good",
+  "roof_type": "Flat roof with minor stepback",
+  "roof_pitch_deg": 2,
+  "roof_features": [
+    "stepback"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "dark charcoal-black upper facade with white House of Vapes signage and a lower weathered white side building beside a fenced lot",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "The main dark infill building appears recent and maintained, while the attached low side structure is more worn and graffiti-marked.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      3,
+      3,
+      3,
+      3
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.2,
+    "window_height_m": 1.5,
+    "window_arrangement": "regular",
+    "window_details": "Upper floors use stacked rectangular residential windows in a disciplined modern grid.",
+    "door_count": 2,
+    "door_type": "storefront",
+    "door_width_m": 1.0,
+    "door_height_m": 2.3,
+    "door_details": "One main glazed storefront entrance fronts the sidewalk, with a secondary door at the low adjoining structure.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "Flat modern roofline with simple stepback massing.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "Direct street frontage.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Visual impact comes from the stark dark facade and storefront branding rather than ornament.",
+    "roof_type_observed": "Flat roof with minor stepback",
+    "roof_features": [
+      "stepback"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "A narrow modern commercial frontage occupies the main bay, marked by bright House of Vapes signage, full-height glazing, and a secondary entry serving the lower adjoining side structure.",
+    "signage_observed": "House of Vapes and ASTRO signage are visible.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Recent infill-style upper building beside an older low side volume and adjacent lot conditions.",
+    "matches_hcd_typology": false,
+    "confidence": 0.77,
+    "notes": "The most legible night view is IMG_20260321_013410025_HDR.jpg."
+  },
+  "_meta": {
+    "address": "335 College St (ASTRO, house of vapes) view : 43.657624, -79.402228",
+    "photo": "IMG_20260321_013410025_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:20:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260321_013410025_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "335 College St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "335 COLLEGE ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 4.92,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "window_arrangement": "regular",
+  "door_width_m": 1.0,
+  "door_height_m": 2.3,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "A narrow modern commercial frontage occupies the main bay, marked by bright House of Vapes signage, full-height glazing, and a secondary entry serving the lower adjoining side structure.",
+  "confidence": 0.9,
+  "notes": "The most legible night view is IMG_20260321_013410025_HDR.jpg.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "left",
+      "width_m": 1.0,
+      "height_m": 2.3
+    },
+    {
+      "id": "door_1",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 1.0,
+      "height_m": 2.3
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 5.1,
+    "height_m": 2.6,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 3,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": "A narrow modern commercial frontage occupies the main bay, marked by bright House of Vapes signage, full-height glazing, and a secondary entry serving the lower adjoining side structure.",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat roof with minor stepback, consistent with its commercial typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 3, 3, 3, 3 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 5",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "335 College St (ASTRO / House of Vapes view) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat roof with minor stepback, consistent with its commercial typology. The frontage is defined primarily by mixed in a dark charcoal-black upper facade with white house of vapes signage and a lower weathered white side building beside a fenced lot palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 3, 3, 3, 3 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "total_height_m": 7.2,
+  "facade_width_m": 6.1,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "site": {
+    "lon": -79.40254204999998,
+    "lat": 43.65728388,
+    "street": "College St",
+    "street_number": 335
+  }
+}

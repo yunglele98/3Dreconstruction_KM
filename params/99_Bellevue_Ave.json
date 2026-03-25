@@ -1,0 +1,326 @@
+{
+  "building_name": "99 Bellevue Ave",
+  "floors": 4,
+  "floor_heights_m": [
+    3.7,
+    3.7,
+    3.7,
+    3.2
+  ],
+  "total_height_m": 14.19,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40390485999998,
+    "lat": 43.65669332,
+    "street": "Bellevue Ave",
+    "street_number": 99,
+    "setback_m": 3.0,
+    "lot_area_sqm": 1398.896915817342,
+    "footprint_sqm": 332.1,
+    "lot_coverage_pct": 23.7,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "dark red-brown brick with darker mortar joints",
+  "windows_per_floor": [
+    4,
+    4,
+    4,
+    2
+  ],
+  "window_type": "fixed",
+  "window_width_m": 1.2,
+  "window_height_m": 1.4,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1904-1913",
+    "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
+    "construction_period": "1988 (confirmed \u2013 Apt Bldg Registration)",
+    "construction_decade": 1980,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 127,
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
+    "building_features": [
+      "original_windows",
+      "decorative_brick"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Multi-Unit",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 14.19,
+    "height_avg_m": 10.78,
+    "footprint_sqm": 332.1,
+    "gfa_sqm": 1328.4,
+    "fsi": 0.95,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 24,
+    "residential_floors": "All floors (1\u20134)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "99 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo_agent": "claude-opus-4-6",
+    "photo_timestamp": "2026-03-24T21:27:58Z",
+    "photo_file": "IMG_20260320_154320400_HDR.jpg",
+    "photo_batch": 22,
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "photo": "IMG_20260320_154320400_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_154320400_HDR.jpg",
+      "IMG_20260320_154328015_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "99 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "99 BELLEVUE AVE"
+    ]
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark red-brown brick with darker mortar joints; mid-century modern apartment block",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Well-maintained mid-century apartment building. 'Now Leasing' banner visible. Black iron fence around property.",
+    "condition": "good",
+    "windows_per_floor": [
+      4,
+      4,
+      4,
+      2
+    ],
+    "window_type": "fixed",
+    "window_width_m": 1.2,
+    "window_height_m": 1.4,
+    "window_arrangement": "symmetric",
+    "window_details": "Regular grid of fixed/casement windows across 4 floors. Ground floor has ribbon windows. Upper floors have paired fixed windows.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Central entrance with walkway from sidewalk; modern entry door",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "No visible cornice; flat-roofed modern apartment block",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "none visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "none; modern apartment block with no decorative elements",
+    "roof_type_observed": "flat",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "Now Leasing banner flag. Call or Text sign with phone number.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Building is a modern apartment block (likely 1960s-80s infill), not a heritage building",
+    "matches_hcd_typology": false,
+    "confidence": 0.9,
+    "notes": "This is a mid-century apartment building (c. 1950s-1960s), not a Victorian house-form. The HCD typology of House-form, Semi-detached does not match the current building. matches_hcd correctly set to false.",
+    "photo": "IMG_20260320_154320400_HDR.jpg",
+    "photo_datetime": "2026-03-20T15:43:20",
+    "_batch_agent": "claude-opus-4-6-batch18-22",
+    "_batch_timestamp": "2026-03-25T02:07:04Z"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Modern 4-storey apartment building set back from street with front lawn and iron fence. Now Leasing sign visible.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a flat, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 4, 4, 4, 2 window bays from lower to upper levels, using fixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, decorative brick, cornice.",
+    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 1.7,
+          "sill_height_m": 1.1,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 1.7,
+          "sill_height_m": 1.3,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 1.7,
+          "sill_height_m": 1.3,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 2,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.1,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "facade_description": "Semi-detached 4-storey house-form in dark red-brown brick with darker mortar joints with a flat roof. Building is a modern apartment block (likely 1960s-80s infill), not a heritage building. Constructed 1904-1913.",
+  "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#2A2A2A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

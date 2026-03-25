@@ -1,0 +1,17 @@
+{
+  "building_name": "251-253 Augusta Ave (T Dot Caribbean / Pizzeria da Mario)",
+  "skipped": true,
+  "skip_reason": "duplicate combined storefront view; observations belong under 251_Augusta_Ave.json and 253_Augusta_Ave.json",
+  "_meta": {
+    "address": "251-253 Augusta Ave (T Dot Caribbean / Pizzeria da Mario)",
+    "photo": "PXL_20260318_220939436.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "PXL_20260318_220939436.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

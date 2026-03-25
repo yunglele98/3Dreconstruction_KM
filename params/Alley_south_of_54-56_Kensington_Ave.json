@@ -1,0 +1,17 @@
+{
+  "building_name": "Alley south of 54-56 Kensington Ave",
+  "skipped": true,
+  "skip_reason": "alley/lane",
+  "_meta": {
+    "address": "Alley south of 54-56 Kensington Ave",
+    "photo": "IMG_20260317_124549726_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260317_124549726_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

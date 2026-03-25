@@ -1,0 +1,209 @@
+{
+  "building_name": "54-56 Kensington Ave (Clothin by AIM / Brimz Hat Boutique)",
+  "floors": 3,
+  "floor_heights_m": [
+    4.5,
+    3.0,
+    3.0
+  ],
+  "total_height_m": 10.5,
+  "facade_width_m": 10.0,
+  "facade_depth_m": 20.0,
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick upper, colourful mural and commercial storefronts at ground",
+  "windows_per_floor": [
+    0,
+    4,
+    2
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.8,
+  "window_height_m": 1.2,
+  "door_count": 3,
+  "has_storefront": true,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "red-brown brick upper, colourful mural and commercial storefronts at ground",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      4,
+      2
+    ],
+    "has_storefront_observed": true,
+    "signage_observed": "Brimz, Acid Reign Productions, Kensington Hall",
+    "overall_style": "Commercial",
+    "confidence": 0.65,
+    "notes": "nighttime; three-storey commercial with multiple retail units"
+  },
+  "_meta": {
+    "address": "54-56 Kensington Ave",
+    "photo": "IMG_20260320_013027868_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "reference_photos": [
+      "IMG_20260320_013027868_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "candidate_range_anchor",
+    "db_address_full": "54 Kensington Ave",
+    "db_address_candidates": [
+      "54-56 KENSINGTON AVE",
+      "54 KENSINGTON AVE",
+      "55 KENSINGTON AVE",
+      "56 KENSINGTON AVE"
+    ],
+    "db_revision_ts": "2026-03-25T14:51:46"
+  },
+  "overall_style": "Commercial",
+  "confidence": 0.8000000000000002,
+  "notes": "nighttime; three-storey commercial with multiple retail units",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_2",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 8.5,
+    "height_m": 3.4,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 5,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 4 upper-window bays and 2 additional bays above, using double hung, and 3 principal entrances."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {},
+  "street_setback_m": 2.0,
+  "facade_description": "54-56 Kensington Ave (Clothin by AIM / Brimz Hat Boutique) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 2 additional bays above, using double hung, and 3 principal entrances.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "site": {
+    "lon": -79.40059626999998,
+    "lat": 43.65412037,
+    "street": "Kensington Ave",
+    "street_number": 54
+  }
+}

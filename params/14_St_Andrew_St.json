@@ -1,0 +1,259 @@
+{
+  "building_name": "14 St Andrew St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39964956999998,
+    "lat": 43.65440336,
+    "street": "St Andrew St",
+    "street_number": 14,
+    "setback_m": 0.0,
+    "lot_area_sqm": 269.3092792328014,
+    "footprint_sqm": 109.6,
+    "lot_coverage_pct": 40.7,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "white painted/clad ground floor storefront with dark glazed curtain wall above",
+  "windows_per_floor": [
+    3,
+    4
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Converted House-form, Detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property has evolved over time while retaining original building features including its side gabled roofline. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 368. 14 St. Andrew Street N/A 196 | FO :D 30 & 32 St. Andrew Street (R-L)",
+    "building_features": [],
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Genesis One | Tree's In The Six",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Two-way | 30 km/h | Wide roadway exceeds minimum | Short commercial node",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Parking lot 'P Entrance' green sign; small restaurant/food signage at ground floor (Ital/Jamaican food style); 'Treasure' partial signage",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 13.17,
+    "height_avg_m": 7.69,
+    "footprint_sqm": 109.6,
+    "gfa_sqm": 274.0,
+    "fsi": 1.02,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "14 St Andrew St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260316_005816798_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260316_005816798_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "14 St Andrew St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "14 ST ANDREW ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 13.17,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.3,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "batch": "batch_006",
+    "photo": "IMG_20260316_005816798_HDR.jpg",
+    "timestamp": "2026-03-16T00:58:16",
+    "lighting": "night",
+    "confidence": 0.65,
+    "facade_colour": "white painted/clad ground floor storefront with dark glazed curtain wall above",
+    "facade_material": "mixed (modern cladding and glass)",
+    "condition": "good",
+    "condition_notes": "recently renovated commercial building",
+    "windows_per_floor": [
+      3,
+      4
+    ],
+    "window_type": "mixed",
+    "window_notes": "storefront glazing at ground floor, modern curtain wall (floor-to-ceiling windows, black frames) at upper floor - appears to be recent renovation/addition",
+    "door_count": 2,
+    "door_notes": "main entry for Tree's In The Six + Genesis side entry, raised on 3-4 concrete steps",
+    "has_storefront": true,
+    "storefront_notes": "well-lit white storefront with large glazed windows and double entry doors",
+    "signage": "Tree's In The Six with cannabis leaf logos; Genesis signage on lower left",
+    "adjacent_features": "parking garage entrance with green 'P' sign to the left; adjacent to Anshei Minsk synagogue",
+    "notes": "2-storey building, ground floor cannabis shop. Upper floor has modern glazed curtain wall suggesting recent renovation/addition. Well-lit storefront contrasts with dark upper level."
+  },
+  "confidence": 0.9,
+  "notes": "2-storey building, ground floor cannabis shop. Upper floor has modern glazed curtain wall suggesting recent renovation/addition. Well-lit storefront contrasts with dark upper level.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 4 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_summary": "14 St. Andrew Street (R-L)."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.4,
+          "sill_height_m": 1.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.5,
+          "sill_height_m": 2.7,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "14 St Andrew St presents a converted house-form, detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed (modern cladding and glass) in a white painted/clad ground floor storefront with dark glazed curtain wall above palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 4 window bays from lower to upper levels, using mixed, and 2 principal entrances. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property has evolved over time while retaining original building features including its side gabled roofline. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 368. 14 St. Andrew Street N/A 196 | FO :D 30 & 32 St. Andrew Street (R-L)",
+  "heritage_summary": "14 St. Andrew Street (R-L).",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8E0D4",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

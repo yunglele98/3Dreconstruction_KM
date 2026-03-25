@@ -1,0 +1,270 @@
+{
+  "building_name": "79 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.5,
+    4.2
+  ],
+  "total_height_m": 8.35,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40294826999998,
+    "lat": 43.65493829,
+    "street": "Nassau St",
+    "street_number": 79,
+    "setback_m": 0.0,
+    "lot_area_sqm": 639.4312609650327,
+    "footprint_sqm": 36.5,
+    "lot_coverage_pct": 5.7,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "Facade largely obscured by Bristol rental trucks; green-painted upper trim visible; brown horizontal siding on patio enclosure",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889, 1914-1930",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 218,
+    "statement_of_contribution": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 190",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Bristol Car and Truck Rental Toronto",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Bristol Truck Rentals visible on trucks and signage in background",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 8.35,
+    "height_avg_m": 6.29,
+    "footprint_sqm": 36.5,
+    "gfa_sqm": 91.2,
+    "fsi": 0.14,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "79 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "79 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "79 NASSAU ST"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "Facade largely obscured by Bristol rental trucks; green-painted upper trim visible; brown horizontal siding on patio enclosure",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Building facade mostly hidden behind parked Bristol trucks and enclosed patio structure; green trim visible at upper level",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "Upper floor windows partially visible behind trees; ground floor entirely commercial/enclosed patio",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Not clearly visible; enclosed patio covers ground floor",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "Not visible",
+    "bay_windows": 0,
+    "bay_window_details": "",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "",
+    "chimneys": 0,
+    "chimney_details": "Not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "",
+    "roof_type_observed": "Not clearly visible",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Ground floor commercial with enclosed seasonal patio; Bristol Car and Truck Rental operates from this address",
+    "signage_observed": "Bristol Car and Truck Rentals branding on multiple rental trucks; bristoltruckrentals.com visible",
+    "overall_style": "Commercial",
+    "alterations_visible": "Enclosed patio structure at ground level; facade heavily obscured; commercial conversion evident",
+    "matches_hcd_typology": false,
+    "confidence": 0.5,
+    "notes": "Very limited visibility of actual building facade due to parked rental trucks and enclosed patio"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Ground floor commercial with enclosed seasonal patio; Bristol Car and Truck Rental operates from this address",
+  "confidence": 0.6500000000000001,
+  "notes": "Very limited visibility of actual building facade due to parked rental trucks and enclosed patio",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
+    "heritage_summary": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 190.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Converted semi-detached house-form with commercial ground floor, now operating as Bristol Car and Truck Rental. Cross-gable roof over two storeys with party walls on both sides. Facade largely obscured by parked rental trucks and an enclosed seasonal patio structure; green-painted upper trim and brown horizontal siding are partially visible. Limited confidence in facade details due to obstruction.",
+  "heritage_summary": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 190.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

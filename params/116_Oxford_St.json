@@ -1,0 +1,303 @@
+{
+  "building_name": "116 Oxford St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40580088999998,
+    "lat": 43.65561848,
+    "street": "Oxford St",
+    "street_number": 116,
+    "setback_m": 3.0,
+    "lot_area_sqm": 134.176361540864,
+    "footprint_sqm": 88.8,
+    "lot_coverage_pct": 66.2,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "picture_window"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick with dark charcoal-painted trim at the entry volume and eaves",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.45,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1914-1930",
+    "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 274,
+    "statement_of_contribution": "Each property has value as an early-twentieth-century vernacular-style House-form building. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the p",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Multi-Unit",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 25,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 10.28,
+    "height_avg_m": 6.31,
+    "footprint_sqm": 88.8,
+    "gfa_sqm": 222.0,
+    "fsi": 1.65,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 4,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "116 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260315_151417390_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260315_151417390_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "116 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "116 OXFORD ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.28,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "red-brown brick with dark charcoal-painted trim at the entry volume and eaves",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Solid brick duplex or semi-detached form appears maintained, though the front garden is overgrown and a mature tree obscures some upper facade details.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.45,
+    "window_arrangement": "asymmetric",
+    "window_details": "Combination of rectangular replacement windows and one larger modern picture window beside the entry bay.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "Modern single glazed entry door recessed within a dark-framed vestibule projection.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Plain soffit and fascia with no ornament.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "Short concrete stoop and straight run of steps to the front door.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible in the tree-obstructed front view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Minimal contemporary trim at the entry bay is the main visible alteration.",
+    "roof_type_observed": "Low gable roof",
+    "roof_features": [
+      "picture_window"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "House number 116 visible near the entry.",
+    "overall_style": "Vernacular",
+    "alterations_visible": "Replacement windows, rebuilt front entry surround, and landscape changes alter the original semi-detached facade.",
+    "matches_hcd_typology": true,
+    "confidence": 0.71,
+    "notes": "Front tree blocks part of the facade in IMG_20260315_151417390_HDR.jpg, but the current materials and opening pattern are still legible."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "single",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Vernacular",
+  "storefront_description": "",
+  "confidence": 0.9,
+  "notes": "Front tree blocks part of the facade in IMG_20260315_151417390_HDR.jpg, but the current materials and opening pattern are still legible.",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#4A4A4A",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a semi-detached pair, the p. Each property has value as an early-twentieth-century vernacular-style House-form building.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.7,
+          "sill_height_m": 2.1,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#4A4A4A",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "116 Oxford St presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as an early-twentieth-century vernacular-style House-form building. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the p",
+  "heritage_summary": "Constructed as a semi-detached pair, the p. Each property has value as an early-twentieth-century vernacular-style House-form building.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#4A4A4A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#4A4A4A",
+    "door_hex": "#4A4A4A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

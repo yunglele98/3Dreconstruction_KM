@@ -1,0 +1,19 @@
+{
+  "building_name": "Lane West Spadina South St Andrew",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Lane West Spadina South St Andrew",
+    "photo": "IMG_20260316_005904996_HDR.jpg",
+    "agent": "gemini-cli",
+    "timestamp": "2026-03-24T14:30:50.917564",
+    "reference_photos": [
+      "IMG_20260316_005904996_HDR.jpg",
+      "IMG_20260316_005910228_HDR.jpg",
+      "IMG_20260316_005937901_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

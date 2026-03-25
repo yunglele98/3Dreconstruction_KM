@@ -1,0 +1,17 @@
+{
+  "building_name": "1567 Dundas St W (event poster on utility box)",
+  "skipped": true,
+  "skip_reason": "poster on utility box, not a building facade",
+  "_meta": {
+    "address": "1567 Dundas St W (event poster on utility box)",
+    "photo": "IMG_20260315_153121380_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:40:00-04:00",
+    "reference_photos": [
+      "IMG_20260315_153121380_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

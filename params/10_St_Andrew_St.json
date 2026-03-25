@@ -1,0 +1,263 @@
+{
+  "building_name": "10 St Andrew St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39952646,
+    "lat": 43.65446361,
+    "street": "St Andrew St",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 491.6978551068368,
+    "footprint_sqm": 117.2,
+    "lot_coverage_pct": 23.8,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "towers",
+    "rose_window"
+  ],
+  "facade_material": "Brick",
+  "facade_colour": "dark brown-red brick with cream/light grey stone decorative trim and tracery",
+  "windows_per_floor": [
+    2,
+    4
+  ],
+  "window_type": "arched",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Institutional",
+    "construction_date": "1930",
+    "architectural_style": "Byzantine Revival",
+    "construction_period": "1922\u20131930",
+    "construction_decade": 1920,
+    "sub_area": "Market",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "The property has cultural heritage value for its direct association with the Jewish community in Kensington Market and the development of the District as a self contained neighbourhood. Constructed for the oldest Jewish congregation in the District, it was designed by Kaplan & Sprachman, a prolific architectural firm best known for designing movie theatres, as well as synagogues and buildings for the Jewish communities. With its intact built form, building features, and continued use as a place of worship, the property yields information that contributes to the understanding of the important role Toronto\u2019s Jewish community played in the evolution of Kensington Market. Constructed in the Byzantine Revival style, the property has retained many of its architectural details including brick cladding with decorative stonework, twin towers with double-height round arched windows, large entrance stairway, and double entrance with round arched transoms beneath a large round arched window. Completed in 1930, the property is one of only two remaining synagogues in the District.",
+    "building_features": [],
+    "heritage_register": "Part IV Designated (Individual) + Part V HCD",
+    "protection_level": 5
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Institutional",
+    "land_use": "Institutional \u2013 Religious",
+    "commercial_use": "Other Commercial",
+    "business_name": "Anshei Minsk",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Two-way | 30 km/h | Wide roadway exceeds minimum | Short commercial node",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 3: Jewish Market (1900\u20131950)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 15.86,
+    "height_avg_m": 10.34,
+    "footprint_sqm": 117.2,
+    "gfa_sqm": 293.0,
+    "fsi": 0.6,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": null,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "10 St Andrew St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260316_005804095_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260316_005804095_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "10 St Andrew St",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "10 ST ANDREW ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 15.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "batch": "batch_006",
+    "photo": "IMG_20260316_005804095_HDR.jpg",
+    "timestamp": "2026-03-16T00:58:04",
+    "lighting": "night",
+    "confidence": 0.85,
+    "facade_colour": "dark brown-red brick with cream/light grey stone decorative trim and tracery",
+    "facade_material": "brick with stone accents",
+    "condition": "fair",
+    "condition_notes": "heritage building showing age, one mid-level opening possibly boarded with orange/terracotta panel",
+    "windows_per_floor": [
+      2,
+      4
+    ],
+    "window_type": "arched",
+    "window_notes": "twin arched pairs at each level; large rose window (circular with quatrefoil/trefoil tracery) centered at upper level; two flanking towers with double-height round arched windows",
+    "door_count": 2,
+    "door_notes": "double entrance below, not fully visible in night photo",
+    "has_storefront": false,
+    "signage": "none visible",
+    "roof_features": [
+      "towers",
+      "rose_window"
+    ],
+    "decorative_elements": "stone string courses, decorative stone trim, central gable with decorative stonework, arched window group below rose window",
+    "fire_escape": true,
+    "fire_escape_notes": "black metal fire escape on right side",
+    "notes": "Byzantine Revival synagogue (Anshei Minsk). EXCELLENT night photo detail. Part IV Designated heritage building - extremely significant. Large rose window with tracery is key feature. Twin towers with paired round arched windows flank central gable. Orange/terracotta panel visible in center opening at mid-level (possibly painted board-up)."
+  },
+  "confidence": 0.9,
+  "notes": "Byzantine Revival synagogue (Anshei Minsk). EXCELLENT night photo detail. Part IV Designated heritage building - extremely significant. Large rose window with tracery is key feature. Twin towers with paired round arched windows flank central gable. Orange/terracotta panel visible in center opening at mid-level (possibly painted board-up).",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The principal elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its institutional typology.",
+    "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 2, 4 opening rhythm from lower to upper levels, using arched, and 2 principal entrances.",
+    "heritage_summary": "Constructed in the Byzantine Revival style, the property has retained many of its architectural details including brick cladding with decorative stonework, twin towers with double-height round arched windows, large entrance stairway, and double entrance with round arched transoms beneath a large round arched window. Constructed for the oldest Jewish congregation in the District, it was designed by Kaplan & Sprachman, a prolific architectural firm best known for designing movie theatres, as well as synagogues and buildings for the Jewish communities."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "arched",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "arched",
+          "width_m": 0.9,
+          "height_m": 5.0,
+          "sill_height_m": 3.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "10 St Andrew St presents an institutional facade within the Kensington Market HCD. The principal elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its institutional typology. The principal elevation is faced primarily in brick, laid in running bond with light grey mortar joints. The elevation is ordered in broad vertical bays, with a 2, 4 opening rhythm from lower to upper levels, using arched, and 2 principal entrances. HCD note: The property has cultural heritage value for its direct association with the Jewish community in Kensington Market and the development of the District as a self contained neighbourhood. Constructed for the oldest Jewish congregation in the District, it was designed by Kaplan & Sprachman, a prolific architectural firm best known for designing movie theatres, as well as synagogues and buildings for the Jewish communities. With its intact built form, building features, and continued use as a place of worship, the property yields information that contributes to the understanding of the important role Toronto\u2019s Jewish community played in the evolution of Kensington Market. Constructed in the Byzantine Revival style, the property has retained many of its architectural details including brick cladding with decorative stonework, twin towers with double-height round arched windows, large entrance stairway, and double entrance with round arched transoms beneath a large round arched window. Completed in 1930, the property is one of only two remaining synagogues in the District.",
+  "heritage_summary": "Constructed in the Byzantine Revival style, the property has retained many of its architectural details including brick cladding with decorative stonework, twin towers with double-height round arched windows, large entrance stairway, and double entrance with round arched transoms beneath a large round arched window. Constructed for the oldest Jewish congregation in the District, it was designed by Kaplan & Sprachman, a prolific architectural firm best known for designing movie theatres, as well as synagogues and buildings for the Jewish communities.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "segmental",
+    "count": 2,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "building_name": "Nassau St / Chinatown Mural Lane (43.655883, -79.400011)",
+  "skipped": true,
+  "skip_reason": "lane intersection and mural-covered rear elevations; not a discrete building facade",
+  "_meta": {
+    "address": "Nassau St / Chinatown Mural Lane (43.655883, -79.400011)",
+    "photo": "IMG_20260318_154302641_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "reference_photos": [
+      "IMG_20260318_154117164_HDR.jpg",
+      "IMG_20260318_154120085_HDR.jpg",
+      "IMG_20260318_154129980_HDR.jpg",
+      "IMG_20260318_154138891_HDR.jpg",
+      "IMG_20260318_154147441_HDR.jpg"
+    ],
+    "reference_photo_count": 13,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

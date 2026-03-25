@@ -1,0 +1,16 @@
+{
+  "building_name": "42 Kensington Ave (Butterfly)",
+  "skipped": true,
+  "skip_reason": "duplicate",
+  "_meta": {
+    "photo": "IMG_20260320_012917359_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T00:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_012917359_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

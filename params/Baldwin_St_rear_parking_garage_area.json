@@ -1,0 +1,17 @@
+{
+  "building_name": "Baldwin St rear parking / garage area",
+  "skipped": true,
+  "skip_reason": "rear parking and garage service area, not a street-facing building facade",
+  "_meta": {
+    "address": "Baldwin St rear parking / garage area",
+    "photo": "PXL_20260318_222426231.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "PXL_20260318_222426231.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

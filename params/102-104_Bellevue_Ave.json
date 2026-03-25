@@ -1,0 +1,16 @@
+{
+  "building_name": "102-104 Bellevue Ave",
+  "skipped": true,
+  "skip_reason": "duplicate — range",
+  "_meta": {
+    "photo": "IMG_20260320_154505429_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T00:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_154505429_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

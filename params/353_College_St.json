@@ -1,0 +1,185 @@
+{
+  "building_name": "353 College St",
+  "floors": 1,
+  "floor_heights_m": [
+    4.8
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.40346168,
+    "lat": 43.65707649,
+    "street": "College St",
+    "street_number": 353,
+    "setback_m": 0.5,
+    "lot_area_sqm": 161.4047077781159,
+    "footprint_sqm": 20.9,
+    "lot_coverage_pct": 12.9,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "N/A - vacant lot",
+  "windows_per_floor": [
+    0
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "vacant_lot",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Hive",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 50,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 11.77,
+    "height_avg_m": 8.14,
+    "footprint_sqm": 20.9,
+    "gfa_sqm": 62.7,
+    "fsi": 0.39,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "353 College St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "353 College St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "353 COLLEGE ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.77,
+      "new_total_height_m": 4.8,
+      "floors": 1.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "vacant",
+    "width_m": 5.2,
+    "height_m": 11.8,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "N/A - vacant lot",
+    "facade_material_observed": "N/A - vacant lot",
+    "facade_condition_notes": "Vacant lot / demolition site. Green construction fence with graffiti surrounds the lot. Rubble and snow visible inside. No building structure remains.",
+    "condition": "demolished/vacant",
+    "is_vacant_lot": true,
+    "has_storefront_observed": false,
+    "signage_observed": "none",
+    "overall_style": "N/A - vacant lot",
+    "alterations_visible": "complete demolition",
+    "matches_hcd_typology": false,
+    "confidence": 0.95,
+    "photo_date": "2026-03-18",
+    "photo_time": "~14:16",
+    "weather": "light snow",
+    "notes": "Batch 009 daytime photo confirms this is a vacant lot between buildings, not a standing structure. Green construction fence, graffiti, rubble/snow. No building to model."
+  },
+  "overall_style": "N/A - vacant lot",
+  "confidence": 0.9,
+  "notes": "Batch 009 daytime photo confirms this is a vacant lot between buildings, not a standing structure. Green construction fence, graffiti, rubble/snow. No building to model.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [],
+  "decorative_elements": {},
+  "street_setback_m": 0.5,
+  "facade_description": "353 College St presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat. The facade reads primarily as n/a - vacant lot, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

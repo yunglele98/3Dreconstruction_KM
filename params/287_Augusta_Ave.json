@@ -1,0 +1,237 @@
+{
+  "building_name": "287 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40245541,
+    "lat": 43.65627461,
+    "street": "Augusta Ave",
+    "street_number": 287,
+    "setback_m": 0.0,
+    "lot_area_sqm": 231.0822859591904,
+    "footprint_sqm": 91.6,
+    "lot_coverage_pct": 39.6,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "mural_front"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "yellow brick with cyan neon signage, graffiti-covered green shutters",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "storefront (behind shutters)",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 69,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Wanda's Pie in the Sky",
+    "business_category": "Art/Culture",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "damaged_masonry",
+    "structural_concern": false,
+    "risk_score": 60,
+    "signage": "Mr. T (partial); small handwritten signs; graffiti tags on lower facade",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 11.13,
+    "height_avg_m": 7.38,
+    "footprint_sqm": 91.6,
+    "gfa_sqm": 229.0,
+    "fsi": 0.99,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "287 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "287 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "287 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.13,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.0,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "yellow brick with cyan neon signage, graffiti-covered green shutters",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "storefront (behind shutters)",
+    "door_count": 1,
+    "door_type": "storefront",
+    "has_storefront_observed": true,
+    "storefront_description": "Wanda's Pie in the Sky bakery \u2014 closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
+    "signage_observed": "Cyan/turquoise neon sign 'Wanda's Pie in the Sky' in cursive script above shutters; 'WANDA' tag on right shutter; heavy black graffiti bubble letters on both shutters",
+    "overall_style": "Commercial",
+    "alterations_visible": "Security shutters with extensive graffiti, cyan neon sign addition, green awning",
+    "confidence": 0.8,
+    "notes": "Nighttime photo (1:45am), bakery closed with shutters down. Batch_008 re-observation confirms previous analysis with additional detail on shutter graffiti and neon signage colour (cyan/turquoise, not teal). | [batch_010] Five daytime photos provide the clearest view yet of this corner building. Front and Oxford side both visible. Supplements batch_007 and batch_008 nighttime observations.",
+    "_meta": {
+      "photo": "IMG_20260316_014517214_HDR.jpg",
+      "agent": "claude-opus-4-6",
+      "batch": "batch_008",
+      "timestamp": "2026-03-24T23:00:00-04:00"
+    }
+  },
+  "door_type": "storefront",
+  "overall_style": "Commercial",
+  "storefront_description": "Wanda's Pie in the Sky bakery \u2014 closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
+  "confidence": 0.9,
+  "notes": "Nighttime photo (1:45am), bakery closed with shutters down. Batch_008 re-observation confirms previous analysis with additional detail on shutter graffiti and neon signage colour (cyan/turquoise, not teal).",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using storefront (behind shutters), and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "storefront (behind shutters)",
+          "width_m": 0.9,
+          "height_m": 2.8,
+          "sill_height_m": 2.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "287 Augusta Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using storefront (behind shutters), and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "32-38 Kensington Ave (Space Vintage)",
+  "skipped": true,
+  "skip_reason": "duplicate combined streetscape view; observations belong under 32_Kensington_Ave.json, 34_Kensington_Ave.json, 36_Kensington_Ave.json, and 38_Kensington_Ave.json",
+  "_meta": {
+    "address": "32-38 Kensington Ave (Space Vintage)",
+    "photo": "IMG_20260320_012841865_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_012841865_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

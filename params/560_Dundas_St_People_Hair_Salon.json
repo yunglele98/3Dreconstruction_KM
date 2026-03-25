@@ -1,0 +1,18 @@
+{
+  "building_name": "560 Dundas St (People Hair Salon)",
+  "skipped": true,
+  "skip_reason": "duplicate business-name variant of an already-covered address",
+  "_meta": {
+    "address": "560 Dundas St (People Hair Salon)",
+    "photo": "IMG_20260320_213559168_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:50:45-04:00",
+    "reference_photos": [
+      "IMG_20260320_213559168_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "canonical_params_file": "560_Dundas_St_W.json"
+}

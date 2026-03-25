@@ -1,0 +1,17 @@
+{
+  "building_name": "Bus stop 16454 (Bathurst St at Nassau St - Toronto Western Hospital)",
+  "skipped": true,
+  "skip_reason": "bus stop and street context, not a building facade",
+  "_meta": {
+    "address": "Bus stop 16454 (Bathurst St at Nassau St - Toronto Western Hospital)",
+    "photo": "IMG_20260320_172804515_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_172804515_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

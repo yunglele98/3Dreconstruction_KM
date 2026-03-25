@@ -1,0 +1,17 @@
+{
+  "building_name": "Toronto Western Hospital (new building) 43.653756, -79.406569",
+  "skipped": true,
+  "skip_reason": "active construction site with incomplete facade",
+  "_meta": {
+    "address": "Toronto Western Hospital (new building) 43.653756, -79.406569",
+    "photo": "IMG_20260320_172453271_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_172453271_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "building_name": "Garages with graffiti, alley",
+  "skipped": true,
+  "skip_reason": "alley garage sequence, not principal building facades",
+  "_meta": {
+    "address": "Garages with graffiti, alley",
+    "photo": "IMG_20260315_151745774_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:18:30-04:00",
+    "reference_photos": [
+      "IMG_20260315_151745774_HDR.jpg",
+      "IMG_20260315_151752760_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

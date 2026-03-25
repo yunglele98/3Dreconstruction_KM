@@ -1,0 +1,17 @@
+{
+  "building_name": "Bellevue Square Park - north view on Denison Square",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Bellevue Square Park - north view on Denison Square",
+    "photo": "IMG_20260315_154030416_HDR.jpg",
+    "agent": "Gemini-CLI",
+    "timestamp": "2026-03-15T15:40:30Z",
+    "reference_photos": [
+      "IMG_20260315_154030416_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

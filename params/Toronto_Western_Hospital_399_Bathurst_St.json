@@ -1,0 +1,21 @@
+{
+  "building_name": "Toronto Western Hospital, 399 Bathurst St",
+  "skipped": true,
+  "skip_reason": "duplicate alias of the already-recorded Toronto Western Hospital",
+  "_meta": {
+    "address": "Toronto Western Hospital, 399 Bathurst St",
+    "photo": "IMG_20260320_161521277_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_161521277_HDR.jpg",
+      "IMG_20260320_161527689_HDR.jpg",
+      "IMG_20260320_161538803_HDR.jpg",
+      "IMG_20260320_161547741_HDR.jpg",
+      "IMG_20260320_161602175_HDR.jpg"
+    ],
+    "reference_photo_count": 10,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

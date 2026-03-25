@@ -1,0 +1,297 @@
+{
+  "building_name": "192 Baldwin St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.9,
+    3.0
+  ],
+  "total_height_m": 6.97,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40135132999998,
+    "lat": 43.65483336,
+    "street": "Baldwin St",
+    "street_number": 186,
+    "setback_m": 3.0,
+    "lot_area_sqm": 121.1804079546673,
+    "footprint_sqm": 109.9,
+    "lot_coverage_pct": 90.7,
+    "lots_sharing_footprint": 8
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "chimney",
+    "front_gable"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "red brick upper wall with dark-painted shuttered storefront below",
+  "windows_per_floor": [
+    1,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 58,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [
+      "decorative_brick"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Commercial",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "damaged_masonry",
+    "structural_concern": false,
+    "risk_score": 70,
+    "signage": "Tom's Place",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 13.85,
+    "height_avg_m": 6.97,
+    "footprint_sqm": 109.9,
+    "gfa_sqm": 274.8,
+    "fsi": 2.27,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 5,
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "192 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "photo": "IMG_20260318_182742801_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260318_182742801_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "192 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "192 BALDWIN ST"
+    ]
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "red brick upper wall with dark-painted shuttered storefront below",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Facade is closed and graffiti-covered at grade, limiting visibility of finer storefront details.",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.2,
+    "window_arrangement": "asymmetric",
+    "window_details": "One main storefront opening below and a small high-level upper opening in the brick wall.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Entry is part of the shuttered commercial frontage.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple storefront fascia and roof coping only.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 1,
+    "chimney_details": "At least one chimney is visible on the attached roofline.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": true,
+    "decorative_details": "Polychrome brick detailing and shared gable visible above storefront. Brick voussoirs over upper windows.",
+    "roof_type_observed": "Steep gabled commercial rowhouse roof",
+    "roof_features": [
+      "chimney",
+      "front_gable"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Closed black-painted storefront with roll-down shutter and graffiti.",
+    "signage_observed": "No clear active sign visible on this bay.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Ground floor commercial conversion with shuttered storefront, but upper brick facade with shared gable roofline and polychrome brick detailing intact, consistent with HCD-described converted house-form.",
+    "matches_hcd_typology": true,
+    "confidence": 0.76,
+    "notes": "HCD typology is Converted House-form, Row -- the commercial ground floor IS the expected condition. Shared gables, polychrome brick detailing, and second storey window openings remain visible above the storefront.",
+    "photo": "IMG_20260318_182742801_HDR.jpg",
+    "photo_datetime": "2026-03-18T18:27:42"
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": true,
+  "overall_style": "Victorian",
+  "storefront_description": "Closed black-painted storefront with roll-down shutter and graffiti.",
+  "confidence": 0.9,
+  "notes": "View is partial and taken while moving along the same commercial row.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 1,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, cornice.",
+    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.5,
+          "sill_height_m": 1.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 3.8,
+          "sill_height_m": 2.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "facade_description": "Two-storey red brick facade with a flat roof, approximately 5.2 m wide. Part of a pre-1889 converted house-form row (188-194 Baldwin St) that shares gables, polychrome brick detailing, and second-storey window openings. Photo observation confirms a closed, black-painted storefront with roll-down shutter and graffiti at grade, while the upper facade retains brick voussoirs over windows and a steep gabled roofline behind the parapet. Asymmetric window arrangement with one opening per floor. The facade is in fair condition with damaged masonry noted. The shared gables and polychrome brickwork above the storefront are the clearest surviving heritage features.",
+  "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

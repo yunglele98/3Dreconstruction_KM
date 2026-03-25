@@ -1,0 +1,21 @@
+{
+  "building_name": "Hickory St details",
+  "skipped": true,
+  "skip_reason": "close-up detail shot, not a building facade",
+  "_meta": {
+    "address": "Hickory St details",
+    "photo": "IMG_20260320_165746344_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:10:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_165601060_HDR.jpg",
+      "IMG_20260320_165606671_HDR.jpg",
+      "IMG_20260320_165622413.jpg",
+      "IMG_20260320_165628316.jpg",
+      "IMG_20260320_165639359_HDR.jpg"
+    ],
+    "reference_photo_count": 13,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

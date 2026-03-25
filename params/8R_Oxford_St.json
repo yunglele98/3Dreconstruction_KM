@@ -1,0 +1,191 @@
+{
+  "building_name": "8R Oxford St",
+  "floors": 1,
+  "floor_heights_m": [
+    4.8
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40059990999998,
+    "lat": 43.65703538,
+    "street": "Oxford St",
+    "street_number": 8,
+    "setback_m": 3.0,
+    "lot_area_sqm": 245.2317897578045,
+    "footprint_sqm": 88.4,
+    "lot_coverage_pct": 36.0,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Contemporary Laneway / Infill",
+    "construction_period": "Post-1989 (Contemporary)",
+    "construction_decade": 2000,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Part V HCD Likely Contributing",
+    "protection_level": 3
+  },
+  "context": {
+    "building_type": "vacant_lot",
+    "general_use": "Mixed Use",
+    "land_use": "Residential \u2013 Laneway / Secondary Suite",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 6: Heritage & Infill (1990\u2013present)"
+  },
+  "assessment": {
+    "condition_rating": 1,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 55,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 11.8,
+    "height_avg_m": 9.17,
+    "footprint_sqm": 88.4,
+    "gfa_sqm": 176.8,
+    "fsi": 0.72,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "8R Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "8R Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "8R OXFORD ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.8,
+      "new_total_height_m": 4.8,
+      "floors": 1.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable.",
+    "opening_rhythm": "The visible opening pattern is organized as 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 5.3,
+          "sill_height_m": 3.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "8R Oxford St presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable. The facade reads primarily as other, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "building_name": "189A Baldwin St",
+  "floors": 3,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 7.2,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40112361,
+    "lat": 43.65434244,
+    "street": "Baldwin St",
+    "street_number": 189,
+    "setback_m": 3.0,
+    "lot_area_sqm": 318.1515138288993,
+    "footprint_sqm": 81.0,
+    "lot_coverage_pct": 25.5,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    0,
+    2,
+    1
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [
+      "original_windows",
+      "decorative_brick"
+    ],
+    "heritage_register": "Part V HCD Likely Contributing",
+    "protection_level": 3
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Commercial",
+    "land_use": "Residential – Multi-Unit",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "missing_elements",
+    "structural_concern": false,
+    "risk_score": 35,
+    "signage": "Sea King's Restaurant",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 10.56,
+    "height_avg_m": 3.44,
+    "footprint_sqm": 81.0,
+    "gfa_sqm": 202.5,
+    "fsi": 0.64,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 4,
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "189A Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "189A Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "189A BALDWIN ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:52:01",
+      "old_total_height_m": 3.44,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, decorative brick.",
+    "heritage_summary": "The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "Three-storey brick facade with a gable roof, approximately 5.2 m wide. A commercial ground-floor storefront occupies the base, with two 1-over-1 double-hung sash windows at the second floor and one at the third. Decorative brickwork in running bond with light grey mortar is visible on the upper storeys. The building shares its pre-1889 origins and cross-gabled roofline with the adjacent 189 Baldwin St, retaining a double-height projecting bay above the ground floor. Party wall on the left side only. No direct photo observation is available; description is based on database and HCD records.",
+  "heritage_summary": "The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

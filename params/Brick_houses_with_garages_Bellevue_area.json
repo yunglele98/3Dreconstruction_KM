@@ -1,0 +1,17 @@
+{
+  "building_name": "Brick houses with garages, Bellevue area",
+  "skipped": true,
+  "skip_reason": "streetscape view with multiple buildings and no single unique address",
+  "_meta": {
+    "address": "Brick houses with garages, Bellevue area",
+    "photo": "IMG_20260315_153027271_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:40:00-04:00",
+    "reference_photos": [
+      "IMG_20260315_153027271_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "building_name": "686 Dundas St W",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.5,
+  "facade_depth_m": 10.0,
+  "site": {
+    "lon": -79.40409605,
+    "lat": 43.65198314,
+    "street": "Dundas St W",
+    "street_number": 686,
+    "setback_m": 0.0,
+    "lot_area_sqm": 93.4852730366501,
+    "footprint_sqm": 68.425,
+    "lot_coverage_pct": 73.2,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "N/A \u2013 Open Space",
+    "construction_period": "",
+    "construction_decade": null,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Open Space",
+    "land_use": "Open Space / Green Space",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": ""
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Saigon Lotus (large blue and white banner); Saigon Lotus (green awning and ground signage); Ka.C (adjacent unit)",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 11.83,
+    "height_avg_m": 8.27,
+    "footprint_sqm": 68.425,
+    "gfa_sqm": null,
+    "fsi": null,
+    "lot_width_ft": null,
+    "lot_depth_ft": null,
+    "dwelling_units": null,
+    "residential_floors": "",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "686 Dundas St W",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "686 Dundas St W",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "686 DUNDAS ST W"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.83,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.7,
+    "height_m": 5.1,
+    "status_source": "normalized_fix"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.5 metres across 2 storeys and is capped by a gable.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 3.0,
+          "sill_height_m": 2.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 0.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "686 Dundas St W presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 5.5 metres across 2 storeys and is capped by a gable. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

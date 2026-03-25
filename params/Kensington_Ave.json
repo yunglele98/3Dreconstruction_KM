@@ -1,0 +1,17 @@
+{
+  "building_name": "Kensington Ave",
+  "skipped": true,
+  "skip_reason": "street-level view without specific address, shows Lost Generation Vintage shopfront with heavy graffiti mural",
+  "_meta": {
+    "address": "Kensington Ave",
+    "photo": "IMG_20260320_012951226_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "reference_photos": [
+      "IMG_20260320_012951226_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "Rooftop view, Kensington backyards",
+  "skipped": true,
+  "skip_reason": "backyard and rooftop panorama, not a single building facade",
+  "_meta": {
+    "address": "Rooftop view, Kensington backyards",
+    "photo": "IMG_20260315_152346042_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:18:30-04:00",
+    "reference_photos": [
+      "IMG_20260315_152346042_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

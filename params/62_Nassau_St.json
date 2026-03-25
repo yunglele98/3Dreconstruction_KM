@@ -1,0 +1,281 @@
+{
+  "building_name": "62 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    2.4,
+    2.4
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40203205,
+    "lat": 43.65539771,
+    "street": "Nassau St",
+    "street_number": null,
+    "setback_m": 0.0,
+    "lot_area_sqm": 130.4900924717942,
+    "footprint_sqm": 26.0,
+    "lot_coverage_pct": 19.9,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "chimney"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "white-painted brick with black-framed front window, warm wood planters, and a white fabric patio tent enclosure",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "fixed",
+  "window_width_m": 2.4,
+  "window_height_m": 2.2,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1880\u20131920",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 28,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 27. 256 Augusta Avenue N/A 29. 258 Augusta Avenue N/A 32 DCH | FO :D 257 Augusta Avenue 257 AUGUSTA AVENUE",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Pera Cafe",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 8.1,
+    "height_avg_m": 3.3,
+    "footprint_sqm": 26.0,
+    "gfa_sqm": 65.0,
+    "fsi": 0.5,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "62 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_180556153_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "62 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "62 NASSAU ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 3.3,
+      "new_total_height_m": 4.8,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "white-painted brick with black-framed front window, warm wood planters, and a white fabric patio tent enclosure",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Cafe frontage appears active and maintained, though the large temporary patio tent obscures much of the building and carries graffiti on the enclosure panels.",
+    "condition": "fair",
+    "windows_per_floor": [
+      1
+    ],
+    "window_type": "fixed",
+    "window_width_m": 2.4,
+    "window_height_m": 2.2,
+    "window_arrangement": "asymmetric",
+    "window_details": "One large front display window dominates the visible facade; the rest is obscured by the patio structure.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Primary entry sits near the left side of the facade beside the large display window.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Flat low parapet or roof edge with minimal trim.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; temporary patio enclosure projects into the front yard setback.",
+    "chimneys": 1,
+    "chimney_details": "One brick chimney is visible on the roofline behind the white cafe block.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Minimal decoration aside from planters and the seasonal cafe tent.",
+    "roof_type_observed": "Flat low roof with rear chimney",
+    "roof_features": [
+      "chimney"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Small white cafe frontage with one large display window and a large seasonal patio tent occupying most of the frontage.",
+    "signage_observed": "Building number 62 and cafe logo visible on the front window.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Simple commercial block with modern storefront glazing and a temporary patio enclosure.",
+    "matches_hcd_typology": false,
+    "confidence": 0.78,
+    "notes": "Best wider view is the white cafe with the tent patio and string lights."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Small white cafe frontage with one large display window and a large seasonal patio tent occupying most of the frontage.",
+  "confidence": 0.9,
+  "notes": "Best wider view is the white cafe with the tent patio and string lights.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 1,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1 window bays from lower to upper levels, using fixed, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. 256 Augusta Avenue N/A 29.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "fixed",
+          "width_m": 0.9,
+          "height_m": 1.7,
+          "sill_height_m": 1.1,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Converted semi-detached house-form (pre-1889) operating as Pera Cafe. White-painted brick with a large fixed display window and commercial storefront door at ground level. Two storeys under a cross-gable with a rooftop chimney visible. Zero setback; a seasonal patio tent occupies most of the frontage. Party walls on both sides; 1 dwelling unit above commercial.",
+  "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. 256 Augusta Avenue N/A 29.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8E0D4",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

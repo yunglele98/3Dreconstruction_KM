@@ -1,0 +1,200 @@
+{
+  "building_name": "147 Baldwin St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.399473,
+    "lat": 43.65490551,
+    "street": "Baldwin St",
+    "street_number": 147,
+    "setback_m": 0.0,
+    "lot_area_sqm": 81.06191235203201,
+    "footprint_sqm": 74.0,
+    "lot_coverage_pct": 91.3,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "varied brick and stone",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "1904-1913",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1900,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 41,
+    "statement_of_contribution": "Each property has value an early-twentieth-century vernacular-style House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a semi-detached pair, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline and segmentally arched window openings at the second storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Crack Burger Toronto",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 13.35,
+    "height_avg_m": 7.78,
+    "footprint_sqm": 74.0,
+    "gfa_sqm": 185.0,
+    "fsi": 2.28,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "147 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "147 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "147 BALDWIN ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 13.35,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.4,
+    "status_source": "normalized_fix"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a semi-detached pair, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline and segmentally arched window openings at the second storey. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 3.6,
+          "sill_height_m": 2.8,
+          "frame_colour": "#2A2A2A",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#2A2A2A",
+      "style": "simple"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 0.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "Two-storey early-twentieth-century converted semi-detached house-form with a 5.2-metre mixed-material frontage and gable roof. Built 1904-1913 as a pair with 149 Baldwin, the two share a roofline and retain segmentally arched second-storey window openings. The ground floor has been converted to commercial use (Crack Burger Toronto) with a storefront insertion. Two double-hung sash windows on the upper storey. No direct photo observations are available; description based on database records.",
+  "heritage_summary": "Constructed as a semi-detached pair, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline and segmentally arched window openings at the second storey. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#2A2A2A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

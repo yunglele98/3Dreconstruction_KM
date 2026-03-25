@@ -1,0 +1,248 @@
+{
+  "building_name": "63 Oxford St",
+  "floors": 1,
+  "floor_heights_m": [
+    4.8
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.5,
+  "facade_depth_m": 10.0,
+  "site": {
+    "lon": -79.40202446,
+    "lat": 43.65607665,
+    "street": "Oxford St",
+    "street_number": 63,
+    "setback_m": 0.0,
+    "lot_area_sqm": 626.8097320519856,
+    "footprint_sqm": 36.6,
+    "lot_coverage_pct": 5.8,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
+  "windows_per_floor": [
+    0
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Parks/Open Space",
+    "construction_date": "",
+    "architectural_style": "Parks/Open Space (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "n/a (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": null,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A ",
+    "building_features": [],
+    "heritage_register": "N/A \u2013 Open Space",
+    "protection_level": 0
+  },
+  "context": {
+    "building_type": "vacant_lot",
+    "general_use": "Open Space",
+    "land_use": "Open Space / Park",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "Other",
+    "zoning": "O",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Open Space",
+    "development_phase": ""
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 25,
+    "signage": "Colorful graffiti mural visible mid-depth behind dense vegetation",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 12.35,
+    "height_avg_m": 6.3,
+    "footprint_sqm": 36.6,
+    "gfa_sqm": null,
+    "fsi": null,
+    "lot_width_ft": null,
+    "lot_depth_ft": null,
+    "dwelling_units": null,
+    "residential_floors": "",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "63 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "63 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "63 OXFORD ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 6.3,
+      "new_total_height_m": 4.8,
+      "floors": 1.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "small parkette is winter-dormant but maintained; no building facade is the primary subject",
+    "condition": "fair",
+    "windows_per_floor": [
+      0
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.0,
+    "window_height_m": 0.0,
+    "window_arrangement": "irregular",
+    "window_details": "no primary building facade visible; site is open space",
+    "door_count": 0,
+    "door_type": "single",
+    "door_width_m": 0.0,
+    "door_height_m": 0.0,
+    "door_details": "no building entry observed",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "not applicable",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "open space",
+    "chimneys": 0,
+    "chimney_details": "not applicable",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "graffiti murals and park fencing are the key visual elements",
+    "roof_type_observed": "not applicable",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "Sonya's Parkette sign within the park",
+    "overall_style": "Open Space",
+    "alterations_visible": "landscape/open-space condition, no facade",
+    "matches_hcd_typology": true,
+    "confidence": 0.9,
+    "notes": "Open-space record updated from the parkette photo rather than treated as a facade.",
+    "prior_batches": [
+      {
+        "batch": "batch_010",
+        "date": "2026-03-18",
+        "time": "~14:50",
+        "conditions": "daytime, snowy",
+        "photos": 1,
+        "confidence": 0.4,
+        "notes": "Parkette not a building facade; snow-covered open space with fencing confirmed"
+      }
+    ]
+  },
+  "window_arrangement": "irregular",
+  "door_type": "single",
+  "door_width_m": 0.0,
+  "door_height_m": 0.0,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Open Space",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Open-space record updated from the parkette photo rather than treated as a facade.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed.",
+    "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [],
+  "doors_detail": [],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "63 Oxford St presents a parks/open space facade within the Kensington Market HCD. The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology. The facade reads primarily as mixed in a open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed. Character-defining facade elements include cornice. HCD note: Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A",
+  "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

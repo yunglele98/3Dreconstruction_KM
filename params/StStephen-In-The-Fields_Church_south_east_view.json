@@ -1,0 +1,18 @@
+{
+  "building_name": "St. Stephen-in-the-Fields Church (south east view)",
+  "skipped": true,
+  "skip_reason": "duplicate view of the already-recorded St. Stephen-in-the-Fields Church",
+  "_meta": {
+    "address": "St. Stephen-in-the-Fields Church (south east view)",
+    "photo": "IMG_20260320_175305879_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:35:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_175305879_HDR.jpg",
+      "IMG_20260320_175314410_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

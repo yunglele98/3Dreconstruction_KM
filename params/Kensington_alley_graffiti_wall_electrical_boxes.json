@@ -1,0 +1,17 @@
+{
+  "building_name": "Kensington alley graffiti wall electrical boxes",
+  "skipped": true,
+  "skip_reason": "alley — not a building facade",
+  "_meta": {
+    "address": "Kensington Ave alley",
+    "photo": "PXL_20260318_192806006.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T00:00:00-04:00",
+    "reference_photos": [
+      "PXL_20260318_192806006.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

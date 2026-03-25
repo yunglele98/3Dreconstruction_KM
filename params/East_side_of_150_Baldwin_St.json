@@ -1,0 +1,17 @@
+{
+  "building_name": "East side of 150 Baldwin St",
+  "skipped": true,
+  "skip_reason": "side-yard / side-wall view rather than a primary building facade",
+  "_meta": {
+    "address": "East side of 150 Baldwin St",
+    "photo": "IMG_20260318_184512390_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_184512390_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

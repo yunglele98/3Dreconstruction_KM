@@ -1,0 +1,17 @@
+{
+  "building_name": "138 Baldwin St (The Jerk Spot)",
+  "skipped": true,
+  "skip_reason": "duplicate storefront alias; observations belong under 138_Baldwin_St.json",
+  "_meta": {
+    "address": "138 Baldwin St (The Jerk Spot)",
+    "photo": "PXL_20260318_224055927.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "PXL_20260318_224055927.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

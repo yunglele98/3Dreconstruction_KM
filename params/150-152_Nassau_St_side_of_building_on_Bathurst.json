@@ -1,0 +1,17 @@
+{
+  "building_name": "150-152 Nassau St (side of building on Bathurst)",
+  "skipped": true,
+  "skip_reason": "duplicate side-elevation alias; observations already captured in 150-152_Nassau_St.json",
+  "_meta": {
+    "address": "150-152 Nassau St (side of building on Bathurst)",
+    "photo": "IMG_20260320_172741277_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_172741277_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "building_name": "Bellevue Ave (flat-roof duplex with balcony)",
+  "floors": 2,
+  "floor_heights_m": [
+    3.25,
+    3.25
+  ],
+  "total_height_m": 6.5,
+  "facade_width_m": 10.0,
+  "facade_depth_m": 15.0,
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "brown/buff brick lower, tan/beige stucco upper with metal balcony railings",
+  "windows_per_floor": [
+    4,
+    4
+  ],
+  "window_type": "casement",
+  "window_width_m": 0.8,
+  "window_height_m": 1.0,
+  "door_count": 2,
+  "has_storefront": false,
+  "condition": "poor",
+  "photo_observations": {
+    "facade_colour_observed": "brown/buff brick lower, tan/beige stucco upper with metal balcony railings",
+    "facade_material_observed": "brick",
+    "condition": "poor",
+    "windows_per_floor": [
+      4,
+      4
+    ],
+    "balconies": 2,
+    "balcony_type": "projecting",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "chimneys": 1,
+    "overall_style": "Vernacular",
+    "confidence": 0.7,
+    "notes": "daytime; flat-roof duplex, somewhat neglected; metal balconies on upper floor; garbage bins and clutter in front"
+  },
+  "_meta": {
+    "address": "Bellevue Ave (duplex)",
+    "photo": "PXL_20260318_215107792.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "reference_photos": [
+      "PXL_20260318_215107792.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    }
+  },
+  "balconies": 2,
+  "balcony_type": "projecting",
+  "overall_style": "Vernacular",
+  "confidence": 0.8500000000000001,
+  "notes": "daytime; flat-roof duplex, somewhat neglected; metal balconies on upper floor; garbage bins and clutter in front",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 1,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 2
+  },
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 10 metres across 2 storeys and is capped by a flat, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 4, 4 window bays from lower to upper levels, using casement, and 2 principal entrances."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 1.2,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {},
+  "street_setback_m": 2.0,
+  "facade_description": "Bellevue Ave (flat-roof duplex with balcony) presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 10 metres across 2 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 4 window bays from lower to upper levels, using casement, and 2 principal entrances.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {}
+}

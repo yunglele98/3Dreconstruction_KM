@@ -1,0 +1,331 @@
+{
+  "building_name": "12 Denison Sq",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40237383999998,
+    "lat": 43.65391802,
+    "street": "Denison Sq",
+    "street_number": 12,
+    "setback_m": 3.0,
+    "lot_area_sqm": 205.8597938076677,
+    "footprint_sqm": 86.8,
+    "lot_coverage_pct": 42.2,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "gable_front"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "weathered red brick with pale yellow brick banding and white trim",
+  "windows_per_floor": [
+    1,
+    2
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.85,
+  "window_height_m": 1.35,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 137,
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached houses, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bays, brick cladding with polychromatic brickwork detailing, decorative wooden gable brackets, and fenestration pattern with segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Semi-Detached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Local | Institutional (synagogues) | Bellevue Park adjacent",
+    "morphological_zone": "Institutional / Residential Node",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 10.87,
+    "height_avg_m": 7.71,
+    "footprint_sqm": 86.8,
+    "gfa_sqm": 217.0,
+    "fsi": 1.05,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "12 Denison Sq",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260315_154201428_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260315_154201428_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "12 Denison Sq",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "12 DENISON SQ"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.87,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "weathered red brick with pale yellow brick banding and white trim",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "original brick body survives but windows and trim are modern replacements; facade shows patching and repainting at openings",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_width_m": 0.85,
+    "window_height_m": 1.35,
+    "window_arrangement": "symmetric",
+    "window_details": "flat-headed paired upper windows with simple sills; lower facade partly obscured by neighbouring pair composition",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "single residential door with white trim",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "small projecting roof edge under front gable",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "short raised stoop behind low railing",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": false,
+    "decorative_details": "contrasting yellow-brick banding under eaves",
+    "roof_type_observed": "front gable",
+    "roof_features": [
+      "gable_front"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "none",
+    "overall_style": "Victorian",
+    "alterations_visible": "replacement windows and simplified porch/entry details",
+    "matches_hcd_typology": true,
+    "confidence": 0.5,
+    "batch": "batch_003",
+    "photo_date": "2026-03-15T15:43:00",
+    "lighting": "daytime",
+    "notes": "Side/rear view showing red brick Victorian house and adjacent BURDOCK rooftop signage (red letters). Graffiti-covered white-painted garage/outbuilding wall visible. Chain-link fence with dormant vines. The actual 12 Denison facade is partially visible: red brick, 2 windows on upper floor. Side view only, limited facade visibility."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": true,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "none",
+  "confidence": 0.7500000000000002,
+  "notes": "Side/rear view showing red brick Victorian house and adjacent BURDOCK rooftop signage (red letters). Graffiti-covered white-painted garage/outbuilding wall visible. Chain-link fence with dormant vines. The actual 12 Denison facade is partially visible: red brick, 2 windows on upper floor. Side view only, limited facade visibility.",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "decorative_elements": {
+    "string_courses": {
+      "present": true,
+      "width_mm": 140,
+      "projection_mm": 25,
+      "colour_hex": "#D4C9A8"
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include string courses, cornice.",
+    "heritage_summary": "Constructed as a pair of semi-detached houses, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bays, brick cladding with polychromatic brickwork detailing, decorative wooden gable brackets, and fenestration pattern with segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 3.0,
+          "sill_height_m": 2.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "12 Denison Sq presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include string courses, cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached houses, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bays, brick cladding with polychromatic brickwork detailing, decorative wooden gable brackets, and fenestration pattern with segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "heritage_summary": "Constructed as a pair of semi-detached houses, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bays, brick cladding with polychromatic brickwork detailing, decorative wooden gable brackets, and fenestration pattern with segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

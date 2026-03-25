@@ -1,0 +1,21 @@
+{
+  "building_name": "43654508_-79400223",
+  "skipped": true,
+  "skip_reason": "vague coordinates — 6 duplicate photos",
+  "_meta": {
+    "address": "43.654508, -79.400223",
+    "photo": "IMG_20260320_013239638_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T00:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_013239638_HDR.jpg",
+      "IMG_20260320_013244573_HDR.jpg",
+      "IMG_20260320_013251485_HDR.jpg",
+      "IMG_20260320_013306148_HDR.jpg",
+      "IMG_20260320_013316686_HDR.jpg"
+    ],
+    "reference_photo_count": 6,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

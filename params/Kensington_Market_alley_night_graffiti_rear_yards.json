@@ -1,0 +1,21 @@
+{
+  "building_name": "Kensington Market alley (night, graffiti, rear yards)",
+  "skipped": true,
+  "skip_reason": "rear-laneway / service-side night view rather than a primary building facade",
+  "_meta": {
+    "address": "Kensington Market alley (night, graffiti, rear yards)",
+    "photo": "IMG_20260320_011024375_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:23:36-04:00",
+    "reference_photos": [
+      "IMG_20260320_011024375_HDR.jpg",
+      "IMG_20260320_011030816_HDR.jpg",
+      "IMG_20260320_011048375_HDR.jpg",
+      "IMG_20260320_011104655_HDR.jpg",
+      "IMG_20260320_011141704_HDR.jpg"
+    ],
+    "reference_photo_count": 7,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

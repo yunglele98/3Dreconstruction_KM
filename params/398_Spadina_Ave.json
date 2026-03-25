@@ -1,0 +1,312 @@
+{
+  "building_name": "398 Spadina Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.0,
+    3.0
+  ],
+  "total_height_m": 6.0,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.39951386,
+    "lat": 43.6556688,
+    "street": "Spadina Ave",
+    "street_number": 398,
+    "setback_m": 0.5,
+    "lot_area_sqm": 158.7944735708035,
+    "footprint_sqm": 57.0,
+    "lot_coverage_pct": 35.9,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Clapboard",
+  "facade_colour": "charcoal-painted wood siding with black storefront fascia and vivid blue, pink, and purple mural panels across the side parking-lot elevation",
+  "windows_per_floor": [
+    1,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.35,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "No",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [
+      "bay_window",
+      "original_windows"
+    ],
+    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Cosmo Cafe | Bar",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 55,
+    "signage": "For Lease signage in lower window; graffiti tags on lower right wall",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 8.54,
+    "height_avg_m": 3.38,
+    "footprint_sqm": 57.0,
+    "gfa_sqm": 171.0,
+    "fsi": 1.08,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "398 Spadina Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_173508338_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "reference_photos": [
+      "IMG_20260318_173508338_HDR.jpg",
+      "IMG_20260318_173522883_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "398 Spadina Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "398 SPADINA AVE"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.4,
+    "projection_m": 0.6
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "vacant",
+    "width_m": 5.2,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "charcoal-painted wood siding with black storefront fascia and vivid blue, pink, and purple mural panels across the side parking-lot elevation",
+    "facade_material_observed": "wood_clapboard",
+    "facade_condition_notes": "The building is active and painted, but wiring, patched surfaces, and mixed rear-lot conditions give it an improvised character.",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.35,
+    "window_arrangement": "asymmetric",
+    "window_details": "Upper floor has two sash-like windows including a small projecting bay element, while the commercial level has one storefront window visible at the corner plus mural-covered wall sections.",
+    "door_count": 2,
+    "door_type": "mixed",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "One glazed commercial corner entry serves the coffee business and one solid side/service door is centered in the mural wall.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple eaves and fascia with no significant historic cornice expression.",
+    "bay_windows": 1,
+    "bay_window_details": "Small projecting second-floor bay with dark cladding and side panes.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; storefront meets the paved side lot directly.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible in the observed elevation.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Large custom mural artwork and the black SPECIALTY COFFEE sign are the dominant visual features.",
+    "roof_type_observed": "Simple gabled roof over the side elevation",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Corner coffee storefront with black fascia signage at the front edge and a mural-covered side wall facing the small parking area.",
+    "signage_observed": "SPECIALTY COFFEE, @COSMOCAFEBAR, and mural artist tags along the side wall.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Extensive repainting, mural installation, updated storefront corner, and visible service wiring have altered the building from its earlier appearance.",
+    "matches_hcd_typology": false,
+    "confidence": 0.78,
+    "notes": "Observation is based on the side and corner lot-facing elevation rather than a straight-on Spadina frontage."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "mixed",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Corner coffee storefront with black fascia signage at the front edge and a mural-covered side wall facing the small parking area.",
+  "confidence": 0.9,
+  "notes": "Observation is based on the side and corner lot-facing elevation rather than a straight-on Spadina frontage.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "mixed",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "mixed",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 1, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.3,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.5,
+  "facade_description": "398 Spadina Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as wood clapboard in a charcoal-painted wood siding with black storefront fascia and vivid blue, pink, and purple mural panels across the side parking-lot elevation palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include bay window, original windows, cornice.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

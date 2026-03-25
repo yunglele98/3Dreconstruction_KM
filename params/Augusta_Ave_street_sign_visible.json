@@ -1,0 +1,17 @@
+{
+  "building_name": "Augusta Ave (street sign visible)",
+  "skipped": true,
+  "skip_reason": "partial streetscape with street sign; not a discrete building record",
+  "_meta": {
+    "address": "Augusta Ave (street sign visible)",
+    "photo": "IMG_20260315_155156475_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:10:48-04:00",
+    "reference_photos": [
+      "IMG_20260315_155156475_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

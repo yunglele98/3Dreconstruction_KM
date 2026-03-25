@@ -1,0 +1,246 @@
+{
+  "building_name": "576 Dundas St W",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.40051372,
+    "lat": 43.65260685,
+    "street": "Dundas St W",
+    "street_number": 576,
+    "setback_m": 0.5,
+    "lot_area_sqm": 307.9413636552701,
+    "footprint_sqm": 121.0,
+    "lot_coverage_pct": 39.3,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "yellow/olive painted storefront with pink upper accent",
+  "windows_per_floor": [
+    1,
+    1
+  ],
+  "window_type": "storefront",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [
+      "decorative_brick"
+    ],
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "VAPE4CHANGE Toronto",
+    "business_category": "Fashion/Clothing",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 30,
+    "signage": "De Raje (fashion boutique), Sellteck Cellular, Heng Salon",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.4,
+    "height_avg_m": 7.64,
+    "footprint_sqm": 121.0,
+    "gfa_sqm": 363.0,
+    "fsi": 1.18,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 4,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "576 Dundas St W",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "photo": "IMG_20260320_011715740_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_011715740_HDR.jpg",
+      "IMG_20260320_011749589_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "576 Dundas St W",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "576 DUNDAS ST W"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.4,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 5.0,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "source_photo": "IMG_20260320_011715740_HDR.jpg",
+    "photo_timestamp": "2026-03-20T01:17:15-04:00",
+    "lighting": "night",
+    "photo_notes": "Rotated image",
+    "windows_per_floor": [
+      1,
+      1
+    ],
+    "window_type": "storefront",
+    "door_count": 1,
+    "door_type": "storefront",
+    "has_storefront_observed": true,
+    "storefront_description": "Full-width vintage clothing storefront. Yellow-green painted wood fascia with recessed circular lighting. Large display window with yellow frame. Pink-painted interior visible. Neon 'Vintage' sign mounted on fascia. Decorative ceramic tile panel on right side of storefront.",
+    "signage_observed": "Neon 'Vintage' cursive sign. 'AVAILABLE' CHI Real Estate sign on left. 'SALE' sign in window.",
+    "overall_style": "Commercial",
+    "confidence": 0.78,
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T23:30:00-04:00",
+    "photo": "IMG_20260320_011715740_HDR.jpg",
+    "photo_datetime": "2026-03-20T01:17:15",
+    "facade_colour_observed": "yellow/olive painted storefront with pink upper accent; wood-clad storefront fascia with recessed lighting",
+    "facade_material_observed": "mixed",
+    "door_details": "Single recessed storefront door, yellow-painted frame.",
+    "window_details": "Large plate glass storefront windows. Upper floor window partially visible at top edge.",
+    "condition": "good",
+    "notes": "Night photo shows active vintage clothing shop. Well-maintained storefront with distinctive colour scheme.",
+    "_batch_agent": "claude-opus-4-6-batch18-22",
+    "_batch_timestamp": "2026-03-25T02:07:04Z"
+  },
+  "door_type": "storefront",
+  "overall_style": "Commercial",
+  "storefront_description": "Vintage shop with blue neon 'Vintage' sign, olive/yellow facade, display window showing clothing, decorative tile pilaster on right side",
+  "confidence": 0.9,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 1, 1 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 2.9,
+          "sill_height_m": 2.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 0.5,
+  "facade_description": "576 Dundas St W presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as brick in a yellow/olive painted storefront with pink upper accent palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 1 window bays from lower to upper levels, using storefront, and 1 principal entrance. Character-defining facade elements include decorative brick.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#C8B060",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

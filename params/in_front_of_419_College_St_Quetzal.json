@@ -1,0 +1,18 @@
+{
+  "building_name": "in front of 419 College St (Quetzal)",
+  "skipped": true,
+  "skip_reason": "duplicate address/view of the already-recorded 419 College St (Quetzal)",
+  "_meta": {
+    "address": "in front of 419 College St (Quetzal)",
+    "photo": "IMG_20260320_174006759_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:50:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_174006759_HDR.jpg",
+      "IMG_20260320_174019000_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

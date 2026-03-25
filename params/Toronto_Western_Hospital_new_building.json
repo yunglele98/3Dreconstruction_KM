@@ -1,0 +1,21 @@
+{
+  "building_name": "Toronto Western Hospital (new building)",
+  "skipped": true,
+  "skip_reason": "active construction site with incomplete facade",
+  "_meta": {
+    "address": "Toronto Western Hospital (new building)",
+    "photo": "IMG_20260320_172510801_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_172510801_HDR.jpg",
+      "IMG_20260320_172538555_HDR.jpg",
+      "IMG_20260320_172541818_HDR.jpg",
+      "IMG_20260320_172558434_HDR.jpg",
+      "IMG_20260320_172617243_HDR.jpg"
+    ],
+    "reference_photo_count": 7,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

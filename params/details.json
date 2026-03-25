@@ -1,0 +1,21 @@
+{
+  "building_name": "details",
+  "skipped": true,
+  "skip_reason": "generic detail shot, not a usable building facade",
+  "_meta": {
+    "address": "details",
+    "photo": "IMG_20260320_165805330_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:10:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_165805330_HDR.jpg",
+      "IMG_20260320_165837603.jpg",
+      "IMG_20260320_170106114_HDR.jpg",
+      "IMG_20260320_170136770_HDR.jpg",
+      "IMG_20260320_170152152_HDR.jpg"
+    ],
+    "reference_photo_count": 7,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

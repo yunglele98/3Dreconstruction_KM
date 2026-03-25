@@ -1,0 +1,272 @@
+{
+  "building_name": "70 Bellevue Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40393480999998,
+    "lat": 43.65505523,
+    "street": "Bellevue Ave",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 129.97631615666,
+    "footprint_sqm": 78.2,
+    "lot_coverage_pct": 60.2,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "buff/cream brick with decorative brick bands and red door accent",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached ; Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 295,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. The first storey at 72 Bellevue Avenue and attic gable at 90 Nassau feature rounded arch openings. The eastern half of the first storey at 90 Nassau Street has housed commercial uses since 1878 according to City Directories and features a commercial storefront facing Bellevue Avenue and Nassau Street. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 89. 70 Bellevue Avenue N/A 90. 72 Bellevue Avenue N/A 295. 90 Nassau Street N/A 68 DCH | FO :D 78 Bellevue Avenue 78 BELLEVUE AVENUE",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 14.19,
+    "height_avg_m": 8.68,
+    "footprint_sqm": 78.2,
+    "gfa_sqm": 195.5,
+    "fsi": 1.5,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "70 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_155037469_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_155037469_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "70 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "70 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 14.19,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "photo_reference": "IMG_20260320_155037469_HDR.jpg",
+    "facade_colour_observed": "buff/cream brick with decorative red-brown brick banding and arched details",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Fair condition. Some areas of staining/rust visible on facade, particularly near fire escape on right side. Brick generally sound but some weathering evident. Some paint/render deterioration at lower sections.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      3
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.5,
+    "window_arrangement": "asymmetric",
+    "window_details": "Ground floor has large arched openings - one large round-arched window on left, one round-arched doorway/window center. Second floor has three windows with segmental arched brick voussoirs. The round arches are a distinctive feature of this building.",
+    "door_count": 1,
+    "door_type": "arched",
+    "door_width_m": 1.0,
+    "door_height_m": 2.4,
+    "door_details": "Red-painted door within round arched opening at ground level center. Arched transom above.",
+    "ground_floor_arches": "round",
+    "ground_floor_arch_count": 2,
+    "cornice": "bracketed",
+    "cornice_details": "Brick eaves brackets visible at roofline, consistent with HCD description",
+    "bay_windows": 0,
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "chimneys": 0,
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": true,
+    "decorative_details": "Prominent round arched openings at ground floor. Brick voussoirs over second-storey windows (segmental). String courses between floors. Brick eaves brackets. The arched openings are the most distinctive architectural feature.",
+    "roof_type_observed": "Cross-gable shared with adjacent building",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "signage_observed": "None visible",
+    "overall_style": "Victorian",
+    "alterations_visible": "Fire escape on right side. Some ground-level modifications. Overall form largely intact.",
+    "matches_hcd_typology": true,
+    "confidence": 0.8,
+    "notes": "2-storey semi-detached Victorian in buff/cream brick. Distinctive round arched openings at ground floor. Segmental arched windows at second floor with brick voussoirs. String courses and brick eaves brackets as noted in HCD description. Red painted door provides accent colour. Fire escape visible on right side. Paired with 72 Bellevue Ave and 90 Nassau St.",
+    "photo_date": "2026-03-20",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T12:00:00-04:00"
+  },
+  "overall_style": "Victorian",
+  "confidence": 0.9,
+  "notes": "2-storey semi-detached Victorian, buff/cream brick with round arched openings at ground floor. Segmental arched windows at second floor. String courses and brick eaves brackets. Red door accent.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D4B896",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached ; converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. 70 Bellevue Avenue N/A 90."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 4.3,
+          "sill_height_m": 3.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Semi-detached two-storey house-form in buff/cream brick with decorative brick bands and red door accent with a cross-gable roof. Features include simple bargeboards. Fire escape on right side. Some ground-level modifications. Overall form largely intact. Pre-1889 construction.",
+  "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. 70 Bellevue Avenue N/A 90.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

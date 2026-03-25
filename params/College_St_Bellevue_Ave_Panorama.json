@@ -1,0 +1,17 @@
+{
+  "building_name": "College St / Bellevue Ave Panorama",
+  "skipped": true,
+  "skip_reason": "panoramic streetscape context spanning multiple buildings rather than a single facade",
+  "_meta": {
+    "address": "College St / Bellevue Ave Panorama",
+    "photo": "IMG_20260320_175003695.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:35:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_175003695.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

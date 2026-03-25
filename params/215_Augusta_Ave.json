@@ -1,0 +1,299 @@
+{
+  "building_name": "215 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    2.4,
+    2.4
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40155986,
+    "lat": 43.65416308,
+    "street": "Augusta Ave",
+    "street_number": 215,
+    "setback_m": 0.0,
+    "lot_area_sqm": 120.6634625446652,
+    "footprint_sqm": 128.7,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "brown brick with red/yellow Chinese community association signage",
+  "windows_per_floor": [
+    1,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 33,
+    "statement_of_contribution": "The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its v",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Professional / Community Services",
+    "business_name": "Lao Chinese Association of Ontario",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Hainan Community Centre (\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u4e61\u4f1a); Lao-Chinese Association of Ontario (\u8001\u7701\u5ba2\u534e\u8054\u8c0a\u4f1a); Pow Wow Cafe (adjacent)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.6,
+    "height_avg_m": 4.76,
+    "footprint_sqm": 128.7,
+    "gfa_sqm": 321.8,
+    "fsi": 2.67,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 4,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "215 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "215 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "215 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 4.76,
+      "new_total_height_m": 4.8,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.1,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "brown brick with red/yellow Chinese community association signage",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "2-storey brown brick commercial building; ground floor large red/yellow bilingual sign '\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u9109\u6703 / Lao Chinese Association of Ontario Canada / 215 Augusta Ave / HAINAN COMMUNITY CENTRE / Tel: 416-346-7477'; silver roll-down security shutter over storefront window (closed); small barred window at ground level; upper floor dark neon-style sign with Chinese characters (gold/red on dark background); brown brick facade throughout; graffiti on lower walls",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "1 ground floor window with silver roll-down security shutter (closed) and small barred window; 1 upper floor window (behind neon-style sign)",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.2,
+    "door_details": "single entry beneath association sign band",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "plain fascia line",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "direct sidewalk frontage",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "red/yellow multilingual signboard is the dominant facade feature; upper floor neon-style sign with gold/red Chinese characters",
+    "roof_type_observed": "flat roof behind parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "community association/centre storefront with security shutters and red/gold signage",
+    "signage_observed": "\u52a0\u62ff\u5927\u5b89\u7701\u6d77\u5357\u540c\u9109\u6703 / Lao Chinese Association of Ontario Canada / 215 Augusta Ave / HAINAN COMMUNITY CENTRE / Tel: 416-346-7477; upper floor neon-style sign with gold/red Chinese characters on dark background",
+    "overall_style": "Commercial",
+    "alterations_visible": "security shutters, modern signage, replacement storefront components",
+    "matches_hcd_typology": false,
+    "confidence": 0.8,
+    "notes": "Batch 003 daytime photos (2026-03-15 ~3:46pm). Clear view of association frontage with detailed bilingual signage. Updated with neon sign and security shutter details.",
+    "batch": "batch_003",
+    "photo_date": "2026-03-15",
+    "photo_time": "~15:46",
+    "photo_count": 1
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "The ground floor reads as a community-association frontage with metal security shutters and prominent red-and-gold signage marking it as an institutional or cultural-use storefront rather than a conventional shop.",
+  "confidence": 0.9,
+  "notes": "Batch 003 daytime photos (2026-03-15 ~3:46pm). Clear view of association frontage with detailed bilingual signage. Updated with neon sign and security shutter details.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "With its v. The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.9,
+          "sill_height_m": 2.3,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "215 Augusta Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its v",
+  "heritage_summary": "With its v. The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

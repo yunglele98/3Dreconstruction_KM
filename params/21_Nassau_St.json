@@ -1,0 +1,299 @@
+{
+  "building_name": "21 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.79,
+    3.79
+  ],
+  "total_height_m": 7.58,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39992047,
+    "lat": 43.65550001,
+    "street": "Nassau St",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 5219.899030452712,
+    "footprint_sqm": 101.1,
+    "lot_coverage_pct": 1.9,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "dark red-brown brick with pale stone or concrete trim bands and dark metal-framed glazing at the lobby and upper windows",
+  "windows_per_floor": [
+    4,
+    4
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.6,
+  "window_height_m": 1.8,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Institutional",
+    "construction_date": "1914-1930",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870\u20131889",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 260,
+    "statement_of_contribution": "The property has value as a rare example of an early-twentieth-century Institutional building within the District. The property has cultural heritage value for its direct association with the development of the district as a complete community. Since the 1930s it has housed various organizations and served as one of the original two campuses of George Brown College. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings. Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed as an elementary school for the surrounding area, the property is physically, functionally, and historically linked to its surroundings where it is important and defining, maintaining, and supporting the distinct built form of the District as a complete community. Summary: Reference Primary Address Entrance Address(es) Number 260. 3 Nassau Street 160 Baldwin Street 21 Nassau Street 142 DCH | FO :D 8 & 10 Nassau Street (R-L) 8 & 10 NASSAU STREET",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 19.5,
+    "height_avg_m": 6.59,
+    "footprint_sqm": 101.1,
+    "gfa_sqm": 252.8,
+    "fsi": 0.05,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 5,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "21 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_174635744_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260318_174558457_HDR.jpg",
+      "IMG_20260318_174611450_HDR.jpg",
+      "IMG_20260318_174622746_HDR.jpg",
+      "IMG_20260318_174635744_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "21 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "21 NASSAU ST"
+    ]
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark red-brown brick with pale stone or concrete trim bands and dark metal-framed glazing at the lobby and upper windows",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "The converted loft building appears well maintained, with clean masonry, modern window systems in good condition, and an orderly landscaped frontage.",
+    "condition": "good",
+    "windows_per_floor": [
+      4,
+      4
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.6,
+    "window_height_m": 1.8,
+    "window_arrangement": "symmetric",
+    "window_details": "Large institutional-style window openings are grouped regularly across the upper storeys, while the ground level has modern horizontal and vertical glazed openings associated with the residential lobby.",
+    "door_count": 1,
+    "door_type": "recessed",
+    "door_width_m": 1.4,
+    "door_height_m": 2.4,
+    "door_details": "A recessed modern lobby entry sits under a deep covered opening with metal cladding and black railings.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Minimal parapet edge with no ornate projecting cornice visible from the street.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; entry is integrated into the inset lobby court behind black metal railings.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible in the daytime street views.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": false,
+    "decorative_details": "The building reads as a former institutional block with strong horizontal stone trim and a contemporary inset entrance renovation.",
+    "roof_type_observed": "Flat or very low roof behind a parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "Building number 21 visible; no commercial storefront signage in the daytime frontage photo.",
+    "overall_style": "Institutional",
+    "alterations_visible": "Converted residential loft entrance with modern glazing, cladding, and railings inserted into the historic school facade.",
+    "matches_hcd_typology": true,
+    "confidence": 0.83,
+    "notes": "Daytime views clarify the regular brick facade and the contemporary inset lobby for Kensington Market Lofts."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "recessed",
+  "door_width_m": 1.4,
+  "door_height_m": 2.4,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": true,
+  "decorative_lintels": false,
+  "overall_style": "Institutional",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Daytime views clarify the regular brick facade and the contemporary inset lobby for Kensington Market Lofts.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Recessed entry door",
+      "position": "center",
+      "width_m": 1.4,
+      "height_m": 2.4,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "decorative_elements": {
+    "string_courses": {
+      "present": true,
+      "width_mm": 140,
+      "projection_mm": 25,
+      "colour_hex": "#D4C9A8"
+    },
+    "bargeboard": {
+      "colour_hex": "#4A4A4A",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#4A4A4A",
+    "composition": "The principal elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its institutional typology.",
+    "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 4, 4 opening rhythm from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Key heritage elements on the principal elevation include string courses, cornice.",
+    "heritage_summary": "Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 6.5,
+          "sill_height_m": 5.0,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "facade_description": "Large two-storey former institutional building (c. 1914-1930, originally a public school) converted to residential lofts. Dark red-brown brick facade with stone string courses, simple cornice, and flat roof behind a parapet wall. Recessed modern lobby entry with metal cladding. Freestanding (no party walls). Five dwelling units; condition is good.",
+  "heritage_summary": "Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#4A4A4A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#4A4A4A",
+    "door_hex": "#4A4A4A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

@@ -1,0 +1,344 @@
+{
+  "building_name": "27 Bellevue Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 7.2,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40292612,
+    "lat": 43.65403226,
+    "street": "Bellevue Ave",
+    "street_number": 27,
+    "setback_m": 3.0,
+    "lot_area_sqm": 187.8377494240024,
+    "footprint_sqm": 244.4,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "cross-gable"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "warm red brick at ground and second floor; cream/beige vertical siding on upper gable and side sections",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1904-1913",
+    "architectural_style": "Victorian Bay-and-Gable Rowhouse",
+    "construction_period": "c. 1870–1889",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": 100,
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructe",
+    "building_features": [
+      "bay_window",
+      "original_windows"
+    ],
+    "heritage_register": "Part IV Designated (Individual) + Part V HCD",
+    "protection_level": 5
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential – Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 11.08,
+    "height_avg_m": 3.74,
+    "footprint_sqm": 244.4,
+    "gfa_sqm": 611.0,
+    "fsi": 3.25,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1–2)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "27 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260315_153824969_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260315_153824969_HDR.jpg",
+      "IMG_20260320_160816726_HDR.jpg",
+      "IMG_20260320_160820139_HDR.jpg",
+      "IMG_20260320_160824467_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "27 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "27 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:52:01",
+      "old_total_height_m": 3.74,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "photo_observations": {
+    "facade_colour_observed": "warm red brick at ground and second floor; cream/beige vertical siding on upper gable and side sections",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Well maintained; brick clean and in good condition; vertical siding appears in good repair",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.85,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "Large bay window at ground and second floor with multi-pane glazing; single window in upper gable; windows appear to be newer replacements with white frames",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Single entry door at side of projecting bay; covered entrance",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple eave line with clean trim at gable",
+    "bay_windows": 1,
+    "bay_window_details": "Projecting bay spanning ground and second floor with large replacement windows",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "stoop",
+    "porch_details": "Small entry stoop",
+    "chimneys": 0,
+    "chimney_details": "Not visible from street",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Clean brickwork; horizontal brick banding between floors",
+    "roof_type_observed": "Cross-gable with moderate pitch",
+    "roof_features": [
+      "cross-gable"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "None",
+    "overall_style": "Victorian",
+    "alterations_visible": "Replacement vinyl/aluminum windows; vertical siding on upper gable may replace original material",
+    "matches_hcd_typology": true,
+    "confidence": 0.8,
+    "notes": "Semi-detached form; green and blue bins visible; well-maintained property with interlocking brick driveway"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "",
+  "confidence": 0.9,
+  "notes": "Semi-detached form; green and blue bins visible; well-maintained property with interlocking brick driveway",
+  "porch_present": false,
+  "porch_type": "stoop",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
+    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#2A2A2A"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.7,
+          "sill_height_m": 1.1,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.4,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.5,
+          "sill_height_m": 1.2,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#2A2A2A",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "Three-storey semi-detached house with mixed cladding: warm red brick at ground and second floors, cream/beige vertical siding on the upper gable. A projecting bay spans the lower two storeys with large replacement windows in white frames. The upper gable siding likely replaces original material, and the windows throughout appear to be vinyl or aluminum replacements. The property is well maintained with an interlocking brick driveway and simple eave trim.",
+  "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

@@ -1,0 +1,242 @@
+{
+  "building_name": "43 Kensington Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 7.2,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39998894999998,
+    "lat": 43.6537296,
+    "street": "Kensington Ave",
+    "street_number": 39,
+    "setback_m": 3.0,
+    "lot_area_sqm": 136.188384515773,
+    "footprint_sqm": 103.0,
+    "lot_coverage_pct": 75.6,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "varied brick and stone",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-Form, Row",
+    "construction_date": "1904-1913",
+    "architectural_style": "House-Form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed – HCD Plan Vol. 2)",
+    "construction_decade": 1900,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 209,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [
+      "bay_window",
+      "original_windows",
+      "decorative_brick"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Mixed Use",
+    "land_use": "Residential with Commercial Potential",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "missing_elements",
+    "structural_concern": false,
+    "risk_score": 35,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 7.63,
+    "height_avg_m": 3.91,
+    "footprint_sqm": 103.0,
+    "gfa_sqm": 257.5,
+    "fsi": 1.89,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "43 Kensington Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "43 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "43 KENSINGTON AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:52:01",
+      "old_total_height_m": 3.91,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick.",
+    "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "frame_colour": "#2A2A2A",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.1,
+          "sill_height_m": 0.9,
+          "frame_colour": "#2A2A2A",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.0,
+          "sill_height_m": 0.8,
+          "frame_colour": "#2A2A2A",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "43 Kensington Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#2A2A2A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

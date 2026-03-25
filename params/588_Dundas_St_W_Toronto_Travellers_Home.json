@@ -1,0 +1,21 @@
+{
+  "building_name": "588 Dundas St W (Toronto Travellers Home)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "588_Dundas_St_W.json",
+  "_meta": {
+    "address": "588 Dundas St W (Toronto Travellers Home)",
+    "photo": "IMG_20260320_011502409_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:23:36-04:00",
+    "reference_photos": [
+      "IMG_20260320_011502409_HDR.jpg",
+      "IMG_20260320_011516925_HDR.jpg",
+      "IMG_20260320_011523715_HDR.jpg",
+      "IMG_20260320_011530532_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "Toronto Western Hospital 43.653122, -79.406293",
+  "skipped": true,
+  "skip_reason": "duplicate hospital view; observations already captured in Toronto_Western_Hospital.json",
+  "_meta": {
+    "address": "Toronto Western Hospital 43.653122, -79.406293",
+    "photo": "IMG_20260320_172352203_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_172352203_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

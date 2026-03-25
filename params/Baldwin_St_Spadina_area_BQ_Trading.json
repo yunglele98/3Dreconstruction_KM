@@ -1,0 +1,17 @@
+{
+  "building_name": "Baldwin St Spadina Area BQ Trading",
+  "skipped": true,
+  "skip_reason": "vague area — no discrete building facade",
+  "_meta": {
+    "address": "Baldwin St Spadina Area BQ Trading",
+    "photo": "IMG_20260316_005151702_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T22:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_005151702_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "",
+  "skipped": true,
+  "skip_reason": "empty target name from batch metadata",
+  "_meta": {
+    "address": "",
+    "photo": "IMG_20260320_163240850_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:25:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_155503324_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

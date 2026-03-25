@@ -1,0 +1,17 @@
+{
+  "building_name": "Payphone Baldwin St",
+  "skipped": true,
+  "skip_reason": "street object / payphone, not a building facade",
+  "_meta": {
+    "address": "Payphone Baldwin St",
+    "photo": "IMG_20260318_183500795_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T14:46:25-04:00",
+    "reference_photos": [
+      "IMG_20260318_183500795_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

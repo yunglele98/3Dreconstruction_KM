@@ -1,0 +1,17 @@
+{
+  "building_name": "55 (green bin), Bellevue area",
+  "skipped": true,
+  "skip_reason": "duplicate alias; observations already captured in 55 Bellevue Avenue",
+  "_meta": {
+    "address": "55 (green bin), Bellevue area",
+    "photo": "IMG_20260315_153408845_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:40:00-04:00",
+    "reference_photos": [
+      "IMG_20260315_153408845_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

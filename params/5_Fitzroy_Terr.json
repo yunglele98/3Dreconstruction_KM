@@ -1,0 +1,197 @@
+{
+  "building_name": "5 Fitzroy Terrace",
+  "year_built_approx": "1890-1903",
+  "overall_style": "Victorian",
+  "building_type": "Residential (House-form, Row)",
+  "condition": "fair",
+  "confidence": 0.6000000000000001,
+  "source": "hcd_plan_only",
+  "site": {
+    "total_facade_width_m": 5.0,
+    "street_setback_m": 2.0,
+    "orientation": "Facade faces street",
+    "context": "Kensington Market HCD, Character Sub-Area: n/a"
+  },
+  "floors": 2.5,
+  "floor_heights_m": [
+    4.0,
+    5.5
+  ],
+  "total_height_m": 9.5,
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 40,
+  "roof_material": "Grey asphalt shingles",
+  "facade_width_m": 5.0,
+  "facade_material": "Brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "door_count": 1,
+  "has_storefront": false,
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0
+    ],
+    "width_m": 2.0,
+    "projection_m": 0.6
+  },
+  "hcd_data": {
+    "hcd_reference_number": 148,
+    "hcd_page": 98,
+    "character_sub_area": "n/a",
+    "typology": "House-form, Row",
+    "construction_date": "1890-1903",
+    "statement_of_contribution": "Workers' row housing with Victorian features.",
+    "building_features": [
+      "shared rooflines",
+      "off-set first storey bay windows"
+    ],
+    "discrepancies": []
+  },
+  "_meta": {
+    "address": "5 Fitzroy Terrace, Toronto, ON",
+    "neighbourhood": "Kensington Market",
+    "heritage_designation": "Within Kensington Market Heritage Conservation District",
+    "hcd_reference": "HCD #148",
+    "hcd_typology": "House-form, Row",
+    "hcd_construction_date": "1890-1903",
+    "hcd_page": 98,
+    "model": "hcd_plan_skeleton",
+    "timestamp": "2026-03-12T23:19:59",
+    "notes": "Skeleton params generated from HCD Plan Vol.2 Appendix D. No photo analysis. confidence=0.40.",
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "translated": true,
+    "translations_applied": [
+      "photo_obs"
+    ]
+  },
+  "decorative_elements": {
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 1,
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "facade_depth_m": 10.0,
+  "facade_colour": "red brick with white wooden front addition",
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 2.5 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include shared rooflines, off-set first storey bay windows.",
+    "heritage_summary": "Workers' row housing with Victorian features."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#E8E0D0"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.0,
+          "sill_height_m": 0.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.0999999999999996,
+      "colour_hex": "#E8E0D0"
+    }
+  ],
+  "facade_description": "5 Fitzroy Terrace presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 2.5 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as red brick main structure with white wooden greenhouse/sunroom at front in a red brick with white wooden front addition palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include shared rooflines, off-set first storey bay windows. HCD note: Workers' row housing with Victorian features.",
+  "heritage_summary": "Workers' row housing with Victorian features.",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "street_setback_m": 2.0,
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "photo_observations": {
+    "source_photo": "IMG_20260320_012605136_HDR.jpg",
+    "photo_type": "dedicated",
+    "lighting": "night",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T23:30:00-04:00",
+    "confidence": 0.45,
+    "facade_colour_observed": "red brick with white wooden front addition",
+    "facade_material_observed": "red brick main structure with white wooden greenhouse/sunroom at front",
+    "condition_observed": "fair",
+    "has_storefront_observed": false,
+    "overall_style": "Victorian",
+    "notes": "Dark night photos with limited visibility. Fitzroy Terrace houses are Victorian-era residential, but details obscured by darkness and tree cover. Red brick building with white greenhouse/sunroom structure addition at front visible in photo."
+  },
+  "notes": "Dark night photos with limited visibility. Fitzroy Terrace houses are Victorian-era residential, but details obscured by darkness and tree cover. Red brick building with white greenhouse/sunroom structure addition at front visible in photo."
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "902 (brick wall), Graffiti Alley",
+  "skipped": true,
+  "skip_reason": "graffiti-covered wall fragment, not a full building facade",
+  "_meta": {
+    "address": "902 (brick wall), Graffiti Alley",
+    "photo": "IMG_20260316_002547528_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:10:48-04:00",
+    "reference_photos": [
+      "IMG_20260316_002547528_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

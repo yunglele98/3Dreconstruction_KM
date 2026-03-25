@@ -1,0 +1,17 @@
+{
+  "building_name": "Parking Augusta Ave 4504",
+  "skipped": true,
+  "skip_reason": "parking meter / streetscape object, not a building facade",
+  "_meta": {
+    "address": "Parking Augusta Ave 4504",
+    "photo": "IMG_20260318_185521421_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_185521421_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

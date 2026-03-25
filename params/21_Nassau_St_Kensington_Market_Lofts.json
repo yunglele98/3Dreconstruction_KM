@@ -1,0 +1,21 @@
+{
+  "building_name": "21 Nassau St (Kensington Market Lofts)",
+  "skipped": true,
+  "skip_reason": "duplicate — alternate name for 21 Nassau St; observations merged into 21_Nassau_St.json",
+  "_meta": {
+    "address": "21 Nassau St (Kensington Market Lofts)",
+    "photo": "IMG_20260316_004650632_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T21:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_004650632_HDR.jpg",
+      "IMG_20260316_004704881_HDR.jpg",
+      "IMG_20260318_174948683_HDR.jpg",
+      "IMG_20260318_174955949_HDR.jpg",
+      "IMG_20260318_175004621_HDR.jpg"
+    ],
+    "reference_photo_count": 6,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

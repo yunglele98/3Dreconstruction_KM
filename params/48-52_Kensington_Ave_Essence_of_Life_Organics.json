@@ -1,0 +1,210 @@
+{
+  "building_name": "48-52 Kensington Ave (Essence of Life Organics)",
+  "floors": 2,
+  "floor_heights_m": [
+    4.5,
+    3.5
+  ],
+  "total_height_m": 8.0,
+  "facade_width_m": 12.0,
+  "facade_depth_m": 20.0,
+  "roof_type": "Gable",
+  "roof_pitch_deg": 30,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick upper with white trim and cornice",
+  "windows_per_floor": [
+    0,
+    3
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.8,
+  "window_height_m": 1.2,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "good",
+  "photo_observations": {
+    "facade_colour_observed": "red-brown brick upper with white trim and cornice",
+    "facade_material_observed": "brick",
+    "condition": "good",
+    "windows_per_floor": [
+      0,
+      3
+    ],
+    "cornice": "decorative",
+    "has_storefront_observed": true,
+    "signage_observed": "Essence Of Life Natural Food Market, Organika",
+    "overall_style": "Victorian",
+    "confidence": 0.75,
+    "notes": "nighttime; wide facade spanning multiple addresses; well-maintained"
+  },
+  "_meta": {
+    "address": "48-52 Kensington Ave",
+    "photo": "IMG_20260320_012958779_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260320_012958779_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "candidate_range_anchor",
+    "db_address_full": "48 Kensington Ave",
+    "db_address_candidates": [
+      "48-52 KENSINGTON AVE",
+      "48 KENSINGTON AVE",
+      "49 KENSINGTON AVE",
+      "50 KENSINGTON AVE",
+      "51 KENSINGTON AVE",
+      "52 KENSINGTON AVE"
+    ],
+    "db_revision_ts": "2026-03-25T14:51:46"
+  },
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "overall_style": "Victorian",
+  "confidence": 0.9,
+  "notes": "nighttime; wide facade spanning multiple addresses; well-maintained",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 10.2,
+    "height_m": 3.4,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 6,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street frontage spans roughly 12 metres across 2 storeys beneath a gable, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 2 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "decorative",
+      "height_mm": 350,
+      "projection_mm": 200,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "48-52 Kensington Ave (Essence of Life Organics) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 12 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "site": {
+    "lon": -79.40064456,
+    "lat": 43.65394668,
+    "street": "Kensington Ave",
+    "street_number": 46
+  }
+}

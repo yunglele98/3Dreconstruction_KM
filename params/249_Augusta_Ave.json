@@ -1,0 +1,291 @@
+{
+  "building_name": "249 Augusta Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    4.8,
+    5.0,
+    4.3
+  ],
+  "total_height_m": 14.05,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40196876999998,
+    "lat": 43.65499459,
+    "street": "Augusta Ave",
+    "street_number": 249,
+    "setback_m": 0.0,
+    "lot_area_sqm": 217.8884686147028,
+    "footprint_sqm": 318.6,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "front_gable",
+    "awning"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "cream sign band over a dark storefront with green awning and tan upper facade",
+  "windows_per_floor": [
+    0,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 52,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Residential with Commercial Potential",
+    "commercial_use": "",
+    "business_name": "SALSAS",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "Hogtown Smoke BBQ (True BBQ in Kensington Market); Perola's Supermarket - Productos de Latinoamerica",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 14.05,
+    "height_avg_m": 8.81,
+    "footprint_sqm": 318.6,
+    "gfa_sqm": 796.5,
+    "fsi": 3.66,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 4,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "249 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "249 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "249 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.8,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "cream sign band over a dark storefront with green awning and tan upper facade",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "storefront is active but one large opening is shuttered and tagged; upper house-form remains visible above the commercial front",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "two upper windows and a smaller gable-level opening above the Perola storefront sign band",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "single glazed entry at left of the main shuttered opening",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "broad painted sign fascia and green awning define the storefront head",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "large bilingual supermercado sign dominates the elevation",
+    "roof_type_observed": "front-gabled upper storey above commercial addition",
+    "roof_features": [
+      "front_gable",
+      "awning"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Latin grocery storefront with deep awning, side entry, and one shuttered opening",
+    "signage_observed": "Perola's Supermarket; Productos de Latinoamerica",
+    "overall_style": "Commercial",
+    "alterations_visible": "full storefront conversion with awning and roll-down shutter",
+    "matches_hcd_typology": false,
+    "confidence": 0.8,
+    "notes": "Batch label said 247 Augusta, but the visible storefront signage and numbering align with 249 Augusta."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "The ground floor reads as a Latin grocery frontage with a deep awning, a side entry, and one shuttered opening, giving it a practical and slightly improvised street presence.",
+  "confidence": 0.9,
+  "notes": "Batch label said 247 Augusta, but the visible storefront signage and numbering align with 249 Augusta.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "249 Augusta Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable. The facade reads primarily as mixed in a cream sign band over a dark storefront with green awning and tan upper facade palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

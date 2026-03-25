@@ -1,0 +1,323 @@
+{
+  "building_name": "198 Baldwin St",
+  "floors": 4,
+  "floor_heights_m": [
+    2.4,
+    2.4,
+    2.4,
+    2.4
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40153264,
+    "lat": 43.65479747,
+    "street": "Baldwin St",
+    "street_number": 198,
+    "setback_m": 0.0,
+    "lot_area_sqm": 124.2914927715886,
+    "footprint_sqm": 109.9,
+    "lot_coverage_pct": 88.4,
+    "lots_sharing_footprint": 8
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "balcony"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "white-painted upper facade with pale blue signage and awning over a dark storefront opening",
+  "windows_per_floor": [
+    1,
+    1,
+    0,
+    0
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 59,
+    "statement_of_contribution": "The property has value as a House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property has evolved over time while retaining the legibility of its original form and certain building features including roofline with side gable and partial front gable. The property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, the property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [
+      "decorative_brick",
+      "cornice"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Coral Sea",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "missing_elements",
+    "structural_concern": false,
+    "risk_score": 35,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 13.85,
+    "height_avg_m": 6.97,
+    "footprint_sqm": 109.9,
+    "gfa_sqm": 274.8,
+    "fsi": 2.21,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "198 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "storefront",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "198 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "198 BALDWIN ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 6.97,
+      "new_total_height_m": 9.6,
+      "floors": 4.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
+    }
+  },
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "white-painted upper facade with pale blue signage and awning over a dark storefront opening",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Facade is heavily altered and visually cluttered with graffiti on side walls, later balcony railings, and commercial signage.",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.3,
+    "window_arrangement": "asymmetric",
+    "window_details": "Only limited front glazing and one upper opening are visible because signage and balcony elements obscure much of the elevation.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "Single glazed commercial entry beneath the awning.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "No pronounced cornice; awning and sign band dominate the facade.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 1,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney clearly visible from the frontage photo.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Upper balcony and oversized signboard obscure earlier decorative features.",
+    "roof_type_observed": "Flat-roofed commercial facade with balcony/false-front elements",
+    "roof_features": [
+      "balcony"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Commercial entry under a blue awning with a projecting upper deck/sign structure.",
+    "signage_observed": "Coral Sea signboard and blue awning.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Balcony, signboard, and rebuilt storefront substantially alter the original heritage form.",
+    "matches_hcd_typology": false,
+    "confidence": 0.66,
+    "notes": "Visibility is limited because the image is angled toward the lane and much of the elevation is obscured."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "bay_windows": 0,
+  "balconies": 1,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Commercial entry under a blue awning with a projecting upper deck/sign structure.",
+  "confidence": 0.9,
+  "notes": "Visibility is limited because the image is angled toward the lane and much of the elevation is obscured.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 4.4,
+    "height_m": 2.6,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": "Commercial entry under a blue awning with a projecting upper deck/sign structure.",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 1
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 1, 0, 0 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, cornice.",
+    "heritage_summary": "With its visible layering of residential and commercial built forms, the property is physically, functionally, visually, and historically linked to the surrounding market area. The property has value as a House-form building that has been modified to accommodate a commercial conversion."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.1,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 0.0,
+  "facade_description": "Four-storey mixed-material facade with a gable roof, approximately 5.2 m wide. Photo observation shows a white-painted upper facade with a pale blue Coral Sea awning over a dark storefront opening at grade. A projecting balcony at the upper level and oversized signboard substantially alter the original pre-1889 house-form. Only limited front glazing is visible because signage and balcony elements obscure much of the elevation. The side gable and partial front gable roofline survive from the original construction. The facade is visually cluttered with graffiti on side walls, later balcony railings, and commercial signage, though the layered residential-over-commercial form remains legible.",
+  "heritage_summary": "With its visible layering of residential and commercial built forms, the property is physically, functionally, visually, and historically linked to the surrounding market area. The property has value as a House-form building that has been modified to accommodate a commercial conversion.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8E0D4",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

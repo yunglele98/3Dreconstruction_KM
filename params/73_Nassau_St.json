@@ -1,0 +1,290 @@
+{
+  "building_name": "73 Nassau St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.5,
+    4.2
+  ],
+  "total_height_m": 8.35,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40281582999998,
+    "lat": 43.65495734,
+    "street": "Nassau St",
+    "street_number": 71,
+    "setback_m": 0.0,
+    "lot_area_sqm": 77.78586677176669,
+    "footprint_sqm": 36.5,
+    "lot_coverage_pct": 46.9,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "stucco",
+  "facade_colour": "salmon-pink painted stucco over masonry",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.9,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 292,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has contextual value because it supports and maintain the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Baru Baron",
+    "business_category": "Art/Culture",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "roof_damage; missing_elements",
+    "structural_concern": false,
+    "risk_score": 45,
+    "signage": "Fun [partially visible billboard advertisement on roofline]; Armacy [storefront signage on right unit]",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 8.35,
+    "height_avg_m": 6.29,
+    "footprint_sqm": 36.5,
+    "gfa_sqm": 91.2,
+    "fsi": 1.17,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "73 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "balcony",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "photo": "IMG_20260320_155747126_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_155747126_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "73 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "73 NASSAU ST"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "salmon-pink painted stucco over masonry",
+    "facade_material_observed": "stucco",
+    "facade_condition_notes": "Painted stucco in fair condition; some wear and aging visible; second floor balcony with metal railing",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.2,
+    "window_arrangement": "symmetric",
+    "window_details": "Two windows at second floor; ground floor is commercial storefront with no visible traditional windows",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Single grey door at ground level with arched transom above; commercial entry",
+    "ground_floor_arches": "segmental",
+    "ground_floor_arch_count": 1,
+    "cornice": "simple",
+    "cornice_details": "Simple parapet/cornice line at roofline; minimal projection",
+    "bay_windows": 0,
+    "bay_window_details": "",
+    "balconies": 1,
+    "balcony_type": "projecting",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "",
+    "chimneys": 0,
+    "chimney_details": "Not visible from street",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Metal second-floor balcony railing; painted stucco facade",
+    "roof_type_observed": "Flat with parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Ground floor commercial with storefront glazing; Baru Baron business",
+    "signage_observed": "Baru Baron signage visible",
+    "overall_style": "Vernacular",
+    "alterations_visible": "Entire facade painted salmon-pink stucco over original brick; ground floor heavily modified for commercial use; second-floor balcony added",
+    "matches_hcd_typology": false,
+    "confidence": 0.8,
+    "notes": "Part of a row of converted house-form buildings; significant facade alteration from original Victorian character"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 1,
+  "balcony_type": "projecting",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Vernacular",
+  "storefront_description": "Ground floor commercial with storefront glazing; Baru Baron business",
+  "confidence": 0.9,
+  "notes": "Part of a row of converted house-form buildings; significant facade alteration from original Victorian character",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "segmental",
+  "ground_floor_arch_count": 1,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "balcony_detail": {
+    "type": "projecting",
+    "width_m": 2.0,
+    "depth_m": 1.2,
+    "railing_height_m": 1.0,
+    "count": 1
+  },
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#D8D0C0"
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Two-storey converted row house (pre-1889) with flat roof and parapet, 5.2 m wide. Salmon-pink painted stucco over original masonry, heavily altered from its Victorian character. Party walls on both sides. Active commercial ground floor (Baru Baron) with 1 dwelling unit above. Second-floor projecting metal balcony and simple cornice at roofline.",
+  "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

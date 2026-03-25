@@ -1,0 +1,22 @@
+{
+  "building_name": "69 Nassau St",
+  "skipped": true,
+  "skip_reason": "same address already split into tenant-specific records",
+  "_meta": {
+    "address": "69 Nassau St",
+    "photo": "IMG_20260320_155719448_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:30:00-04:00"
+  },
+  "photo_observations": {
+    "facade_material_observed": "brick",
+    "overall_style": "Victorian",
+    "notes": "Daytime photo from Nassau St walking pass.",
+    "confidence": 0.65,
+    "photo_date": "2026-03-20",
+    "photo_time_range": "3:48-3:57 PM",
+    "lighting": "daytime",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T01:00:00-04:00"
+  }
+}

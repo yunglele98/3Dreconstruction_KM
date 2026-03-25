@@ -1,0 +1,21 @@
+{
+  "building_name": "132 Bellevue Ave (Toronto Fire Station 315)",
+  "skipped": true,
+  "skip_reason": "duplicate address/view of the already-recorded Toronto Fire Station 315",
+  "_meta": {
+    "address": "132 Bellevue Ave (Toronto Fire Station 315)",
+    "photo": "IMG_20260320_174802084_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:35:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_174802084_HDR.jpg",
+      "IMG_20260320_174813258_HDR.jpg",
+      "IMG_20260320_174825037_HDR.jpg",
+      "IMG_20260320_174828394_HDR.jpg",
+      "IMG_20260320_174852969_HDR.jpg"
+    ],
+    "reference_photo_count": 10,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

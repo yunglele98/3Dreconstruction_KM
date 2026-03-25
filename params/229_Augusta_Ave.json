@@ -1,0 +1,292 @@
+{
+  "building_name": "229 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.2,
+    2.4
+  ],
+  "total_height_m": 5.68,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.4018209,
+    "lat": 43.65444985,
+    "street": "Augusta Ave",
+    "street_number": 229,
+    "setback_m": 0.0,
+    "lot_area_sqm": 94.79072920465043,
+    "footprint_sqm": 109.0,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 9
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "black metal cladding upper, white-painted ground floor with graffiti",
+  "windows_per_floor": [
+    3,
+    2
+  ],
+  "window_type": "storefront",
+  "window_width_m": 0.95,
+  "window_height_m": 1.35,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Commercial",
+    "construction_date": "1914-1930",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 43,
+    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated wi",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Augusta Coffee Bar",
+    "business_category": "Retail/Shop",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "damaged_masonry",
+    "structural_concern": false,
+    "risk_score": 60,
+    "signage": "Western Union Money Transfer (adjacent); El Buen Irecio variety store sign",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 12.42,
+    "height_avg_m": 5.68,
+    "footprint_sqm": 109.0,
+    "gfa_sqm": 272.5,
+    "fsi": 2.87,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "229 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "229 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "229 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.2,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "black metal cladding upper, white-painted ground floor with graffiti",
+    "facade_material_observed": "mixed (metal cladding, painted masonry)",
+    "facade_condition_notes": "2-storey building; dark black vertical metal cladding on upper floor; upper floor 2 large windows with heavy graffiti/tags (blue, white bubble letters); ground floor white-painted facade with black metal railing/fence patio; large glazed storefront windows behind wooden railing patio; colorful mural on adjacent wall (right side - face/portrait in teal/purple); adjacent to older brick Victorian buildings",
+    "condition": "fair",
+    "windows_per_floor": [
+      3,
+      2
+    ],
+    "window_type": "storefront",
+    "window_width_m": 0.95,
+    "window_height_m": 1.35,
+    "window_arrangement": "symmetric",
+    "window_details": "upper floor: 2 large windows with heavy graffiti/tags (blue, white bubble letters); ground floor: 3 large glazed storefront windows behind wooden railing patio",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "single cafe entry within white-painted ground floor",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "no traditional cornice; modern metal cladding extends to roofline",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "black metal railing/fence patio at ground level",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "colorful mural on adjacent wall (right side - face/portrait in teal/purple); heavy graffiti/tags on upper floor windows",
+    "roof_type_observed": "flat roof behind parapet",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "white-painted ground floor cafe with large glazed storefront windows behind wooden railing patio; 'Augusta Coffee' small text sign",
+    "signage_observed": "Augusta Coffee (small text)",
+    "overall_style": "Commercial",
+    "alterations_visible": "dark black vertical metal cladding on upper floor (modern renovation); white-painted ground floor; heavy graffiti on upper windows; wooden railing patio",
+    "matches_hcd_typology": false,
+    "confidence": 0.85,
+    "notes": "Batch 003 daytime photos (2026-03-15 ~3:55pm). Excellent view showing modern metal-clad upper and white-painted cafe ground floor. Prior observations superseded.",
+    "batch": "batch_003",
+    "photo_date": "2026-03-15",
+    "photo_time": "~15:55",
+    "photo_count": 1
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "white-painted ground floor cafe with large glazed storefront windows behind wooden railing patio; 'Augusta Coffee' small text sign",
+  "confidence": 0.9,
+  "notes": "Batch 003 daytime photos (2026-03-15 ~3:55pm). Excellent view showing modern metal-clad upper and white-painted cafe ground floor. Prior observations superseded.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#4A4A4A",
+    "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 3, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_summary": "The property is also associated wi. The property has value as an early-twentieth-century two-storey Commercial building.",
+    "heritage_expression": "Key storefront and facade features include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.6,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 3.2,
+          "sill_height_m": 2.5,
+          "frame_colour": "#4A4A4A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#4A4A4A",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "229 Augusta Ave presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by mixed (metal cladding, painted masonry) in a black metal cladding upper, white-painted ground floor with graffiti palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance. Key storefront and facade features include cornice. HCD note: The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated wi",
+  "heritage_summary": "The property is also associated wi. The property has value as an early-twentieth-century two-storey Commercial building.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#E8E0D4",
+    "trim_hex": "#4A4A4A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#4A4A4A",
+    "door_hex": "#4A4A4A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

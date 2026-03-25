@@ -1,0 +1,134 @@
+{
+  "building_name": "43.652435, -79.403564",
+  "floors": 1,
+  "facade_material": "brick",
+  "facade_colour": "dark red-brown brick with a bright yellow garage door",
+  "windows_per_floor": [
+    6
+  ],
+  "window_type": "rectangular",
+  "door_count": 2,
+  "door_type": "garage",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "flat",
+  "roof_features": [
+    "service_bay"
+  ],
+  "photo_observations": {
+    "overall_style": "Commercial",
+    "notes": "Low service garage block with a prominent repair-bay opening."
+  },
+  "_meta": {
+    "address": "43.652435, -79.403564",
+    "photo": "IMG_20260320_162615887_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:15:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260320_162615887_HDR.jpg",
+      "IMG_20260320_162618438_HDR.jpg",
+      "IMG_20260320_162633301_HDR.jpg",
+      "IMG_20260320_162644005_HDR.jpg",
+      "IMG_20260320_162647403_HDR.jpg"
+    ],
+    "reference_photo_count": 5,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "overall_style": "Commercial",
+  "notes": "Low service garage block with a prominent repair-bay opening.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "garage",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_1",
+      "type": "garage",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 1 storeys and is capped by a flat, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 6 window bays from lower to upper levels, using rectangular, and 2 principal entrances."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 6,
+          "type": "rectangular",
+          "width_m": 0.7,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {},
+  "street_setback_m": 2.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "43.652435, -79.403564 presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 1 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 6 window bays from lower to upper levels, using rectangular, and 2 principal entrances.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 3.2,
+  "floor_heights_m": [
+    3.2
+  ],
+  "roof_pitch_deg": 0,
+  "site": {}
+}

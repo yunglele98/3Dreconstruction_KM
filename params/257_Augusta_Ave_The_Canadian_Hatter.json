@@ -1,0 +1,18 @@
+{
+  "building_name": "257 Augusta Ave (The Canadian Hatter)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "261_Augusta_Ave.json",
+  "_meta": {
+    "address": "257 Augusta Ave (The Canadian Hatter)",
+    "photo": "IMG_20260320_001656846_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:23:36-04:00",
+    "reference_photos": [
+      "IMG_20260320_001656846_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

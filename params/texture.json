@@ -1,0 +1,21 @@
+{
+  "building_name": "texture",
+  "skipped": true,
+  "skip_reason": "surface texture close-up, not a building facade",
+  "_meta": {
+    "address": "texture",
+    "photo": "IMG_20260320_170422199_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:10:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_165420463_HDR.jpg",
+      "IMG_20260320_165425038_HDR.jpg",
+      "IMG_20260320_165435097_HDR.jpg",
+      "IMG_20260320_165443526_HDR.jpg",
+      "IMG_20260320_165452828_HDR.jpg"
+    ],
+    "reference_photo_count": 13,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

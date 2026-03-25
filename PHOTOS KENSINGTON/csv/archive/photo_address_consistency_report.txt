@@ -1,0 +1,31 @@
+Uncertain rows summary
+Total uncertain rows: 557
+inferred-approx: 381
+verified-visual: 133
+ref-match-high: 21
+ref-match-medium: 14
+ref-match-low: 8
+
+Priority review groups
+- inferred-approx rows: broad or time-based labels
+- ref-match-low/medium rows: lower confidence reference matches
+- verified-visual rows: visually matched but still often approximate storefront ranges
+
+Flagged consistency issues
+- Likely typo or malformed address: PXL_20260318_223054268.jpg -> 1185 Baldwin St area (Woofdawg Hotdog)
+- Likely typo or malformed address: PXL_20260318_223224167.jpg -> 1895 (Laya Skye Jewelry), Baldwin St area
+- Likely typo or malformed address: IMG_20260318_142741761_HDR.jpg -> 383 Augusta Ave / Oxford St corner (Trinity Common)
+- Large weak cluster: 275 rows labeled "Kensington alley (graffiti wall, electrical boxes) (approx, ~Nmin)" with only time-offset distinctions.
+- Large weak cluster: 105 rows labeled "Dundas St W / Kensington area (approx, ~Nmin)" on March 20 with no building-specific differentiation.
+- Night weak cluster: 8 rows labeled "Kensington Market / pharmacy area (night) (approx, ~Nmin)".
+- Mixed granularity: labels range from exact addresses to broad area names like "Augusta Ave", "Spadina Ave", and "Graffiti Alley", which may complicate downstream use.
+- Reference-match rows are confidence-tagged but not yet normalized to a consistent final-address style.
+
+Examples needing review
+- IMG_20260318_142741761_HDR.jpg -> 383 Augusta Ave / Oxford St corner (Trinity Common) [verified-visual]
+- PXL_20260318_214331400.jpg -> ~65 Bellevue Ave (Victorian semi-detached) [ref-match-low]
+- PXL_20260318_214349792.jpg -> ~67 Bellevue Ave (charcoal Victorian) [ref-match-low]
+- PXL_20260318_223054268.jpg -> 1185 Baldwin St area (Woofdawg Hotdog) [confirmed]
+- PXL_20260318_223224167.jpg -> 1895 (Laya Skye Jewelry), Baldwin St area [confirmed]
+- PXL_20260318_224133826.jpg -> ~136-140 Baldwin St (poster wall/hoarding) [ref-match-low]
+- PXL_20260318_224149351.jpg -> ~136-140 Baldwin St (poster wall/hoarding) [ref-match-low]

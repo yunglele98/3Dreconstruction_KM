@@ -1,0 +1,17 @@
+{
+  "building_name": "Dundas St (43.651979, -79.404208)",
+  "skipped": true,
+  "skip_reason": "street context / partial corner view, not a single building facade",
+  "_meta": {
+    "address": "Dundas St (43.651979, -79.404208)",
+    "photo": "IMG_20260320_171231188_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:10:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_171231188_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

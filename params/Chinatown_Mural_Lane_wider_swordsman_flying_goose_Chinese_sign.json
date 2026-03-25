@@ -1,0 +1,17 @@
+{
+  "building_name": "Chinatown Mural Lane (wider: swordsman, flying goose, Chinese sign)",
+  "skipped": true,
+  "skip_reason": "wide mural composition in rear lane; not a discrete facade",
+  "_meta": {
+    "address": "Chinatown Mural Lane (wider: swordsman, flying goose, Chinese sign)",
+    "photo": "IMG_20260318_154537846_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "reference_photos": [
+      "IMG_20260318_154537846_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

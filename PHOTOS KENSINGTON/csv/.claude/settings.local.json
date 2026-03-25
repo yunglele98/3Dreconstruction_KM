@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l \"/c/PHOTOS KENSINGTON/csv/photo_review_corrections \\(6\\).csv\")",
+      "Bash(wc -l \"/c/PHOTOS KENSINGTON/csv/photo_review_corrections \\(19\\).csv\")",
+      "Bash(python merge_corrections.py)",
+      "Bash(python:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(cp \"$f\" csv/review_remaining_24/)",
+      "Bash(echo \"OK: $f\")",
+      "Bash(echo \"MISSING: $f\")",
+      "Bash(wc -l \"/c/Users/liam1/DOWNLOADS/MASTERLIST/DATA/photo_review_corrections \\(6\\).csv\")",
+      "Read(//c/PHOTOS KENSINGTON/csv/**)",
+      "Bash(start:*)",
+      "Bash(wc:*)",
+      "Bash(cd:*)",
+      "Bash(mv build_review.py build_review_street_only.py merge_corrections.py merge_street_only.py merge_street_only2.py archive/)",
+      "Bash(mv photo_address_index_merged2.csv photo_address_index.csv)"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "395 Spadina Ave (In Fashion Bead House)",
+  "skipped": true,
+  "skip_reason": "too blurry to read the storefront facade reliably",
+  "_meta": {
+    "address": "395 Spadina Ave (In Fashion Bead House)",
+    "photo": "IMG_20260321_012409864_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:35:00-04:00",
+    "reference_photos": [
+      "IMG_20260321_012409864_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

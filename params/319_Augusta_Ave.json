@@ -1,0 +1,330 @@
+{
+  "building_name": "319 Augusta Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    4.8,
+    4.8,
+    4.8
+  ],
+  "total_height_m": 14.4,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40265096,
+    "lat": 43.65688773,
+    "street": "Augusta Ave",
+    "street_number": 319,
+    "setback_m": 0.0,
+    "lot_area_sqm": 297.9991824070742,
+    "footprint_sqm": 287.9,
+    "lot_coverage_pct": 96.6,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "dormers",
+    "patio"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "red brick upper facade with green storefront framing and beige patio enclosure",
+  "windows_per_floor": [
+    0,
+    3,
+    3
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1890-1903",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 77,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "building_features": [
+      "cornice",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "TacoTaco",
+    "business_category": "Bar/Nightlife",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "Burger Bar",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 15.24,
+    "height_avg_m": 9.44,
+    "footprint_sqm": 287.9,
+    "gfa_sqm": 719.8,
+    "fsi": 2.42,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 8,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 2
+  },
+  "_meta": {
+    "address": "319 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "dormer",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "319 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "319 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 15.24,
+      "new_total_height_m": 14.4,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.9,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "red brick upper facade with green storefront framing and beige patio enclosure",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "restaurant frontage is active and maintained; upper dormers and roof are intact but partly obscured by wires",
+    "condition": "good",
+    "windows_per_floor": [
+      0,
+      3,
+      3
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.3,
+    "window_arrangement": "symmetric",
+    "window_details": "three second-floor windows and three dormer/opening elements in the mansard-like roof above the storefront",
+    "door_count": 2,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "two commercial entries serve the restaurant and side/service access",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "signage band integrated into the lower brick facade",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "front patio enclosure occupies the sidewalk edge",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": false,
+    "decorative_details": "contrasting buff brick bands and green mansard trim give the building character",
+    "roof_type_observed": "mansard-like roof with dormers",
+    "roof_features": [
+      "dormers",
+      "patio"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "restaurant storefront with deep green framing and patio enclosure",
+    "signage_observed": "TacoTaco",
+    "overall_style": "Commercial",
+    "alterations_visible": "modern patio enclosure and restaurant storefront beneath retained upper residential massing",
+    "matches_hcd_typology": false,
+    "confidence": 0.84,
+    "notes": "The upper roofline is more complex than the DB suggests. Batch 009 daytime confirmation. | [batch_009_update] Daytime photo of TacoTaco commercial storefront. Confirms previous observations."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": true,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "restaurant storefront with deep green framing and patio enclosure",
+  "confidence": 0.9,
+  "notes": "The upper roofline is more complex than the DB suggests. Batch 009 daytime confirmation.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "decorative_elements": {
+    "string_courses": {
+      "present": true,
+      "width_mm": 140,
+      "projection_mm": 25,
+      "colour_hex": "#D4C9A8"
+    },
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays and 3 additional bays above, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice, original windows, string courses.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.5,
+          "sill_height_m": 2.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.1,
+          "sill_height_m": 1.6,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 0.0,
+  "facade_description": "319 Augusta Ave presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays and 3 additional bays above, using mixed, and 2 principal entrances. Character-defining facade elements include cornice, original windows, string courses. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "dormer": {
+    "present": true,
+    "type": "Gable dormer",
+    "count": 1,
+    "width_m": 1.0,
+    "height_m": 1.2,
+    "has_window": true
+  },
+  "volumes": []
+}

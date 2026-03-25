@@ -1,0 +1,19 @@
+{
+  "building_name": "230 Augusta Ave (Eative)",
+  "skipped": true,
+  "skip_reason": "duplicate tenant-angle already covered by the Augusta storefront file",
+  "_meta": {
+    "address": "230 Augusta Ave (Eative)",
+    "photo": "IMG_20260320_155640389_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_155640389_HDR.jpg",
+      "IMG_20260320_155646365_HDR.jpg",
+      "IMG_20260320_155657286_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

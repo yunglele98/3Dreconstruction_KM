@@ -1,0 +1,286 @@
+{
+  "building_name": "184 Baldwin St",
+  "floors": 2,
+  "floor_heights_m": [
+    3.9,
+    3.0
+  ],
+  "total_height_m": 6.97,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40110962,
+    "lat": 43.65487056,
+    "street": "Baldwin St",
+    "street_number": 184,
+    "setback_m": 0.0,
+    "lot_area_sqm": 207.7642621321383,
+    "footprint_sqm": 109.9,
+    "lot_coverage_pct": 52.9,
+    "lots_sharing_footprint": 8
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "false_front"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "white-painted brick facade with bright green storefront framing",
+  "windows_per_floor": [
+    4,
+    0
+  ],
+  "window_type": "storefront",
+  "window_width_m": 1.0,
+  "window_height_m": 2.0,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "Converted House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 84,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Food Retail / Grocer",
+    "business_name": "6x8 Market | The Q Concept & Trading Co",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Open sign; number 184 on door; Cheese Magic (adjacent at right)",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 13.85,
+    "height_avg_m": 6.97,
+    "footprint_sqm": 109.9,
+    "gfa_sqm": 274.8,
+    "fsi": 1.32,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "184 Baldwin St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "184 Baldwin St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "184 BALDWIN ST"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.5,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "white-painted brick facade with bright green storefront framing",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Small storefront appears active and maintained, with decorative paint and mural accents on the facade.",
+    "condition": "good",
+    "windows_per_floor": [
+      4,
+      0
+    ],
+    "window_type": "storefront",
+    "window_width_m": 1.0,
+    "window_height_m": 2.0,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor is composed of multiple glazed storefront bays and doors beneath a false-front parapet; no upper windows are visible on the facade.",
+    "door_count": 2,
+    "door_type": "mixed",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "One side entry and one central glazed double-door storefront entry.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "False-front parapet with simple coping and striped mini-awning.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible on the front-facing elevation.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Painted brick patterning and hand-painted floral wall art add character to the otherwise plain false front.",
+    "roof_type_observed": "False-front roofline with simple rear gable",
+    "roof_features": [
+      "false_front"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Compact market storefront with multiple glazed openings and bright painted trim.",
+    "signage_observed": "6x8 Market sign and address numerals.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Facade has been simplified into a one-storey-looking false front with modern glazing and paint treatment.",
+    "matches_hcd_typology": false,
+    "confidence": 0.9,
+    "notes": "This is one of the clearest full-frontal photos in the batch."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "mixed",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Compact market storefront with multiple glazed openings and bright painted trim.",
+  "confidence": 0.9,
+  "notes": "This is one of the clearest full-frontal photos in the batch.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "mixed",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "mixed",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 4, 0 window bays from lower to upper levels, using storefront, and 2 principal entrances.",
+    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 2.5,
+          "sill_height_m": 1.6,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "Compact two-storey commercial building presenting a false-front parapet that conceals a rear gable roof. The white-painted brick facade is enlivened by bright green storefront framing, hand-painted floral wall art, and a striped mini-awning. Four glazed storefront bays and two entries fill the ground floor; no upper windows are visible from the street. Currently occupied by 6x8 Market. One of the clearest full-frontal photos in the survey batch confirms the false-front reads as a single-storey commercial shopfront despite the two-storey structure behind.",
+  "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8E0D4",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

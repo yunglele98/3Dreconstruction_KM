@@ -1,0 +1,19 @@
+{
+  "building_name": "Alley Betwee 39 & 41 Nassau St",
+  "skipped": true,
+  "skip_reason": "alley passage between buildings; not a discrete building facade",
+  "_meta": {
+    "address": "Alley Betwee 39 & 41 Nassau St",
+    "photo": "IMG_20260318_175543668_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "reference_photos": [
+      "IMG_20260318_175543668_HDR.jpg",
+      "IMG_20260318_175548354_HDR.jpg",
+      "IMG_20260318_175554084_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

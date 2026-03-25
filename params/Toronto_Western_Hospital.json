@@ -1,0 +1,351 @@
+{
+  "building_name": "Toronto Western Hospital campus",
+  "floors": 8,
+  "facade_material": "Mixed masonry",
+  "facade_colour": "red brick structural piers and end walls with beige concrete floor bands, dark strip windows, silver-gray mechanical enclosures, and a pale glazed emergency base",
+  "windows_per_floor": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.4,
+  "window_height_m": 1.6,
+  "door_count": 4,
+  "door_type": "recessed",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "flat institutional roof",
+  "roof_pitch_deg": 2,
+  "roof_features": [
+    "mechanical_penthouse",
+    "service_stacks",
+    "glazed_connector",
+    "porte_cochere"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "red brick structural piers and end walls with beige concrete floor bands, dark strip windows, silver-gray mechanical enclosures, and a pale glazed emergency base",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "The older hospital complex appears active, maintained, and heavily adapted over time. The main tower is intact and occupied, the emergency frontage is modernized, the service plant is prominent, and a very large new expansion is under active construction beside it.",
+    "condition": "good",
+    "windows_per_floor": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.4,
+    "window_height_m": 1.6,
+    "window_arrangement": "irregular",
+    "window_details": "The main critical-care tower uses dark horizontal ribbon windows between concrete spandrel bands, with some recessed louvered and mechanical levels. Attached lower wings use repetitive rectangular punched windows and broader glazed ground-floor sections.",
+    "door_count": 4,
+    "door_type": "recessed",
+    "door_width_m": 1.8,
+    "door_height_m": 2.6,
+    "door_details": "The most legible public entrance is the emergency department, set behind a large steel-and-glass canopy with ambulance drop-off. Other entrances are recessed or partly obscured by connectors, site fencing, service structures, and attached wings.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "No traditional cornice; rooflines are institutional and flat, with parapets, mechanical screening, and service housings.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "open",
+    "porch_details": "Large emergency porte-cochere with glazed canopy and structural steel columns shelters ambulance and patient drop-off.",
+    "chimneys": 2,
+    "chimney_details": "A very tall cylindrical concrete smokestack is clearly visible at the service plant, and a separate tall paired silver service stack rises behind adjacent mechanical structures.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "The campus is functional rather than decorative; architectural character comes from massing, repeated window bands, the emergency canopy, and the dramatic smokestack and mechanical infrastructure.",
+    "roof_type_observed": "flat institutional roof",
+    "roof_features": [
+      "mechanical_penthouse",
+      "service_stacks",
+      "glazed_connector",
+      "porte_cochere"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "Toronto Western Hospital, Loretta Anne Rogers Critical Care Centre, and EMERGENCY signage are visible. Nearby attached campus frontage also includes Shoppers Drug Mart and other medical and commercial signage.",
+    "overall_style": "Institutional",
+    "alterations_visible": "The campus includes an older critical-care tower, a major emergency entrance modernization, attached lower street-facing wings, large permanent service-plant structures, and a substantial unfinished hospital expansion under construction.",
+    "matches_hcd_typology": false,
+    "confidence": 0.9,
+    "notes": "This reconstruction combines hospital images from batches 025, 026, 030, and 031. The campus is best understood as a multi-part institutional complex: an 8-storey critical-care tower, emergency drop-off frontage, a large service and mechanical plant with smokestack, a lower Bathurst-facing wing, and a separate but attached new expansion under construction."
+  },
+  "_meta": {
+    "address": "399 Bathurst St / Toronto Western Hospital",
+    "photo": "merged from multiple photos across batches 025, 026, 030, and 031",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:10:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "dimensions_backfill"
+    ],
+    "dimensions_source": "default",
+    "reference_photos": [
+      "IMG_20260320_161347796_HDR.jpg",
+      "IMG_20260320_161403713_HDR.jpg",
+      "IMG_20260320_161408151_HDR.jpg",
+      "IMG_20260320_161411563_HDR.jpg",
+      "IMG_20260320_161446217_HDR.jpg"
+    ],
+    "reference_photo_count": 23,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "window_arrangement": "irregular",
+  "door_width_m": 1.8,
+  "door_height_m": 2.6,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Institutional",
+  "storefront_description": "",
+  "confidence": 0.9,
+  "notes": "This reconstruction combines hospital images from batches 025, 026, 030, and 031. The campus is best understood as a multi-part institutional complex: an 8-storey critical-care tower, emergency drop-off frontage, a large service and mechanical plant with smokestack, a lower Bathurst-facing wing, and a separate but attached new expansion under construction.",
+  "porch_present": true,
+  "porch_type": "open",
+  "chimney_count": 2,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Recessed entry door",
+      "position": "left",
+      "width_m": 1.8,
+      "height_m": 2.6
+    },
+    {
+      "id": "door_1",
+      "type": "Recessed entry door",
+      "position": "right",
+      "width_m": 1.8,
+      "height_m": 2.6
+    },
+    {
+      "id": "door_2",
+      "type": "Recessed entry door",
+      "position": "right",
+      "width_m": 1.8,
+      "height_m": 2.6
+    },
+    {
+      "id": "door_3",
+      "type": "Recessed entry door",
+      "position": "right",
+      "width_m": 1.8,
+      "height_m": 2.6
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 8 storeys and is capped by a flat institutional roof, consistent with its multi-residential typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 10, 10, 10, 10, 10, 10, 10, 10 window bays from lower to upper levels, using mixed, and 4 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 5",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 6",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 7",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 8",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "Toronto Western Hospital campus presents a multi-residential facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 8 storeys and is capped by a flat institutional roof, consistent with its multi-residential typology. The facade reads primarily as mixed in a red brick structural piers and end walls with beige concrete floor bands, dark strip windows, silver-gray mechanical enclosures, and a pale glazed emergency base palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 10, 10, 10, 10, 10, 10, 10, 10 window bays from lower to upper levels, using mixed, and 4 principal entrances. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "multi-residential",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 25.6,
+  "floor_heights_m": [
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2,
+    3.2
+  ],
+  "site": {}
+}

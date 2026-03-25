@@ -1,0 +1,340 @@
+{
+  "building_name": "59 Nassau St",
+  "floors": 3,
+  "floor_heights_m": [
+    4.0,
+    5.1,
+    4.3
+  ],
+  "total_height_m": 13.46,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40171909,
+    "lat": 43.65515442,
+    "street": "Nassau St",
+    "street_number": 59,
+    "setback_m": 3.0,
+    "lot_area_sqm": 127.3435934020492,
+    "footprint_sqm": 107.3,
+    "lot_coverage_pct": 84.3,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick with dark brown or black trim and an evergreen tree partly screening the lower facade",
+  "windows_per_floor": [
+    2,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.4,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "1890-1903",
+    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1890,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 287,
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair, the properties retain most of their original building features including cross-gabled rooflines, mirrored facades, double-height bay windows, brick cladding with decorative brickwork, decorative wooden gable brackets, and fenestration pattern with mix of three-centred and flat arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [
+      "decorative_brick",
+      "bay_window",
+      "original_windows"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 4,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 10,
+    "signage": "",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 13.46,
+    "height_avg_m": 8.14,
+    "footprint_sqm": 107.3,
+    "gfa_sqm": 268.2,
+    "fsi": 2.11,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 3
+  },
+  "_meta": {
+    "address": "59 Nassau St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_175814615_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260318_175814615_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "59 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "59 NASSAU ST"
+    ]
+  },
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "floors": [
+      0,
+      1
+    ],
+    "width_m": 2.1,
+    "projection_m": 0.6
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "window_hoods": {
+      "present": true,
+      "arch_type": "flat",
+      "colour_hex": "#D4C9A8"
+    },
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "decorative"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "type": "decorative",
+      "height_mm": 350,
+      "projection_mm": 200,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "red-brown brick with dark brown or black trim and an evergreen tree partly screening the lower facade",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Facade appears intact and occupied; tree cover and chalk markings obscure some ground-level details.",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      2,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.95,
+    "window_height_m": 1.4,
+    "window_arrangement": "symmetric",
+    "window_details": "The mirrored semi-detached composition shows stacked window openings and a narrow upper gable window.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.0,
+    "door_details": "Main entry is partly obscured but sits within the lower facade beside the front tree and bins.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "decorative",
+    "cornice_details": "Decorative gable trim and brickwork remain visible at the upper levels.",
+    "bay_windows": 1,
+    "bay_window_details": "Paired bay-and-gable form remains legible, though screening from the evergreen limits the lower view.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "Short front stoop partially hidden by landscaping and street clutter.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": true,
+    "decorative_details": "Decorative brick patterning and steep twin gables reinforce the late-Victorian semi-detached type.",
+    "roof_type_observed": "Steep twin front gables",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "No signage visible.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Replacement windows are visible but the paired semi-detached massing is still clear.",
+    "matches_hcd_typology": true,
+    "confidence": 0.76,
+    "notes": "Best available view of the house after the more obstructed chalk-writing shot."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.0,
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 1,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": true,
+  "overall_style": "Victorian",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Best available view of the house after the more obstructed chalk-writing shot.",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.0,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, bay window, original windows, cornice.",
+    "heritage_summary": "Constructed as a pair, the properties retain most of their original building features including cross-gabled rooflines, mirrored facades, double-height bay windows, brick cladding with decorative brickwork, decorative wooden gable brackets, and fenestration pattern with mix of three-centred and flat arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#E8E0D0"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.9,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "facade_description": "Semi-detached bay-and-gable house (1890-1903) in red-brown brick with cream trim and decorative brickwork. Three storeys under a cross-gable, with a three-sided canted bay spanning the lower two floors and decorative window hoods. Subdivided into 3 dwelling units. Party walls on both sides. An evergreen tree partially screens the lower facade.",
+  "heritage_summary": "Constructed as a pair, the properties retain most of their original building features including cross-gabled rooflines, mirrored facades, double-height bay windows, brick cladding with decorative brickwork, decorative wooden gable brackets, and fenestration pattern with mix of three-centred and flat arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "flat",
+    "count": 2,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": []
+}

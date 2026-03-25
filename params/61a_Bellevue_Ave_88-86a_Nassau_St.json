@@ -1,0 +1,17 @@
+{
+  "building_name": "61a Bellevue Ave / 88-86a Nassau St",
+  "skipped": true,
+  "skip_reason": "alternate angle already covered by the Bellevue/Nassau row files",
+  "_meta": {
+    "address": "61a Bellevue Ave / 88-86a Nassau St",
+    "photo": "IMG_20260320_155250679_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_155250679_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

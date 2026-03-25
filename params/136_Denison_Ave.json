@@ -1,0 +1,288 @@
+{
+  "building_name": "136 Denison Ave",
+  "floors": 1,
+  "floor_heights_m": [
+    4.8
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40267634,
+    "lat": 43.65242556,
+    "street": "Denison Ave",
+    "street_number": 130,
+    "setback_m": 3.0,
+    "lot_area_sqm": 217.5042241233782,
+    "footprint_sqm": 66.8,
+    "lot_coverage_pct": 30.7,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "chimney"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "dark brown brick, somewhat weathered",
+  "windows_per_floor": [
+    2
+  ],
+  "window_type": "casement",
+  "window_width_m": 0.7,
+  "window_height_m": 1.0,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "House-form, Row, Ontario Cottage",
+    "construction_date": "pre-1889",
+    "architectural_style": "House-form, Row, Ontario Cottage (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 122,
+    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "residential",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Semi-Detached",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Local | Residential | Transition to Bellevue Park",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "roof_damage",
+    "structural_concern": false,
+    "risk_score": 40,
+    "signage": "",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 10.19,
+    "height_avg_m": 6.42,
+    "footprint_sqm": 66.8,
+    "gfa_sqm": 167.0,
+    "fsi": 0.77,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "136 Denison Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo_agent": "claude-opus-4-6",
+    "photo_timestamp": "2026-03-24T21:20:41Z",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_164819353_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_164819353_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "136 Denison Ave",
+    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_address_candidates": [
+      "136 DENISON AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.19,
+      "new_total_height_m": 4.8,
+      "floors": 1.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark brown brick, somewhat weathered",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Poor condition, cluttered yard with stored items, chain-link fence, general neglect visible",
+    "condition": "poor",
+    "windows_per_floor": [
+      2
+    ],
+    "window_type": "casement",
+    "window_width_m": 0.7,
+    "window_height_m": 1.0,
+    "window_arrangement": "symmetric",
+    "window_details": "Small windows flanking central door, some appear to be enclosed/boarded, tan/beige infill panel beside door",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "White front door, central position under gable peak, with sidelights or panels",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "Simple gable eave",
+    "bay_windows": 0,
+    "bay_window_details": "",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch, direct entry at grade",
+    "chimneys": 1,
+    "chimney_details": "Single brick chimney visible at roof ridge, center/rear position",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Central gable form only, minimal surviving decoration",
+    "roof_type_observed": "gable",
+    "roof_features": [
+      "chimney"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "None",
+    "overall_style": "Vernacular",
+    "alterations_visible": "Tan/beige infill panel beside door (possible window bricked up), chain-link fence, general neglect",
+    "matches_hcd_typology": true,
+    "confidence": 0.75,
+    "notes": "Ontario Cottage in poorest condition of the row. Chimney visible on ridge. Yard cluttered with stored items. Central gable form still readable but details deteriorated."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "single",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Vernacular",
+  "storefront_description": "",
+  "confidence": 0.9,
+  "notes": "Ontario Cottage in poorest condition of the row. Chimney visible on ridge. Yard cluttered with stored items. Central gable form still readable but details deteriorated.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 1,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 4.6,
+          "sill_height_m": 3.1,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "136 Denison Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

@@ -1,0 +1,316 @@
+{
+  "building_name": "30A-32E Oxford St",
+  "floors": 3,
+  "floor_heights_m": [
+    3.2,
+    3.2,
+    3.2
+  ],
+  "facade_material": "brick",
+  "facade_colour": "warm red brick with buff-yellow brick bands and arches, plus pale sage-green doors, garage doors, eaves, and verge trim",
+  "windows_per_floor": [
+    10,
+    10,
+    5
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.8,
+  "window_height_m": 1.45,
+  "door_count": 5,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "Steep gabled roofline with repeated front-facing rear gables",
+  "roof_pitch_deg": 42,
+  "roof_features": [
+    "chimney",
+    "satellite_dish"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "warm red brick with buff-yellow brick bands and arches, plus pale sage-green doors, garage doors, eaves, and verge trim",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "The row appears maintained with intact masonry and recently painted trim, though there is minor weathering and patchy winter staining at the lower steps and paving.",
+    "condition": "good",
+    "windows_per_floor": [
+      10,
+      10,
+      5
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.8,
+    "window_height_m": 1.45,
+    "window_arrangement": "symmetric",
+    "window_details": "Each house has vertically proportioned rear windows with replacement glazing, buff-brick segmental arches, and narrow attic windows set into steep front-facing rear gables.",
+    "door_count": 5,
+    "door_type": "single",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Individual rear entries sit above concrete stoops with black metal railings; several units also have pale green overhead garage doors at grade.",
+    "ground_floor_arches": "segmental brick arches over selected rear openings",
+    "ground_floor_arch_count": 5,
+    "cornice": "decorative",
+    "cornice_details": "Painted wood bargeboards and fascia highlight the repeated Victorian rear gables rather than a projecting cornice.",
+    "bay_windows": 0,
+    "bay_window_details": "No bay windows visible from the rear lane view.",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "Raised concrete stoops serve the rear entries, with short runs of steps, black railings, and retaining walls.",
+    "chimneys": 2,
+    "chimney_details": "A few brick chimneys and vent stacks are visible above the shared roofline toward the middle and far end of the row.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": true,
+    "decorative_lintels": true,
+    "decorative_details": "Repeated buff-brick arches, string courses, diaper brick ventilation panels, and carved wooden gable trim give the row a strong late-Victorian identity.",
+    "roof_type_observed": "Steep gabled roofline with repeated front-facing rear gables",
+    "roof_features": [
+      "chimney",
+      "satellite_dish"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "No commercial signage visible.",
+    "overall_style": "Victorian",
+    "alterations_visible": "Replacement windows, rear garage doors, and minor utility additions are visible, but the repeated masonry and gable form remain legible.",
+    "matches_hcd_typology": true,
+    "confidence": 0.8,
+    "notes": "Wide rear-lane group view of the Oxford Street rowhouses, showing the repeated gables and rear access arrangement clearly."
+  },
+  "_meta": {
+    "address": "30A-32E Oxford St",
+    "photo": "IMG_20260318_151133544_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:21:39-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260318_151133544_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    }
+  },
+  "window_arrangement": "symmetric",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 350,
+    "projection_mm": 200,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": true,
+  "decorative_lintels": true,
+  "overall_style": "Victorian",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Wide rear-lane group view of the Oxford Street rowhouses, showing the repeated gables and rear access arrangement clearly.",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "chimney_count": 2,
+  "ground_floor_arch_type": "segmental brick arches over selected rear openings",
+  "ground_floor_arch_count": 5,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_2",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_3",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1
+    },
+    {
+      "id": "door_4",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1
+    }
+  ],
+  "decorative_elements": {
+    "string_courses": {
+      "present": true,
+      "width_mm": 140,
+      "projection_mm": 25,
+      "colour_hex": "#D4C9A8"
+    },
+    "window_hoods": {
+      "present": true,
+      "arch_type": "flat",
+      "colour_hex": "#D4C9A8"
+    },
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "decorative",
+      "height_mm": 350,
+      "projection_mm": 200,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 3 storeys and is capped by a steep gabled roofline with repeated front-facing rear gables, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 10, 10, 5 window bays from lower to upper levels, using mixed, and 5 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include string courses, cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 10,
+          "type": "mixed",
+          "width_m": 0.4,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 5,
+          "type": "mixed",
+          "width_m": 0.8,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 2.0,
+  "facade_description": "30A-32E Oxford St presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 3 storeys and is capped by a steep gabled roofline with repeated front-facing rear gables, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 10, 10, 5 window bays from lower to upper levels, using mixed, and 5 principal entrances. Character-defining facade elements include string courses, cornice.",
+  "hcd_data": {
+    "typology": "house-form, row",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "flat",
+    "count": 10,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 9.600000000000001,
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {
+    "lon": -79.40114681999998,
+    "lat": 43.65673892,
+    "street": "Oxford St",
+    "street_number": 30
+  }
+}

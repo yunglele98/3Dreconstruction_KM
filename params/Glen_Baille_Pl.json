@@ -1,0 +1,20 @@
+{
+  "building_name": "Glen Baille Pl",
+  "skipped": true,
+  "skip_reason": "alley/lane",
+  "_meta": {
+    "address": "Glen Baille Pl",
+    "photo": "IMG_20260316_010104753_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T12:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_010104753_HDR.jpg",
+      "IMG_20260316_010117222_HDR.jpg",
+      "IMG_20260316_010125222_HDR.jpg",
+      "IMG_20260316_010140558_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

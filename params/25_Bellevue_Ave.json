@@ -1,0 +1,352 @@
+{
+  "building_name": "25 Bellevue Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40301739999998,
+    "lat": 43.65384583,
+    "street": "Bellevue Ave",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 322.4653956146184,
+    "footprint_sqm": 124.0,
+    "lot_coverage_pct": 38.5,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "warm red brick with white/cream stone trim at arched window surrounds, pilaster capitals, and string course; dark wood entry surround with gold semi-circular fanlight",
+  "windows_per_floor": [
+    2,
+    3
+  ],
+  "window_type": "arched",
+  "window_width_m": 0.9,
+  "window_height_m": 1.7,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "good",
+  "photo_observations": {
+    "facade_colour_observed": "warm red brick with white/cream stone trim at arched window surrounds, pilaster capitals, and string course; dark wood entry surround with gold semi-circular fanlight",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Heritage masonry in good condition; brick pointing intact; white stone trim well-maintained; arched window surrounds crisp; some darkening/patina on lower courses; fire escape on right side is a later addition but does not compromise facade integrity",
+    "condition": "good",
+    "windows_per_floor": [
+      2,
+      3
+    ],
+    "window_type": "arched",
+    "window_width_m": 0.9,
+    "window_height_m": 1.7,
+    "window_arrangement": "symmetric",
+    "window_details": "Ground floor: 1 circular oculus window (diameter ~0.7m) to left of entrance + 1 rectangular window to right. Upper floor: 3 tall round-arched windows with white stone voussoirs and keystones; central window slightly wider; all windows have deep reveals. Dormer windows visible at roofline with peaked gables.",
+    "door_count": 1,
+    "door_type": "arched",
+    "door_width_m": 1.5,
+    "door_height_m": 3.0,
+    "door_details": "Double-leaf entry doors set within a large round arch with white stone voussoirs; semi-circular fanlight/transom above with gold/amber stained glass in radiating pattern; dark wood surround; stone steps up from sidewalk",
+    "ground_floor_arches": "round",
+    "ground_floor_arch_count": 1,
+    "cornice": "decorative",
+    "cornice_details": "Decorative brick corbelling at roofline; white stone string course separating ground and upper floors; stepped parapet gable with white stone coping",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "stoop",
+    "porch_details": "Stone/concrete steps leading to arched entrance; no covered porch; wrought iron railings flanking steps",
+    "chimneys": 0,
+    "chimney_details": "Not visible from this angle",
+    "quoins": false,
+    "pilasters": true,
+    "string_course": true,
+    "decorative_lintels": true,
+    "decorative_details": "White stone pilaster capitals at upper floor; continuous white stone string course between floors; brick corbelling at cornice; round-arched window heads with stone voussoirs and keystones; circular oculus window with stone surround; stepped parapet gable with decorative coping; black wrought iron fire escape (later addition, right side)",
+    "roof_type_observed": "Gable with stepped parapet visible from street",
+    "roof_features": [
+      "parapet_wall",
+      "dormer",
+      "stepped_gable"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "none",
+    "signage_observed": "The Kiever Shul signage near entrance",
+    "overall_style": "Romanesque Revival",
+    "alterations_visible": "Black metal fire escape added on right side; some window glazing may be replacement; otherwise remarkably intact 1927 synagogue",
+    "matches_hcd_typology": true,
+    "confidence": 0.92,
+    "batch": "batch_003",
+    "photo_date": "2026-03-15T15:39:00",
+    "lighting": "daytime, clear",
+    "notes": "Kiever Shul (1927, architect Benjamin Swartz). Romanesque Revival synagogue. Part IV Designated + Part V HCD, protection level 5. Central entrance with large round arch, gold fanlight, and stone voussoirs. Circular oculus window at ground floor. Upper floor has 3 tall round-arched windows with white stone trim. Dormer windows at roofline. Black metal fire escape on right side is a later addition."
+  },
+  "hcd_data": {
+    "typology": "Institutional",
+    "construction_date": "1927",
+    "architectural_style": "Institutional (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1927 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1910,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "The property has cultural heritage value for its direct association with the Jewish community in Kensington Market. Commissioned by Jewish immigrants from Ukraine who settled in the area, it was designed by Jewish architect Benjamin Swartz. With its intact built form, building features, and continue",
+    "building_features": [],
+    "heritage_register": "Part IV Designated (Individual) + Part V HCD",
+    "protection_level": 5
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Institutional",
+    "land_use": "Institutional \u2013 Religious",
+    "commercial_use": "Other Commercial",
+    "business_name": "The Kiever Shul",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 3: Jewish Market (1900\u20131950)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 14.21,
+    "height_avg_m": 9.43,
+    "footprint_sqm": 124.0,
+    "gfa_sqm": 310.0,
+    "fsi": 0.96,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": null,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "25 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "25 Bellevue Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "25 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 14.21,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "arched",
+  "door_width_m": 1.5,
+  "door_height_m": 3.0,
+  "cornice": {
+    "present": true,
+    "type": "decorative",
+    "height_mm": 300,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": true,
+  "string_course": true,
+  "decorative_lintels": true,
+  "overall_style": "Romanesque Revival",
+  "storefront_description": "none",
+  "confidence": 0.9,
+  "notes": "Beautiful red brick synagogue, 2+ storeys, Romanesque Revival style. Central entrance with large round arch and semi-circular fanlight (wood/gold). Circular (oculus) window flanking entrance. Upper floor: 3 tall round-arched windows with white stone trim. Dormer windows at roofline. Black metal fire escape on right side.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "round arched entry surround",
+  "ground_floor_arch_count": 1,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Double-leaf arched entry",
+      "position": "center",
+      "width_m": 1.5,
+      "height_m": 3.0,
+      "transom": {
+        "present": true,
+        "height_m": 0.8,
+        "type": "semi-circular fanlight with gold/amber stained glass"
+      },
+      "arch": {
+        "type": "round",
+        "voussoirs": true,
+        "keystone": true,
+        "material": "white stone"
+      }
+    }
+  ],
+  "decorative_elements": {
+    "window_hoods": {
+      "present": true,
+      "arch_type": "round",
+      "colour_hex": "#E8E0D0"
+    },
+    "pilasters": {
+      "present": true,
+      "width_mm": 250,
+      "projection_mm": 40,
+      "colour_hex": "#E8E0D0"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 150,
+      "projection_mm": 30,
+      "colour_hex": "#E8E0D0"
+    },
+    "corbelling": {
+      "present": true,
+      "type": "decorative",
+      "colour_hex": "#B85A3A"
+    },
+    "oculus_window": {
+      "present": true,
+      "diameter_m": 0.7,
+      "position": "left_of_entrance"
+    },
+    "cornice": {
+      "present": true,
+      "type": "decorative",
+      "height_mm": 300,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    },
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The principal elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its institutional typology.",
+    "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 2, 3 opening rhythm from lower to upper levels, using arched, and 1 principal entrance.",
+    "heritage_summary": "With its intact built form, building features, and continue. Commissioned by Jewish immigrants from Ukraine who settled in the area, it was designed by Jewish architect Benjamin Swartz.",
+    "heritage_expression": "Key heritage elements on the principal elevation include string courses, cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "oculus",
+          "width_m": 0.7,
+          "height_m": 0.7,
+          "sill_height_m": 2.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "notes": "Circular oculus window with stone surround, left of entrance"
+        },
+        {
+          "count": 1,
+          "type": "rectangular",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "notes": "Rectangular window to right of entrance"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "arched",
+          "width_m": 0.9,
+          "height_m": 2.5,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "arch_type": "round",
+          "voussoirs": true,
+          "notes": "Three tall round-arched windows with white stone voussoirs and keystones; central window slightly wider"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "facade_description": "The Kiever Shul (1927, Benjamin Swartz) is a Romanesque Revival synagogue in warm red brick with white stone trim. Three tall round-arched windows with stone voussoirs and keystones dominate the upper floor, while the ground level features a grand round-arched double-door entry with a gold stained-glass fanlight and a circular oculus window. A stepped parapet gable with stone coping and brick corbelling at the cornice complete the composition. A black metal fire escape on the right side is a later addition; otherwise the facade is remarkably intact.",
+  "heritage_summary": "With its intact built form, building features, and continue. Commissioned by Jewish immigrants from Ukraine who settled in the area, it was designed by Jewish architect Benjamin Swartz.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "round",
+    "count": 1,
+    "spring_height_ratio": 0.65
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "86 Nassau St (Yarns Untangled)",
+  "skipped": true,
+  "skip_reason": "alternate tenant-angle already covered by the Nassau row files",
+  "_meta": {
+    "address": "86 Nassau St (Yarns Untangled)",
+    "photo": "IMG_20260320_155318425_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_155318425_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

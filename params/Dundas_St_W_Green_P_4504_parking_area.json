@@ -1,0 +1,17 @@
+{
+  "building_name": "Dundas St W (Green P 4504 parking area)",
+  "skipped": true,
+  "skip_reason": "parking lot / streetscape context, not a building facade",
+  "_meta": {
+    "address": "Dundas St W (Green P 4504 parking area)",
+    "photo": "IMG_20260319_170744412_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:23:36-04:00",
+    "reference_photos": [
+      "IMG_20260319_170744412_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "building_name": "Spadina Ave, Victorian row houses",
+  "skipped": true,
+  "skip_reason": "no specific address — generic row house view; individual houses may be covered by address-specific params",
+  "_meta": {
+    "address": "Spadina Ave, Victorian row houses",
+    "photo": "IMG_20260316_003706318_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T21:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_003706318_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

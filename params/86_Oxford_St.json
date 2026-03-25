@@ -1,0 +1,200 @@
+{
+  "building_name": "86 Oxford St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.0,
+    5.2
+  ],
+  "total_height_m": 9.24,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40460926999998,
+    "lat": 43.65585567,
+    "street": "Oxford St",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 244.2808268318832,
+    "footprint_sqm": 114.1,
+    "lot_coverage_pct": 46.7,
+    "lots_sharing_footprint": 5
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Multi-residential ; House-form, Detached",
+    "construction_date": "Pre-1889 (96 Bellevue Avenue), 1904-1913 (86-90 Oxford Street)",
+    "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 347,
+    "statement_of_contribution": "The property has value as a rare and early example of a purpose-built walk-up apartment building incorporating a pre-1884 House-form building. Through its construction dates and typologies, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its combination of house and multi-residential built forms, the property yields information that contributes to the understanding of the evolution of Kensington Market. The house form building, with the street address of 96 Bellevue Avenue, retains its scale form and massing and building features including buff brick cladding and voussoirs, cross gables and dormers with decorative woodwork, flat headed and segmentally arched window and door openings, two-storey projecting bays, and two-storey verandah with Tuscan columns. Constructed onto to the rear of 96 Bellevue Avenue between 1909 and 1910, the walk-up apartment building, with street addresses of 86 and 90 Oxford Street retains its scale, form and massing and original building features including buff brick cladding with decorative red brickwork and stonework, segmentally arched window openings, three-sided flat headed bay windows, wide eaves, and recessed entrances. Contextually, the property shares a consistent setback and scale with the other contributing properties on Bellevue Avenue, and consistent scale with the other contributing properties on Oxford Street, maintaining and supporting the residential character of both streetscapes. Summary: Reference Primary Address Entrance Address(es) Number 347. 88 Oxford Street 96 Bellevue Avenue 86 Oxford Street 90 Oxford Street 184 DCH | FO :D 91 Oxford Street 91 OXFORD STREET",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Multi-Unit",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 19.13,
+    "height_avg_m": 9.24,
+    "footprint_sqm": 114.1,
+    "gfa_sqm": 285.2,
+    "fsi": 1.17,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 5,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "86 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "86 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "86 OXFORD ST"
+    ]
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its multi-residential ; house-form, detached typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "The property has value as a rare and early example of a purpose-built walk-up apartment building incorporating a pre-1884 House-form building. Constructed onto to the rear of 96 Bellevue Avenue between 1909 and 1910, the walk-up apartment building, with street addresses of 86 and 90 Oxford Street retains its scale, form and massing and original building features including buff brick cladding with decorative red brickwork and stonework, segmentally arched window openings, three-sided flat headed bay windows, wide eaves, and recessed entrances."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 6.3,
+          "sill_height_m": 4.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "86 Oxford St presents a multi-residential ; house-form, detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its multi-residential ; house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: The property has value as a rare and early example of a purpose-built walk-up apartment building incorporating a pre-1884 House-form building. Through its construction dates and typologies, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its combination of house and multi-residential built forms, the property yields information that contributes to the understanding of the evolution of Kensington Market. The house form building, with the street address of 96 Bellevue Avenue, retains its scale form and massing and building features including buff brick cladding and voussoirs, cross gables and dormers with decorative woodwork, flat headed and segmentally arched window and door openings, two-storey projecting bays, and two-storey verandah with Tuscan columns. Constructed onto to the rear of 96 Bellevue Avenue between 1909 and 1910, the walk-up apartment building, with street addresses of 86 and 90 Oxford Street retains its scale, form and massing and original building features including buff brick cladding with decorative red brickwork and stonework, segmentally arched window openings, three-sided flat headed bay windows, wide eaves, and recessed entrances. Contextually, the property shares a consistent setback and scale with the other contributing properties on Bellevue Avenue, and consistent scale with the other contributing properties on Oxford Street, maintaining and supporting the residential character of both streetscapes. Summary: Reference Primary Address Entrance Address(es) Number 347. 88 Oxford Street 96 Bellevue Avenue 86 Oxford Street 90 Oxford Street 184 DCH | FO :D 91 Oxford Street 91 OXFORD STREET",
+  "heritage_summary": "The property has value as a rare and early example of a purpose-built walk-up apartment building incorporating a pre-1884 House-form building. Constructed onto to the rear of 96 Bellevue Avenue between 1909 and 1910, the walk-up apartment building, with street addresses of 86 and 90 Oxford Street retains its scale, form and massing and original building features including buff brick cladding with decorative red brickwork and stonework, segmentally arched window openings, three-sided flat headed bay windows, wide eaves, and recessed entrances.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

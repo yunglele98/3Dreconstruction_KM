@@ -1,0 +1,250 @@
+{
+  "building_name": "626 Dundas St W",
+  "floors": 1,
+  "floor_heights_m": [
+    4.8
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.4020797,
+    "lat": 43.65232174,
+    "street": "Dundas St W",
+    "street_number": 626,
+    "setback_m": 0.5,
+    "lot_area_sqm": 459.443112937723,
+    "footprint_sqm": 92.6,
+    "lot_coverage_pct": 20.2,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "dark-painted single-storey automotive storefront with red-and-white commercial signage",
+  "windows_per_floor": [
+    0
+  ],
+  "window_type": "storefront",
+  "window_width_m": 1.8,
+  "window_height_m": 2.2,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "24/7 Auto Group (Kensington Automotive)",
+    "business_category": "Other",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Kensington Automotive; 626 Dundas St West",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 10.2,
+    "height_avg_m": 4.9,
+    "footprint_sqm": 92.6,
+    "gfa_sqm": 277.8,
+    "fsi": 0.6,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "626 Dundas St W",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "626 Dundas St W",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "626 DUNDAS ST W"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 4.9,
+      "new_total_height_m": 4.8,
+      "floors": 1.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 10.2,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark-painted single-storey automotive storefront with red-and-white commercial signage",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Altered commercial frontage with contemporary automotive branding and little visible historic fabric at the street face.",
+    "condition": "fair",
+    "windows_per_floor": [
+      0
+    ],
+    "window_type": "storefront",
+    "window_width_m": 1.8,
+    "window_height_m": 2.2,
+    "window_arrangement": "irregular",
+    "window_details": "Primary facade reads as a broad storefront opening rather than discrete upper-storey windows.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 1.0,
+    "door_height_m": 2.2,
+    "door_details": "Single glazed entry integrated into the automotive storefront frontage.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "No distinct historic cornice legible from the street-facing frontage.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible from the selected facade view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Character is driven almost entirely by signage and storefront alterations.",
+    "roof_type_observed": "flat-roofed one-storey commercial frontage",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Auto-service storefront with broad glazing/openings and oversized signage band.",
+    "signage_observed": "Kensington Automotive / 626 Dundas St West signage.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Historic facade appears substantially obscured by modern automotive storefront treatment.",
+    "matches_hcd_typology": false,
+    "confidence": 0.74,
+    "notes": ""
+  },
+  "window_arrangement": "irregular",
+  "door_type": "storefront",
+  "door_width_m": 1.0,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Auto-service storefront with broad glazing/openings and oversized signage band.",
+  "confidence": 0.8900000000000001,
+  "notes": "",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 1.0,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.5,
+  "facade_description": "626 Dundas St W presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat. The facade reads primarily as mixed in a dark-painted single-storey automotive storefront with red-and-white commercial signage palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using storefront, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

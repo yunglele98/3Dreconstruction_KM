@@ -1,0 +1,273 @@
+{
+  "building_name": "230 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    3.4,
+    2.6
+  ],
+  "total_height_m": 6.06,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40250292,
+    "lat": 43.65506342,
+    "street": "Augusta Ave",
+    "street_number": 230,
+    "setback_m": 0.0,
+    "lot_area_sqm": 149.6782795089375,
+    "footprint_sqm": 31.0,
+    "lot_coverage_pct": 20.7,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "weathered white upper facade with a green commercial base and purple trim bands",
+  "windows_per_floor": [
+    2,
+    0
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.9,
+  "window_height_m": 1.1,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 21,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "FILM CAFE",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Film Cafe; Eative Eatery",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 11.72,
+    "height_avg_m": 6.06,
+    "footprint_sqm": 31.0,
+    "gfa_sqm": 77.5,
+    "fsi": 0.52,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "230 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_181011334_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "230 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "230 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.1,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "weathered white upper facade with a green commercial base and purple trim bands",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Cafe frontage is active and maintained, but the upper facade shows staining and graffiti.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      0
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.1,
+    "window_arrangement": "asymmetric",
+    "window_details": "Two upper windows survive above the roof of the one-storey commercial frontage; the ground floor is largely storefront glazing.",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Single glazed commercial entry centered under the FILM CAFE sign.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple low canopy edge under the signage band.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; storefront is flush to the sidewalk.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible in the main facade view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Brand colors and window lettering are the main visible facade features.",
+    "roof_type_observed": "Simple gabled upper roof behind a one-storey storefront canopy",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Active cafe with wraparound glazing and colorful painted trim.",
+    "signage_observed": "FILM CAFE, Japanese St. Food, Smoothie, All Day Breakfast, Espresso.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Ground floor fully converted to a contemporary cafe storefront, with graffiti on the upper facade.",
+    "matches_hcd_typology": false,
+    "confidence": 0.83,
+    "notes": "Clear corner view of the cafe frontage."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Active cafe with wraparound glazing and colorful painted trim.",
+  "confidence": 0.9,
+  "notes": "Clear corner view of the cafe frontage.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 0 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "230 Augusta Ave presents a converted house-form, detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed in a weathered white upper facade with a green commercial base and purple trim bands palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 0 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
+  "heritage_summary": "With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

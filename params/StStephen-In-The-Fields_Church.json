@@ -1,0 +1,258 @@
+{
+  "building_name": "St. Stephen-in-the-Fields Church",
+  "floors": 2,
+  "facade_material": "brick",
+  "facade_colour": "weathered red brick with pale stone surrounds at the lancet openings and dark gray slate roof surfaces",
+  "windows_per_floor": [
+    4,
+    6
+  ],
+  "window_type": "pointed_arched",
+  "window_width_m": 1.0,
+  "window_height_m": 3.5,
+  "door_count": 2,
+  "door_type": "arched",
+  "has_storefront": false,
+  "condition": "fair",
+  "roof_type": "Steep gable roof",
+  "roof_pitch_deg": 55,
+  "roof_features": [
+    "bell_tower",
+    "cross_gable",
+    "chimney"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "weathered red brick with pale stone surrounds at the lancet openings and dark gray slate roof surfaces",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Historic church remains intact but shows age, patching, boarded or protected window glazing, and visible surface weathering on masonry and side elevations.",
+    "condition": "fair",
+    "windows_per_floor": [
+      4,
+      6
+    ],
+    "window_type": "pointed_arched",
+    "window_width_m": 1.0,
+    "window_height_m": 3.5,
+    "window_arrangement": "irregular",
+    "window_details": "Tall lancet and grouped Gothic-arched openings define the church body, with smaller tower openings and side-wall window groupings.",
+    "door_count": 2,
+    "door_type": "arched",
+    "door_width_m": 1.5,
+    "door_height_m": 3.0,
+    "door_details": "Primary church entries are pointed-arched and set within the masonry base; not every doorway is fully visible in the batch.",
+    "ground_floor_arches": "pointed",
+    "ground_floor_arch_count": 2,
+    "cornice": "none",
+    "cornice_details": "No classical cornice; eaves are expressed through steep slate roof edges and Gothic wall terminations.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "Open churchyard and side setbacks rather than a porch element.",
+    "chimneys": 1,
+    "chimney_details": "A tall rectangular brick chimney rises from the south-side ancillary volume.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Gothic character comes from lancet windows, a steep slate roof, buttress-like wall articulation, and a slender tower with clock/belfry stage.",
+    "roof_type_observed": "Steep gable roof",
+    "roof_features": [
+      "bell_tower",
+      "cross_gable",
+      "chimney"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "Historical plaques are visible on the side wall.",
+    "overall_style": "Gothic Revival",
+    "alterations_visible": "Some side windows appear protected or boarded, and adjacent service or parking areas intrude on the setting.",
+    "matches_hcd_typology": true,
+    "confidence": 0.87,
+    "notes": "Reconstructed from multiple views in batch 034, including side, south, and oblique churchyard perspectives."
+  },
+  "_meta": {
+    "address": "St. Stephen-in-the-Fields Church",
+    "photo": "IMG_20260320_175337328_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:35:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "ground_floor_arches",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill"
+    ],
+    "dimensions_source": "default",
+    "reference_photos": [
+      "IMG_20260320_003439452_HDR.jpg",
+      "IMG_20260320_003542989_HDR.jpg",
+      "IMG_20260320_003644430_HDR.jpg",
+      "IMG_20260320_175057262_HDR.jpg",
+      "IMG_20260320_175136817_HDR.jpg"
+    ],
+    "reference_photo_count": 18,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "window_arrangement": "irregular",
+  "door_width_m": 1.5,
+  "door_height_m": 3.0,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Gothic Revival",
+  "storefront_description": "",
+  "confidence": 0.9,
+  "notes": "Reconstructed from multiple views in batch 034, including side, south, and oblique churchyard perspectives.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 1,
+  "ground_floor_arch_type": "pointed",
+  "ground_floor_arch_count": 2,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Arched-head door",
+      "position": "left",
+      "width_m": 1.5,
+      "height_m": 3.0
+    },
+    {
+      "id": "door_1",
+      "type": "Arched-head door",
+      "position": "right",
+      "width_m": 1.5,
+      "height_m": 3.0
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 2 storeys and is capped by a steep gable roof, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 4, 6 window bays from lower to upper levels, using pointed arched, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "pointed_arched",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "arch_type": "pointed"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 6,
+          "type": "pointed_arched",
+          "width_m": 0.7,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "arch_type": "pointed"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "St. Stephen-in-the-Fields Church presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 2 storeys and is capped by a steep gable roof, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 6 window bays from lower to upper levels, using pointed arched, and 2 principal entrances. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "pointed",
+    "count": 4,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 6.4,
+  "floor_heights_m": [
+    3.2,
+    3.2
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {}
+}

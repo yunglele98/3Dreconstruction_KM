@@ -1,0 +1,19 @@
+{
+  "building_name": "254 Augusta Ave (Come As You Are)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "254_Augusta_Ave.json",
+  "_meta": {
+    "address": "254 Augusta Ave (Come As You Are)",
+    "photo": "IMG_20260318_185559772_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_185559772_HDR.jpg",
+      "IMG_20260318_185750500_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

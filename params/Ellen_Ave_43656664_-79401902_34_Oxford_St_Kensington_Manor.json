@@ -1,0 +1,17 @@
+{
+  "building_name": "Ellen Ave (43.656664, -79.401902) 34 Oxford St (Kensington Manor)",
+  "skipped": true,
+  "skip_reason": "partial apartment-yard view with no complete discrete facade",
+  "_meta": {
+    "address": "Ellen Ave (43.656664, -79.401902) 34 Oxford St (Kensington Manor)",
+    "photo": "IMG_20260318_145849272_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:21:39-04:00",
+    "reference_photos": [
+      "IMG_20260318_145849272_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

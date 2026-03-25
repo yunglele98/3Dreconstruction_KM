@@ -1,0 +1,244 @@
+{
+  "building_name": "34 Oxford St",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40179055,
+    "lat": 43.65689692,
+    "street": "Oxford St",
+    "street_number": null,
+    "setback_m": 3.0,
+    "lot_area_sqm": 5317.780322342683,
+    "footprint_sqm": 26.2,
+    "lot_coverage_pct": 0.5,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "1890-1903",
+    "architectural_style": "Edwardian Commercial",
+    "construction_period": "1979 (confirmed \u2013 Apt Bldg Registration)",
+    "construction_decade": 1970,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 255,
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s ea",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Residential",
+    "land_use": "Unknown",
+    "commercial_use": "Other Commercial",
+    "business_name": "Kensington Manor",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 18.69,
+    "height_avg_m": 15.22,
+    "footprint_sqm": 26.2,
+    "gfa_sqm": 131.0,
+    "fsi": 0.02,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20135)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "34 Oxford St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "34 Oxford St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "34 OXFORD ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 18.69,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "photo_observations": {
+    "batch": "batch_010",
+    "date": "2026-03-18",
+    "time": "~14:55",
+    "conditions": "daytime, snowy",
+    "photos": 1,
+    "confidence": 0.4,
+    "facade_colour_observed": "brick",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "yard view from Ellen Ave only; Kensington Manor building not fully visible from this angle",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "double-hung sash",
+    "door_count": 1,
+    "has_storefront_observed": false,
+    "roof_type_observed": "not clearly visible from yard",
+    "roof_features": [],
+    "overall_style": "Residential",
+    "alterations_visible": "yard/service view only; limited detail visible",
+    "matches_hcd_typology": false,
+    "notes": "Low confidence yard view from Ellen Ave; insufficient detail for facade updates"
+  },
+  "overall_style": "Residential",
+  "confidence": 0.55,
+  "notes": "Low confidence yard view from Ellen Ave; insufficient detail for facade updates",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s ea."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.3,
+          "sill_height_m": 1.5,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double-hung sash",
+          "width_m": 0.9,
+          "height_m": 6.1,
+          "sill_height_m": 4.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 2.1,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "34 Oxford St presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s ea",
+  "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s ea.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#E8E0D0",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

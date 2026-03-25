@@ -1,0 +1,18 @@
+{
+  "building_name": "Ellen Ave (43.656627, -79.402118)",
+  "skipped": true,
+  "skip_reason": "garage doors and mural-covered service structures; not a discrete building facade",
+  "_meta": {
+    "address": "Ellen Ave (43.656627, -79.402118)",
+    "photo": "IMG_20260318_145752755_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:21:39-04:00",
+    "reference_photos": [
+      "IMG_20260318_145752755_HDR.jpg",
+      "IMG_20260318_145757706_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

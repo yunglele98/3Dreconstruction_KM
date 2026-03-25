@@ -1,0 +1,214 @@
+{
+  "building_name": "214 Augusta Ave",
+  "floors": 1,
+  "floor_heights_m": [
+    4.8
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40234615,
+    "lat": 43.65473354,
+    "street": "Augusta Ave",
+    "street_number": 214,
+    "setback_m": 0.0,
+    "lot_area_sqm": 1059.377597871534,
+    "footprint_sqm": 26.6,
+    "lot_coverage_pct": 2.5,
+    "lots_sharing_footprint": 4
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "parapet_wall",
+    "sign_band"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "pink painted brick facade with extensive graffiti art on roll-down shutters",
+  "windows_per_floor": [
+    0
+  ],
+  "window_type": "storefront",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 18,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled ended roof with finial and decorative bargeboard, lancet arch attic window, and two segmentally arched windows at the second storey. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Churros",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "damaged_masonry",
+    "structural_concern": false,
+    "risk_score": 50,
+    "signage": "Birria Catrina; La Chelada Taqueria; Kotochana; Churros; Eative Eatery; multiple other vendor signs",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 6.62,
+    "height_avg_m": 4.63,
+    "footprint_sqm": 26.6,
+    "gfa_sqm": 66.5,
+    "fsi": 0.06,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 1,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "214 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260316_014000844_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260316_014000844_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "214 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "214 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 6.62,
+      "new_total_height_m": 4.8,
+      "floors": 1.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 6.6,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "pink painted brick facade with extensive graffiti art on roll-down shutters",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0
+    ],
+    "window_type": "storefront",
+    "door_count": 1,
+    "door_type": "storefront",
+    "has_storefront_observed": true,
+    "storefront_description": "Shoney's Used Clothing vintage shop with painted facade and artistic graffiti on metal roll-down shutter. Part of commercial strip including Taco Love, Diablos Tacos, Birria Catrina, Crystal Visions",
+    "signage_observed": "Shoney's Used Clothing, 214 AUGUSTA AVE, 979-0700, Taco Love, Diablos Tacos, Birria Catrina, Ko Hana, Crystal Visions, Churros",
+    "overall_style": "Commercial",
+    "alterations_visible": "Pink-painted brick, graffiti art murals on shutters, multiple food vendor signage overhead",
+    "confidence": 0.75,
+    "notes": "Night photos. Best detail from Shoney's close-up. | [batch_007_nighttime] Commercial at ground level, shuttered. Shoney's Used Clothing confirmed. Limited visibility at night.",
+    "_meta": {
+      "photo": "IMG_20260316_014050653_HDR.jpg",
+      "agent": "claude-opus-4-6",
+      "timestamp": "2026-03-24T22:00:00-04:00"
+    }
+  },
+  "door_type": "storefront",
+  "overall_style": "Commercial",
+  "storefront_description": "Shoney's Used Clothing vintage shop with painted facade and artistic graffiti on metal roll-down shutter. Part of commercial strip including Taco Love, Diablos Tacos, Birria Catrina, Crystal Visions",
+  "confidence": 0.9,
+  "notes": "Night photos. Best detail from Shoney's close-up.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its converted house-form, detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_summary": "The property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled ended roof with finial and decorative bargeboard, lancet arch attic window, and two segmentally arched windows at the second storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "214 Augusta Ave presents a converted house-form, detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using storefront, and 1 principal entrance. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled ended roof with finial and decorative bargeboard, lancet arch attic window, and two segmentally arched windows at the second storey. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "heritage_summary": "The property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled ended roof with finial and decorative bargeboard, lancet arch attic window, and two segmentally arched windows at the second storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

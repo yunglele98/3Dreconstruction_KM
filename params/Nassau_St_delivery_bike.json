@@ -1,0 +1,17 @@
+{
+  "building_name": "Nassau St delivery bike",
+  "skipped": true,
+  "skip_reason": "street scene focused on a delivery bike rather than a building facade",
+  "_meta": {
+    "address": "Nassau St delivery bike",
+    "photo": "IMG_20260318_175205539.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:27:11-04:00",
+    "reference_photos": [
+      "IMG_20260318_175205539.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

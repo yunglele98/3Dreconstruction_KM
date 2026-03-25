@@ -1,0 +1,17 @@
+{
+  "building_name": "26-30 Bellevue Av.",
+  "skipped": true,
+  "skip_reason": "partial courtyard/driveway view between buildings, not a readable full facade",
+  "_meta": {
+    "address": "26-30 Bellevue Av.",
+    "photo": "IMG_20260320_160851016_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:50:45-04:00",
+    "reference_photos": [
+      "IMG_20260320_160851016_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

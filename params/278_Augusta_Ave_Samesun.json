@@ -1,0 +1,21 @@
+{
+  "building_name": "278 Augusta Ave (Samesun)",
+  "skipped": true,
+  "skip_reason": "duplicate address",
+  "_meta": {
+    "address": "278 Augusta Ave (Samesun)",
+    "photo": "IMG_20260318_142013766_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_142013766_HDR.jpg",
+      "IMG_20260318_142054814_HDR.jpg",
+      "IMG_20260318_142105931_HDR.jpg",
+      "IMG_20260318_142108112_HDR.jpg",
+      "IMG_20260318_142118334_HDR.jpg"
+    ],
+    "reference_photo_count": 5,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

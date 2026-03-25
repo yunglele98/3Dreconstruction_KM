@@ -1,0 +1,19 @@
+{
+  "building_name": "concrete",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "concrete",
+    "photo": "IMG_20260318_142225392_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_142225392_HDR.jpg",
+      "IMG_20260318_142229531.jpg",
+      "IMG_20260320_170014141_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

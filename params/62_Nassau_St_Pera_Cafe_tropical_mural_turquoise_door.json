@@ -1,0 +1,17 @@
+{
+  "building_name": "62 Nassau St (Pera Cafe) (tropical mural, turquoise door)",
+  "skipped": true,
+  "skip_reason": "same building as 62 Nassau St; primary update stored on the canonical address file",
+  "_meta": {
+    "address": "62 Nassau St (Pera Cafe) (tropical mural, turquoise door)",
+    "photo": "IMG_20260318_180546180_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "reference_photos": [
+      "IMG_20260318_180546180_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

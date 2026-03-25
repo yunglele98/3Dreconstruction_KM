@@ -1,0 +1,289 @@
+{
+  "building_name": "75 Kensington Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.5,
+    4.2
+  ],
+  "total_height_m": 8.44,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40049595,
+    "lat": 43.65461441,
+    "street": "Kensington Ave",
+    "street_number": 75,
+    "setback_m": 0.0,
+    "lot_area_sqm": 352.3499075190795,
+    "footprint_sqm": 72.9,
+    "lot_coverage_pct": 20.7,
+    "lots_sharing_footprint": 12
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "black painted ground floor with massive graffiti mural, white/grey stucco-clad upper floor, yellow/green decorative trim at roofline",
+  "windows_per_floor": [
+    0,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.8,
+  "window_height_m": 1.1,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "1904-1913",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 98,
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Locsdoc",
+    "business_category": "Art/Culture",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 40,
+    "signage": "One Heart (shop); For Sale sign visible upper facade",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 16.71,
+    "height_avg_m": 8.44,
+    "footprint_sqm": 72.9,
+    "gfa_sqm": 182.2,
+    "fsi": 0.52,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "75 Kensington Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260320_013439108_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260320_013439108_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "75 Kensington Ave",
+    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_address_candidates": [
+      "75 KENSINGTON AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 5.8,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "black painted ground floor with large graffiti mural; white/cream cladding visible on adjacent structure; number 75 in yellow",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Night photo. Ground floor entirely covered in black paint with large-scale graffiti art. Upper floor has white/cream cladding. Heavily altered but underlying house-form with gable still legible.",
+    "condition": "poor",
+    "windows_per_floor": [
+      0,
+      1
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.8,
+    "window_height_m": 1.1,
+    "window_arrangement": "asymmetric",
+    "window_details": "one small window visible on upper floor (left side), ground floor has storefront glazing behind security gate",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.4,
+    "door_details": "commercial entrance at ground level, heavily graffitied surround",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "yellow/green decorative trim band at roofline with zigzag pattern",
+    "bay_windows": 0,
+    "bay_window_details": "",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "",
+    "chimneys": 0,
+    "chimney_details": "",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "yellow/green zigzag trim at roofline, large-scale graffiti mural covering entire ground floor facade",
+    "roof_type_observed": "cross-gable partially visible above",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "Black-painted ground floor with small storefront window. Security gate visible. Building number 75 painted in yellow.",
+    "signage_observed": "Number 75 in yellow. Large-scale graffiti art covering ground floor.",
+    "overall_style": "Victorian",
+    "alterations_visible": "entire facade re-clad, ground floor painted black with graffiti, original Victorian details completely obscured, upper floor covered in white stucco/cladding",
+    "matches_hcd_typology": true,
+    "confidence": 0.6,
+    "notes": "matches_hcd corrected from false to true. Style corrected from Vernacular to Victorian. Despite heavy street-level alterations (black paint, graffiti), the house-form with gable roof is still legible. The semi-detached pair form is consistent with the 1904-1913 construction date.",
+    "photo": "IMG_20260320_013439108_HDR.jpg",
+    "photo_datetime": "2026-03-20T01:34:39",
+    "_batch_agent": "claude-opus-4-6-batch18-22",
+    "_batch_timestamp": "2026-03-25T02:07:04Z"
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.9,
+  "door_height_m": 2.4,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "commercial ground floor, mostly obscured by black paint and graffiti, small display window visible, security gate",
+  "confidence": 0.7500000000000001,
+  "notes": "nighttime photo; building is heavily altered from its original Victorian semi-detached form; adjacent to white stucco-clad building on left; the number 75 is painted in yellow at ground level",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.4,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2A2A2A",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance.",
+    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 4.9,
+          "sill_height_m": 3.8,
+          "frame_colour": "#2A2A2A",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#2A2A2A",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "75 Kensington Ave presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed in a black painted ground floor with massive graffiti mural, white/grey stucco-clad upper floor, yellow/green decorative trim at roofline palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
+  "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+  "roof_material": "Grey asphalt shingles",
+  "colour_palette": {
+    "facade_hex": "#C8B060",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#2A2A2A",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

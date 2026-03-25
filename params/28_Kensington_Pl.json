@@ -1,0 +1,192 @@
+{
+  "building_name": "28 Kensington Pl",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 4.0,
+  "facade_depth_m": 18.3,
+  "site": {
+    "lon": -79.40107304999998,
+    "lat": 43.65390911,
+    "street": "Kensington Pl",
+    "street_number": 4,
+    "setback_m": 0.5,
+    "lot_area_sqm": 63.00600782058697,
+    "footprint_sqm": 148.7,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "varied brick and stone",
+  "windows_per_floor": [
+    0,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 233,
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Residential",
+    "land_use": "Residential \u2013 Multi-Unit",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Laneway | Pedestrian-scale | Worker cottages | Historic character",
+    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "missing_elements; damaged_masonry; overgrown",
+    "structural_concern": false,
+    "risk_score": 70,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 14.59,
+    "height_avg_m": 11.36,
+    "footprint_sqm": 148.7,
+    "gfa_sqm": 223.0,
+    "fsi": 3.54,
+    "lot_width_ft": 13.0,
+    "lot_depth_ft": 60.0,
+    "dwelling_units": 4,
+    "residential_floors": "All floors (1\u20132)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "28 Kensington Pl",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "28 Kensington Pl",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "28 KENSINGTON PL"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 11.36,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 3.4,
+    "height_m": 5.0,
+    "status_source": "normalized_fix"
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.8,
+          "sill_height_m": 2.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {},
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 0.5,
+  "confidence": 0.7500000000000001,
+  "facade_description": "28 Kensington Pl presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
+  "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District.",
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

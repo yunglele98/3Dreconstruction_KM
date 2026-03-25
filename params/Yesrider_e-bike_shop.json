@@ -1,0 +1,17 @@
+{
+  "building_name": "Yesrider e-bike shop",
+  "skipped": true,
+  "skip_reason": "duplicate — ground-floor unit of 438 Spadina Ave; observations merged into 438_Spadina_Ave.json",
+  "_meta": {
+    "address": "Yesrider e-bike shop",
+    "photo": "IMG_20260316_003605946_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T21:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260316_003605946_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

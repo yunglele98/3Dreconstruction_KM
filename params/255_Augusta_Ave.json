@@ -1,0 +1,311 @@
+{
+  "building_name": "255 Augusta Ave",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40206675999998,
+    "lat": 43.65516332,
+    "street": "Augusta Ave",
+    "street_number": 255,
+    "setback_m": 0.0,
+    "lot_area_sqm": 187.6739519938051,
+    "footprint_sqm": 100.9,
+    "lot_coverage_pct": 53.8,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [
+    "chimney"
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "dark blue and black mural-painted upper facade with black storefront framing and bright pink, blue, and white signage",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.9,
+  "window_height_m": 1.2,
+  "door_count": 2,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Converted House-form, Detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Converted House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 26,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. Anchoring the southeast corner of Augusta Avenue and Nassau Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
+    "building_features": [
+      "cornice"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "business_name": "Kensington Kitchen",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 2,
+    "condition_issues": "damaged_masonry",
+    "structural_concern": false,
+    "risk_score": 70,
+    "signage": "Kensington Kitchen; Cheese Adagio; Ice Cream",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 10.14,
+    "height_avg_m": 6.63,
+    "footprint_sqm": 100.9,
+    "gfa_sqm": 252.2,
+    "fsi": 1.34,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "255 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260318_180942320_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T14:39:43-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "255 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "255 AUGUSTA AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.14,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
+  },
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.8,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_colour_observed": "dark blue and black mural-painted upper facade with black storefront framing and bright pink, blue, and white signage",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Active food storefront with dense applied graphics and graffiti; upper facade is heavily painted but still occupied and maintained.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 0.9,
+    "window_height_m": 1.2,
+    "window_arrangement": "asymmetric",
+    "window_details": "Two upper residential windows sit within the steep gable, while the ground floor is mostly glazed commercial frontage with poster-covered panels.",
+    "door_count": 2,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "door_details": "Two commercial entries are integrated into the black-framed storefront under colorful food and dessert signage.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple storefront fascia with colorful projecting sign bands.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; commercial frontage is flush to the sidewalk.",
+    "chimneys": 1,
+    "chimney_details": "One short vent stack or chimney is visible above the roofline.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Large modern food signs and mural artwork dominate the facade.",
+    "roof_type_observed": "Steep front gable over a commercialized ground floor",
+    "roof_features": [
+      "chimney"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Busy restaurant frontage with black-framed glazing, multiple food posters, and layered brand signage.",
+    "signage_observed": "Kensington Kitchen, ICE CREAM, ESPRESSO, CHEESE FOAM LATTE, Churros, Taco Love, Diablos Tacos, Birria Ayirin, and Koi Hana.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Strong commercial conversion with mural-painted upper facade, layered signage, and replacement storefront glazing.",
+    "matches_hcd_typology": false,
+    "confidence": 0.84,
+    "notes": "Best full frontage view after the earlier graffiti-heavy side shot."
+  },
+  "window_arrangement": "asymmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Busy restaurant frontage with black-framed glazing, multiple food posters, and layered brand signage.",
+  "confidence": 0.9,
+  "notes": "Best full frontage view after the earlier graffiti-heavy side shot.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 1,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Commercial storefront door",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "Commercial storefront door",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "heritage_summary": "First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 2.4,
+          "sill_height_m": 1.9,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "height_mm": 300,
+      "projection_mm": 180,
+      "colour_hex": "#D4C9A8",
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "255 Augusta Ave presents a converted house-form, detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed in a dark blue and black mural-painted upper facade with black storefront framing and bright pink, blue, and white signage palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include cornice. HCD note: The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. Anchoring the southeast corner of Augusta Avenue and Nassau Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
+  "heritage_summary": "First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8E0D4",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

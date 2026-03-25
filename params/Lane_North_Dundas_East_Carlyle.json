@@ -1,0 +1,20 @@
+{
+  "building_name": "Lane North Dundas East Carlyle",
+  "skipped": true,
+  "skip_reason": "lane and rear-service context, not a single facade",
+  "_meta": {
+    "address": "Lane North Dundas East Carlyle",
+    "photo": "IMG_20260320_161858149_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_161858149_HDR.jpg",
+      "IMG_20260320_161926625_HDR.jpg",
+      "IMG_20260320_161935408_HDR.jpg",
+      "IMG_20260320_161944063_HDR.jpg"
+    ],
+    "reference_photo_count": 4,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

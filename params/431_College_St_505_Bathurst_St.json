@@ -1,0 +1,18 @@
+{
+  "building_name": "431 College St / 505 Bathurst St",
+  "skipped": true,
+  "skip_reason": "duplicate corner-address view of the already-recorded 431 College St (Sneaky Dee's) building",
+  "_meta": {
+    "address": "431 College St / 505 Bathurst St",
+    "photo": "IMG_20260320_173616615_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:50:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_173616615_HDR.jpg",
+      "IMG_20260320_173618832_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

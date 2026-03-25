@@ -1,0 +1,19 @@
+{
+  "building_name": "235 Augusta Ave (Taqueria el pastorcito)",
+  "skipped": true,
+  "skip_reason": "duplicate address; primary facade update stored in the canonical address params file",
+  "canonical_params_file": "235_Augusta_Ave.json",
+  "_meta": {
+    "address": "235 Augusta Ave (Taqueria el pastorcito)",
+    "photo": "IMG_20260318_185927726_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T15:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260318_185927726_HDR.jpg",
+      "IMG_20260318_185930531_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

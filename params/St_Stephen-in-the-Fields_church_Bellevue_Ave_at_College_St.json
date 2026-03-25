@@ -1,0 +1,20 @@
+{
+  "building_name": "St. Stephen-in-the-Fields church, Bellevue Ave at College St",
+  "skipped": true,
+  "skip_reason": "not a building facade for Blender modelling — church documented separately with 17 photos in this batch",
+  "_meta": {
+    "photo": "IMG_20260320_151954770_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-25T00:30:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_151954770_HDR.jpg",
+      "IMG_20260320_151959083_HDR.jpg",
+      "IMG_20260320_152017367_HDR.jpg",
+      "IMG_20260320_152032380_HDR.jpg",
+      "IMG_20260320_152052250_HDR.jpg"
+    ],
+    "reference_photo_count": 17,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

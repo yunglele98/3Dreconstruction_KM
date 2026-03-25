@@ -1,0 +1,17 @@
+{
+  "building_name": "43.652245, -79.402930",
+  "skipped": true,
+  "skip_reason": "duplicate view of the already-recorded 43.652245, -79.402923 rear-lane facade",
+  "_meta": {
+    "address": "43.652245, -79.402930",
+    "photo": "IMG_20260320_163530064_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:25:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_163530064_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

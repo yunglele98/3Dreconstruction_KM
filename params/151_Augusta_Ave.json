@@ -1,0 +1,315 @@
+{
+  "building_name": "151 Augusta Ave",
+  "floors": 3,
+  "floor_heights_m": [
+    4.0,
+    3.1,
+    2.6
+  ],
+  "total_height_m": 9.33,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.40102591,
+    "lat": 43.65272069,
+    "street": "Augusta Ave",
+    "street_number": 151,
+    "setback_m": 0.0,
+    "lot_area_sqm": null,
+    "footprint_sqm": 64.6,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": 3
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [
+    "parapet_wall"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "light cream brick facade with an orange nail studio sign and dark storefront glazing",
+  "windows_per_floor": [
+    4,
+    4,
+    0
+  ],
+  "window_type": "mixed",
+  "window_width_m": 0.95,
+  "window_height_m": 1.3,
+  "door_count": 3,
+  "has_storefront": true,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "House-form, Row",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_decade": 1880,
+    "sub_area": "Market",
+    "contributing": "Yes",
+    "hcd_plan_index": 1,
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. C",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "mixed_use",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Other Commercial",
+    "business_name": "Turtle Island Co.",
+    "business_category": "Art/Culture",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 20,
+    "signage": "Emperor Furniture / \u7687\u5bb6\u50a2\u4fec (large blue banner, bilingual Chinese/English); Unico logo partially visible upper facade; \u56db\u6d77\u8fa6\u793e on right building",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 9.33,
+    "height_avg_m": 6.18,
+    "footprint_sqm": 64.6,
+    "gfa_sqm": 161.5,
+    "fsi": null,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 2,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "151 Augusta Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "151 Augusta Ave",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "151 AUGUSTA AVE"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 4.4,
+    "height_m": 4.0,
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "facade_condition_notes": "Facade is occupied and readable from the street, with contemporary storefront alterations layered onto the earlier building form.",
+    "window_width_m": 0.95,
+    "window_height_m": 1.3,
+    "door_width_m": 0.95,
+    "door_height_m": 2.1,
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple fascia and coping with limited decorative trim visible.",
+    "bay_windows": 0,
+    "bay_window_details": "none visible",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "No chimney clearly visible from the selected frontage view.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Character comes primarily from surviving massing, cladding, and current storefront treatment.",
+    "has_storefront_observed": true,
+    "storefront_description": "Two salon-style storefronts with dark glazing and a fenced sidewalk patio/platform.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Storefront and signage have been updated from the original historic configuration.",
+    "matches_hcd_typology": false,
+    "confidence": 0.87,
+    "notes": "",
+    "facade_colour_observed": "light cream brick facade with an orange nail studio sign and dark storefront glazing",
+    "facade_material_observed": "brick",
+    "condition": "good",
+    "windows_per_floor": [
+      4,
+      4,
+      0
+    ],
+    "window_type": "mixed",
+    "window_arrangement": "symmetric",
+    "window_details": "Regularly spaced upper windows above two ground-floor salon/retail bays and side entrance doors.",
+    "door_count": 3,
+    "door_type": "mixed",
+    "door_details": "One shared-looking central stair/lobby entry plus separate storefront entries for the salon units.",
+    "roof_type_observed": "Flat-roofed commercial block",
+    "roof_features": [
+      "parapet_wall"
+    ],
+    "signage_observed": "Nail Studio sign and salon window graphics."
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "mixed",
+  "door_width_m": 0.95,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Two salon-style storefronts with dark glazing and a fenced sidewalk patio/platform.",
+  "confidence": 0.9,
+  "notes": "",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "mixed",
+      "position": "left",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "mixed",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    },
+    {
+      "id": "door_2",
+      "type": "mixed",
+      "position": "right",
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 4, 4, 0 window bays from lower to upper levels, using mixed, and 3 principal entrances.",
+    "heritage_summary": "C. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.8,
+          "sill_height_m": 1.2,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.1,
+          "frame_colour": "#3A2A20",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.0,
+  "facade_description": "151 Augusta Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 4, 4, 0 window bays from lower to upper levels, using mixed, and 3 principal entrances. Character-defining facade elements include cornice. HCD note: The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. C",
+  "heritage_summary": "C. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": []
+}

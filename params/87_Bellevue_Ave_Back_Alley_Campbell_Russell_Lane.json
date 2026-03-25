@@ -1,0 +1,21 @@
+{
+  "building_name": "87 Bellevue Ave Back Alley (Campbell Russell Lane)",
+  "skipped": true,
+  "skip_reason": "back alley and laneway context behind the house",
+  "_meta": {
+    "address": "87 Bellevue Ave Back Alley (Campbell Russell Lane)",
+    "photo": "IMG_20260320_175811935_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T18:25:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_175811935_HDR.jpg",
+      "IMG_20260320_175819217_HDR.jpg",
+      "IMG_20260320_175847647_HDR.jpg",
+      "IMG_20260320_175852348_HDR.jpg",
+      "IMG_20260320_175905239_HDR.jpg"
+    ],
+    "reference_photo_count": 11,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

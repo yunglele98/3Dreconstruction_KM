@@ -1,0 +1,17 @@
+{
+  "building_name": "Portugal Auto Garage (East view)",
+  "skipped": true,
+  "skip_reason": "duplicate alias/view of the already-recorded 650 Dundas Street auto garage",
+  "_meta": {
+    "address": "Portugal Auto Garage (East view)",
+    "photo": "IMG_20260320_163402409_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:40:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_163402409_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "building_name": "23 St Andrew St",
+  "floors": 1,
+  "floor_heights_m": [
+    4.8
+  ],
+  "total_height_m": 4.8,
+  "facade_width_m": 5.2,
+  "facade_depth_m": 32.0,
+  "site": {
+    "lon": -79.39951553999998,
+    "lat": 43.65364826,
+    "street": "St Andrew St",
+    "street_number": 23,
+    "setback_m": 3.0,
+    "lot_area_sqm": 1308.446124198124,
+    "footprint_sqm": 63.4,
+    "lot_coverage_pct": 4.8,
+    "lots_sharing_footprint": 7
+  },
+  "roof_type": "Cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "not visible \u2014 site under active construction",
+  "windows_per_floor": [
+    2
+  ],
+  "window_type": "unknown",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "poor",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Victorian Bay-and-Gable",
+    "construction_period": "c. 1870\u20131900 (estimated)",
+    "construction_decade": 1880,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 283,
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential developm",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "vacant_lot",
+    "general_use": "Commercial",
+    "land_use": "Residential \u2013 Detached House",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Two-way | 30 km/h | Wide roadway exceeds minimum | Short commercial node",
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 1,
+    "condition_issues": "overgrown",
+    "structural_concern": false,
+    "risk_score": 55,
+    "signage": "",
+    "street_presence": "neglected"
+  },
+  "city_data": {
+    "height_max_m": 13.44,
+    "height_avg_m": 6.58,
+    "footprint_sqm": 63.4,
+    "gfa_sqm": 158.5,
+    "fsi": 0.12,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": 3,
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "23 St Andrew St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "photo": "IMG_20260316_114455734_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T23:00:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "reference_photos": [
+      "IMG_20260316_114455734_HDR.jpg",
+      "IMG_20260316_114508216_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "raw",
+    "db_address_full": "23 St Andrew St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "23 ST ANDREW ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 6.58,
+      "new_total_height_m": 4.8,
+      "floors": 1.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "not visible \u2014 site under active construction",
+    "facade_material_observed": "unknown",
+    "facade_condition_notes": "Original building appears demolished. Active construction site with crane, excavation, and construction fencing. No facade visible.",
+    "condition": "demolished",
+    "windows_per_floor": [],
+    "window_type": "unknown",
+    "window_width_m": 0,
+    "window_height_m": 0,
+    "window_arrangement": "unknown",
+    "window_details": "No building visible \u2014 construction site",
+    "door_count": 0,
+    "door_type": "none",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "bay_windows": 0,
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "chimneys": 0,
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "roof_type_observed": "none \u2014 building demolished",
+    "roof_features": [],
+    "has_storefront_observed": false,
+    "signage_observed": "Construction fencing only",
+    "overall_style": "unknown",
+    "alterations_visible": "Building demolished; active new construction with crane and excavation. Graffitied wall visible on adjacent lot to the west.",
+    "matches_hcd_typology": false,
+    "confidence": 0.95,
+    "notes": "Daytime photo clearly shows the heritage building has been demolished and replaced by an active construction site. DB listed as 'overgrown' and 'vacant_lot' but status has changed to active construction as of March 2026. This is a contributing HCD property \u2014 demolition is significant.",
+    "batch_008_note": "Daytime photo (11:44am) primarily shows a parking lot, NOT a building facade. Building visible in background only. Confidence 0.25 for this observation."
+  },
+  "window_arrangement": "unknown",
+  "door_type": "none",
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "unknown",
+  "confidence": 0.9,
+  "notes": "Daytime photo clearly shows the heritage building has been demolished and replaced by an active construction site. DB listed as 'overgrown' and 'vacant_lot' but status has changed to active construction as of March 2026. This is a contributing HCD property \u2014 demolition is significant.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3A2A20",
+    "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
+    "opening_rhythm": "The opening rhythm is vertically ordered across the facade, using unknown.",
+    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential developm.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [],
+  "doors_detail": [],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "street_setback_m": 3.0,
+  "facade_description": "23 St Andrew St presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as unknown in a not visible \u2014 site under active construction palette, laid in running bond with light grey mortar joints. The opening rhythm is vertically ordered across the facade, using unknown. Character-defining facade elements include cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential developm",
+  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential developm.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

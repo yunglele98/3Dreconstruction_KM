@@ -1,0 +1,17 @@
+{
+  "building_name": "11Casimir St",
+  "skipped": true,
+  "skip_reason": "typo variant duplicate of the already-recorded 11 Casimir St",
+  "_meta": {
+    "address": "11Casimir St",
+    "photo": "IMG_20260320_162032561_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:05:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_162032561_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

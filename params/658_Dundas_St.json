@@ -1,0 +1,132 @@
+{
+  "building_name": "658 Dundas St",
+  "floors": 2,
+  "facade_material": "stucco",
+  "facade_colour": "gray stucco with black trim and a recessed dark entry",
+  "door_count": 1,
+  "door_type": "residential",
+  "has_storefront": false,
+  "condition": "fair",
+  "roof_type": "flat",
+  "photo_observations": {
+    "notes": "Narrow residential-scale facade within the Dundas row."
+  },
+  "_meta": {
+    "address": "658 Dundas St",
+    "photo": "IMG_20260320_170937037_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:10:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "dimensions_backfill"
+    ],
+    "reference_photos": [
+      "IMG_20260320_170937037_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  },
+  "notes": "Narrow residential-scale facade within the Dundas row.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "residential",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5 metres across 2 storeys and is capped by a flat, consistent with its house-form typology.",
+    "opening_rhythm": "The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {},
+  "street_setback_m": 2.0,
+  "confidence": 0.7500000000000001,
+  "facade_description": "658 Dundas St presents a house-form facade within the Kensington Market HCD. The street elevation spans roughly 5 metres across 2 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 6.4,
+  "floor_heights_m": [
+    3.2,
+    3.2
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#D8D0C0"
+  },
+  "roof_pitch_deg": 0,
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "site": {
+    "lon": -79.40323582,
+    "lat": 43.65207125,
+    "street": "Dundas St W",
+    "street_number": 658
+  }
+}

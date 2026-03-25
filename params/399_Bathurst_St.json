@@ -1,0 +1,264 @@
+{
+  "building_name": "399 Bathurst St",
+  "floors": 6,
+  "floor_heights_m": [
+    3.3,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    2.5
+  ],
+  "total_height_m": 18.0,
+  "facade_width_m": 5.5,
+  "facade_depth_m": 10.0,
+  "site": {
+    "lon": -79.40568847999998,
+    "lat": 43.65309479,
+    "street": "Bathurst St",
+    "street_number": 399,
+    "setback_m": 0.5,
+    "lot_area_sqm": 28154.00179961194,
+    "footprint_sqm": 2347.5,
+    "lot_coverage_pct": 8.3,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Gable",
+  "roof_pitch_deg": 40,
+  "roof_features": [],
+  "facade_material": "Glass",
+  "facade_colour": "glass and metal",
+  "windows_per_floor": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "good",
+  "hcd_data": {
+    "typology": "",
+    "construction_date": "",
+    "architectural_style": "Modernist Institutional",
+    "construction_period": "1913\u2013present (multiple phases)",
+    "construction_decade": 1910,
+    "sub_area": "",
+    "contributing": "No",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "institutional",
+    "general_use": "Institutional",
+    "land_use": "Institutional \u2013 Healthcare",
+    "commercial_use": "Other Commercial",
+    "business_name": "Toronto Western Hospital",
+    "business_category": "Other",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (511) | Commercial",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 4: Institutional Growth (1910\u20131950)"
+  },
+  "assessment": {
+    "condition_rating": 5,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": 0,
+    "signage": "Donald K. Johnson Eye Institute signage on right side brick wall",
+    "street_presence": "maintained"
+  },
+  "city_data": {
+    "height_max_m": 0.0,
+    "height_avg_m": 36.2,
+    "footprint_sqm": 2347.5,
+    "gfa_sqm": 14085.0,
+    "fsi": 0.5,
+    "lot_width_ft": null,
+    "lot_depth_ft": null,
+    "dwelling_units": null,
+    "residential_floors": "Floors 2\u20136 (above ground-floor commercial)",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "399 Bathurst St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "399 Bathurst St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "399 BATHURST ST"
+    ],
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "has_storefront:set_False"
+      ]
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 5.5 metres across 6 storeys and is capped by a gable.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2, 2, 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.5,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 5",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Floor 6",
+      "windows": [
+        {
+          "count": 1,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 1.1,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 0.5,
+  "confidence": 0.7500000000000001,
+  "facade_description": "399 Bathurst St presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 5.5 metres across 6 storeys and is capped by a gable. The facade reads primarily as glass, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2, 2, 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  }
+}

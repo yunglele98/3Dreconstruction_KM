@@ -1,0 +1,18 @@
+{
+  "building_name": "Tram stop 816 (College St at Borden St)",
+  "skipped": true,
+  "skip_reason": "transit sign/stop infrastructure rather than a building facade",
+  "_meta": {
+    "address": "Tram stop 816 (College St at Borden St)",
+    "photo": "IMG_20260320_174418058_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:50:00-04:00",
+    "reference_photos": [
+      "IMG_20260320_174418058_HDR.jpg",
+      "IMG_20260320_174501339_HDR.jpg"
+    ],
+    "reference_photo_count": 2,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

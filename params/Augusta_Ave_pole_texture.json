@@ -1,0 +1,19 @@
+{
+  "building_name": "Augusta Ave pole texture",
+  "skipped": true,
+  "skip_reason": "not a building facade",
+  "_meta": {
+    "address": "Augusta Ave pole texture",
+    "photo": "IMG_20260315_154532694_HDR.jpg",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T12:00:00-04:00",
+    "reference_photos": [
+      "IMG_20260315_154532694_HDR.jpg",
+      "IMG_20260315_154546170_HDR.jpg",
+      "IMG_20260315_154550569_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+  }
+}

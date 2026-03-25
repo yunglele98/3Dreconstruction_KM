@@ -1,0 +1,167 @@
+{
+  "building_name": "40 Nassau St (striped awning, 24h video sign)",
+  "floors": 2,
+  "floor_heights_m": [
+    3.25,
+    3.25
+  ],
+  "total_height_m": 6.5,
+  "facade_width_m": 6.0,
+  "facade_depth_m": 15.0,
+  "roof_type": "Flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick, striped fabric awning over front porch area",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "casement",
+  "window_width_m": 0.7,
+  "window_height_m": 0.9,
+  "door_count": 1,
+  "has_storefront": false,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "red-brown brick, striped fabric awning over front porch area",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "porch_present": true,
+    "porch_type": "stoop",
+    "porch_details": "concrete steps with striped awning, 24 HOUR VIDEO SURVEILLANCE warning sign on chain-link gate",
+    "overall_style": "Vernacular",
+    "confidence": 0.7,
+    "notes": "daytime; modest red brick duplex/house with striped awning; chain-link fence, surveillance sign"
+  },
+  "_meta": {
+    "address": "40 Nassau St",
+    "photo": "PXL_20260318_215547931.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes"
+    ],
+    "reference_photos": [
+      "PXL_20260318_215547931.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "40 Nassau St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "40 NASSAU ST"
+    ]
+  },
+  "overall_style": "Vernacular",
+  "confidence": 0.8500000000000001,
+  "notes": "daytime; modest red brick duplex/house with striped awning; chain-link fence, surveillance sign",
+  "porch_present": true,
+  "porch_type": "stoop",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#E8E0D0",
+    "composition": "The street elevation spans roughly 6 metres across 2 storeys and is capped by a flat, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 1.2,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {},
+  "street_setback_m": 2.0,
+  "facade_description": "1889-1903 2-storey brick house-form. Flat roof. Chimney at the right rear. Fair condition.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {
+    "lon": -79.4011923,
+    "lat": 43.65569253,
+    "street": "Nassau St",
+    "street_number": 40
+  }
+}
