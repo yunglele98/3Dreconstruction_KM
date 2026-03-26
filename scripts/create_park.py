@@ -18,13 +18,15 @@ import math
 import random
 from mathutils import Vector
 
-# Park center in local coords (between Bellevue 30-40 buildings)
-# From site_coordinates: Bellevue 30 is at (-92, -119), 40 is at (-100, -90)
-# Park is east of the west-side houses, between the two sides of Bellevue Ave
+# Park center in local coords
+# West-side houses (even): x ~ -85 to -105, y ~ -140 to -66
+# East-side houses (odd):  x ~ -42 to -66,  y ~ -113 to -25
+# Park sits between the two rows, slightly closer to the east side
+# Real park is ~60m x 80m (Denison Sq to Wales Ave, between Bellevue Ave sides)
 PARK_CENTER_X = -75.0
-PARK_CENTER_Y = -80.0
-PARK_W = 70.0  # east-west
-PARK_D = 50.0  # north-south
+PARK_CENTER_Y = -85.0
+PARK_W = 30.0   # east-west (gap between the two rows of houses)
+PARK_D = 70.0   # north-south (along the street)
 
 
 def hex_to_rgb(hex_str):
@@ -308,11 +310,11 @@ def main():
     # Trees (~15 mature trees scattered)
     random.seed(42)  # Reproducible
     tree_positions = [
-        (cx - 25, cy - 15), (cx - 20, cy + 10), (cx - 15, cy - 5),
-        (cx - 10, cy + 15), (cx - 5, cy - 18), (cx - 5, cy + 5),
-        (cx + 5, cy - 10), (cx + 10, cy + 12), (cx + 15, cy - 8),
-        (cx + 20, cy + 5), (cx + 25, cy - 12), (cx + 25, cy + 15),
-        (cx - 28, cy), (cx + 28, cy - 5), (cx, cy + 20),
+        (cx - 10, cy - 25), (cx - 8, cy + 15), (cx - 5, cy - 10),
+        (cx - 3, cy + 25), (cx + 2, cy - 30), (cx + 5, cy + 5),
+        (cx + 8, cy - 15), (cx + 10, cy + 20), (cx + 12, cy - 8),
+        (cx - 12, cy + 30), (cx + 6, cy - 22), (cx - 6, cy + 10),
+        (cx, cy - 5), (cx + 10, cy + 30), (cx - 10, cy - 30),
     ]
     for tx, ty in tree_positions:
         height = random.uniform(5.0, 8.0)
@@ -321,8 +323,8 @@ def main():
 
     # Boulders (scattered on grass — visible in photos)
     boulder_positions = [
-        (cx - 8, cy + 8), (cx + 5, cy + 10), (cx - 15, cy - 8),
-        (cx + 12, cy - 5), (cx, cy + 15), (cx + 18, cy + 8),
+        (cx - 5, cy + 8), (cx + 5, cy + 15), (cx - 8, cy - 12),
+        (cx + 8, cy - 5), (cx, cy + 25), (cx + 3, cy - 20),
     ]
     for bx, by in boulder_positions:
         b = create_boulder(bx, by, random.uniform(0.4, 0.7))
@@ -330,26 +332,26 @@ def main():
 
     # Benches (along paths)
     bench_positions = [
-        (cx - 15, cy + 3, 0), (cx + 15, cy - 3, math.pi),
-        (cx - 5, cy + 20, math.pi / 2), (cx + 5, cy - 20, -math.pi / 2),
-        (cx - 25, cy + 12, 0), (cx + 20, cy + 15, math.pi / 4),
+        (cx - 8, cy + 5, 0), (cx + 8, cy - 5, math.pi),
+        (cx - 3, cy + 20, math.pi / 2), (cx + 3, cy - 20, -math.pi / 2),
+        (cx - 10, cy + 25, 0), (cx + 10, cy - 25, math.pi),
     ]
     for bx, by, rot in bench_positions:
         create_bench(bx, by, rot)
 
     # Lamp posts (along paths, visible in night photo)
     lamp_positions = [
-        (cx - 20, cy), (cx + 20, cy), (cx, cy + 18), (cx, cy - 18),
-        (cx - 30, cy + 15), (cx + 30, cy - 15),
+        (cx - 12, cy), (cx + 12, cy), (cx, cy + 25), (cx, cy - 25),
+        (cx - 10, cy + 30), (cx + 10, cy - 30),
     ]
     for lx, ly in lamp_positions:
         create_lamp_post(lx, ly)
 
     # Playground (NE corner — orange/blue equipment visible in photos)
-    pg_objects = create_playground(cx + 18, cy + 12)
+    pg_objects = create_playground(cx + 8, cy + 20)
 
     # Stepped seating (W side — concrete amphitheatre from night photo)
-    create_stepped_seating(cx - 28, cy - 5, width=6.0, depth=3.0, steps=4)
+    create_stepped_seating(cx - 12, cy - 10, width=6.0, depth=3.0, steps=4)
 
     # Fire hydrants (yellow, visible at SW and SE corners)
     create_fire_hydrant(cx - hw + 1, cy - hd + 1)
