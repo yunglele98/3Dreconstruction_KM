@@ -250,15 +250,18 @@ def create_building_from_footprint(ring, collection, override_h=None):
             sill_z = fi * floor_h + floor_h * 0.3
             for wi in range(n_win):
                 t = (wi + 1) / (n_win + 1)
-                wx = x1 + dx * t + nx * 0.16
-                wy = y1 + dy * t + ny * 0.16
+                # Window sits flush with wall, recessed 0.1m
+                wx = x1 + dx * t + nx * 0.05
+                wy = y1 + dy * t + ny * 0.05
                 wz = sill_z + win_h / 2
 
-                bpy.ops.mesh.primitive_plane_add(size=1, location=(wx, wy, wz))
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(wx, wy, wz))
                 w = bpy.context.active_object
                 w.name = f"W_{ei}_{fi}_{wi}"
-                w.scale = (win_w / 2, win_h / 2, 1)
-                w.rotation_euler = (math.pi / 2, 0, angle + math.pi / 2)
+                # Scale: width along wall edge, height vertical, depth into wall
+                # Align cube axes with wall orientation
+                w.scale = (win_w / 2, 0.08, win_h / 2)
+                w.rotation_euler = (0, 0, angle)
                 w.data.materials.append(m_glass)
                 link(w, collection)
 
@@ -274,28 +277,27 @@ def create_building_from_footprint(ring, collection, override_h=None):
                     dh = door_data.get("height_m", 2.3)
                     dpos = door_data.get("position", "center")
                     dt = 0.3 if dpos == "left" else 0.7 if dpos == "right" else 0.5
-                    dox = x1 + dx * dt + nx * 0.16
-                    doy = y1 + dy * dt + ny * 0.16
-                    # Door colour from params
+                    dox = x1 + dx * dt + nx * 0.05
+                    doy = y1 + dy * dt + ny * 0.05
                     door_hex = door_data.get("colour_hex", "#4A2A10")
                     m_this_door = mat(f"Door_{door_hex}", door_hex, 0.75)
-                    bpy.ops.mesh.primitive_plane_add(size=1, location=(dox, doy, dh / 2))
+                    bpy.ops.mesh.primitive_cube_add(size=1, location=(dox, doy, dh / 2))
                     dd = bpy.context.active_object
                     dd.name = f"Door_{di}"
-                    dd.scale = (dw / 2, dh / 2, 1)
-                    dd.rotation_euler = (math.pi / 2, 0, angle + math.pi / 2)
+                    dd.scale = (dw / 2, 0.1, dh / 2)
+                    dd.rotation_euler = (0, 0, angle)
                     dd.data.materials.append(m_this_door)
                     link(dd, collection)
             else:
                 door_w, door_h = 1.1, 2.3
                 dt = 0.5
-                dox = x1 + dx * dt + nx * 0.16
-                doy = y1 + dy * dt + ny * 0.16
-                bpy.ops.mesh.primitive_plane_add(size=1, location=(dox, doy, door_h / 2))
+                dox = x1 + dx * dt + nx * 0.05
+                doy = y1 + dy * dt + ny * 0.05
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(dox, doy, door_h / 2))
                 dd = bpy.context.active_object
                 dd.name = "Door"
-                dd.scale = (door_w / 2, door_h / 2, 1)
-                dd.rotation_euler = (math.pi / 2, 0, angle + math.pi / 2)
+                dd.scale = (door_w / 2, 0.1, door_h / 2)
+                dd.rotation_euler = (0, 0, angle)
                 dd.data.materials.append(m_door)
                 link(dd, collection)
 
@@ -304,13 +306,13 @@ def create_building_from_footprint(ring, collection, override_h=None):
             sf_data = params.get("storefront", {})
             sf_h = min(sf_data.get("height_m", floor_h * 0.7), 2.8)
             sf_w = sf_data.get("width_m", length * 0.7)
-            sf_x = x1 + dx * 0.5 + nx * 0.16
-            sf_y = y1 + dy * 0.5 + ny * 0.16
-            bpy.ops.mesh.primitive_plane_add(size=1, location=(sf_x, sf_y, sf_h / 2 + 0.3))
+            sf_x = x1 + dx * 0.5 + nx * 0.05
+            sf_y = y1 + dy * 0.5 + ny * 0.05
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(sf_x, sf_y, sf_h / 2 + 0.3))
             sf = bpy.context.active_object
             sf.name = "Storefront"
-            sf.scale = (sf_w / 2, sf_h / 2, 1)
-            sf.rotation_euler = (math.pi / 2, 0, angle + math.pi / 2)
+            sf.scale = (sf_w / 2, 0.1, sf_h / 2)
+            sf.rotation_euler = (0, 0, angle)
             sf.data.materials.append(m_store)
             link(sf, collection)
 
