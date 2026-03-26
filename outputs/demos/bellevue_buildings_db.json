@@ -1,0 +1,767 @@
+[
+  {
+    "address": "1 Leonard Pl",
+    "x": -116.2,
+    "y": -171.1,
+    "floors": 2,
+    "h": 13.1,
+    "lot_w_ft": 13.0,
+    "material": "wood_siding"
+  },
+  {
+    "address": "10 Bellevue Ave",
+    "x": -71.8,
+    "y": -165.4,
+    "floors": 2,
+    "h": 8.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "10R Bellevue Ave",
+    "x": -84.7,
+    "y": -169.7,
+    "floors": 2,
+    "h": 8.5,
+    "lot_w_ft": 17.0,
+    "material": "wood_siding"
+  },
+  {
+    "address": "12 Bellevue Ave",
+    "x": -72.8,
+    "y": -159.8,
+    "floors": 3,
+    "h": 7.2,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "14 Bellevue Ave",
+    "x": -73.7,
+    "y": -154.0,
+    "floors": 3,
+    "h": 7.2,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "14 Denison Sq",
+    "x": -3.6,
+    "y": -100.3,
+    "floors": 2,
+    "h": 7.7,
+    "lot_w_ft": 17.0,
+    "material": "other"
+  },
+  {
+    "address": "16 1/2 Bellevue Ave",
+    "x": -105.4,
+    "y": -153.8,
+    "floors": 2,
+    "h": 4.1,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "16 Bellevue Ave",
+    "x": -77.4,
+    "y": -148.6,
+    "floors": 2,
+    "h": 5.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "16 Denison Sq",
+    "x": -9.9,
+    "y": -102.2,
+    "floors": 2,
+    "h": 7.1,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "18 1/2 Bellevue Ave",
+    "x": -106.3,
+    "y": -139.7,
+    "floors": 3,
+    "h": 5.7,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "18 Bellevue Ave",
+    "x": -79.3,
+    "y": -145.7,
+    "floors": 3,
+    "h": 5.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "18 Denison Sq",
+    "x": -16.9,
+    "y": -108.2,
+    "floors": 2,
+    "h": 7.1,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "2 Bellevue Ave",
+    "x": -63.8,
+    "y": -189.1,
+    "floors": 3,
+    "h": 7.4,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "20 1/2 Bellevue Ave",
+    "x": -111.5,
+    "y": -140.5,
+    "floors": 2,
+    "h": 5.7,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "20 Bellevue Ave",
+    "x": -80.1,
+    "y": -140.3,
+    "floors": 3,
+    "h": 8.6,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "20 Denison Sq",
+    "x": -22.8,
+    "y": -109.4,
+    "floors": 3,
+    "h": 7.1,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "208 Augusta Ave",
+    "x": -3.6,
+    "y": -28.2,
+    "floors": 1,
+    "h": 3.7,
+    "lot_w_ft": 17.0,
+    "material": "other"
+  },
+  {
+    "address": "218 Augusta Ave",
+    "x": -0.2,
+    "y": -8.4,
+    "floors": 2,
+    "h": 4.6,
+    "lot_w_ft": 17.0,
+    "material": "concrete"
+  },
+  {
+    "address": "218R Augusta Ave",
+    "x": -26.2,
+    "y": -15.4,
+    "floors": 2,
+    "h": 4.6,
+    "lot_w_ft": 17.0,
+    "material": "concrete"
+  },
+  {
+    "address": "22 Bellevue Ave",
+    "x": -81.6,
+    "y": -135.6,
+    "floors": 3,
+    "h": 8.6,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "22 Denison Sq",
+    "x": -28.9,
+    "y": -111.1,
+    "floors": 3,
+    "h": 7.4,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "220 Augusta Ave",
+    "x": -1.1,
+    "y": -2.8,
+    "floors": 2,
+    "h": 4.6,
+    "lot_w_ft": 17.0,
+    "material": "other"
+  },
+  {
+    "address": "224 Augusta Ave",
+    "x": -4.7,
+    "y": 7.3,
+    "floors": 2,
+    "h": 5.1,
+    "lot_w_ft": 17.0,
+    "material": "other"
+  },
+  {
+    "address": "226 Augusta Ave",
+    "x": -5.2,
+    "y": 14.3,
+    "floors": 2,
+    "h": 5.1,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "228 Augusta Ave",
+    "x": -11.6,
+    "y": 16.7,
+    "floors": 2,
+    "h": 6.1,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "24 Bellevue Ave",
+    "x": -82.8,
+    "y": -130.2,
+    "floors": 3,
+    "h": 6.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "24 Denison Sq",
+    "x": -32.8,
+    "y": -114.3,
+    "floors": 3,
+    "h": 7.4,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "25 Bellevue Ave",
+    "x": -49.8,
+    "y": -113.2,
+    "floors": 2,
+    "h": 9.4,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "26 Bellevue Ave",
+    "x": -84.5,
+    "y": -124.0,
+    "floors": 3,
+    "h": 6.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "26 Denison Sq",
+    "x": -36.7,
+    "y": -115.5,
+    "floors": 3,
+    "h": 7.4,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "27 Bellevue Ave",
+    "x": -42.4,
+    "y": -92.5,
+    "floors": 3,
+    "h": 3.7,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "28 Denison Sq",
+    "x": -43.0,
+    "y": -121.0,
+    "floors": 2,
+    "h": 9.4,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "3 Leonard Pl",
+    "x": -110.0,
+    "y": -168.9,
+    "floors": 2,
+    "h": 13.1,
+    "lot_w_ft": 13.0,
+    "material": "stucco"
+  },
+  {
+    "address": "30 Bellevue Ave",
+    "x": -92.2,
+    "y": -118.7,
+    "floors": 2,
+    "h": 5.9,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "32 Bellevue Ave",
+    "x": -87.9,
+    "y": -109.9,
+    "floors": 2,
+    "h": 6.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "34 Bellevue Ave",
+    "x": -89.5,
+    "y": -103.7,
+    "floors": 2,
+    "h": 6.2,
+    "lot_w_ft": 17.0,
+    "material": "stucco"
+  },
+  {
+    "address": "34A Bellevue Ave",
+    "x": -115.8,
+    "y": -111.5,
+    "floors": 2,
+    "h": 5.7,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "35 Bellevue Ave",
+    "x": -54.1,
+    "y": -68.5,
+    "floors": 3,
+    "h": 1.0,
+    "lot_w_ft": 17.0,
+    "material": "stucco"
+  },
+  {
+    "address": "36 Bellevue Ave",
+    "x": -90.7,
+    "y": -99.1,
+    "floors": 2,
+    "h": 5.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "38 Bellevue Ave",
+    "x": -92.2,
+    "y": -94.0,
+    "floors": 2,
+    "h": 5.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "4 Bellevue Ave",
+    "x": -63.8,
+    "y": -182.5,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "40 Bellevue Ave",
+    "x": -100.1,
+    "y": -89.8,
+    "floors": 2,
+    "h": 7.2,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "42 Bellevue Ave",
+    "x": -101.5,
+    "y": -84.1,
+    "floors": 2,
+    "h": 7.2,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "43 Bellevue Ave",
+    "x": -58.2,
+    "y": -47.7,
+    "floors": 2,
+    "h": 6.9,
+    "lot_w_ft": 17.0,
+    "material": "stone"
+  },
+  {
+    "address": "44 Bellevue Ave",
+    "x": -102.3,
+    "y": -77.5,
+    "floors": 2,
+    "h": 6.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "45 Bellevue Ave",
+    "x": -62.4,
+    "y": -41.2,
+    "floors": 2,
+    "h": 6.9,
+    "lot_w_ft": 17.0,
+    "material": "stucco"
+  },
+  {
+    "address": "46 Wales Ave",
+    "x": -86.8,
+    "y": -190.5,
+    "floors": 2,
+    "h": 8.0,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "47 Bellevue Ave",
+    "x": -65.9,
+    "y": -36.1,
+    "floors": 3,
+    "h": 6.9,
+    "lot_w_ft": 17.0,
+    "material": "stucco"
+  },
+  {
+    "address": "48 Bellevue Ave",
+    "x": -103.0,
+    "y": -70.8,
+    "floors": 2,
+    "h": 5.9,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "48 Wales Ave",
+    "x": -93.0,
+    "y": -191.8,
+    "floors": 2,
+    "h": 8.0,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "49 Bellevue Ave",
+    "x": -65.9,
+    "y": -25.0,
+    "floors": 2,
+    "h": 6.9,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "5 Leonard Pl",
+    "x": -100.9,
+    "y": -161.9,
+    "floors": 2,
+    "h": 7.1,
+    "lot_w_ft": 13.0,
+    "material": "glass"
+  },
+  {
+    "address": "50 Bellevue Ave",
+    "x": -104.7,
+    "y": -65.7,
+    "floors": 2,
+    "h": 5.9,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "50 Wales Ave",
+    "x": -98.2,
+    "y": -191.4,
+    "floors": 2,
+    "h": 8.0,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "51 Bellevue Ave",
+    "x": -70.2,
+    "y": -19.9,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "52 Bellevue Ave",
+    "x": -105.5,
+    "y": -60.7,
+    "floors": 2,
+    "h": 5.9,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "52 Wales Ave",
+    "x": -102.7,
+    "y": -194.0,
+    "floors": 2,
+    "h": 8.0,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "53 Bellevue Ave",
+    "x": -71.1,
+    "y": -14.9,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "54 Bellevue Ave",
+    "x": -104.3,
+    "y": -55.8,
+    "floors": 2,
+    "h": 5.0,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "54 Wales Ave",
+    "x": -107.3,
+    "y": -195.4,
+    "floors": 2,
+    "h": 7.0,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "55 Bellevue Ave",
+    "x": -74.7,
+    "y": -10.2,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "stucco"
+  },
+  {
+    "address": "56 Bellevue Ave",
+    "x": -108.0,
+    "y": -51.5,
+    "floors": 2,
+    "h": 5.0,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "56 Wales Ave",
+    "x": -111.1,
+    "y": -196.7,
+    "floors": 2,
+    "h": 7.0,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "57 Bellevue Ave",
+    "x": -76.0,
+    "y": -5.1,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "58 Bellevue Ave",
+    "x": -109.9,
+    "y": -44.9,
+    "floors": 1,
+    "h": 4.9,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "58 Wales Ave",
+    "x": -115.0,
+    "y": -198.2,
+    "floors": 2,
+    "h": 7.0,
+    "lot_w_ft": 17.0,
+    "material": "vinyl_siding"
+  },
+  {
+    "address": "59 Bellevue Ave",
+    "x": -72.1,
+    "y": -1.2,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "6 Bellevue Ave",
+    "x": -65.1,
+    "y": -176.5,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "60 Bellevue Ave",
+    "x": -110.4,
+    "y": -37.3,
+    "floors": 2,
+    "h": 6.8,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "61 Bellevue Ave",
+    "x": -75.3,
+    "y": 5.7,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "62 Bellevue Ave",
+    "x": -111.1,
+    "y": -30.7,
+    "floors": 2,
+    "h": 6.8,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "64 Bellevue Ave",
+    "x": -113.0,
+    "y": -25.8,
+    "floors": 2,
+    "h": 6.7,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "66 Bellevue Ave",
+    "x": -114.2,
+    "y": -21.4,
+    "floors": 2,
+    "h": 6.7,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "66A Bellevue Ave",
+    "x": -116.0,
+    "y": -16.5,
+    "floors": 2,
+    "h": 6.0,
+    "lot_w_ft": 17.0,
+    "material": "mixed"
+  },
+  {
+    "address": "68 Bellevue Ave",
+    "x": -115.7,
+    "y": -8.2,
+    "floors": 2,
+    "h": 6.0,
+    "lot_w_ft": 17.0,
+    "material": "stucco"
+  },
+  {
+    "address": "69 Nassau St",
+    "x": -19.4,
+    "y": 15.1,
+    "floors": 1,
+    "h": 4.9,
+    "lot_w_ft": 17.0,
+    "material": "wood_siding"
+  },
+  {
+    "address": "69R Nassau St",
+    "x": -20.4,
+    "y": 6.9,
+    "floors": 1,
+    "h": 4.9,
+    "lot_w_ft": 17.0,
+    "material": "wood_siding"
+  },
+  {
+    "address": "71 Nassau St",
+    "x": -29.5,
+    "y": 12.2,
+    "floors": 2,
+    "h": 6.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "73 Nassau St",
+    "x": -33.7,
+    "y": 10.3,
+    "floors": 2,
+    "h": 6.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "75 Nassau St",
+    "x": -39.0,
+    "y": 10.5,
+    "floors": 2,
+    "h": 6.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "77 Nassau St",
+    "x": -43.1,
+    "y": 8.4,
+    "floors": 2,
+    "h": 6.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "79 Nassau St",
+    "x": -44.3,
+    "y": 8.2,
+    "floors": 2,
+    "h": 6.3,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "8 Bellevue Ave",
+    "x": -69.9,
+    "y": -170.8,
+    "floors": 2,
+    "h": 8.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "83 Nassau St",
+    "x": -81.2,
+    "y": -7.2,
+    "floors": 2,
+    "h": 7.5,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  },
+  {
+    "address": "90 Nassau St",
+    "x": -122.6,
+    "y": 17.1,
+    "floors": 2,
+    "h": 8.7,
+    "lot_w_ft": 17.0,
+    "material": "brick"
+  }
+]

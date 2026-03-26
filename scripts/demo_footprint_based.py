@@ -470,20 +470,49 @@ def main():
     g.data.materials.append(mat("Ground", "#3A4A2A", 0.95))
     link(g, c_env)
 
-    # Buildings from 3D massing shapes (actual built volume from LiDAR)
+    # Buildings from gis_scene building_positions (SAME source as roads/footprints)
     c_bldg = col("Buildings")
     bldg_count = 0
-    for m in GIS.get("massing", []):
-        ring = m.get("rings", [[]])[0]
-        h = m.get("h", 0)
-        if not ring or len(ring) < 3 or h <= 0:
+
+    bp = GIS.get("building_positions", {})
+
+    for addr, pos in sorted(bp.items()):
+        bx, by = pos['x'], pos['y']
+        if not (X_MIN <= bx <= X_MAX and Y_MIN <= by <= Y_MAX):
             continue
-        if not in_bounds(ring):
-            continue
-        # Override height from massing data
+
+        # Normalize rotation to nearest canonical direction
+        # Bellevue area has 4 directions: 163, 343, 73, 253
+        raw_rot = pos.get('rotation_deg', 165)
+        canonical = [163, 343, 73, 253]
+        # Find nearest canonical rotation
+        best_canon = min(canonical, key=lambda c: min(abs(raw_rot - c), abs(raw_rot - c + 360), abs(raw_rot - c - 360)))
+        rot_deg = best_canon
+        rot_rad = math.radians(rot_deg)
+        massing_h = pos.get('massing_height_m')
+
+        # Get params
+        p = PARAMS.get(addr, {})
+        stories = p.get('floors', 2) or 2
+        h = massing_h or p.get('total_height_m') or stories * 3.2
+        if h <= 0:
+            h = stories * 3.2
+        width = p.get('facade_width_m', 5.2) or 5.2
+        depth = 10.0  # front building portion only
+
+        # Create box CENTERED on the position point
+        hw, hd = width / 2, depth / 2
+
+        # 4 corners centered on (0,0)
+        corners = [(-hw, hd), (hw, hd), (hw, -hd), (-hw, -hd)]
+
+        cos_r, sin_r = math.cos(rot_rad), math.sin(rot_rad)
+        ring = [(lx*cos_r - ly*sin_r + bx, lx*sin_r + ly*cos_r + by) for lx, ly in corners]
+
         create_building_from_footprint(ring, c_bldg, override_h=h)
         bldg_count += 1
-    print(f"  Buildings (from massing): {bldg_count}")
+
+    print(f"  Buildings (from gis_scene positions): {bldg_count}")
 
     # Roads
     c_road = col("Roads")
