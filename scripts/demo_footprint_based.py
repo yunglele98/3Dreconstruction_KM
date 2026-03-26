@@ -481,12 +481,31 @@ def main():
         if not (X_MIN <= bx <= X_MAX and Y_MIN <= by <= Y_MAX):
             continue
 
-        # Convert bearing to rotation for +Y-facing front.
-        # bearing_deg is compass bearing (0=N, clockwise) of facade direction.
-        # Box front is at +Y. At rot=0, +Y faces north (bearing=0).
-        # Blender rotation is CCW. To face bearing B, rotate by -(B) = (360-B).
-        bearing = pos.get('bearing_deg', pos.get('rotation_deg', 0))
-        rot_deg = (360 - bearing) % 360
+        # Determine facing direction from street name + position.
+        # Bellevue/Wales/Leonard run NNW-SSE: west side (x<-70) faces ENE (73),
+        #   east side faces WSW (253)
+        # Augusta/Nassau/Denison/Oxford run roughly ENE-WSW: south side faces NNW (343),
+        #   north side faces SSE (163)
+        street = addr.split()
+        street_name = ""
+        for si, s in enumerate(street):
+            if s in ("Ave", "St", "Pl", "Sq"):
+                street_name = " ".join(street[max(0,si-1):si+1])
+                break
+
+        ns_streets = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave"}
+        ew_streets = {"Augusta Ave", "Nassau St", "Denison Ave", "Denison Sq",
+                      "Oxford St", "Dundas St"}
+
+        if street_name in ns_streets:
+            facing_bearing = 73 if bx < -70 else 253
+        elif street_name in ew_streets:
+            facing_bearing = 343 if by < -100 else 163
+        else:
+            # Fallback: use bearing data
+            facing_bearing = pos.get('bearing_deg', 73)
+
+        rot_deg = (360 - facing_bearing) % 360
         rot_rad = math.radians(rot_deg)
         massing_h = pos.get('massing_height_m')
 
