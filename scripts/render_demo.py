@@ -74,8 +74,11 @@ if bldg_xs:
 else:
     cx, cy = -74, -91
 
-# Override with actual building cluster center (computed from gis_scene.json)
-cx, cy = -74, -91
+# Override: compute center from actual building objects in the scene
+# The scene is rotated -17.5 degrees, so hardcoded values don't work.
+# Let the auto-detection from bldg_xs/bldg_ys handle it.
+if not bldg_xs:
+    cx, cy = 0, 0  # fallback if no buildings found
 
 # Add fill light to illuminate shadow sides
 bpy.ops.object.light_add(type='AREA', location=(cx - 80, cy + 80, 60))
