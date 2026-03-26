@@ -2436,19 +2436,19 @@ def main():
                 street_name = " ".join(street[max(0,si-1):si+1])
                 break
 
-        ns_streets = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave"}
-        ew_streets = {"Augusta Ave", "Nassau St", "Oxford St", "Dundas St", "Baldwin St"}
+        ns_streets = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave",
+                      "Lippincott St", "Hickory St", "Bathurst St", "Spadina Ave"}
+        ew_streets = {"Augusta Ave", "Nassau St", "Oxford St", "Dundas St", "Baldwin St",
+                      "College St", "Casimir St", "St Andrew St", "Kensington Pl",
+                      "Kensington Ave", "Glen Baillie Pl", "Fitzroy Terr", "Carlyle St"}
 
         if street_name in ns_streets:
             facing_bearing = 73 if bx < -70 else 253
         elif street_name in ew_streets:
             facing_bearing = 343 if by < -100 else 163
         elif street_name in ("Denison Sq",):
-            # Denison Sq wraps the north side of the park
-            # Buildings face south toward the park (~163)
             facing_bearing = 163 if by > -120 else 343
         elif street_name in ("Denison Ave",):
-            # Denison Ave runs N-S west of the park area
             facing_bearing = 73 if bx < -20 else 253
         else:
             # Fallback: use bearing data
@@ -2501,10 +2501,16 @@ def main():
             if s in ("Ave", "St", "Pl", "Sq"):
                 sn = " ".join(parts[max(0,si-1):si+1])
                 break
-        ns_streets = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave"}
-        if sn not in ns_streets:
-            continue  # only add fences to N-S street houses
-        facing = 73 if bx < -70 else 253
+        ns_streets_f = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave",
+                        "Lippincott St", "Hickory St"}
+        ew_streets_f = {"Augusta Ave", "Nassau St", "Oxford St", "Kensington Ave",
+                        "Baldwin St", "Casimir St"}
+        if sn in ns_streets_f:
+            facing = 73 if bx < -70 else 253
+        elif sn in ew_streets_f:
+            facing = 343 if by < -100 else 163
+        else:
+            continue
         rot = math.radians((360 - facing) % 360)
         rot = scene_transform_angle(rot)
         sbx, sby = scene_transform(bx, by)
