@@ -41,9 +41,35 @@ for f in (SCRIPT_DIR / "params").glob("*.json"):
     except:
         pass
 
-# Bellevue area bounds
-X_MIN, X_MAX = -130, 0
-Y_MIN, Y_MAX = -200, 20
+# Expanded bounds to include Bellevue Park surroundings (Denison Sq, Wales Ave east side)
+X_MIN, X_MAX = -130, 70
+Y_MIN, Y_MAX = -210, 30
+
+# Scene transform: rotate so Bellevue Ave aligns with Y axis, center on origin.
+# Bellevue runs at ~98 degrees from +X. Rotate by -98 degrees.
+# Center of west row: (-119, 21) in original coords.
+_SCENE_CX, _SCENE_CY = -50.0, -100.0  # center of expanded demo area
+_SCENE_ROT = math.radians(-17.5)  # rotate scene to align Bellevue Ave with Y axis
+_COS_SR = math.cos(_SCENE_ROT)
+_SIN_SR = math.sin(_SCENE_ROT)
+
+
+def scene_transform(x, y):
+    """Transform GIS coords to scene coords (rotated + centered)."""
+    # Translate to center, then rotate
+    dx, dy = x - _SCENE_CX, y - _SCENE_CY
+    return (dx * _COS_SR - dy * _SIN_SR,
+            dx * _SIN_SR + dy * _COS_SR)
+
+
+def scene_transform_ring(ring):
+    """Transform a polygon ring."""
+    return [scene_transform(x, y) for x, y in ring]
+
+
+def scene_transform_angle(angle_rad):
+    """Add scene rotation to an angle."""
+    return angle_rad + _SCENE_ROT
 
 _mats = {}
 
@@ -187,8 +213,17 @@ def create_building_from_footprint(ring, collection, override_h=None):
     # Get params for material, windows, etc.
     params = find_params(cx, cy)
     facade_mat_name = (params.get("facade_material") or "brick").lower()
-    hex_col = MATERIAL_COLOURS.get(facade_mat_name, "#B8654A")
+
+    # Per-building colour from colour_palette or facade_detail
+    cp = params.get("colour_palette", {})
+    fd = params.get("facade_detail", {})
+    hex_col = (cp.get("facade_hex") or fd.get("brick_colour_hex") or
+               MATERIAL_COLOURS.get(facade_mat_name, "#B8654A"))
     facade_mat = mat(f"Facade_{hex_col}", hex_col, 0.7)
+
+    # Trim colour
+    trim_hex = cp.get("trim_hex") or fd.get("trim_colour_hex") or "#E8E0D0"
+    m_trim = mat(f"Trim_{trim_hex}", trim_hex, 0.6)
 
     floors = params.get("floors") or max(1, int(h / 3.0))
     has_storefront = params.get("has_storefront", False)
@@ -370,6 +405,95 @@ def create_building_from_footprint(ring, collection, override_h=None):
                     qo.data.materials.append(m_q)
                     link(qo, collection)
 
+    # Bay windows (on longest street-facing edge)
+    bw = params.get("bay_window", {})
+    if isinstance(bw, dict) and bw.get("present") and len(edges) > 0:
+        bw_w = bw.get("width_m", 2.0)
+        bw_proj = bw.get("projection_m", 0.6)
+        bw_floors = bw.get("floors", [0, 1])
+        if not isinstance(bw_floors, list):
+            bw_floors = [0, 1]
+
+        # Place on longest edge
+        length0, x1, y1, x2, y2, nx0, ny0 = edges[0]
+        dx0, dy0 = x2 - x1, y2 - y1
+        angle0 = math.atan2(dy0, dx0)
+
+        # Bay window position: 30% along the edge
+        bt = 0.3
+        for bfi in bw_floors:
+            if bfi >= floors:
+                continue
+            bz_base = bfi * floor_h + 0.3
+            bz_h = floor_h * 0.7
+
+            bwx = x1 + dx0 * bt + nx0 * (0.05 + bw_proj / 2)
+            bwy = y1 + dy0 * bt + ny0 * (0.05 + bw_proj / 2)
+            bwz = bz_base + bz_h / 2
+
+            # Bay window as a box projecting from the wall
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(bwx, bwy, bwz))
+            bwo = bpy.context.active_object
+            bwo.name = f"BayWin_{bfi}"
+            bwo.scale = (bw_w / 2, bw_proj / 2, bz_h / 2)
+            bwo.rotation_euler = (0, 0, angle0)
+            bwo.data.materials.append(m_trim)
+            link(bwo, collection)
+
+            # Glass front on bay window
+            bgx = bwx + nx0 * bw_proj / 2
+            bgy = bwy + ny0 * bw_proj / 2
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(bgx, bgy, bwz))
+            bgo = bpy.context.active_object
+            bgo.name = f"BayGlass_{bfi}"
+            bgo.scale = (bw_w * 0.8 / 2, 0.05, bz_h * 0.7 / 2)
+            bgo.rotation_euler = (0, 0, angle0)
+            bgo.data.materials.append(m_glass)
+            link(bgo, collection)
+
+    # Porch (on street-facing edge)
+    if params.get("porch_present") and len(edges) > 0:
+        length0, x1, y1, x2, y2, nx0, ny0 = edges[0]
+        dx0, dy0 = x2 - x1, y2 - y1
+        angle0 = math.atan2(dy0, dx0)
+
+        porch_w = min(length0 * 0.6, 3.0)
+        porch_d = 1.5
+        porch_h = 2.8
+
+        px = x1 + dx0 * 0.5 + nx0 * (0.05 + porch_d / 2)
+        py = y1 + dy0 * 0.5 + ny0 * (0.05 + porch_d / 2)
+
+        # Porch floor
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(px, py, 0.3))
+        pf = bpy.context.active_object
+        pf.name = "PorchFloor"
+        pf.scale = (porch_w / 2, porch_d / 2, 0.05)
+        pf.rotation_euler = (0, 0, angle0)
+        pf.data.materials.append(mat("PorchWood", "#8A7050", 0.8))
+        link(pf, collection)
+
+        # Porch roof
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(px, py, porch_h))
+        pr = bpy.context.active_object
+        pr.name = "PorchRoof"
+        pr.scale = (porch_w / 2 + 0.1, porch_d / 2 + 0.1, 0.05)
+        pr.rotation_euler = (0, 0, angle0)
+        pr.data.materials.append(mat("Roof", "#4A4A4A", 0.85))
+        link(pr, collection)
+
+        # Porch columns (2)
+        m_col = mat("PorchColumn", "#E0D8C8", 0.7)
+        for side in [-0.4, 0.4]:
+            col_x = px + math.cos(angle0) * porch_w * side + nx0 * porch_d * 0.4
+            col_y = py + math.sin(angle0) * porch_w * side + ny0 * porch_d * 0.4
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.06, depth=porch_h - 0.35,
+                                                 location=(col_x, col_y, (porch_h + 0.35) / 2), vertices=8)
+            co = bpy.context.active_object
+            co.name = "PorchCol"
+            co.data.materials.append(m_col)
+            link(co, collection)
+
     # 3. Roof
     m_roof = mat("Roof", "#4A4A4A", 0.85)
 
@@ -463,12 +587,12 @@ def main():
 
     print("=== Bellevue Demo: Footprint-Based Generation ===")
 
-    # Ground plane
+    # Ground plane (centered on origin after transform)
     c_env = col("Ground")
-    bpy.ops.mesh.primitive_plane_add(size=1, location=(-65, -90, -0.05))
+    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 0, -0.05))
     g = bpy.context.active_object
     g.name = "Ground"
-    g.scale = (100, 120, 1)
+    g.scale = (150, 150, 1)
     g.data.materials.append(mat("Ground", "#5A6A4A", 0.95))
     link(g, c_env)
 
@@ -496,19 +620,27 @@ def main():
                 break
 
         ns_streets = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave"}
-        ew_streets = {"Augusta Ave", "Nassau St", "Denison Ave", "Denison Sq",
-                      "Oxford St", "Dundas St"}
+        ew_streets = {"Augusta Ave", "Nassau St", "Oxford St", "Dundas St", "Baldwin St"}
 
         if street_name in ns_streets:
             facing_bearing = 73 if bx < -70 else 253
         elif street_name in ew_streets:
             facing_bearing = 343 if by < -100 else 163
+        elif street_name in ("Denison Sq",):
+            # Denison Sq wraps the north side of the park
+            # Buildings face south toward the park (~163)
+            facing_bearing = 163 if by > -120 else 343
+        elif street_name in ("Denison Ave",):
+            # Denison Ave runs N-S west of the park area
+            facing_bearing = 73 if bx < -20 else 253
         else:
             # Fallback: use bearing data
             facing_bearing = pos.get('bearing_deg', 73)
 
         rot_deg = (360 - facing_bearing) % 360
         rot_rad = math.radians(rot_deg)
+        # Apply scene rotation to building rotation
+        rot_rad = scene_transform_angle(rot_rad)
         massing_h = pos.get('massing_height_m')
 
         # Get params
@@ -520,19 +652,37 @@ def main():
         width = p.get('facade_width_m', 5.2) or 5.2
         depth = 10.0  # front building portion only
 
-        # Create box CENTERED on the position point
+        # Transform position to scene coords
+        sbx, sby = scene_transform(bx, by)
+
+        # Create box CENTERED on the transformed position
         hw, hd = width / 2, depth / 2
 
         # 4 corners centered on (0,0)
         corners = [(-hw, hd), (hw, hd), (hw, -hd), (-hw, -hd)]
 
         cos_r, sin_r = math.cos(rot_rad), math.sin(rot_rad)
-        ring = [(lx*cos_r - ly*sin_r + bx, lx*sin_r + ly*cos_r + by) for lx, ly in corners]
+        ring = [(lx*cos_r - ly*sin_r + sbx, lx*sin_r + ly*cos_r + sby) for lx, ly in corners]
 
         create_building_from_footprint(ring, c_bldg, override_h=h)
         bldg_count += 1
 
     print(f"  Buildings (from gis_scene positions): {bldg_count}")
+
+    # Park polygon (from separate PostGIS export)
+    park_file = SCRIPT_DIR / "outputs" / "demos" / "bellevue_complete_gis.json"
+    if park_file.exists():
+        park_data = json.load(open(park_file))
+        c_park = col("Park")
+        m_grass = mat("ParkGrass", "#4A7A2A", 0.9)
+        for pk in park_data.get("parks", []):
+            t_ring = scene_transform_ring(pk["coords"])
+            mesh = poly_mesh(t_ring, 0.01, "Park")
+            if mesh:
+                obj = bpy.data.objects.new("Park", mesh)
+                obj.data.materials.append(m_grass)
+                link(obj, c_park)
+        print(f"  Park: {len(park_data.get('parks', []))}")
 
     # Roads
     c_road = col("Roads")
@@ -546,7 +696,8 @@ def main():
         cy = sum(c[1] for c in coords) / len(coords)
         if not (X_MIN - 30 <= cx <= X_MAX + 30 and Y_MIN - 30 <= cy <= Y_MAX + 30):
             continue
-        mesh = road_mesh(coords, 7.0, f"Road_{road_count}")
+        t_coords = [scene_transform(c[0], c[1]) for c in coords]
+        mesh = road_mesh(t_coords, 7.0, f"Road_{road_count}")
         if mesh:
             obj = bpy.data.objects.new(f"Road_{road_count}", mesh)
             obj.data.materials.append(m_road)
@@ -563,7 +714,8 @@ def main():
         cy = sum(c[1] for c in coords) / len(coords)
         if not (X_MIN - 20 <= cx <= X_MAX + 20 and Y_MIN - 20 <= cy <= Y_MAX + 20):
             continue
-        mesh = road_mesh(coords, 3.0, f"Alley_{road_count}")
+        t_coords = [scene_transform(c[0], c[1]) for c in coords]
+        mesh = road_mesh(t_coords, 3.0, f"Alley_{road_count}")
         if mesh:
             obj = bpy.data.objects.new(f"Alley_{road_count}", mesh)
             obj.data.materials.append(m_alley)
@@ -580,11 +732,12 @@ def main():
         x, y = pt['x'], pt['y']
         if not (X_MIN - 10 <= x <= X_MAX + 10 and Y_MIN - 10 <= y <= Y_MAX + 10):
             continue
+        tx, ty = scene_transform(x, y)
         h = random.uniform(5, 9)
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.1, depth=h, location=(x, y, h/2), vertices=8)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.1, depth=h, location=(tx, ty, h/2), vertices=8)
         bpy.context.active_object.data.materials.append(m_trunk)
         link(bpy.context.active_object, c_trees)
-        bpy.ops.mesh.primitive_uv_sphere_add(radius=1.8, location=(x, y, h+0.5), segments=8, ring_count=6)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=1.8, location=(tx, ty, h+0.5), segments=8, ring_count=6)
         ca = bpy.context.active_object
         ca.scale = (1, 1, 0.6)
         ca.data.materials.append(m_canopy)
@@ -600,7 +753,8 @@ def main():
             x, y = pt['x'], pt['y']
             if not (X_MIN - 10 <= x <= X_MAX + 10 and Y_MIN - 10 <= y <= Y_MAX + 10):
                 continue
-            bpy.ops.mesh.primitive_cylinder_add(radius=cfg[0], depth=cfg[1], location=(x, y, cfg[1]/2), vertices=8)
+            tx, ty = scene_transform(x, y)
+            bpy.ops.mesh.primitive_cylinder_add(radius=cfg[0], depth=cfg[1], location=(tx, ty, cfg[1]/2), vertices=8)
             bpy.context.active_object.data.materials.append(mat(f"F_{layer}", cfg[2], 0.5))
             link(bpy.context.active_object, c_field)
             sf_count += 1
