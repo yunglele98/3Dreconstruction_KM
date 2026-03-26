@@ -77,6 +77,25 @@ else:
 # Override with actual building cluster center (computed from gis_scene.json)
 cx, cy = -74, -91
 
+# Add fill light to illuminate shadow sides
+bpy.ops.object.light_add(type='AREA', location=(cx - 80, cy + 80, 60))
+fill = bpy.context.active_object
+fill.name = "FillLight"
+fill.data.energy = 500
+fill.data.size = 30
+fill.rotation_euler = (math.radians(60), 0, math.radians(-135))
+
+# Set world background to light blue sky
+world = bpy.context.scene.world
+if world is None:
+    world = bpy.data.worlds.new("World")
+    bpy.context.scene.world = world
+world.use_nodes = True
+bg = world.node_tree.nodes.get("Background")
+if bg:
+    bg.inputs["Color"].default_value = (0.6, 0.7, 0.85, 1.0)
+    bg.inputs["Strength"].default_value = 0.5
+
 print(f"Scene center: ({cx:.0f}, {cy:.0f}), {len(bldg_xs)} buildings")
 print(f"Output: {OUT_DIR}")
 print()

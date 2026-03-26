@@ -218,7 +218,7 @@ def create_building_from_footprint(ring, collection, override_h=None):
 
     # 2. Add windows on exterior edges
     m_glass = mat("Glass", "#3A5A7A", 0.2)
-    m_door = mat("Door", "#5A3A20", 0.75)
+    m_door = mat("Door", "#4A2A10", 0.75)
     m_store = mat("Storefront", "#2A4A5A", 0.25)
 
     # Sort edges by length to find facade edges
@@ -242,7 +242,7 @@ def create_building_from_footprint(ring, collection, override_h=None):
         dx, dy = x2 - x1, y2 - y1
         angle = math.atan2(dy, dx)
         n_win = max(1, int(length / 2.5))
-        win_w, win_h = 0.85, 1.1
+        win_w, win_h = 1.0, 1.4
 
         for fi in range(int(floors)):
             if fi == 0 and has_storefront and ei == 0:
@@ -270,14 +270,14 @@ def create_building_from_footprint(ring, collection, override_h=None):
                 for di, door_data in enumerate(doors):
                     if not isinstance(door_data, dict):
                         continue
-                    dw = door_data.get("width_m", 0.95)
-                    dh = door_data.get("height_m", 2.1)
+                    dw = door_data.get("width_m", 1.1)
+                    dh = door_data.get("height_m", 2.3)
                     dpos = door_data.get("position", "center")
                     dt = 0.3 if dpos == "left" else 0.7 if dpos == "right" else 0.5
                     dox = x1 + dx * dt + nx * 0.16
                     doy = y1 + dy * dt + ny * 0.16
                     # Door colour from params
-                    door_hex = door_data.get("colour_hex", "#5A3A20")
+                    door_hex = door_data.get("colour_hex", "#4A2A10")
                     m_this_door = mat(f"Door_{door_hex}", door_hex, 0.75)
                     bpy.ops.mesh.primitive_plane_add(size=1, location=(dox, doy, dh / 2))
                     dd = bpy.context.active_object
@@ -287,7 +287,7 @@ def create_building_from_footprint(ring, collection, override_h=None):
                     dd.data.materials.append(m_this_door)
                     link(dd, collection)
             else:
-                door_w, door_h = 0.95, 2.1
+                door_w, door_h = 1.1, 2.3
                 dt = 0.5
                 dox = x1 + dx * dt + nx * 0.16
                 doy = y1 + dy * dt + ny * 0.16
@@ -467,7 +467,7 @@ def main():
     g = bpy.context.active_object
     g.name = "Ground"
     g.scale = (100, 120, 1)
-    g.data.materials.append(mat("Ground", "#3A4A2A", 0.95))
+    g.data.materials.append(mat("Ground", "#5A6A4A", 0.95))
     link(g, c_env)
 
     # Buildings from gis_scene building_positions (SAME source as roads/footprints)
@@ -534,7 +534,7 @@ def main():
 
     # Roads
     c_road = col("Roads")
-    m_road = mat("Road", "#2A2A2A", 0.9)
+    m_road = mat("Road", "#4A4A4A", 0.9)
     road_count = 0
     for r in GIS.get("roads", []):
         coords = r.get("coords", [])
@@ -552,7 +552,7 @@ def main():
             road_count += 1
 
     # Alleys
-    m_alley = mat("Alley", "#4A4A4A", 0.85)
+    m_alley = mat("Alley", "#5A5A5A", 0.85)
     for r in GIS.get("alleys", []):
         coords = r.get("coords", [])
         if len(coords) < 2:
