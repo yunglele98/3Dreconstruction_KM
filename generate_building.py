@@ -359,6 +359,8 @@ def colour_name_to_hex(name):
         "bronze": "#5C4632",
         "charcoal": "#2F3238",
         "olive_green": "#5D6F3A",
+        "brick": "#B85A3A",
+        "red_brick": "#B85A3A",
     }
     if normalized in mapping:
         return mapping[normalized]
@@ -384,7 +386,10 @@ def infer_hex_from_text(*texts, default="#808080"):
     merged = " ".join(str(t) for t in texts if t).lower()
     if not merged:
         return default
-    return colour_name_to_hex(merged)
+    result = colour_name_to_hex(merged)
+    if result == "#808080" and default != "#808080":
+        return default
+    return result
 
 
 def get_stone_hex(*texts, default="#C8C0B0"):
@@ -2246,6 +2251,7 @@ def create_chimney(params, wall_h, ridge_height, width):
         ch_w = ch.get("width_m", 0.5)
         ch_d = ch.get("depth_m", 0.4)
         above = ch.get("height_above_ridge_m", 1.0)
+        above = min(above, 1.5)  # cap chimney extension above ridge
 
         pos = str(ch.get("position", key)).lower()
 
@@ -2343,6 +2349,11 @@ def create_bay_window(params, wall_h, facade_width):
 
         # --- Z base ---
         z_base = sum(floor_heights[:max(0, int(floor_idx) - 1)]) if isinstance(floor_idx, (int, float)) else 3.0
+
+        # Cap bay height so it doesn't extend above wall_h (into gable zone)
+        max_bay_h = wall_h - z_base - sill_offset
+        if max_bay_h > 0 and bay_h > max_bay_h:
+            bay_h = max_bay_h
 
         # --- X offset from position field ---
         x_offset = 0.0
@@ -5714,7 +5725,7 @@ def generate_building(params, offset=(0, 0, 0), rotation=0.0):
 # Multi-building loader
 # ---------------------------------------------------------------------------
 
-def load_and_generate(params_path, spacing=15.0):
+def load_and_generate(params_path, spacing=15.0, match=None, limit=None):
     """Load one or more JSON param files and generate buildings."""
     clear_scene()
 
@@ -5741,6 +5752,11 @@ def load_and_generate(params_path, spacing=15.0):
     elif path.is_dir():
         files = sorted(path.glob("*.json"))
         files = [f for f in files if not f.name.startswith("_")]
+        if match:
+            needle = str(match).lower()
+            files = [f for f in files if needle in f.stem.lower()]
+        if isinstance(limit, int) and limit > 0:
+            files = files[:limit]
     else:
         print(f"[ERROR] Path not found: {params_path}")
         return
@@ -5770,8 +5786,8 @@ def load_and_generate(params_path, spacing=15.0):
 
         if site_coords and address and address in site_coords:
             sc = site_coords[address]
-            offset = (sc["x"], sc["y"], 0)
             rotation = math.radians(sc.get("rotation_deg", 0))
+            offset = (sc["x"], sc["y"], 0)
         elif site_coords:
             # Try matching by filename stem (address with underscores)
             stem_addr = geo_key.replace("_", " ")
@@ -6248,7 +6264,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     # Generate buildings
-    run_data = load_and_generate(params_path)
+    run_data = load_and_generate(params_path, match=match_filter, limit=limit)
     if run_data is None:
         print("[ERROR] Generation aborted due to invalid input path.")
         sys.exit(1)

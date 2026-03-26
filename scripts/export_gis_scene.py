@@ -196,6 +196,88 @@ def transform_line_coords(geojson_str):
     return lines
 
 
+def extract_primary_ring_abs(geojson_str):
+    """Extract the primary polygon ring in absolute SRID 2952 coordinates."""
+    if not geojson_str:
+        return []
+    geom = json.loads(geojson_str)
+    gtype = geom.get("type", "")
+    coords = geom.get("coordinates", [])
+
+    if gtype == "Polygon" and coords:
+        return [(pt[0], pt[1]) for pt in coords[0] if len(pt) >= 2]
+
+    if gtype == "MultiPolygon" and coords:
+        best = []
+        best_len = -1
+        for poly in coords:
+            if not poly:
+                continue
+            ring = poly[0]
+            if len(ring) > best_len:
+                best = ring
+                best_len = len(ring)
+        return [(pt[0], pt[1]) for pt in best if len(pt) >= 2]
+
+    return []
+
+
+def polygon_centroid_abs(ring):
+    """Compute a simple centroid from polygon vertices in absolute coordinates."""
+    if not ring:
+        return None, None
+    pts = ring[:-1] if len(ring) > 1 and ring[0] == ring[-1] else ring
+    if not pts:
+        return None, None
+    cx = sum(p[0] for p in pts) / len(pts)
+    cy = sum(p[1] for p in pts) / len(pts)
+    return cx, cy
+
+
+def compass_bearing_from_edge(dx, dy):
+    """Convert edge vector to compass bearing (0=N, clockwise)."""
+    edge_deg = math.degrees(math.atan2(dy, dx))  # 0=+X (east), CCW+
+    # Convert to compass bearing.
+    return (90.0 - edge_deg) % 360.0
+
+
+def angular_distance(a, b):
+    """Smallest circular distance between angles in degrees."""
+    return abs((a - b + 180.0) % 360.0 - 180.0)
+
+
+def derive_facade_bearing_from_ring(ring, road_bearing=None):
+    """Estimate facade bearing from longest footprint edge (+/-90 deg normal)."""
+    if not ring:
+        return road_bearing if road_bearing is not None else 0.0
+
+    pts = ring[:-1] if len(ring) > 1 and ring[0] == ring[-1] else ring
+    if len(pts) < 2:
+        return road_bearing if road_bearing is not None else 0.0
+
+    longest = None
+    max_len = 0.0
+    for i in range(len(pts)):
+        j = (i + 1) % len(pts)
+        dx = pts[j][0] - pts[i][0]
+        dy = pts[j][1] - pts[i][1]
+        seg_len = math.hypot(dx, dy)
+        if seg_len > max_len:
+            max_len = seg_len
+            longest = (dx, dy)
+
+    if not longest:
+        return road_bearing if road_bearing is not None else 0.0
+
+    depth_bearing = compass_bearing_from_edge(longest[0], longest[1])
+    c1 = (depth_bearing + 90.0) % 360.0
+    c2 = (depth_bearing - 90.0) % 360.0
+
+    if road_bearing is None:
+        return c1
+    return c1 if angular_distance(c1, road_bearing) <= angular_distance(c2, road_bearing) else c2
+
+
 # ---------------------------------------------------------------------------
 # Build scene data
 # ---------------------------------------------------------------------------
@@ -296,18 +378,42 @@ def build_scene_data(conn, include_massing=True):
         print(f"    {label}: {len(field_data[label])}")
     data["field"] = field_data
 
-    # Building assessment coordinates + facade rotation from nearest road
-    print("  Fetching building positions + facade rotation...")
+    # Building positions: strict spatial match from assessment points to footprint + massing
+    # for GIS-accurate placement and orientation.
+    print("  Fetching building positions (address/photo points -> footprints + 3D massing)...")
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute("""
         SELECT ba."ADDRESS_FULL" as address,
                ST_X(ST_Transform(ba.geom, 2952)) as x,
                ST_Y(ST_Transform(ba.geom, 2952)) as y,
+               fp.footprint_geojson as footprint_geojson,
+               ms.avg_h as massing_height_m,
                ST_Azimuth(
                    ST_ClosestPoint(ST_Transform(r.geom, 2952), ST_Transform(ba.geom, 2952)),
                    ST_Transform(ba.geom, 2952)
                ) * 180 / pi() as facade_bearing_deg
         FROM building_assessment ba
+        LEFT JOIN LATERAL (
+            SELECT
+                ST_Transform(bf.geom, 2952) as geom_2952,
+                ST_AsGeoJSON(ST_Transform(bf.geom, 2952)) as footprint_geojson
+            FROM opendata.building_footprints bf
+            ORDER BY
+                CASE
+                    WHEN ST_Contains(ST_Transform(bf.geom, 2952), ST_Transform(ba.geom, 2952)) THEN 0
+                    ELSE 1
+                END,
+                ST_Distance(ST_Transform(bf.geom, 2952), ST_Transform(ba.geom, 2952))
+            LIMIT 1
+        ) fp ON TRUE
+        LEFT JOIN LATERAL (
+            SELECT m."AVG_HEIGHT" as avg_h
+            FROM opendata.massing_3d m
+            WHERE fp.geom_2952 IS NOT NULL
+              AND ST_Intersects(m.geometry, fp.geom_2952)
+            ORDER BY ST_Distance(m.geometry, ST_Centroid(fp.geom_2952))
+            LIMIT 1
+        ) ms ON TRUE
         CROSS JOIN LATERAL (
             SELECT geom FROM opendata.road_centerlines
             ORDER BY geom <-> ST_Transform(ba.geom, 2952)
@@ -316,20 +422,39 @@ def build_scene_data(conn, include_massing=True):
         WHERE ba.geom IS NOT NULL
     """)
     bldg_positions = {}
+    matched_footprints = 0
+    matched_massing = 0
     for r in cur.fetchall():
-        lx, ly = local(r["x"], r["y"])
-        # Convert bearing (0=north, clockwise) to Blender rotation (0=+Y, CCW)
-        # Blender's default building faces -Y, so rotation = bearing - 180
-        bearing = r["facade_bearing_deg"] or 0
+        road_bearing = r["facade_bearing_deg"]
+        ring = extract_primary_ring_abs(r["footprint_geojson"]) if r.get("footprint_geojson") else []
+        if ring:
+            cx, cy = polygon_centroid_abs(ring)
+            x_abs = cx if cx is not None else r["x"]
+            y_abs = cy if cy is not None else r["y"]
+            matched_footprints += 1
+        else:
+            x_abs, y_abs = r["x"], r["y"]
+
+        lx, ly = local(x_abs, y_abs)
+        bearing = derive_facade_bearing_from_ring(ring, road_bearing=road_bearing)
+        # Convert bearing (0=north, clockwise) to Blender rotation.
+        # Blender's default building faces -Y, so rotation = bearing - 180.
         blender_rot = (bearing - 180) % 360
+        mass_h = r.get("massing_height_m")
+        if mass_h is not None:
+            matched_massing += 1
         bldg_positions[r["address"]] = {
             "x": lx, "y": ly,
             "bearing_deg": round(bearing, 1),
             "rotation_deg": round(blender_rot, 1),
+            "massing_height_m": round(float(mass_h), 2) if mass_h is not None else None,
+            "source": "assessment_to_footprint_massing" if ring else "assessment_point_fallback",
         }
     cur.close()
     data["building_positions"] = bldg_positions
-    print(f"    {len(bldg_positions)} building positions (with facade rotation)")
+    print(f"    {len(bldg_positions)} building positions")
+    print(f"      footprint matches: {matched_footprints}")
+    print(f"      massing matches: {matched_massing}")
 
     return data
 
