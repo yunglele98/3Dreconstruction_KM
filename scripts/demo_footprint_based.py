@@ -481,13 +481,12 @@ def main():
         if not (X_MIN <= bx <= X_MAX and Y_MIN <= by <= Y_MAX):
             continue
 
-        # Normalize rotation to nearest canonical direction
-        # Bellevue area has 4 directions: 163, 343, 73, 253
-        raw_rot = pos.get('rotation_deg', 165)
-        canonical = [163, 343, 73, 253]
-        # Find nearest canonical rotation
-        best_canon = min(canonical, key=lambda c: min(abs(raw_rot - c), abs(raw_rot - c + 360), abs(raw_rot - c - 360)))
-        rot_deg = best_canon
+        # Convert bearing to rotation for +Y-facing front.
+        # bearing_deg is compass bearing (0=N, clockwise) of facade direction.
+        # Box front is at +Y. At rot=0, +Y faces north (bearing=0).
+        # Blender rotation is CCW. To face bearing B, rotate by -(B) = (360-B).
+        bearing = pos.get('bearing_deg', pos.get('rotation_deg', 0))
+        rot_deg = (360 - bearing) % 360
         rot_rad = math.radians(rot_deg)
         massing_h = pos.get('massing_height_m')
 
