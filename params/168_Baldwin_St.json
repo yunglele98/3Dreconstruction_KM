@@ -2,8 +2,8 @@
   "building_name": "168 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    5.05,
+    4.55
   ],
   "total_height_m": 9.6,
   "facade_width_m": 5.2,
@@ -19,15 +19,15 @@
     "lot_coverage_pct": 17.0,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "brick",
-  "facade_colour": "bright yellow-painted brick facade with green-red trim accents",
+  "facade_material": "painted brick",
+  "facade_colour": "red brick",
   "windows_per_floor": [
-    2,
+    0,
     2
   ],
   "window_type": "mixed",
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "1914-1930",
-    "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 42,
-    "statement_of_contribution": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. The property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. Contextually, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. Contextually, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "cornice",
       "decorative_brick"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,11 +105,12 @@
       "roof_material",
       "colour_palette",
       "ground_floor_arches",
-      "volumes"
+      "volumes",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "168 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "168 BALDWIN ST"
     ],
@@ -122,6 +123,90 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "floor_heights_m: [4.8, 4.8] -> [5.05, 4.55]",
+      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [2, 2] -> [0, 2]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#E8D010'",
+      "colour_palette enriched from observations",
+      "facade_colour updated: painted observation",
+      "decorative_elements.string_courses: 1 courses"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "window_count:floor0=2",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:57.432103+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:20.041746+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].height_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:47.800401+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "win.type: 'double-hung' -> 'double_hung'",
+          "arch_type filled (1914-1930)",
+          "glazing filled (1914-1930)",
+          "frame_colour filled (1914-1930)"
+        ],
+        "timestamp": "2026-03-29T08:03:43.460731+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:13.737275+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.197175Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:11.987581Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "porch_enriched": "2026-03-29T08:38:21.738478Z",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "mortar": "#B0A898 \u2192 #C8BFAE"
+      }
     ]
   },
   "decorative_elements": {
@@ -138,6 +223,10 @@
       "projection_mm": 180,
       "colour_hex": "#D4C9A8",
       "present": true
+    },
+    "string_courses": {
+      "present": true,
+      "count": 1
     }
   },
   "cornice": {
@@ -152,7 +241,26 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.2,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "House of Moses Est. 1993",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 4.680000000000001,
+      "projection_m": 1.2,
+      "colour_hex": "#CC0000"
+    },
+    "signage": {
+      "text": "House of Moses",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "bright yellow-painted brick facade with green-red trim accents",
@@ -202,7 +310,8 @@
     "alterations_visible": "Strong repainting and later storefront insertion alter the original residential/commercial expression.",
     "matches_hcd_typology": true,
     "confidence": 0.89,
-    "notes": "The neighboring modern building at 160 Baldwin is visible immediately beside it."
+    "notes": "The neighboring modern building at 160 Baldwin is visible immediately beside it.",
+    "photo": "IMG_20260318_183641379_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "mixed",
@@ -235,7 +344,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     },
     {
       "id": "door_1",
@@ -247,21 +359,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#E8D010",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#4A4A4A",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
-    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
-    "heritage_expression": "Key storefront and facade features include cornice, decorative brick.",
-    "heritage_summary": "Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 2 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice, decorative brick, string courses.",
+    "heritage_summary": "Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure.",
+    "mortar_colour_hex": "#C8BFAE"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -274,32 +390,35 @@
       "windows": [
         {
           "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.3,
-          "sill_height_m": 1.6,
-          "frame_colour": "#4A4A4A",
-          "glazing": "single pane"
+          "type": "double_hung",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "flat",
+          "glazing": "1-over-1",
+          "frame_colour": "white"
         }
-      ]
+      ],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 3.1,
-          "sill_height_m": 2.4,
-          "frame_colour": "#4A4A4A",
-          "glazing": "single pane"
+          "type": "1-over-1 double-hung",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "height_m": 1.3,
+          "glazing": "1-over-1",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "Vividly repainted two-storey commercial building (House of Moses) with a bright yellow-painted brick facade and green-red trim accents. The ground floor features a retail storefront with one white-painted side door and one glazed entry beneath an arched sign panel. Two symmetrically placed domestic-style windows on the upper storey retain cast stone sills and brick surrounds from the 1924-1930 construction. A modest projecting cornice caps the flat-roofed parapet. The neighbouring modern building at 160 Baldwin is visible immediately beside it.",
+  "facade_description": "168 Baldwin St is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by painted brick in a red brick palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 2 principal entrances. Key storefront and facade features include cornice, decorative brick, string courses.",
   "heritage_summary": "Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
@@ -308,7 +427,11 @@
     "roof_hex": "#3A3A3A",
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#E8D010",
+    "trim": "#4A4A4A",
+    "roof": "#505050",
+    "accent": "#CC0000"
   },
   "ground_floor_arches": {
     "present": true,
@@ -316,5 +439,151 @@
     "count": 2,
     "spring_height_ratio": 0.7
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_183641379_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.9
+    ],
+    "facade_material_observed": "painted brick",
+    "brick_colour_hex": "#E8D010",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "yellow (painted over)",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Storefront with large display windows and garage door on left"
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1 double-hung",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_m_est": 0.8,
+        "height_m_est": 1.3,
+        "note": "Two windows on upper floor, white frames, set in bright yellow painted brick. Left window slightly larger."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "overhead garage",
+        "width_m_est": 2.2,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#FFFFFF",
+        "note": "White overhead/roll-up garage door on far left of facade"
+      },
+      {
+        "position": "center-right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A2A2A",
+        "note": "Glass entry door to retail shop"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#505050",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 70,
+      "signage_text": "House of Moses Est. 1993",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "center-right",
+      "security_grille": false,
+      "note": "Circular black logo sign with 'House of Moses Est. 1993' text. Large display window on right side. Rastafarian colour trim strips (red, green, gold) on right pilaster. Yellow painted brick throughout. Left portion has white garage door below."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [
+        {
+          "level": "between floors",
+          "colour_hex": "#E8D010",
+          "note": "Subtle horizontal band at floor line, same yellow paint as facade"
+        }
+      ],
+      "cornice": {
+        "present": true,
+        "projection_mm": 50,
+        "height_mm": 150,
+        "colour_hex": "#E8D010",
+        "note": "Simple parapet cap, painted yellow"
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "note": "Entire facade painted bright yellow (Rastafarian palette). Red and green vertical trim strips on right pilaster. Flat parapet with yellow cap. Prominent cultural identity -- Jamaican/Rasta store."
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#E8D010",
+      "trim": "#FFFFFF",
+      "roof": "#505050",
+      "accent": "#CC0000"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Yellow paint slightly faded/chipped in places. Brick beneath is visible in patches. Garage door clean. Shop windows somewhat cluttered. Structural condition appears sound.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0,
+  "porch_width_m": 2.6,
+  "porch_depth_m": 1.8,
+  "porch_height_m": 5.05,
+  "porch_detail": {
+    "columns": {
+      "count": 2,
+      "type": "square",
+      "material": "wood"
+    },
+    "railing": {
+      "present": true,
+      "height_m": 0.9,
+      "type": "baluster"
+    },
+    "step_count": 0
+  }
 }

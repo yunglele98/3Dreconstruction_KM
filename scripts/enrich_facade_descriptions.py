@@ -4,10 +4,34 @@
 from __future__ import annotations
 
 import json
+import os
+import sys
+import tempfile
 from pathlib import Path
 
 
+def _atomic_write_json(filepath, data, ensure_ascii=True):
+    """Write JSON atomically via temp file + rename to prevent corruption."""
+    filepath = Path(filepath)
+    with tempfile.NamedTemporaryFile(
+        mode="w", dir=filepath.parent, delete=False,
+        suffix=".tmp", encoding="utf-8",
+    ) as tmp:
+        json.dump(data, tmp, indent=2, ensure_ascii=ensure_ascii)
+        tmp.write("\n")
+        tmp_path = Path(tmp.name)
+    os.replace(str(tmp_path), str(filepath))
+
+
 PARAMS_DIR = Path(__file__).parent.parent / "params"
+
+
+def _configure_utf8_stdout() -> None:
+    """Avoid Windows cp1252 encode crashes when printing non-ASCII filenames."""
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 
 def title_case_address(name: str) -> str:
@@ -364,12 +388,31 @@ def describe_heritage_features(data: dict) -> str:
     return f"Character-defining facade elements include {top}."
 
 
+def describe_porch(data: dict) -> str:
+    porch = data.get("porch")
+    if isinstance(porch, dict) and porch.get("present"):
+        porch_type = clean_phrase(porch.get("type", "porch")).lower()
+        if porch_type == "open front porch":
+            return " and an open front porch"
+        elif porch_type == "enclosed porch":
+            return " and an enclosed porch"
+        else:
+            return " and a porch"
+    return ""
+
+
 def build_facade_description(data: dict) -> str:
     building_name = data.get("building_name") or title_case_address(data.get("_meta", {}).get("address", "This building"))
     typology = normalize_typology(data.get("hcd_data", {}).get("typology", ""))
-    category = classify_typology(typology)
+    
+    # Infer category if typology is missing but has_storefront is present
+    if not typology and data.get("has_storefront"):
+        category = "commercial"
+    else:
+        category = classify_typology(typology)
+    
     article = "an" if typology[:1] in "aeiou" else "a"
-    if typology:
+    if typology: # Use typology if available
         if category == "commercial":
             intro = f"{building_name} is a commercial building with a street-level storefront."
         elif category == "institutional":
@@ -380,7 +423,9 @@ def build_facade_description(data: dict) -> str:
             intro = f"{building_name} is a row-house building."
         else:
             intro = f"{building_name} is {article} {typology} building."
-    else:
+    elif category == "commercial": # Use inferred commercial category if no typology
+        intro = f"{building_name} is a commercial building with a street-level storefront."
+    else: # Fallback
         intro = f"{building_name} is a building with a street-facing facade."
     parts = [
         intro,
@@ -388,6 +433,13 @@ def build_facade_description(data: dict) -> str:
         describe_materials(data),
         describe_openings(data),
     ]
+    porch_desc = describe_porch(data)
+    if porch_desc:
+        # Append porch description to the last main part of the facade description, before heritage
+        # For simplicity, let's append it to the openings description.
+        # This requires modifying the last element of 'parts'
+        parts[-1] = parts[-1].rstrip('.') + porch_desc + '.'
+
     heritage = describe_heritage_features(data)
     if heritage:
         parts.append(heritage)
@@ -435,13 +487,12 @@ def enrich_file(path: Path) -> bool:
         changed = True
 
     if changed:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-            f.write("\n")
+        _atomic_write_json(path, data)
     return changed
 
 
 def main() -> None:
+    _configure_utf8_stdout()
     changed = 0
     files = 0
     for path in sorted(PARAMS_DIR.glob("*.json")):
@@ -456,3 +507,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

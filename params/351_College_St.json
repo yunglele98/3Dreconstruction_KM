@@ -20,7 +20,7 @@
     "lot_coverage_pct": 5.7,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
     "sign_band"
@@ -30,7 +30,7 @@
   "windows_per_floor": [
     0,
     2,
-    2
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -42,28 +42,28 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900–1930",
+    "construction_period": "c. 1900\u20131930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "mixed_use",
     "general_use": "Commercial",
-    "land_use": "Residential – Detached House",
+    "land_use": "Residential \u2013 Detached House",
     "commercial_use": "",
     "business_name": "RAXLEN PHARMACY",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
-    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1–3) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20133) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -100,15 +100,73 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "351 College St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "351 COLLEGE ST"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "College St",
+        "timestamp": "2026-03-29T07:48:41.814576+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:02.714509+00:00"
+      },
+      {
+        "fix": "validate_all_params",
+        "fixes": [
+          "extended windows_per_floor: 3 -> 3"
+        ],
+        "timestamp": "2026-03-29T08:00:00.399699+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (unknown)",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:49.811451+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:35.706239+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:19.951293Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.089012+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:15.269740Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #985C3A",
+        "roof": "#5A5A5A \u2192 #545454",
+        "trim": "#E8E0D0 \u2192 #41362D",
+        "accent": "#3A2A20 \u2192 #152422",
+        "mortar": "#B0A898 \u2192 #BCAA91"
+      }
     ]
   },
   "storefront": {
@@ -116,7 +174,21 @@
     "status": "active",
     "width_m": 5.2,
     "height_m": 4.5,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 5.49,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    },
+    "signage": {
+      "text": "RAXLEN PHARMACY",
+      "type": "projecting",
+      "width_m": 4.0,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "charcoal sign band with black storefront framing and red illuminated letters",
@@ -170,7 +242,8 @@
     "photo_date": "2026-03-18",
     "photo_time": "~14:17",
     "weather": "light snow",
-    "notes": "Batch 009 daytime photo update. Osmow's SHAWARMA in large red 3D lettering on dark grey/black fascia, maple leaf logo. Full-width storefront with food photo posters (Wrap Box $13.99, Halloumi etc.). OPEN neon sign visible. 351 address on right pillar. Dark door on left side. Adjacent vacant lot on left, graffiti fence on right."
+    "notes": "Batch 009 daytime photo update. Osmow's SHAWARMA in large red 3D lettering on dark grey/black fascia, maple leaf logo. Full-width storefront with food photo posters (Wrap Box $13.99, Halloumi etc.). OPEN neon sign visible. 351 address on right pillar. Dark door on left side. Adjacent vacant lot on left, graffiti fence on right.",
+    "photo": "IMG_20260318_141658467_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "storefront",
@@ -202,7 +275,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.95,
       "height_m": 2.2,
@@ -210,21 +283,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#985C3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#41362D",
     "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using mixed, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#BCAA91"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -236,13 +313,14 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
+          "count": 0,
+          "type": "storefront",
           "width_m": 0.9,
-          "height_m": 1.8,
+          "height_m": 2.0,
           "sill_height_m": 1.4,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "plate",
+          "arch_type": "flat"
         }
       ]
     },
@@ -256,7 +334,8 @@
           "height_m": 1.5,
           "sill_height_m": 1.2,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
@@ -271,15 +350,71 @@
     }
   },
   "street_setback_m": 0.5,
-  "facade_description": "351 College St presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as brick in a charcoal sign band with black storefront framing and red illuminated letters palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "351 College St is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as brick in a charcoal sign band with black storefront framing and red illuminated letters palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Built-up tar and gravel",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#985C3A",
+    "trim": "#41362D",
+    "roof": "#545454",
+    "accent": "#152422"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_141658467_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 0,
+            "type": "storefront",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.4,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.5,
+            "sill_height_m": 1.2,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-20260327-003__OLLAMA_02",
+  "owner": "ollama-local-2",
+  "parent_task": "TASK-20260327-003",
+  "write_scope": [
+    "PHOTOS KENSINGTON sorted/Chinatown Mural Lane",
+    "scripts/verify_alignment.py",
+    "scripts/check_positions.py"
+  ],
+  "assigned_at": "2026-03-27T00:55:20.551989+00:00",
+  "reassigned_at": "2026-03-27T04:06:00.656950+00:00"
+}

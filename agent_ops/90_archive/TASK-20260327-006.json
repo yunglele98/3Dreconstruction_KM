@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-006",
+  "title": "Audit photo_observations coverage and flag missing buildings",
+  "description": "Scan all 1,284 active params, identify the 685 buildings with no photo_observations, cross-reference against PHOTOS KENSINGTON/csv/photo_address_index.csv to determine which have photos but were never analyzed. Produce a coverage report JSON.",
+  "priority": "high",
+  "estimate_points": 2,
+  "skills": [
+    "photo-analysis",
+    "validation",
+    "cross-reference"
+  ],
+  "write_scope": [
+    "agent_ops/30_handoffs"
+  ],
+  "dependencies": [],
+  "owner": "gemini-1",
+  "status": "done",
+  "created_at": "2026-03-27T17:38:37Z",
+  "routed_at": "2026-03-27T17:46:49.715984+00:00",
+  "completed_at": "2026-03-28T16:54:39.270635+00:00",
+  "completed_by": "gemini-1"
+}

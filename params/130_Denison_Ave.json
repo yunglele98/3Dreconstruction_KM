@@ -18,10 +18,10 @@
     "lot_coverage_pct": 65.2,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "dark red-brown brick with grey/white trim elements",
   "windows_per_floor": [
     2
@@ -35,13 +35,13 @@
   "hcd_data": {
     "typology": "House-form, Row, Ontario Cottage",
     "construction_date": "pre-1889",
-    "architectural_style": "House-form, Row, Ontario Cottage (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row, Ontario Cottage (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 122,
-    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -49,15 +49,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential – Semi-Detached",
+    "land_use": "Residential \u2013 Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Residential | Transition to Bellevue Park",
-    "morphological_zone": "Residential Interior – Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -76,7 +76,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1–2)",
+    "residential_floors": "All floors (1\u20132)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -96,10 +96,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "photo": "IMG_20260320_164745771_HDR.jpg",
     "reference_photos": [
@@ -110,7 +107,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "130 Denison Ave",
-    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "130 DENISON AVE"
     ],
@@ -123,6 +120,75 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.75,
+        "timestamp": "2026-03-29T07:30:56.518603+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.75,
+        "timestamp": "2026-03-29T07:44:19.667859+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:45.548962+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:42.056542+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:10.320721+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Denison Ave",
+        "timestamp": "2026-03-29T07:48:21.781143+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:16.530427Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:43.572092+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "porch_enriched": "2026-03-29T08:38:21.358509Z",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #5E5555",
+        "trim": "#3A2A20 \u2192 #503D2C",
+        "accent": "#3A2A20 \u2192 #4C3120",
+        "mortar": "#B0A898 \u2192 #C2B19A"
+      }
     ]
   },
   "photo_observations": {
@@ -170,7 +236,8 @@
     "alterations_visible": "Enclosed front porch addition with non-original siding, replacement windows, wrought iron railing added",
     "matches_hcd_typology": true,
     "confidence": 0.75,
-    "notes": "Ontario Cottage row house with central gable. Original composition partially obscured by enclosed porch addition. Retains original brick and central gable form."
+    "notes": "Ontario Cottage row house with central gable. Original composition partially obscured by enclosed porch addition. Retains original brick and central gable form.",
+    "photo": "IMG_20260320_164745771_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "single",
@@ -202,7 +269,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -210,21 +277,26 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#8A8A8A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#503D2C",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#C2B19A"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -244,7 +316,8 @@
           "height_m": 6.3,
           "sill_height_m": 4.2,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "single pane",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -272,16 +345,74 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "130 Denison Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as mixed in a dark red-brown brick with grey/white trim elements palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "facade_description": "130 Denison Ave is a row-house building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as mixed in a dark red-brown brick with grey/white trim elements palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
   "roof_material": "Slate shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A8A8A",
+    "trim": "#503D2C",
+    "roof": "#5E5555",
+    "accent": "#4C3120"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_164745771_HDR.jpg",
+    "storeys_observed": 1,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#8A8A8A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "casement",
+            "width_m": 0.9,
+            "height_m": 6.3,
+            "sill_height_m": 4.2,
+            "frame_colour": "#3A2A20",
+            "glazing": "single pane"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "porch_width_m": 2.6,
+  "porch_depth_m": 1.8,
+  "porch_height_m": 4.8,
+  "porch_detail": {
+    "columns": {
+      "count": 2,
+      "type": "turned",
+      "material": "wood"
+    },
+    "railing": {
+      "present": true,
+      "height_m": 0.9,
+      "type": "baluster"
+    },
+    "step_count": 2
+  }
 }

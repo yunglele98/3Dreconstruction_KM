@@ -1,0 +1,294 @@
+{
+  "building_name": "Kensington Kids Early Learning Centre",
+  "floors": 2,
+  "floor_heights_m": [
+    3.4,
+    3.0
+  ],
+  "facade_material": "Mixed masonry",
+  "facade_colour": "red-brown brick base with blue corrugated metal mansard cladding",
+  "windows_per_floor": [
+    4,
+    4
+  ],
+  "window_type": "fixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.1,
+  "door_count": 2,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "mansard",
+  "roof_pitch_deg": 68,
+  "roof_features": [
+    "metal_cladding"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "brown brick ground floor, blue corrugated metal cladding on upper storey and roof gables",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Modern institutional building in good condition. Blue metal cladding and blue awning/canopy at ground level. Playground area with natural wood play structures visible in foreground.",
+    "condition": "good",
+    "windows_per_floor": [
+      5,
+      5
+    ],
+    "window_type": "fixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.2,
+    "window_arrangement": "irregular",
+    "window_details": "Modern fixed windows. Upper floor has dormer-style windows projecting through blue metal roof cladding. Ground floor windows are rectangular with simple frames.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Simple modern entrance door",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "Modern building, no traditional cornice",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "Blue awning/canopy over entrance",
+    "chimneys": 0,
+    "chimney_details": "none",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "None - modern institutional building",
+    "roof_type_observed": "Multiple gables with blue metal cladding",
+    "roof_features": [
+      "metal_cladding",
+      "dormers"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "N/A - daycare/educational facility",
+    "signage_observed": "'KENSINGTON KIDS' signage visible on building",
+    "overall_style": "Commercial",
+    "alterations_visible": "Appears to be a modern purpose-built facility, not a heritage conversion",
+    "matches_hcd_typology": false,
+    "confidence": 0.8,
+    "notes": "Modern institutional building (daycare). Part of the Kensington Community School complex. Three photos available - best view from playground side showing full facade with blue metal gabled upper storey."
+  },
+  "_meta": {
+    "address": "Kensington Kids Early Learning Centre",
+    "photo": "IMG_20260315_150058951_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T00:00:00Z",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "dormer",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill",
+      "backfill_site_lon_lat:landmark_alias"
+    ],
+    "dimensions_source": "default",
+    "reference_photos": [
+      "IMG_20260315_150058951_HDR.jpg",
+      "IMG_20260315_150250031_HDR.jpg",
+      "IMG_20260315_150257259_HDR.jpg",
+      "IMG_20260315_150353013_HDR.jpg",
+      "IMG_20260315_150355853_HDR.jpg"
+    ],
+    "reference_photo_count": 7,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_autofix_medium_low": {
+      "timestamp": "2026-03-25T14:42:39",
+      "changes": [
+        "floor_heights_m:rebalance_to_total"
+      ]
+    },
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m, capped windows to 4/floor"
+    ],
+    "custom_model": "kensington_kids_custom_v2",
+    "parent_params": "Kensington_Kids_Early_Learning_Centre.json",
+    "pass": "custom_v2",
+    "site_backfill_alias": "alias_of_401_College_St_Kensington_Kids"
+  },
+  "window_arrangement": "irregular",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "N/A - daycare/educational facility",
+  "confidence": 0.9,
+  "notes": "Modern institutional building (daycare). Part of the Kensington Community School complex. Three photos available - best view from playground side showing full facade with blue metal gabled upper storey.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "single",
+      "position": "left",
+      "width_m": 0.92,
+      "height_m": 2.15,
+      "colour": "blue",
+      "colour_hex": "#1F5FAF",
+      "material": "metal",
+      "transom": {
+        "present": false
+      },
+      "awning": {
+        "present": true,
+        "projection_m": 0.9,
+        "height_at_wall_m": 2.7,
+        "height_at_drip_edge_m": 2.45,
+        "colour": "blue",
+        "colour_hex": "#1F5FAF"
+      }
+    },
+    {
+      "id": "door_1",
+      "type": "single",
+      "position": "center",
+      "width_m": 0.92,
+      "height_m": 2.15,
+      "colour": "blue",
+      "colour_hex": "#1F5FAF",
+      "material": "metal",
+      "transom": {
+        "present": false
+      },
+      "awning": {
+        "present": true,
+        "projection_m": 0.9,
+        "height_at_wall_m": 2.7,
+        "height_at_drip_edge_m": 2.45,
+        "colour": "blue",
+        "colour_hex": "#1F5FAF"
+      }
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 11.0,
+  "facade_detail": {
+    "brick_colour_hex": "#8A4F39",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#DDE3EB",
+    "composition": "The street elevation spans roughly 6 metres across 2 storeys and is capped by a mansard, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 4, 4 window bays from lower to upper levels, using fixed, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice."
+  },
+  "roof_colour": "#1F5FAF",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed",
+          "width_m": 1.45,
+          "height_m": 1.0,
+          "sill_height_m": 0.8,
+          "frame_colour": "#DDE3EB",
+          "glazing": "single pane"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed",
+          "width_m": 1.0,
+          "height_m": 1.1,
+          "sill_height_m": 1.25,
+          "frame_colour": "#DDE3EB",
+          "glazing": "single pane"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "Kensington Kids Early Learning Centre is a house-form building. The street elevation spans roughly 6 metres across 2 storeys and is capped by a mansard, consistent with its house-form typology. The facade reads primarily as mixed masonry in a red-brown brick base with blue corrugated metal mansard cladding palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 4 window bays from lower to upper levels, using fixed, and 2 principal entrances. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Metal cladding",
+  "colour_palette": {
+    "facade_hex": "#8A4F39",
+    "trim_hex": "#DDE3EB",
+    "roof_hex": "#1F5FAF",
+    "accent_hex": "#1F5FAF",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0"
+  },
+  "dormer": {
+    "present": true,
+    "type": "Gable dormer",
+    "count": 1,
+    "width_m": 1.0,
+    "height_m": 1.2,
+    "has_window": true
+  },
+  "volumes": [],
+  "facade_width_m": 6.0,
+  "total_height_m": 6.4,
+  "site": {
+    "lon": -79.405732,
+    "lat": 43.656398
+  },
+  "skipped": true,
+  "skip_reason": "Backup/variant of Kensington_Kids_Early_Learning_Centre"
+}

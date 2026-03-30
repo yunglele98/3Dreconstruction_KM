@@ -20,12 +20,12 @@
     "lot_coverage_pct": 60.7,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
     "chimney"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "Mixed: ground floor various cladding; upper floors original red brick and painted surfaces",
   "windows_per_floor": [
     2,
@@ -41,13 +41,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
-    "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "1904-1913 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 98,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -58,15 +58,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential – Multi-Unit",
+    "land_use": "Residential \u2013 Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior – Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -85,7 +85,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 4,
-    "residential_floors": "All floors (1–3)",
+    "residential_floors": "All floors (1\u20133)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -107,10 +107,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "photo": "IMG_20260320_154755582_HDR.jpg",
     "reference_photos": [
@@ -121,12 +118,78 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "90 Bellevue Ave",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:10",
     "db_address_candidates": [
       "90 BELLEVUE AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.7,
+        "timestamp": "2026-03-29T07:31:02.174801+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.7,
+        "timestamp": "2026-03-29T07:44:28.560397+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:16.074218+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)"
+        ],
+        "timestamp": "2026-03-29T08:04:01.429704+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:52.277634+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Bellevue Ave",
+        "timestamp": "2026-03-29T07:48:54.222352+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "colour_palette_rebuilt": "2026-03-29T08:35:48.901801+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "porch_enriched": "2026-03-29T08:38:25.170050Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #5A5050",
+        "trim": "#2A2A2A \u2192 #25252A",
+        "accent": "#3A2A20 \u2192 #4F3626",
+        "mortar": "#B0A898 \u2192 #A49B8A"
+      }
     ]
   },
   "bay_window": {
@@ -214,7 +277,7 @@
   "decorative_lintels": false,
   "overall_style": "Edwardian",
   "storefront_description": "none",
-  "confidence": 0.8500000000000001,
+  "confidence": 0.9,
   "notes": "Semi-detached with 92. Unlike 92, has lost significant heritage character through ground-floor alterations.",
   "porch_present": true,
   "porch_type": "open",
@@ -224,7 +287,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -232,7 +295,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "residential",
@@ -243,11 +309,13 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
+    "trim_colour_hex": "#25252A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
-    "heritage_summary": "Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding."
+    "heritage_summary": "Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#A49B8A"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -264,10 +332,11 @@
           "count": 2,
           "type": "mixed",
           "width_m": 0.9,
-          "height_m": 1.8,
+          "height_m": 1.9800000000000002,
           "sill_height_m": 1.2,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -281,7 +350,8 @@
           "height_m": 2.1,
           "sill_height_m": 1.6,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -295,7 +365,8 @@
           "height_m": 1.8,
           "sill_height_m": 1.4,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
@@ -325,16 +396,102 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "Semi-detached three-storey house-form in mixed: ground floor various cladding; upper floors original red brick and painted surfaces with a gable roof. Features include a double-height projecting bay and simple bargeboards. Significant ground-floor alterations: corrugated metal cladding, new wooden deck, mixed materials. Upper floors retain original brick. Bay window form preserved. Overall house-form still legible. Constructed 1904-1913.",
+  "facade_description": "90 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding.",
   "roof_material": "Grey asphalt shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#2A2A2A",
     "roof_hex": "#5A5A5A",
     "accent_hex": "#2A2A2A",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#25252A",
+    "roof": "#5A5050",
+    "accent": "#4F3626"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_154755582_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.9800000000000002,
+            "sill_height_m": 1.2,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 2.1,
+            "sill_height_m": 1.6,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.8,
+            "sill_height_m": 1.4,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "poor",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "porch_width_m": 2.6,
+  "porch_depth_m": 1.8,
+  "porch_height_m": 3.9,
+  "porch_detail": {
+    "columns": {
+      "count": 2,
+      "type": "tapered_square",
+      "material": "wood"
+    },
+    "railing": {
+      "present": true,
+      "height_m": 0.9,
+      "type": "baluster"
+    },
+    "step_count": 2
+  }
 }

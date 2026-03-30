@@ -2,8 +2,8 @@
   "building_name": "40 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    5.19,
+    4.41
   ],
   "total_height_m": 9.6,
   "facade_width_m": 5.2,
@@ -19,16 +19,16 @@
     "lot_coverage_pct": 97.0,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "brown/bronze storefront, blue upper",
+  "facade_colour": "left: painted (dark brown/olive); right: painted blue with additional colours",
   "windows_per_floor": [
     0,
-    2
+    1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
     "construction_date": "Pre-1889, 1914-1930",
-    "architectural_style": "Commercial (38 Kensington Avenue), Converted House-form (40 Kensington Avenue), Semi-detached, Bay-andGable (40 Kensington Avenue) (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (38 Kensington Avenue), Converted House-form (40 Kensington Avenue), Semi-detached, Bay-andGable (40 Kensington Avenue) (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889, 1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 204,
-    "statement_of_contribution": "The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure. The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the addition at 38 Kensington Avenue has retained building features including its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 40 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure. The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the addition at 38 Kensington Avenue has retained building features including its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 40 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "decorative_brick"
@@ -55,14 +55,14 @@
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Café",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
     "business_name": "Lola Bar and Restaurant",
     "business_category": "Vintage/Thrift",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -101,11 +101,13 @@
     "inferences_applied": [
       "roof_material",
       "colour_palette",
-      "volumes"
+      "volumes",
+      "doors_detail_types",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "40 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "40 KENSINGTON AVE"
     ],
@@ -118,6 +120,72 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "floor_heights_m: [4.8, 4.8] -> [5.19, 4.41]",
+      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [0, 2] -> [0, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#8A7A6A'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.2"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:stone_voussoirs,gable_brackets",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "trim_colour:#3A2A20->#F0EDE8",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:05.417336+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:51.841419+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #1A1A2A (black frame)"
+        ],
+        "timestamp": "2026-03-29T08:05:38.860678+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:20.729138Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:15.947830Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #504F4F",
+        "mortar": "#B0A898 \u2192 #948576"
+      }
     ]
   },
   "bay_window": {
@@ -142,6 +210,17 @@
       "height_mm": 250,
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
+    },
+    "stone_voussoirs": {
+      "present": true,
+      "colour_hex": "#C8B898"
+    },
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
     }
   },
   "storefront": {
@@ -149,11 +228,24 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.0,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "LOLA (gold lettering on brown background); Butterfly (large red sign visible above on adjacent building at 42)",
+    "awning": {
+      "present": false
+    },
+    "security_grille": true,
+    "width_pct": 80,
+    "signage": {
+      "text": "Lola Bar and Restaurant",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "brown/bronze storefront, blue upper",
-    "facade_material_observed": "mixed",
+    "facade_material_observed": "left: painted (dark brown/olive); right: painted blue with additional colours",
     "facade_condition_notes": "Storefront in fair condition; security diamond grate on window; Victorian gable peak visible above commercial addition",
     "condition": "fair",
     "windows_per_floor": [
@@ -188,16 +280,52 @@
     "string_course": false,
     "decorative_lintels": false,
     "decorative_details": "Gold lettering LOLA on brown/bronze storefront; pink Bu... (Butterfly?) sign above",
-    "roof_type_observed": "gable peak visible",
+    "roof_type_observed": "gable (left); flat with parapet (right)",
     "roof_features": [],
     "has_storefront_observed": true,
-    "storefront_description": "Brown/bronze commercial storefront with security diamond grate on window",
-    "signage_observed": "LOLA gold lettering on storefront",
+    "storefront_description": "left: 'LOLA' signage in gold lettering on dark-painted storefront; security diamond grille closed; right: appears to be another shop with white tile/brick lower facade",
+    "signage_observed": "'LOLA' in gold lettering; red 'Butterfly' sign visible above at upper level",
     "overall_style": "Commercial/Victorian",
     "alterations_visible": "Ground floor commercial conversion; blue-painted upper level; security grate addition",
     "matches_hcd_typology": true,
     "confidence": 0.68,
-    "notes": "Night photo (IMG_20260320_012906257_HDR.jpg), rotated. 2-storey commercial. Victorian gable peak visible above commercial addition. Adjacent to 42 Kensington Ave (Butterfly)."
+    "notes": "Night photo (IMG_20260320_012906257_HDR.jpg), rotated. 2-storey commercial. Victorian gable peak visible above commercial addition. Adjacent to 42 Kensington Ave (Butterfly).",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012906257_HDR.jpg",
+    "facade_analysis_address": "40 Kensington Ave (Lola Bar & Restaurant)",
+    "storeys_observed": 2,
+    "condition_observed": "fair; painted facades; security grilles on both units",
+    "windows_observed": {
+      "gable": "1 window in gable peak (left building)",
+      "upper_floor": "left: 2 windows; right: 1 window visible",
+      "ground_floor": "commercial storefronts"
+    },
+    "doors_observed": "commercial entrances with security grilles",
+    "decorative_elements_observed": "left: bay-and-gable form, white trim at gable; right: none significant",
+    "party_walls_observed": "party walls both sides",
+    "colour_palette_observed": {
+      "primary": "dark olive/brown (left), blue (right upper)",
+      "trim": "white",
+      "accent": "gold (LOLA sign), red (Butterfly sign)"
+    },
+    "photo_quality": "night, rotated slightly, good",
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 2,
+      "ba_facade_material": "mixed",
+      "height_max_m": 11.13,
+      "height_avg_m": 7.46,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "Commercial (38 Kensington Avenue), Converted House-form (40 Kensington Avenue), Semi-detached, Bay-andGable (40 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "facade_colour_observed": "brown/bronze storefront, blue upper",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_012859287_HDR.jpg"
   },
   "window_arrangement": "regular",
   "door_type": "commercial",
@@ -219,7 +347,7 @@
   "decorative_lintels": false,
   "overall_style": "Commercial/Victorian",
   "storefront_description": "Brown/bronze commercial storefront with security diamond grate on window",
-  "confidence": 0.8300000000000002,
+  "confidence": 0.9,
   "notes": "Night photo (IMG_20260320_012906257_HDR.jpg), rotated. 2-storey commercial. Victorian gable peak visible above commercial addition. Adjacent to 42 Kensington Ave (Butterfly).",
   "porch_present": false,
   "porch_type": "none",
@@ -229,7 +357,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "commercial",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 1.2,
       "height_m": 2.4,
@@ -237,22 +365,27 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "is_glass": true,
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#8A7A6A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#F0EDE8",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial, converted house-form, semi-detached typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Key storefront and facade features include bay window, decorative brick, cornice.",
-    "heritage_summary": "The property at 40 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area."
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include bay window, decorative brick, cornice, gable brackets.",
+    "heritage_summary": "The property at 40 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "mortar_colour_hex": "#948576"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -261,31 +394,147 @@
   "parapet_height_m": 0.6,
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.8,
-          "sill_height_m": 2.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "count": 1,
+          "type": "1-over-1",
+          "frame_colour": "#E8E0D0",
+          "arch_type": "flat",
+          "width_m": 0.73,
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
         }
       ]
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "40 Kensington Ave presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial, converted house-form, semi-detached typology. The frontage is defined primarily by mixed in a brown/bronze storefront, blue upper palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. Key storefront and facade features include bay window, decorative brick, cornice. HCD note: The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure. The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the addition at 38 Kensington Avenue has retained building features including its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 40 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "40 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial, converted house-form, semi-detached typology. The frontage is defined primarily by brick in a left: painted (dark brown/olive); right: painted blue with additional colours palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance. Key storefront and facade features include bay window, decorative brick, cornice, gable brackets.",
   "heritage_summary": "The property at 40 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
     "facade_hex": "#7A5C44",
-    "trim_hex": "#3A2A20",
+    "trim_hex": "#F0EDE8",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A7A6A",
+    "trim": "#F0EDE8",
+    "roof": "#504F4F",
+    "accent": "#C8A040"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012859287_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#8A7A6A",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 2,
+        "type": "plate glass",
+        "frame_colour": "#8A7050",
+        "arch": "flat",
+        "width_ratio": 0.3,
+        "height_m_est": 2.0,
+        "note": "Two large storefront windows with diamond-pattern security grilles deployed (closed for the night). 'LOLA' in gold lettering on dark brown/bronze surround. Horizontal louvered security shutters on left window."
+      },
+      {
+        "floor": "second",
+        "count": 1,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.14,
+        "height_m_est": 1.3,
+        "note": "Single window with white frame on upper floor. Facade appears painted grey/beige."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour": "#6A5040",
+        "note": "Dark entrance door between the two storefront windows. 'LOLA' text above."
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": false
+    },
+    "gable_window": {
+      "present": false
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 80,
+      "signage_text": "LOLA (gold lettering on brown background); Butterfly (large red sign visible above on adjacent building at 42)",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Ground floor is a bar/restaurant (Lola). Diamond-pattern expandable security grille covers right window; horizontal louvered shutters cover left window. Gold 'LOLA' lettering on dark bronze/brown fascia band. White glazed tile or brick at base."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#8A7A6A",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#C8A040"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Two-storey flat-roof commercial building. Facade appears painted or rendered. Single upper window. Ground floor well-finished as a bar with gold signage. Security grilles in place at night. White tile bulkhead base.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "foundation_height_m": 0.2,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

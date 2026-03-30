@@ -1,0 +1,1316 @@
+{
+  "report_metadata": {
+    "title": "Kensington Avenue Facade Analysis for 3D Reconstruction",
+    "date_generated": "2026-03-26",
+    "photo_date": "2026-03-17 to 2026-03-20",
+    "total_photos_analyzed": 52,
+    "directories": [
+      "PHOTOS KENSINGTON sorted/Kensington Ave/",
+      "PHOTOS KENSINGTON sorted/Kensington Ave _ Baldwin St/",
+      "PHOTOS KENSINGTON sorted/Kensington Ave _ Dundas St W/"
+    ],
+    "notes": "Most photos taken at night under artificial lighting. Colour descriptions may be affected by sodium vapour / LED streetlight colour cast. Many images are rotated 90 degrees (phone held landscape). Kensington Ave runs roughly north-south between Dundas St W and Baldwin St in the Kensington Market HCD, Toronto."
+  },
+  "facades": {
+    "IMG_20260317_124549726_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave near Dundas St W (south end, west side)",
+      "address_confidence": "low",
+      "photo_quality": "good, daytime, upright",
+      "storeys": 2,
+      "facade_material": "brick, painted and unpainted sections",
+      "brick_colour": "yellow/buff brick visible at left; red brick at upper right on adjacent building",
+      "bond_pattern": "running bond (where visible)",
+      "windows": {
+        "upper_floor": "not clearly visible behind mural"
+      },
+      "doors": "not visible behind mural/street art",
+      "roof_type": "flat with parapet (main building); gable peak visible on adjacent red brick building at left",
+      "decorative_elements": "large-scale community mural covering most of facade; text reads 'Kensington Community' and references kensingtonmarket.to; yellow banner section",
+      "storefront_details": "ground floor entirely covered with murals and street art; appears to be a shuttered/boarded commercial space with extensive graffiti and painted murals including bee imagery",
+      "condition": "fair to poor; facade heavily covered with murals and graffiti; underlying structure obscured",
+      "signage": "Community mural text: 'Kensington Community United'; kensingtonmarket.to website reference",
+      "party_walls": "party wall visible at left (red brick building adjoining); party wall at right",
+      "colour_palette": {
+        "primary": "yellow, black, multicolour mural",
+        "accent": "pink, green, teal from street art"
+      }
+    },
+    "IMG_20260320_011827369_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (interior/covered market passage or loading area)",
+      "address_confidence": "very low",
+      "photo_quality": "dark interior shot, night",
+      "storeys": "N/A - interior space",
+      "facade_material": "N/A",
+      "description": "Interior shot of a covered space, possibly a market loading dock or covered passage behind Kensington Ave buildings. Pressed tin/metal ceiling visible. Chain-link fencing in foreground. Dimly lit with scattered ground-level lights. Stickers on metal fence posts. Not a building facade - this appears to be a service/loading area behind the storefronts.",
+      "condition": "utilitarian; stickers and wear on fixtures",
+      "signage": "stickers on fencing",
+      "skip_for_3d": true,
+      "skip_reason": "interior/service area, not a facade"
+    },
+    "IMG_20260320_012006796_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side, near Dundas St W end)",
+      "address_confidence": "low",
+      "photo_quality": "night, well-lit by streetlight, upright",
+      "storeys": 2,
+      "facade_material": "mixed: corrugated metal siding (green, lower left), board-and-batten or vertical siding (lower centre), brick (upper right section)",
+      "brick_colour": "red-brown brick on upper storey right section",
+      "bond_pattern": "running bond where brick visible",
+      "windows": {
+        "upper_floor": "3 windows visible across facade; 1 small square window (left, in green metal section), 1 large window (centre, in brick section), 1 medium window (right, in brick section with white frame)",
+        "ground_floor": "storefront windows and doors"
+      },
+      "doors": "1 central entrance (appears to be a small vestibule/booth painted teal/green); 1 door at left (white, residential-style); storefront openings at right",
+      "roof_type": "flat with low parapet; metal/wood fascia",
+      "decorative_elements": "none significant; utilitarian commercial facade",
+      "storefront_details": "ground floor has picnic bench seating behind wooden fence/railing; patio area; appears to be a restaurant or bar; corrugated metal and wood siding at ground level",
+      "condition": "fair; eclectic mix of materials suggests multiple renovations; weathered wood fence",
+      "signage": "not clearly legible in night photo",
+      "party_walls": "adjoining buildings on both sides",
+      "colour_palette": {
+        "primary": "green (corrugated metal), red-brown (brick), cream/white (trim)",
+        "accent": "teal (entrance booth)"
+      }
+    },
+    "IMG_20260320_012017528_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave near Dundas St W (west side), possibly around 2-8 Kensington Ave",
+      "address_confidence": "low-medium",
+      "photo_quality": "night, well-lit, upright",
+      "storeys": "2.5 (two storeys plus gable attic)",
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick, warm tones",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable_attic": "1 window per gable peak (3 gables visible), small rectangular or pointed windows",
+        "upper_floor": "3 windows visible across the row; mix of single-hung and casement; some with white frames, some with blinds",
+        "ground_floor": "commercial storefronts"
+      },
+      "doors": "ground floor commercial entrances: 1 glass double door (left building), 1 entrance with awning (right building)",
+      "roof_type": "gable (bay-and-gable typology); 3 prominent front-facing gables in a row; steep pitch approximately 45 degrees",
+      "decorative_elements": "prominent bay-and-gable Victorian form; decorative gable trim/bargeboard; pointed gable peaks; likely original ornamental woodwork at gable apex",
+      "storefront_details": "left unit: glass door commercial entrance with patio fence; centre unit: Chinese signage with red and gold elements (possible restaurant); right unit: commercial with awning and signage in Chinese characters",
+      "condition": "fair; some weathering; original Victorian form well-preserved above storefronts; ground floor heavily modified for commercial use",
+      "signage": "Chinese characters visible on centre and right storefronts; one reads similar to a hair salon or restaurant",
+      "party_walls": "row housing - party walls on both sides of each unit; continuous row of at least 3 bay-and-gable houses",
+      "colour_palette": {
+        "primary": "#B85A3A (red-brown brick)",
+        "trim": "cream/white at gable edges",
+        "accent": "red and gold (Chinese signage)"
+      }
+    },
+    "IMG_20260320_012031164_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), near Dundas end",
+      "address_confidence": "low",
+      "photo_quality": "night, upright",
+      "storeys": "2.5 (bay-and-gable, centre building); 2 (flanking buildings)",
+      "facade_material": "mixed: painted brick/stucco (left), painted brick (centre, grey/blue), brick (right, partially visible)",
+      "brick_colour": "centre building painted dark grey-blue; left building has buff/yellow brick at upper storey; right building white/light painted",
+      "bond_pattern": "obscured by paint on most surfaces",
+      "windows": {
+        "upper_floor": "centre building: 1 pointed-arch or narrow window in gable, 2 windows on second floor with white trim; left building: 1 large window; right building: partially visible",
+        "ground_floor": "centre building has blue-lit commercial space (barber shop with blue LED lighting and barber pole); left building has commercial space with graffiti on side"
+      },
+      "doors": "centre: single commercial entrance with steps up; left: rear/side access visible",
+      "roof_type": "centre: gable (bay-and-gable); left: flat; right: gable visible",
+      "decorative_elements": "centre building: pointed gable with decorative trim; bay window form at second floor; barber pole; white trim around windows and gable edges",
+      "storefront_details": "centre: barber shop with prominent blue LED interior lighting; blue neon glow visible through windows; left: appears shuttered with graffiti",
+      "condition": "centre: good (recently renovated/painted); left: poor (heavy graffiti on dumpster/side wall); right: fair",
+      "signage": "barber pole on centre building; graffiti tags on left building infrastructure",
+      "party_walls": "party walls both sides of centre building",
+      "colour_palette": {
+        "primary": "dark blue-grey (centre painted facade)",
+        "trim": "white",
+        "accent": "blue (LED lighting)"
+      }
+    },
+    "IMG_20260320_012043877_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), row of bay-and-gable houses",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees (landscape held sideways)",
+      "storeys": "2.5 (bay-and-gable typology); 3 houses visible in row",
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick, warm tone consistent across row",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "1 small window per gable peak",
+        "upper_floor": "2 windows per unit visible; rectangular with white frames",
+        "ground_floor": "commercial storefronts"
+      },
+      "doors": "ground floor commercial entrances",
+      "roof_type": "gable (bay-and-gable); 3 steep front-facing gables; approximately 45-degree pitch",
+      "decorative_elements": "Victorian bay-and-gable form; decorative bargeboard at gable peaks; white-painted trim; second-floor bay window projections; horizontal string course between floors",
+      "storefront_details": "ground floor commercial with various signage; yellow-painted storefront visible at right",
+      "condition": "fair; original Victorian form preserved; various modifications at ground floor",
+      "signage": "yellow wooden louvred shutters or signboard visible at right",
+      "party_walls": "continuous row; party walls throughout",
+      "colour_palette": {
+        "primary": "#B85A3A (red-brown brick)",
+        "trim": "white/cream",
+        "accent": "yellow (right storefront)"
+      }
+    },
+    "IMG_20260320_012100177_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), bay-and-gable house",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "painted stucco or painted brick (grey-blue)",
+      "brick_colour": "painted over - grey-blue",
+      "bond_pattern": "not visible (painted)",
+      "windows": {
+        "gable": "1 window in gable with white trim, appears pointed or arched",
+        "upper_floor": "2 windows with white trim and white frames; appears to be 1-over-1 double-hung",
+        "ground_floor": "1 large storefront window and entrance"
+      },
+      "doors": "1 main entrance at ground floor centre with small porch/steps; railing visible",
+      "roof_type": "gable; steep front-facing gable with decorative trim",
+      "decorative_elements": "white-painted window surrounds; decorative bargeboard at gable peak; gable trim with ornamental detail; bay window form on second floor",
+      "storefront_details": "ground floor appears residential or converted; small front garden/yard with plantings visible",
+      "condition": "good; well-maintained painted facade; neat trim",
+      "signage": "small sign visible in window (not legible)",
+      "party_walls": "party walls both sides; adjacent buildings visible",
+      "colour_palette": {
+        "primary": "grey-blue (painted facade)",
+        "trim": "white",
+        "roof": "dark grey/black asphalt shingles"
+      }
+    },
+    "IMG_20260320_012130471_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly near St Andrew St intersection",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "brick (lower) with wood cladding/shingle (upper gable)",
+      "brick_colour": "red brick lower portion; dark red/brown stained wood upper gable",
+      "bond_pattern": "running bond on brick sections",
+      "windows": {
+        "gable": "1 small rectangular window in gable peak",
+        "upper_floor": "1 large storefront-style display window with 'Tibetan Village' signage",
+        "ground_floor": "1 smaller window (white frame, horizontal); wooden deck/patio structure"
+      },
+      "doors": "entrance likely behind wooden patio/deck structure at ground level",
+      "roof_type": "gable; steep front-facing gable; dark shingles",
+      "decorative_elements": "decorative white bargeboard at gable peak; white trim at eave line; gable shingles or wood cladding in dark stain; bay window form",
+      "storefront_details": "'Tibetan Village' shop; large display window at second floor level; wooden deck/patio/balcony structure at ground level with railings",
+      "condition": "fair; some weathering on wood elements; brick in reasonable condition",
+      "signage": "'Tibetan Village' on upper floor window/signboard",
+      "party_walls": "party wall at left (buff/cream coloured building); party wall at right",
+      "colour_palette": {
+        "primary": "red brick, dark brown wood",
+        "trim": "white/cream",
+        "accent": "warm wood tones on patio"
+      }
+    },
+    "IMG_20260320_012138541_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), streetscape view looking north",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees, wide streetscape",
+      "storeys": "2-2.5 (multiple buildings visible)",
+      "facade_material": "brick (multiple buildings)",
+      "description": "Wide streetscape view showing the east side of Kensington Ave. Multiple bay-and-gable Victorian rowhouses visible in a continuous row. Red-brown brick facades with steep gables. Street-level commercial uses. Street light glare partially obscures details. A vehicle and tree are in the foreground. At least 4-5 buildings visible in the row.",
+      "condition": "mixed; typical Kensington Market mix of maintained and weathered facades",
+      "colour_palette": {
+        "primary": "red-brown brick row",
+        "accent": "red (commercial signage at ground level)"
+      }
+    },
+    "IMG_20260320_012216600_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), possibly around 14-18 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "brick",
+      "brick_colour": "buff/yellow-brown brick",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "1 window in gable peak",
+        "upper_floor": "2 windows visible; appear to be 1-over-1 double-hung with dark frames",
+        "ground_floor": "large commercial storefront windows"
+      },
+      "doors": "commercial entrance at ground floor",
+      "roof_type": "gable; front-facing steep gable; multiple gable peaks visible in row behind",
+      "decorative_elements": "bay-and-gable Victorian form; white trim at gable edges",
+      "storefront_details": "'Urban Catwalk' vintage/wholesale retail; large illuminated storefront window with security grille; yellow signage with green lettering; additional sandwich board sign at street level",
+      "condition": "fair; original form preserved; commercial modifications at ground level",
+      "signage": "'URBAN CATWALK - WHOLESALE & RETAIL'; phone number visible; additional A-frame sign at street",
+      "party_walls": "party wall both sides; concrete/stucco party wall visible at right",
+      "colour_palette": {
+        "primary": "buff/yellow-brown brick",
+        "trim": "white",
+        "accent": "yellow and green (signage)"
+      }
+    },
+    "IMG_20260320_012227134_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), possibly 20-22 Kensington Ave area",
+      "address_confidence": "low",
+      "photo_quality": "night, upright, good",
+      "storeys": "2.5 (two distinct buildings visible)",
+      "facade_material": "left: wood panel/plywood over original; right: painted (pink/magenta tones with neon)",
+      "windows": {
+        "upper_floor": "left building: 2 windows with white frames; right building: windows visible behind neon signage",
+        "ground_floor": "both buildings have large commercial storefronts"
+      },
+      "doors": "commercial entrances for both units",
+      "roof_type": "flat or low-pitch behind parapet (left); gable peak barely visible (right)",
+      "decorative_elements": "left building: minimal; right building: extensive neon/LED lighting in purple/pink/red; ivy/climbing plants on facade",
+      "storefront_details": "left: 'Last Temptation' bar/lounge with yellow signage on wood-panel facade; right: illuminated commercial space with purple/magenta LED lighting and abundant climbing greenery (ivy wall)",
+      "condition": "left: fair, heavily modified with wood paneling covering original facade; right: fair, commercial modifications with extensive lighting",
+      "signage": "'LAST TEMPTATION' in yellow lettering on dark wood facade",
+      "party_walls": "shared party wall between the two buildings",
+      "colour_palette": {
+        "primary": "wood/brown (left), pink/magenta (right)",
+        "accent": "purple neon, green (ivy)"
+      }
+    },
+    "IMG_20260320_012308243_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "14 Kensington Ave area (east side)",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": 2,
+      "facade_material": "painted brick or stucco (blue-grey); adjacent building buff brick",
+      "brick_colour": "painted blue-grey (left unit); buff/cream brick (right, partially visible)",
+      "windows": {
+        "upper_floor": "not clearly visible in this angle"
+      },
+      "doors": "not clearly visible",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "minimal",
+      "storefront_details": "'Courage My Love' vintage shop; large storefront window with security grille and bird silhouette decals; blue-painted surround; merchandise visible through window; holiday lights on adjacent tree",
+      "condition": "fair; painted facade in reasonable condition",
+      "signage": "'COURAGE MY LOVE' on storefront; 'M' visible on adjacent unit (possibly 'MV' or similar)",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "blue-grey (painted)",
+        "trim": "dark blue/navy",
+        "accent": "warm window display lighting"
+      }
+    },
+    "IMG_20260320_012318650_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side)",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "brick (upper), painted/stucco (lower commercial)",
+      "brick_colour": "red-brown brick on upper storey",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "1 small window in gable peak",
+        "upper_floor": "1 large window with white frame; 1 smaller window",
+        "ground_floor": "commercial storefront"
+      },
+      "doors": "commercial entrance; residential side door visible",
+      "roof_type": "gable; front-facing steep gable",
+      "decorative_elements": "gable peak with white trim; bay window form; metal chain-link security visible",
+      "storefront_details": "ground floor commercial; painted cream/beige with dark commercial unit; VW van parked in front partially obscuring view",
+      "condition": "fair; upper brick in reasonable condition; ground floor modified",
+      "signage": "not clearly legible",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "red-brown brick (upper), cream/beige (lower)",
+        "trim": "white"
+      }
+    },
+    "IMG_20260320_012325834_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), row near St Andrew St",
+      "address_confidence": "low",
+      "photo_quality": "night, upright, good",
+      "storeys": "2.5 (bay-and-gable row of 3+ houses visible)",
+      "facade_material": "brick (left unit brown), stone/rough-cast stucco (centre units grey/white)",
+      "brick_colour": "left: brown/dark brick; centre-right: grey/white stone or rough-cast render",
+      "bond_pattern": "running bond on brick sections",
+      "windows": {
+        "gable": "small pointed or rectangular windows in each gable peak",
+        "upper_floor": "2 windows per unit; appear to be 1-over-1 double-hung",
+        "ground_floor": "commercial storefronts"
+      },
+      "doors": "commercial entrances at street level; residential stairs visible",
+      "roof_type": "gable; 3+ front-facing gables in continuous row; steep pitch",
+      "decorative_elements": "bay-and-gable Victorian form; decorative bargeboard on gable peaks; some gable ornament visible",
+      "storefront_details": "'fashion OLD & NEW' signage visible; colourful painted storefronts (pink, green, yellow sections); awning/canopy supported by posts; steps up to entrances",
+      "condition": "fair to poor; some deterioration visible; mix of original and modified elements; white railing/fence at left",
+      "signage": "'fashion OLD & NEW' on centre storefront",
+      "party_walls": "continuous row; party walls throughout",
+      "colour_palette": {
+        "primary": "brown brick (left), grey stone/stucco (centre-right)",
+        "trim": "white",
+        "accent": "pink, green, yellow (storefront paint)"
+      }
+    },
+    "IMG_20260320_012334115_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side)",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick (upper); painted or modified lower",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "1 window in gable peak with white surround",
+        "upper_floor": "2 windows; 1 larger (horizontal blinds visible), 1 smaller; white frames",
+        "ground_floor": "commercial storefront with glass door/glazed panel"
+      },
+      "doors": "1 ground floor commercial glass entrance; balcony/deck visible above",
+      "roof_type": "gable; front-facing steep gable",
+      "decorative_elements": "white-painted gable trim; bay window form; second floor has enclosed balcony/sunroom addition with glass panels",
+      "storefront_details": "ground floor commercial; light blue-painted lower facade; glass storefront; appears to be a small shop",
+      "condition": "fair; some modifications including second-floor balcony enclosure; party wall at right shows significant deterioration with peeling paint",
+      "signage": "not clearly visible",
+      "party_walls": "party wall at right heavily deteriorated (peeling paint, exposed masonry); party wall at left",
+      "colour_palette": {
+        "primary": "red-brown brick",
+        "trim": "white",
+        "accent": "light blue (ground floor)"
+      }
+    },
+    "IMG_20260320_012350131_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), possibly near 26-30 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5-3 (bay-and-gable with possible third floor)",
+      "facade_material": "painted stucco/render (white/cream)",
+      "brick_colour": "not visible - fully painted white/cream",
+      "windows": {
+        "gable": "1 window in gable peak with white frame",
+        "third_floor": "2 small windows (if 3-storey) or these are second-floor windows",
+        "upper_floor": "2 windows with white frames; one appears to have venetian blinds; blue-lit interior visible",
+        "ground_floor": "large commercial storefront windows"
+      },
+      "doors": "commercial entrance at ground floor",
+      "roof_type": "gable; front-facing steep gable",
+      "decorative_elements": "white-painted facade gives clean appearance; some original trim likely preserved under paint; checkerboard-pattern paint on adjacent building visible at right",
+      "storefront_details": "ground floor has large display windows with blue/cyan interior lighting; appears to be a retail shop; signage partially visible",
+      "condition": "fair; painted over original brick; paint appears in reasonable condition",
+      "signage": "partially visible at ground level",
+      "party_walls": "party wall at right (checkerboard painted); party wall at left",
+      "colour_palette": {
+        "primary": "white/cream (painted)",
+        "trim": "white",
+        "accent": "cyan/blue (interior lighting)"
+      }
+    },
+    "IMG_20260320_012656551_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly around 29-33 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees, good detail",
+      "storeys": "2.5 (multiple bay-and-gable houses visible)",
+      "facade_material": "brick",
+      "brick_colour": "buff/yellow brick (foreground building); red-brown brick (background buildings)",
+      "bond_pattern": "running bond with decorative brick details",
+      "windows": {
+        "gable": "small windows in gable peaks (2+ visible across row)",
+        "upper_floor": "2 windows per unit; 1-over-1 double-hung style with white frames",
+        "ground_floor": "large commercial storefront windows"
+      },
+      "doors": "commercial entrances at ground level",
+      "roof_type": "gable; multiple front-facing gables in continuous row",
+      "decorative_elements": "decorative brickwork patterns visible on buff brick building (diamond/lozenge brick inserts visible on upper facade); pointed gable peaks with bargeboard; some buildings show original Victorian ornament; large mural on upper wall of one building",
+      "storefront_details": "'Uncle Vintage Co - Quality Garment' illuminated sign on foreground building; large storefront windows; security grilles; mural artwork visible on adjacent building featuring a rose/floral design",
+      "condition": "fair; original brick well-preserved on some units; commercial modifications at ground level",
+      "signage": "'UNCLE VINTAGE CO - QUALITY GARMENT' prominent illuminated sign",
+      "party_walls": "continuous row; party walls throughout; concrete/stucco party wall visible at right",
+      "colour_palette": {
+        "primary": "buff/yellow brick, red-brown brick",
+        "trim": "white/cream",
+        "accent": "warm tones from murals"
+      }
+    },
+    "IMG_20260320_012706597_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), same building as previous but closer view of adjacent unit",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees (partial close-up)",
+      "storeys": 2,
+      "facade_material": "painted metal/wood (dark, ground floor); brick above",
+      "description": "Close-up of a building adjacent to Uncle Vintage. Large mural featuring a rose/floral design painted on plywood or metal panels at ground floor. Upper section shows brick with gable peak of adjacent building behind. Blue-lit storefront windows visible at ground level. Dense vegetation/shrub in foreground.",
+      "storefront_details": "large mural artwork on facade panels; blue-lit display window with merchandise visible; appears to be a vintage or art shop",
+      "condition": "fair; mural panels in good condition; some weathering",
+      "signage": "mural art (decorative, not commercial signage)",
+      "colour_palette": {
+        "primary": "dark/black (panels), warm ochre/red (mural)",
+        "accent": "blue (interior lighting)"
+      }
+    },
+    "IMG_20260320_012716439_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), 'Gramercy Garbo' or similar business",
+      "address_confidence": "low",
+      "photo_quality": "night, close-up of storefront window, upright",
+      "storeys": "1 visible (ground floor only)",
+      "facade_material": "not visible - close-up of window only",
+      "description": "Close-up of a large commercial storefront window divided into 6 panes (3 over 3). Multiple paper signs reading 'We are expanding!' posted in each pane. Signs reference GramercyGarbo.com and @GramercyGarbo. Interior of shop visible through glass. White/cream window frame.",
+      "storefront_details": "large 6-pane storefront window; business temporarily closed for expansion; signs reference website and Instagram",
+      "condition": "good (window and frame in good condition)",
+      "signage": "'We are expanding!' signs; GramercyGarbo.com; @GramercyGarbo",
+      "skip_for_3d": false,
+      "notes": "Close-up only - need wider shot for full facade reconstruction"
+    },
+    "IMG_20260320_012750357_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly 35-41 Kensington Ave area",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable row)",
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick; one building appears darker/more weathered",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "small windows in gable peaks",
+        "upper_floor": "2 windows per unit; white frames; some with multiple panes (possibly 2-over-2)",
+        "ground_floor": "commercial storefronts with large windows"
+      },
+      "doors": "commercial entrances; one building has covered/tented storefront",
+      "roof_type": "gable; multiple front-facing gables; steep pitch",
+      "decorative_elements": "Victorian bay-and-gable form; bargeboard at gable peaks; some original trim preserved",
+      "storefront_details": "left: dark-painted commercial with 'Pearl' or similar signage and dartboard visible; centre: tented/covered commercial entrance; scaffolding or tent structure covering part of facade; right: more bay-and-gable houses visible",
+      "condition": "fair to poor; one building has temporary covering/tenting (possible construction); scaffolding visible",
+      "signage": "'Pearl' or similar on left commercial unit; 'BLACKEST MARKET' partially visible",
+      "party_walls": "continuous row; party walls throughout",
+      "colour_palette": {
+        "primary": "red-brown brick",
+        "trim": "white/cream"
+      }
+    },
+    "IMG_20260320_012757406_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), near St Andrew St",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "brick (upper), mixed at ground level",
+      "brick_colour": "red-brown brick",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "1 small window in gable peak",
+        "upper_floor": "1-2 windows visible; white frames",
+        "ground_floor": "commercial"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "gable; steep front-facing gable",
+      "decorative_elements": "bargeboard at gable; 'BREATHLESS' vertical sign mounted on facade; bay window form",
+      "storefront_details": "'Breathless' shop with vertical blade sign; commercial ground floor; adjacent building at left has lime green painted facade; chain-link fence visible",
+      "condition": "fair; some deterioration; adjacent lime green building appears to be a basic commercial conversion",
+      "signage": "'BREATHLESS' vertical blade sign on upper facade",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "red-brown brick",
+        "trim": "white",
+        "accent": "lime green (adjacent building)"
+      }
+    },
+    "IMG_20260320_012812670_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side)",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable); 2 adjacent buildings visible",
+      "facade_material": "left: painted/stucco (white/cream with green); right: painted (white/grey)",
+      "windows": {
+        "gable": "1 window per gable peak",
+        "upper_floor": "2 windows per unit; white frames",
+        "ground_floor": "commercial"
+      },
+      "doors": "commercial entrances",
+      "roof_type": "gable; two front-facing gables side by side",
+      "decorative_elements": "bay-and-gable form; white-painted trim; gable ornament",
+      "storefront_details": "left: green-painted lower facade with commercial use; right: white/grey painted with glass storefront; patio area visible with brick paving",
+      "condition": "fair; painted over original materials",
+      "signage": "not clearly legible",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "white/cream, green",
+        "trim": "white"
+      }
+    },
+    "IMG_20260320_012819366_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side)",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "brick with some painted sections",
+      "brick_colour": "buff/yellow brick with decorative brick details",
+      "bond_pattern": "running bond; decorative brick arched element visible above second floor (round/oval window or decorative panel)",
+      "windows": {
+        "gable": "1 window in gable peak",
+        "upper_floor": "2 windows; one large, one medium; possible round/oval decorative window or brick panel between them",
+        "ground_floor": "commercial with horizontal blinds/shutters"
+      },
+      "doors": "commercial entrance at ground level",
+      "roof_type": "gable; front-facing steep gable",
+      "decorative_elements": "distinctive circular/oval decorative brickwork panel on upper facade; ornamental bargeboard at gable peak; bay window projection; metal railing/balcony at second floor; this building has notable original Victorian decorative elements",
+      "storefront_details": "ground floor commercial with horizontal metal shutters/blinds; dark-painted facade; deck/patio with furniture visible",
+      "condition": "fair; good preservation of upper facade decorative elements; ground floor modified",
+      "signage": "partially visible at ground level",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "buff/yellow brick",
+        "trim": "white/cream",
+        "accent": "dark brown (ground floor paint)"
+      }
+    },
+    "IMG_20260320_012841865_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly near Baldwin St end",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees, partially obscured by vegetation",
+      "storeys": "2.5 (bay-and-gable, two buildings visible)",
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "small windows in gable peaks",
+        "upper_floor": "2 windows per unit visible through bare tree branches",
+        "ground_floor": "commercial storefronts"
+      },
+      "doors": "commercial entrances at ground level; red/pink painted surround visible on one entrance",
+      "roof_type": "gable; front-facing gables",
+      "decorative_elements": "bay-and-gable Victorian form; bargeboard; some original trim; one building has brightly painted (red/pink) commercial entrance surround",
+      "storefront_details": "multiple commercial units; one appears to have a brightly coloured (red/pink) entrance surround; another has more subdued commercial frontage",
+      "condition": "fair; heavily obscured by bare tree branches in photo; difficult to assess detail",
+      "signage": "not clearly visible through vegetation",
+      "party_walls": "party walls in continuous row",
+      "colour_palette": {
+        "primary": "red-brown brick",
+        "accent": "red/pink (entrance paint)"
+      }
+    },
+    "IMG_20260320_012852370_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), heavily obscured by tree",
+      "address_confidence": "very low",
+      "photo_quality": "night, rotated 90 degrees, heavily obscured by bare tree",
+      "storeys": "2.5 (bay-and-gable visible through branches)",
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick (partially visible through tree)",
+      "description": "View heavily obscured by large bare tree in foreground. A bay-and-gable building is visible behind the tree. Red-brown brick facade. Streetlight glare. A wooden storefront with vertical board cladding is partially visible at ground level.",
+      "condition": "cannot adequately assess due to obstruction",
+      "skip_for_3d": false,
+      "notes": "Very limited facade visibility due to tree obstruction. May need to cross-reference with adjacent photos."
+    },
+    "IMG_20260320_012859287_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly around 45-49 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees, good detail",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "brick (upper), mixed at ground (painted brick/tile)",
+      "brick_colour": "dark brown/dark brick upper; white/cream tile or painted brick at ground level",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "1 window in gable peak",
+        "upper_floor": "2 windows with dark frames; venetian blinds visible",
+        "ground_floor": "large commercial storefront windows"
+      },
+      "doors": "commercial entrance at ground floor",
+      "roof_type": "gable; front-facing steep gable with white/cream trim",
+      "decorative_elements": "white bargeboard at gable peak; bay-and-gable form; some decorative trim at eave line",
+      "storefront_details": "two adjacent shops visible: left appears to be 'Still Trader' or 'Buy Me' with yellow signage; right is 'Lost Boys' with distinctive graffiti-style black and white signage; white brick/tile shopfront",
+      "condition": "fair; upper facade well-preserved; ground floor commercial modifications",
+      "signage": "'STILL TRADER' / 'Buy Me' (yellow); 'LOST BOYS' (graffiti-style black/white); yellow price/sale signs",
+      "party_walls": "party walls both sides; adjacent buildings visible",
+      "colour_palette": {
+        "primary": "dark brown brick (upper), white tile (lower)",
+        "trim": "white/cream",
+        "accent": "yellow (signage), orange (adjacent)"
+      }
+    },
+    "IMG_20260320_012906257_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly around 47-51 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated slightly, good",
+      "storeys": "2.5 (bay-and-gable) plus adjacent 2-storey",
+      "facade_material": "left: painted (dark brown/olive); right: painted blue with additional colours",
+      "windows": {
+        "gable": "1 window in gable peak (left building)",
+        "upper_floor": "left: 2 windows; right: 1 window visible",
+        "ground_floor": "commercial storefronts"
+      },
+      "doors": "commercial entrances with security grilles",
+      "roof_type": "gable (left); flat with parapet (right)",
+      "decorative_elements": "left: bay-and-gable form, white trim at gable; right: none significant",
+      "storefront_details": "left: 'LOLA' signage in gold lettering on dark-painted storefront; security diamond grille closed; right: appears to be another shop with white tile/brick lower facade",
+      "condition": "fair; painted facades; security grilles on both units",
+      "signage": "'LOLA' in gold lettering; red 'Butterfly' sign visible above at upper level",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "dark olive/brown (left), blue (right upper)",
+        "trim": "white",
+        "accent": "gold (LOLA sign), red (Butterfly sign)"
+      }
+    },
+    "IMG_20260320_012917359_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly around 51-53 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees, good",
+      "storeys": 2,
+      "facade_material": "painted stucco/render (blue/navy)",
+      "brick_colour": "not visible - painted over",
+      "windows": {
+        "upper_floor": "2 windows visible; one with AC unit; dark frames; one has warm interior light",
+        "ground_floor": "large commercial storefront"
+      },
+      "doors": "commercial entrance at ground level",
+      "roof_type": "flat with parapet or very low pitch; partially visible",
+      "decorative_elements": "red signboard or banner covering upper facade; candy-stripe awning (red and white) visible",
+      "storefront_details": "'Butterfly' shop with large red sign featuring butterfly graphics in white; security diamond grille closed; red and white striped awning; adjacent unit has neon blue lighting",
+      "condition": "fair; painted facade; signage in good condition",
+      "signage": "'Butterfly' in white script on large red sign panel with butterfly motifs",
+      "party_walls": "party walls both sides; concrete block party wall visible at right",
+      "colour_palette": {
+        "primary": "navy blue (painted facade), red (sign)",
+        "trim": "white",
+        "accent": "red, white (awning stripes)"
+      }
+    },
+    "IMG_20260320_012926854_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), adjacent to Butterfly shop",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "painted stucco or clapboard (grey/beige)",
+      "windows": {
+        "gable": "1 window in gable",
+        "upper_floor": "1 large window visible",
+        "ground_floor": "commercial"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "gable; front-facing steep gable",
+      "decorative_elements": "bay-and-gable form; awning/canopy over storefront",
+      "storefront_details": "'Crazy Love VINTAGE' shop; 'BUY TRADE SELL' sub-signage; blue neon-lit storefront interior; security grille; vertical blade sign; adjacent Butterfly red sign visible at left",
+      "condition": "fair; painted over original facade; commercial modifications",
+      "signage": "'Crazy Love VINTAGE'; 'BUY TRADE SELL'",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "grey/beige (painted)",
+        "trim": "white",
+        "accent": "blue (neon), red (adjacent Butterfly sign)"
+      }
+    },
+    "IMG_20260320_012934622_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), possibly near Baldwin St end",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": 2,
+      "facade_material": "brick (upper), painted/metal (lower)",
+      "brick_colour": "dark red-brown brick",
+      "bond_pattern": "running bond (visible on upper)",
+      "windows": {
+        "upper_floor": "2 windows visible above storefront"
+      },
+      "doors": "not clearly visible - security grilles closed",
+      "roof_type": "flat or very low pitch with parapet",
+      "decorative_elements": "large mural artwork on upper facade wall depicting figures (appears to be a portrait/figurative mural in warm tones); awning below",
+      "storefront_details": "ground floor appears to be a restaurant or bar; security grilles closed; awning visible; appears to be near a corner location",
+      "condition": "fair; large mural on upper wall; graffiti visible on grilles",
+      "signage": "partially visible behind mural/awning; appears commercial",
+      "party_walls": "party wall visible",
+      "colour_palette": {
+        "primary": "dark red brick",
+        "accent": "warm tones from mural (oranges, greens, skin tones)"
+      }
+    },
+    "IMG_20260320_012951226_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Corner of Kensington Ave and St Andrew St (southwest corner)",
+      "address_confidence": "medium",
+      "photo_quality": "night, upright, good wide shot",
+      "storeys": "1-2 (corner commercial building)",
+      "facade_material": "mixed: stucco/render painted (upper), metal/wood panels (lower)",
+      "windows": {
+        "upper_floor": "1 small window visible on second storey"
+      },
+      "doors": "corner entrance (wrapped around corner)",
+      "roof_type": "flat with low parapet",
+      "decorative_elements": "extensive mural artwork covering ground floor walls (red/orange theme with skeleton/monster figures); blue neon 'LOST GEN' signage",
+      "storefront_details": "'Lost Gen Vintage' corner shop; wrapped corner storefront heavily covered with mural artwork (red/orange theme with skulls and fantastical creatures); blue neon text; security grilles; appears to be a large corner commercial unit",
+      "condition": "fair; heavily decorated with murals; underlying structure obscured; parapet/upper walls show some wear",
+      "signage": "'LOST GEN' in blue neon; 'VINTAGE' text; various mural art",
+      "party_walls": "corner building; party wall on non-street sides",
+      "colour_palette": {
+        "primary": "red/orange (mural), beige/grey (upper stucco)",
+        "accent": "blue (neon), purple, black"
+      },
+      "notes": "Corner lot - two street-facing facades visible (Kensington Ave and cross street). Bay-and-gable buildings visible in background along cross street."
+    },
+    "IMG_20260320_012958779_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave near St Andrew St (east side), possibly around 54-56 Kensington Ave",
+      "address_confidence": "low-medium",
+      "photo_quality": "night, upright, good",
+      "storeys": 2,
+      "facade_material": "brick",
+      "brick_colour": "red brick, well-preserved",
+      "bond_pattern": "running bond; decorative brick details visible (possible header course, medallion)",
+      "windows": {
+        "upper_floor": "3 windows visible; white-painted surrounds; appear to be 1-over-1 double-hung",
+        "ground_floor": "large commercial storefront windows"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "flat with decorative parapet; white-painted cornice/parapet trim; circular medallion/roundel in parapet",
+      "decorative_elements": "elaborate white-painted parapet with cornice moulding; circular medallion/roundel decoration in parapet centre; decorative brickwork; white window surrounds; this is a more formal Victorian commercial building (not bay-and-gable)",
+      "storefront_details": "'Essence of Life - Natural Food Market' with black awning and white text; Organika branding visible; large storefront windows; painted barrier/hoarding with landscape mural (reclining figure, trees, sky)",
+      "condition": "good; well-maintained brick facade; clear decorative elements; original parapet ornament preserved",
+      "signage": "'Essence of Life - NATURAL FOOD MARKET'; Organika supplement displays; artistic painted hoarding/barrier",
+      "party_walls": "party wall at right (stucco/concrete)",
+      "colour_palette": {
+        "primary": "#B85A3A (red brick)",
+        "trim": "white (parapet, window surrounds)",
+        "accent": "black (awning), multicolour (mural hoarding)"
+      }
+    },
+    "IMG_20260320_013016711_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Corner of Kensington Ave and St Andrew St (wider view of Lost Gen corner)",
+      "address_confidence": "medium",
+      "photo_quality": "night, upright, excellent wide-angle",
+      "storeys": "1-2 (corner building) plus 2-storey and bay-and-gable buildings visible behind",
+      "facade_material": "stucco/render (painted) on corner building; brick on buildings behind",
+      "description": "Wider view of the Lost Gen Vintage corner building showing both the Kensington Ave facade and the cross-street (St Andrew St) facade. Extensive red/orange mural artwork wraps around the corner at ground level. Above, the facade is painted stucco/render in cream/white with graffiti. Behind the corner building, the continuous row of bay-and-gable Victorian houses is visible along Kensington Ave, with their characteristic steep gables and red-brown brick. A lavender/purple painted building is visible in the middle distance.",
+      "condition": "fair; murals in good condition; upper walls show graffiti and some deterioration",
+      "signage": "'LOST GEN VINTAGE' in blue text; extensive mural art",
+      "colour_palette": {
+        "primary": "red/orange (mural), cream (upper)",
+        "accent": "lavender/purple (building behind), blue (neon)"
+      }
+    },
+    "IMG_20260320_013027868_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), possibly 46-50 Kensington Ave area",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": 3,
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick, dark tone",
+      "bond_pattern": "running bond",
+      "windows": {
+        "third_floor": "3-4 windows visible; rectangular with white/light frames",
+        "second_floor": "3-4 windows; similar to third floor",
+        "ground_floor": "large commercial storefront windows"
+      },
+      "doors": "commercial entrance at ground floor",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "this is a larger 3-storey commercial/mixed-use building, not the typical bay-and-gable form; round medallion/sign on upper facade; large mural on ground-level side wall; decorative cornice at roofline",
+      "storefront_details": "ground floor commercial with modern storefront; 'BIZ' or '47' visible in signage; illuminated commercial windows; large mural artwork on side wall (golden/warm tones with figures)",
+      "condition": "fair to good; solid brick 3-storey building; some graffiti; mural artwork",
+      "signage": "'47' or similar number visible; various commercial signage; round emblem/sign at upper level",
+      "party_walls": "party walls on both sides",
+      "colour_palette": {
+        "primary": "dark red-brown brick",
+        "trim": "white/light",
+        "accent": "gold/warm tones (mural)"
+      }
+    },
+    "IMG_20260320_013041588_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), possibly 48-52 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, upright, good",
+      "storeys": 2,
+      "facade_material": "brick (upper), painted/stucco (lower commercial)",
+      "brick_colour": "red-brown brick with some darker sections; one section appears to have graffiti/tags on exposed brick",
+      "bond_pattern": "running bond",
+      "windows": {
+        "upper_floor": "2 windows visible; one with vertical blinds"
+      },
+      "doors": "commercial entrances with security grilles",
+      "roof_type": "flat with low parapet; some corrugated metal visible at roofline",
+      "decorative_elements": "graffiti/tags on upper brick wall (white outlines); awning with stripes over ground floor",
+      "storefront_details": "two adjacent commercial units visible; left: 'Dairy Deli' or similar with blue-lit interior and security grilles; right: commercial unit with painted mural on grille/shutter (floral/organic design in warm colours); striped awning",
+      "condition": "fair; graffiti on upper walls; some deterioration of brick; commercial ground floor modifications",
+      "signage": "'Dairy Deli' or similar; graffiti tags",
+      "party_walls": "party walls; one party wall visible between buildings",
+      "colour_palette": {
+        "primary": "red-brown brick",
+        "trim": "green (painted lower section)",
+        "accent": "blue (interior light), warm tones (mural)"
+      }
+    },
+    "IMG_20260320_013057746_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), near Baldwin St end",
+      "address_confidence": "low",
+      "photo_quality": "night, upright, good",
+      "storeys": 2,
+      "facade_material": "mixed: brick (upper behind), metal/wood cladding (ground floor)",
+      "windows": {
+        "upper_floor": "not clearly visible in this view"
+      },
+      "doors": "commercial roller doors/shutters (closed)",
+      "roof_type": "flat with parapet; one section appears to have a shallow pitch",
+      "decorative_elements": "large graffiti/street art on upper walls and panels; corrugated metal and plywood panels; very informal commercial architecture",
+      "storefront_details": "row of commercial units: 'PASTA BAR & LOUNGE' visible on left awning; shuttered storefronts with security grilles; blue-lit interior visible through grilles on left; right section has more informal commercial spaces; large white graffiti tag visible on wood/metal panel at right",
+      "condition": "fair to poor; informal commercial additions; graffiti; corrugated metal and plywood cladding",
+      "signage": "'PASTA BAR & LOUNGE' on awning; graffiti murals on upper walls (colourful, yellow/red/green); large white graffiti bubble letters on right panel",
+      "party_walls": "continuous commercial row",
+      "colour_palette": {
+        "primary": "dark (metal/paint), red-brown brick behind",
+        "accent": "yellow, red, green (graffiti murals), blue (interior lighting)"
+      }
+    },
+    "IMG_20260320_013118234_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "55-57 Kensington Ave area (west side, near Baldwin St)",
+      "address_confidence": "low-medium",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable left) and 2 (right)",
+      "facade_material": "left: vinyl/aluminum siding (beige/tan); right: brick (buff/yellow) with yellow paint at upper level",
+      "brick_colour": "right building: buff/yellow brick",
+      "windows": {
+        "gable": "left: none visible in gable (or small)",
+        "upper_floor": "left: 2 windows (one square, one rectangular); right: 2 windows",
+        "ground_floor": "large commercial storefronts"
+      },
+      "doors": "commercial entrances; both units have security grilles",
+      "roof_type": "left: gable; right: flat or low pitch with parapet",
+      "decorative_elements": "left: bay-and-gable form but heavily modified with siding; right: colourful painted mural above storefront (flying geese/horses, stars, moon on brown background); 'EXILE' text in yellow and red",
+      "storefront_details": "left: 'KENSINGTON MARKET' text with 'Property For Sale' sign (416.649.5943); appears to be a retail/souvenir shop with security grilles; right building: number '60' visible; security grille; 'Sale!' signs in windows; yellow zigzag trim under awning; blue-and-white striped awning",
+      "condition": "left: fair, vinyl siding covers original facade; right: fair, painted facade with mural",
+      "signage": "'KENSINGTON MARKET' (left storefront); 'Property For Sale 416.649.5943' (left); 'EXILE' mural (left upper); '55' and '60' address numbers visible; 'Sale!' signs",
+      "party_walls": "party wall between the two buildings; party walls at edges",
+      "colour_palette": {
+        "primary": "beige/tan (siding), buff brick/yellow (right)",
+        "trim": "white",
+        "accent": "yellow, red (EXILE mural), blue/white (awning stripes)"
+      }
+    },
+    "IMG_20260320_013121944_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "55-60 Kensington Ave (same buildings as previous, slightly different angle)",
+      "address_confidence": "low-medium",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (left) and 2 (right)",
+      "facade_material": "same as previous photo - vinyl siding (left), painted brick (right)",
+      "description": "Slightly different angle of the same two buildings showing more of the 'EXILE' mural on left building upper wall (brown background with flying geese/horses, stars, yellow 'EXILE' text, red circle). Right building (#60) shows blue-and-white striped awning with yellow zigzag trim. 'Property For Sale' sign more prominent. 'KENSINGTON MARKET' shop signage visible below.",
+      "storefront_details": "Same as IMG_20260320_013118234_HDR.jpg - different angle",
+      "signage": "'EXILE' (mural, yellow/red on brown); 'KENSINGTON MARKET' (shop); 'Property For Sale 416.649.5943'",
+      "condition": "fair",
+      "colour_palette": {
+        "primary": "brown (mural background), beige (siding)",
+        "accent": "yellow, red (EXILE), blue/white (awning)"
+      }
+    },
+    "IMG_20260320_013127060_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "67 Kensington Ave area (west side)",
+      "address_confidence": "medium",
+      "photo_quality": "night, upright, good",
+      "storeys": 1,
+      "facade_material": "brick (painted at lower level), unknown upper",
+      "windows": {
+        "ground_floor": "large commercial storefront windows with security scissor grilles"
+      },
+      "doors": "commercial entrance with security grille",
+      "roof_type": "flat; minimal height; appears to be single-storey commercial row",
+      "decorative_elements": "brown and white striped awning; orange and white striped awning (adjacent unit); hand-painted blue and white panels below windows",
+      "storefront_details": "number '67' visible; 'KENSINGTON LEATHER FASHION' text visible on storefront; multiple display windows with security scissor grilles closed; striped canvas awnings; traditional market retail frontage",
+      "condition": "fair; traditional market shop appearance; some paint deterioration on lower panels; graffiti on one panel",
+      "signage": "'KENSINGTON LEATHER FASHION'; '67' address number; graffiti tag on lower panel",
+      "party_walls": "continuous commercial row; party walls throughout",
+      "colour_palette": {
+        "primary": "brown (upper), dark commercial frontage",
+        "accent": "brown/white stripes (awning), orange/white stripes (adjacent awning), blue (lower panels)"
+      }
+    },
+    "IMG_20260320_013136809_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), near Baldwin St end",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "1-2",
+      "facade_material": "brick (partially visible), metal/wood commercial frontage",
+      "description": "Close-up of a commercial storefront area. 'TUTTI FRUTTI - FAMOUS FOODS INC - DRY FRUITS & NUTS, IMPORTED & DOMESTIC, CHEESE, COLD CUTS, EUROPEAN DELICATESSEN' sign visible. Multiple product display cases/refrigerators visible. Adjacent unit has various stickers, graffiti, and advertising posters. This is a traditional Kensington Market food shop.",
+      "storefront_details": "'Tutti Frutti Famous Foods Inc' European delicatessen; commercial display windows; cheese/cold cuts shop; various product advertising visible",
+      "condition": "fair; working commercial establishment; some clutter and graffiti on adjacent surfaces",
+      "signage": "'TUTTI FRUTTI - FAMOUS FOODS INC'; 'DRY FRUITS & NUTS, IMPORTED & DOMESTIC'; 'CHEESE, COLD CUTS, EUROPEAN DELICATESSEN'; 'KALLER'S' visible on adjacent sign; graffiti tags",
+      "colour_palette": {
+        "primary": "dark commercial frontage",
+        "accent": "white (signage), purple (graffiti)"
+      }
+    },
+    "IMG_20260320_013156513_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), near Baldwin St",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2.5 (bay-and-gable)",
+      "facade_material": "buff/yellow brick with decorative brick pattern",
+      "brick_colour": "buff/yellow brick; decorative diamond patterns in contrasting darker brick visible on upper facade",
+      "bond_pattern": "running bond with decorative diamond/lozenge brick inserts",
+      "windows": {
+        "gable": "large window visible in gable area",
+        "upper_floor": "1 large 4-pane window (2-over-2 or 4-pane casement); distinctive",
+        "ground_floor": "commercial storefront"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "gable; front-facing steep gable",
+      "decorative_elements": "notable decorative brickwork: diamond/lozenge patterns in contrasting brick colours on upper facade; this is a well-preserved example of Victorian decorative brickwork; 4-pane upper window with clean proportions; decorative trim at gable",
+      "storefront_details": "ground floor commercial with illuminated display window (purple/violet interior lighting); appears to be a retail shop; 'SOP' or similar text visible",
+      "condition": "good; excellent preservation of decorative brickwork; one of the better-preserved upper facades in the row",
+      "signage": "partially visible",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "#D4B896 (buff/yellow brick)",
+        "decorative_brick": "darker contrasting brick for diamond patterns",
+        "trim": "minimal visible",
+        "accent": "purple/violet (interior lighting)"
+      }
+    },
+    "IMG_20260320_013207264_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (west side), near Baldwin St",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": 2,
+      "facade_material": "brick (buff/yellow), wood/panel at ground level",
+      "brick_colour": "buff/yellow brick upper; ground floor clad in wood/panel",
+      "bond_pattern": "running bond on upper brick section",
+      "windows": {
+        "upper_floor": "2 windows visible; white frames; appear to be 1-over-1 double-hung",
+        "ground_floor": "large commercial display window (6-pane or multi-pane)"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "flat or low pitch; not clearly visible",
+      "decorative_elements": "red vertical pilaster or column visible between ground floor openings; otherwise minimal ornament",
+      "storefront_details": "ground floor commercial with large multi-pane display window; warm interior lighting; graffiti/tags on right side of storefront; appears to be a retail shop; red accent pilaster",
+      "condition": "fair; brick upper in decent condition; ground floor modified with wood/panel cladding; graffiti on some surfaces",
+      "signage": "not clearly legible; some stickers and graffiti",
+      "party_walls": "party walls both sides; concrete/stucco party wall visible at right",
+      "colour_palette": {
+        "primary": "buff/yellow brick (upper), wood/tan (lower)",
+        "accent": "red (pilaster), yellow (adjacent signage)"
+      }
+    },
+    "IMG_20260320_013425709_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "Kensington Ave (east side), near Baldwin St end, possibly around 72-74 Kensington Ave",
+      "address_confidence": "low",
+      "photo_quality": "night, rotated 90 degrees, good",
+      "storeys": 2,
+      "facade_material": "painted brick or stucco (cream/white upper), painted brick at ground level with yellow accent",
+      "windows": {
+        "upper_floor": "2 windows visible; white frames; 1-over-1 double-hung"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "minimal on upper facade; yellow-painted commercial storefront surround with green zigzag/sawtooth trim pattern",
+      "storefront_details": "'Tribal Eye - LITE UP' shop; yellow-painted storefront surround with bold black lettering; green zigzag decorative trim; multiple small display windows with merchandise; dark-painted door/entrance area; stickers and graffiti on lower portions",
+      "condition": "fair; commercial modifications; some graffiti at lower level",
+      "signage": "'TRIBAL' in large black letters on yellow background; 'LITE UP' text; 'Tribal Eye' branding with symbol; 'kings identity' and 'beauty' text visible on smaller signs",
+      "party_walls": "party wall at right with graffiti; party wall at left (cream/white)",
+      "colour_palette": {
+        "primary": "cream/white (upper), yellow (storefront)",
+        "trim": "green (zigzag pattern)",
+        "accent": "black (lettering)"
+      }
+    },
+    "IMG_20260320_013439108_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "75 Kensington Ave area (east side)",
+      "address_confidence": "medium",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": 2,
+      "facade_material": "painted stucco/render (cream/white upper); dark painted commercial (lower)",
+      "windows": {
+        "upper_floor": "1 small window visible at top"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "large graffiti/street art character (silver/grey bubble letters) on dark painted wall surface; '75' address number in yellow",
+      "storefront_details": "number '75' visible in yellow; dark-painted commercial unit; large graffiti art on facade; appears to be a shuttered or dark commercial space",
+      "condition": "fair to poor; heavily graffitied; dark-painted ground floor; some deterioration visible on upper stucco",
+      "signage": "'75' address number; graffiti art (not commercial signage)",
+      "party_walls": "party wall visible at left (connecting to Tribal Eye shop); party wall at right",
+      "colour_palette": {
+        "primary": "cream/white (upper), black (lower)",
+        "accent": "yellow (75 number), silver/grey (graffiti)"
+      }
+    },
+    "IMG_20260320_013447014_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "76 Kensington Ave (west side) - Global Cheese Shoppe",
+      "address_confidence": "high",
+      "photo_quality": "night, upright, excellent detail",
+      "storeys": 2,
+      "facade_material": "brick (painted white/cream)",
+      "brick_colour": "painted white/cream - original brick colour not visible; brick bond pattern visible through paint",
+      "bond_pattern": "running bond visible through paint; decorative diamond/lozenge brick patterns visible in upper facade",
+      "windows": {
+        "upper_floor": "2 windows visible; one with 'GLOBAL CHEESE' secondary signage; one with Canadian flag; rectangular with simple white frames",
+        "ground_floor": "2 large display windows flanking central entrance; traditional market shop layout"
+      },
+      "doors": "1 central entrance with security scissor grille; recessed entry",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "decorative brick diamond/lozenge patterns visible through white paint on upper facade (matching adjacent buildings); traditional 2-storey commercial form; simple clean facade",
+      "storefront_details": "'GLOBAL CHEESE' shop; large blue signboard spanning full width with white text: 'WHEN IT COMES TO CHEESE..... WE SPEAK YOUR LANGUAGE!'; Globe logo; two large display windows showing cheese products with price signs; green wreath decorations; central entrance with security grille; traditional Kensington Market cheese shop",
+      "condition": "good; well-maintained; clean painted facade; landmark Kensington Market business",
+      "signage": "'GLOBAL CHEESE' (main sign, blue with white text); 'WHEN IT COMES TO CHEESE..... WE SPEAK YOUR LANGUAGE!' (tagline); secondary 'GLOBAL CHEESE' sign at upper window; Canadian flag at upper right window; product price signs in windows",
+      "party_walls": "party walls both sides",
+      "colour_palette": {
+        "primary": "white/cream (painted brick)",
+        "trim": "white",
+        "accent": "blue (signage), green (wreaths)"
+      }
+    },
+    "IMG_20260320_013450968_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "76 Kensington Ave (same Global Cheese, different angle)",
+      "address_confidence": "high",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": 2,
+      "facade_material": "brick (painted white/cream)",
+      "description": "Same building as previous (Global Cheese) viewed from a slightly different angle showing more of the facade. Decorative diamond brick patterns more visible through white paint. Upper windows and Canadian flag confirmed. Same blue 'GLOBAL CHEESE' signage. Shows continuity with adjacent buildings.",
+      "notes": "Duplicate view of Global Cheese - see IMG_20260320_013447014_HDR.jpg for primary description"
+    },
+    "IMG_20260320_013506039_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "78 Kensington Ave area (west side), next to Global Cheese",
+      "address_confidence": "low-medium",
+      "photo_quality": "night, rotated 90 degrees, good",
+      "storeys": 2,
+      "facade_material": "brick (buff/yellow)",
+      "brick_colour": "buff/yellow brick",
+      "bond_pattern": "running bond; decorative diamond/lozenge patterns visible (matching adjacent buildings)",
+      "windows": {
+        "upper_floor": "2 windows visible; white frames; appear slightly smaller than standard; one partially blocked",
+        "ground_floor": "commercial storefront"
+      },
+      "doors": "commercial entrance",
+      "roof_type": "flat with parapet; metal railing/balcony at upper level (appears to be a roof deck)",
+      "decorative_elements": "decorative diamond brick patterns on upper facade (same tradition as Global Cheese and nearby buildings); pink/magenta painted upper section visible",
+      "storefront_details": "'Blissie' shop; light blue storefront surround; blue signage panel; security horizontal slat grille closed; appears to be a small retail shop",
+      "condition": "fair; brick facade with decorative elements visible; pink paint on upper portion; commercial modifications at ground level",
+      "signage": "'Blissie' (blue sign); 'GLOBAL CHEESE' visible on adjacent building at left",
+      "party_walls": "party wall at left (shared with Global Cheese); party wall at right",
+      "colour_palette": {
+        "primary": "buff/yellow brick, pink/magenta (painted upper)",
+        "trim": "white",
+        "accent": "light blue (storefront surround)"
+      }
+    },
+    "IMG_20260320_013514331_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "80 Kensington Ave (west side) - Love, Calista shop",
+      "address_confidence": "medium-high",
+      "photo_quality": "night, rotated 90 degrees, good",
+      "storeys": 2,
+      "facade_material": "brick (buff/yellow)",
+      "brick_colour": "buff/yellow brick, similar to neighbours",
+      "bond_pattern": "running bond",
+      "windows": {
+        "upper_floor": "2 windows visible; dark frames",
+        "ground_floor": "large storefront display window (multi-pane, approximately 12 panes)"
+      },
+      "doors": "1 commercial entrance at left",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "pink-painted storefront surround with checkerboard pattern pink/white banner; scalloped awning edge (white); pink overall commercial colour scheme",
+      "storefront_details": "'Love, Calista' shop; 'Jewels & Gifts, Cuties & Things' sub-text; large multi-pane display window with merchandise visible; pink-themed storefront with checkerboard pattern sign header; white scalloped awning; traditional Kensington Market gift shop",
+      "condition": "good; well-maintained commercial frontage; clean appearance",
+      "signage": "'LOVE, CALISTA' (main); 'Jewels & Gifts, Cuties & Things' (sub-text, pink/white checkerboard banner)",
+      "party_walls": "party walls both sides; concrete/stucco party wall visible at right",
+      "colour_palette": {
+        "primary": "buff/yellow brick (upper), pink (storefront)",
+        "trim": "white (scalloped awning)",
+        "accent": "pink checkerboard pattern"
+      }
+    },
+    "IMG_20260320_013528716_HDR.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "82-84 Kensington Ave area (west side, near Baldwin St corner)",
+      "address_confidence": "low-medium",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2-3",
+      "facade_material": "painted stucco/render (white/cream)",
+      "windows": {
+        "upper_floors": "multiple windows visible on 2nd and possibly 3rd floors; rectangular with dark frames; multi-pane (6-over-6 or similar traditional pattern)",
+        "ground_floor": "large commercial storefronts"
+      },
+      "doors": "commercial entrances",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "minimal; painted smooth facade; fire escape structure visible on upper floors",
+      "storefront_details": "right unit: 'Unregulated - CHICKEN + WAFFLES' restaurant; dark signage; lit menu displays; left unit: 'PREMIUM CANNABIS' shop with phone number 437-580-7418; colourful graphic signage; 'Phoenix' brand products; fire-themed graphics",
+      "condition": "fair; upper facade clean but plain; ground floor commercial modifications; cannabis shop and restaurant",
+      "signage": "'UNREGULATED - CHICKEN + WAFFLES'; 'PREMIUM CANNABIS 437-580-7418'; cannabis product list (VAPES, HASH, FLOWERS, EDIBLES, CHOCOLATES, INFUSED PREROLLS); 'Phoenix' brand",
+      "party_walls": "party wall visible at right (concrete/stucco)",
+      "colour_palette": {
+        "primary": "white/cream (upper painted)",
+        "accent": "dark/black (signage), fire orange/red (cannabis shop graphics)"
+      }
+    },
+    "PXL_20260318_223334974.jpg": {
+      "directory": "Kensington Ave",
+      "probable_address": "80 Kensington Ave - Love, Calista (daytime view, corner near Baldwin St)",
+      "address_confidence": "high",
+      "photo_quality": "daytime, overcast, upright, excellent detail",
+      "storeys": 2,
+      "facade_material": "brick (buff/yellow) upper; pink painted stucco lower",
+      "brick_colour": "buff/yellow brick clearly visible in daylight",
+      "bond_pattern": "running bond",
+      "windows": {
+        "upper_floor": "2 windows visible; dark frames; 1-over-1 double-hung",
+        "ground_floor": "large multi-pane storefront display window"
+      },
+      "doors": "1 commercial entrance at left (glass door with '80' address number); awning over entrance",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "pink-themed storefront (same building as night photo IMG_20260320_013514331_HDR.jpg); white scalloped awning trim; decorative pink banner with checkerboard pattern",
+      "storefront_details": "'LOVE CALISTA' in large pink text on pink facade; 'Jewels & Gifts Cuties & Things' sub-text; large display window showing merchandise; 'Open' neon sign in window; white scalloped awning; address '80' on door; adjacent shops visible: 'The NOOK' at right, 'Skye JEWELRY' further right; loading zone sign visible",
+      "condition": "good; well-maintained; pink paint fresh; this daytime photo provides best colour reference for this building",
+      "signage": "'LOVE CALISTA'; 'Jewels & Gifts Cuties & Things'; '80' address; 'Open' neon; 'No Parking' / 'Loading Only' sign at utility pole",
+      "party_walls": "party wall at left; corner or near-corner building with party wall at right connecting to 'The NOOK'",
+      "colour_palette": {
+        "primary": "#D4B896 (buff/yellow brick upper)",
+        "storefront": "pink (#E8A0B0 approximate)",
+        "trim": "white",
+        "accent": "pink checkerboard, neon"
+      },
+      "notes": "This daytime photo is the most colour-accurate image in the entire set. Use as colour calibration reference for neighbouring buildings."
+    },
+    "IMG_20260320_013538087_HDR.jpg": {
+      "directory": "Kensington Ave _ Baldwin St",
+      "probable_address": "Kensington Ave at Baldwin St intersection (northwest corner area)",
+      "address_confidence": "medium",
+      "photo_quality": "night, rotated 90 degrees",
+      "storeys": "2-3",
+      "facade_material": "painted stucco/render (white/cream)",
+      "windows": {
+        "upper_floors": "multiple rectangular windows visible; multi-pane (6-over-6 pattern); some with dark frames"
+      },
+      "doors": "commercial entrances at ground level",
+      "roof_type": "flat with parapet",
+      "decorative_elements": "minimal; plain painted facade; wires and cables across facade",
+      "storefront_details": "ground floor commercial units: cannabis/vape shop with colourful graphic wrapping (cartoon/graffiti-style art covering entire storefront); 'MAGIC MUSHROOMS' text visible; 'TINY GUYZ' text; extensive colourful storefront graphics; adjacent unit shows 'PREMIUM CANNABIS' signage (same building as IMG_20260320_013528716_HDR.jpg viewed from different angle)",
+      "condition": "fair; upper facade plain; ground floor heavily modified with commercial graphics",
+      "signage": "'MAGIC MUSHROOMS'; 'TINY GUYZ'; cannabis product signage; extensive graphic wrapping",
+      "party_walls": "corner/end of row",
+      "colour_palette": {
+        "primary": "white/cream (upper)",
+        "accent": "multicolour (graphic wrapping at ground level)"
+      }
+    },
+    "IMG_20260320_011949577_HDR.jpg": {
+      "directory": "Kensington Ave _ Dundas St W",
+      "probable_address": "Kensington Ave at Dundas St W intersection (south end, row of bay-and-gable houses)",
+      "address_confidence": "medium",
+      "photo_quality": "night, upright, good wide shot",
+      "storeys": "2.5 (bay-and-gable row of 4+ houses)",
+      "facade_material": "brick",
+      "brick_colour": "red-brown brick, consistent warm tone across row",
+      "bond_pattern": "running bond",
+      "windows": {
+        "gable": "small windows visible in gable peaks of each unit",
+        "upper_floor": "2 windows per unit; white/light frames; appear to be 1-over-1 double-hung; some with blinds or curtains",
+        "ground_floor": "mixed commercial storefronts"
+      },
+      "doors": "multiple commercial and residential entrances; one residential door clearly visible (wood, panelled, painted light colour)",
+      "roof_type": "gable; 4+ steep front-facing gables in continuous row; typical bay-and-gable Victorian row; approximately 45-degree pitch; asphalt shingle roofing",
+      "decorative_elements": "classic bay-and-gable Victorian form; white-painted bargeboard at gable peaks; bay window projections at second floor; some buildings have enclosed second-floor porches/balconies; decorative woodwork at gable apex; some original trim preserved; string course visible between floors on some units",
+      "storefront_details": "left end: Chinese restaurant/shop with Chinese characters on sign (same buildings as IMG_20260320_012017528_HDR.jpg); centre: residential or mixed use with patio umbrella and outdoor seating behind metal railing; right: 'People Hair Salon' with Chinese characters; graffiti on lower portion",
+      "condition": "fair; original Victorian bay-and-gable form well-preserved overall; various degrees of commercial modification at ground level; one unit appears to have outdoor patio seating; some graffiti visible at right end",
+      "signage": "Chinese characters on left storefront; 'People Hair Salon' with Chinese characters at right; graffiti",
+      "party_walls": "continuous row housing; party walls throughout; yellow fire hydrant visible at right",
+      "colour_palette": {
+        "primary": "#B85A3A (red-brown brick)",
+        "trim": "white/cream (bargeboard, window surrounds)",
+        "roof": "dark grey/black (asphalt shingles)",
+        "accent": "various commercial signage colours"
+      },
+      "notes": "This is likely the best overview photo of the Dundas St W end of Kensington Ave, showing the characteristic bay-and-gable Victorian row housing that defines the street."
+    }
+  },
+  "summary": {
+    "total_photos": 52,
+    "facade_photos": 48,
+    "detail_closeups": 2,
+    "interior_skip": 1,
+    "duplicate_views": 1,
+    "predominant_building_type": "Victorian bay-and-gable rowhouse (2.5 storeys)",
+    "predominant_material": "brick (red-brown and buff/yellow)",
+    "common_bond_pattern": "running bond",
+    "common_roof_type": "gable (steep front-facing, approx 45 degrees)",
+    "common_decorative_elements": [
+      "bargeboard at gable peaks",
+      "bay window projections at second floor",
+      "decorative diamond/lozenge brickwork patterns (buff brick buildings)",
+      "white-painted trim and window surrounds",
+      "string courses"
+    ],
+    "storefront_character": "heavily modified ground floors with diverse commercial uses: vintage shops, food shops, restaurants, barber shops, cannabis shops, leather goods, cheese shops, gift shops",
+    "notable_signage": [
+      "Global Cheese",
+      "Love Calista",
+      "Urban Catwalk",
+      "Tibetan Village",
+      "Essence of Life",
+      "Courage My Love",
+      "Last Temptation",
+      "Lost Gen Vintage",
+      "Butterfly",
+      "Crazy Love Vintage",
+      "Breathless",
+      "LOLA",
+      "Uncle Vintage Co",
+      "Tribal Eye",
+      "Tutti Frutti Famous Foods",
+      "Kensington Market (souvenir shop)",
+      "Exile",
+      "Kensington Leather Fashion",
+      "fashion OLD & NEW",
+      "Still Trader / Buy Me / Lost Boys",
+      "Blissie",
+      "Unregulated Chicken + Waffles",
+      "People Hair Salon",
+      "Gramercy Garbo",
+      "Pasta Bar & Lounge"
+    ],
+    "condition_distribution": {
+      "good": 8,
+      "fair": 35,
+      "poor": 5,
+      "not_assessable": 4
+    },
+    "colour_palette_summary": {
+      "brick_colours": ["#B85A3A (red-brown)", "#D4B896 (buff/yellow)", "#7A5C44 (dark brown)"],
+      "common_trim": "white or cream paint",
+      "common_paint_colours": "grey-blue, green, pink, white, cream (various painted-over facades)",
+      "signage_colours": "highly varied - yellow, blue, red, pink, black, neon blue/purple"
+    },
+    "street_character": "Kensington Ave is a narrow north-south street lined predominantly with 2.5-storey Victorian bay-and-gable rowhouses converted to ground-floor commercial with residential above. The street has heavy mural/street art coverage, eclectic commercial signage, and a bohemian market atmosphere. Buildings date primarily from the 1889-1913 period. Most original facades are well-preserved above the storefront level, with ground floors heavily modified for retail use. Party walls are continuous throughout.",
+    "photo_limitations": [
+      "Most photos taken at night - colour accuracy affected by artificial lighting (sodium vapour orange cast, LED blue/white cast)",
+      "Many photos rotated 90 degrees requiring mental rotation",
+      "Some facades obscured by trees, vehicles, or signage",
+      "Interior/rear photos not useful for facade reconstruction",
+      "Night photography limits assessment of brick condition, mortar joints, and subtle decorative details"
+    ],
+    "recommendations_for_3d": [
+      "Use PXL_20260318_223334974.jpg (daytime Love Calista photo) as colour calibration reference",
+      "Bay-and-gable typology with steep front-facing gable is the default template for most buildings",
+      "Assume running bond brick pattern throughout unless clearly different",
+      "Ground floor storefronts should be modelled with large display windows and central or offset entrances",
+      "Party walls are continuous - no side windows on most buildings",
+      "Decorative diamond brick patterns are common on buff/yellow brick buildings",
+      "White-painted bargeboard at gable peaks is nearly universal",
+      "Expect 2-3 windows on upper floor per building width",
+      "Consider separate daytime photo survey for accurate colour and detail capture"
+    ]
+  }
+}

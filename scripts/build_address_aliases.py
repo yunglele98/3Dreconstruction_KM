@@ -15,7 +15,7 @@ from pathlib import Path
 
 import psycopg2
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 from revise_params_from_db import (
     PARAMS_DIR,
     ROOT,
@@ -31,7 +31,7 @@ AUTO_ALIAS_PATH = PARAMS_DIR / "_address_aliases.auto.json"
 
 
 def db_addresses() -> tuple[set[str], set[str]]:
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
     cur = conn.cursor()
     cur.execute('select "ADDRESS_FULL" from public.building_assessment where "ADDRESS_FULL" is not null')
     rows = [r[0] for r in cur.fetchall()]
@@ -110,3 +110,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

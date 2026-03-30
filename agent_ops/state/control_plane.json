@@ -1,0 +1,50 @@
+{
+  "manager_agents": [
+    "codex-1",
+    "codex-2",
+    "claude-1",
+    "gemini-1"
+  ],
+  "worker_agents": [
+    "ollama-local-1",
+    "ollama-local-2"
+  ],
+  "dispatch_keywords": [
+    "tree",
+    "trees",
+    "street tree",
+    "canopy",
+    "foliage",
+    "vegetation",
+    "planter",
+    "landscape",
+    "texture",
+    "textures",
+    "bark",
+    "leaf",
+    "leaves",
+    "material",
+    "reference",
+    "research"
+  ],
+  "default_ollama_model": "qwen2.5-coder:7b",
+  "max_subtasks_per_task": 12,
+  "max_children_per_task": 3,
+  "gemini_dispatch": {
+    "keywords": [
+      "photo-analysis",
+      "heritage",
+      "hcd",
+      "cross-reference",
+      "facade-audit",
+      "provenance",
+      "gis-verify",
+      "validation-report",
+      "photo",
+      "deep-facade"
+    ],
+    "model": "gemini-2.5-flash",
+    "max_subtasks_per_cycle": 4,
+    "max_children_per_task": 2
+  }
+}

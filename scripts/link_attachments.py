@@ -18,7 +18,7 @@ except ImportError:
     print("[ERROR] psycopg2 not installed. Run: pip install psycopg2-binary")
     sys.exit(1)
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 
 ATTACHMENTS_DIR = Path("C:/Users/liam1/DOWNLOADS/MASTERLIST/DATA/attachments")
 
@@ -111,7 +111,7 @@ def link_layer(conn, layer_name: str, table_name: str, attachments: dict[int, li
 
 
 def main():
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
 
     print("=== Link Attachments to PostGIS ===")
     print(f"Source: {ATTACHMENTS_DIR}")
@@ -140,3 +140,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

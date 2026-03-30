@@ -1,0 +1,354 @@
+{
+  "task_id": "TASK-20260327-020",
+  "agent": "claude-1",
+  "report_type": "colour_palette_consistency",
+  "timestamp": "2026-03-27T20:00:41.145277+00:00",
+  "summary": {
+    "buildings_checked": 1241,
+    "total_mismatches": 127,
+    "facade_conflicts": 27,
+    "trim_conflicts": 73,
+    "era_mismatches": 27
+  },
+  "findings": [
+    {
+      "address": "10_Kensington_Ave",
+      "field": "trim_colour",
+      "palette": "#c8b8a0",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "10_Kensington_Ave",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #c8b8a0 (brightness=181)",
+      "severity": "low"
+    },
+    {
+      "address": "12_Kensington_Ave",
+      "field": "facade_colour",
+      "palette": "#b89060",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "12_Kensington_Ave",
+      "field": "trim_colour",
+      "palette": "#f0ede8",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "12_Kensington_Ave",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #f0ede8 (brightness=236)",
+      "severity": "low"
+    },
+    {
+      "address": "138_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#1a1a1a",
+      "detail": "#e8e0d0",
+      "severity": "low"
+    },
+    {
+      "address": "13_Kensington_Ave",
+      "field": "trim_colour",
+      "palette": "#e8d8c0",
+      "detail": "#e8e0d0",
+      "severity": "low"
+    },
+    {
+      "address": "146_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#505050",
+      "detail": "#e8e0d0",
+      "severity": "low"
+    },
+    {
+      "address": "14_Kensington_Ave",
+      "field": "facade_colour",
+      "palette": "#4a5a6a",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "14_Kensington_Ave",
+      "field": "trim_colour",
+      "palette": "#4a5a6a",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "16-18_Kensington_Ave",
+      "field": "trim_colour",
+      "palette": "#e8d8c0",
+      "detail": "#e8e0d0",
+      "severity": "low"
+    },
+    {
+      "address": "160_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#404040",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "161_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#b8b0a0",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "161_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#2a2a2a",
+      "detail": "#e8e0d0",
+      "severity": "low"
+    },
+    {
+      "address": "168_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#ffffff",
+      "detail": "#4a4a4a",
+      "severity": "low"
+    },
+    {
+      "address": "16_Kensington_Ave",
+      "field": "trim_colour",
+      "palette": "#f0ede8",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "16_Kensington_Ave",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #f0ede8 (brightness=236)",
+      "severity": "low"
+    },
+    {
+      "address": "170_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#707070",
+      "detail": "#7a7a7a",
+      "severity": "medium"
+    },
+    {
+      "address": "170_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#2a2a2a",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "172_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#353535",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "172_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#2a2a2a",
+      "detail": "#4a4a4a",
+      "severity": "low"
+    },
+    {
+      "address": "172_Baldwin_St",
+      "field": "trim_era_mismatch",
+      "note": "1914-1930 trim typically light, got #2a2a2a (brightness=42)",
+      "severity": "low"
+    },
+    {
+      "address": "173_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#1a1a1a",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "173_Baldwin_St",
+      "field": "trim_era_mismatch",
+      "note": "1914-1930 trim typically light, got #1a1a1a (brightness=26)",
+      "severity": "low"
+    },
+    {
+      "address": "174_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#ffffff",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "174_Baldwin_St",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #ffffff (brightness=255)",
+      "severity": "low"
+    },
+    {
+      "address": "176_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#c8bca8",
+      "detail": "#8a8a8a",
+      "severity": "medium"
+    },
+    {
+      "address": "176_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#ffffff",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "176_Baldwin_St",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #ffffff (brightness=255)",
+      "severity": "low"
+    },
+    {
+      "address": "177_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#1a1a1a",
+      "detail": "#505050",
+      "severity": "medium"
+    },
+    {
+      "address": "177_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#1a1a1a",
+      "detail": "#2a2a2a",
+      "severity": "low"
+    },
+    {
+      "address": "178_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#e8e0d8",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "178_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#d0c8c0",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "178_Baldwin_St",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #d0c8c0 (brightness=200)",
+      "severity": "low"
+    },
+    {
+      "address": "179_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#4a8a8a",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "179_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#4a8a8a",
+      "detail": "#2a2a2a",
+      "severity": "low"
+    },
+    {
+      "address": "17_Kensington_Ave",
+      "field": "trim_colour",
+      "palette": "#e8d8c0",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "17_Kensington_Ave",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #e8d8c0 (brightness=213)",
+      "severity": "low"
+    },
+    {
+      "address": "180_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#e8e0d8",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "180_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#d0c8c0",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "180_Baldwin_St",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #d0c8c0 (brightness=200)",
+      "severity": "low"
+    },
+    {
+      "address": "181_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#ffffff",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "181_Baldwin_St",
+      "field": "trim_era_mismatch",
+      "note": "Pre-1889 trim should be dark, got #ffffff (brightness=255)",
+      "severity": "low"
+    },
+    {
+      "address": "182_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#e8c820",
+      "detail": "#b85a3a",
+      "severity": "medium"
+    },
+    {
+      "address": "182_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#cc2222",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "184_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#2aaa7a",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "185_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#2a3a2a",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "187_Baldwin_St",
+      "field": "facade_colour",
+      "palette": "#c8a870",
+      "detail": "#d8d0c0",
+      "severity": "medium"
+    },
+    {
+      "address": "187_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#5a3a2a",
+      "detail": "#3a2a20",
+      "severity": "low"
+    },
+    {
+      "address": "188_Baldwin_St",
+      "field": "trim_colour",
+      "palette": "#3a3a3a",
+      "detail": "#3a2a20",
+      "severity": "low"
+    }
+  ]
+}

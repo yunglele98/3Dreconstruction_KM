@@ -19,7 +19,7 @@
     "lot_coverage_pct": 34.4,
     "lots_sharing_footprint": 5
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "brick",
@@ -99,10 +99,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "photo": "IMG_20260320_164727900_HDR.jpg",
     "reference_photos": [
@@ -114,12 +111,65 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "128 Denison Ave",
-    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "128 DENISON AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Denison Ave",
+        "timestamp": "2026-03-29T07:48:20.605135+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:45.247300+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (pre-1889)",
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:41.849951+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:09.768279+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:16.446738Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:43.508414+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "porch_enriched": "2026-03-29T08:38:21.291245Z",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #863724",
+        "roof": "#5A5A5A → #575757",
+        "trim": "#3A2A20 → #231B14",
+        "accent": "#3A2A20 → #1A2B28",
+        "mortar": "#B0A898 → #988878"
+      }
     ]
   },
   "photo_observations": {
@@ -168,7 +218,8 @@
     "alterations_visible": "Large wooden deck/fence structure added at front obscuring ground floor, replacement windows on some openings",
     "matches_hcd_typology": true,
     "confidence": 0.7,
-    "notes": "Bay-and-gable semi-detached. DB lists facade_material as Wood_siding but upper storey is clearly original brick. Ground floor obscured by wooden deck additions. Number 128 visible on facade."
+    "notes": "Bay-and-gable semi-detached. DB lists facade_material as Wood_siding but upper storey is clearly original brick. Ground floor obscured by wooden deck additions. Number 128 visible on facade.",
+    "photo": "IMG_20260320_164727900_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "single",
@@ -211,7 +262,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -219,22 +270,26 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "residential",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#863724",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#231B14",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#988878"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -256,10 +311,11 @@
           "count": 2,
           "type": "double_hung",
           "width_m": 0.9,
-          "height_m": 2.2,
+          "height_m": 2.0,
           "sill_height_m": 1.4,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -273,7 +329,8 @@
           "height_m": 4.6,
           "sill_height_m": 3.6,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -303,16 +360,88 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "128 Denison Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s.",
+  "facade_description": "128 Denison Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s.",
   "roof_material": "Slate shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#863724",
+    "trim": "#231B14",
+    "roof": "#575757",
+    "accent": "#1A2B28"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_164727900_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "double_hung",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.4,
+            "frame_colour": "#3A2A20",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "double_hung",
+            "width_m": 0.9,
+            "height_m": 4.6,
+            "sill_height_m": 3.6,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "porch_width_m": 2.6,
+  "porch_depth_m": 1.8,
+  "porch_height_m": 3.5,
+  "porch_detail": {
+    "columns": {
+      "count": 2,
+      "type": "turned",
+      "material": "wood"
+    },
+    "railing": {
+      "present": true,
+      "height_m": 0.9,
+      "type": "baluster"
+    },
+    "step_count": 2
+  }
 }

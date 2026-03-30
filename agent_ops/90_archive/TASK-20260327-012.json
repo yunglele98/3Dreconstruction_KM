@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-012",
+  "title": "Diversify window types per floor from typology and era",
+  "description": "926 buildings have identical window types on every floor. For Bay-and-Gable typology: ground floor should have taller 1-over-1, upper floors 2-over-2, gable floor small fixed/arched. For storefronts: ground floor storefront glazing, upper floors residential. Update windows_detail with varied types per floor based on typology, era, and has_storefront.",
+  "priority": "high",
+  "estimate_points": 3,
+  "skills": [
+    "python",
+    "pipeline",
+    "heritage-data"
+  ],
+  "write_scope": [
+    "params/"
+  ],
+  "dependencies": [],
+  "owner": "codex-1",
+  "status": "done",
+  "created_at": "2026-03-27T18:57:10Z",
+  "routed_at": "2026-03-27T18:59:20.743723+00:00",
+  "completed_at": "2026-03-28T17:17:22.276738+00:00",
+  "completed_by": "gemini-1"
+}

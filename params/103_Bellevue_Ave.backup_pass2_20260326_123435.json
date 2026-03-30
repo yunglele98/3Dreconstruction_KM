@@ -1,0 +1,327 @@
+{
+  "building_name": "103 Bellevue Ave (St. Stephen-in-the-Fields Church)",
+  "floors": 2,
+  "floor_heights_m": [
+    4.8,
+    5.2
+  ],
+  "total_height_m": 10.0,
+  "facade_width_m": 7.0,
+  "facade_depth_m": 13.2,
+  "site": {
+    "lon": -79.40398014999998,
+    "lat": 43.65695889,
+    "street": "Bellevue Ave",
+    "street_number": 103,
+    "setback_m": 4.2,
+    "lot_area_sqm": 877.6838252269102,
+    "footprint_sqm": 317.9,
+    "lot_coverage_pct": 36.2,
+    "lots_sharing_footprint": 2
+  },
+  "roof_type": "gable",
+  "roof_pitch_deg": 55,
+  "roof_features": [
+    "bellcote",
+    "dormer_gable_vents",
+    "chimney"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    5,
+    3
+  ],
+  "window_type": "lancet",
+  "window_width_m": 1.05,
+  "window_height_m": 2.85,
+  "door_count": 2,
+  "has_storefront": false,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Institutional",
+    "construction_date": "1858",
+    "architectural_style": "Institutional (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1858 (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_decade": 1850,
+    "sub_area": "Residential",
+    "contributing": "Yes",
+    "hcd_plan_index": 105,
+    "statement_of_contribution": "St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromatic roof, and polychromatic brickwork with stone detailing and bellcote. Completed in 1858 and rebuilt in 1965, it is the oldest place of worship in the District. Constructed in 1858 by Robert Denison following the subdivision of his family\u2019s estate into residential lots, the property is directly associated with the District\u2019s early development. The property is also associated two of Canada\u2019s preeminent nineteenth- century architects: Thomas Fuller, who designed the original church in 1858, and the prolific church architect, Henry Langley, who oversaw the rebuilding of the church in 1865 following a fire. Located on the southeast corner of Bellevue Avenue and College Street, the property anchors the entrance to Bellevue Avenue and is considered a landmark within the District. Among the earliest institutional buildings in the area, it is physically, functionally, and historically linked to its surroundings where it is important and defining, maintaining, and supporting the distinct built form of the District as a complete community. The property also holds community value as a continuing place of worship and for its community outreach programming.",
+    "building_features": [
+      "decorative_brick"
+    ],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "institutional",
+    "general_use": "Institutional",
+    "land_use": "Institutional \u2013 Religious",
+    "commercial_use": "",
+    "business_name": "",
+    "business_category": "",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "One-way | Residential street | Tree-lined | Heritage character",
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "surface_soiling; graffiti_service_elevations; weathered_masonry; temporary_site_barriers",
+    "structural_concern": false,
+    "risk_score": 80,
+    "signage": "",
+    "street_presence": "landmark"
+  },
+  "city_data": {
+    "height_max_m": 23.75,
+    "height_avg_m": 8.57,
+    "footprint_sqm": 317.9,
+    "gfa_sqm": 794.8,
+    "fsi": 0.91,
+    "lot_width_ft": 17.0,
+    "lot_depth_ft": 105.0,
+    "dwelling_units": null,
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "heritage_feature_count": 1
+  },
+  "_meta": {
+    "address": "103 Bellevue Ave",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "loose",
+    "db_address_full": "103 Bellevue Ave",
+    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_address_candidates": [
+      "103 BELLEVUE AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 9.86,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "qa_depth_fixes": [
+      "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "photo_condition_profile": "2026_current",
+    "analysis_basis": "St. Stephen-in-the-Fields Church folder, 44 photos",
+    "user_scope": "include_adjacent_structures",
+    "footprint_basis": "smaller_building_assessment",
+    "last_manual_update": "2026-03-26T12:21:09",
+    "backup_file": "103_Bellevue_Ave.backup_20260326_122109.json"
+  },
+  "decorative_elements": {
+    "decorative_brickwork": {
+      "present": true
+    },
+    "bargeboard": {
+      "present": false
+    },
+    "string_courses": {
+      "present": false
+    },
+    "quoins": {
+      "present": false
+    },
+    "stone_voussoirs": {
+      "present": true,
+      "colour_hex": "#C5B89F"
+    },
+    "stone_lintels": {
+      "present": true,
+      "colour_hex": "#C5B89F"
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "front_main",
+      "type": "double_leaf",
+      "position": "center",
+      "width_m": 1.85,
+      "height_m": 2.45,
+      "transom": {
+        "present": false
+      },
+      "colour_hex": "#7B2132",
+      "material": "wood"
+    },
+    {
+      "id": "side_entry",
+      "type": "single_leaf",
+      "position": "left",
+      "width_m": 1.0,
+      "height_m": 2.2,
+      "transom": {
+        "present": false
+      },
+      "colour_hex": "#7B2132",
+      "material": "wood"
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#8F4F34",
+    "bond_pattern": "running bond",
+    "mortar_colour": "grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#C5B89F",
+    "composition": "The principal elevation spans roughly 7 metres across 2 storeys and is capped by a gable, consistent with its institutional typology.",
+    "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 5, 3 opening rhythm from lower to upper levels, using lancet, and 2 principal entrances.",
+    "heritage_expression": "Key heritage elements on the principal elevation include decorative brick, stone lintels.",
+    "heritage_summary": "Located on the southeast corner of Bellevue Avenue and College Street, the property anchors the entrance to Bellevue Avenue and is considered a landmark within the District. St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromatic roof, and polychromatic brickwork with stone detailing and bellcote."
+  },
+  "roof_colour": "#2D3136",
+  "roof_detail": {
+    "eave_overhang_mm": 260,
+    "gable_window": {
+      "present": true,
+      "width_m": 1.1,
+      "height_m": 0.9,
+      "type": "triangular",
+      "arch_type": "none"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 5,
+          "type": "lancet",
+          "width_m": 1.05,
+          "height_m": 2.6,
+          "sill_height_m": 0.75,
+          "frame_colour": "#2F3438",
+          "glazing": "mixed"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "lancet",
+          "width_m": 0.95,
+          "height_m": 2.2,
+          "sill_height_m": 4.4,
+          "frame_colour": "#2F3438",
+          "glazing": "mixed"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 3.0,
+  "confidence": 0.9,
+  "facade_description": "103 Bellevue Ave (St. Stephen-in-the-Fields Church) is an institutional building. The principal elevation spans roughly 7 metres across 2 storeys and is capped by a gable, consistent with its institutional typology. The principal elevation is faced primarily in brick, laid in running bond with grey mortar joints. The elevation is ordered in broad vertical bays, with a 5, 3 opening rhythm from lower to upper levels, using lancet, and 2 principal entrances. Key heritage elements on the principal elevation include decorative brick, stone lintels.",
+  "heritage_summary": "Located on the southeast corner of Bellevue Avenue and College Street, the property anchors the entrance to Bellevue Avenue and is considered a landmark within the District. St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromatic roof, and polychromatic brickwork with stone detailing and bellcote.",
+  "roof_material": "Dark slate/asphalt shingles (banded appearance)",
+  "colour_palette": {
+    "facade_hex": "#8F4F34",
+    "trim_hex": "#C5B89F",
+    "roof_hex": "#2D3136",
+    "accent_hex": "#7B2132",
+    "door_hex": "#7B2132",
+    "mortar_hex": "#8A8A8A"
+  },
+  "volumes": [
+    {
+      "id": "main_nave",
+      "width_m": 24.1,
+      "depth_m": 9.8,
+      "floor_heights_m": [
+        4.8,
+        5.2
+      ],
+      "total_height_m": 23.75,
+      "facade_colour": "#8F4F34",
+      "facade_material": "brick",
+      "roof_type": "gable"
+    },
+    {
+      "id": "chapel_bay_strip",
+      "width_m": 24.1,
+      "depth_m": 3.4,
+      "floor_heights_m": [
+        3.8
+      ],
+      "total_height_m": 8.2,
+      "facade_colour": "#8F4F34",
+      "facade_material": "brick",
+      "roof_type": "cross-gable"
+    },
+    {
+      "id": "stucco_annex",
+      "width_m": 8.2,
+      "depth_m": 5.4,
+      "floor_heights_m": [
+        3.6,
+        3.2
+      ],
+      "total_height_m": 11.2,
+      "facade_colour": "#B8826B",
+      "facade_material": "stucco",
+      "roof_type": "gable"
+    }
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "weathered red/orange brick with dark soiling",
+    "facade_material_observed": "brick with stone trim; rear-side stucco addition",
+    "facade_condition_notes": "Graffiti and utility clutter concentrated on lane and rear elevations.",
+    "condition": "fair",
+    "windows_per_floor": [
+      5,
+      3
+    ],
+    "window_type": "lancet",
+    "window_width_m": 1.05,
+    "window_height_m": 2.6,
+    "door_count": 2,
+    "chimneys": 1,
+    "porch_present": true,
+    "porch_type": "pointed_entry_porchlet",
+    "roof_features": [
+      "bellcote",
+      "chimney",
+      "dormer_gable_vents"
+    ],
+    "ground_floor_arches": "pointed"
+  },
+  "ground_floor_arches": {
+    "centre_arch": {
+      "function": "entrance",
+      "total_width_m": 2.25,
+      "total_height_m": 3.2,
+      "type": "pointed",
+      "door": {
+        "width_m": 1.85,
+        "height_m": 2.45,
+        "colour": "burgundy"
+      }
+    }
+  },
+  "adjacent_structures": {
+    "include_adjacent": true,
+    "notes": "User requested adjacent structures included for 2026 scene composition."
+  },
+  "skipped": true,
+  "skip_reason": "Backup/variant of 103_Bellevue_Ave"
+}

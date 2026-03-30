@@ -2,12 +2,12 @@
   "building_name": "138 Baldwin St",
   "floors": 4,
   "floor_heights_m": [
-    3.8,
-    3.0,
-    3.0,
-    2.5
+    2.43,
+    1.92,
+    1.92,
+    1.6
   ],
-  "total_height_m": 12.29,
+  "total_height_m": 7.87,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -21,18 +21,18 @@
     "lot_coverage_pct": 1.0,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_type": "cross-gable",
+  "roof_pitch_deg": 35,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "red brick",
+  "facade_material": "mixed",
+  "facade_colour": "painted (mixed (painted brick, stone veneer))",
   "windows_per_floor": [
     0,
     2,
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -42,7 +42,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870–1889",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -55,15 +55,15 @@
   "context": {
     "building_type": "mixed_use",
     "general_use": "Commercial",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Retail/Shop",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": null,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -104,12 +104,140 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "138 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "138 BALDWIN ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_pitch_deg: 45 -> 35",
+      "eave_overhang_mm: 150",
+      "half_storey_gable flagged",
+      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 2, 2, 1] -> [0, 3, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#8A3020'",
+      "colour_palette enriched from observations",
+      "facade_colour updated: painted observation",
+      "decorative_elements.cornice added",
+      "foundation_height_m: 0.2"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 12.29,
+        "new_value": 12.7,
+        "timestamp": "2026-03-29T07:30:40.063622+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed (painted brick, stone veneer)",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:56.595613+00:00"
+      },
+      {
+        "fix": "fix_window_totals_from_handoff",
+        "task_id": "TASK-20260327-016",
+        "field": "windows_detail.count",
+        "old_total": 3,
+        "new_total": 5,
+        "new_per_floor": [
+          0,
+          2,
+          2,
+          1
+        ],
+        "source": "photo_observations.windows_per_floor",
+        "timestamp": "2026-03-29T07:31:02.602538+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:19.695415+00:00"
+      },
+      {
+        "fix": "fix_window_totals_from_handoff",
+        "task_id": "TASK-20260327-016",
+        "field": "windows_detail.count",
+        "old_total": 3,
+        "new_total": 5,
+        "new_per_floor": [
+          0,
+          2,
+          2,
+          1
+        ],
+        "source": "photo_observations.windows_per_floor",
+        "timestamp": "2026-03-29T07:44:29.799286+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].sill_height_m",
+          "windows_detail[].height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:45.782062+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (unknown)",
+          "glazing filled (unknown)",
+          "frame_colour filled (unknown)",
+          "arch_type filled (unknown)",
+          "glazing filled (unknown)",
+          "frame_colour filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:42.242471+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:10.760377+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:16.601190Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:11.438490Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#E8E0D0 \u2192 #32241D",
+        "mortar": "#B0A898 \u2192 #B5A58F"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "height 12.7->7.87"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "storefront": {
@@ -117,12 +245,24 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 3.8,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "THE JERK SPOT",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 4.680000000000001,
+      "projection_m": 1.2,
+      "colour_hex": "#E8D020"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -130,67 +270,81 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#8A3020",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#32241D",
     "composition": "The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a cross-gable.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double-hung sash windows, and 1 principal entrance."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "secondary_material": "painted brick, stone veneer",
+    "mortar_colour_hex": "#B5A58F"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 150,
     "gable_window": {
       "present": false
-    }
+    },
+    "has_half_storey": true
   },
   "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 1.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "type": "1-over-1 double-hung",
+          "frame_colour": "dark",
+          "arch_type": "flat",
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     },
     {
-      "floor": "Third floor",
+      "floor": "gable/attic",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 1.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "type": "arched",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "flat",
+          "glazing": "1-over-1",
+          "frame_colour": "white"
         }
       ]
     },
     {
-      "floor": "Attic / gable",
+      "floor": "Fourth floor",
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.1,
-          "sill_height_m": 0.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "flat",
+          "glazing": "1-over-1",
+          "frame_colour": "white"
         }
       ]
     }
@@ -199,11 +353,16 @@
     "bargeboard": {
       "colour_hex": "#E8E0D0",
       "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 150
     }
   },
-  "street_setback_m": 3.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "Tall four-storey Victorian bay-and-gable rowhouse in visibly neglected condition, with a narrow 5.2-metre brick frontage rising to a cross-gable peak. Large white graffiti tags cover much of the upper facade. The ground floor has been converted to a small commercial unit with a handwritten sign. Two double-hung sash windows per floor on the second and third storeys, with a single attic window in the gable. No direct photo observations are available; description based on database records and assessment data indicating damaged masonry and a neglected street presence.",
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "138 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a cross-gable. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",
@@ -211,7 +370,159 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A3020",
+    "trim": "#32241D",
+    "roof": "#404040",
+    "accent": "#E8D020"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "PXL_20260318_224055927.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.9,
+      0.4
+    ],
+    "facade_material_observed": "mixed (painted brick, stone veneer)",
+    "brick_colour_hex": "#8A3020",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Two commercial storefronts side by side. Left unit has white stone veneer base with round porthole window. Right unit (The Jerk Spot) has large glazed storefront."
+      },
+      {
+        "floor": "second",
+        "count": 3,
+        "type": "1-over-1 double-hung",
+        "frame_colour": "dark",
+        "arch": "flat",
+        "width_m_est": 0.8,
+        "height_m_est": 1.3,
+        "note": "Left building: 2 windows with dark frames in red-painted brick. Right building (The Jerk Spot side): 1 window visible in brown brick."
+      },
+      {
+        "floor": "gable/attic",
+        "count": 0,
+        "note": "Small dormers/gable peaks visible on both buildings behind parapet"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial solid",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#1A1A1A",
+        "note": "Black entry door on left building with round porthole window to its right (bar/pub style)"
+      },
+      {
+        "position": "right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A2A2A",
+        "note": "Glass door entry to The Jerk Spot restaurant. OPEN sign visible."
+      }
+    ],
+    "roof_type_observed": "gable (hidden behind parapet/flat front)",
+    "roof_pitch_deg": 35,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#404040",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 100,
+      "signage_text": "THE JERK SPOT",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "right",
+      "security_grille": false,
+      "note": "Two buildings side by side. LEFT building: lower portion clad in white/cream limestone ashlar veneer with circular porthole window and black door (bar/pub aesthetic). Upper portion is red/dark red painted brick with 2 windows. Sandwich board outside. RIGHT building (The Jerk Spot): bright yellow rectangular sign with red text and flame logo. Brown brick facade. Large glass storefront. OPEN sign in window. Neon signs visible. Between the two buildings and the parking garage to the right."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": true,
+        "projection_mm": 60,
+        "height_mm": 150,
+        "colour_hex": "#8A3020",
+        "note": "Simple parapet cap on left building"
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "note": "Left building has stone ashlar veneer at ground (renovation) over original brick. Round porthole window is a distinctive feature. Right building is simpler brown brick commercial. Both are typical late 19th century Kensington rowhouse forms converted to commercial."
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#8A3020",
+      "trim": "#1A1A1A",
+      "roof": "#404040",
+      "accent": "#E8D020"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Left building: stone veneer in good shape, painted brick above is adequate. Right building (Jerk Spot): brown brick intact, commercial fitout maintained. Dormers/roof visible behind both buildings. Tree partially obscures left building.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.2,
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "brick",
+    "facade_colour_observed": "painted (mixed (painted brick, stone veneer))",
+    "condition": "poor",
+    "windows_per_floor": [
+      0,
+      2,
+      2,
+      1
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": true,
+    "photo": "PXL_20260318_224055927.jpg"
+  },
+  "wall_thickness_m": 0.3
 }

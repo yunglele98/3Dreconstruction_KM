@@ -1,0 +1,54 @@
+{
+  "task_id": "TASK-20260327-005",
+  "agent": "gemini-1",
+  "report_type": "deep_texture_validation",
+  "timestamp": "2026-03-27T14:45:00Z",
+  "subject": "103 Bellevue Ave (St. Stephen-in-the-Fields Church)",
+  "findings": [
+    {
+      "field": "facade_material",
+      "status": "confirmed",
+      "expected": "brick with stone trim",
+      "actual": "brick with stone trim",
+      "confidence": 1.0,
+      "reference_photo": "IMG_20260320_152453705_HDR.jpg"
+    },
+    {
+      "field": "brick_colour",
+      "status": "confirmed",
+      "expected": "#8F4F34",
+      "actual": "weathered red/orange brick (#8F4F34 range)",
+      "confidence": 0.95,
+      "reference_photo": "IMG_20260320_175212895_HDR.jpg",
+      "note": "Excellent close-up for texture extraction"
+    },
+    {
+      "field": "stone_trim_colour",
+      "status": "confirmed",
+      "expected": "#C5B89F",
+      "actual": "light buff/cream stone (#C5B89F range)",
+      "confidence": 0.95,
+      "reference_photo": "IMG_20260320_175202624_HDR.jpg"
+    },
+    {
+      "field": "roof_texture",
+      "status": "unresolved_gap",
+      "expected": "striped shingle bands",
+      "actual": "low-angle photos show stripes but no clear vertical orthographic texture",
+      "severity": "medium",
+      "confidence": 0.6,
+      "reference_photo": "IMG_20260320_152125731_HDR.jpg",
+      "note": "Striping pattern is clear but will require procedural generation or clean source material."
+    },
+    {
+      "field": "service_elements",
+      "status": "gap_identified",
+      "expected": "gas meters, utility pipes",
+      "actual": "clearly visible in reference, not yet in params",
+      "severity": "low",
+      "confidence": 1.0,
+      "reference_photo": "IMG_20260320_175217611_HDR.jpg"
+    }
+  ],
+  "recommendations": "Utilize IMG_20260320_175212895_HDR.jpg for high-res brick material extraction."
+}

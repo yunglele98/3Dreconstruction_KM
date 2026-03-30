@@ -2,11 +2,11 @@
   "building_name": "27 Bellevue Ave",
   "floors": 3,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4
+    1.25,
+    1.25,
+    1.25
   ],
-  "total_height_m": 7.2,
+  "total_height_m": 3.74,
   "facade_width_m": 5.2,
   "facade_depth_m": 12.0,
   "site": {
@@ -20,12 +20,12 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 1
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "cross-gable"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "warm red brick at ground and second floor; cream/beige vertical siding on upper gable and side sections",
   "windows_per_floor": [
     2,
@@ -42,12 +42,12 @@
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870–1889",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": 100,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructe",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -58,15 +58,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior – Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -85,7 +85,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1–2)",
+    "residential_floors": "All floors (1\u20132)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -103,10 +103,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "photo": "IMG_20260315_153824969_HDR.jpg",
     "reference_photos": [
@@ -120,12 +117,12 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "27 Bellevue Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "27 BELLEVUE AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:52:01",
+      "timestamp": "2026-03-27T14:58:20",
       "old_total_height_m": 3.74,
       "new_total_height_m": 7.2,
       "floors": 3.0,
@@ -133,6 +130,84 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.8,
+        "timestamp": "2026-03-29T07:31:01.107323+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.8,
+        "timestamp": "2026-03-29T07:44:24.421161+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:58.518525+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)"
+        ],
+        "timestamp": "2026-03-29T08:03:47.449494+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:22.585332+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Bellevue Ave",
+        "timestamp": "2026-03-29T07:48:36.635498+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:18.868488Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:45.346903+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #4E4646",
+        "trim": "#2A2A2A \u2192 #3D3D3D",
+        "accent": "#3A2A20 \u2192 #1D2D2C",
+        "mortar": "#B0A898 \u2192 #ABA595"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "height 7.2->3.74"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "bay_window": {
@@ -194,7 +269,8 @@
     "alterations_visible": "Replacement vinyl/aluminum windows; vertical siding on upper gable may replace original material",
     "matches_hcd_typology": true,
     "confidence": 0.8,
-    "notes": "Semi-detached form; green and blue bins visible; well-maintained property with interlocking brick driveway"
+    "notes": "Semi-detached form; green and blue bins visible; well-maintained property with interlocking brick driveway",
+    "photo": "IMG_20260315_153824969_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "single",
@@ -226,7 +302,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -234,7 +310,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "residential",
@@ -245,11 +324,13 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
+    "trim_colour_hex": "#3D3D3D",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
-    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period."
+    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#ABA595"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -271,10 +352,11 @@
           "count": 2,
           "type": "mixed",
           "width_m": 0.9,
-          "height_m": 1.7,
+          "height_m": 1.87,
           "sill_height_m": 1.1,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -288,7 +370,8 @@
           "height_m": 1.8,
           "sill_height_m": 1.4,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     },
@@ -302,7 +385,8 @@
           "height_m": 1.5,
           "sill_height_m": 1.2,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
@@ -332,16 +416,86 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "Three-storey semi-detached house with mixed cladding: warm red brick at ground and second floors, cream/beige vertical siding on the upper gable. A projecting bay spans the lower two storeys with large replacement windows in white frames. The upper gable siding likely replaces original material, and the windows throughout appear to be vinyl or aluminum replacements. The property is well maintained with an interlocking brick driveway and simple eave trim.",
+  "facade_description": "27 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed in a warm red brick at ground and second floor; cream/beige vertical siding on upper gable and side sections palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
   "roof_material": "Grey asphalt shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#2A2A2A",
     "roof_hex": "#5A5A5A",
     "accent_hex": "#2A2A2A",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#3D3D3D",
+    "roof": "#4E4646",
+    "accent": "#1D2D2C"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260315_153824969_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.87,
+            "sill_height_m": 1.1,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.8,
+            "sill_height_m": 1.4,
+            "frame_colour": "#2A2A2A",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.5,
+            "sill_height_m": 1.2,
+            "frame_colour": "#2A2A2A",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

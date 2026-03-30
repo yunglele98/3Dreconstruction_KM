@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-010",
+  "title": "Validate facade brick colours against era defaults",
+  "description": "For every building with hcd_data.construction_date, check that facade_detail.brick_colour_hex is plausible for the era. Pre-1889 should be red (#B85A3A range), 1890-1913 default, 1914+ restrained. Flag mismatches with confidence scores.",
+  "priority": "medium",
+  "estimate_points": 2,
+  "skills": [
+    "facade-audit",
+    "heritage-data",
+    "validation"
+  ],
+  "write_scope": [
+    "agent_ops/30_handoffs"
+  ],
+  "dependencies": [],
+  "owner": "gemini-1",
+  "status": "done",
+  "created_at": "2026-03-27T17:38:37Z",
+  "routed_at": "2026-03-27T17:46:49.728170+00:00",
+  "completed_at": "2026-03-27T17:51:57.877653+00:00",
+  "completed_by": "gemini-1"
+}

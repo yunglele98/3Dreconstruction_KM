@@ -1,0 +1,81 @@
+# docker-compose.proxy-git.yml
+# Add-on services for the AI Automation Factory stack
+# Usage: docker compose -f docker-compose.yml -f docker-compose.proxy-git.yml up -d
+#
+# Prerequisites:
+#   1. Add "networks: [ai-factory-net]" to every service in your main docker-compose.yml
+#   2. Run: docker exec -it postgres psql -U postgres -c "CREATE DATABASE gitea;"
+#   3. Add to Windows hosts file: 127.0.0.1 factory.local
+
+version: "3.9"
+
+networks:
+  ai-factory-net:
+    external: true  # set to false if defined here for the first time
+
+services:
+  # ── Reverse Proxy ──────────────────────────────────────────────
+  nginx-proxy-manager:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "81:81"       # Admin GUI — first login: admin@example.com / changeme
+    volumes:
+      - npm_data:/data
+      - npm_letsencrypt:/etc/letsencrypt
+      - ./infra/nginx-custom:/data/nginx/custom:ro
+    environment:
+      DB_SQLITE_FILE: /data/database.sqlite
+    networks:
+      - ai-factory-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:81/api/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── Local Git Server ───────────────────────────────────────────
+  gitea:
+    image: gitea/gitea:latest
+    container_name: gitea
+    restart: unless-stopped
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      # Database — shares the existing PostgreSQL 16 instance
+      - GITEA__database__DB_TYPE=postgres
+      - GITEA__database__HOST=postgres:5432
+      - GITEA__database__NAME=gitea
+      - GITEA__database__USER=postgres
+      - GITEA__database__PASSWD=${POSTGRES_PASSWORD:-test123}
+      # Server
+      - GITEA__server__ROOT_URL=https://factory.local/git/
+      - GITEA__server__SSH_DOMAIN=localhost
+      - GITEA__server__SSH_PORT=2222
+      - GITEA__server__LFS_START_SERVER=false
+      # Allow webhooks to call internal Docker hostnames (n8n, etc.)
+      - GITEA__webhook__ALLOWED_HOST_LIST=*
+      - GITEA__webhook__SKIP_TLS_VERIFY=true
+      # Disable registration after initial admin setup
+      # - GITEA__service__DISABLE_REGISTRATION=true
+    volumes:
+      - gitea_data:/data
+    ports:
+      - "2222:22"    # Git SSH — only port exposed to host
+    networks:
+      - ai-factory-net
+    depends_on:
+      - postgres
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/v1/version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  npm_data:
+  npm_letsencrypt:
+  gitea_data:

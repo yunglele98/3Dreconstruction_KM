@@ -19,7 +19,7 @@
     "lot_coverage_pct": 35.1,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
     "canopy"
@@ -97,10 +97,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "photo": "IMG_20260316_014008345_HDR.jpg",
     "reference_photos": [
@@ -111,7 +108,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "245 Augusta Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "245 AUGUSTA AVE"
     ],
@@ -124,6 +121,63 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_augusta.py",
+        "street": "Augusta Ave",
+        "timestamp": "2026-03-29T07:46:47.530992+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:52.669348+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1914-1930)"
+        ],
+        "timestamp": "2026-03-29T08:03:46.367625+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #4A3A2A (medium brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:20.099284+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled"
+        ],
+        "timestamp": "2026-03-29T08:07:21.338666+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:18.447507Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:45.008277+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:13.507562Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #C6A78A",
+        "roof": "#5A5A5A → #565656",
+        "mortar": "#B0A898 → #C4BCAD"
+      }
     ]
   },
   "storefront": {
@@ -131,7 +185,25 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.1,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "signage": {
+      "text": "Jumbo Empanadas",
+      "type": "projecting",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "dark painted/deteriorated facade with extensive graffiti covering storefront and upper wall",
@@ -155,17 +227,18 @@
       "photo": "IMG_20260316_014008345_HDR.jpg",
       "agent": "claude-opus-4-6",
       "timestamp": "2026-03-24T22:00:00-04:00"
-    }
+    },
+    "photo": "IMG_20260316_014008345_HDR.jpg"
   },
   "door_type": "storefront",
   "overall_style": "Commercial",
   "storefront_description": "Vacant or closed storefront with black-and-white striped awning remnant, roll-down shutters completely covered in graffiti and wheat-paste art",
-  "confidence": 0.8500000000000002,
+  "confidence": 0.9,
   "notes": "Night photo. Building appears vacant or severely neglected. Facade heavily layered with graffiti.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -173,21 +246,26 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#4A3A2A",
+      "colour": "medium brown"
     }
   ],
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C6A78A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#4A4A4A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance.",
-    "heritage_summary": "Constructed as a semi-detached pair, they have retained the legibility of their original form and shared roofline. Each property has value as an early-twentieth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations."
+    "heritage_summary": "Constructed as a semi-detached pair, they have retained the legibility of their original form and shared roofline. Each property has value as an early-twentieth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
+    "mortar_colour_hex": "#C4BCAD",
+    "heritage_expression": "Character-defining elements include ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -207,7 +285,8 @@
           "height_m": 3.0,
           "sill_height_m": 2.3,
           "frame_colour": "#4A4A4A",
-          "glazing": "single pane"
+          "glazing": "single pane",
+          "arch_type": "flat"
         }
       ]
     }
@@ -219,16 +298,57 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "245 Augusta Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as mixed in a dark painted/deteriorated facade with extensive graffiti covering storefront and upper wall palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. HCD note: Each property has value as an early-twentieth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a semi-detached pair, they have retained the legibility of their original form and shared roofline. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "245 Augusta Ave is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as brick in a dark painted/deteriorated facade with extensive graffiti covering storefront and upper wall palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance.",
   "heritage_summary": "Constructed as a semi-detached pair, they have retained the legibility of their original form and shared roofline. Each property has value as an early-twentieth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
   "roof_material": "Grey asphalt shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#D8D0C0",
     "trim_hex": "#4A4A4A",
     "roof_hex": "#5A5A5A",
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C6A78A",
+    "trim": "#4A4A4A",
+    "roof": "#565656",
+    "accent": "#4A3A2A"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260316_014008345_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 3.0,
+            "sill_height_m": 2.3,
+            "frame_colour": "#4A4A4A",
+            "glazing": "single pane"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "poor",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 0.0
 }

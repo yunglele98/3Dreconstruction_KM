@@ -4,8 +4,32 @@
 from __future__ import annotations
 
 import json
+import os
+import sys
+import tempfile
 from copy import deepcopy
 from pathlib import Path
+
+
+def _configure_utf8_stdout() -> None:
+    """Avoid Windows cp1252 encode crashes when printing non-ASCII filenames."""
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
+
+def _atomic_write_json(filepath, data, ensure_ascii=False):
+    """Write JSON atomically via temp file + rename to prevent corruption."""
+    filepath = Path(filepath)
+    with tempfile.NamedTemporaryFile(
+        mode="w", dir=filepath.parent, delete=False,
+        suffix=".tmp", encoding="utf-8",
+    ) as tmp:
+        json.dump(data, tmp, indent=2, ensure_ascii=ensure_ascii)
+        tmp.write("\n")
+        tmp_path = Path(tmp.name)
+    os.replace(str(tmp_path), str(filepath))
 
 
 PARAMS_DIR = Path(__file__).parent.parent / "params"
@@ -43,7 +67,9 @@ def normalize_bay_window(data: dict) -> bool:
     if not isinstance(bay, dict):
         return False
     changed = False
-    if "floors_spanned" in bay and "floors" not in bay:
+    
+    # Process floors_spanned if present, regardless of 'floors' presence
+    if "floors_spanned" in bay:
         fs = bay.pop("floors_spanned")
         if isinstance(fs, list):
             bay["floors"] = [max(0, int(v) - 1) if isinstance(v, int) else v for v in fs]
@@ -55,7 +81,15 @@ def normalize_bay_window(data: dict) -> bool:
                 bay["floors"] = [0]
             elif "second" in text:
                 bay["floors"] = [1]
+        elif isinstance(fs, (int, float)): # Convert integer floors_spanned to a list of floors
+            num_floors_spanned = int(fs)
+            if num_floors_spanned > 0:
+                # Assuming it spans from the ground floor upwards
+                bay["floors"] = list(range(num_floors_spanned))
+            else:
+                bay["floors"] = []
         changed = True
+
     if "present" not in bay:
         bay["present"] = True
         changed = True
@@ -67,9 +101,16 @@ def normalize_bay_window(data: dict) -> bool:
 
 def normalize_roof_features(data: dict) -> bool:
     roof_features = data.get("roof_features")
-    if not isinstance(roof_features, list):
-        return False
     changed = False
+
+    # If roof_features is a string, convert it to a list first
+    if isinstance(roof_features, str):
+        roof_features = [roof_features]
+        data["roof_features"] = roof_features # Update data with the new list
+        changed = True
+    elif not isinstance(roof_features, list):
+        return False # Not a list or string, cannot normalize
+
     normalized = []
     for item in roof_features:
         if isinstance(item, dict):
@@ -87,55 +128,102 @@ def normalize_roof_features(data: dict) -> bool:
     return changed
 
 
-def normalize_file(path: Path) -> bool:
+def normalize_file(path: Path) -> tuple[bool, str]:
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
 
     # Skip non-building photos
     if data.get("skipped"):
-        return False
+        return False, "non-building (skipped)"
 
-    changed = False
+    # Check _meta.normalized flag for idempotency
+    meta = data.get("_meta", {})
+    if meta.get("normalized"):
+        return False, "already normalized"
+
+    # Store original state for change detection
+    orig_data_dump = json.dumps(data, indent=2, ensure_ascii=False)
+    
+    changes_applied = []
+    changed_flag = False # Use a flag to track if any changes were truly made
 
     dec = data.get("decorative_elements")
     if not isinstance(dec, dict):
         dec = {}
         data["decorative_elements"] = dec
-        changed = True
+        changed_flag = True
+        changes_applied.append("decorative_elements_init")
 
+    # Move top-level cornice
     if "cornice" in data and "cornice" not in dec and isinstance(data["cornice"], dict):
         dec["cornice"] = deepcopy(data["cornice"])
-        changed = True
+        del data["cornice"]
+        changed_flag = True
+        changes_applied.append("top_level_cornice")
+    
+    # Move top-level string_course
     if "string_course" in data and "string_courses" not in dec and isinstance(data["string_course"], dict):
         dec["string_courses"] = deepcopy(data["string_course"])
-        changed = True
+        del data["string_course"]
+        changed_flag = True
+        changes_applied.append("top_level_string_course")
 
+    # Convert boolean decorative elements to structured dicts
     for key, defaults in BOOLEAN_DECORATIVE_DEFAULTS.items():
         if dec.get(key) is True:
             dec[key] = deepcopy(defaults)
-            changed = True
+            changed_flag = True
+            changes_applied.append(f"{key}_bool_to_dict")
+        elif dec.get(key) is False: # Convert False to structured dict with present=False
+            defaults_copy = deepcopy(defaults)
+            defaults_copy["present"] = False
+            dec[key] = defaults_copy
+            changed_flag = True
+            changes_applied.append(f"{key}_bool_to_dict_false")
+    
+    # Handle string cornice to dict conversion
+    if "cornice" in dec and isinstance(dec["cornice"], str):
+        cornice_str = dec["cornice"]
+        if cornice_str == "ornate": # Example: specific string conversion
+            dec["cornice"] = {"present": True, "type": "ornate"}
+            changed_flag = True
+            changes_applied.append("cornice_string_to_dict")
+        # Add other string conversions as needed
+        
+    # Ensure 'present' key for existing decorative elements that are dicts
+    for key in ["cornice", "string_courses", "quoins"]: # Expanded to include common ones
+        if key in dec and isinstance(dec[key], dict) and "present" not in dec[key]:
+            dec[key]["present"] = True
+            changed_flag = True
+            changes_applied.append(f"{key}_ensure_present")
 
-    if "cornice" in dec and isinstance(dec["cornice"], dict) and "present" not in dec["cornice"]:
-        dec["cornice"]["present"] = True
-        changed = True
-    if "string_courses" in dec and isinstance(dec["string_courses"], dict) and "present" not in dec["string_courses"]:
-        dec["string_courses"]["present"] = True
-        changed = True
-    if "quoins" in dec and isinstance(dec["quoins"], dict) and "present" not in dec["quoins"]:
-        dec["quoins"]["present"] = True
-        changed = True
+    # Capture changes from sub-functions
+    if normalize_bay_window(data):
+        changed_flag = True
+        changes_applied.append("bay_window_floors")
+    
+    if normalize_roof_features(data):
+        changed_flag = True
+        changes_applied.append("roof_features")
 
-    changed = normalize_bay_window(data) or changed
-    changed = normalize_roof_features(data) or changed
 
-    if changed:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-            f.write("\n")
-    return changed
+    # After all normalizations, check if the data has actually changed
+    new_data_dump = json.dumps(data, indent=2, ensure_ascii=False)
+
+    if orig_data_dump == new_data_dump:
+        return False, "no changes needed"
+
+    # Update metadata
+    meta["normalized"] = True
+    meta["normalizations_applied"] = changes_applied if changes_applied else ["minor_adjustments"]
+    data["_meta"] = meta
+
+    _atomic_write_json(path, data)
+    return True, ", ".join(meta["normalizations_applied"])
 
 
 def main() -> None:
+    _configure_utf8_stdout()
     changed = 0
     total = 0
     for path in sorted(PARAMS_DIR.glob("*.json")):
@@ -150,3 +238,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

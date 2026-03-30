@@ -12,6 +12,144 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012750357_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.45
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#9A5A38",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Commercial storefronts at ground level. Left unit: dark storefront (Pearl/bar?), right unit: lit storefront with grid windows. Silvery reflective awning/hoarding between buildings."
+      },
+      {
+        "floor": "second",
+        "count": 4,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.12,
+        "height_m_est": 1.5,
+        "note": "Two pairs of windows, one pair per townhouse unit. White-painted wood frames."
+      },
+      {
+        "floor": "gable",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.1,
+        "height_m_est": 0.9,
+        "note": "One window per gable, small rectangular."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 1,
+        "colour": "dark"
+      },
+      {
+        "position": "center",
+        "type": "residential panel",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 2,
+        "colour": "dark brown"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple trim",
+      "colour_hex": "#E8E0D0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "rectangular"
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 50,
+      "signage_text": "Pearl (left unit); right unit partially obscured",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "left",
+      "security_grille": false,
+      "note": "Two adjacent narrow rowhouses converted to commercial at ground. Left unit has dark-framed storefront. Silvery/reflective temporary hoarding or awning covering middle section."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": false,
+    "party_wall_right": false,
+    "colour_palette_observed": {
+      "facade": "#9A5A38",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#3A2820"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Pair of bay-and-gable rowhouses. Brick appears original but weathered. Gable trim intact. Second-floor windows appear original proportions. Large reflective hoarding or temporary awning obscures part of facade between units.",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.4,
+      "eave_overhang_mm_est": 250,
+      "step_count": 2
+    }
+  },
+  "facade_detail": {
+    "brick_colour_hex": "#9A5A38",
+    "bond_pattern": "running bond",
+    "mortar_colour": "light grey"
+  },
+  "storefront": {
+    "signage_text": "Pearl (left unit); right unit partially obscured",
+    "awning": {
+      "present": false
+    },
+    "width_pct": 50
+  },
+  "colour_palette": {
+    "facade": "#9A5A38",
+    "trim": "#E8E0D0",
+    "roof": "#5A5A5A",
+    "accent": "#3A2820"
   }
 }

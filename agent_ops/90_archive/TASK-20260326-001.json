@@ -1,0 +1,25 @@
+{
+  "task_id": "TASK-20260326-001",
+  "title": "Normalize Blender script CLI interfaces",
+  "description": "Standardize argparse signatures for root scripts and ensure reproducible output paths.",
+  "priority": "high",
+  "estimate_points": 3,
+  "skills": [
+    "python",
+    "pipeline",
+    "automation"
+  ],
+  "write_scope": [
+    "scripts/apply_textures.py",
+    "scripts/apply_textures_v5.py",
+    "scripts/run_blender_buildings_workflows.py"
+  ],
+  "dependencies": [],
+  "owner": "claude-1",
+  "status": "done",
+  "created_at": "2026-03-26T00:00:00Z",
+  "routed_at": "2026-03-26T23:44:31.946007+00:00",
+  "reassigned_at": "2026-03-27T18:12:50.515896+00:00",
+  "completed_at": "2026-03-27T18:39:32.642309+00:00",
+  "completed_by": "claude-1"
+}

@@ -1,0 +1,112 @@
+{
+  "task_id": "TASK-20260327-016",
+  "agent": "gemini-1",
+  "timestamp": "2026-03-28T01:40:00Z",
+  "summary": "Validated 150 buildings across batches 001-003. Found 10 issues.",
+  "findings": [
+    {
+      "address": "135 Nassau St",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 22,
+      "actual": 8,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 22 windows, but windows_detail has 8."
+    },
+    {
+      "address": "138 Baldwin St",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 5,
+      "actual": 3,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 5 windows, but windows_detail has 3."
+    },
+    {
+      "address": "148 Denison Ave",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 4,
+      "actual": 5,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 4 windows, but windows_detail has 5."
+    },
+    {
+      "address": "161 Baldwin St",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 2,
+      "actual": 1,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 2 windows, but windows_detail has 1."
+    },
+    {
+      "address": "173 Baldwin St",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 3,
+      "actual": 5,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 3 windows, but windows_detail has 5."
+    },
+    {
+      "address": "179 Baldwin St",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 3,
+      "actual": 5,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 3 windows, but windows_detail has 5."
+    },
+    {
+      "address": "189 Baldwin St",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 3,
+      "actual": 0,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 3 windows, but windows_detail has 0."
+    },
+    {
+      "address": "257 Augusta Ave The Organice Press - side on Nassau St",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 6,
+      "actual": 2,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 6 windows, but windows_detail has 2."
+    },
+    {
+      "address": "257 Augusta Ave The Organice Press - side on Nassau St",
+      "field": "city_data",
+      "status": "missing",
+      "expected": "Protected value",
+      "actual": null,
+      "confidence": 1.0,
+      "severity": "critical",
+      "note": "Protected field 'city_data' is missing from param file."
+    },
+    {
+      "address": "280 Augusta Ave",
+      "field": "windows_detail.count",
+      "status": "mismatch",
+      "expected": 6,
+      "actual": 7,
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Observation says 6 windows, but windows_detail has 7."
+    }
+  ],
+  "coverage": {
+    "buildings_checked": 150,
+    "issues_found": 10
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK-GIS_COORD_AUDIT",
+  "agent": "gemini-1",
+  "report_type": "gis_coordinate_audit",
+  "timestamp": "2026-03-27T15:10:00Z",
+  "summary": "Audit of GIS coordinates and DB alignment using revise_params_from_db.py --dry-run",
+  "findings": [
+    {
+      "field": "DB Matching",
+      "status": "high_discrepancy_rate",
+      "note": "A dry run of the revision script proposes changes to 1,117 of 2,062 files (54%). This indicates widespread misalignment between param files and the PostGIS database.",
+      "severity": "high",
+      "details": {
+        "unmatched_files": 124,
+        "matched_raw": 1050,
+        "matched_loose": 24,
+        "matched_by_range_anchor": 37,
+        "matched_by_manual_override": 6
+      }
+    },
+    {
+      "field": "Data Integrity",
+      "status": "action_required",
+      "note": "The high number of proposed changes suggests that running the script with --apply would cause a mass update. Recommend a review of the `db_param_revision_20260327_150008.json` report before proceeding.",
+      "severity": "medium",
+      "confidence": 1.0
+    }
+  ],
+  "recommendations": "Create a backlog task for `codex` agent to review the dry-run report and apply the `revise_params_from_db.py` script with the `--apply` flag if the changes are deemed safe."
+}

@@ -2,10 +2,10 @@
   "building_name": "144 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    3.94,
+    3.94
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 7.87,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -19,16 +19,16 @@
     "lot_coverage_pct": 1.0,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870–1889",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "mixed_use",
     "general_use": "Commercial",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": null,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -93,14 +93,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "144 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "144 BALDWIN ST"
     ],
@@ -113,6 +110,84 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 9.6,
+        "new_value": 12.7,
+        "timestamp": "2026-03-29T07:30:40.780535+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:46.240666+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:42.568467+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:11.383536+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:14.786598+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Baldwin St",
+        "timestamp": "2026-03-29T07:48:25.147766+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:16.732065Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:43.749747+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:11.526048Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #A86D53",
+        "roof": "#5A5A5A \u2192 #4A4F4F",
+        "trim": "#E8E0D0 \u2192 #3A2A20",
+        "accent": "#3A2A20 \u2192 #483E2F",
+        "mortar": "#B0A898 \u2192 #AFA89B"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "height 12.7->7.87"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "storefront": {
@@ -120,12 +195,23 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.2,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -133,19 +219,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A86D53",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "mortar_colour_hex": "#AFA89B",
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "heritage_summary": "This building dates to the  period. Character-defining elements include ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -160,12 +252,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 3.2,
           "sill_height_m": 2.5,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
@@ -176,17 +269,73 @@
       "style": "simple"
     }
   },
-  "street_setback_m": 3.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "Two-storey Victorian bay-and-gable rowhouse with a 5.2-metre brick frontage and cross-gable roof. The ground floor has been converted to a food or cafe use, with small signage partially visible in yellow text. Two double-hung sash windows on the upper storey. Party walls on both sides indicate a mid-terrace position. No direct photo observations are available; description is conservative, based on database records and assessment data.",
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "144 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
   "roof_material": "Slate shingles",
+  "volumes": [],
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "brick",
+    "facade_colour_observed": "red brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": true,
+    "photo": "PXL_20260318_224024413.jpg"
+  },
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A86D53",
+    "trim": "#3A2A20",
+    "roof": "#4A4F4F",
+    "accent": "#483E2F"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "PXL_20260318_224024413.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 3.2,
+            "sill_height_m": 2.5,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

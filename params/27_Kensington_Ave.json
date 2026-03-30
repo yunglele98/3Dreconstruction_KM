@@ -2,8 +2,8 @@
   "building_name": "27 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    3.0,
-    2.3
+    2.89,
+    2.46
   ],
   "total_height_m": 5.35,
   "facade_width_m": 5.2,
@@ -13,37 +13,37 @@
     "lat": 43.6533507,
     "street": "Kensington Ave",
     "street_number": 27,
-    "setback_m": 0.0,
+    "setback_m": 1.5,
     "lot_area_sqm": 143.9635162606085,
     "footprint_sqm": 146.3,
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "brick — visible above commercial ground floor",
+  "facade_material": "mixed",
+  "facade_colour": "left: brown/dark brick; centre-right: grey/white stone or rough-cast render; brick (left unit brown), stone/rough-cast stucco (centre units grey/white)",
   "windows_per_floor": [
     0,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form (27, & 33 Kensington Avenue) House-form, Row",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 197,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The properties at 27, 29, and 33 Kensington Avenue also have value for the modifications made to accommodate a commercial conversion through ground floor alterations, including a one- storey commercial addition at 33 Kensington Avenue. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified). 33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The properties at 27, 29, and 33 Kensington Avenue also have value for the modifications made to accommodate a commercial conversion through ground floor alterations, including a one- storey commercial addition at 33 Kensington Avenue. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified). 33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 4,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -100,16 +100,104 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "27 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "27 KENSINGTON AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 300",
+      "floor_heights_m: [3.0, 2.3] -> [2.89, 2.46]",
+      "windows_detail: 1 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 2] -> [0, 4, 2]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B88050'",
+      "colour_palette enriched from observations",
+      "decorative_elements.ornamental_shingles added",
+      "foundation_height_m: 0.5",
+      "doors_detail.steps: 4",
+      "site.setback_m: 1.5"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:gable_brackets",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed (brick left, stone/roughcast right)",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:31:01.132051+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:24.586023+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:58.569767+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:47.480417+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:22.638483+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:18.883425Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:14.034070Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #535252",
+        "trim": "#3A2A20 \u2192 #493828",
+        "mortar": "#B0A898 \u2192 #A3947D"
+      }
     ]
   },
   "decorative_elements": {
@@ -119,6 +207,17 @@
     "bargeboard": {
       "colour_hex": "#3A2A20",
       "style": "decorative"
+    },
+    "ornamental_shingles_in_gable": true,
+    "ornamental_shingles": {
+      "present": true
+    },
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
     }
   },
   "storefront": {
@@ -126,7 +225,25 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.0,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "Fashion OLD & NEW",
+    "awning": {
+      "present": true,
+      "type": "simple flat canopy on posts",
+      "colour": "#8A7A6A"
+    },
+    "width_pct": 90,
+    "signage": {
+      "text": "Fashion Old and New (Da Vintage Code 'A')",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "source_photo": "IMG_20260320_012325834_HDR.jpg",
@@ -135,19 +252,59 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.5,
-    "facade_colour_observed": "brick — visible above commercial ground floor",
-    "facade_material_observed": "brick with commercial storefront",
-    "condition_observed": "fair",
+    "facade_colour_observed": "brick \u2014 visible above commercial ground floor",
+    "facade_material_observed": "brick (left unit brown), stone/rough-cast stucco (centre units grey/white)",
+    "condition_observed": "fair to poor; some deterioration visible; mix of original and modified elements; white railing/fence at left",
     "has_storefront_observed": true,
-    "signage_observed": "Fashion Old and New - Da Vintage Code A",
-    "notes": "Night photo. Converted house-form with commercial ground floor. Brick cladding, cross-gabled roofline, double-height bay windows visible. Fashion Old and New / Da Vintage Code A signage."
+    "signage_observed": "'fashion OLD & NEW' on centre storefront",
+    "notes": "Night photo. Converted house-form with commercial ground floor. Brick cladding, cross-gabled roofline, double-height bay windows visible. Fashion Old and New / Da Vintage Code A signage.",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012325834_HDR.jpg",
+    "facade_analysis_address": "27 Kensington Ave (Fashion Old and New - Da Vintage Code 'A')",
+    "storeys_observed": 2,
+    "brick_colour_observed": "left: brown/dark brick; centre-right: grey/white stone or rough-cast render",
+    "brick_colour_hex_observed": "#7A5C44",
+    "windows_observed": {
+      "gable": "small pointed or rectangular windows in each gable peak",
+      "upper_floor": "2 windows per unit; appear to be 1-over-1 double-hung",
+      "ground_floor": "commercial storefronts"
+    },
+    "doors_observed": "commercial entrances at street level; residential stairs visible",
+    "roof_type_observed": "gable; 3+ front-facing gables in continuous row; steep pitch",
+    "decorative_elements_observed": "bay-and-gable Victorian form; decorative bargeboard on gable peaks; some gable ornament visible",
+    "storefront_description": "'fashion OLD & NEW' signage visible; colourful painted storefronts (pink, green, yellow sections); awning/canopy supported by posts; steps up to entrances",
+    "party_walls_observed": "continuous row; party walls throughout",
+    "colour_palette_observed": {
+      "primary": "brown brick (left), grey stone/stucco (centre-right)",
+      "trim": "white",
+      "accent": "pink, green, yellow (storefront paint)"
+    },
+    "bond_pattern_observed": "running bond on brick sections",
+    "photo_quality": "night, upright, good",
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 2,
+      "ba_facade_material": "brick",
+      "height_max_m": 11.5,
+      "height_avg_m": 5.35,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "dark storefront with fashion retail signage and narrow upper residential massing",
+      "photo_condition": "good",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_012325834_HDR.jpg"
   },
-  "confidence": 0.7500000000000002,
+  "confidence": 0.8500000000000003,
   "notes": "Night photo. Converted house-form with commercial ground floor. Brick cladding, cross-gabled roofline, double-height bay windows visible. Fashion Old and New / Da Vintage Code A signage.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -155,41 +312,74 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 4,
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B88050",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#493828",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
-    "heritage_summary": "33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified)."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, gable brackets.",
+    "heritage_summary": "33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified).",
+    "secondary_material": "brick left, stone/roughcast right",
+    "mortar_colour_hex": "#A3947D"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
     "eave_overhang_mm": 300,
     "gable_window": {
-      "present": false
-    }
+      "present": true,
+      "type": "pointed-arch",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "pointed-arch"
+    },
+    "bargeboard_style": "simple Victorian",
+    "bargeboard_colour_hex": "#D0C8B8"
   },
   "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
     {
       "floor": "Second floor",
       "windows": [
         {
+          "count": 4,
+          "type": "1-over-1",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 0.73,
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    },
+    {
+      "floor": "Gable",
+      "windows": [
+        {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.9,
-          "sill_height_m": 2.3,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "fixed",
+          "frame_colour": "white",
+          "arch_type": "pointed",
+          "width_m": 0.52,
+          "height_m": 0.8,
+          "glazing": "fixed",
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -204,16 +394,140 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "27 Kensington Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology. The facade reads primarily as brick above a commercial storefront in a brick — visible above commercial ground floor palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The properties at 27, 29, and 33 Kensington Avenue also have value for the modifications made to accommodate a commercial conversion through ground floor alterations, including a one- storey commercial addition at 33 Kensington Avenue. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified). 33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "27 Kensington Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology. The facade reads primarily as mixed in a left: brown/dark brick; centre-right: grey/white stone or rough-cast render; brick (left unit brown), stone/rough-cast stucco (centre units grey/white) palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, gable brackets.",
   "heritage_summary": "33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified).",
   "roof_material": "Slate shingles",
   "colour_palette": {
-    "facade_hex": "#B85A3A",
+    "facade_hex": "#8A8A8A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B88050",
+    "trim": "#493828",
+    "roof": "#535252",
+    "accent": "#D4A040"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012325834_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.5
+    ],
+    "facade_material_observed": "mixed (brick left, stone/roughcast right)",
+    "brick_colour_hex": "#B88050",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Full-width storefront: 'Fashion OLD & NEW' signage on horizontal board across two units; colourful painted columns/panels (pink, green, yellow, teal) below; plate glass display windows"
+      },
+      {
+        "floor": "second",
+        "count": 4,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.14,
+        "height_m_est": 1.3,
+        "note": "Two per unit; left unit has brown/buff brick surround, right unit has grey roughcast/stucco"
+      },
+      {
+        "floor": "gable",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "pointed",
+        "width_ratio": 0.1,
+        "height_m_est": 0.8,
+        "note": "One per gable, pointed arch type"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial glass",
+        "width_m_est": 1.2,
+        "transom": false,
+        "steps": 4,
+        "colour_hex": "#D4A040",
+        "note": "Wide entrance centered between the two units, accessed by concrete steps with painted risers (yellow/green stripes)"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 50,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple Victorian",
+      "colour_hex": "#D0C8B8"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "pointed-arch"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 90,
+      "signage_text": "Fashion OLD & NEW",
+      "awning": {
+        "present": true,
+        "type": "simple flat canopy on posts",
+        "colour": "#8A7A6A"
+      },
+      "entrance_position": "center",
+      "security_grille": false
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": true,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#B88050",
+      "trim": "#D0C8B8",
+      "roof": "#5A5A5A",
+      "accent": "#D4A040"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Two bay-and-gable houses merged into one commercial unit. Left unit: buff/brown brick. Right unit: grey roughcast stucco over original brick. Ground floor heavily modified: colourful painted panels (pink, green, yellow), wide shared storefront entrance. Concrete steps with colourfully painted risers. White porch railing on left side leading to upper residential entrance. Gable shingles visible. Large tree in front partially obscures right unit.",
+    "depth_notes": {
+      "setback_m_est": 1.5,
+      "porch_depth_m_est": 2.0,
+      "foundation_height_m_est": 0.5,
+      "eave_overhang_mm_est": 300,
+      "step_count": 4,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.5,
+  "wall_thickness_m": 0.3
 }

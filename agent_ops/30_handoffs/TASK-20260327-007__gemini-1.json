@@ -1,0 +1,1973 @@
+{
+  "task_id": "TASK-20260327-007",
+  "agent": "gemini-1",
+  "timestamp": "2026-03-28T00:40:00Z",
+  "summary": "Audited 1241 buildings for HCD feature consistency. Found 139 discrepancies.",
+  "findings": [
+    {
+      "address": "10 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "11 Glen Baillie Pl",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "12 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "string_courses",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "12 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "12 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "13 Glen Baillie Pl",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "13 St Andrew St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "turreted_element"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "145 Denison Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "window_hoods",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "146A Denison Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "147 Denison Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "window_hoods",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "149 Denison Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "string_courses",
+        "window_hoods",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "14 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "string_courses",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "14 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "14 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "151 Denison Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "153 Denison Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "string_courses",
+        "window_hoods",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "15 Glen Baillie Pl",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "15 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "15 St Andrew St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "16 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "171 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "172 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "173 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "175 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "175 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "177 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "179 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "17 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "ornamental_shingles_in_gable",
+        "ornamental_shingles"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "18 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "18 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "191A Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: cornice",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "193 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "193 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: cornice",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "195 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "197 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "19 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "1A Leonard Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: quoin",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [quoin] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "200 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "cornice",
+        "string_courses"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "202 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "204 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "204 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "206 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "206 Baldwin St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "20 Bellevue Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "21 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "21 Lippincott St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "22 Bellevue Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "22 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "234 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "235 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "23 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "23 Lippincott St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "24 Bellevue Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "24 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "24 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket, cornice",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "256 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "258 Augusta Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "25 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "26 Bellevue Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "26 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "26 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket, cornice",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "27 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "ornamental_shingles_in_gable",
+        "ornamental_shingles"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "28 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "29 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "29 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "2 Hickory St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "2 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "voussoirs",
+        "ornamental_shingles_in_gable",
+        "stone_voussoirs",
+        "ornamental_shingles"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "2 St Andrew St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "30 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "30 St Andrew St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "31 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "31 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "32 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "32 St Andrew St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "33 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "33 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "34 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "34 St Andrew St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "35 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "36 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "37 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "38 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket, cornice",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "39 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "3 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "3 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: string course, cornice",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [string course, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "40 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "41 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "42 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "43 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "43 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "44 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "45 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "47 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "49 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "4 Hickory St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "4 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "ornamental_shingles_in_gable",
+        "ornamental_shingles"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "53 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "54 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "55 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "56B Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: cornice",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "56D Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "58 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "59 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "window_hoods",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "5 Glen Baillie Pl",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "5 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "60 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "61 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "61 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "window_hoods",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "62 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "63 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "65 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "66 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "67 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "69 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir, cornice",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir, cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "6 Denison Sq",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "6 Hickory St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "6 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "70 Bellevue Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: string course, voussoir, bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [string course, voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "70 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "turreted_element"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "71 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "72 Bellevue Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: string course, voussoir, bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [string course, voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "72 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "turreted_element"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "74 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "turreted_element"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "76 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket, shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "turreted_element"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket, shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "78 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "7 Glen Baillie Pl",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "7 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "string_courses",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "83 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: cornice",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [cornice] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "86 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "88 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "cornice",
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "8 Hickory St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "8 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "decorative_brickwork",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "90 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: string course, voussoir, bracket",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [string course, voussoir, bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "90 Oxford St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: voussoir",
+      "actual": [
+        "bargeboard"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [voussoir] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "92 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "94 Nassau St",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "95 Bellevue Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "decorative_brickwork",
+        "window_hoods",
+        "bargeboard",
+        "bay_window_shape",
+        "bay_window_storeys",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "9 Glen Baillie Pl",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: shingle",
+      "actual": [
+        "decorative_brickwork",
+        "cornice"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [shingle] but decorative_elements section is missing or explicitly disabled."
+    },
+    {
+      "address": "9 Kensington Ave",
+      "field": "decorative_elements",
+      "status": "missing_features",
+      "expected": "Entries for: bracket",
+      "actual": [
+        "bargeboard",
+        "ornamental_shingles_in_gable",
+        "ornamental_shingles"
+      ],
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "HCD source mentions [bracket] but decorative_elements section is missing or explicitly disabled."
+    }
+  ],
+  "coverage": {
+    "buildings_checked": 1241,
+    "issues_found": 139
+  }
+}

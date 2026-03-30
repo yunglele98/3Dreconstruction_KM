@@ -1,0 +1,464 @@
+{
+  "task_id": "TASK-20260327-019",
+  "agent": "claude-1",
+  "report_type": "window_count_cross_reference",
+  "timestamp": "2026-03-27T20:00:04.331061+00:00",
+  "summary": {
+    "buildings_checked": 594,
+    "mismatches_found": 62,
+    "high_severity": 52,
+    "medium_severity": 10
+  },
+  "findings": [
+    {
+      "address": "103_Bellevue_Ave",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 5,
+      "detail_count": 3,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "10_Kensington_Ave_Urban_Catwalk",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "13_Kensington_Ave",
+      "floor": 1,
+      "floor_name": "Second floor",
+      "photo_count": 2,
+      "detail_count": 4,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "146_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "146_Denison_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "14_Kensington_Ave",
+      "floor": 1,
+      "floor_name": "Second floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "160_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 3,
+      "detail_count": 0,
+      "diff": 3,
+      "severity": "high"
+    },
+    {
+      "address": "168_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "170_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "170_Baldwin_St",
+      "floor": 1,
+      "floor_name": "Second floor",
+      "photo_count": 1,
+      "detail_count": 3,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "172_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "176_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 3,
+      "detail_count": 0,
+      "diff": 3,
+      "severity": "high"
+    },
+    {
+      "address": "176_Baldwin_St",
+      "floor": 1,
+      "floor_name": "Second floor",
+      "photo_count": 1,
+      "detail_count": 3,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "184_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 4,
+      "detail_count": 0,
+      "diff": 4,
+      "severity": "high"
+    },
+    {
+      "address": "184_Baldwin_St",
+      "floor": 1,
+      "floor_name": "Gable",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "188_Baldwin_St",
+      "floor": 1,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "190_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "200_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "202_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "204_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "206_Baldwin_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "218_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "220_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "224_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "249_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "253_Augusta_Ave",
+      "floor": 1,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "256_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 3,
+      "diff": 3,
+      "severity": "high"
+    },
+    {
+      "address": "283_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "287_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "297_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "299_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "29A_Casimir_St",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "2A_Kensington_Ave",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 2,
+      "detail_count": 0,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "319_Augusta_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 3,
+      "diff": 3,
+      "severity": "high"
+    },
+    {
+      "address": "33_Kensington_Ave_Uncle_Vintage",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "345_College_St",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "347_College_St",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "349_College_St",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "351_College_St",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "354_Spadina_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "35_Kensington_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "360_Spadina_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "376_Spadina_Ave",
+      "floor": 0,
+      "floor_name": "Ground floor",
+      "photo_count": 3,
+      "detail_count": 0,
+      "diff": 3,
+      "severity": "high"
+    },
+    {
+      "address": "38_Bellevue_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "396_Spadina_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "438_Spadina_Ave",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 4,
+      "diff": 4,
+      "severity": "high"
+    },
+    {
+      "address": "530_Dundas_St_W",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "54-56_Kensington_Ave_Clothin_by_AIM_Kensington_Hall_Acid_Reign_Productions_Brimz_Hat_Boutique",
+      "floor": 2,
+      "floor_name": "Third floor",
+      "photo_count": 2,
+      "detail_count": 4,
+      "diff": 2,
+      "severity": "medium"
+    },
+    {
+      "address": "574_Dundas_St_W",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    },
+    {
+      "address": "588_Dundas_St_W",
+      "floor": 0,
+      "floor_name": "Second floor",
+      "photo_count": 0,
+      "detail_count": 2,
+      "diff": 2,
+      "severity": "high"
+    }
+  ]
+}

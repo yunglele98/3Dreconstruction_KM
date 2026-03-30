@@ -1,0 +1,1166 @@
+[
+  {
+    "filename": "IMG_20260320_013041588_HDR.jpg",
+    "address": "59-57 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "brick_bond": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "storefront with security grilles and mural"},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "white", "arch": "flat", "width_ratio": 0.18, "height_m_est": 1.5}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark green"},
+      {"position": "right", "type": "commercial glass with security grille", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark green"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 90,
+      "signage_text": "Sary Cafe (partially visible)",
+      "awning": {"present": true, "type": "fixed metal", "colour": "striped brown/white"},
+      "entrance_position": "left",
+      "security_grille": true,
+      "mural": "large colourful fruit/flower mural on right storefront, graffiti tags on upper brick"
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#B85A3A",
+      "trim": "#F0EDE8",
+      "roof": "#4A4A4A",
+      "accent": "#2D5A3D"
+    },
+    "condition": "fair",
+    "condition_notes": "Extensive graffiti tags on upper brick facade. Storefront painted dark green over original material. Awning worn. Mural adds character but indicates informal modification. Diamond security grilles on all ground-floor openings.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013057746_HDR.jpg",
+    "address": "61-57 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.7],
+    "facade_material": "mixed",
+    "brick_colour_hex": "#8A5A3A",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "full storefront with security grilles, three commercial units visible"},
+      {"floor": "second", "count": 0, "note": "upper facade is painted plywood/signboard with large mural and graffiti, no conventional windows visible"}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 1.0, "transom": false, "steps": 0, "colour": "black"},
+      {"position": "center", "type": "commercial metal", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark brown"},
+      {"position": "right", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "black"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 100,
+      "signage_text": "Pasta Bar & Lounge (left unit); centre unit unclear; right unit with blue neon interior",
+      "awning": {"present": true, "type": "fixed fabric", "colour": "black"},
+      "entrance_position": "distributed",
+      "security_grille": true,
+      "notes": "Three separate commercial units across the full ground floor. Diamond-pattern security grilles on all. AC unit visible on upper facade between mural panels."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#B07040",
+      "trim": "#2A2A2A",
+      "roof": "#4A4A4A",
+      "accent": "#C83030"
+    },
+    "condition": "poor",
+    "condition_notes": "Upper facade entirely covered with painted plywood panels, colourful street art mural (left) and large white graffiti tags (right). Original brick mostly concealed. Security grilles on all storefronts. Heavily modified from original form. Utility pole partially obstructs view.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 100,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013118234_HDR.jpg",
+    "address": "58-60 Kensington Ave",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.85, 0.45],
+    "facade_material": "vinyl siding over original",
+    "brick_colour_hex": "#A09070",
+    "brick_bond": "n/a (sided)",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "storefront - Kensington Market sign with Property For Sale sign"},
+      {"floor": "second", "count": 3, "type": "1-over-1", "frame_colour": "brown", "arch": "flat", "width_ratio": 0.15, "height_m_est": 1.3},
+      {"floor": "gable", "count": 1, "type": "small fixed", "frame_colour": "brown", "arch": "flat", "width_ratio": 0.10, "height_m_est": 0.6}
+    ],
+    "doors": [
+      {"position": "center-left", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 1, "colour": "brown"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 40,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": true, "type": "small fixed rectangular"},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 75,
+      "signage_text": "KENSINGTON MARKET (large horizontal sign, blue/yellow letters); Property For Sale 416.649.5943",
+      "awning": {"present": false},
+      "entrance_position": "left",
+      "security_grille": true,
+      "notes": "Adjacent to #60 (Exile Vintage). Vinyl siding covers upper floors. Ground floor has large display windows with diamond security grilles."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "gable_mural": "painted mural with horses/birds/stars on gable wall (whimsical folk art style)"
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#9A8A70",
+      "trim": "#6A5A4A",
+      "roof": "#5A5A5A",
+      "accent": "#D4B020"
+    },
+    "condition": "fair",
+    "condition_notes": "Vinyl siding covers original facade material. Gable features painted folk-art mural with horses, birds and stars on dark brown background. Property listed for sale. Storefronts modified with modern security grilles.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 200,
+      "step_count": 1
+    }
+  },
+  {
+    "filename": "IMG_20260320_013121944_HDR.jpg",
+    "address": "60 Kensington Ave",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.85, 0.45],
+    "facade_material": "painted brick / vinyl siding",
+    "brick_colour_hex": "#C8A830",
+    "brick_bond": "concealed by paint/siding",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Exile Vintage storefront with large display window and security grille"},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "brown", "arch": "flat", "width_ratio": 0.15, "height_m_est": 1.2},
+      {"floor": "gable", "count": 1, "type": "small fixed", "frame_colour": "brown", "arch": "flat", "width_ratio": 0.10, "height_m_est": 0.6}
+    ],
+    "doors": [
+      {"position": "right", "type": "commercial glass with security grille", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "black"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 40,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": true, "type": "small fixed rectangular"},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 70,
+      "signage_text": "EXILE (large red/yellow letters); blue and white striped awning with yellow sawtooth trim",
+      "awning": {"present": true, "type": "fixed fabric", "colour": "blue and white stripes with yellow trim"},
+      "entrance_position": "right",
+      "security_grille": true,
+      "notes": "Exile Vintage shop. Striking yellow facade paint on brick surround. Blue/white striped awning with zigzag yellow bottom edge."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": true,
+      "brackets": false,
+      "dentil_course": false,
+      "gable_mural": "folk-art mural with flying horses, birds, and stars on dark brown background, large red EXILE letters"
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#C8A830",
+      "trim": "#E0D020",
+      "roof": "#5A5A5A",
+      "accent": "#1A3A8A"
+    },
+    "condition": "fair",
+    "condition_notes": "Facade heavily painted yellow over original brick. Gable features same folk-art mural as #58 (horses, birds, stars). EXILE lettering in red with yellow. Blue/white striped awning distinctive. Security diamond grille on storefront. Property For Sale sign visible on adjacent unit.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 200,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013127060_HDR.jpg",
+    "address": "67 Kensington Ave",
+    "storeys": 1,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0],
+    "facade_material": "painted wood/metal storefront",
+    "brick_colour_hex": null,
+    "brick_bond": "n/a",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "full-width storefront display windows with diamond security grilles"}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark brown"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 100,
+      "signage_text": "KENSINGTON LEATHER FASHION (partially visible on window); 67 (address number visible on fascia)",
+      "awning": {"present": true, "type": "retractable fabric", "colour": "orange and white stripes"},
+      "entrance_position": "center",
+      "security_grille": true,
+      "notes": "Single-storey commercial building. Two large display windows flanking central door. Yellow trim band above awning line. Graffiti on bulkhead panels below windows (blue/white paint, tags)."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#5A4A3A",
+      "trim": "#D4A020",
+      "roof": "#4A4A4A",
+      "accent": "#C87040"
+    },
+    "condition": "poor",
+    "condition_notes": "Single storey heavily modified commercial building. Striped awning faded and sagging. Diamond security grilles on all openings. Graffiti tags on bulkhead panels. Blue/white painted base panels peeling. Purple/blue mural visible on left party wall. Overall appearance worn.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 100,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013136809_HDR.jpg",
+    "address": "64 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.9],
+    "facade_material": "brick",
+    "brick_colour_hex": "#C8A878",
+    "brick_bond": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "full storefront with Tutti Frutti signage and display windows"},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "dark brown", "arch": "flat", "width_ratio": 0.18, "height_m_est": 1.4}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark brown"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "TUTTI FRUTTI FAMOUS FOODS INC. - DRY FRUITS & NUTS, IMPORTED & DOMESTIC, CHEESE, COLD CUTS, EUROPEAN DELICATESSEN",
+      "awning": {"present": true, "type": "fixed box illuminated", "colour": "white/black with black text"},
+      "entrance_position": "center",
+      "security_grille": true,
+      "notes": "European delicatessen. Box-style illuminated sign with detailed text. Display windows showing products. Upper floor shows buff/cream brick with two windows. Graffiti on right party wall area. Adjacent signage for Kalle's visible."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#C8A878",
+      "trim": "#3A2A20",
+      "roof": "#4A4A4A",
+      "accent": "#F0F0F0"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper brick appears in reasonable condition, buff/cream colour. Storefront modernized with illuminated box sign. Graffiti tags visible on adjacent surfaces. Security grilles present. Some surface grime on brick.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013156513_HDR.jpg",
+    "address": "66 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#C8B878",
+    "brick_bond": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "BAZAAR Gift Shop storefront with large display window"},
+      {"floor": "second", "count": 1, "type": "4-pane fixed", "frame_colour": "white", "arch": "flat", "width_ratio": 0.25, "height_m_est": 1.3}
+    ],
+    "doors": [
+      {"position": "right", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 80,
+      "signage_text": "BAZAAR (visible on sign/window area)",
+      "awning": {"present": false},
+      "entrance_position": "right",
+      "security_grille": false,
+      "notes": "Large display window occupies most of ground floor. Upper floor shows buff/cream brick with single wide 4-pane window. Building appears narrow."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#C8B878",
+      "trim": "#F0EDE8",
+      "roof": "#4A4A4A",
+      "accent": "#2A2A2A"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper brick appears buff/cream, reasonably maintained. Storefront modernized. Night lighting makes colour assessment approximate. Building appears relatively narrow compared to neighbours.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013207264_HDR.jpg",
+    "address": "71 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.9],
+    "facade_material": "wood clapboard / painted wood",
+    "brick_colour_hex": null,
+    "brick_bond": "n/a",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 1, "type": "large storefront window with mullions", "frame_colour": "dark brown", "arch": "flat", "width_ratio": 0.45, "height_m_est": 2.0},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "white", "arch": "flat", "width_ratio": 0.15, "height_m_est": 1.2}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "brown"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 65,
+      "signage_text": "unclear at night, possibly vacant or small shop",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": false,
+      "notes": "Red vertical pilaster/column divides facade between storefront and residential section. Large multi-pane storefront window on right. Left side has wood clapboard siding with two residential windows. Graffiti on right party wall."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": false,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#B09060",
+      "trim": "#8A2020",
+      "roof": "#4A4A4A",
+      "accent": "#8A2020"
+    },
+    "condition": "poor",
+    "condition_notes": "Wood clapboard siding showing age and wear. Red-painted vertical pilaster/column accent. Storefront window multipane appears original or heritage-style. Graffiti visible on adjacent wall. Overall tired appearance. Utility wires prominent.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013425709_HDR.jpg",
+    "address": "73 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.9],
+    "facade_material": "painted brick / stucco",
+    "brick_colour_hex": "#D4C8A0",
+    "brick_bond": "concealed by paint",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "TribalEye storefront with three-panel display window and door"},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "white", "arch": "flat", "width_ratio": 0.15, "height_m_est": 1.3}
+    ],
+    "doors": [
+      {"position": "center-right", "type": "commercial glass", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "black"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 60,
+      "signage_text": "TRIBAL EYE - LITE UP",
+      "awning": {"present": false},
+      "entrance_position": "center-right",
+      "security_grille": false,
+      "notes": "Distinctive yellow-painted storefront surround with green zigzag/sawtooth decorative trim at top. Three-panel display window. TRIBAL written vertically on left pilaster, EYE below. LITE UP written on right side. Decorative eye symbol. Upper floor is cream/beige painted brick or stucco with two standard windows."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "painted_decorative_trim": "green zigzag/sawtooth band above storefront"
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#D4C8A0",
+      "trim": "#F0F0F0",
+      "roof": "#4A4A4A",
+      "accent": "#E8C820"
+    },
+    "condition": "fair",
+    "condition_notes": "Facade painted cream/beige. Storefront surround painted bright yellow with distinctive green zigzag trim. Display windows clean. Upper windows appear functional. No grilles. Some wear on painted surfaces.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013439108_HDR.jpg",
+    "address": "75 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.9],
+    "facade_material": "painted metal/wood panel",
+    "brick_colour_hex": null,
+    "brick_bond": "n/a",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "storefront entirely covered with graffiti/mural art and painted panels"},
+      {"floor": "second", "count": 1, "type": "1-over-1", "frame_colour": "white", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.2}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial metal", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "black/painted"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 70,
+      "signage_text": "75 (address visible in yellow); storefront appears to be a small shop or closed unit",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": false,
+      "notes": "Ground floor almost entirely covered in black paint and large-scale silver/white graffiti artwork. Small display window at bottom. Address 75 visible in yellow paint. Upper floor shows cream/beige painted wall with single window. Left side of building shows painted stucco with scoring pattern visible."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#D0C8B0",
+      "trim": "#F0F0F0",
+      "roof": "#4A4A4A",
+      "accent": "#1A1A1A"
+    },
+    "condition": "poor",
+    "condition_notes": "Ground floor entirely covered in graffiti/street art - black painted surface with large silver/white tag. Original facade material completely concealed at ground level. Upper floor painted cream/beige shows scored pattern suggesting stucco over masonry. Red cone visible at base. Adjacent to TribalEye (#73) with yellow trim partially visible.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 100,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013447014_HDR.jpg",
+    "address": "76 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "painted brick",
+    "brick_colour_hex": "#D8D0C0",
+    "brick_bond": "running bond (visible through paint)",
+    "mortar_colour": "concealed by paint",
+    "polychromatic_brick": true,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Global Cheese Shoppe storefront with two large display windows flanking central entrance"},
+      {"floor": "second", "count": 3, "type": "1-over-1", "frame_colour": "white", "arch": "flat", "width_ratio": 0.14, "height_m_est": 1.3}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass with security grille", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark green/black"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "GLOBAL CHEESE - WHEN IT COMES TO CHEESE..... WE SPEAK YOUR LANGUAGE!",
+      "awning": {"present": true, "type": "fixed illuminated box sign", "colour": "blue background with white text and Global Cheese logo"},
+      "entrance_position": "center",
+      "security_grille": true,
+      "notes": "Iconic Kensington Market cheese shop. Large blue illuminated sign spans full storefront width. Two large display windows with products visible, decorated with Christmas wreaths. Central entrance with diamond security grille. Canadian flag visible in upper floor window. Small Global Cheese sign also on upper floor. Painted white/cream brick with diamond decorative patterns visible in brickwork."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "diamond_brick_patterns": true,
+      "diamond_pattern_note": "Small diamond/lozenge patterns visible in painted brick facade at upper level, indicating decorative polychromatic brickwork beneath paint"
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#D8D0C0",
+      "trim": "#F0EDE8",
+      "roof": "#4A4A4A",
+      "accent": "#1A3A8A"
+    },
+    "condition": "good",
+    "condition_notes": "Well-maintained commercial property. Painted brick in good condition. Iconic signage intact and illuminated. Display windows well-kept. Diamond decorative brick patterns visible through paint suggest heritage detail. Canadian flag displayed. Christmas wreaths on display windows suggest active seasonal dressing. Upper floor windows functional.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013450968_HDR.jpg",
+    "address": "76 Kensington Ave (second angle)",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "painted brick",
+    "brick_colour_hex": "#D8D0C0",
+    "brick_bond": "running bond (visible through paint)",
+    "mortar_colour": "concealed by paint",
+    "polychromatic_brick": true,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Global Cheese storefront - oblique angle showing full signage and display"},
+      {"floor": "second", "count": 3, "type": "1-over-1", "frame_colour": "white", "arch": "flat", "width_ratio": 0.14, "height_m_est": 1.3}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass with security grille", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark green/black"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "GLOBAL CHEESE - WHEN IT COMES TO CHEESE..... WE SPEAK YOUR LANGUAGE!",
+      "awning": {"present": true, "type": "fixed illuminated box sign", "colour": "blue background with white text"},
+      "entrance_position": "center",
+      "security_grille": true,
+      "notes": "Oblique angle confirms: blue illuminated sign, central grille door, two display windows with wreaths. Upper floor shows 3 windows, one with Canadian flag. Diamond brick patterns more clearly visible from this angle - approximately 4 diamond motifs across upper facade. Right party wall shows plain masonry."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "diamond_brick_patterns": true,
+      "diamond_count_est": 4
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#D8D0C0",
+      "trim": "#F0EDE8",
+      "roof": "#4A4A4A",
+      "accent": "#1A3A8A"
+    },
+    "condition": "good",
+    "condition_notes": "Same building as previous angle. Oblique view confirms diamond decorative brickwork patterns in painted surface. Right party wall visible - plain light-coloured masonry. Upper windows evenly spaced. Building well-maintained for commercial use.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013506039_HDR.jpg",
+    "address": "74 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#C89858",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Blissie storefront with large blue-painted display window and security grille"},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "white", "arch": "flat", "width_ratio": 0.16, "height_m_est": 1.3}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "light blue"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 75,
+      "signage_text": "Blissie (light blue sign with yellow dot on 'i')",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": true,
+      "notes": "Storefront painted light blue (baby blue). Large display window with horizontal security grille. Blissie sign with playful typography. Upper floor has buff/golden brick with two windows. Third floor partially visible with pink/mauve painted wall and metal balcony railing (possibly belonging to this or adjacent building). Adjacent to Global Cheese (#76) on left."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#C89858",
+      "trim": "#F0EDE8",
+      "roof": "#4A4A4A",
+      "accent": "#7AB8D8"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper floor buff/golden brick in reasonable condition. Storefront painted baby blue, modern commercial fit-out. Horizontal security grille bars (not diamond pattern). Pink/mauve wall visible at top may be third floor or adjacent. Metal balcony railing visible at upper level.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013514331_HDR.jpg",
+    "address": "80 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#C89050",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Love, Calista storefront with large multi-pane display window"},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "dark brown", "arch": "flat", "width_ratio": 0.16, "height_m_est": 1.3}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 0.85, "transom": false, "steps": 1, "colour": "pink/mauve"},
+      {"position": "right", "type": "security grille door", "width_m_est": 0.8, "transom": false, "steps": 0, "colour": "black"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 80,
+      "signage_text": "LOVE, CALISTA - Cute Little Cute Things (pink mural with checkerboard pattern and flowers)",
+      "awning": {"present": true, "type": "fixed scalloped fabric", "colour": "white with scalloped edge"},
+      "entrance_position": "left",
+      "security_grille": false,
+      "notes": "Corner/end-of-terrace building. Large multi-pane display window (approximately 4x4 grid). Pink-painted storefront with elaborate mural signage featuring checkerboard pattern, flowers, and cursive text. White scalloped awning above display window. Upper floor shows buff/golden brick with two windows. Small black awning on left side entrance."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": false,
+    "colour_palette": {
+      "facade": "#C89050",
+      "trim": "#3A2A20",
+      "roof": "#4A4A4A",
+      "accent": "#E8A0B0"
+    },
+    "condition": "good",
+    "condition_notes": "Well-maintained commercial property. Upper brick facade in good condition. Storefront attractively decorated with pink mural and scalloped white awning. Large display window clean and well-dressed. Address '80' visible. Night photo but building well-lit.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 150,
+      "step_count": 1
+    }
+  },
+  {
+    "filename": "IMG_20260320_013528716_HDR.jpg",
+    "address": "77-79 Kensington Ave",
+    "storeys": 3,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85, 0.85],
+    "facade_material": "painted stucco/render",
+    "brick_colour_hex": null,
+    "brick_bond": "n/a",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "two commercial storefronts - Blaze District Cannabis and Dirty Bird Chicken & Waffles"},
+      {"floor": "second", "count": 4, "type": "6-over-6", "frame_colour": "white", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.5},
+      {"floor": "third", "count": 4, "type": "6-over-6", "frame_colour": "white", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.5}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "black", "note": "Blaze District entrance"},
+      {"position": "center", "type": "residential access", "width_m_est": 0.8, "transom": false, "steps": 0, "colour": "dark"},
+      {"position": "right", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "black", "note": "Dirty Bird entrance"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 90,
+      "signage_text": "DIRTY BIRD - CHICKEN + WAFFLES (right); BLAZE DISTRICT CANNABIS (left, with phone 437-580-7418)",
+      "awning": {"present": true, "type": "fixed box", "colour": "black"},
+      "entrance_position": "distributed",
+      "security_grille": false,
+      "notes": "Large 3-storey building with two ground-floor commercial units. Dirty Bird occupies right side with illuminated signs and menu boards. Blaze District Cannabis on left with colourful cannabis-themed signage and backlit display. Upper two floors have matching 6-over-6 sash windows, 4 per floor, painted white frames on cream/white stucco facade. Building wider than typical Kensington row houses."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": true, "projection_mm": 100, "height_mm": 200, "colour_hex": "#E8E0D0", "note": "simple projecting cornice at roofline"},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#E8E0D0",
+      "trim": "#F0F0F0",
+      "roof": "#4A4A4A",
+      "accent": "#2A2A2A"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper floors painted stucco/render in cream/white. Windows appear heritage 6-over-6 pattern, well-maintained white frames. Ground floor heavily commercialized with modern signage. Some staining visible on upper facade. Overall structurally sound appearance. Large building by Kensington standards.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 200,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013538087_HDR.jpg",
+    "address": "181 Baldwin St / 77 Kensington Ave corner",
+    "note": "This file was not found at the Kensington Ave path but was found at Kensington Ave _ Baldwin St path",
+    "storeys": 3,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85, 0.85],
+    "facade_material": "painted stucco/render",
+    "brick_colour_hex": null,
+    "brick_bond": "n/a",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Fun Guyz Magic Mushroom storefront with colourful graffiti-art facade"},
+      {"floor": "second", "count": 3, "type": "6-over-6", "frame_colour": "white", "arch": "flat", "width_ratio": 0.14, "height_m_est": 1.5},
+      {"floor": "third", "count": 3, "type": "6-over-6", "frame_colour": "white", "arch": "flat", "width_ratio": 0.14, "height_m_est": 1.5}
+    ],
+    "doors": [
+      {"position": "corner", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "black"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 100,
+      "signage_text": "FUN GUYZ - MAGIC MUSHROOMS; PREMIUM CANNABIS (with phone 437-580-7418); products listed: VAPES, HASH, FLOWERS, GUMMIES, CHOCOLATES, INFUSED PREROLLS",
+      "awning": {"present": false},
+      "entrance_position": "corner",
+      "security_grille": false,
+      "notes": "Corner unit of the same 3-storey building as 77-79 Kensington. Baldwin St elevation. Ground floor wrapped in colourful cartoon/pop-art graffiti style murals. Premium Cannabis illuminated sign board on right. Fun Guyz signage prominent. Upper two floors cream/white stucco with 6-over-6 heritage-style windows matching the Kensington Ave elevation."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": true, "projection_mm": 100, "height_mm": 200, "colour_hex": "#E8E0D0"},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": false,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#E8E0D0",
+      "trim": "#F0F0F0",
+      "roof": "#4A4A4A",
+      "accent": "#E8C820"
+    },
+    "condition": "fair",
+    "condition_notes": "Same building as 77-79 Kensington Ave, Baldwin St elevation. Upper floors cream stucco in fair condition. Ground floor entirely wrapped in colourful pop-art murals and commercial signage. Heritage windows visible on upper floors. Street light and utility wires prominent.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 200,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "PXL_20260318_223334974.jpg",
+    "address": "80 Kensington Ave",
+    "note": "DAYTIME photo - best colour reference for this building",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#C8985C",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Love Calista storefront - large multi-pane display window with pink painted surround"},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "dark brown/black", "arch": "flat", "width_ratio": 0.16, "height_m_est": 1.3}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 0.85, "transom": false, "steps": 1, "colour": "teal/dark green"},
+      {"position": "right", "type": "residential/secondary", "width_m_est": 0.8, "transom": false, "steps": 0, "colour": "dark green"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 80,
+      "signage_text": "LOVE CALISTA - Cute Little Cute Things (pink hand-painted mural with pink/white checkerboard, flowers, stars)",
+      "awning": {"present": true, "type": "fixed scalloped fabric", "colour": "white with scalloped/wavy edge"},
+      "entrance_position": "left",
+      "security_grille": false,
+      "notes": "DAYTIME REFERENCE: Corner building clearly visible. Upper floor is golden/buff brick in running bond, daylight confirms hex ~#C8985C. Two second-floor windows with dark frames. Large storefront window (approx 4x4 pane grid) with white scalloped awning above. Entire storefront surround painted pink (approx #E8A0B0 in daylight). Pink mural extends above storefront to brick line with 'Love Calista' text, flowers, and checkerboard pattern. Left entrance door with '80' address number. Small black triangular awning over left door. Neon 'Open' sign visible. Adjacent building to right shows different business (A Skye Jewelry visible). Street view shows looking south down Kensington Ave with parked cars. Light pole in foreground."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": false,
+    "colour_palette": {
+      "facade": "#C8985C",
+      "trim": "#3A3020",
+      "roof": "#4A4A4A",
+      "accent": "#E8A0B0"
+    },
+    "condition": "good",
+    "condition_notes": "Daytime view confirms building in good condition. Buff/golden brick clean and intact on upper floor. Pink-painted storefront well-maintained. Scalloped awning clean and white. Display windows clean. Address number clearly visible. This is the best colour reference for this building - nighttime photos skew warm due to sodium lighting.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 150,
+      "step_count": 1
+    }
+  },
+  {
+    "filename": "IMG_20260320_012951226_HDR.jpg",
+    "address": "Kensington Ave streetscape (south end near Dundas)",
+    "note": "Streetscape overview, not a single building facade",
+    "storeys": null,
+    "has_half_storey_gable": null,
+    "floor_height_ratios": null,
+    "facade_material": "mixed",
+    "brick_colour_hex": null,
+    "brick_bond": "n/a",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [],
+    "doors": [],
+    "roof_type": "mixed",
+    "roof_pitch_deg": null,
+    "roof_material": "mixed",
+    "roof_colour_hex": null,
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": null,
+      "signage_text": "Last Pint Vintage (left corner building); various other signage",
+      "awning": {"present": false},
+      "entrance_position": null,
+      "security_grille": true,
+      "notes": "Wide street-level view looking north up Kensington Ave from near Dundas St. Left foreground: corner building with vivid red/orange demonic mural covering ground floor (Last Pint Vintage). Blue/purple car parked in front. Background: row of 2-storey buildings visible including flat-roofed commercial blocks and at least one gable-roofed building with decorative Victorian bargeboard (visible on right side of image). Street is empty at night. Multiple gable profiles visible in background skyline. This photo is useful for establishing street rhythm, building heights, and skyline silhouette."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": null,
+    "party_wall_right": null,
+    "colour_palette": {
+      "facade": null,
+      "trim": null,
+      "roof": null,
+      "accent": null
+    },
+    "condition": "fair",
+    "condition_notes": "Streetscape view showing typical Kensington Market character. Mix of 1-2-3 storey buildings. Corner building entirely wrapped in vivid red/orange/purple mural art. Background buildings show mix of flat and gable roofs. At least two Victorian gable profiles visible in skyline (right side). Street has typical market atmosphere with informal commercial modifications.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": null,
+      "eave_overhang_mm_est": null,
+      "step_count": null
+    },
+    "streetscape_notes": {
+      "view_direction": "north up Kensington Ave",
+      "approximate_location": "near Dundas St W intersection",
+      "buildings_visible": "5-8 buildings on both sides",
+      "skyline_features": "at least 2 Victorian gable profiles visible, 1 decorative bargeboard, mix of flat roofs",
+      "street_character": "narrow market street, informal commercial, heavy mural/graffiti art"
+    }
+  },
+  {
+    "filename": "IMG_20260320_013538087_HDR.jpg",
+    "address": "181 Baldwin St / 77 Kensington Ave corner (from Kensington Ave _ Baldwin St folder)",
+    "note": "Corner view from Baldwin St side - same building as entry 16 but different folder path. Shows Baldwin St elevation more clearly.",
+    "storeys": 3,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85, 0.85],
+    "facade_material": "painted stucco/render",
+    "brick_colour_hex": null,
+    "brick_bond": "n/a",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Fun Guyz storefront wrapped in pop-art murals"},
+      {"floor": "second", "count": 4, "type": "6-over-6", "frame_colour": "white", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.5},
+      {"floor": "third", "count": 3, "type": "6-over-6", "frame_colour": "white", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.5}
+    ],
+    "doors": [
+      {"position": "corner", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "black"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 100,
+      "signage_text": "FUN GUYZ - MAGIC MUSHROOMS; PREMIUM CANNABIS 437-580-7418; VAPES, HASH, FLOWERS, GUMMIES, CHOCOLATES, INFUSED PREROLLS",
+      "awning": {"present": false},
+      "entrance_position": "corner",
+      "security_grille": false,
+      "notes": "Baldwin St elevation of corner building. This angle shows more of the Baldwin frontage. Ground floor features colourful cartoon pop-art graffiti covering all surfaces. Premium Cannabis illuminated display board on right side. Fun Guyz branding in colourful letters. Upper floors cream/white stucco with heritage-pattern 6-over-6 windows. Window count may differ between Kensington and Baldwin elevations. Street light and utility pole prominent. Perspective shows the building wrapping the corner."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": true, "projection_mm": 100, "height_mm": 200, "colour_hex": "#E8E0D0"},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": false,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#E8E0D0",
+      "trim": "#F0F0F0",
+      "roof": "#4A4A4A",
+      "accent": "#E8C820"
+    },
+    "condition": "fair",
+    "condition_notes": "Baldwin St view of corner building. Same condition as Kensington Ave elevation. Upper stucco in fair condition with minor staining. Heritage windows intact. Ground floor completely commercialized with pop-art wrap.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 200,
+      "step_count": 0
+    }
+  }
+]

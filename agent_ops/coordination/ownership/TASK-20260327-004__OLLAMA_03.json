@@ -1,0 +1,11 @@
+{
+  "task_id": "TASK-20260327-004__OLLAMA_03",
+  "owner": "ollama-local-1",
+  "parent_task": "TASK-20260327-004",
+  "write_scope": [
+    "scripts/revise_params_from_db.py",
+    "scripts/verify_alignment.py",
+    "outputs"
+  ],
+  "assigned_at": "2026-03-27T17:28:44.986171+00:00"
+}

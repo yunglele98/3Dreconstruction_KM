@@ -20,17 +20,17 @@
     "lot_coverage_pct": 70.9,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys",
   "windows_per_floor": [
     0,
-    2,
-    1
+    4,
+    4
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -42,14 +42,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900–1930",
+    "construction_period": "c. 1900\u20131930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 12,
-    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -105,15 +105,86 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "438 Spadina Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "438 SPADINA AVE"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.72,
+        "timestamp": "2026-03-29T07:31:01.578872+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.72,
+        "timestamp": "2026-03-29T07:44:25.780422+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:07.443022+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (unknown)",
+          "arch_type filled (unknown)",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:54.078113+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:40.925976+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Spadina Ave",
+        "timestamp": "2026-03-29T07:48:46.082550+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:21.284488Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:47.030231+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:16.446841Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #544C4C",
+        "trim": "#E8E0D0 \u2192 #33251C",
+        "accent": "#3A2A20 \u2192 #493626",
+        "mortar": "#B0A898 \u2192 #B1A898"
+      }
     ]
   },
   "storefront": {
@@ -121,7 +192,21 @@
     "status": "active",
     "width_m": 5.2,
     "height_m": 3.9,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 5.49,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    },
+    "signage": {
+      "text": "Toronto Hair Care Inc. | JJ INTERNATIONAL | Emmo Ebikes Toronto | Dragon World Trading",
+      "type": "fascia",
+      "width_m": 4.0,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys",
@@ -143,7 +228,7 @@
     "door_type": "storefront",
     "door_width_m": 0.9,
     "door_height_m": 2.4,
-    "door_details": "Multiple commercial entries — Sahar International double-width entry, Yesrider entry with security gate, and likely a separate residential lobby",
+    "door_details": "Multiple commercial entries \u2014 Sahar International double-width entry, Yesrider entry with security gate, and likely a separate residential lobby",
     "ground_floor_arches": "none",
     "ground_floor_arch_count": 0,
     "cornice": "simple",
@@ -172,7 +257,8 @@
     "alterations_visible": "Modern commercial storefronts with contemporary signage; extensive graffiti on ground-floor glazing; security gate on Yesrider unit",
     "matches_hcd_typology": true,
     "confidence": 0.72,
-    "notes": "Night photos limit colour accuracy. Best views from IMG_20260316_003541905_HDR.jpg (across street) and IMG_20260316_003630342_HDR.jpg (Sahar storefront close-up)."
+    "notes": "Night photos limit colour accuracy. Best views from IMG_20260316_003541905_HDR.jpg (across street) and IMG_20260316_003630342_HDR.jpg (Sahar storefront close-up).",
+    "photo": "IMG_20260316_003630342_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "storefront",
@@ -194,7 +280,7 @@
   "decorative_lintels": false,
   "overall_style": "Commercial",
   "storefront_description": "Two distinct ground-floor commercial units: Sahar International (luggage, perfumes, Canada souvenirs with Canadian flag window posters) and Yesrider e-bike Parts & Service Center with security gate",
-  "confidence": 0.8700000000000001,
+  "confidence": 0.9,
   "notes": "Night photos limit colour accuracy. Best views from IMG_20260316_003541905_HDR.jpg (across street) and IMG_20260316_003630342_HDR.jpg (Sahar storefront close-up).",
   "porch_present": false,
   "porch_type": "none",
@@ -204,7 +290,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "left",
       "width_m": 0.9,
       "height_m": 2.4,
@@ -212,11 +298,14 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     },
     {
       "id": "door_1",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "right",
       "width_m": 0.9,
       "height_m": 2.4,
@@ -224,11 +313,14 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     },
     {
       "id": "door_2",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "right",
       "width_m": 0.9,
       "height_m": 2.4,
@@ -236,7 +328,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "decorative_elements": {
@@ -271,14 +366,16 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#8A8A8A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#33251C",
     "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
-    "opening_rhythm": "The facade is organized as a storefront base with 4 upper-window bays and 8 additional bays above, using mixed, and 3 principal entrances.",
-    "heritage_expression": "Character-defining facade elements include string courses, cornice."
+    "opening_rhythm": "The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using mixed, and 3 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include string courses, cornice.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#B1A898"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -290,13 +387,14 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 4,
-          "type": "mixed",
+          "count": 0,
+          "type": "storefront",
           "width_m": 0.9,
-          "height_m": 1.4,
+          "height_m": 2.0,
           "sill_height_m": 1.0,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "plate",
+          "arch_type": "flat"
         }
       ]
     },
@@ -310,7 +408,8 @@
           "height_m": 1.1,
           "sill_height_m": 0.9,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -319,26 +418,99 @@
       "windows": [
         {
           "count": 4,
-          "type": "mixed",
+          "type": "fixed",
           "width_m": 0.5,
           "height_m": 0.6,
           "sill_height_m": 1.0,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "fixed",
+          "arch_type": "flat"
         }
       ]
     }
   ],
   "street_setback_m": 0.5,
-  "facade_description": "438 Spadina Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as mixed in a beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 8 additional bays above, using mixed, and 3 principal entrances. Character-defining facade elements include string courses, cornice.",
+  "facade_description": "438 Spadina Ave is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as mixed in a beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using mixed, and 3 principal entrances. Character-defining facade elements include string courses, cornice.",
   "roof_material": "Built-up tar and gravel",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A8A8A",
+    "trim": "#33251C",
+    "roof": "#544C4C",
+    "accent": "#493626"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260316_003630342_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#8A8A8A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 0,
+            "type": "storefront",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 4,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.1,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Attic / gable",
+        "windows": [
+          {
+            "count": 4,
+            "type": "fixed",
+            "width_m": 0.5,
+            "height_m": 0.6,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "fixed"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "pilasters",
+      "string_courses",
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

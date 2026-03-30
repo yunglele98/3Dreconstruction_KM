@@ -1,0 +1,474 @@
+{
+  "batch_id": "batch_003",
+  "count": 50,
+  "buildings": [
+    {
+      "param_file": "20_1_2_Bellevue_Ave.json",
+      "building_name": "20 1/2 Bellevue Ave",
+      "address": "20 1/2 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_161056395_HDR.jpg",
+        "IMG_20260320_161100913_HDR.jpg",
+        "IMG_20260320_161113683_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "20_St_Andrew_St.json",
+      "building_name": "20 St Andrew St",
+      "address": "20 St Andrew St",
+      "photos": [
+        "IMG_20260315_163719882_HDR.jpg",
+        "IMG_20260315_163727725_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "218R_Augusta_Ave.json",
+      "building_name": "218R Augusta Ave",
+      "address": "218R Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "219_Augusta_Ave.json",
+      "building_name": "219 Augusta Ave",
+      "address": "219 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "21_Casimir_St.json",
+      "building_name": "21 Casimir St",
+      "address": "21 Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "21_Wales_Ave.json",
+      "building_name": "21 Wales Ave",
+      "address": "21 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "21A_Casimir_St.json",
+      "building_name": "21A Casimir St",
+      "address": "21A Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "221_Augusta_Ave.json",
+      "building_name": "221 Augusta Ave",
+      "address": "221 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "223_Augusta_Ave.json",
+      "building_name": "223 Augusta Ave",
+      "address": "223 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "225_Augusta_Ave.json",
+      "building_name": "225 Augusta Ave",
+      "address": "225 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "227_Augusta_Ave.json",
+      "building_name": "227 Augusta Ave",
+      "address": "227 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "228_Augusta_Ave.json",
+      "building_name": "228 Augusta Ave",
+      "address": "228 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "237_Augusta_Ave.json",
+      "building_name": "237 Augusta Ave",
+      "address": "237 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "23_Casimir_St.json",
+      "building_name": "23 Casimir St",
+      "address": "23 Casimir St",
+      "photos": [
+        "IMG_20260320_162122530_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "23_Wales_Ave.json",
+      "building_name": "23 Wales Ave",
+      "address": "23 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "23A_Casimir_St.json",
+      "building_name": "23A Casimir St",
+      "address": "23A Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "241_Augusta_Ave.json",
+      "building_name": "241 Augusta Ave",
+      "address": "241 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "242_Augusta_Ave.json",
+      "building_name": "242 Augusta Ave",
+      "address": "242 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "243_Augusta_Ave.json",
+      "building_name": "243 Augusta Ave",
+      "address": "243 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "251_Augusta_Ave.json",
+      "building_name": "251 Augusta Ave",
+      "address": "251 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "252_Augusta_Ave.json",
+      "building_name": "252 Augusta Ave",
+      "address": "252 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "256C_Augusta_Ave.json",
+      "building_name": "256C Augusta Ave",
+      "address": "256C Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "256D_Augusta_Ave.json",
+      "building_name": "256D Augusta Ave",
+      "address": "256D Augusta Ave",
+      "photos": [
+        "IMG_20260318_142637039_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "257_Augusta_Ave_The_Organice_Press_-_side_on_Nassau_St.json",
+      "building_name": "257 Augusta Ave The Organice Press - side on Nassau St",
+      "address": "257 Augusta Ave The Organice Press - side on Nassau St",
+      "photos": [
+        "IMG_20260316_014310887_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "258_Augusta_Ave.json",
+      "building_name": "258 Augusta Ave",
+      "address": "258 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "25_Casimir_St.json",
+      "building_name": "25 Casimir St",
+      "address": "25 Casimir St",
+      "photos": [
+        "IMG_20260320_162017009_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "25_Oxford_St.json",
+      "building_name": "25 Oxford St",
+      "address": "25 Oxford St",
+      "photos": [
+        "IMG_20260316_003814798_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "25_Wales_Ave.json",
+      "building_name": "25 Wales Ave",
+      "address": "25 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "25A_Casimir_St.json",
+      "building_name": "25A Casimir St",
+      "address": "25A Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "267_Augusta_Ave.json",
+      "building_name": "267 Augusta Ave",
+      "address": "267 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "26_Bellevue_Ave.json",
+      "building_name": "26 Bellevue Ave",
+      "address": "26 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_161038859_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "271_Augusta_Ave.json",
+      "building_name": "271 Augusta Ave",
+      "address": "271 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "277_College_St.json",
+      "building_name": "277 College St",
+      "address": "277 College St",
+      "photos": [
+        "IMG_20260321_013138642_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "277A_Augusta_Ave.json",
+      "building_name": "277A Augusta Ave",
+      "address": "277A Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "27_Casimir_St.json",
+      "building_name": "27 Casimir St",
+      "address": "27 Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "27_Wales_Ave.json",
+      "building_name": "27 Wales Ave",
+      "address": "27 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "27A_Casimir_St.json",
+      "building_name": "27A Casimir St",
+      "address": "27A Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "280_Augusta_Ave.json",
+      "building_name": "280 Augusta Ave",
+      "address": "280 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "281A_Augusta_Ave.json",
+      "building_name": "281A Augusta Ave",
+      "address": "281A Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "282_Augusta_Ave.json",
+      "building_name": "282 Augusta Ave",
+      "address": "282 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "289_College_St.json",
+      "building_name": "289 College St",
+      "address": "289 College St",
+      "photos": [
+        "IMG_20260321_013200818_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "292_Spadina_Ave.json",
+      "building_name": "292 Spadina Ave",
+      "address": "292 Spadina Ave",
+      "photos": [
+        "IMG_20260320_213856060_HDR.jpg",
+        "IMG_20260320_213920673_HDR.jpg",
+        "IMG_20260320_213939684_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "294-296_Spadina_Ave.json",
+      "building_name": "294-296 Spadina Ave",
+      "address": "294-296 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "294_Spadina_Ave.json",
+      "building_name": "294 Spadina Ave",
+      "address": "294 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "295_College_St.json",
+      "building_name": "295 College St",
+      "address": "295 College St",
+      "photos": [
+        "IMG_20260321_013250856_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "296_Spadina_Ave.json",
+      "building_name": "296 Spadina Ave",
+      "address": "296 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "297_College_St.json",
+      "building_name": "297 College St",
+      "address": "297 College St",
+      "photos": [
+        "IMG_20260321_013321378_HDR.jpg",
+        "IMG_20260321_013327971_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "298-300_Spadina_Ave.json",
+      "building_name": "298-300 Spadina Ave",
+      "address": "298-300 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "298_Spadina_Ave.json",
+      "building_name": "298 Spadina Ave",
+      "address": "298 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "298A_Spadina_Ave.json",
+      "building_name": "298A Spadina Ave",
+      "address": "298A Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    }
+  ]
+}

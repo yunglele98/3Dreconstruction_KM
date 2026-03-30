@@ -1,0 +1,122 @@
+{
+  "task_id": "TASK-20260327-020",
+  "agent": "gemini-1",
+  "timestamp": "2026-03-28T02:10:00Z",
+  "summary": "Audited 1241 buildings for colour consistency and era-appropriateness. Found 11 issues.",
+  "findings": [
+    {
+      "address": "12 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "14 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "173 Baldwin St",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "200A Baldwin St",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "38 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "40 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "42 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "44 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "46 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "67 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    },
+    {
+      "address": "71 Kensington Ave",
+      "field": "colour_palette.trim",
+      "status": "era_mismatch",
+      "expected": "Light (Cream/White)",
+      "actual": "#3A2A20",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Post-1914 building has dark trim (#3A2A20)."
+    }
+  ],
+  "coverage": {
+    "buildings_checked": 1241,
+    "issues_found": 11
+  }
+}

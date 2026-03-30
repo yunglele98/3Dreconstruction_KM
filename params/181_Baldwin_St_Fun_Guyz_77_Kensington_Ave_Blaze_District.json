@@ -9,10 +9,10 @@
   "total_height_m": 10.5,
   "facade_width_m": 10.0,
   "facade_depth_m": 20.0,
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Clapboard",
+  "facade_material": "clapboard",
   "facade_colour": "white/cream clapboard upper, colourful pop-art ground floor",
   "windows_per_floor": [
     0,
@@ -33,7 +33,8 @@
     "signage_observed": "FUN GUYZ Magic Mushrooms, Blaze District Cannabis",
     "overall_style": "Vernacular",
     "confidence": 0.65,
-    "notes": "nighttime; corner view of same building as 77-79 Kensington"
+    "notes": "nighttime; corner view of same building as 77-79 Kensington",
+    "photo": "IMG_20260320_013538087_HDR.jpg"
   },
   "_meta": {
     "address": "181 Baldwin St / 77 Kensington Ave",
@@ -51,10 +52,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "hcd_data_stub",
-      "roof_material",
-      "colour_palette",
-      "volumes"
+      "colour_palette"
     ],
     "reference_photos": [
       "IMG_20260320_013538087_HDR.jpg"
@@ -64,10 +62,65 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "181 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "181 BALDWIN ST",
       "77 KENSINGTON AVE"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Baldwin St",
+        "timestamp": "2026-03-29T07:48:29.788697+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:48.847734+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:44.093646+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:15.176823+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:17.483118Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:44.282150+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.315603Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A → #5D5B5B",
+        "trim": "#E8E0D0 → #362C24",
+        "accent": "#1A1A2A → #25252A",
+        "mortar": "#B0A898 → #B3AB9B"
+      }
     ]
   },
   "overall_style": "Vernacular",
@@ -84,7 +137,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     },
     {
       "id": "door_1",
@@ -96,7 +152,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "storefront": {
@@ -112,7 +171,18 @@
     "recessed_entry": false,
     "description": null,
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 8.0,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "party_wall_left": false,
   "party_wall_right": false,
@@ -121,9 +191,11 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#362C24",
     "composition": "The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays and 3 additional bays above, using double hung, and 2 principal entrances."
+    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays and 3 additional bays above, using double hung, and 2 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "mortar_colour_hex": "#B3AB9B"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -136,12 +208,13 @@
       "windows": [
         {
           "count": 3,
-          "type": "double_hung",
+          "type": "storefront",
           "width_m": 0.9,
-          "height_m": 1.4,
+          "height_m": 2.0,
           "sill_height_m": 1.0,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "plate",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -155,33 +228,98 @@
           "height_m": 1.4,
           "sill_height_m": 1.0,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
   ],
-  "decorative_elements": {},
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "projection_mm": 120,
+      "height_mm": 160,
+      "colour_hex": "#5A5040"
+    }
+  },
   "street_setback_m": 2.0,
-  "facade_description": "Wide corner building spanning roughly 10 metres with a flat roof and three storeys. White or cream-painted wood clapboard clads the upper floors, each with three double-hung windows. The ground floor is given over to colourful pop-art commercial storefronts for Fun Guyz (magic mushrooms) and Blaze District (cannabis), with large plate-glass panels and bold signage. Photographed at night from the corner of Baldwin and Kensington; no party walls on either side.",
+  "facade_description": "181 Baldwin St (Fun Guyz) / 77 Kensington Ave (Blaze District) is a commercial building with a street-level storefront. The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by clapboard, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays and 3 additional bays above, using double hung, and 2 principal entrances. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",
     "source": "inferred_from_photo_analysis"
   },
   "roof_material": "Built-up tar and gravel",
-  "colour_palette": {
-    "facade_hex": "#E8D8B0",
-    "trim_hex": "#3A2A20",
-    "roof_hex": "#3A3A3A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
-  },
   "volumes": [],
   "site": {
     "lon": -79.4005039,
     "lat": 43.65466068,
     "street": "Baldwin St",
     "street_number": 181
-  }
+  },
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#362C24",
+    "roof": "#5D5B5B",
+    "accent": "#25252A"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_013538087_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "clapboard",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 3,
+            "type": "storefront",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 3,
+            "type": "double_hung",
+            "width_m": 0.9,
+            "height_m": 1.4,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0
 }

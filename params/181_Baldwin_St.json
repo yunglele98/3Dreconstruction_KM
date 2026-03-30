@@ -20,7 +20,7 @@
     "lot_coverage_pct": 20.7,
     "lots_sharing_footprint": 12
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "brick",
@@ -30,7 +30,7 @@
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -40,7 +40,7 @@
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
@@ -55,13 +55,13 @@
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
     "commercial_use": "Other Commercial",
-    "business_name": "Churrería Calderón",
+    "business_name": "Churrer\u00eda Calder\u00f3n",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -99,16 +99,71 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "181 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "181 BALDWIN ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "eave_overhang_mm: 50",
+      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [0, 2, 1] -> [0, 3]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B08050'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.1"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:48.826397+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:44.079813+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:15.149227+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.479036Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.308808Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 \u2192 #4A3322",
+        "mortar": "#B0A898 \u2192 #AF9E8C"
+      }
     ]
   },
   "storefront": {
@@ -116,7 +171,23 @@
     "status": "vacant",
     "width_m": 4.4,
     "height_m": 5.1,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "FUN GUYZ - MAGIC MUSHROOMS; PREMIUM CANNABIS (with phone 437-580-7418); products listed: VAPES, HASH, FLOWERS, GUMMIES, CHOCOLATES, INFUSED PREROLLS",
+    "awning": {
+      "present": false
+    },
+    "width_pct": 100,
+    "signage": {
+      "text": "Churrer\u00eda Calder\u00f3n",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "agent": "claude-opus-4-6",
@@ -129,14 +200,15 @@
     "signage_observed": "Fun Guyz",
     "overall_style_observed": "Victorian",
     "confidence": 0.4,
-    "notes": "Fun Guyz multi-address photo. Night photo, limited dedicated view in this batch."
+    "notes": "Fun Guyz multi-address photo. Night photo, limited dedicated view in this batch.",
+    "photo": "IMG_20260320_013538087_HDR.jpg"
   },
-  "confidence": 0.6500000000000001,
+  "confidence": 0.7500000000000002,
   "notes": "Fun Guyz multi-address photo. Night photo, limited dedicated view in this batch.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -144,54 +216,51 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B08050",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#4A3322",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#AF9E8C"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 50,
     "gable_window": {
       "present": false
     }
   },
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.8,
-          "sill_height_m": 2.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
-        }
-      ]
-    },
-    {
-      "floor": "Third floor",
-      "windows": [
-        {
-          "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.4,
-          "sill_height_m": 1.9,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "count": 3,
+          "type": "1-over-1 double-hung",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "height_m": 1.2,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -200,6 +269,12 @@
     "bargeboard": {
       "colour_hex": "#3A2A20",
       "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "projection_mm": 100,
+      "height_mm": 200,
+      "colour_hex": "#E8E0D0"
     }
   },
   "chimneys": {
@@ -212,7 +287,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "Three-storey converted row house with a cross-gable roof and a vacant commercial storefront at grade. The upper floors show two double-hung sash windows on the second storey and one in the gable, above a full-width shopfront opening. Brick facade colour is unconfirmed due to limited night-time photo coverage. Assessment records indicate poor condition with missing elements and a neglected street presence. A 'Space For Lease' sign was observed during field survey.",
+  "facade_description": "181 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -221,7 +296,127 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B08050",
+    "trim": "#4A3322",
+    "roof": "#4A4A4A",
+    "accent": "#FFD700"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_013538087_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B08050",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 1,
+        "type": "storefront plate glass",
+        "frame_colour": "white/cream",
+        "arch": "flat",
+        "width_m_est": 2.5,
+        "height_m_est": 2.0,
+        "note": "Large single storefront window spanning most of ground floor width. Food products and sun logo ('Golden Patty') visible inside. Colourful graffiti mural on left side (bulkhead area). Parking meter in front."
+      },
+      {
+        "floor": "second",
+        "count": 3,
+        "type": "1-over-1 double-hung",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_m_est": 0.75,
+        "height_m_est": 1.2,
+        "note": "Three evenly spaced windows in buff/tan brick upper storey. White frames. Clean brick with no decoration."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "right",
+        "type": "commercial glass",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#FFFFFF",
+        "note": "Glass door with white frame on right side of storefront"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 90,
+      "signage_text": "GOLDEN PATTY 416-977-3141",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "right",
+      "security_grille": false,
+      "note": "Yellow signage band with red 'GOLDEN PATTY' lettering and phone number spans full width above storefront. Sun logo on window. Colourful graffiti mural on left-side bulkhead. Clean, functional Caribbean food shop."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#B08050",
+      "trim": "#FFFFFF",
+      "roof": "#4A4A4A",
+      "accent": "#FFD700"
+    },
+    "condition_observed": "good",
+    "condition_notes": "Buff brick upper storey in good condition, clean and unaltered. Storefront well-maintained, signage bright. Some graffiti on adjacent surfaces but building itself is clean. Utility pole partially obscures right side view.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 50,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.1,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

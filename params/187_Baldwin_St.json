@@ -2,11 +2,11 @@
   "building_name": "187 Baldwin St",
   "floors": 3,
   "floor_heights_m": [
-    4.5,
-    3.9,
-    3.3
+    2.5,
+    2.17,
+    1.83
   ],
-  "total_height_m": 11.64,
+  "total_height_m": 6.5,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -20,20 +20,20 @@
     "lot_coverage_pct": 60.4,
     "lots_sharing_footprint": 6
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "turret",
     "tower"
   ],
-  "facade_material": "Stucco",
+  "facade_material": "mixed",
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
     0,
-    2,
+    0,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -43,7 +43,7 @@
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
@@ -66,8 +66,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -86,7 +86,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -108,12 +108,100 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "187 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "187 BALDWIN ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 2, 1] -> [0, 0, 1]",
+      "colour_palette enriched from observations",
+      "decorative_elements.ornamental_shingles added",
+      "storefront.awning added",
+      "foundation_height_m: 0.1"
+    ],
+    "volumes_converted": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 11.64,
+        "new_value": 6.5,
+        "timestamp": "2026-03-29T07:30:44.754270+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed (stucco upper, cladding storefront)",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:58.003732+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:20.727787+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].height_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:49.127797+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'double-hung' -> 'double_hung'",
+          "arch_type filled (pre-1889)",
+          "frame_colour filled (pre-1889)",
+          "glazing filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:44.307318+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:15.651423+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.578575Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.449979Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 \u2192 #4E3627",
+        "mortar": "#B0A898 \u2192 #A89882"
+      }
     ]
   },
   "bay_window": {
@@ -131,12 +219,29 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 4.5,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed striped fabric",
+      "colour": "green and white striped"
+    },
+    "signage_text": "SEA KINGS FISH MARKET 416 593 9948",
+    "signage": {
+      "text": "Golden Patty",
+      "type": "projecting",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -144,7 +249,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
@@ -154,45 +262,60 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#4E3627",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance.",
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, turret.",
-    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles."
+    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+    "secondary_material": "stucco upper, cladding storefront",
+    "mortar_colour_hex": "#A89882"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
     "eave_overhang_mm": 300,
     "gable_window": {
-      "present": false
-    }
+      "present": true,
+      "type": "small fixed or vent",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "small fixed or vent"
+    },
+    "bargeboard_style": "decorative with cutwork",
+    "bargeboard_colour_hex": "#5A3A2A"
   },
   "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
     {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.8,
-          "sill_height_m": 1.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "count": 0,
+          "type": "double_hung",
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "segmental",
+          "frame_colour": "dark"
         }
       ]
     },
     {
-      "floor": "Third floor",
+      "floor": "gable/attic",
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.5,
-          "sill_height_m": 1.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "arched",
+          "frame_colour": "dark brown",
+          "arch_type": "pointed (within gable)",
+          "height_m": 0.8,
+          "width_m": 0.85,
+          "sill_height_m": 0.8,
+          "glazing": "2-over-2"
         }
       ]
     }
@@ -206,6 +329,9 @@
     "bay_window_storeys": 2,
     "turreted_element": {
       "present": true
+    },
+    "ornamental_shingles": {
+      "present": true
     }
   },
   "chimneys": {
@@ -218,8 +344,8 @@
     "colour_hex": "#D8D0C0"
   },
   "street_setback_m": 0.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "Three-storey converted row house with a stucco-clad facade, cross-gable roof, and a distinctive turreted element at the roofline. A two-storey canted bay window projects from the upper floors above an active commercial storefront (Golden Patty). The upper window arrangement is 0-2-1 with double-hung sash windows. Sea Kings signage with a phone number is visible on a large red-lettered sign. The turret and bay window are the primary character-defining features of this facade. No dedicated photo observations are available; description relies on database records.",
+  "confidence": 0.9,
+  "facade_description": "187 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as mixed in a off-white stucco palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, turret.",
   "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -228,7 +354,176 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#D8D0C0",
+    "trim": "#4E3627",
+    "roof": "#5A4A3A",
+    "accent": "#CC2222"
   },
-  "volumes": []
+  "volumes": [
+    {
+      "id": "main",
+      "width_m": 5.2,
+      "depth_m": 13.44,
+      "floor_heights_m": [
+        4.5,
+        3.9,
+        3.3
+      ],
+      "total_height_m": 11.64,
+      "facade_material": "mixed (stucco upper, cladding storefront)",
+      "roof_type": "cross-gable"
+    },
+    {
+      "id": "rear_addition",
+      "width_m": 4.680000000000001,
+      "depth_m": 8.959999999999999,
+      "floor_heights_m": [
+        3.0,
+        3.0
+      ],
+      "total_height_m": 8.148,
+      "facade_material": "mixed (stucco upper, cladding storefront)",
+      "roof_type": "flat"
+    }
+  ],
+  "deep_facade_analysis": {
+    "source_photo": "PXL_20260318_222909365.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.5
+    ],
+    "facade_material_observed": "mixed (stucco upper, cladding storefront)",
+    "brick_colour_hex": null,
+    "brick_bond_observed": null,
+    "mortar_colour": null,
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Full storefront with large signage panel. Blue-painted lower bulkhead with 'SEA KINGS' and 'FISH MARKET' lettering. Glass entry door visible."
+      },
+      {
+        "floor": "second",
+        "count": 0,
+        "note": "Upper facade covered by large 'SEA KINGS 416 593 9948' signage panel in gold/tan with red 3D lettering. Windows may exist behind signage but not visible."
+      },
+      {
+        "floor": "gable/attic",
+        "count": 1,
+        "type": "decorative gable window",
+        "frame_colour": "dark brown",
+        "arch": "pointed (within gable)",
+        "width_m_est": 0.6,
+        "height_m_est": 0.8,
+        "note": "Small window or decorative opening in the prominent front-facing gable. Dark brown frame. Gable has metal balcony railing at base."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#1A1A1A",
+        "note": "Glass entry door on right side of storefront, dark frame"
+      }
+    ],
+    "roof_type_observed": "gable (front-facing)",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A4A3A",
+    "bargeboard": {
+      "present": true,
+      "style": "decorative with cutwork",
+      "colour_hex": "#5A3A2A"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "small fixed or vent"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 100,
+      "signage_text": "SEA KINGS FISH MARKET 416 593 9948",
+      "awning": {
+        "present": true,
+        "type": "fixed striped fabric",
+        "colour": "green and white striped"
+      },
+      "entrance_position": "right",
+      "security_grille": false,
+      "note": "Full-width storefront. Blue bulkhead below. Green-and-white striped awning. Large gold/tan signage panel with red 3D 'SEA KINGS' letters and phone number. Blue wave motif painted on bulkhead."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": true,
+      "brackets": false,
+      "dentil_course": false,
+      "bargeboard": {
+        "present": true,
+        "style": "decorative Victorian",
+        "colour_hex": "#5A3A2A"
+      }
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#C8A870",
+      "trim": "#5A3A2A",
+      "roof": "#5A4A3A",
+      "accent": "#CC2222"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Bay-and-gable form with prominent front gable preserved. Entire lower facade clad in commercial signage obscuring original fabric. Gable has ornamental detail surviving (bargeboard, possible shingle decoration). Blue paint on bulkhead is bright but commercial. Balcony railing at gable base. Adjacent building has green pixel-art mural.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 300,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.1,
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "stucco",
+    "facade_colour_observed": "off-white stucco",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      0,
+      1
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": true,
+    "photo": "PXL_20260318_222909365.jpg"
+  },
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

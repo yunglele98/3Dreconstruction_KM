@@ -1,0 +1,286 @@
+{
+  "snapshot_time": "2026-03-25 18:20:19",
+  "counts": {
+    "total_params_non_underscore": 2023,
+    "total_params_including_meta": 2026,
+    "active_params": 1253,
+    "skipped_params": 770,
+    "rendered_full": 1600,
+    "rendered_scoped_unique": 1600,
+    "missing_active_no_render_scoped": 1
+  },
+  "missing": {
+    "list_path": "C:\\Users\\liam1\\blender_buildings\\docs\\missing_renders.txt",
+    "perimeter": 0,
+    "duplicate_variant": 0,
+    "non_building": 0,
+    "legitimate_gap": 1,
+    "legitimate_source_counts": {
+      "None": 1
+    }
+  },
+  "schema": {
+    "missing_field_counts": {},
+    "zero_counts": {
+      "floors_zero": 0,
+      "facade_width_zero": 0,
+      "total_height_zero": 0
+    },
+    "roof_unrecognized_count": 0,
+    "material_unrecognized_count": 0,
+    "roof_unrecognized_examples": [],
+    "material_unrecognized_examples": []
+  },
+  "duplicates": {
+    "duplicate_group_count": 24,
+    "duplicate_entries_total": 49,
+    "variant_candidates_missing": 0,
+    "rendered_duplicate_groups": 24
+  },
+  "quality": {
+    "size_stats_bytes": {
+      "min": 110958,
+      "p25": 141228,
+      "median": 169902,
+      "p75": 207572,
+      "max": 326934
+    },
+    "tiny_blends_lt_50kb_count": 0,
+    "oversized_blends_gt_50mb_count": 0,
+    "unknown_building_collection_count": 21,
+    "unknown_building_manifest_examples": [
+      "10-8_Glen_Baillie_Pl.manifest.json",
+      "40-42_Bellevue_Ave.manifest.json",
+      "61_Bellevue_Kos_Restaurant.manifest.json",
+      "63_building_Kensington_Market_snowy_night.manifest.json",
+      "66_1_2_Bellevue_Ave.manifest.json",
+      "7-9_Glen_Baillie_Pl.manifest.json",
+      "8-6_Glen_Baillie_Pl.manifest.json",
+      "9-11_Glen_Baillie_Pl.manifest.json",
+      "Antique_vintage_shop_Kensington.manifest.json",
+      "Augusta_Ave.manifest.json",
+      "Chinatown_Dundas_Spadina_area.manifest.json",
+      "Denison_Ave_area_residential_Victorian_houses.manifest.json",
+      "E-scooter_Kensington_area.manifest.json",
+      "Glen_Baillie_Pl_43653729_-79399049.manifest.json",
+      "Greelz_Bar_Lo_Longboard_Living_Augusta_Ave_snowy.manifest.json",
+      "Indoor_personal_photo.manifest.json",
+      "Kensington_area.manifest.json",
+      "Kensington_Market_area_daytime.manifest.json",
+      "Kensington_Market_snowy_night_Koi_Japan.manifest.json",
+      "Nassau_St_Kensington_historical_photo_-_Casa_Linda.manifest.json"
+    ],
+    "sample20": [
+      {
+        "name": "5_Bellevue_Ave",
+        "size": 185412,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_5_Bellevue_Ave"
+      },
+      {
+        "name": "161_Augusta_Ave",
+        "size": 182395,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_161_Augusta_Ave"
+      },
+      {
+        "name": "112_Oxford_St_area_brick_duplex",
+        "size": 146434,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_112_Oxford_St_area_(brick_duplex)"
+      },
+      {
+        "name": "87_Wales_Ave",
+        "size": 131831,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_87_Wales_Ave"
+      },
+      {
+        "name": "260_Augusta_Ave_St_Stephen_s_Community_House",
+        "size": 195418,
+        "manifest_ok": false,
+        "manifest_missing": [
+          "typology",
+          "construction_date"
+        ],
+        "param_ok": false,
+        "collection_name": "building_260_Augusta_Ave_(St_Stephen's_Community_House)"
+      },
+      {
+        "name": "23A_Casimir_St",
+        "size": 208416,
+        "manifest_ok": false,
+        "manifest_missing": [
+          "typology",
+          "construction_date"
+        ],
+        "param_ok": true,
+        "collection_name": "building_23A_Casimir_St"
+      },
+      {
+        "name": "222_Augusta_Ave_Augusta_Coffee",
+        "size": 181598,
+        "manifest_ok": false,
+        "manifest_missing": [
+          "typology",
+          "construction_date"
+        ],
+        "param_ok": false,
+        "collection_name": "building_222_Augusta_Ave_(Augusta_Coffee)"
+      },
+      {
+        "name": "17_Kensington_Ave",
+        "size": 188225,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_17_Kensington_Ave"
+      },
+      {
+        "name": "85-87_Oxford_St",
+        "size": 130427,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_85-87_Oxford_St"
+      },
+      {
+        "name": "15_Carlyle_St",
+        "size": 163652,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_15_Carlyle_St"
+      },
+      {
+        "name": "668_Dundas_St",
+        "size": 134313,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_668_Dundas_St"
+      },
+      {
+        "name": "87_Bellevue_Ave",
+        "size": 152375,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_87_Bellevue_Ave"
+      },
+      {
+        "name": "449_Bathurst_St",
+        "size": 150804,
+        "manifest_ok": false,
+        "manifest_missing": [
+          "typology",
+          "construction_date"
+        ],
+        "param_ok": true,
+        "collection_name": "building_449_Bathurst_St"
+      },
+      {
+        "name": "150-152_Nassau_St",
+        "size": 163951,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_150-152_Nassau_St"
+      },
+      {
+        "name": "526_Dundas_St_K-ONE_KTV",
+        "size": 150124,
+        "manifest_ok": false,
+        "manifest_missing": [
+          "typology",
+          "construction_date"
+        ],
+        "param_ok": false,
+        "collection_name": "building_526_Dundas_St_(K-ONE_KTV)"
+      },
+      {
+        "name": "36_Bellevue_Ave",
+        "size": 254336,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_36_Bellevue_Ave"
+      },
+      {
+        "name": "11_1_2_Lippincott_St",
+        "size": 148090,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_11_1/2_Lippincott_St"
+      },
+      {
+        "name": "118_Bellevue_Ave",
+        "size": 143911,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_118_Bellevue_Ave"
+      },
+      {
+        "name": "153A_Augusta_Ave",
+        "size": 164533,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_153A_Augusta_Ave"
+      },
+      {
+        "name": "21_Nassau_St",
+        "size": 204468,
+        "manifest_ok": true,
+        "manifest_missing": [],
+        "param_ok": true,
+        "collection_name": "building_21_Nassau_St"
+      }
+    ]
+  },
+  "png": {
+    "png_count": 0,
+    "manifest_count": 2811,
+    "render_path_non_null_count": 0
+  },
+  "photo": {
+    "analysis_summary_count": 1,
+    "photo_observations_all": 590,
+    "photo_observations_active": 542,
+    "analysis_compare": [
+      {
+        "name": "",
+        "obs_keys": []
+      }
+    ],
+    "batch_result_files_count": 0
+  },
+  "coords": {
+    "site_coordinate_entries": 1061,
+    "active_with_coords_by_name": 1051,
+    "rendered_with_coords_by_name": 1052,
+    "rendered_without_coords_by_name": 548
+  },
+  "enrichment": {
+    "translated": 1228,
+    "enriched": 1251,
+    "gaps_filled": 1251,
+    "no_meta": 0
+  },
+  "run_evidence": {
+    "full_blend_count": 1600,
+    "prefix_932_missing_in_full": [],
+    "full_extras_outside_prefix_932_count": 668,
+    "full_last_write": "2026-03-25 18:16:59"
+  }
+}

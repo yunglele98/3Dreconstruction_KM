@@ -2,10 +2,10 @@
   "building_name": "185 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    3.42,
+    3.08
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 6.5,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -19,16 +19,16 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 9
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -38,7 +38,7 @@
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870–1889",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "commercial",
     "general_use": "Mixed Use",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "CHOCOLATE ADDICT",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 6,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -96,11 +96,12 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "185 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "185 BALDWIN ST"
     ],
@@ -113,6 +114,76 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "eave_overhang_mm: 50",
+      "floor_heights_m: [4.8, 4.8] -> [5.05, 4.55]",
+      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#7A5A3A'",
+      "colour_palette enriched from observations",
+      "storefront.awning added",
+      "storefront.security_grille added",
+      "foundation_height_m: 0.1"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 9.6,
+        "new_value": 6.5,
+        "timestamp": "2026-03-29T07:30:44.549378+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:49.015621+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:44.242074+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:15.524899+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled"
+        ],
+        "timestamp": "2026-03-29T08:07:17.981765+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.544379Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.409147Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 \u2192 #231B14",
+        "mortar": "#B0A898 \u2192 #A4947E"
+      }
     ]
   },
   "storefront": {
@@ -120,12 +191,26 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 4.9,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed fabric",
+      "colour": "dark green/olive"
+    },
+    "security_grille": true,
+    "signage_text": "JIMMY'S COFFEE",
+    "signage": {
+      "text": "CHOCOLATE ADDICT",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -133,40 +218,51 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#7A5A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#231B14",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
+    "mortar_colour_hex": "#A4947E",
+    "heritage_expression": "Character-defining elements include ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 50,
     "gable_window": {
       "present": false
     }
   },
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.6,
-          "sill_height_m": 2.0,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "1-over-1 double-hung",
+          "frame_colour": "white",
+          "arch_type": "flat with stone/concrete lintel",
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -186,9 +282,9 @@
     "material": "brick",
     "colour_hex": "#B85A3A"
   },
-  "street_setback_m": 3.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "Two-storey converted row house in brick with a cross-gable roof, set back approximately 3 metres from the street. The ground floor is occupied by an active commercial storefront (Chocolate Addict / Mare Pizzeria signage observed). Two double-hung sash windows are visible on the second floor above the shopfront. No dedicated photo observations are available for this address; description relies on database records and typology defaults.",
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "185 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
   "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -197,7 +293,142 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#7A5A3A",
+    "trim": "#231B14",
+    "roof": "#3A3A3A",
+    "accent": "#4A6A3A"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "PXL_20260318_222737568.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.9
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#7A5A3A",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Entire ground floor is storefront with security scissor grille (closed). Large mural of the Joker (Batman villain) painted on left side wall. Dark painted cladding."
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1 double-hung",
+        "frame_colour": "white",
+        "arch": "flat with stone/concrete lintel",
+        "width_m_est": 0.85,
+        "height_m_est": 1.3,
+        "note": "Two windows in brown brick upper facade. White frames. Stone or concrete flat lintels. Small green metal railing/balcony visible at roofline above with potted plants."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A2A2A",
+        "note": "Behind closed scissor grille. Dark frame entry door."
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#3A3A3A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 100,
+      "signage_text": "JIMMY'S COFFEE",
+      "awning": {
+        "present": true,
+        "type": "fixed fabric",
+        "colour": "dark green/olive"
+      },
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Dark olive/green fabric awning with gold 'JIMMY'S COFFEE' lettering. Scissor security grille fully closed across storefront. Joker mural on left party wall. Purple/green graffiti art extends to left side."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "lintels": {
+        "present": true,
+        "type": "stone/concrete flat",
+        "colour_hex": "#A09080"
+      }
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#7A5A3A",
+      "trim": "#2A3A2A",
+      "roof": "#3A3A3A",
+      "accent": "#4A6A3A"
+    },
+    "condition_observed": "good",
+    "condition_notes": "Upper brick facade in solid condition. Green railing/balcony at roof level with vegetation. Mural on party wall well-executed. Grille suggests nighttime security concern. Bicycle parked out front. Overall well-maintained.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 50,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.1,
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "brick",
+    "facade_colour_observed": "red brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": true,
+    "photo": "PXL_20260318_222737568.jpg"
+  },
+  "wall_thickness_m": 0.3
 }

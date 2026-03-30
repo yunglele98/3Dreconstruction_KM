@@ -1,0 +1,479 @@
+{
+  "batch_id": "batch_001",
+  "count": 50,
+  "buildings": [
+    {
+      "param_file": "102_Oxford_St.json",
+      "building_name": "102 Oxford St",
+      "address": "102 Oxford St",
+      "photos": [
+        "IMG_20260315_151152484_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "10_Oxford_St.json",
+      "building_name": "10 Oxford St",
+      "address": "10 Oxford St",
+      "photos": [
+        "IMG_20260315_151121824_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "112_Oxford_St.json",
+      "building_name": "112 Oxford St",
+      "address": "112 Oxford St",
+      "photos": [
+        "IMG_20260315_151351421_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "118_Bellevue_Ave.json",
+      "building_name": "118 Bellevue Ave",
+      "address": "118 Bellevue Ave",
+      "photos": [
+        "PXL_20260318_220110951.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "11_Wales_Ave.json",
+      "building_name": "11 Wales Ave",
+      "address": "11 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "12_Oxford_St.json",
+      "building_name": "12 Oxford St",
+      "address": "12 Oxford St",
+      "photos": [
+        "IMG_20260315_151351421_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "132_Bellevue_Ave.json",
+      "building_name": "132 Bellevue Ave",
+      "address": "132 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_161056395_HDR.jpg",
+        "IMG_20260320_161100913_HDR.jpg",
+        "IMG_20260320_161113683_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "135_Nassau_St.json",
+      "building_name": "135 Nassau St",
+      "address": "135 Nassau St",
+      "photos": [
+        "IMG_20260318_175436345_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "138_Augusta_Ave.json",
+      "building_name": "138 Augusta Ave",
+      "address": "138 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "138_Baldwin_St.json",
+      "building_name": "138 Baldwin St",
+      "address": "138 Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "13_Wales_Ave.json",
+      "building_name": "13 Wales Ave",
+      "address": "13 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "140_Denison_Ave.json",
+      "building_name": "140 Denison Ave",
+      "address": "140 Denison Ave",
+      "photos": [
+        "IMG_20260320_164839797_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "141_Augusta_Ave.json",
+      "building_name": "141 Augusta Ave",
+      "address": "141 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "144-148_Augusta_Ave.json",
+      "building_name": "144-148 Augusta Ave",
+      "address": "144-148 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "144_Augusta_Ave.json",
+      "building_name": "144 Augusta Ave",
+      "address": "144 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "144_Baldwin_St.json",
+      "building_name": "144 Baldwin St",
+      "address": "144 Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "144_Denison_Ave.json",
+      "building_name": "144 Denison Ave",
+      "address": "144 Denison Ave",
+      "photos": [
+        "IMG_20260320_164044430_HDR.jpg",
+        "IMG_20260320_164051123_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "145_Augusta_Ave.json",
+      "building_name": "145 Augusta Ave",
+      "address": "145 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "146_Augusta_Ave.json",
+      "building_name": "146 Augusta Ave",
+      "address": "146 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "147_Augusta_Ave.json",
+      "building_name": "147 Augusta Ave",
+      "address": "147 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "147_Baldwin_St.json",
+      "building_name": "147 Baldwin St",
+      "address": "147 Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "148_Augusta_Ave.json",
+      "building_name": "148 Augusta Ave",
+      "address": "148 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "148_Denison_Ave.json",
+      "building_name": "148 Denison Ave",
+      "address": "148 Denison Ave",
+      "photos": [
+        "IMG_20260320_164110253_HDR.jpg",
+        "IMG_20260320_164120062_HDR.jpg",
+        "IMG_20260320_164126941_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "149_Baldwin_St.json",
+      "building_name": "149 Baldwin St",
+      "address": "149 Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "14_Hickory_St.json",
+      "building_name": "14 Hickory St",
+      "address": "14 Hickory St",
+      "photos": [
+        "IMG_20260320_162943033_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "14_Oxford_St.json",
+      "building_name": "14 Oxford St",
+      "address": "14 Oxford St",
+      "photos": [
+        "IMG_20260316_003832015_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "150_Augusta_Ave.json",
+      "building_name": "150 Augusta Ave",
+      "address": "150 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "152_Augusta_Ave.json",
+      "building_name": "152 Augusta Ave",
+      "address": "152 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "152_Nassau_St.json",
+      "building_name": "152 Nassau St",
+      "address": "152 Nassau St",
+      "photos": [
+        "IMG_20260320_172728292_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "153A_Augusta_Ave.json",
+      "building_name": "153A Augusta Ave",
+      "address": "153A Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "153B_Augusta_Ave.json",
+      "building_name": "153B Augusta Ave",
+      "address": "153B Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "154_Augusta_Ave.json",
+      "building_name": "154 Augusta Ave",
+      "address": "154 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "155A_Augusta_Ave.json",
+      "building_name": "155A Augusta Ave",
+      "address": "155A Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "156_Augusta_Ave.json",
+      "building_name": "156 Augusta Ave",
+      "address": "156 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "15_Casimir_St.json",
+      "building_name": "15 Casimir St",
+      "address": "15 Casimir St",
+      "photos": [
+        "IMG_20260320_162026200_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "15_Wales_Ave.json",
+      "building_name": "15 Wales Ave",
+      "address": "15 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "15A_Casimir_St.json",
+      "building_name": "15A Casimir St",
+      "address": "15A Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "160_Augusta_Ave.json",
+      "building_name": "160 Augusta Ave",
+      "address": "160 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "161_Baldwin_St.json",
+      "building_name": "161 Baldwin St",
+      "address": "161 Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "165-169_Augusta_Ave.json",
+      "building_name": "165-169 Augusta Ave",
+      "address": "165-169 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "165_Augusta_Ave.json",
+      "building_name": "165 Augusta Ave",
+      "address": "165 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "167_Augusta_Ave.json",
+      "building_name": "167 Augusta Ave",
+      "address": "167 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "169A_Augusta_Ave.json",
+      "building_name": "169A Augusta Ave",
+      "address": "169A Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "16_1_2_Bellevue_Ave.json",
+      "building_name": "16 1/2 Bellevue Ave",
+      "address": "16 1/2 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_161056395_HDR.jpg",
+        "IMG_20260320_161100913_HDR.jpg",
+        "IMG_20260320_161113683_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "171_Augusta_Ave.json",
+      "building_name": "171 Augusta Ave",
+      "address": "171 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "171_Baldwin_St.json",
+      "building_name": "171 Baldwin St",
+      "address": "171 Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "173_Augusta_Ave.json",
+      "building_name": "173 Augusta Ave",
+      "address": "173 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "173_Baldwin_St.json",
+      "building_name": "173 Baldwin St",
+      "address": "173 Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "173R_Baldwin_St.json",
+      "building_name": "173R Baldwin St",
+      "address": "173R Baldwin St",
+      "photos": [
+        "IMG_20260316_013542505_HDR.jpg",
+        "IMG_20260316_013559363_HDR.jpg",
+        "IMG_20260316_013602561_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "175_Augusta_Ave.json",
+      "building_name": "175 Augusta Ave",
+      "address": "175 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    }
+  ]
+}

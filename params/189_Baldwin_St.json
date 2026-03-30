@@ -2,11 +2,11 @@
   "building_name": "189 Baldwin St",
   "floors": 3,
   "floor_heights_m": [
-    4.5,
-    3.9,
-    3.3
+    3.0,
+    2.6,
+    2.2
   ],
-  "total_height_m": 11.64,
+  "total_height_m": 7.8,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -20,17 +20,17 @@
     "lot_coverage_pct": 17.3,
     "lots_sharing_footprint": 6
   },
-  "roof_type": "Gable",
+  "roof_type": "flat",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "stucco over brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -39,32 +39,32 @@
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": null,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "original_windows",
       "decorative_brick"
     ],
-    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "SEA KING FISH STORE",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,12 +105,135 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "189 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "189 BALDWIN ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_type: 'gable' -> 'Flat'",
+      "eave_overhang_mm: 50",
+      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [0, 2, 1] -> [0, 0]",
+      "colour_palette enriched from observations",
+      "decorative_elements.cornice added",
+      "decorative_elements.string_courses: 1 courses",
+      "storefront.awning added",
+      "storefront.security_grille added",
+      "foundation_height_m: 0.1"
+    ],
+    "patched": true,
+    "patches_applied": [
+      "windows_detail_enrich"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 11.64,
+        "new_value": 7.8,
+        "timestamp": "2026-03-29T07:30:44.820630+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "stucco over brick",
+        "new_value": "stucco over brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:58.149086+00:00"
+      },
+      {
+        "fix": "fix_window_totals_from_handoff",
+        "task_id": "TASK-20260327-016",
+        "field": "windows_detail.count",
+        "old_total": 0,
+        "new_total": 3,
+        "new_per_floor": [
+          0,
+          2,
+          1
+        ],
+        "source": "photo_observations.windows_per_floor",
+        "timestamp": "2026-03-29T07:31:02.737620+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "stucco over brick",
+        "new_value": "stucco over brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:20.786160+00:00"
+      },
+      {
+        "fix": "fix_window_totals_from_handoff",
+        "task_id": "TASK-20260327-016",
+        "field": "windows_detail.count",
+        "old_total": 0,
+        "new_total": 3,
+        "new_per_floor": [
+          0,
+          2,
+          1
+        ],
+        "source": "photo_observations.windows_per_floor",
+        "timestamp": "2026-03-29T07:44:30.450777+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].height_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:49.258410+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (pre-1889)",
+          "glazing filled (pre-1889)",
+          "frame_colour filled (pre-1889)",
+          "arch_type filled (pre-1889)",
+          "glazing filled (pre-1889)",
+          "frame_colour filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:44.389092+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:15.780042+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.607398Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.517385Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #9B5434",
+        "trim": "#3A2A20 \u2192 #453021",
+        "mortar": "#B0A898 \u2192 #AFA293"
+      }
     ]
   },
   "decorative_elements": {
@@ -120,6 +243,15 @@
     "bargeboard": {
       "colour_hex": "#3A2A20",
       "style": "decorative"
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 150
+    },
+    "string_courses": {
+      "present": true,
+      "count": 1
     }
   },
   "storefront": {
@@ -127,12 +259,25 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 4.5,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed flat awning with orange/red stripe",
+      "colour": "dark green with orange accent stripe"
+    },
+    "security_grille": true,
+    "signage": {
+      "text": "SEA KING FISH STORE",
+      "type": "projecting",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -140,55 +285,68 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#9B5434",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
-    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include original windows, decorative brick.",
-    "heritage_summary": "The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century."
+    "trim_colour_hex": "#453021",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, decorative brick, string courses, cornice.",
+    "heritage_summary": "The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
+    "mortar_colour_hex": "#AFA293"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 50,
     "gable_window": {
       "present": false
     }
   },
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.8,
-          "sill_height_m": 1.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "segmental",
+          "glazing": "2-over-2",
+          "frame_colour": "dark"
         }
-      ]
+      ],
+      "is_storefront": true,
+      "count": 2,
+      "width_m": 0.85,
+      "height_m": 1.3
     },
     {
       "floor": "Third floor",
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.5,
-          "sill_height_m": 1.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "segmental",
+          "glazing": "2-over-2",
+          "frame_colour": "dark"
         }
       ]
     }
@@ -202,9 +360,9 @@
     "material": "brick",
     "colour_hex": "#B85A3A"
   },
-  "street_setback_m": 3.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "Three-storey brick facade with a gable roof, approximately 5.2 m wide. The ground floor houses an active commercial storefront (Sea King Fish Store) beneath two bays of 1-over-1 double-hung sash windows at the second floor and a single window at the third. Decorative brickwork in running bond with light grey mortar joints defines the upper storeys. A cross-gabled roofline and double-height projecting bay above the first storey survive from the original pre-1889 house-form construction. No direct photo observation is available for this address; description is based on database and HCD records.",
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "189 Baldwin St is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its converted house-form, semi-detached typology. The facade reads primarily as stucco over brick in a red brick palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include original windows, decorative brick, string courses, cornice.",
   "heritage_summary": "The property has evolved over time while retaining original building features including its cross-gabled roofline and double- height projecting bay above the first storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -213,7 +371,148 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#9B5434",
+    "trim": "#453021",
+    "roof": "#4A4A4A",
+    "accent": "#CC5522"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "PXL_20260318_222801073.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.15,
+      0.85
+    ],
+    "facade_material_observed": "stucco over brick",
+    "brick_colour_hex": null,
+    "brick_bond_observed": null,
+    "mortar_colour": null,
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Storefront fully behind security scissor grille (closed). Decorative green tile/panel cladding with stepped zigzag pattern in green and cream/white tiles mid-facade. Two art murals flanking the storefront (left: colourful fish scene, right: skull/face artwork)."
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1 double-hung",
+        "frame_colour": "dark green",
+        "arch": "flat",
+        "width_m_est": 0.85,
+        "height_m_est": 1.2,
+        "note": "Two windows in stucco/painted upper storey. Dark green frames matching trim. Upper wall is beige/cream stucco. Decorative moulding between storefront and upper floor in Art Deco-inspired geometric pattern."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A4A2A",
+        "note": "Behind scissor grille, dark green frame"
+      }
+    ],
+    "roof_type_observed": "flat with low parapet",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 95,
+      "signage_text": null,
+      "awning": {
+        "present": true,
+        "type": "fixed flat awning with orange/red stripe",
+        "colour": "dark green with orange accent stripe"
+      },
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Distinctive Art Deco-influenced facade. Green tile/panel cladding in stepped zigzag pattern. Narrow fixed awning above storefront with orange/red stripe. Green pilasters frame storefront. Murals on both flanking panels. Rooftop metal railing/balcony visible with plants."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [
+        {
+          "location": "between ground and second floor",
+          "material": "decorative tile/panel",
+          "pattern": "stepped zigzag",
+          "colour_hex": "#3A6A3A"
+        }
+      ],
+      "cornice": {
+        "present": true,
+        "type": "Art Deco geometric moulding",
+        "colour_hex": "#3A6A3A"
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#D8D0C0",
+      "trim": "#2A5A3A",
+      "roof": "#4A4A4A",
+      "accent": "#CC5522"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Upper stucco somewhat weathered. Green tile cladding intact but dated. Art Deco moulding detail survives. Roof railing with plants. Murals on flanking panels in reasonable condition. Security grille fully closed.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 50,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.1,
+  "parapet_height_m": 0.6,
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "brick",
+    "facade_colour_observed": "red brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      1
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": true,
+    "photo": "PXL_20260318_222801073.jpg"
+  },
+  "wall_thickness_m": 0.3
 }

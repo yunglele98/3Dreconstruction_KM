@@ -1,0 +1,27 @@
+{
+  "task_id": "TASK-20260327-005",
+  "title": "Texture pass from Kensington photo set for key urban elements",
+  "description": "Apply and validate texture mapping from local Kensington photo folders for garages, facades, poles, bins, fences, benches, and patio-facing assets; record unresolved texture gaps.",
+  "priority": "medium",
+  "estimate_points": 2,
+  "skills": [
+    "blender",
+    "textures",
+    "pipeline"
+  ],
+  "write_scope": [
+    "scripts/apply_textures.py",
+    "scripts/apply_textures_v5.py",
+    "PHOTOS KENSINGTON sorted"
+  ],
+  "dependencies": [
+    "TASK-20260327-003"
+  ],
+  "status": "done",
+  "created_at": "2026-03-27T00:30:00Z",
+  "owner": "codex-2",
+  "routed_at": "2026-03-27T00:30:47.959377+00:00",
+  "reassigned_at": "2026-03-27T17:27:45.745326+00:00",
+  "completed_at": "2026-03-28T16:52:35.203486+00:00",
+  "completed_by": "gemini-1"
+}

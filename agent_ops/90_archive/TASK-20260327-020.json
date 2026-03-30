@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-020",
+  "title": "Verify colour_palette consistency with facade_detail and era",
+  "description": "Check all 1241 buildings: does colour_palette.facade match facade_detail.brick_colour_hex? Does colour_palette.trim match facade_detail.trim_colour_hex? Flag conflicts. Also verify trim colours are era-appropriate (pre-1889 dark, 1914+ cream/white).",
+  "priority": "medium",
+  "estimate_points": 2,
+  "skills": [
+    "facade-audit",
+    "heritage-data",
+    "validation"
+  ],
+  "write_scope": [
+    "agent_ops/30_handoffs"
+  ],
+  "dependencies": [],
+  "owner": "gemini-1",
+  "status": "done",
+  "created_at": "2026-03-27T19:58:18Z",
+  "routed_at": "2026-03-27T19:58:46.593910+00:00",
+  "completed_at": "2026-03-28T17:48:53.066193+00:00",
+  "completed_by": "gemini-1"
+}

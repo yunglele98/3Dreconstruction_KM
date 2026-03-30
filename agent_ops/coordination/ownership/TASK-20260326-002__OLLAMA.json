@@ -1,0 +1,11 @@
+{
+  "task_id": "TASK-20260326-002__OLLAMA",
+  "owner": "ollama-local-2",
+  "parent_task": "TASK-20260326-002",
+  "write_scope": [
+    "PHOTOS KENSINGTON sorted/Chinatown Mural Lane/run_kensington_pipeline.py",
+    "PHOTOS KENSINGTON sorted/Chinatown Mural Lane/qa_kensington_urban_elements.md"
+  ],
+  "assigned_at": "2026-03-27T17:19:59.816157+00:00",
+  "reassigned_at": "2026-03-27T17:20:02.533026+00:00"
+}

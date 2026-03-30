@@ -2,8 +2,8 @@
   "building_name": "46 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    5.19,
+    4.41
   ],
   "total_height_m": 9.6,
   "facade_width_m": 5.2,
@@ -19,31 +19,31 @@
     "lot_coverage_pct": 59.7,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "dark brick with large colorful street mural",
+  "facade_colour": "dark red-brown brick; brick (upper), painted/metal (lower)",
   "windows_per_floor": [
     0,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "poor",
+  "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Commercial, Row",
     "construction_date": "Pre-1889, 1914-1930",
-    "architectural_style": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889, 1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 215,
-    "statement_of_contribution": "The property at 46 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Each of the properties at 48, 50, and 52 Kensington Avenue have value as early twentieth-century vernacular style two-storey commercial additions to nineteenth-century residential structures which are not visible from the public realm. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property at 46 Kensington Avenue retains original building features including its bay-and-gable form above the first storey and roofline with centre gable. Constructed as a row between 1924 and 1930, the additions at 48, 50, and 52 Kensington Avenue have retained their facades above the second storey, which each feature a single wide window opening with stone lintel and sill beneath a pressed metal cornice with a decorative brick parapet. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property at 46 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Each of the properties at 48, 50, and 52 Kensington Avenue have value as early twentieth-century vernacular style two-storey commercial additions to nineteenth-century residential structures which are not visible from the public realm. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property at 46 Kensington Avenue retains original building features including its bay-and-gable form above the first storey and roofline with centre gable. Constructed as a row between 1924 and 1930, the additions at 48, 50, and 52 Kensington Avenue have retained their facades above the second storey, which each feature a single wide window opening with stone lintel and sill beneath a pressed metal cornice with a decorative brick parapet. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "cornice"
@@ -55,14 +55,14 @@
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Café",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
     "business_name": "Fong On Foods Ltd.",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -99,11 +99,12 @@
     "inferences_applied": [
       "roof_material",
       "colour_palette",
-      "volumes"
+      "volumes",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "46 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "46 KENSINGTON AVE"
     ],
@@ -116,6 +117,67 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "floor_heights_m: [4.8, 4.8] -> [5.19, 4.41]",
+      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#7A5A40'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.2"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "trim_colour:#3A2A20->#F0EDE8",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:08.194338+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:54.888421+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:42.243215+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:21.599035Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:16.695672Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #5D5D5D",
+        "mortar": "#B0A898 \u2192 #B09E8D"
+      }
     ]
   },
   "decorative_elements": {
@@ -141,27 +203,76 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.2,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "FONG ON FOODS LTD. (yellow signage band above storefront, partially visible)",
+    "awning": {
+      "present": false
+    },
+    "security_grille": true,
+    "width_pct": 85,
+    "signage": {
+      "text": "Fong On Foods Ltd.",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-25T00:00:00-04:00",
     "photo_conditions": "Night photos (1:26-1:35 AM March 20, 2026)",
     "source_photo": "IMG_20260320_012934622_HDR.jpg",
-    "photo_quality": "rotated",
+    "photo_quality": "night, rotated 90 degrees",
     "facade_colour_observed": "dark brick with large colorful street mural",
-    "facade_material_observed": "brick",
-    "condition_observed": "fair",
+    "facade_material_observed": "brick (upper), painted/metal (lower)",
+    "condition_observed": "fair; large mural on upper wall; graffiti visible on grilles",
     "has_storefront_observed": true,
-    "signage_observed": "Fong On Foods Ltd.",
+    "signage_observed": "partially visible behind mural/awning; appears commercial",
     "description": "2-storey commercial. Large colorful mural on ground-floor wall (figures/portrait). Upper: dark brick with windows. Fong On Foods visible in signage area.",
-    "confidence": 0.65
+    "confidence": 0.65,
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012934622_HDR.jpg",
+    "facade_analysis_address": "46 Kensington Ave (Fong On Foods Ltd.)",
+    "storeys_observed": 2,
+    "brick_colour_observed": "dark red-brown brick",
+    "brick_colour_hex_observed": "#B85A3A",
+    "windows_observed": {
+      "upper_floor": "2 windows visible above storefront"
+    },
+    "doors_observed": "not clearly visible - security grilles closed",
+    "roof_type_observed": "flat or very low pitch with parapet",
+    "decorative_elements_observed": "large mural artwork on upper facade wall depicting figures (appears to be a portrait/figurative mural in warm tones); awning below",
+    "storefront_description": "ground floor appears to be a restaurant or bar; security grilles closed; awning visible; appears to be near a corner location",
+    "party_walls_observed": "party wall visible",
+    "colour_palette_observed": {
+      "primary": "dark red brick",
+      "accent": "warm tones from mural (oranges, greens, skin tones)"
+    },
+    "bond_pattern_observed": "running bond (visible on upper)",
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 2,
+      "ba_facade_material": "brick",
+      "height_max_m": 12.15,
+      "height_avg_m": 7.25,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "facade_colour_observed": "red-brown brick upper, ground floor dominated by colourful mural",
+      "photo_condition": "fair",
+      "ba_condition_rating": 2,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_012934622_HDR.jpg"
   },
-  "confidence": 0.8000000000000002,
+  "confidence": 0.9,
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -169,21 +280,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#7A5A40",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#F0EDE8",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its converted house-form, commercial, row typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include decorative brick, cornice.",
-    "heritage_summary": "Constructed as a row between 1924 and 1930, the additions at 48, 50, and 52 Kensington Avenue have retained their facades above the second storey, which each feature a single wide window opening with stone lintel and sill beneath a pressed metal cornice with a decorative brick parapet. The property at 46 Kensington Avenue retains original building features including its bay-and-gable form above the first storey and roofline with centre gable."
+    "heritage_summary": "Constructed as a row between 1924 and 1930, the additions at 48, 50, and 52 Kensington Avenue have retained their facades above the second storey, which each feature a single wide window opening with stone lintel and sill beneath a pressed metal cornice with a decorative brick parapet. The property at 46 Kensington Avenue retains original building features including its bay-and-gable form above the first storey and roofline with centre gable.",
+    "mortar_colour_hex": "#B09E8D"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -192,31 +307,151 @@
   "parapet_height_m": 0.6,
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 3.1,
-          "sill_height_m": 2.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "1-over-1",
+          "frame_colour": "#3A3A3A",
+          "arch_type": "flat",
+          "width_m": 0.62,
+          "height_m": 1.2,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
         }
       ]
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "46 Kensington Ave presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its converted house-form, commercial, row typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. Key storefront and facade features include decorative brick, cornice. HCD note: The property at 46 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Each of the properties at 48, 50, and 52 Kensington Avenue have value as early twentieth-century vernacular style two-storey commercial additions to nineteenth-century residential structures which are not visible from the public realm. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property at 46 Kensington Avenue retains original building features including its bay-and-gable form above the first storey and roofline with centre gable. Constructed as a row between 1924 and 1930, the additions at 48, 50, and 52 Kensington Avenue have retained their facades above the second storey, which each feature a single wide window opening with stone lintel and sill beneath a pressed metal cornice with a decorative brick parapet. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "46 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its converted house-form, commercial, row typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Key storefront and facade features include decorative brick, cornice.",
   "heritage_summary": "Constructed as a row between 1924 and 1930, the additions at 48, 50, and 52 Kensington Avenue have retained their facades above the second storey, which each feature a single wide window opening with stone lintel and sill beneath a pressed metal cornice with a decorative brick parapet. The property at 46 Kensington Avenue retains original building features including its bay-and-gable form above the first storey and roofline with centre gable.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#3A2A20",
+    "facade_hex": "#7A7A7A",
+    "trim_hex": "#F0EDE8",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#7A5A40",
+    "trim": "#F0EDE8",
+    "roof": "#5D5D5D",
+    "accent": "#D0A030"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012934622_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#7A5A40",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 2,
+        "type": "plate glass",
+        "frame_colour": "#3A3A3A",
+        "arch": "flat",
+        "width_ratio": 0.3,
+        "height_m_est": 2.0,
+        "note": "Two storefront windows with dark frames. Security grille on one. Large street-art mural covering the brick facade at ground level (figures in colourful style). Yellow signage band above."
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "#3A3A3A",
+        "arch": "flat",
+        "width_ratio": 0.12,
+        "height_m_est": 1.2,
+        "note": "Two dark-framed windows on upper floor."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 0,
+        "colour": "dark"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": false
+    },
+    "gable_window": {
+      "present": false
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 85,
+      "signage_text": "FONG ON FOODS LTD. (yellow signage band above storefront, partially visible)",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "left",
+      "security_grille": true,
+      "note": "Ground floor features a large colourful street-art mural covering the brick wall (figures, bright colours). Yellow/gold signage band at top of storefront. Security grille on portions. Two storefront windows with dark frames. The mural is the dominant visual feature."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {
+        "present": true,
+        "location": "ground floor facade",
+        "subject": "Large colourful street art with figures, covering most of the brick wall at ground level"
+      }
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#7A5A40",
+      "trim": "#3A3A3A",
+      "roof": "#5A5A5A",
+      "accent": "#D0A030"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Two-storey flat-roof commercial building. Brick appears weathered/dark. Large street-art mural at ground level. Yellow signage band. Upper windows dark-framed, small. Typical Kensington Market commercial conversion.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "foundation_height_m": 0.2,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

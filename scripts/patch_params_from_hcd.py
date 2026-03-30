@@ -4,10 +4,25 @@
 from __future__ import annotations
 
 import json
+import os
+import tempfile
 from copy import deepcopy
 from pathlib import Path
 
 from generate_hcd_params import infer_decorative_elements
+
+
+def _atomic_write_json(filepath, data, ensure_ascii=False):
+    """Write JSON atomically via temp file + rename to prevent corruption."""
+    filepath = Path(filepath)
+    with tempfile.NamedTemporaryFile(
+        mode="w", dir=filepath.parent, delete=False,
+        suffix=".tmp", encoding="utf-8",
+    ) as tmp:
+        json.dump(data, tmp, indent=2, ensure_ascii=ensure_ascii)
+        tmp.write("\n")
+        tmp_path = Path(tmp.name)
+    os.replace(str(tmp_path), str(filepath))
 
 
 PARAMS_DIR = Path(__file__).parent.parent / "params"
@@ -128,64 +143,94 @@ def enrich_windows_detail(data: dict) -> bool:
     return changed
 
 
-def patch_file(path: Path) -> bool:
+def patch_file(path: Path) -> tuple[bool, str]:
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
 
     # Skip non-building photos
     if data.get("skipped"):
-        return False
+        return False, "non-building (skipped)"
+
+    # Check _meta.patched flag for idempotency
+    meta = data.get("_meta", {})
+    if meta.get("patched"):
+        return False, "already patched"
 
     hcd = data.get("hcd_data")
     if not isinstance(hcd, dict):
-        return False
+        return False, "no HCD data"
 
     features = hcd.get("building_features", [])
     typology = hcd.get("typology", "")
-    inferred_decorative, inferred_roof, inferred_windows = infer_decorative_elements(features, typology)
 
-    changed = False
-    changed = upgrade_decorative_elements(data, inferred_decorative) or changed
+    print(f"DEBUG: patch_file: features={features}, typology='{typology}'")
+    inferred_decorative, inferred_roof, inferred_windows = infer_decorative_elements(features, typology)
+    print(f"DEBUG: inferred_decorative={inferred_decorative}")
+    print(f"DEBUG: inferred_roof={inferred_roof}")
+    print(f"DEBUG: inferred_windows={inferred_windows}")
+
+    orig_data_dump = json.dumps(data, indent=2, ensure_ascii=False)
+    changes_applied = []
+
+    if upgrade_decorative_elements(data, inferred_decorative):
+        changes_applied.append("decorative_elements")
 
     if inferred_roof:
         roof_features = data.get("roof_features")
         if roof_features is None:
             data["roof_features"] = sorted(set(inferred_roof))
-            changed = True
+            changes_applied.append("roof_features_init")
         elif isinstance(roof_features, list):
             existing = {str(item) for item in roof_features}
             for item in inferred_roof:
                 if item not in existing:
                     roof_features.append(item)
-                    changed = True
+                    changes_applied.append("roof_features_merge")
 
     if inferred_windows and not data.get("windows_detail"):
         data["windows_detail"] = deepcopy(inferred_windows)
-        changed = True
+        changes_applied.append("windows_detail")
 
-    changed = ensure_bay_window(data, [str(f) for f in features], typology) or changed
-    changed = ensure_storefront(data) or changed
-    changed = enrich_windows_detail(data) or changed
+    if ensure_bay_window(data, [str(f) for f in features], typology):
+        changes_applied.append("bay_window")
+    
+    if ensure_storefront(data):
+        changes_applied.append("storefront")
+    
+    if enrich_windows_detail(data):
+        changes_applied.append("windows_detail_enrich")
 
-    if changed:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-            f.write("\n")
+    new_data_dump = json.dumps(data, indent=2, ensure_ascii=False)
 
-    return changed
+    print(f"DEBUG: changes_applied before return: {changes_applied}")
+
+    if orig_data_dump == new_data_dump:
+        return False, "no changes needed"
+
+    # Update metadata
+    meta["patched"] = True
+    meta["patches_applied"] = changes_applied if changes_applied else ["minor_adjustments"]
+    data["_meta"] = meta
+
+    _atomic_write_json(path, data)
+
+    return True, ", ".join(meta["patches_applied"])
 
 
 def main() -> None:
-    changed = 0
+    changed_count = 0
     files = 0
     for path in sorted(PARAMS_DIR.glob("*.json")):
         if path.name.startswith("_"):
             continue
         files += 1
-        if patch_file(path):
-            changed += 1
-            print(f"[PATCH] {path.name}")
-    print(f"\nPatched {changed} of {files} files")
+        is_changed, msg = patch_file(path)
+        if is_changed:
+            changed_count += 1
+            print(f"[PATCH] {path.name}: {msg}")
+        # else:
+            # print(f"[NO CHANGE] {path.name}: {msg}") # Optional: print why it wasn't changed
+    print(f"\nPatched {changed_count} of {files} files")
 
 
 if __name__ == "__main__":

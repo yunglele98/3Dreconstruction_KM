@@ -1,0 +1,46 @@
+{
+  "task_id": "TASK-20260327-010",
+  "agent": "gemini-1 (executed by claude)",
+  "report_type": "brick_colour_era_validation",
+  "timestamp": "2026-03-27T17:51:43.070089+00:00",
+  "summary": {
+    "buildings_checked": 1008,
+    "mismatches_found": 3,
+    "by_severity": {
+      "medium": 3,
+      "low": 0
+    }
+  },
+  "findings": [
+    {
+      "address": "2 Kensington Ave",
+      "era": "Pre-1889",
+      "brick_hex": "#5A6A7A",
+      "status": "mismatch",
+      "expected": "red-dominant (R > G and R > B)",
+      "actual": "R=90 G=106 B=122",
+      "severity": "medium",
+      "confidence": 0.8
+    },
+    {
+      "address": "2A Kensington Ave",
+      "era": "Pre-1889",
+      "brick_hex": "#5A6A7A",
+      "status": "mismatch",
+      "expected": "red-dominant (R > G and R > B)",
+      "actual": "R=90 G=106 B=122",
+      "severity": "medium",
+      "confidence": 0.8
+    },
+    {
+      "address": "42 Kensington Ave",
+      "era": "Pre-1889, 1914-1930",
+      "brick_hex": "#3A5080",
+      "status": "mismatch",
+      "expected": "red-dominant (R > G and R > B)",
+      "actual": "R=58 G=80 B=128",
+      "severity": "medium",
+      "confidence": 0.8
+    }
+  ]
+}

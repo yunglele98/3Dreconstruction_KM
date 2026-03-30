@@ -1,0 +1,1693 @@
+{
+  "task_id": "TASK-20260327-013",
+  "agent": "gemini-1",
+  "report_type": "material_reconciliation",
+  "timestamp": "2026-03-28T01:10:00Z",
+  "summary": "Audited 1241 buildings. Reconciled 168 material mismatches.",
+  "findings": [
+    {
+      "address": "100 Oxford St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "10 Glen Baillie Pl",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "vinyl_siding",
+      "actual": "clapboard",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "110 Oxford St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.76,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "12 Glen Baillie Pl",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "vinyl_siding",
+      "actual": "clapboard",
+      "confidence": 0.82,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "12 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted wood/stucco",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "130 Denison Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "138 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (painted brick, stone veneer)",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "146 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "14 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted stucco/render",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "158 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "160 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "modern brick veneer",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "161 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "161 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (brick, painted siding, board-and-batten)",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "163 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "168 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "169 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.83,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "16 Bellevue Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "16 Denison Sq",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "170 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "stucco/parging",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "172 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted wood siding",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "176 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "177 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "178 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "clapboard/vinyl siding upper, brick ground",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "179 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "metal/wood (garage doors)",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "180 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "clapboard/vinyl siding upper, brick ground",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "182 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick/clapboard",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "184 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "187 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (stucco upper, cladding storefront)",
+      "actual": "stucco",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "188 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted masonry/stucco",
+      "actual": "stucco",
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "189 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "stucco over brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "18 Denison Sq",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "190 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.73,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "191 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "metal siding",
+      "actual": "stucco",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "195 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "196 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "196 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick/stucco",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "20-22 Kensington Ave (Cocktail Emporium)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick/stucco",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "200 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (painted masonry)",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "200 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "stucco",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "202 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (painted masonry lower, dark cladding upper)",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "202 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (brick lower, stucco/parging upper)",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "203 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (metal cladding upper, corrugated metal lower)",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "205 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (corrugated metal lower, dark cladding upper)",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "206 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "207 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "brick (upper), painted (ground)",
+      "actual": "brick",
+      "confidence": 0.82,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "210 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "218 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.86,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "220 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.84,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "222 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "224 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.83,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "226 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.82,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "229 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted stucco/render (upper band), metal roller shutters (ground)",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "22 Denison Sq",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "230 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.83,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "234 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.84,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "235 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.91,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "23 St Andrew St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "unknown",
+      "actual": "brick",
+      "confidence": 0.95,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "240 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.86,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "244 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "247 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "249 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "253 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "255 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.84,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "256 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "257 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "263 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.88,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "268 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.83,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "269 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.88,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "270 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.77,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "272 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.74,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "273 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.87,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "274 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.76,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "275 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.84,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "276 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "277 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.86,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "279 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "27 Bellevue Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "27 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (brick left, stone/roughcast right)",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "285 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.74,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "291 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.76,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "293 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "295 College St (Royal Care Walk-in Clinic + others)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "297 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "297 College St (T&T Supermarket + others)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "299 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.84,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "29 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "2A Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "2 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "305 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.82,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "311 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.83,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "31 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "wood_clapboard",
+      "actual": "clapboard",
+      "confidence": 0.84,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "321 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "323 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.74,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "327 Bathurst St (Sanderson Library)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "333 Spadina Ave (Mr. Fish Chinese Restaurant)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "335 College St (ASTRO, house of vapes) view : 43.657624, -79.402228",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.77,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "335 Spadina Ave (Chopfire \u897f\u95e8\u708a\u70df)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.77,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "337 Spadina Ave (LCBO)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "33 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "wood_clapboard",
+      "actual": "clapboard",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "340 College St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.88,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "341 Spadina Ave (ChaTraMue)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "343 Spadina Ave (Sang's Great Seafood Restaurant)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "353 College St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "n/a - vacant lot",
+      "actual": "brick",
+      "confidence": 0.95,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "355 Spadina Ave (Daldongnae / Project Seoul)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "35 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "365 Spadina Ave (YSM Evergreen Centre for Street-Involved Youth)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "366 Bathurst St (Cardinal Funeral Home)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.77,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "369 Spadina Ave (Yin Ji Chang Fen \u9280\u8a18\u8178\u7c89)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.76,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "371 Spadina Ave (CoCo Fresh Tea & Juice)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "373 Spadina Ave (FLAMING NOODLES / \u6210\u561f\u561f\u71c3\u9762)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.77,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "375 Spadina Ave (B\u1ea3nk Bao)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "377 Spadina Ave (Grossman's Tavern)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.74,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "381 Spadina Ave (Sizzler Kabab)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "383 Spadina Ave (Anh Dao Restaurant)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "389 Spadina Ave (Collective)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "393 Spadina Ave (Heval cafe)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.76,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "398 Spadina Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "wood_clapboard",
+      "actual": "clapboard",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "39 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "401 Spadina Ave (Tankx Ebike) / 399 (Reiwatakiya) / 397 (HANBINGO \ud55c\ube59\uace0)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.74,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "405 Spadina Ave (Tasty's Caribbean Cuisine)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.76,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "406-414 Bathurst St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.83,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "409 Spadina Ave (A Chinese Cuisine \u8001\u5473\u7802\u9505) / 407 (\u8336\u5bb4 CHAYAN)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "411 Spadina Ave (Play De Record)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.77,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "417 Spadina Ave (Mexi-Pak FusionTaco\u00b4S)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "42 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "438 Spadina Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "43 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.82,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "44 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted/clad",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "45 Bellevue Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "vinyl_siding",
+      "actual": "clapboard",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "48 Oxford St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "49 Bellevue Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "50 Bellevue Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "530 Dundas St W",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.76,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "55 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "576 Dundas St W",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "57 Kensington school building",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "58-60 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "vinyl siding over original",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "60 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick / vinyl siding",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "61-57 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "610 Dundas St W",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "626 Dundas St W",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.74,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "63 Oxford St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "64 Oxford St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "65 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.86,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "67 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted wood/metal storefront",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "67 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.78,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "6 Glen Baillie Pl",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "vinyl_siding",
+      "actual": "clapboard",
+      "confidence": 0.72,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "7-9_Glen_Baillie_Pl",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "71 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "wood clapboard / painted wood",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "73/75 Bellevue Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "73 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick / stucco",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "750 Dundas St (Tim hortons / Pharmasave / Appletree Medical Centre / MedWest Medical Building - closed)  / 356 Bathurst St (Irene's Flowers)",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.84,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "75 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted metal/wood panel",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "75 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "76 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted brick",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "77-79 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "painted stucco/render",
+      "actual": "clapboard",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "79 Baldwin St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "metal cladding",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "7 Kensington Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "unknown",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "8 Glen Baillie Pl",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "vinyl_siding",
+      "actual": "clapboard",
+      "confidence": 0.75,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "90 Bellevue Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "90 Nassau St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "98 Oxford St",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.88,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "Augusta_Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed (contextual)",
+      "actual": "brick",
+      "confidence": 1.0,
+      "severity": "medium",
+      "note": "Reconciled from deep_facade_analysis."
+    },
+    {
+      "address": "Dundas St W, CAAM United Hardware Ltd",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "Fairland Cannabis / Pho Ngon, Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.79,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "Kensington Community School, ~242 Augusta Ave",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.85,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "Kensington Kids Early Learning Centre",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.8,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    },
+    {
+      "address": "399 Bathurst St / Toronto Western Hospital",
+      "field": "facade_material",
+      "status": "reconciled",
+      "expected": "mixed",
+      "actual": "brick",
+      "confidence": 0.9,
+      "severity": "medium",
+      "note": "Reconciled from photo_observations."
+    }
+  ],
+  "coverage": {
+    "buildings_checked": 1241,
+    "reconciled": 168
+  }
+}

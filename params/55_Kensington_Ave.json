@@ -18,11 +18,11 @@
     "lot_coverage_pct": 79.0,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "red brick",
+  "facade_material": "mixed",
+  "facade_colour": "stucco/render (painted) on corner building; brick on buildings behind",
   "windows_per_floor": [
     0
   ],
@@ -31,17 +31,17 @@
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "good",
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "1890-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 157,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -56,8 +56,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -76,7 +76,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,16 +97,89 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "doors_detail_types",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "55 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "55 KENSINGTON AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "NOTE: storey mismatch DB=1 vs photo=2",
+      "windows_detail: 0 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [0] -> [0, 2]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#E0D0B0'",
+      "facade_detail.bond_pattern: 'not visible (painted mural)'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.1"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:31:01.734375+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:26.421967+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:09.932265+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #1A1A2A (black frame)"
+        ],
+        "timestamp": "2026-03-29T08:05:44.638198+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:22.110285Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:17.034014Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #484747",
+        "trim": "#E8E0D0 \u2192 #242424",
+        "mortar": "#B0A898 \u2192 #BCB3A1"
+      }
     ]
   },
   "storefront": {
@@ -114,11 +187,24 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 8.3,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "LOST GEN VINTAGE (blue/neon lettering, multiple instances across facade); graffiti art text/tags",
+    "awning": {
+      "present": false
+    },
+    "security_grille": true,
+    "width_pct": 95,
+    "signage": {
+      "text": "Lost Gen Vintage",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "other",
-    "facade_material_observed": "other",
+    "facade_material_observed": "stucco/render (painted) on corner building; brick on buildings behind",
     "facade_condition_notes": "Facade covered in mural/graffiti art; underlying material not assessable",
     "condition": "fair",
     "windows_per_floor": [
@@ -156,12 +242,40 @@
     "roof_features": [],
     "has_storefront_observed": true,
     "storefront_description": "Lost Gen Vintage commercial storefront",
-    "signage_observed": "Lost Gen Vintage",
+    "signage_observed": "'LOST GEN VINTAGE' in blue text; extensive mural art",
     "overall_style": "Victorian Bay-and-Gable (obscured by mural)",
     "alterations_visible": "Full facade mural/graffiti art; commercial conversion",
     "matches_hcd_typology": true,
     "confidence": 0.5,
-    "notes": "Limited visibility. Business is Lost Gen Vintage. Facade entirely covered in mural art, making architectural detail assessment difficult. Low confidence."
+    "notes": "Limited visibility. Business is Lost Gen Vintage. Facade entirely covered in mural art, making architectural detail assessment difficult. Low confidence.",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_013016711_HDR.jpg",
+    "facade_analysis_address": "55 Kensington Ave (Lost Gen Vintage)",
+    "storeys_observed": 1,
+    "condition_observed": "fair; murals in good condition; upper walls show graffiti and some deterioration",
+    "windows_observed": {},
+    "colour_palette_observed": {
+      "primary": "red/orange (mural), cream (upper)",
+      "accent": "lavender/purple (building behind), blue (neon)"
+    },
+    "photo_quality": "night, upright, excellent wide-angle",
+    "db_context": {
+      "ba_building_type": "commercial",
+      "ba_stories": 1,
+      "ba_facade_material": "other",
+      "height_max_m": 8.28,
+      "height_avg_m": 3.15,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "facade_colour_observed": "other",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_013016711_HDR.jpg"
   },
   "window_arrangement": "unknown",
   "door_type": "commercial",
@@ -183,7 +297,7 @@
   "decorative_lintels": false,
   "overall_style": "Victorian Bay-and-Gable (obscured by mural)",
   "storefront_description": "Lost Gen Vintage commercial storefront",
-  "confidence": 0.6500000000000001,
+  "confidence": 0.7500000000000002,
   "notes": "Limited visibility. Business is Lost Gen Vintage. Facade entirely covered in mural art, making architectural detail assessment difficult. Low confidence.",
   "porch_present": false,
   "porch_type": "none",
@@ -193,7 +307,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "commercial",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 1.2,
       "height_m": 2.4,
@@ -201,22 +315,28 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "is_glass": true,
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "building_type": "residential",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
-    "bond_pattern": "running bond",
+    "brick_colour_hex": "#E0D0B0",
+    "bond_pattern": "not visible (painted mural)",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#242424",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using not visible, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#BCB3A1"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -230,7 +350,28 @@
       "colour_hex": "#E8E0D0"
     }
   },
-  "windows_detail": [],
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "1-over-1",
+          "frame_colour": "#E8E0D0",
+          "arch_type": "flat",
+          "width_m": 0.62,
+          "height_m": 1.2,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    }
+  ],
   "bay_window": {
     "present": true,
     "type": "Three-sided projecting bay",
@@ -257,8 +398,8 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "55 Kensington Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as other, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using not visible, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in.",
+  "facade_description": "55 Kensington Ave is a row-house building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as mixed in a stucco/render (painted) on corner building; brick on buildings behind palette, laid in not visible (painted mural) with light grey mortar joints. The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using not visible, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",
@@ -266,7 +407,133 @@
     "roof_hex": "#5A5A5A",
     "accent_hex": "#E8E0D0",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#E0D0B0",
+    "trim": "#242424",
+    "roof": "#484747",
+    "accent": "#C03020"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_013016711_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.8
+    ],
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#E0D0B0",
+    "brick_bond_observed": "not visible (painted mural)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 3,
+        "type": "plate glass",
+        "frame_colour": "#3A3A3A",
+        "arch": "flat",
+        "width_ratio": 0.25,
+        "height_m_est": 2.0,
+        "note": "Multiple storefront units along Kensington Ave. All covered in elaborate red/orange mural art. Security grilles on most. Corner entrance."
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.12,
+        "height_m_est": 1.2,
+        "note": "Upper windows on cream/beige painted or rendered facade. Visible above the mural line. Upper portion of facade is light-coloured (cream/lavender wash)."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "corner",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour": "dark"
+      },
+      {
+        "position": "left",
+        "type": "commercial",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 0,
+        "colour": "dark"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": false
+    },
+    "gable_window": {
+      "present": false
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 95,
+      "signage_text": "LOST GEN VINTAGE (blue/neon lettering, multiple instances across facade); graffiti art text/tags",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "corner",
+      "security_grille": true,
+      "note": "Corner commercial building at south end of Kensington Ave (likely at Dundas intersection). Entire ground floor wrapped in elaborate horror/fantasy-themed mural (red/orange/purple: skulls, demons, flames, figures). LOST GEN VINTAGE signs in blue neon/painted text at multiple points. Multiple storefronts with security grilles. The building wraps around the corner. Background shows the row of flat-roof and gable-roof buildings stretching north on Kensington Ave."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {
+        "present": true,
+        "location": "entire ground floor and portions of upper walls",
+        "subject": "Elaborate horror/fantasy theme: red-orange flames, purple/grey skulls, demons, dark figures. Covers all ground-floor wall surfaces. Highly detailed airbrush/spray style."
+      },
+      "graffiti_tags": {
+        "present": true,
+        "location": "upper facade parapet"
+      }
+    },
+    "party_wall_left": false,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#E0D0B0",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#C03020"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Corner building entirely wrapped in mural art at ground level. Upper facade cream/beige, appears painted. Parapet has graffiti tags. Structure appears sound. Multiple storefronts along the L-shaped footprint. Important streetscape anchor at the south entry to Kensington Ave.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "foundation_height_m": 0.1,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

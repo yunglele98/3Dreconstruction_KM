@@ -19,7 +19,7 @@
     "lot_coverage_pct": 46.3,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "brick",
@@ -101,10 +101,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "reference_photos": [
       "IMG_20260318_175506657_HDR.jpg"
@@ -114,12 +111,65 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "39 Nassau St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "39 NASSAU ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Nassau St",
+        "timestamp": "2026-03-29T07:48:43.943932+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:04.361025+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (pre-1889)",
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:51.035994+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:37.809665+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:20.426899Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.451307+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "porch_enriched": "2026-03-29T08:38:23.511380Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #AD5844",
+        "roof": "#5A5A5A → #515151",
+        "trim": "#3A2A20 → #45301F",
+        "accent": "#3A2A20 → #192A27",
+        "mortar": "#B0A898 → #A9967D"
+      }
     ]
   },
   "photo_observations": {
@@ -168,7 +218,8 @@
     "alterations_visible": "Large replacement windows, simplified porch treatment, and facade remodelling obscure the original house-form character.",
     "matches_hcd_typology": false,
     "confidence": 0.75,
-    "notes": "Observed from a cropped frontage view at the west end of the Nassau Street sequence."
+    "notes": "Observed from a cropped frontage view at the west end of the Nassau Street sequence.",
+    "photo": "IMG_20260318_175506657_HDR.jpg"
   },
   "window_arrangement": "asymmetric",
   "door_type": "single",
@@ -200,7 +251,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.0,
@@ -208,21 +259,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AD5844",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#45301F",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial, converted house-form, semi-detached typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include original windows, cornice.",
-    "heritage_summary": "The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure."
+    "heritage_summary": "The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure.",
+    "mortar_colour_hex": "#A9967D"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -239,10 +294,11 @@
           "count": 2,
           "type": "mixed",
           "width_m": 0.9,
-          "height_m": 1.8,
+          "height_m": 1.9800000000000002,
           "sill_height_m": 1.2,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -256,7 +312,8 @@
           "height_m": 2.4,
           "sill_height_m": 1.9,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -274,17 +331,89 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "street_setback_m": 3.0,
-  "facade_description": "Two-storey converted semi-detached house, pre-1889 origins with 1914-1930 alterations. Dark mottled red-brown brick with replacement windows and simplified trim. Asymmetric opening pattern (2 ground, 1 upper). Cross-gable roof, party walls on both sides; 3 dwelling units. Fair condition with overgrown front and altered openings.",
+  "street_setback_m": 0.0,
+  "facade_description": "39 Nassau St is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial, converted house-form, semi-detached typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Key storefront and facade features include original windows, cornice.",
   "heritage_summary": "The property at 40 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 38 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure.",
   "roof_material": "Slate shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#AD5844",
+    "trim": "#45301F",
+    "roof": "#515151",
+    "accent": "#192A27"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_175506657_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.9800000000000002,
+            "sill_height_m": 1.2,
+            "frame_colour": "#3A2A20",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 2.4,
+            "sill_height_m": 1.9,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "porch_width_m": 2.6,
+  "porch_depth_m": 1.8,
+  "porch_height_m": 4.0,
+  "porch_detail": {
+    "columns": {
+      "count": 2,
+      "type": "turned",
+      "material": "wood"
+    },
+    "railing": {
+      "present": true,
+      "height_m": 0.9,
+      "type": "baluster"
+    },
+    "step_count": 2
+  }
 }

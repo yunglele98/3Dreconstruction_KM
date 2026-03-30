@@ -5,11 +5,12 @@
   "facade_colour": "dark storefront with eclectic retail display and small upper windows",
   "door_count": 1,
   "door_type": "storefront",
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "good",
   "roof_type": "gable",
   "photo_observations": {
-    "notes": "Dense small-shop frontage with strong character retail signage."
+    "notes": "Dense small-shop frontage with strong character retail signage.",
+    "photo": "IMG_20260320_012308243_HDR.jpg"
   },
   "_meta": {
     "address": "14 Kensington Ave (Courage My Love)",
@@ -26,12 +27,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "hcd_data_stub",
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail",
-      "dimensions_backfill"
+      "colour_palette"
     ],
     "reference_photos": [
       "IMG_20260320_012308243_HDR.jpg"
@@ -41,7 +37,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "14 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "14 KENSINGTON AVE"
     ],
@@ -53,20 +49,92 @@
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
-    }
+    },
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Kensington Ave",
+        "timestamp": "2026-03-29T07:48:26.570976+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:46.923221+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:42.897097+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:12.151716+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:15.455427+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:16.892223Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:43.872382+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #D77754",
+        "roof": "#5A5A5A \u2192 #545454",
+        "trim": "#E8E0D0 \u2192 #30211B",
+        "accent": "#2A3A2A \u2192 #2A3123",
+        "mortar": "#B0A898 \u2192 #C4BCA8"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
+    ]
   },
   "notes": "Dense small-shop frontage with strong character retail signage.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     }
   ],
   "storefront": {
@@ -88,13 +156,16 @@
   "party_wall_right": false,
   "facade_depth_m": 10.0,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#D77754",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#30211B",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology.",
-    "opening_rhythm": "The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance."
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "mortar_colour_hex": "#C4BCA8",
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
+    "heritage_summary": "This commercial dates to the 1889-1903 period. Character-defining elements include its original massing and streetscape presence."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -109,12 +180,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 1.4,
           "sill_height_m": 0.9,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -128,22 +200,14 @@
     }
   },
   "street_setback_m": 2.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "14 Kensington Ave (Courage My Love) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by mixed in a dark storefront with eclectic retail display and small upper windows palette, laid in running bond with light grey mortar joints. The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance.",
+  "confidence": 0.9,
+  "facade_description": "14 Kensington Ave (Courage My Love) is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by brick in a dark storefront with eclectic retail display and small upper windows palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",
     "source": "inferred_from_photo_analysis"
   },
   "roof_material": "Slate shingles",
-  "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#3A2A20",
-    "roof_hex": "#4A5A5A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
-  },
   "volumes": [],
   "total_height_m": 9.6,
   "facade_width_m": 5.2,
@@ -156,11 +220,60 @@
     2,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "site": {
     "lon": -79.40044691,
     "lat": 43.65318265,
     "street": "Kensington Ave",
     "street_number": 12
-  }
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#D77754",
+    "trim": "#30211B",
+    "roof": "#545454",
+    "accent": "#2A3123"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012308243_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0
 }

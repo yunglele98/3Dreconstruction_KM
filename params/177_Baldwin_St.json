@@ -20,32 +20,32 @@
     "lot_coverage_pct": 20.7,
     "lots_sharing_footprint": 12
   },
-  "roof_type": "Cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_type": "cross-gable",
+  "roof_pitch_deg": 35,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "painted brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
+    0,
     2,
-    2,
-    1
+    0
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870–1889",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 98,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructe",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Commercial",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "NORTH POKE",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -102,24 +102,110 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "177 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "177 BALDWIN ST"
     ],
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_pitch_deg: 45 -> 35",
+      "half_storey_gable flagged",
+      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 0] -> [0, 2, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#505050'",
+      "colour_palette enriched from observations",
+      "facade_colour updated: painted observation",
+      "decorative_elements.cornice added",
+      "storefront.security_grille added",
+      "foundation_height_m: 0.2"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:57.741042+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:20.433856+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].sill_height_m",
+          "windows_detail[].height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:48.496596+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1904-1913)",
+          "glazing filled (1904-1913)",
+          "frame_colour filled (1904-1913)"
+        ],
+        "timestamp": "2026-03-29T08:03:43.852530+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:14.633144+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.351574Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#2A2A2A \u2192 #29292F",
+        "mortar": "#B0A898 \u2192 #BFB7A4"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -127,68 +213,67 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#505050",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
+    "trim_colour_hex": "#29292F",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#BFB7A4"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
     "eave_overhang_mm": 300,
     "gable_window": {
       "present": false
-    }
+    },
+    "has_half_storey": true
   },
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.9,
-          "sill_height_m": 1.3,
-          "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1"
-        }
-      ]
+      "windows": [],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 3.1,
-          "sill_height_m": 2.4,
-          "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1"
+          "type": "1-over-1 double-hung",
+          "frame_colour": "white/light",
+          "arch_type": "flat",
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     },
     {
-      "floor": "Third floor",
+      "floor": "gable/attic",
       "windows": [
         {
-          "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.6,
-          "sill_height_m": 2.0,
-          "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1"
+          "count": 0,
+          "type": "arched",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "flat",
+          "glazing": "1-over-1",
+          "frame_colour": "dark"
         }
       ]
     }
@@ -197,6 +282,11 @@
     "bargeboard": {
       "colour_hex": "#2A2A2A",
       "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 150
     }
   },
   "chimneys": {
@@ -208,9 +298,9 @@
     "material": "brick",
     "colour_hex": "#B85A3A"
   },
-  "street_setback_m": 3.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "Three-storey early-twentieth-century semi-detached house-form with a 5.2-metre red brick frontage and cross-gable roof. Two double-hung sash windows on each of the lower two storeys, with a single window in the gable. The building is set back 3 metres from the street and appears residential on the upper floors, with NORTH POKE associated at ground level. Party walls on both sides. In good maintained condition. No direct photo observations are available; description based on database records.",
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "177 Baldwin St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as painted brick in a red brick palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {
@@ -219,12 +309,160 @@
     "roof_hex": "#5A5A5A",
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#505050",
+    "trim": "#29292F",
+    "roof": "#303030",
+    "accent": "#4A8030"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  }
+    "status_source": "normalized_fix",
+    "signage_text": "$1 DOLLAR SMOKES / VAPES TOBACCO ZYN / FIRST NATION STORE / Golden Grams Culture Boutique",
+    "security_grille": true
+  },
+  "deep_facade_analysis": {
+    "source_photo": "PXL_20260318_223430241.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.9,
+      0.4
+    ],
+    "facade_material_observed": "painted brick",
+    "brick_colour_hex": "#505050",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "dark grey (painted over)",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Storefront with large window behind diamond-pattern security grille. Boarded/painted panels."
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1 double-hung",
+        "frame_colour": "white/light",
+        "arch": "flat",
+        "width_m_est": 0.9,
+        "height_m_est": 1.3,
+        "note": "Two windows with flat stone/cast lintels and sills. Appears to have frosted/textured glass."
+      },
+      {
+        "floor": "gable/attic",
+        "count": 0,
+        "note": "Gable peak has no window, just flat parapet with stepped/curved detail"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center-right",
+        "type": "commercial entry",
+        "width_m_est": 1.0,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#3A3A3A",
+        "note": "Main entry, partially obscured by signage/graffiti"
+      }
+    ],
+    "roof_type_observed": "gable (with flat parapet front)",
+    "roof_pitch_deg": 35,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#404040",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 90,
+      "signage_text": "KENSINGTON'S (vertical banner)",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "center-right",
+      "security_grille": true,
+      "note": "Derelict/vacant ground floor. Diamond-pattern metal security grille over storefront windows. Teal/green painted columns flanking entry. Vertical black banner reading 'KENSINGTON'S' hanging on right side. Graffiti/tags on plywood and walls. Building appears abandoned or semi-vacant."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": true,
+        "projection_mm": 100,
+        "height_mm": 250,
+        "colour_hex": "#505050",
+        "note": "Stepped/segmented parapet crown with two pilaster-like raised sections at top. Victorian-era commercial front detail."
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "lintels": {
+        "present": true,
+        "colour_hex": "#707070",
+        "note": "Flat stone or cast concrete lintels above second-floor windows"
+      },
+      "note": "Late 19th century commercial building with stepped parapet front (false front concealing gable behind). Two pilaster-like raised sections at parapet crown. Entire facade painted dark grey/charcoal. Heritage character substantially obscured by paint and neglect."
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#505050",
+      "trim": "#707070",
+      "roof": "#404040",
+      "accent": "#3A7A6A"
+    },
+    "condition_observed": "poor",
+    "condition_notes": "Building appears vacant or semi-abandoned. Heavy graffiti/tagging. Diamond security grille over windows. Paint peeling. Stepped parapet crown still intact structurally. Significant heritage loss through paint and neglect.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "foundation_height_m": 0.2,
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "brick",
+    "facade_colour_observed": "red brick",
+    "condition": "good",
+    "windows_per_floor": [
+      0,
+      2,
+      0
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": false,
+    "photo": "PXL_20260318_223430241.jpg"
+  },
+  "wall_thickness_m": 0.3
 }

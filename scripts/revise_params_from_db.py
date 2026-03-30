@@ -24,7 +24,7 @@ from typing import Any
 import psycopg2
 import psycopg2.extras
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -166,7 +166,7 @@ def derive_storefront(status: str | None) -> bool | None:
 
 
 def fetch_db_rows() -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute(
         """
@@ -438,3 +438,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

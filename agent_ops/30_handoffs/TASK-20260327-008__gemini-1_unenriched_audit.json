@@ -1,0 +1,25 @@
+﻿{
+  \"task_id\": \"TASK-20260327-008\",
+  \"agent\": \"gemini-1\",
+  \"report_type\": \"enrichment_gap_audit\",
+  \"timestamp\": \"2026-03-27T19:05:00Z\",
+  \"summary\": \"Audited 2053 buildings. Found 705 buildings where _meta.enriched is false or missing. 1348 buildings are successfully enriched.\",
+  \"findings\": [
+    {
+      \"address\": \"10-8 Casimir St Backyards\",
+      \"field\": \"_meta.enriched\",
+      \"status\": \"missing\",
+      \"expected\": true,
+      \"actual\": null,
+      \"confidence\": 1.0,
+      \"severity\": \"high\",
+      \"note\": \"Building param exists but enrichment pipeline has not been applied.\"
+    }
+  ],
+  \"coverage\": {
+    \"buildings_checked\": 2053,
+    \"enriched\": 1348,
+    \"unenriched\": 705,
+    \"enrichment_percentage\": 65.6
+  }
+}

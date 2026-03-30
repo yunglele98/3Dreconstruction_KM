@@ -14,23 +14,23 @@
     "lat": 43.6535779,
     "street": "Kensington Ave",
     "street_number": 35,
-    "setback_m": 0.0,
+    "setback_m": 0.3,
     "lot_area_sqm": 201.8717660992397,
     "footprint_sqm": 57.1,
     "lot_coverage_pct": 28.3,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "red brick",
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick; brick (upper), mixed at ground level",
   "windows_per_floor": [
     0,
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Converted House-form, House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form (35 Kensington Avenue), House-form (37 Kensington Avenue), Semi-detached, Bay-andGable (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form (35 Kensington Avenue), House-form (37 Kensington Avenue), Semi-detached, Bay-andGable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 201,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The property at 35 Kensington Avenue also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, 35 Kensington Avenue is associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding, decorative wooden gable brackets, and fenestration pattern above the first storey with flat headed openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 35 Kensington Avenue also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, 35 Kensington Avenue is associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding, decorative wooden gable brackets, and fenestration pattern above the first storey with flat headed openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "decorative_brick"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "37 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "37 KENSINGTON AVE"
     ],
@@ -118,6 +118,74 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "NOTE: storey mismatch DB=3 vs photo=2",
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 250",
+      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#A0603C'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1",
+      "site.setback_m: 0.3"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:gable_brackets",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:03.744398+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "glazing filled (pre-1889)",
+          "glazing filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:50.435304+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:37.005081+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "composite",
+      "timestamp": "2026-03-29T08:34:20.264393Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:15.557520Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 \u2192 #3E2C1D",
+        "mortar": "#B0A898 \u2192 #C2B297"
+      }
     ]
   },
   "bay_window": {
@@ -139,19 +207,42 @@
       "style": "decorative"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
+    }
   },
   "storefront": {
     "type": "Commercial ground floor",
     "status": "active",
     "width_m": 4.4,
     "height_m": 4.9,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "BREATHLESS (vertical blade sign); BREATHLESS VINTAGE (horizontal sign at storefront)",
+    "awning": {
+      "present": false
+    },
+    "width_pct": 75,
+    "signage": {
+      "text": "Breathless Vintage",
+      "type": "projecting",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -159,55 +250,73 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 1,
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A0603C",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#3E2C1D",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, house-form, semi-detached typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include bay window, decorative brick.",
-    "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding, decorative wooden gable brackets, and fenestration pattern above the first storey with flat headed openings. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, decorative brick, gable brackets.",
+    "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding, decorative wooden gable brackets, and fenestration pattern above the first storey with flat headed openings. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "mortar_colour_hex": "#C2B297"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 250,
     "gable_window": {
-      "present": false
-    }
+      "present": true,
+      "type": "rectangular",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "rectangular"
+    },
+    "bargeboard_style": "simple",
+    "bargeboard_colour_hex": "#E8E0D0"
   },
   "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.4,
-          "sill_height_m": 1.9,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "1-over-1",
+          "frame_colour": "#E8E0D0",
+          "arch_type": "flat",
+          "width_m": 0.78,
+          "height_m": 1.4,
+          "sill_height_m": 0.8,
+          "glazing": "2-over-2"
         }
       ]
     },
     {
-      "floor": "Third floor",
+      "floor": "Gable",
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "rectangular",
+          "frame_colour": "#E8E0D0",
+          "arch_type": "flat",
+          "width_m": 0.52,
+          "height_m": 0.7,
+          "sill_height_m": 0.8,
+          "glazing": "2-over-2"
         }
       ]
     }
@@ -222,8 +331,8 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "confidence": 0.7500000000000001,
-  "facade_description": "37 Kensington Ave presents a converted house-form, house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The property at 35 Kensington Avenue also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, 35 Kensington Avenue is associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding, decorative wooden gable brackets, and fenestration pattern above the first storey with flat headed openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "confidence": 0.8500000000000002,
+  "facade_description": "37 Kensington Ave is a converted house-form, house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, gable brackets.",
   "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding, decorative wooden gable brackets, and fenestration pattern above the first storey with flat headed openings. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -232,7 +341,171 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A0603C",
+    "trim": "#3E2C1D",
+    "roof": "#4A4A4A",
+    "accent": "#2A2A2A"
   },
-  "volumes": []
+  "volumes": [],
+  "photo_observations": {
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012757406_HDR.jpg",
+    "facade_analysis_address": "37 Kensington Ave (Breathless Vintage)",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick (upper), mixed at ground level",
+    "brick_colour_observed": "red-brown brick",
+    "brick_colour_hex_observed": "#B85A3A",
+    "condition_observed": "fair; some deterioration; adjacent lime green building appears to be a basic commercial conversion",
+    "windows_observed": {
+      "gable": "1 small window in gable peak",
+      "upper_floor": "1-2 windows visible; white frames",
+      "ground_floor": "commercial"
+    },
+    "doors_observed": "commercial entrance",
+    "roof_type_observed": "gable; steep front-facing gable",
+    "decorative_elements_observed": "bargeboard at gable; 'BREATHLESS' vertical sign mounted on facade; bay window form",
+    "storefront_description": "'Breathless' shop with vertical blade sign; commercial ground floor; adjacent building at left has lime green painted facade; chain-link fence visible",
+    "signage_observed": "'BREATHLESS' vertical blade sign on upper facade",
+    "party_walls_observed": "party walls both sides",
+    "colour_palette_observed": {
+      "primary": "red-brown brick",
+      "trim": "white",
+      "accent": "lime green (adjacent building)"
+    },
+    "bond_pattern_observed": "running bond",
+    "photo_quality": "night, rotated 90 degrees",
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 3,
+      "ba_facade_material": "brick",
+      "height_max_m": 14.7,
+      "height_avg_m": 6.89,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "Converted House-form (35 Kensington Avenue), House-form (37 Kensington Avenue), Semi-detached, Bay-andGable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "red brick",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_012706597_HDR.jpg"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012706597_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.8,
+      0.45
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#A0603C",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Storefront level with commercial signage. Vertical 'BREATHLESS' blade sign on right side."
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.15,
+        "height_m_est": 1.4,
+        "note": "Pair of windows with white frames, one partially open or with AC unit."
+      },
+      {
+        "floor": "gable",
+        "count": 1,
+        "type": "rectangular",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.1,
+        "height_m_est": 0.7,
+        "note": "Small window in gable peak."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 1,
+        "colour": "dark"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple",
+      "colour_hex": "#E8E0D0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "rectangular"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "note": "Photo angle does not clearly show a bay window but building typology (bay-and-gable) suggests one may be present on the main facade."
+    },
+    "storefront_observed": {
+      "width_pct": 75,
+      "signage_text": "BREATHLESS (vertical blade sign); BREATHLESS VINTAGE (horizontal sign at storefront)",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "center",
+      "security_grille": false,
+      "note": "Night photo showing vertical blade sign 'BREATHLESS' on bracket at second floor. Yellow/green lit building visible at right (adjacent property). Bare trees partially obstruct view."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#A0603C",
+      "trim": "#E8E0D0",
+      "roof": "#4A4A4A",
+      "accent": "#2A2A2A"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Classic bay-and-gable form. Brick appears in fair condition. Gable peak and trim visible. Night photo and tree obstruction limit full assessment. Address number '37' visible near entry.",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 1,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 250,
+  "foundation_height_m": 0.3,
+  "wall_thickness_m": 0.3
 }

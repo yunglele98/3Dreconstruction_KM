@@ -19,16 +19,16 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form (47 Kensington Avenue), Converted House-form (49 Kensington Avenue), Semi-detached, Bay-andGable (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-form (47 Kensington Avenue), Converted House-form (49 Kensington Avenue), Semi-detached, Bay-andGable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 213,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. 49 Kensington Avenue also has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as part of a row, they have retained original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, brick cladding, and second storey window openings with segmentally arched voussoirs. 47 Kensington Avenue has also retained its attic window opening and decorative wooden brackets and gable pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. 49 Kensington Avenue also has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as part of a row, they have retained original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, brick cladding, and second storey window openings with segmentally arched voussoirs. 47 Kensington Avenue has also retained its attic window opening and decorative wooden brackets and gable pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 7,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -96,14 +96,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "49 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "49 KENSINGTON AVE"
     ],
@@ -116,6 +113,64 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:stone_voussoirs,gable_brackets",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:08.696290+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:55.460976+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:43.019163+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Kensington Ave",
+        "timestamp": "2026-03-29T07:48:47.698502+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "substring",
+      "timestamp": "2026-03-29T08:34:21.745487Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:47.387644+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:16.792798Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #913C2C",
+        "roof": "#5A5A5A \u2192 #5B4F50",
+        "trim": "#3A2A20 \u2192 #35261D",
+        "accent": "#3A2A20 \u2192 #34251C",
+        "mortar": "#B0A898 \u2192 #AA9A81"
+      }
     ]
   },
   "decorative_elements": {
@@ -125,6 +180,17 @@
     "bargeboard": {
       "colour_hex": "#3A2A20",
       "style": "decorative"
+    },
+    "stone_voussoirs": {
+      "present": true,
+      "colour_hex": "#C8B898"
+    },
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
     }
   },
   "storefront": {
@@ -132,12 +198,30 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.4,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "signage": {
+      "text": "Usato Kensington",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -145,21 +229,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#913C2C",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#35261D",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, converted house-form, semi-detached typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
-    "heritage_summary": "Constructed as part of a row, they have retained original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, brick cladding, and second storey window openings with segmentally arched voussoirs. 47 Kensington Avenue has also retained its attic window opening and decorative wooden brackets and gable pediment."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, gable brackets.",
+    "heritage_summary": "Constructed as part of a row, they have retained original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, brick cladding, and second storey window openings with segmentally arched voussoirs. 47 Kensington Avenue has also retained its attic window opening and decorative wooden brackets and gable pediment.",
+    "mortar_colour_hex": "#AA9A81"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -174,12 +262,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 3.6,
           "sill_height_m": 2.8,
           "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -194,17 +283,79 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "confidence": 0.7500000000000001,
-  "facade_description": "49 Kensington Ave presents a house-form, converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, converted house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. 49 Kensington Avenue also has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as part of a row, they have retained original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, brick cladding, and second storey window openings with segmentally arched voussoirs. 47 Kensington Avenue has also retained its attic window opening and decorative wooden brackets and gable pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "confidence": 0.8500000000000002,
+  "facade_description": "49 Kensington Ave is a house-form, converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, converted house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, gable brackets.",
   "heritage_summary": "Constructed as part of a row, they have retained original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, brick cladding, and second storey window openings with segmentally arched voussoirs. 47 Kensington Avenue has also retained its attic window opening and decorative wooden brackets and gable pediment.",
   "roof_material": "Slate shingles",
+  "volumes": [],
+  "photo_observations": {
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 2,
+      "ba_facade_material": "brick",
+      "height_max_m": 13.27,
+      "height_avg_m": 7.69,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-form (47 Kensington Avenue), Converted House-form (49 Kensington Avenue), Semi-detached, Bay-andGable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "red brick",
+      "photo_condition": "poor",
+      "ba_condition_rating": 2,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_012852370_HDR.jpg"
+  },
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#913C2C",
+    "trim": "#35261D",
+    "roof": "#5B4F50",
+    "accent": "#34251C"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012852370_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 3.6,
+            "sill_height_m": 2.8,
+            "frame_colour": "#3A2A20",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [
+      "decorative_brickwork",
+      "stone_voussoirs"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "poor",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 0.0
 }

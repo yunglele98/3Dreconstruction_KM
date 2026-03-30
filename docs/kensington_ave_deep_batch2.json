@@ -1,0 +1,1045 @@
+[
+  {
+    "filename": "IMG_20260320_012706597_HDR.jpg",
+    "address": "35 Kensington Ave",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "mixed",
+    "brick_colour_hex": "#3A3A3A",
+    "brick_bond": "unknown (painted/clad)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "storefront - large plate glass windows, 2x3 grid panes, lit with blue/cyan interior light"},
+      {"floor": "second", "count": 0, "note": "facade covered by large mural (floral/figure street art) on plywood or panel cladding, no visible windows"}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark", "note": "recessed entry beside storefront"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "GrandoGarbo (on window signs: 'We are expanding!')",
+      "awning": {"present": false},
+      "entrance_position": "left",
+      "security_grille": false,
+      "note": "Ground floor is a 2x3 grid of large plate glass panes with white/cream frames, interior lit blue-cyan. Signs read 'We are expanding! Closed during renovations but you can find us at...' GrandoGarbo.com @GrandoGarbo"
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {"present": true, "location": "upper facade", "subject": "large floral/figure painting on orange/red background, covers entire second floor"}
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#3A3A3A",
+      "trim": "#E8E0D0",
+      "roof": "#4A4A4A",
+      "accent": "#D44A20"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper facade entirely covered by mural on panel cladding, obscuring original material. Corrugated metal visible at roofline/parapet. Storefront windows in good condition. Under renovation.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012716439_HDR.jpg",
+    "address": "35 Kensington Ave (storefront detail)",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "mixed",
+    "brick_colour_hex": "#3A3A3A",
+    "brick_bond": "unknown (painted/clad)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 6, "type": "plate glass", "note": "2-wide x 3-high grid of rectangular panes with cream/off-white mullions. Upper row: 4 panes. Lower row: 3 panes. Interior glows blue-cyan.", "frame_colour": "#E8DCC8", "arch": "flat", "width_ratio": 0.4, "height_m_est": 2.4}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "#3A3A3A"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 90,
+      "signage_text": "GrandoGarbo - We are expanding!",
+      "awning": {"present": false},
+      "entrance_position": "left",
+      "security_grille": false,
+      "note": "Close-up of storefront. 6 panes arranged 2 columns x 3 rows. Signs say 'We are expanding! Closed during renovations'. GrandoGarbo.com @GrandoGarbo. Mannequin visible inside. Green graffiti/stickers at base."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#3A3A3A",
+      "trim": "#E8DCC8",
+      "roof": "#4A4A4A",
+      "accent": "#4ABFCF"
+    },
+    "condition": "fair",
+    "condition_notes": "Close-up detail view. Storefront glass in good condition. Under renovation, signs posted in every pane.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012750357_HDR.jpg",
+    "address": "24-28 Kensington Ave",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.85, 0.45],
+    "facade_material": "brick",
+    "brick_colour_hex": "#9A5A38",
+    "brick_bond": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Commercial storefronts at ground level. Left unit: dark storefront (Pearl/bar?), right unit: lit storefront with grid windows. Silvery reflective awning/hoarding between buildings."},
+      {"floor": "second", "count": 4, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.5, "note": "Two pairs of windows, one pair per townhouse unit. White-painted wood frames."},
+      {"floor": "gable", "count": 2, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.10, "height_m_est": 0.9, "note": "One window per gable, small rectangular."}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial", "width_m_est": 0.9, "transom": false, "steps": 1, "colour": "dark"},
+      {"position": "center", "type": "residential panel", "width_m_est": 0.85, "transom": false, "steps": 2, "colour": "dark brown"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": true, "style": "simple trim", "colour_hex": "#E8E0D0"},
+    "gable_window": {"present": true, "type": "rectangular"},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 50,
+      "signage_text": "Pearl (left unit); right unit partially obscured",
+      "awning": {"present": false},
+      "entrance_position": "left",
+      "security_grille": false,
+      "note": "Two adjacent narrow rowhouses converted to commercial at ground. Left unit has dark-framed storefront. Silvery/reflective temporary hoarding or awning covering middle section."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": false,
+    "party_wall_right": false,
+    "colour_palette": {
+      "facade": "#9A5A38",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#3A2820"
+    },
+    "condition": "fair",
+    "condition_notes": "Pair of bay-and-gable rowhouses. Brick appears original but weathered. Gable trim intact. Second-floor windows appear original proportions. Large reflective hoarding or temporary awning obscures part of facade between units.",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.4,
+      "eave_overhang_mm_est": 250,
+      "step_count": 2
+    }
+  },
+  {
+    "filename": "IMG_20260320_012757406_HDR.jpg",
+    "address": "37 Kensington Ave (Breathless Vintage)",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.8, 0.45],
+    "facade_material": "brick",
+    "brick_colour_hex": "#A0603C",
+    "brick_bond": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Storefront level with commercial signage. Vertical 'BREATHLESS' blade sign on right side."},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.15, "height_m_est": 1.4, "note": "Pair of windows with white frames, one partially open or with AC unit."},
+      {"floor": "gable", "count": 1, "type": "rectangular", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.10, "height_m_est": 0.7, "note": "Small window in gable peak."}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 1, "colour": "dark"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {"present": true, "style": "simple", "colour_hex": "#E8E0D0"},
+    "gable_window": {"present": true, "type": "rectangular"},
+    "bay_window": {"present": false, "note": "Photo angle does not clearly show a bay window but building typology (bay-and-gable) suggests one may be present on the main facade."},
+    "storefront": {
+      "width_pct": 75,
+      "signage_text": "BREATHLESS (vertical blade sign); BREATHLESS VINTAGE (horizontal sign at storefront)",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": false,
+      "note": "Night photo showing vertical blade sign 'BREATHLESS' on bracket at second floor. Yellow/green lit building visible at right (adjacent property). Bare trees partially obstruct view."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#A0603C",
+      "trim": "#E8E0D0",
+      "roof": "#4A4A4A",
+      "accent": "#2A2A2A"
+    },
+    "condition": "fair",
+    "condition_notes": "Classic bay-and-gable form. Brick appears in fair condition. Gable peak and trim visible. Night photo and tree obstruction limit full assessment. Address number '37' visible near entry.",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 1
+    }
+  },
+  {
+    "filename": "IMG_20260320_012812670_HDR.jpg",
+    "address": "39 Kensington Ave (CUTLASS)",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.85, 0.45],
+    "facade_material": "mixed",
+    "brick_colour_hex": "#E8E0D0",
+    "brick_bond": "not visible (painted/clad)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 1, "type": "plate glass", "frame_colour": "#4A6A40", "arch": "flat", "width_ratio": 0.35, "height_m_est": 2.0, "note": "Large storefront window, green painted cladding surround, bright green/lime green painted panels. Security grille over storefront."},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.14, "height_m_est": 1.4, "note": "White-framed double-hung windows on white/light grey painted facade."},
+      {"floor": "gable", "count": 1, "type": "rectangular", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.10, "height_m_est": 0.7}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial", "width_m_est": 0.85, "transom": false, "steps": 1, "colour": "#4A6A40"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": true, "style": "simple", "colour_hex": "#E8E0D0"},
+    "gable_window": {"present": true, "type": "rectangular"},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 70,
+      "signage_text": "CUTLASS (implied from address assignment)",
+      "awning": {"present": false},
+      "entrance_position": "left",
+      "security_grille": true,
+      "note": "Ground floor has bright lime-green painted horizontal clapboard/panel cladding. Large storefront window with security diamond-pattern metal grille. Small commercial entrance at left."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#E0D8C8",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#6ABF40"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper facade painted white/cream, appears to be original brick concealed by paint. Ground floor has green-painted cladding, somewhat worn. Gable intact. Adjacent building to left has matching gable form (typical Kensington pair).",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 1
+    }
+  },
+  {
+    "filename": "IMG_20260320_012819366_HDR.jpg",
+    "address": "43-41 Kensington Ave",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.8, 0.45],
+    "facade_material": "brick",
+    "brick_colour_hex": "#C8A060",
+    "brick_bond": "running bond",
+    "mortar_colour": "buff/cream",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 2, "note": "Two storefronts side by side. Right unit has large window. Left unit (#43) has louvered/slatted security shutters. Various commercial clutter (furniture, signage) on sidewalk."},
+      {"floor": "second", "count": 3, "type": "1-over-1", "frame_colour": "#D0C8B0", "arch": "segmental", "width_ratio": 0.13, "height_m_est": 1.4, "note": "Three windows visible across the pair. Buff/yellow brick surrounding. One window has circular decorative element (possibly a decorative oculus or medallion) between units."},
+      {"floor": "gable", "count": 2, "type": "pointed/gothic", "frame_colour": "#D0C8B0", "arch": "pointed", "width_ratio": 0.10, "height_m_est": 0.8, "note": "Each gable has a pointed-arch (gothic) window. Decorative bargeboard with scrollwork visible on gable edges."}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "dark"},
+      {"position": "right", "type": "commercial", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "dark"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 50,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": true, "style": "decorative scrollwork", "colour_hex": "#E8E0D0"},
+    "gable_window": {"present": true, "type": "pointed-arch/gothic"},
+    "bay_window": {"present": false, "note": "No bay window visible from this angle. Possible that bay windows are present but obscured by storefront modifications."},
+    "storefront": {
+      "width_pct": 80,
+      "signage_text": "Not clearly legible at night. Items displayed on sidewalk suggest vintage/antique shops.",
+      "awning": {"present": true, "type": "retractable/louvered", "colour": "dark"},
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Two adjacent units sharing a party wall. Left unit (#43) has louvered security shutters. Right unit (#41) has iron railing porch/landing with steps and furniture. Buff/yellow brick is the dominant facade colour."
+    },
+    "decorative_elements": {
+      "string_courses": [{"location": "between first and second floor", "width_mm": 80, "colour_hex": "#C8A060"}],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": true, "material": "brick", "type": "segmental arches over second-floor windows", "colour_hex": "#C8A060"},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "decorative_oculus": {"present": true, "location": "between units at second floor level", "note": "Circular decorative element or medallion visible between the two gable peaks."}
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#C8A060",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#3A2A20"
+    },
+    "condition": "fair",
+    "condition_notes": "Buff/yellow brick in fair condition. Ornate gable bargeboards with scrollwork are a notable decorative feature. Gothic pointed-arch gable windows are distinctive. Ground-floor commercial modifications. Iron porch railing on right unit. Sidewalk cluttered with merchandise.",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 1.0,
+      "foundation_height_m_est": 0.4,
+      "eave_overhang_mm_est": 300,
+      "step_count": 2
+    }
+  },
+  {
+    "filename": "IMG_20260320_012841865_HDR.jpg",
+    "address": "32-38 Kensington Ave (Space Vintage area)",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.85, 0.45],
+    "facade_material": "brick",
+    "brick_colour_hex": "#9A5A38",
+    "brick_bond": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Row of commercial storefronts. Awnings (one red/pink) visible. Various shop entrances."},
+      {"floor": "second", "count": 6, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.10, "height_m_est": 1.4, "note": "Multiple windows across the terrace row, white frames. Some with AC units."},
+      {"floor": "gable", "count": 3, "type": "rectangular", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.08, "height_m_est": 0.7, "note": "Small gable windows visible on multiple units."}
+    ],
+    "doors": [
+      {"position": "various", "type": "commercial glass", "width_m_est": 0.85, "transom": false, "steps": 1, "colour": "dark", "note": "Multiple commercial entrances along the row"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": true, "style": "simple", "colour_hex": "#E8E0D0"},
+    "gable_window": {"present": true, "type": "rectangular"},
+    "bay_window": {"present": false, "note": "Bay windows may exist but are obscured by commercial ground-floor modifications and viewing angle."},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "Multiple shops including Space Vintage area",
+      "awning": {"present": true, "type": "fixed fabric", "colour": "pink/red on one unit, dark on others"},
+      "entrance_position": "distributed",
+      "security_grille": false,
+      "note": "Wide-angle view of a row of 3-4 bay-and-gable rowhouses converted to commercial at ground level. Red brick predominates. One porch with bay window form visible. Night photo with sodium-vapour lighting gives warm cast."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#9A5A38",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#C8405A"
+    },
+    "condition": "fair",
+    "condition_notes": "Terrace row of bay-and-gable houses. Red brick mostly intact. Various ground-floor commercial modifications. Night photo limits detail assessment. Tree obstructs portions of the view.",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 0.8,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 2
+    }
+  },
+  {
+    "filename": "IMG_20260320_012852370_HDR.jpg",
+    "address": "49-47 Kensington Ave (Usato Kensington area)",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.8, 0.45],
+    "facade_material": "brick",
+    "brick_colour_hex": "#8A4A30",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 0, "note": "Commercial storefronts with various signage. One unit has wood-plank cladding (honey/amber tone). Security grille visible on one unit."},
+      {"floor": "second", "count": 3, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.4, "note": "White-framed windows visible through bare tree branches."},
+      {"floor": "gable", "count": 1, "type": "rectangular", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.10, "height_m_est": 0.7}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial", "width_m_est": 0.85, "transom": false, "steps": 1, "colour": "dark"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": true, "style": "simple", "colour_hex": "#D0C8B8"},
+    "gable_window": {"present": true, "type": "rectangular"},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 80,
+      "signage_text": "Usato Kensington (implied); wood-clad storefront with amber/honey tones",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "View partially obscured by bare tree branches and parked vehicles. One unit has attractive honey-coloured wood plank cladding at storefront level. Adjacent unit has darker facade. Bright streetlight at left."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#8A4A30",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#C89050"
+    },
+    "condition": "fair",
+    "condition_notes": "Bay-and-gable rowhouse form. View heavily obscured by bare trees and vehicles. Wood storefront cladding appears relatively new. Upper brick facade appears original.",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 1
+    }
+  },
+  {
+    "filename": "IMG_20260320_012859287_HDR.jpg",
+    "address": "38 Kensington Ave (Lost Boys Vintage)",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.8, 0.45],
+    "facade_material": "brick",
+    "brick_colour_hex": "#7A5A48",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 2, "type": "plate glass", "frame_colour": "#2A2A2A", "arch": "flat", "width_ratio": 0.35, "height_m_est": 2.2, "note": "Large storefront windows flanking entrance. Left window has yellow sign 'BUY SELL TRADE'. Right window displays merchandise. Glazed storefront with white tile/brick bulkhead below."},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "#6A5040", "arch": "flat", "width_ratio": 0.14, "height_m_est": 1.4, "note": "Brown/dark-framed windows on brown-painted or dark brick facade."},
+      {"floor": "gable", "count": 1, "type": "rectangular", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.10, "height_m_est": 0.7, "note": "Small window in gable with white louvered vent or shutter."}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 1.0, "transom": true, "steps": 0, "colour": "#2A2A2A", "note": "Central recessed entrance with 'STILL TRADING' and 'LOST BOYS' signage"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": true, "style": "simple with finial", "colour_hex": "#E8E0D0"},
+    "gable_window": {"present": true, "type": "rectangular with louvered vent"},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "LOST BOYS (large graffiti-style sign on right pilaster, orange/white on dark), STILL TRADING (yellow text above door), BUY SELL TRADE (yellow banner in left window)",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Distinctive storefront with diamond-pattern security grille above the shopfront. White subway-tile or glazed brick bulkhead below windows. Track lighting illuminates interior. Orange 'Lost Boys' graffiti-style logo on right column. Yellow signage. Decorative diamond lattice metal screen above storefront acts as fascia."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "diamond_lattice_screen": {"present": true, "location": "above storefront, below second floor", "material": "metal", "note": "Decorative diamond-pattern metal lattice screen spanning full width above storefront"}
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#7A5A48",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#E8A020"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper facade dark brown/chocolate brick or paint. Gable with simple bargeboard intact. Storefront well-maintained with distinctive diamond lattice metalwork. White tile bulkhead in good condition. Multiple signage elements.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 250,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012906257_HDR.jpg",
+    "address": "40 Kensington Ave (Lola Bar & Restaurant)",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#8A7A6A",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 2, "type": "plate glass", "frame_colour": "#8A7050", "arch": "flat", "width_ratio": 0.30, "height_m_est": 2.0, "note": "Two large storefront windows with diamond-pattern security grilles deployed (closed for the night). 'LOLA' in gold lettering on dark brown/bronze surround. Horizontal louvered security shutters on left window."},
+      {"floor": "second", "count": 1, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.14, "height_m_est": 1.3, "note": "Single window with white frame on upper floor. Facade appears painted grey/beige."}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "#6A5040", "note": "Dark entrance door between the two storefront windows. 'LOLA' text above."}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 80,
+      "signage_text": "LOLA (gold lettering on brown background); Butterfly (large red sign visible above on adjacent building at 42)",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Ground floor is a bar/restaurant (Lola). Diamond-pattern expandable security grille covers right window; horizontal louvered shutters cover left window. Gold 'LOLA' lettering on dark bronze/brown fascia band. White glazed tile or brick at base."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#8A7A6A",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#C8A040"
+    },
+    "condition": "fair",
+    "condition_notes": "Two-storey flat-roof commercial building. Facade appears painted or rendered. Single upper window. Ground floor well-finished as a bar with gold signage. Security grilles in place at night. White tile bulkhead base.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012917359_HDR.jpg",
+    "address": "42 Kensington Ave (Butterfly)",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.9],
+    "facade_material": "painted brick",
+    "brick_colour_hex": "#3A5080",
+    "brick_bond": "running bond (under paint)",
+    "mortar_colour": "not visible (painted)",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 1, "type": "plate glass", "frame_colour": "#C0B0A0", "arch": "flat", "width_ratio": 0.40, "height_m_est": 2.2, "note": "Large storefront window/entrance behind diamond-pattern expandable security grille. Red-and-white striped awning/marquee above entrance."},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.13, "height_m_est": 1.3, "note": "Two windows with white frames on blue-painted facade. One appears to have warm interior light."}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 1.0, "transom": false, "steps": 0, "colour": "dark", "note": "Entrance behind security grille, below red-and-white striped element"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "Butterfly (large red sign with white butterfly graphics and text, covers much of facade between floors)",
+      "awning": {"present": true, "type": "fixed marquee", "colour": "red and white striped"},
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Dominant feature is the large red 'Butterfly' sign spanning most of the facade width between ground and second floor. White butterfly motifs on the sign. Red-and-white striped canopy/marquee at entrance. Blue neon or LED lights frame right side of entrance. Adjacent building (right) has grey concrete party wall visible."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "neon_lights": {"present": true, "colour": "blue", "location": "right side of storefront entrance"}
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#3A5080",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#D0303A"
+    },
+    "condition": "fair",
+    "condition_notes": "Facade painted dark blue. Large commercial signage dominates. Two upper windows in fair condition. Security grille deployed. Right party wall exposed concrete/stucco, weathered. Blue neon/LED accents.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012926854_HDR.jpg",
+    "address": "44 Kensington Ave (CrazyLoko Vintage)",
+    "storeys": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [1.0, 0.8, 0.45],
+    "facade_material": "painted/clad",
+    "brick_colour_hex": "#C0B8A8",
+    "brick_bond": "not visible (painted/clad)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 1, "type": "plate glass", "frame_colour": "#4040C0", "arch": "flat", "width_ratio": 0.40, "height_m_est": 2.2, "note": "Large storefront window/entrance lit with bright blue/purple LED lights. Security grille deployed. Signs read 'CRAZY LOKO VINTAGE', 'BUY TRADE SELL'."},
+      {"floor": "second", "count": 1, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.18, "height_m_est": 1.3, "note": "Single large window on light-coloured painted facade."},
+      {"floor": "gable", "count": 0, "note": "Gable visible but no window discernible from this angle."}
+    ],
+    "doors": [
+      {"position": "center", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark"}
+    ],
+    "roof_type": "gable",
+    "roof_pitch_deg": 42,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": true, "style": "simple", "colour_hex": "#E8E0D0"},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 80,
+      "signage_text": "CRAZY LOKO VINTAGE (white text on dark), BUY TRADE SELL (yellow/orange banner)",
+      "awning": {"present": false},
+      "entrance_position": "center",
+      "security_grille": true,
+      "note": "Ground floor lit with intense blue/purple LED strip lighting framing the storefront. Large vintage shop. Security grille deployed across full storefront width. Adjacent to Butterfly (red sign visible at left edge). Pink/magenta glow from adjacent shop at upper left."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#C0B8A8",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#4040D0"
+    },
+    "condition": "fair",
+    "condition_notes": "Upper facade painted light cream/beige. Gable form preserved. Ground floor heavily modified for commercial use with LED lighting and security grille. Paint appears somewhat worn on upper storey.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 250,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012934622_HDR.jpg",
+    "address": "46 Kensington Ave (Fong On Foods Ltd.)",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#7A5A40",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 2, "type": "plate glass", "frame_colour": "#3A3A3A", "arch": "flat", "width_ratio": 0.30, "height_m_est": 2.0, "note": "Two storefront windows with dark frames. Security grille on one. Large street-art mural covering the brick facade at ground level (figures in colourful style). Yellow signage band above."},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "#3A3A3A", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.2, "note": "Two dark-framed windows on upper floor."}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "dark"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 85,
+      "signage_text": "FONG ON FOODS LTD. (yellow signage band above storefront, partially visible)",
+      "awning": {"present": false},
+      "entrance_position": "left",
+      "security_grille": true,
+      "note": "Ground floor features a large colourful street-art mural covering the brick wall (figures, bright colours). Yellow/gold signage band at top of storefront. Security grille on portions. Two storefront windows with dark frames. The mural is the dominant visual feature."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {"present": true, "location": "ground floor facade", "subject": "Large colourful street art with figures, covering most of the brick wall at ground level"}
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#7A5A40",
+      "trim": "#3A3A3A",
+      "roof": "#5A5A5A",
+      "accent": "#D0A030"
+    },
+    "condition": "fair",
+    "condition_notes": "Two-storey flat-roof commercial building. Brick appears weathered/dark. Large street-art mural at ground level. Yellow signage band. Upper windows dark-framed, small. Typical Kensington Market commercial conversion.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012951226_HDR.jpg",
+    "address": "Kensington Ave (streetscape - south end near Dundas)",
+    "storeys": 1,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0],
+    "facade_material": "mixed",
+    "brick_colour_hex": "#C04020",
+    "brick_bond": "not visible (painted mural)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 1, "type": "plate glass", "frame_colour": "#3A3A3A", "arch": "flat", "width_ratio": 0.25, "height_m_est": 1.8, "note": "Corner storefront window visible at left. Building entirely covered in elaborate mural art (skulls, demons, flames, horror theme in red/orange/purple)."}
+    ],
+    "doors": [
+      {"position": "corner", "type": "commercial", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "dark", "note": "Corner entrance typical of Kensington corner shops"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 95,
+      "signage_text": "LOST GEN VINTAGE (blue neon text visible at top of facade)",
+      "awning": {"present": true, "type": "fixed metal/corrugated", "colour": "metal"},
+      "entrance_position": "corner",
+      "security_grille": true,
+      "note": "Corner building at south end of Kensington Ave. Entire facade covered in elaborate horror-themed mural (red/orange/purple, skulls, demons, flames). 'LOST GEN VINTAGE' neon sign at top. The building behind (across street) shows flat-roof commercial buildings and gable-roofed residential. Street pole and parked VW Golf visible."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {"present": true, "location": "entire exterior", "subject": "Elaborate horror-themed mural: red/orange flames, purple skulls, demons, covering all exterior walls. Highly detailed street art."}
+    },
+    "party_wall_left": false,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#C04020",
+      "trim": "#3A3A3A",
+      "roof": "#5A5A5A",
+      "accent": "#6030A0"
+    },
+    "condition": "fair",
+    "condition_notes": "Single-storey corner commercial building entirely wrapped in street art. Structure appears sound but facade material completely obscured by mural. Corner location with good streetscape context showing adjacent buildings in background.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_012958779_HDR.jpg",
+    "address": "48-52 Kensington Ave (Essence of Life Organics)",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85],
+    "facade_material": "brick",
+    "brick_colour_hex": "#9A5038",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 3, "type": "plate glass", "frame_colour": "#3A3A3A", "arch": "flat", "width_ratio": 0.25, "height_m_est": 2.0, "note": "Wide commercial storefront spanning multiple units. 'Essence of Life Natural Food Market' signage. Left portion has 'Organika' display. Painted mural fence/barrier along sidewalk (figure in landscape). Black-and-white striped awning."},
+      {"floor": "second", "count": 4, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.4, "note": "Four white-framed windows across the facade. Red brick clearly visible at this level. White-painted cornice/fascia band at roofline."}
+    ],
+    "doors": [
+      {"position": "center-left", "type": "commercial glass", "width_m_est": 1.0, "transom": false, "steps": 0, "colour": "dark"},
+      {"position": "center-right", "type": "commercial glass", "width_m_est": 1.0, "transom": false, "steps": 0, "colour": "dark"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 90,
+      "signage_text": "Essence of Life Natural Food Market (dark sign with white serif text and circular logo); ORGANIKA (left display)",
+      "awning": {"present": true, "type": "fixed fabric", "colour": "black and white striped"},
+      "entrance_position": "center",
+      "security_grille": false,
+      "note": "Wide commercial building spanning several original lot widths. Prominent black-and-white striped awning. 'Essence of Life' circular logo and text signage. Painted mural on temporary fence/hoarding along sidewalk (figure reclining in landscape). Left section has Organika product display. Red brick upper facade is clean and well-maintained. White cornice band at roofline."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": true, "projection_mm": 150, "height_mm": 250, "colour_hex": "#EEEAE0", "note": "White-painted cornice/fascia band running full width at roofline. Classical proportions with simple moulding profile."},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {"present": true, "location": "sidewalk fence/barrier", "subject": "Painted figure reclining in a landscape with trees and sky, on temporary barrier/hoarding"}
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#9A5038",
+      "trim": "#EEEAE0",
+      "roof": "#5A5A5A",
+      "accent": "#2A2A2A"
+    },
+    "condition": "good",
+    "condition_notes": "Best-maintained building in this stretch. Red brick is clean and joints appear intact at upper level. White cornice band well-preserved. Awning in good condition. Sidewalk has temporary painted barrier/hoarding. Overall a solid, well-kept commercial building.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 100,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013016711_HDR.jpg",
+    "address": "55 Kensington Ave (Lost Gen Vintage)",
+    "storeys": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.8],
+    "facade_material": "mixed",
+    "brick_colour_hex": "#E0D0B0",
+    "brick_bond": "not visible (painted mural)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 3, "type": "plate glass", "frame_colour": "#3A3A3A", "arch": "flat", "width_ratio": 0.25, "height_m_est": 2.0, "note": "Multiple storefront units along Kensington Ave. All covered in elaborate red/orange mural art. Security grilles on most. Corner entrance."},
+      {"floor": "second", "count": 2, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.12, "height_m_est": 1.2, "note": "Upper windows on cream/beige painted or rendered facade. Visible above the mural line. Upper portion of facade is light-coloured (cream/lavender wash)."}
+    ],
+    "doors": [
+      {"position": "corner", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark"},
+      {"position": "left", "type": "commercial", "width_m_est": 0.85, "transom": false, "steps": 0, "colour": "dark"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 95,
+      "signage_text": "LOST GEN VINTAGE (blue/neon lettering, multiple instances across facade); graffiti art text/tags",
+      "awning": {"present": false},
+      "entrance_position": "corner",
+      "security_grille": true,
+      "note": "Corner commercial building at south end of Kensington Ave (likely at Dundas intersection). Entire ground floor wrapped in elaborate horror/fantasy-themed mural (red/orange/purple: skulls, demons, flames, figures). LOST GEN VINTAGE signs in blue neon/painted text at multiple points. Multiple storefronts with security grilles. The building wraps around the corner. Background shows the row of flat-roof and gable-roof buildings stretching north on Kensington Ave."
+    },
+    "decorative_elements": {
+      "string_courses": [],
+      "cornice": {"present": false},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {"present": true, "location": "entire ground floor and portions of upper walls", "subject": "Elaborate horror/fantasy theme: red-orange flames, purple/grey skulls, demons, dark figures. Covers all ground-floor wall surfaces. Highly detailed airbrush/spray style."},
+      "graffiti_tags": {"present": true, "location": "upper facade parapet"}
+    },
+    "party_wall_left": false,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#E0D0B0",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#C03020"
+    },
+    "condition": "fair",
+    "condition_notes": "Corner building entirely wrapped in mural art at ground level. Upper facade cream/beige, appears painted. Parapet has graffiti tags. Structure appears sound. Multiple storefronts along the L-shaped footprint. Important streetscape anchor at the south entry to Kensington Ave.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.1,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0
+    }
+  },
+  {
+    "filename": "IMG_20260320_013027868_HDR.jpg",
+    "address": "54-56 Kensington Ave (Clothin by AIM / Kensington Hall)",
+    "storeys": 3,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [1.0, 0.85, 0.8],
+    "facade_material": "brick",
+    "brick_colour_hex": "#8A4A30",
+    "brick_bond": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {"floor": "ground", "count": 3, "type": "plate glass", "frame_colour": "#3A3A3A", "arch": "flat", "width_ratio": 0.25, "height_m_est": 2.2, "note": "Multiple commercial storefront windows. Left unit has large colourful mural (yellow/orange, woman's face). Right units have 'Clothin by AIM' signage. Dark frames."},
+      {"floor": "second", "count": 4, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.11, "height_m_est": 1.4, "note": "Four windows with white frames on red brick facade. Evenly spaced."},
+      {"floor": "third", "count": 4, "type": "1-over-1", "frame_colour": "#E8E0D0", "arch": "flat", "width_ratio": 0.11, "height_m_est": 1.3, "note": "Four windows matching the second floor. Red brick visible. Some windows may have decorative elements."}
+    ],
+    "doors": [
+      {"position": "left", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark"},
+      {"position": "center", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark"},
+      {"position": "right", "type": "commercial glass", "width_m_est": 0.9, "transom": false, "steps": 0, "colour": "dark"}
+    ],
+    "roof_type": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {"present": false},
+    "gable_window": {"present": false},
+    "bay_window": {"present": false},
+    "storefront": {
+      "width_pct": 90,
+      "signage_text": "Clothin by AIM (white text, multiple shopfronts); Kensington Hall (round medallion/logo visible); additional signage not fully legible",
+      "awning": {"present": false},
+      "entrance_position": "distributed",
+      "security_grille": false,
+      "note": "Large three-storey red brick commercial building. Multiple ground-floor retail units. Left unit features a large colourful mural (woman's face, yellow/orange tones). Center and right units have 'Clothin by AIM' signage with circular Kensington Hall logo. This is a wider building than typical Kensington Ave, spanning at least 3 original lots. Night photo shot from low angle looking up."
+    },
+    "decorative_elements": {
+      "string_courses": [{"location": "between second and third floor", "width_mm": 60, "colour_hex": "#8A4A30", "note": "Subtle brick string course or belt course visible between floors"}],
+      "cornice": {"present": true, "projection_mm": 100, "height_mm": 200, "colour_hex": "#8A4A30", "note": "Simple brick corbelled cornice at roofline"},
+      "quoins": false,
+      "voussoirs": {"present": false},
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {"present": true, "location": "left ground-floor unit", "subject": "Large colourful mural of a woman's face/figure in yellow and orange tones, covering the full height of the storefront"}
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette": {
+      "facade": "#8A4A30",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#D0A030"
+    },
+    "condition": "fair",
+    "condition_notes": "Three-storey red brick commercial building, the tallest on this block. Brick appears in fair condition with some weathering. Upper windows evenly spaced and intact. Ground floor has multiple commercial modifications. Large mural on left unit. Cornice/parapet at roofline. Important massing element on the streetscape.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 100,
+      "step_count": 0
+    }
+  }
+]

@@ -19,7 +19,7 @@
     "lot_coverage_pct": 39.6,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "mural_front"
@@ -28,7 +28,7 @@
   "facade_colour": "yellow brick with cyan neon signage, graffiti-covered green shutters",
   "windows_per_floor": [
     0,
-    2
+    1
   ],
   "window_type": "storefront (behind shutters)",
   "window_width_m": 0.85,
@@ -40,12 +40,12 @@
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 69,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,14 +97,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "287 Augusta Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "287 AUGUSTA AVE"
     ],
@@ -117,6 +114,72 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_augusta.py",
+        "street": "Augusta Ave",
+        "timestamp": "2026-03-29T07:46:49.898780+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:59.409630+00:00"
+      },
+      {
+        "fix": "validate_all_params",
+        "fixes": [
+          "extended windows_per_floor: 2 -> 2"
+        ],
+        "timestamp": "2026-03-29T07:59:59.732748+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:47.697858+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:24.081657+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled"
+        ],
+        "timestamp": "2026-03-29T08:07:23.313572+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:19.040866Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:45.433385+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:14.152769Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #A64A26",
+        "roof": "#5A5A5A \u2192 #485959",
+        "trim": "#3A2A20 \u2192 #533A29",
+        "accent": "#3A2A20 \u2192 #4B4130",
+        "mortar": "#B0A898 \u2192 #A7967D"
+      }
     ]
   },
   "storefront": {
@@ -124,7 +187,25 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.0,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "signage": {
+      "text": "Wanda's Pie in the Sky",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "yellow brick with cyan neon signage, graffiti-covered green shutters",
@@ -138,7 +219,7 @@
     "door_count": 1,
     "door_type": "storefront",
     "has_storefront_observed": true,
-    "storefront_description": "Wanda's Pie in the Sky bakery — closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
+    "storefront_description": "Wanda's Pie in the Sky bakery \u2014 closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
     "signage_observed": "Cyan/turquoise neon sign 'Wanda's Pie in the Sky' in cursive script above shutters; 'WANDA' tag on right shutter; heavy black graffiti bubble letters on both shutters",
     "overall_style": "Commercial",
     "alterations_visible": "Security shutters with extensive graffiti, cyan neon sign addition, green awning",
@@ -149,17 +230,18 @@
       "agent": "claude-opus-4-6",
       "batch": "batch_008",
       "timestamp": "2026-03-24T23:00:00-04:00"
-    }
+    },
+    "photo": "IMG_20260316_014517214_HDR.jpg"
   },
   "door_type": "storefront",
   "overall_style": "Commercial",
-  "storefront_description": "Wanda's Pie in the Sky bakery — closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
+  "storefront_description": "Wanda's Pie in the Sky bakery \u2014 closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
   "confidence": 0.9,
   "notes": "Nighttime photo (1:45am), bakery closed with shutters down. Batch_008 re-observation confirms previous analysis with additional detail on shutter graffiti and neon signage colour (cyan/turquoise, not teal).",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -167,21 +249,26 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A64A26",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#533A29",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using storefront (behind shutters), and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear."
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using storefront (behind shutters), and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+    "mortar_colour_hex": "#A7967D",
+    "heritage_expression": "Character-defining elements include bay window, ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -195,13 +282,14 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
+          "count": 0,
           "type": "storefront (behind shutters)",
           "width_m": 0.9,
           "height_m": 2.8,
           "sill_height_m": 2.2,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -225,16 +313,57 @@
     "bay_window_storeys": 2
   },
   "street_setback_m": 0.0,
-  "facade_description": "287 Augusta Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using storefront (behind shutters), and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
+  "facade_description": "287 Augusta Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using storefront (behind shutters), and 1 principal entrance.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
   "roof_material": "Slate shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A64A26",
+    "trim": "#533A29",
+    "roof": "#485959",
+    "accent": "#4B4130"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260316_014517214_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 0,
+            "type": "storefront (behind shutters)",
+            "width_m": 0.9,
+            "height_m": 2.8,
+            "sill_height_m": 2.2,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 0.0
 }

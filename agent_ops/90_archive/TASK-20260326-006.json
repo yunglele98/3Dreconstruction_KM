@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260326-006",
+  "title": "Fix 110 missing building coordinates (Audit found missing site lon/lat)",
+  "description": "Found 110 building param files missing site lon/lat. Reconcile these with _site_coordinates.json or DB signals. Report: G:\\liam1_transfer\\blender_buildings\\agent_ops\\30_handoffs\\TASK-20260326-006__gemini-1.json",
+  "priority": "high",
+  "estimate_points": 3,
+  "skills": [
+    "python",
+    "pipeline"
+  ],
+  "write_scope": [
+    "params"
+  ],
+  "dependencies": [],
+  "owner": "codex-2",
+  "status": "done",
+  "created_at": "2026-03-26T00:00:00Z",
+  "routed_at": "2026-03-27T18:00:43.328728+00:00",
+  "reassigned_at": "2026-03-27T18:32:50.986605+00:00",
+  "completed_at": "2026-03-27T18:54:36.243029+00:00",
+  "completed_by": "codex-1"
+}

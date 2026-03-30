@@ -20,7 +20,7 @@
     "lot_coverage_pct": 3.1,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "cross_gable",
@@ -106,10 +106,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "photo": "IMG_20260320_160456341_HDR.jpg",
     "reference_photos": [
@@ -121,7 +118,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "47 Bellevue Ave",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "47 BELLEVUE AVE"
     ],
@@ -134,6 +131,58 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Bellevue Ave",
+        "timestamp": "2026-03-29T07:48:47.465286+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:08.386869+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (pre-1889)",
+          "arch_type filled (pre-1889)",
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:55.087293+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:42.592513+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:21.651468Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:47.308654+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A → #494949",
+        "trim": "#3A2A20 → #37281D",
+        "accent": "#3A2A20 → #393F2D",
+        "mortar": "#B0A898 → #A99980"
+      }
     ]
   },
   "photo_observations": {
@@ -185,7 +234,8 @@
     "alterations_visible": "Stucco over original brick; balcony/deck added; deteriorating trim; overgrown vegetation",
     "matches_hcd_typology": true,
     "confidence": 0.7,
-    "notes": "Bay-and-gable form recognizable but in poor condition"
+    "notes": "Bay-and-gable form recognizable but in poor condition",
+    "photo": "IMG_20260320_160456341_HDR.jpg"
   },
   "window_arrangement": "asymmetric",
   "door_type": "single",
@@ -207,7 +257,7 @@
   "decorative_lintels": false,
   "overall_style": "Victorian",
   "storefront_description": "",
-  "confidence": 0.8500000000000001,
+  "confidence": 0.9,
   "notes": "Bay-and-gable form recognizable but in poor condition",
   "porch_present": false,
   "porch_type": "none",
@@ -228,7 +278,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -236,7 +286,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "balcony_detail": {
@@ -254,11 +307,12 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#37281D",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, turret, cornice.",
-    "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding with decorative brickwork. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+    "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding with decorative brickwork. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+    "mortar_colour_hex": "#A99980"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -280,10 +334,11 @@
           "count": 2,
           "type": "mixed",
           "width_m": 0.9,
-          "height_m": 1.8,
+          "height_m": 1.9800000000000002,
           "sill_height_m": 1.2,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -297,7 +352,8 @@
           "height_m": 2.5,
           "sill_height_m": 1.9,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -311,7 +367,8 @@
           "height_m": 2.1,
           "sill_height_m": 1.6,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -344,16 +401,87 @@
     "colour_hex": "#D8D0C0"
   },
   "street_setback_m": 3.0,
-  "facade_description": "Row three-storey bay-and-gable in cream/tan/yellow stucco with dark brown window trim; worn appearance under a cross-gable roof. Features include a double-height three-sided projecting bay, simple bargeboards and a simple cornice. Stucco over original brick; balcony/deck added; deteriorating trim; overgrown vegetation. Pre-1889 construction.",
+  "facade_description": "47 Bellevue Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, turret, cornice.",
   "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding with decorative brickwork. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
   "roof_material": "Slate shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#7A5C44",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#D8D0C0",
+    "trim": "#37281D",
+    "roof": "#494949",
+    "accent": "#393F2D"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_160456341_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "stucco",
+    "brick_colour_hex": "#D8D0C0",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.9800000000000002,
+            "sill_height_m": 1.2,
+            "frame_colour": "#3A2A20",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 2.5,
+            "sill_height_m": 1.9,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 2.1,
+            "sill_height_m": 1.6,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [
+      "cornice",
+      "turreted_element"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "poor",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

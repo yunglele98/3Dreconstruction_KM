@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-018",
+  "title": "Audit render output quality for 50 sample buildings",
+  "description": "After batch re-render completes, check 50 random .blend files for: non-zero object count in manifest, reasonable file size (>50KB), no error in manifest status. Flag any with status=failed or suspiciously small file size.",
+  "priority": "medium",
+  "estimate_points": 1,
+  "skills": [
+    "qa",
+    "validation",
+    "render"
+  ],
+  "write_scope": [
+    "agent_ops/30_handoffs"
+  ],
+  "dependencies": [],
+  "owner": "codex-2",
+  "status": "done",
+  "created_at": "2026-03-27T19:58:18Z",
+  "routed_at": "2026-03-27T19:58:37.445550+00:00",
+  "completed_at": "2026-03-27T20:03:35.473621+00:00",
+  "completed_by": "claude-1"
+}

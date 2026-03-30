@@ -19,31 +19,31 @@
     "lot_coverage_pct": 28.6,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     1,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "good",
   "hcd_data": {
     "typology": "House-Form, Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "Victorian Vernacular – Workers Cottage",
-    "construction_period": "c. 1870–1889",
+    "architectural_style": "Victorian Vernacular \u2013 Workers Cottage",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1870,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 166,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Mixed Use",
-    "land_use": "Residential – Multi-Unit",
+    "land_use": "Residential \u2013 Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Laneway | Pedestrian-scale | Worker cottages | Historic character",
-    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
-    "development_phase": "Phase 1: Denison Estate Subdivision (1850–1880)"
+    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -78,7 +78,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 4,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -93,14 +93,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "38 Kensington Pl",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "38 KENSINGTON PL"
     ],
@@ -112,16 +109,86 @@
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
-    }
+    },
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Kensington Pl",
+        "timestamp": "2026-03-29T07:48:43.546507+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:04.076082+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (pre-1889)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:50.755569+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:37.466786+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled"
+        ],
+        "timestamp": "2026-03-29T08:07:28.449027+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:20.364611Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.391361+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #B15330",
+        "roof": "#5A5A5A \u2192 #594F4F",
+        "trim": "#3A2A20 \u2192 #4C3927",
+        "accent": "#3A2A20 \u2192 #37271D",
+        "mortar": "#B0A898 \u2192 #9C8A79"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
+    ]
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -129,20 +196,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B15330",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#4C3927",
     "composition": "The street elevation spans roughly 3.4 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early."
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+    "mortar_colour_hex": "#9C8A79",
+    "heritage_expression": "Character-defining elements include bay window."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -157,12 +229,13 @@
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
-          "height_m": 1.9,
+          "height_m": 2.0,
           "sill_height_m": 1.3,
           "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -171,12 +244,13 @@
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 3.1,
           "sill_height_m": 2.4,
           "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -209,22 +283,94 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.5,
-  "confidence": 0.7000000000000001,
-  "facade_description": "38 Kensington Pl presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 3.4 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. HCD note: The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early",
-  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
+  "confidence": 0.8000000000000002,
+  "facade_description": "38 Kensington Pl is a bay-and-gable house-form building. The street elevation spans roughly 3.4 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
   "roof_material": "Slate shingles",
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "db_context": {
+      "ba_building_type": "residential",
+      "ba_stories": 2,
+      "ba_facade_material": "brick",
+      "height_max_m": 14.59,
+      "height_avg_m": 11.36,
+      "lot_width_ft": 13,
+      "lot_depth_ft": 60,
+      "HCD_TYPOLOGY": "House-Form, Detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "red brick",
+      "photo_condition": "good",
+      "ba_condition_rating": 4,
+      "ba_storefront_status": "n/a"
+    },
+    "photo": "IMG_20260320_012859287_HDR.jpg"
+  },
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B15330",
+    "trim": "#4C3927",
+    "roof": "#594F4F",
+    "accent": "#37271D"
   },
-  "volumes": [],
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  }
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012859287_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.3,
+            "frame_colour": "#3A2A20",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 3.1,
+            "sill_height_m": 2.4,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

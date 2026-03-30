@@ -1,0 +1,21 @@
+{
+  "task_id": "TASK-20260327-015",
+  "title": "Fill building condition for 18 unassessed buildings",
+  "description": "18 buildings have no condition rating from either DB or photo observations. Set condition to fair (Kensington Market default) and add condition note explaining inference. These are the last buildings without any condition data.",
+  "priority": "low",
+  "estimate_points": 1,
+  "skills": [
+    "python",
+    "pipeline"
+  ],
+  "write_scope": [
+    "params/"
+  ],
+  "dependencies": [],
+  "owner": "codex-2",
+  "status": "done",
+  "created_at": "2026-03-27T18:57:10Z",
+  "routed_at": "2026-03-27T18:59:20.764834+00:00",
+  "completed_at": "2026-03-28T17:43:15.278131+00:00",
+  "completed_by": "gemini-1"
+}

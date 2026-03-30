@@ -30,7 +30,7 @@ except ImportError:
 # Database connection
 # ---------------------------------------------------------------------------
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 
 PARAMS_DIR = Path(__file__).parent.parent / "params"
 
@@ -685,7 +685,7 @@ def main():
 
     query = QUERY + " ".join(where_clauses) + "\nORDER BY ba_street, ba_street_number"
 
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
     try:
         cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         cur.execute(query, query_params if query_params else None)
@@ -737,3 +737,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -12,7 +12,7 @@ from typing import Any
 import psycopg2
 import psycopg2.extras
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 from revise_params_from_db import get_param_address, norm_addr_loose
 
 
@@ -42,7 +42,7 @@ def derive_storefront(status: str | None) -> bool | None:
 
 
 def db_storefront_map() -> dict[str, bool]:
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute('select "ADDRESS_FULL" as address_full, ba_storefront_status from public.building_assessment where "ADDRESS_FULL" is not null')
     rows = cur.fetchall()
@@ -61,7 +61,11 @@ def severity_for(reasons: list[str]) -> str:
         return "high"
     if any(r.startswith("floor_height_sum_mismatch") for r in reasons):
         return "medium"
-    if any(r.startswith("storefront_conflict") for r in reasons):
+    if any(r.startswith("deep_facade_analysis_not_dict") for r in reasons):
+        return "medium"
+    if any(r.startswith(("storefront_conflict", "invalid_bond", "invalid_dfa_bond",
+                         "malformed_hex", "invalid_accent_hex",
+                         "polychromatic_brick_not_dict")) for r in reasons):
         return "low"
     return "low"
 
@@ -104,6 +108,41 @@ def main() -> None:
         if isinstance(sf_param, bool) and sf_expected is not None and sf_param != sf_expected:
             reasons.append(f"storefront_conflict:param={sf_param},db={sf_expected}")
 
+        # Validate bond_pattern if present (must be running/flemish/stack)
+        fd = d.get("facade_detail", {})
+        if isinstance(fd, dict):
+            bp = fd.get("bond_pattern", "")
+            if bp and bp.lower().strip() not in ("running", "flemish", "stack", "running bond", ""):
+                reasons.append(f"invalid_bond_pattern:{bp}")
+
+        # Validate deep_facade_analysis structure
+        dfa = d.get("deep_facade_analysis")
+        if dfa is not None and not isinstance(dfa, dict):
+            reasons.append("deep_facade_analysis_not_dict")
+        elif isinstance(dfa, dict):
+            poly = dfa.get("polychromatic_brick")
+            if poly is not None and not isinstance(poly, dict):
+                reasons.append("polychromatic_brick_not_dict")
+            elif isinstance(poly, dict):
+                accent = poly.get("accent_hex", "")
+                if accent and isinstance(accent, str) and not accent.startswith("#"):
+                    reasons.append(f"invalid_accent_hex:{accent}")
+            dfa_bond = dfa.get("brick_bond_observed", "")
+            if dfa_bond and dfa_bond.lower().strip() not in (
+                "running", "flemish", "stack", "running bond", "stretcher", ""
+            ):
+                reasons.append(f"invalid_dfa_bond:{dfa_bond}")
+
+        # Validate colour hex fields are valid 7-char hex strings
+        for hex_path, hex_val in [
+            ("facade_detail.brick_colour_hex", fd.get("brick_colour_hex", "") if isinstance(fd, dict) else ""),
+            ("facade_detail.trim_colour_hex", fd.get("trim_colour_hex", "") if isinstance(fd, dict) else ""),
+        ]:
+            if hex_val and isinstance(hex_val, str) and not (
+                hex_val.startswith("#") and len(hex_val) == 7
+            ):
+                reasons.append(f"malformed_hex:{hex_path}={hex_val}")
+
         if reasons:
             failed.append(
                 {
@@ -138,3 +177,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

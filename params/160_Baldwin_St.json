@@ -2,10 +2,10 @@
   "building_name": "160 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    3.8,
+    3.4
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 7.2,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -19,16 +19,16 @@
     "lot_coverage_pct": 26.2,
     "lots_sharing_footprint": 1
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "brick",
+  "facade_material": "modern brick veneer",
   "facade_colour": "buff-beige brick with dark grey entry surround and large aluminum-framed windows",
   "windows_per_floor": [
-    3,
-    5
+    0,
+    2
   ],
   "window_type": "fixed",
   "window_width_m": 0.95,
@@ -40,12 +40,12 @@
     "typology": "House-form, Row, Ontario Cottage",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 260,
-    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 258. 50 Lippincott Street N/A 259. 52 Lippincott Street N/A 141 DCH | FO :D FO YTIC 5202 3 Nassau Street 3 NASSAU STREET",
+    "statement_of_contribution": "Each property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 258. 50 Lippincott Street N/A 259. 52 Lippincott Street N/A 141 DCH | FO :D FO YTIC 5202 3 Nassau Street 3 NASSAU STREET",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,8 +60,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 37,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -102,7 +102,8 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "photo": "IMG_20260318_183702241_HDR.jpg",
     "reference_photos": [
@@ -117,7 +118,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "160 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "160 BALDWIN ST"
     ],
@@ -130,6 +131,89 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "windows_detail: 4 floors -> 4 floors (from deep analysis)",
+      "colour_palette enriched from observations",
+      "storefront.awning added"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "window_count:floor0=3",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "modern brick veneer",
+        "new_value": "modern brick veneer",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:56.960241+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "modern brick veneer",
+        "new_value": "modern brick veneer",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:19.867374+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].height_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:47.656987+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "win.type: 'double-hung' -> 'double_hung'",
+          "arch_type filled (pre-1889)",
+          "glazing filled (pre-1889)",
+          "frame_colour filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:43.356974+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:13.480415+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:17.147020Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:11.891152Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 \u2192 #3D2A1B",
+        "mortar": "#B0A898 \u2192 #AF9F8F"
+      }
+    ],
+    "fixes_applied": [
+      {
+        "fix": "height_mismatch_correction",
+        "timestamp": "2026-03-29T18:59:47Z"
+      }
     ]
   },
   "photo_observations": {
@@ -180,7 +264,8 @@
     "roof_features": [
       "parapet_wall"
     ],
-    "signage_observed": "Kensington Lofts vertical sign at the entrance."
+    "signage_observed": "Kensington Lofts vertical sign at the entrance.",
+    "photo": "IMG_20260318_183702241_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "recessed",
@@ -212,7 +297,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Recessed entry door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.95,
       "height_m": 2.1,
@@ -220,7 +305,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "storefront": {
@@ -236,21 +324,39 @@
     "recessed_entry": false,
     "description": "Modern residential/commercial base with lobby entrance rather than a traditional storefront.",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "ecostems",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "colour": "yellow and white striped"
+    },
+    "signage": {
+      "text": "LITTLE PEBBLES CAFE | CRUMBS GOURMET PATTIES | Kensington Market BIA | Takoyaki6ix | Taco Loco | LVL UP Studios",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
-    "bond_pattern": "running bond",
+    "brick_colour_hex": "#C4A87A",
+    "bond_pattern": "running bond (multi-tone)",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#3D2A1B",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, ontario cottage typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 5 window bays from lower to upper levels, using fixed, and 1 principal entrance.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using fixed, and 1 principal entrance.",
     "heritage_summary": "Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. 50 Lippincott Street N/A 259.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#AF9F8F"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -265,26 +371,29 @@
       "windows": [
         {
           "count": 3,
-          "type": "fixed",
-          "width_m": 0.9,
-          "height_m": 2.6,
-          "sill_height_m": 1.7,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "type": "double_hung",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "segmental",
+          "glazing": "2-over-2",
+          "frame_colour": "dark"
         }
-      ]
+      ],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 5,
-          "type": "fixed",
-          "width_m": 0.7,
-          "height_m": 11.0,
-          "sill_height_m": 8.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "count": 4,
+          "type": "fixed casement",
+          "frame_colour": "dark grey/charcoal",
+          "arch_type": "flat",
+          "height_m": 1.4,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -303,7 +412,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "Contemporary mid-rise apartment building (Kensington Lofts) in buff-beige brick, replacing the original pre-1889 building form on this lot. The ground level has a recessed glazed lobby entrance marked '160 Baldwin' with a dark grey surround, flanked by large aluminum-framed windows. Upper storeys feature modern window bands and glass-block panels in a symmetrical arrangement. A flat roof terminates in a clean parapet with no traditional cornice. Despite the HCD contributing designation, the current structure is entirely contemporary infill with no surviving historic fabric visible from the street.",
+  "facade_description": "160 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as modern brick veneer in a buff-beige brick with dark grey entry surround and large aluminum-framed windows palette, laid in running bond (multi-tone) with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using fixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. 50 Lippincott Street N/A 259.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -312,7 +421,141 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C4A87A",
+    "trim": "#3D2A1B",
+    "roof": "#505050",
+    "accent": "#5A2060"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_183702241_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 4,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "facade_material_observed": "modern brick veneer",
+    "brick_colour_hex": "#C4A87A",
+    "brick_bond_observed": "running bond (multi-tone)",
+    "mortar_colour": "grey",
+    "polychromatic_brick": true,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "West end storefront shows red/dark-painted shop (Grillados?) with yellow/white striped awning"
+      },
+      {
+        "floor": "second",
+        "count": 4,
+        "type": "fixed casement",
+        "frame_colour": "dark grey/charcoal",
+        "arch": "flat",
+        "width_m_est": 1.3,
+        "height_m_est": 1.4
+      },
+      {
+        "floor": "third",
+        "count": 4,
+        "type": "fixed casement",
+        "frame_colour": "dark grey/charcoal",
+        "arch": "flat",
+        "width_m_est": 1.3,
+        "height_m_est": 1.4
+      },
+      {
+        "floor": "fourth",
+        "count": 3,
+        "type": "fixed casement",
+        "frame_colour": "dark grey/charcoal",
+        "arch": "flat",
+        "width_m_est": 1.3,
+        "height_m_est": 1.2
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A2A2A",
+        "note": "Red-framed commercial entry, Grillados restaurant"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "membrane/built-up",
+    "roof_colour_hex": "#505050",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 100,
+      "signage_text": "Grillados / ecostems",
+      "awning": {
+        "present": true,
+        "type": "retractable",
+        "colour": "yellow and white striped"
+      },
+      "entrance_position": "center",
+      "security_grille": false,
+      "note": "West end storefront is red-painted with yellow/white striped awning (Grillados restaurant). ecostems signage visible further right. Different commercial tenants along ground floor."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "note": "Confirms modern 4-storey infill. Widest angle shows full building width is substantial -- likely 20+ metres."
+    },
+    "party_wall_left": false,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#C4A87A",
+      "trim": "#404040",
+      "roof": "#505050",
+      "accent": "#C02020"
+    },
+    "condition_observed": "good",
+    "condition_notes": "Excellent condition. New construction. Multiple commercial tenants at ground level all well-presented.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 0.0
 }

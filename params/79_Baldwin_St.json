@@ -8,8 +8,8 @@
   "facade_width_m": 4.8,
   "facade_depth_m": 10.0,
   "site": {
-    "lon": null,
-    "lat": null,
+    "lon": -79.402948,
+    "lat": 43.654938,
     "street": "Baldwin St",
     "street_number": 79,
     "setback_m": 0.0,
@@ -18,15 +18,14 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": null
   },
-  "roof_type": "flat parapet storefront",
-  "roof_pitch_deg": 0,
+  "roof_type": "flat",
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "brick",
+  "facade_material": "metal cladding",
   "facade_colour": "dark blue-black storefront with a white signboard and warm wood ceiling visible inside",
   "windows_per_floor": [
-    1
+    0
   ],
   "window_type": "storefront",
   "window_width_m": 2.6,
@@ -108,14 +107,94 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "windows_detail: 1 floors -> 1 floors (from deep analysis)",
+      "windows_per_floor: [1] -> [0]",
+      "colour_palette enriched from observations"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "metal cladding",
+        "new_value": "metal cladding",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:31:02.112193+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "metal cladding",
+        "new_value": "metal cladding",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:28.242864+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "roof_pitch_deg",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:14.767704+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:50.528069+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:23.354099Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:17.917391Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#E8E0D0 \u2192 #33251D",
+        "mortar": "#B0A898 \u2192 #B7A68F"
+      }
+    ]
   },
   "storefront": {
     "type": "Commercial ground floor",
     "status": "vacant",
     "width_m": 4.0,
     "height_m": 4.0,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "Golden Grams Culture Boutique",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 4.32,
+      "projection_m": 1.2,
+      "colour_hex": "#FFFFFF"
+    },
+    "signage": {
+      "text": "Golden Giants Culture Boutique",
+      "type": "fascia",
+      "width_m": 3.36,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "dark blue-black storefront with a white signboard and warm wood ceiling visible inside",
@@ -167,7 +246,8 @@
     "photo_date": "2026-03-18",
     "photo_time": "~14:19",
     "weather": "light snow",
-    "notes": "Batch 009 includes 4 daytime photos including bailiff notice. Culture Boutique / Golden Gate Ltd. Commercial at ground level, appears closed/seized. Bailiff notice visible on window."
+    "notes": "Batch 009 includes 4 daytime photos including bailiff notice. Culture Boutique / Golden Gate Ltd. Commercial at ground level, appears closed/seized. Bailiff notice visible on window.",
+    "photo": "IMG_20260317_194036605_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "storefront",
@@ -189,7 +269,7 @@
   "decorative_lintels": false,
   "overall_style": "Commercial",
   "storefront_description": "vacant boutique storefront with large glazing and posted landlord/bailiff notices",
-  "confidence": 0.7500000000000001,
+  "confidence": 0.8500000000000002,
   "notes": "Batch 009 includes 4 daytime photos including bailiff notice. Culture Boutique / Golden Gate Ltd. Commercial at ground level, appears closed/seized. Bailiff notice visible on window.",
   "porch_present": false,
   "porch_type": "none",
@@ -199,7 +279,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 1.0,
       "height_m": 2.3,
@@ -207,7 +287,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "commercial",
@@ -218,10 +301,11 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
-    "composition": "The street frontage spans roughly 4.8 metres across 1 storeys beneath a flat roof with a parapet storefront, consistent with its commercial storefront typology.",
-    "opening_rhythm": "The visible opening pattern is organized as 1 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
-    "heritage_expression": "Key storefront and facade features include cornice."
+    "trim_colour_hex": "#33251D",
+    "composition": "The street frontage spans roughly 4.8 metres across 1 storeys beneath a flat, consistent with its commercial storefront typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "mortar_colour_hex": "#B7A68F"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -231,17 +315,8 @@
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 1,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.4,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
-        }
-      ]
+      "windows": [],
+      "is_storefront": true
     }
   ],
   "decorative_elements": {
@@ -254,7 +329,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "Narrow single-storey commercial unit with a dark blue-black painted storefront surround and flat parapet roof. A full-height display window with black framing occupies most of the 4.8-metre frontage, flanked by a single glazed entry door. A white signboard reading Golden Giants Culture Boutique is mounted above the glazing, though the premises appear vacant with a bailiff notice posted on the glass and the interior largely cleared out. Warm wood ceiling is visible through the storefront glazing.",
+  "facade_description": "79 Baldwin St is a commercial building with a street-level storefront. The street frontage spans roughly 4.8 metres across 1 storeys beneath a flat, consistent with its commercial storefront typology. The frontage is defined primarily by metal cladding in a dark blue-black storefront with a white signboard and warm wood ceiling visible inside palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using storefront, and 1 principal entrance. Key storefront and facade features include cornice.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
     "facade_hex": "#E8E0D4",
@@ -262,7 +337,115 @@
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#33251D",
+    "roof": "#3A3A3A",
+    "accent": "#FFFFFF"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260317_194036605_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 1,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0
+    ],
+    "facade_material_observed": "metal cladding",
+    "brick_colour_hex": null,
+    "brick_bond_observed": null,
+    "mortar_colour": null,
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 2,
+        "type": "fixed plate glass",
+        "frame_colour": "#2A2A2A",
+        "arch": "flat",
+        "width_m_est": 2.0,
+        "height_m_est": 2.4,
+        "note": "Two large storefront plate glass panels, full-height, dark metal frames"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center-right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A2A2A",
+        "note": "Glass door set within the storefront glazing system, dark frame"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "membrane",
+    "roof_colour_hex": "#3A3A3A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 90,
+      "signage_text": "Golden Grams Culture Boutique",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "center-right",
+      "security_grille": false
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#2E3440",
+      "trim": "#2A2A2A",
+      "roof": "#3A3A3A",
+      "accent": "#FFFFFF"
+    },
+    "condition_observed": "good",
+    "condition_notes": "Modern renovation with clean dark metal/composite cladding over original facade. Storefront in good condition. Dusk lighting. Business appears closed/terminated based on bailiff notice in other photos.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "roof_pitch_deg": 35,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0
 }

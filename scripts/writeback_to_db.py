@@ -27,7 +27,7 @@ except ImportError:
     print("[ERROR] psycopg2 not installed. Run: pip install psycopg2-binary")
     sys.exit(1)
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 
 PARAMS_DIR = Path(__file__).parent.parent / "params"
 
@@ -378,14 +378,16 @@ def _address_candidates(raw: str) -> list[str]:
     return sorted(out, key=len)
 
 
-def _parse_number_street(candidate: str) -> tuple[int, str] | None:
+def _parse_number_street(candidate: str) -> tuple[str, str] | None:
     """Parse leading civic number + street text from candidate."""
     if not candidate:
         return None
     m = re.match(r"^(\d+)[A-Za-z]?\s+(.+)$", candidate.strip())
     if not m:
         return None
-    return int(m.group(1)), _collapse_ws(m.group(2))
+    # Keep street number as text to avoid type mismatch across DB schemas
+    # where ba_street_number can be text/varchar instead of integer.
+    return m.group(1), _collapse_ws(m.group(2))
 
 
 def find_building_id(cur, raw_address: str) -> tuple[int | None, str]:
@@ -440,7 +442,7 @@ def find_building_id(cur, raw_address: str) -> tuple[int | None, str]:
 
 def main():
     try:
-        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     except AttributeError:
         pass
 
@@ -451,7 +453,7 @@ def main():
     parser.add_argument("--params-dir", default=str(PARAMS_DIR), help="Params directory")
     args = parser.parse_args()
 
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
 
     if args.migrate:
         run_migration(conn)
@@ -553,3 +555,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

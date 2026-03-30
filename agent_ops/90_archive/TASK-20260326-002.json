@@ -1,0 +1,24 @@
+{
+  "task_id": "TASK-20260326-002",
+  "title": "Add QA pass for Chinatown lane alignment outputs",
+  "description": "Add checks that ensure expected render files and blend outputs exist after alignment and cleanup stages.",
+  "priority": "medium",
+  "estimate_points": 2,
+  "skills": [
+    "python",
+    "qa",
+    "blender"
+  ],
+  "write_scope": [
+    "PHOTOS KENSINGTON sorted/Chinatown Mural Lane/run_kensington_pipeline.py",
+    "PHOTOS KENSINGTON sorted/Chinatown Mural Lane/qa_kensington_urban_elements.md"
+  ],
+  "dependencies": [],
+  "owner": "codex-2",
+  "status": "done",
+  "created_at": "2026-03-26T00:00:00Z",
+  "routed_at": "2026-03-26T23:44:31.949515+00:00",
+  "reassigned_at": "2026-03-27T18:12:50.511248+00:00",
+  "completed_at": "2026-03-27T18:39:32.751524+00:00",
+  "completed_by": "codex-2"
+}

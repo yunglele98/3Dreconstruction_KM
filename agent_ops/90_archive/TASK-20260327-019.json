@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-019",
+  "title": "Cross-reference window counts between photo_observations and windows_detail",
+  "description": "For all 594 buildings with real (non-synthesized) photo_observations, compare photo_observations.windows_per_floor against windows_detail floor counts. Flag mismatches >1 window difference per floor. Severity: high if ground floor mismatch, medium otherwise.",
+  "priority": "high",
+  "estimate_points": 2,
+  "skills": [
+    "validation",
+    "cross-reference",
+    "facade-audit"
+  ],
+  "write_scope": [
+    "agent_ops/30_handoffs"
+  ],
+  "dependencies": [],
+  "owner": "gemini-1",
+  "status": "done",
+  "created_at": "2026-03-27T19:58:18Z",
+  "routed_at": "2026-03-27T19:58:46.592403+00:00",
+  "completed_at": "2026-03-28T17:48:01.751481+00:00",
+  "completed_by": "gemini-1"
+}

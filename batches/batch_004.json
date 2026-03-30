@@ -1,0 +1,521 @@
+{
+  "batch_id": "batch_004",
+  "count": 50,
+  "buildings": [
+    {
+      "param_file": "29_Casimir_St.json",
+      "building_name": "29 Casimir St",
+      "address": "29 Casimir St",
+      "photos": [
+        "IMG_20260320_162058493_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "29_Wales_Ave.json",
+      "building_name": "29 Wales Ave",
+      "address": "29 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "2_Glen_Baillie_Pl.json",
+      "building_name": "2 Glen Baillie Pl",
+      "address": "2 Glen Baillie Pl",
+      "photos": [
+        "IMG_20260316_114551593_HDR.jpg",
+        "IMG_20260316_114644300_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "2_Nassau_St.json",
+      "building_name": "2 Nassau St",
+      "address": "2 Nassau St",
+      "photos": [
+        "IMG_20260318_180546180_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "300_Spadina_Ave.json",
+      "building_name": "300 Spadina Ave",
+      "address": "300 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "300A_Spadina_Ave.json",
+      "building_name": "300A Spadina Ave",
+      "address": "300A Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "301_Augusta_Ave.json",
+      "building_name": "301 Augusta Ave",
+      "address": "301 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "306_Spadina_Ave.json",
+      "building_name": "306 Spadina Ave",
+      "address": "306 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "309_Augusta_Ave.json",
+      "building_name": "309 Augusta Ave",
+      "address": "309 Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "310-316_Spadina_Ave.json",
+      "building_name": "310-316 Spadina Ave",
+      "address": "310-316 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "310_Spadina_Ave.json",
+      "building_name": "310 Spadina Ave",
+      "address": "310 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "318_Spadina_Ave.json",
+      "building_name": "318 Spadina Ave",
+      "address": "318 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "321A_Augusta_Ave.json",
+      "building_name": "321A Augusta Ave",
+      "address": "321A Augusta Ave",
+      "photos": [
+        "IMG_20260316_215635681_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "322_Spadina_Ave.json",
+      "building_name": "322 Spadina Ave",
+      "address": "322 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "323_College_St.json",
+      "building_name": "323 College St",
+      "address": "323 College St",
+      "photos": [
+        "IMG_20260321_013354867_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "324_Spadina_Ave.json",
+      "building_name": "324 Spadina Ave",
+      "address": "324 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "326_Spadina_Ave.json",
+      "building_name": "326 Spadina Ave",
+      "address": "326 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "328_Spadina_Ave.json",
+      "building_name": "328 Spadina Ave",
+      "address": "328 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "32_Bellevue_Ave.json",
+      "building_name": "32 Bellevue Ave",
+      "address": "32 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_161056395_HDR.jpg",
+        "IMG_20260320_161100913_HDR.jpg",
+        "IMG_20260320_161113683_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "32A_Oxford_St.json",
+      "building_name": "32A Oxford St",
+      "address": "32A Oxford St",
+      "photos": [
+        "IMG_20260318_151434838_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "32C_Oxford_St.json",
+      "building_name": "32C Oxford St",
+      "address": "32C Oxford St",
+      "photos": [
+        "IMG_20260318_151431848_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "32E_Oxford_St.json",
+      "building_name": "32E Oxford St",
+      "address": "32E Oxford St",
+      "photos": [
+        "IMG_20260318_151133544_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "334_Spadina_Ave.json",
+      "building_name": "334 Spadina Ave",
+      "address": "334 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "335_College_St.json",
+      "building_name": "335 College St",
+      "address": "335 College St",
+      "photos": [
+        "IMG_20260321_013410025_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "336_Spadina_Ave.json",
+      "building_name": "336 Spadina Ave",
+      "address": "336 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "338_Spadina_Ave.json",
+      "building_name": "338 Spadina Ave",
+      "address": "338 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "33_Wales_Ave.json",
+      "building_name": "33 Wales Ave",
+      "address": "33 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "340_Spadina_Ave.json",
+      "building_name": "340 Spadina Ave",
+      "address": "340 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "341_College_St.json",
+      "building_name": "341 College St",
+      "address": "341 College St",
+      "photos": [
+        "IMG_20260321_013428355_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "34A_Bellevue_Ave.json",
+      "building_name": "34A Bellevue Ave",
+      "address": "34A Bellevue Ave",
+      "photos": [
+        "PXL_20260318_215824454.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "356_Spadina_Ave.json",
+      "building_name": "356 Spadina Ave",
+      "address": "356 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "358_Spadina_Ave.json",
+      "building_name": "358 Spadina Ave",
+      "address": "358 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "35_Bellevue_Av.json",
+      "building_name": "35 Bellevue Av",
+      "address": "35 Bellevue Av",
+      "photos": [
+        "IMG_20260315_153511186_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "35_Wales_Ave.json",
+      "building_name": "35 Wales Ave",
+      "address": "35 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "362_Spadina_Ave.json",
+      "building_name": "362 Spadina Ave",
+      "address": "362 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "366_Spadina_Ave.json",
+      "building_name": "366 Spadina Ave",
+      "address": "366 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "366A_Spadina_Ave.json",
+      "building_name": "366A Spadina Ave",
+      "address": "366A Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "368_Spadina_Ave.json",
+      "building_name": "368 Spadina Ave",
+      "address": "368 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "370_Spadina_Ave.json",
+      "building_name": "370 Spadina Ave",
+      "address": "370 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "372_Spadina_Ave.json",
+      "building_name": "372 Spadina Ave",
+      "address": "372 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "374_Spadina_Ave.json",
+      "building_name": "374 Spadina Ave",
+      "address": "374 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "37_Wales_Ave.json",
+      "building_name": "37 Wales Ave",
+      "address": "37 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "380_Spadina_Ave.json",
+      "building_name": "380 Spadina Ave",
+      "address": "380 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "382_Spadina_Ave.json",
+      "building_name": "382 Spadina Ave",
+      "address": "382 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "384_Spadina_Ave.json",
+      "building_name": "384 Spadina Ave",
+      "address": "384 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "386_Spadina_Ave.json",
+      "building_name": "386 Spadina Ave",
+      "address": "386 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "388_Spadina_Ave.json",
+      "building_name": "388 Spadina Ave",
+      "address": "388 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "390_Spadina_Ave.json",
+      "building_name": "390 Spadina Ave",
+      "address": "390 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "392_Spadina_Ave.json",
+      "building_name": "392 Spadina Ave",
+      "address": "392 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "394_Spadina_Ave.json",
+      "building_name": "394 Spadina Ave",
+      "address": "394 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    }
+  ]
+}

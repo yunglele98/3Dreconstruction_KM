@@ -1,0 +1,11 @@
+{
+  "task_id": "TASK-20260327-005__OLLAMA",
+  "owner": "ollama-local-1",
+  "parent_task": "TASK-20260327-005",
+  "write_scope": [
+    "scripts/apply_textures.py",
+    "scripts/apply_textures_v5.py",
+    "PHOTOS KENSINGTON sorted"
+  ],
+  "assigned_at": "2026-03-27T17:23:37.643113+00:00"
+}

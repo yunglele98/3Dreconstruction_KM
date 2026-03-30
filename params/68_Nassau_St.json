@@ -55,7 +55,8 @@
     "alterations_visible": "Ground floor entry treatments may be modified but arched openings are original. Upper floors well-preserved.",
     "matches_hcd_typology": true,
     "confidence": 0.88,
-    "notes": "Striking 2.5-storey semi-detached Victorian pair in warm red-brown brick. Prominent rounded arched openings at ground floor with elaborate brick voussoirs. Three windows at second floor with segmental arches. Twin steep gable peaks. Rich decorative brickwork throughout. One of the best-preserved Victorian facades on Nassau St."
+    "notes": "Striking 2.5-storey semi-detached Victorian pair in warm red-brown brick. Prominent rounded arched openings at ground floor with elaborate brick voussoirs. Three windows at second floor with segmental arches. Twin steep gable peaks. Rich decorative brickwork throughout. One of the best-preserved Victorian facades on Nassau St.",
+    "photo": "IMG_20260320_155541357_HDR.jpg"
   },
   "_meta": {
     "address": "68 Nassau St",
@@ -71,12 +72,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "hcd_data_stub",
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail",
-      "dimensions_backfill"
+      "colour_palette"
     ],
     "reference_photos": [
       "IMG_20260320_155541357_HDR.jpg"
@@ -86,7 +82,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "68 Nassau St",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "68 NASSAU ST"
     ],
@@ -96,29 +92,105 @@
       "new_total_height_m": 14.4,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Nassau St",
+        "timestamp": "2026-03-29T07:48:51.008446+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:12.311248+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:58.898752+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:48.497298+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:38.053701+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:22.975778Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:48.246012+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #C9522E",
+        "roof": "#5A5A5A \u2192 #635959",
+        "trim": "#E8E0D0 \u2192 #3B2B1F",
+        "accent": "#2A3A2A \u2192 #4A2F1F",
+        "mortar": "#B0A898 \u2192 #A59788"
+      }
+    ]
   },
   "notes": "Striking 2.5-storey Victorian semi-detached pair. Red-brown brick with prominent rounded arches at ground floor. Rich decorative brickwork. Twin steep gables.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "residential",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     }
   ],
   "party_wall_left": false,
   "party_wall_right": false,
   "facade_depth_m": 10.0,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C9522E",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#3B2B1F",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form typology.",
-    "opening_rhythm": "The opening rhythm is vertically ordered across the facade, using windows, and 1 principal entrance."
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "mortar_colour_hex": "#A59788",
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
+    "heritage_summary": "This house-form dates to the 1889-1903 period. Character-defining elements include its original massing and streetscape presence."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -133,12 +205,43 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 1.4,
           "sill_height_m": 0.9,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1",
+          "arch_type": "flat"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
@@ -152,22 +255,14 @@
     }
   },
   "street_setback_m": 2.0,
-  "confidence": 0.7500000000000001,
-  "facade_description": "Three-storey house-form (c. 1889-1903) in warm red-brown brick with decorative brick detailing throughout. Twin steep gables suggest a semi-detached pair. Ground floor features two prominent rounded arch openings with brick voussoirs; second floor has three windows with segmental arched heads and a continuous string course. Decorative corbelling at the eave line. One of the most ornate facades on Nassau Street.",
+  "confidence": 0.8500000000000002,
+  "facade_description": "68 Nassau St is a house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
   "hcd_data": {
     "typology": "house-form",
     "construction_date": "1889-1903",
     "source": "inferred_from_photo_analysis"
   },
   "roof_material": "Slate shingles",
-  "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#3A2A20",
-    "roof_hex": "#4A5A5A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
-  },
   "volumes": [],
   "total_height_m": 14.4,
   "facade_width_m": 5.2,
@@ -191,11 +286,88 @@
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "site": {
     "lon": -79.40280754,
     "lat": 43.65526996,
     "street": "Nassau St",
     "street_number": 68
-  }
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C9522E",
+    "trim": "#3B2B1F",
+    "roof": "#635959",
+    "accent": "#4A2F1F"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_155541357_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 1.5
 }

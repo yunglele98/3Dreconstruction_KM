@@ -28,7 +28,7 @@ from revise_params_from_db import (
     norm_addr_raw,
 )
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 
 
 OUT_DIR = ROOT / "outputs"
@@ -67,7 +67,7 @@ def derive_storefront(status: str | None) -> bool | None:
 
 
 def load_db_rows() -> tuple[dict[str, dict[str, Any]], dict[str, list[dict[str, Any]]]]:
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute(
         """
@@ -261,3 +261,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

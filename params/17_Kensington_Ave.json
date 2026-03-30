@@ -2,8 +2,8 @@
   "building_name": "17 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    4.5,
-    4.4
+    4.78,
+    4.07
   ],
   "total_height_m": 8.85,
   "facade_width_m": 5.2,
@@ -13,22 +13,22 @@
     "lat": 43.65309498,
     "street": "Kensington Ave",
     "street_number": 15,
-    "setback_m": 0.0,
+    "setback_m": 0.5,
     "lot_area_sqm": 187.1556357881408,
     "footprint_sqm": 72.8,
     "lot_coverage_pct": 38.9,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "dark — distant night view of Victorian row",
+  "facade_material": "brick",
+  "facade_colour": "brick (multiple buildings)",
   "windows_per_floor": [
     0,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Row, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Row, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 183,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, the properties have largely retained their original building features that reflect vernacular interpretations of Victorian architectural styles, including cross-gabled rooflines, double-height bay windows, polychromatic brickwork, decorative wooden gable pediments and brackets, arched attic windows, and segmentally arched windows at the first and second storeys. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, the properties have largely retained their original building features that reflect vernacular interpretations of Victorian architectural styles, including cross-gabled rooflines, double-height bay windows, polychromatic brickwork, decorative wooden gable pediments and brackets, arched attic windows, and segmentally arched windows at the first and second storeys. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -100,16 +100,87 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "17 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "17 KENSINGTON AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 300",
+      "floor_heights_m: [4.5, 4.4] -> [4.78, 4.07]",
+      "windows_detail: 1 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 2] -> [0, 4, 2]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "colour_palette enriched from observations",
+      "decorative_elements.ornamental_shingles added",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2",
+      "site.setback_m: 0.5"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:gable_brackets",
+        "timestamp": "2026-03-29T07:15:57Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:48.623285+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:43.942802+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:14.838175+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "substring",
+      "timestamp": "2026-03-29T08:34:17.393447Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.232191Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #965135",
+        "roof": "#5A5A5A \u2192 #373737",
+        "trim": "#3A2A20 \u2192 #39291F",
+        "mortar": "#B0A898 \u2192 #AA9A83"
+      }
     ]
   },
   "decorative_elements": {
@@ -121,14 +192,43 @@
       "style": "decorative"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "ornamental_shingles_in_gable": true,
+    "ornamental_shingles": {
+      "present": true
+    },
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
+    }
   },
   "storefront": {
     "type": "Commercial ground floor",
     "status": "active",
     "width_m": 4.4,
     "height_m": 6.3,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "Dancing Days",
+    "awning": {
+      "present": false,
+      "type": null,
+      "colour": null
+    },
+    "width_pct": 70,
+    "signage": {
+      "text": "Dancing Days",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "source_photo": "IMG_20260320_012138541_HDR.jpg",
@@ -137,19 +237,46 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.4,
-    "facade_colour_observed": "dark — distant night view of Victorian row",
-    "facade_material_observed": "brick — typical for bay-and-gable row",
-    "condition_observed": "fair",
+    "facade_colour_observed": "dark \u2014 distant night view of Victorian row",
+    "facade_material_observed": "brick (multiple buildings)",
+    "condition_observed": "mixed; typical Kensington Market mix of maintained and weathered facades",
     "has_storefront_observed": true,
     "signage_observed": "Dancing Days",
-    "notes": "Rotated, distant night photo. Shows row of Victorian bay-and-gable houses on Kensington Ave. Dancing Days business visible at ground level. Cross-gabled rooflines and double-height bay windows partially discernible in darkness."
+    "notes": "Rotated, distant night photo. Shows row of Victorian bay-and-gable houses on Kensington Ave. Dancing Days business visible at ground level. Cross-gabled rooflines and double-height bay windows partially discernible in darkness.",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012138541_HDR.jpg",
+    "facade_analysis_address": "17 Kensington Ave (Dancing Days) / 15",
+    "storeys_observed": 2,
+    "windows_observed": {},
+    "colour_palette_observed": {
+      "primary": "red-brown brick row",
+      "accent": "red (commercial signage at ground level)"
+    },
+    "photo_quality": "night, rotated 90 degrees, wide streetscape",
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 2,
+      "ba_facade_material": "brick",
+      "height_max_m": 20.71,
+      "height_avg_m": 8.85,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-form, Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "dark houseform storefront with warm interior lighting and narrow upper gables",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_012138541_HDR.jpg"
   },
-  "confidence": 0.6500000000000001,
+  "confidence": 0.7500000000000002,
   "notes": "Rotated, distant night photo. Shows row of Victorian bay-and-gable houses on Kensington Ave. Dancing Days business visible at ground level. Cross-gabled rooflines and double-height bay windows partially discernible in darkness.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -157,41 +284,73 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 2,
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#965135",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#39291F",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
-    "heritage_summary": "Constructed as a row, the properties have largely retained their original building features that reflect vernacular interpretations of Victorian architectural styles, including cross-gabled rooflines, double-height bay windows, polychromatic brickwork, decorative wooden gable pediments and brackets, arched attic windows, and segmentally arched windows at the first and second storeys. Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, gable brackets.",
+    "heritage_summary": "Constructed as a row, the properties have largely retained their original building features that reflect vernacular interpretations of Victorian architectural styles, including cross-gabled rooflines, double-height bay windows, polychromatic brickwork, decorative wooden gable pediments and brackets, arched attic windows, and segmentally arched windows at the first and second storeys. Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion.",
+    "mortar_colour_hex": "#AA9A83"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
     "eave_overhang_mm": 300,
     "gable_window": {
-      "present": false
-    }
+      "present": true,
+      "type": "pointed-arch",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "pointed-arch"
+    },
+    "bargeboard_style": "simple Victorian",
+    "bargeboard_colour_hex": "#E8D8C0"
   },
   "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
     {
       "floor": "Second floor",
       "windows": [
         {
+          "count": 4,
+          "type": "1-over-1",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 0.73,
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    },
+    {
+      "floor": "Gable",
+      "windows": [
+        {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 6.5,
-          "sill_height_m": 5.1,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "fixed",
+          "frame_colour": "white",
+          "arch_type": "pointed",
+          "width_m": 0.52,
+          "height_m": 0.8,
+          "glazing": "fixed",
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -216,7 +375,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "17 Kensington Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick — typical for bay-and-gable row in a dark — distant night view of victorian row palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows. HCD note: Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, the properties have largely retained their original building features that reflect vernacular interpretations of Victorian architectural styles, including cross-gabled rooflines, double-height bay windows, polychromatic brickwork, decorative wooden gable pediments and brackets, arched attic windows, and segmentally arched windows at the first and second storeys. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "17 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, gable brackets.",
   "heritage_summary": "Constructed as a row, the properties have largely retained their original building features that reflect vernacular interpretations of Victorian architectural styles, including cross-gabled rooflines, double-height bay windows, polychromatic brickwork, decorative wooden gable pediments and brackets, arched attic windows, and segmentally arched windows at the first and second storeys. Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -225,7 +384,129 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#965135",
+    "trim": "#39291F",
+    "roof": "#373737",
+    "accent": "#5A3A2A"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012138541_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.5
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Commercial storefronts, partially obscured by trees and vehicles"
+      },
+      {
+        "floor": "second",
+        "count": 4,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.14,
+        "height_m_est": 1.3,
+        "note": "Approximate count across two units; difficult to confirm due to distance"
+      },
+      {
+        "floor": "gable",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "pointed",
+        "width_ratio": 0.1,
+        "height_m_est": 0.8
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 2,
+        "colour_hex": "#5A3A2A"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 48,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple Victorian",
+      "colour_hex": "#E8D8C0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "pointed-arch"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 70,
+      "signage_text": "Dancing Days",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "center",
+      "security_grille": false
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": true,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#B85A3A",
+      "trim": "#E8D8C0",
+      "roof": "#5A5A5A",
+      "accent": "#5A3A2A"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Distant night view across street. Bay-and-gable row houses typical of Kensington Ave. Details partially obscured by street lamp glare, utility pole, tree branches, and parked cars. Brick appears in standard condition for the area.",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "porch_depth_m_est": 1.0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 300,
+      "step_count": 2,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3,
+  "wall_thickness_m": 0.3
 }

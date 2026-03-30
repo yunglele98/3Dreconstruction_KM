@@ -19,31 +19,31 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "varied brick and stone",
+  "facade_colour": "red brick",
   "windows_per_floor": [
     2,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "poor",
   "hcd_data": {
     "typology": "House-Form, Row, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue) (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue) (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 200,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows",
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -97,14 +97,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "32 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "32 KENSINGTON AVE"
     ],
@@ -116,13 +113,80 @@
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:gable_brackets",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:01.597219+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (pre-1889)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:49.222130+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:34.374778+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Kensington Ave",
+        "timestamp": "2026-03-29T07:48:40.382862+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "fuzzy",
+      "timestamp": "2026-03-29T08:34:19.688955Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:45.867414+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #8A4D33",
+        "roof": "#5A5A5A \u2192 #5A4F4F",
+        "trim": "#3A2A20 \u2192 #35271E",
+        "accent": "#3A2A20 \u2192 #32392A",
+        "mortar": "#B0A898 \u2192 #9A8A7B"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "bay_window": {
@@ -144,12 +208,19 @@
       "style": "decorative"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -157,21 +228,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#8A4D33",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#35271E",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick.",
-    "heritage_summary": "Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows."
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick, gable brackets.",
+    "heritage_summary": "Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows.",
+    "mortar_colour_hex": "#9A8A7B"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -186,12 +261,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 2.0,
           "sill_height_m": 1.3,
           "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -200,12 +276,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 3.4,
           "sill_height_m": 2.6,
           "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -219,23 +296,97 @@
     "material": "brick",
     "colour_hex": "#B85A3A"
   },
-  "street_setback_m": 3.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "32 Kensington Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "32 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick, gable brackets.",
   "heritage_summary": "Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows.",
   "roof_material": "Slate shingles",
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "photo_observations": {
+    "db_context": {
+      "ba_building_type": "residential",
+      "ba_stories": 2,
+      "ba_facade_material": "mixed",
+      "height_max_m": 11.94,
+      "height_avg_m": 7.91,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "varied brick and stone",
+      "photo_condition": "poor",
+      "ba_condition_rating": 2,
+      "ba_storefront_status": "n/a"
+    },
+    "photo": "IMG_20260315_150058951_HDR.jpg"
+  },
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A4D33",
+    "trim": "#35271E",
+    "roof": "#5A4F4F",
+    "accent": "#32392A"
   },
-  "volumes": [],
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  }
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260315_150058951_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.3,
+            "frame_colour": "#3A2A20",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 3.4,
+            "sill_height_m": 2.6,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [
+      "decorative_brickwork"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "poor",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

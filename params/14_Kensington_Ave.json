@@ -2,8 +2,8 @@
   "building_name": "14 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    4.2,
-    3.7
+    4.29,
+    3.65
   ],
   "total_height_m": 7.94,
   "facade_width_m": 5.2,
@@ -19,31 +19,31 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Gable",
+  "roof_type": "flat",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "brick",
-  "facade_colour": "varied brick and stone",
+  "facade_material": "painted stucco/render",
+  "facade_colour": "painted (painted stucco/render)",
   "windows_per_floor": [
-    1,
-    2
+    0,
+    0
   ],
   "window_type": "storefront",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
-  "condition": "good",
+  "has_storefront": true,
+  "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889, 1914-1930",
-    "architectural_style": "Converted House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889, 1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 178,
-    "statement_of_contribution": "The property at 12 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure that retains some legibility of its original form including south side wall with gabled roofline. The property at 14 Kensington Avenue has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The properties were erected as a semi-detached pair. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property at 12 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure that retains some legibility of its original form including south side wall with gabled roofline. The property at 14 Kensington Avenue has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The properties were erected as a semi-detached pair. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,18 +105,119 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "14 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "14 KENSINGTON AVE"
     ],
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_type: 'gable' -> 'Flat'",
+      "eave_overhang_mm: 100",
+      "floor_heights_m: [4.2, 3.7] -> [4.29, 3.65]",
+      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [1, 2] -> [0, 0]",
+      "colour_palette enriched from observations",
+      "facade_colour updated: painted observation"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:stone_voussoirs,cornice",
+        "timestamp": "2026-03-29T07:15:57Z"
+      },
+      {
+        "fix": "window_count:floor1=2",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "trim_colour:#3A2A20->#F0EDE8",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted stucco/render",
+        "new_value": "painted stucco/render",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:56.690332+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted stucco/render",
+        "new_value": "painted stucco/render",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:19.797142+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].height_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:46.906557+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "win.type: 'double-hung' -> 'double_hung'",
+          "arch_type filled (pre-1889)",
+          "glazing filled (pre-1889)",
+          "frame_colour filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:42.883488+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:12.122543+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:16.885262Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "mortar": "#B0A898 \u2192 #AD9B8A"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "bay_window": {
@@ -144,19 +245,56 @@
     "door_count": 1,
     "door_type": "storefront",
     "has_storefront_observed": true,
-    "storefront_description": "Courage My Love — iconic Kensington vintage shop with blue facade, large display window full of colorful items, security bars",
-    "signage_observed": "COURAGE MY LOVE",
+    "storefront_description": "'Courage My Love' vintage shop; large storefront window with security grille and bird silhouette decals; blue-painted surround; merchandise visible through window; holiday lights on adjacent tree",
+    "signage_observed": "'COURAGE MY LOVE' on storefront; 'M' visible on adjacent unit (possibly 'MV' or similar)",
     "overall_style": "Commercial",
-    "confidence": 0.75
+    "confidence": 0.75,
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012308243_HDR.jpg",
+    "facade_analysis_address": "14 Kensington Ave (Courage My Love)",
+    "storeys_observed": 2,
+    "facade_material_observed": "painted brick or stucco (blue-grey); adjacent building buff brick",
+    "brick_colour_observed": "painted blue-grey (left unit); buff/cream brick (right, partially visible)",
+    "brick_colour_hex_observed": "#D4B896",
+    "condition_observed": "fair; painted facade in reasonable condition",
+    "windows_observed": {
+      "upper_floor": "not clearly visible in this angle"
+    },
+    "doors_observed": "not clearly visible",
+    "roof_type_observed": "flat with parapet",
+    "party_walls_observed": "party walls both sides",
+    "colour_palette_observed": {
+      "primary": "blue-grey (painted)",
+      "trim": "dark blue/navy",
+      "accent": "warm window display lighting"
+    },
+    "photo_quality": "night, rotated 90 degrees",
+    "db_context": {
+      "ba_building_type": "residential",
+      "ba_stories": 2,
+      "ba_facade_material": "mixed",
+      "height_max_m": 15.15,
+      "height_avg_m": 7.94,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "Converted House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "facade_colour_observed": "dark storefront with eclectic retail display and small upper windows",
+      "photo_condition": "good",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "n/a"
+    },
+    "photo": "IMG_20260320_012227134_HDR.jpg"
   },
   "door_type": "storefront",
   "overall_style": "Commercial",
-  "storefront_description": "Courage My Love — iconic Kensington vintage shop with blue facade, large display window full of colorful items, security bars",
+  "storefront_description": "Courage My Love \u2014 iconic Kensington vintage shop with blue facade, large display window full of colorful items, security bars",
   "confidence": 0.9,
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -164,7 +302,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "commercial",
@@ -175,15 +316,16 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
-    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include bay window, original windows.",
-    "heritage_summary": "The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs."
+    "trim_colour_hex": "#F0EDE8",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, semi-detached typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 0, 0 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
+    "heritage_summary": "The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs.",
+    "mortar_colour_hex": "#AD9B8A"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 100,
     "gable_window": {
       "present": false
     }
@@ -191,31 +333,24 @@
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 1,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
-        }
-      ]
+      "windows": [],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 4.7,
-          "sill_height_m": 3.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "type": "double_hung",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "segmental",
+          "glazing": "2-over-2",
+          "frame_colour": "dark"
         }
-      ]
+      ],
+      "is_storefront": true
     }
   ],
   "decorative_elements": {
@@ -224,24 +359,155 @@
       "style": "simple"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "stone_voussoirs": {
+      "present": true,
+      "colour_hex": "#C8B898"
+    },
+    "cornice": {
+      "present": true,
+      "projection_mm": 200,
+      "height_mm": 250,
+      "colour_hex": "#4A3A2A"
+    }
   },
   "street_setback_m": 0.0,
-  "facade_description": "14 Kensington Ave presents a converted house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as mixed in a blue painted facade palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance. Character-defining facade elements include bay window, original windows. HCD note: The property at 12 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure that retains some legibility of its original form including south side wall with gabled roofline. The property at 14 Kensington Avenue has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The properties were erected as a semi-detached pair. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "14 Kensington Ave is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, semi-detached typology. The facade reads primarily as painted stucco/render, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 0, 0 window bays from lower to upper levels, using storefront, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#D8D0C0",
-    "trim_hex": "#3A2A20",
+    "trim_hex": "#F0EDE8",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#F0EDE8",
+    "roof": "#4A4A4A",
+    "accent": "#E8C040"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  }
+    "status_source": "normalized_fix",
+    "signage_text": "COURAGE MY LOVE",
+    "awning": {
+      "present": false,
+      "type": null,
+      "colour": null
+    },
+    "security_grille": true,
+    "width_pct": 95
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012227134_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85
+    ],
+    "facade_material_observed": "painted stucco/render",
+    "brick_colour_hex": null,
+    "brick_bond_observed": null,
+    "mortar_colour": null,
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Full storefront glazing with 'COURAGE MY LOVE' text; security grille with decorative bird/dove silhouettes; merchandise visible through glass; fairy lights on tree at left"
+      },
+      {
+        "floor": "second",
+        "count": 0,
+        "note": "Facade above storefront is a flat painted blue-grey wall with projecting bay/fascia structure; no conventional residential windows visible on this face"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#4A5A6A"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 95,
+      "signage_text": "COURAGE MY LOVE",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "center",
+      "security_grille": true
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "security_grille_art": {
+        "present": true,
+        "motif": "dove/bird silhouettes"
+      }
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#4A5A6A",
+      "trim": "#4A5A6A",
+      "roof": "#4A4A4A",
+      "accent": "#E8C040"
+    },
+    "condition_observed": "good",
+    "condition_notes": "Clean painted facade in blue-grey. Projecting box structure at second floor level wraps the upper facade, creating a modern commercial appearance over the original building form. Decorative security grille with bird silhouettes is distinctive. Adjacent to a buff/yellow brick building on the right. Fairy-lit tree at left corner. Well-maintained storefront.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 100,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 100,
+  "parapet_height_m": 0.6,
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 1.5
 }

@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-009",
+  "title": "QA audit structural consistency and auto-fix",
+  "description": "Run audit_structural_consistency.py and fix_structural_consistency.py. Report buildings with floor/height mismatches, inflated heights, and storefront conflicts. Apply auto-fixes where safe.",
+  "priority": "medium",
+  "estimate_points": 2,
+  "skills": [
+    "qa",
+    "python",
+    "pipeline"
+  ],
+  "write_scope": [
+    "params/"
+  ],
+  "dependencies": [],
+  "owner": "codex-2",
+  "status": "done",
+  "created_at": "2026-03-27T17:38:37Z",
+  "routed_at": "2026-03-27T17:46:49.725141+00:00",
+  "completed_at": "2026-03-27T18:37:39.907377+00:00",
+  "completed_by": "codex-2"
+}

@@ -20,11 +20,11 @@
     "lot_coverage_pct": 41.0,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "red/brown brick with cream/white trim",
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick, warm tone consistent across row; brick",
   "windows_per_floor": [
     2,
     2,
@@ -34,8 +34,8 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
-  "condition": "good",
+  "has_storefront": true,
+  "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "1890-1903",
@@ -104,22 +104,89 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "13 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "13 KENSINGTON AVE"
     ],
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "NOTE: storey mismatch DB=3 vs photo=2",
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 300",
+      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [2, 2, 1] -> [2, 4, 2]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "colour_palette enriched from observations",
+      "decorative_elements.ornamental_shingles added",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:45.907735+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)"
+        ],
+        "timestamp": "2026-03-29T08:05:10.937686+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "substring",
+      "timestamp": "2026-03-29T08:34:16.632883Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "porch_enriched": "2026-03-29T08:38:21.410514Z",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #9B4330",
+        "roof": "#5A5A5A → #554D4D",
+        "trim": "#E8E0D0 → #37281F",
+        "mortar": "#B0A898 → #B2A997"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "decorative_elements": {
@@ -131,7 +198,14 @@
       "style": "decorative"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "string_courses": {
+      "present": true
+    },
+    "ornamental_shingles_in_gable": true,
+    "ornamental_shingles": {
+      "present": true
+    }
   },
   "photo_observations": {
     "agent": "claude-opus-4-6",
@@ -150,12 +224,52 @@
     "porch_present": true,
     "porch_type": "open",
     "quoins": false,
-    "roof_type_observed": "Gable",
+    "roof_type_observed": "gable (bay-and-gable); 3 steep front-facing gables; approximately 45-degree pitch",
     "overall_style": "Victorian",
     "has_storefront_observed": true,
-    "storefront_description": "Causa Culture — commercial conversion at ground level",
-    "signage_observed": "Causa Culture",
-    "confidence": 0.75
+    "storefront_description": "ground floor commercial with various signage; yellow-painted storefront visible at right",
+    "signage_observed": "yellow wooden louvred shutters or signboard visible at right",
+    "confidence": 0.75,
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012043877_HDR.jpg",
+    "facade_analysis_address": "13 Kensington Ave (Causa Culture) / 11",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_observed": "red-brown brick, warm tone consistent across row",
+    "brick_colour_hex_observed": "#B85A3A",
+    "condition_observed": "fair; original Victorian form preserved; various modifications at ground floor",
+    "windows_observed": {
+      "gable": "1 small window per gable peak",
+      "upper_floor": "2 windows per unit visible; rectangular with white frames",
+      "ground_floor": "commercial storefronts"
+    },
+    "doors_observed": "ground floor commercial entrances",
+    "decorative_elements_observed": "Victorian bay-and-gable form; decorative bargeboard at gable peaks; white-painted trim; second-floor bay window projections; horizontal string course between floors",
+    "party_walls_observed": "continuous row; party walls throughout",
+    "colour_palette_observed": {
+      "primary": "#B85A3A (red-brown brick)",
+      "trim": "white/cream",
+      "accent": "yellow (right storefront)"
+    },
+    "bond_pattern_observed": "running bond",
+    "photo_quality": "night, rotated 90 degrees (landscape held sideways)",
+    "db_context": {
+      "ba_building_type": "residential",
+      "ba_stories": 3,
+      "ba_facade_material": "brick",
+      "height_max_m": 20.71,
+      "height_avg_m": 8.85,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-form, Semi-detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "facade_colour_observed": "red and cream houseform frontage with narrow storefront insertions",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "n/a"
+    },
+    "photo": "IMG_20260320_012043877_HDR.jpg"
   },
   "bay_windows": 1,
   "quoins": false,
@@ -178,7 +292,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -186,34 +300,45 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 2,
+      "material": "wood",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     }
   ],
   "building_type": "residential",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#9B4330",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#37281F",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
-    "heritage_summary": "Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, scalloped cladding on the gables, and fenestration pattern with flat headed openings featuring stone sills and lintels. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles."
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, string courses.",
+    "heritage_summary": "Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, scalloped cladding on the gables, and fenestration pattern with flat headed openings featuring stone sills and lintels. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
+    "mortar_colour_hex": "#B2A997"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
     "eave_overhang_mm": 300,
     "gable_window": {
-      "present": false
+      "present": true,
+      "type": "mixed (oval porthole + pointed arch)",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "mixed (oval porthole + pointed arch)"
     },
     "bargeboard": {
       "present": true,
       "style": "decorative",
       "colour_hex": "#E8E0D0"
-    }
+    },
+    "bargeboard_style": "decorative Victorian",
+    "bargeboard_colour_hex": "#E8D8C0"
   },
   "windows_detail": [
     {
@@ -221,12 +346,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.3,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "type": "1-over-1",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 0.94,
+          "height_m": 1.6500000000000001,
+          "glazing": "1-over-1",
+          "sill_height_m": 0.8
         }
       ]
     },
@@ -235,32 +361,34 @@
       "windows": [
         {
           "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 4.0,
-          "sill_height_m": 3.1,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "type": "1-over-1",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 0.73,
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
         }
       ]
     },
     {
-      "floor": "Third floor",
+      "floor": "Gable",
       "windows": [
         {
-          "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 3.4,
-          "sill_height_m": 2.6,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "count": 2,
+          "type": "fixed",
+          "frame_colour": "white",
+          "arch_type": "pointed",
+          "width_m": 0.52,
+          "height_m": 0.8,
+          "glazing": "fixed",
+          "sill_height_m": 0.8
         }
       ]
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "13 Kensington Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, scalloped cladding on the gables, and fenestration pattern with flat headed openings featuring stone sills and lintels. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "13 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, string courses.",
   "heritage_summary": "Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, scalloped cladding on the gables, and fenestration pattern with flat headed openings featuring stone sills and lintels. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {
@@ -269,12 +397,179 @@
     "roof_hex": "#5A5A5A",
     "accent_hex": "#E8E0D0",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#9B4330",
+    "trim": "#37281F",
+    "roof": "#554D4D",
+    "accent": "#D4A030"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "Causa Culture",
+    "awning": {
+      "present": true,
+      "type": "retractable fabric",
+      "colour": "#D4A030"
+    },
+    "width_pct": 60
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012043877_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.5
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.18,
+        "height_m_est": 1.5,
+        "note": "Large windows with blinds, one per building at ground level beside commercial entries"
+      },
+      {
+        "floor": "second",
+        "count": 4,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.14,
+        "height_m_est": 1.3,
+        "note": "Two per unit in the row; some with venetian blinds"
+      },
+      {
+        "floor": "gable",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "pointed",
+        "width_ratio": 0.1,
+        "height_m_est": 0.8,
+        "note": "One oval/porthole window visible on one unit, pointed arch on other"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "residential panel",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 2,
+        "colour_hex": "#3A3A3A"
+      },
+      {
+        "position": "right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 2,
+        "colour_hex": "#E0D0B0"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 48,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "decorative Victorian",
+      "colour_hex": "#E8D8C0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "mixed (oval porthole + pointed arch)"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 60,
+      "signage_text": "Causa Culture",
+      "awning": {
+        "present": true,
+        "type": "retractable fabric",
+        "colour": "#D4A030"
+      },
+      "entrance_position": "sides",
+      "security_grille": false
+    },
+    "decorative_elements_observed": {
+      "string_courses": [
+        {
+          "location": "between_floors",
+          "width_mm": 50,
+          "projection_mm": 25,
+          "colour_hex": "#E8D8C0"
+        }
+      ],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": true,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#B85A3A",
+      "trim": "#E8D8C0",
+      "roof": "#5A5A5A",
+      "accent": "#D4A030"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Row of Victorian bay-and-gable houses. Brick generally intact. Ground floors modified for commercial use. Yellow awning on right unit. Some weathering on trim and bargeboards. Utility wires cross facade. A/C unit visible on one window.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 1.0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 300,
+      "step_count": 2,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 1.5,
+  "porch_width_m": 2.6,
+  "porch_depth_m": 1.8,
+  "porch_height_m": 3.8,
+  "porch_detail": {
+    "columns": {
+      "count": 2,
+      "type": "turned",
+      "material": "wood"
+    },
+    "railing": {
+      "present": true,
+      "height_m": 0.9,
+      "type": "baluster"
+    },
+    "step_count": 2
   }
 }

@@ -2,8 +2,8 @@
   "building_name": "202 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    5.49,
+    4.11
   ],
   "total_height_m": 9.6,
   "facade_width_m": 5.2,
@@ -19,16 +19,16 @@
     "lot_coverage_pct": 12.4,
     "lots_sharing_footprint": 5
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "parapet_wall",
     "chimney"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "ochre stucco upper storey over a magenta-and-white vinyl storefront",
   "windows_per_floor": [
-    2,
+    0,
     1
   ],
   "window_type": "mixed",
@@ -41,12 +41,12 @@
     "typology": "Converted House-form, Detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 23,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property is also associated with Joe Fremar, who operated Joe’s Fruit Market from the property for more than forty years beginning in 1938. The property retains many of its original building features, including its chamfered corner, commercial storefront facing Augusta Avenue and Nassau Street, second storey window openings and gable ended roof supported by a pair of corner brackets. Anchoring the northwest corner of Augusta Avenue and Nassau Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. Summary: Reference Primary Address Entrance Address(es) Number 22. 234 Augusta Avenue 66 Nassau Street 66-1/2 Nassau Street 28 DCH | FO :D 235 Augusta Avenue 235 AUGUSTA AVENUE",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property is also associated with Joe Fremar, who operated Joe\u2019s Fruit Market from the property for more than forty years beginning in 1938. The property retains many of its original building features, including its chamfered corner, commercial storefront facing Augusta Avenue and Nassau Street, second storey window openings and gable ended roof supported by a pair of corner brackets. Anchoring the northwest corner of Augusta Avenue and Nassau Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. Summary: Reference Primary Address Entrance Address(es) Number 22. 234 Augusta Avenue 66 Nassau Street 66-1/2 Nassau Street 28 DCH | FO :D 235 Augusta Avenue 235 AUGUSTA AVENUE",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -103,11 +103,12 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "202 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "202 BALDWIN ST"
     ],
@@ -120,6 +121,92 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "eave_overhang_mm: 50",
+      "floor_heights_m: [4.8, 4.8] -> [5.49, 4.11]",
+      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [2, 1] -> [0, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#7A4A30'",
+      "facade_detail.bond_pattern: 'running bond (lower portion)'",
+      "colour_palette enriched from observations",
+      "storefront.awning added",
+      "foundation_height_m: 0.15"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:gable_brackets",
+        "timestamp": "2026-03-29T07:15:57Z"
+      },
+      {
+        "fix": "window_count:floor0=2",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed (brick lower, stucco/parging upper)",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:58.997401+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:21.241230+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].height_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:50.228077+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "win.type: 'double-hung' -> 'double_hung'",
+          "arch_type filled (pre-1889)",
+          "glazing filled (pre-1889)",
+          "frame_colour filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:45.189313+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:17.581468+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "fuzzy",
+      "timestamp": "2026-03-29T08:34:18.004875Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.926961Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 \u2192 #4C392A",
+        "mortar": "#B0A898 \u2192 #AD9D8B"
+      }
     ]
   },
   "photo_observations": {
@@ -171,7 +258,8 @@
     "alterations_visible": "Upper facade re-skinned in stucco and the entire storefront replaced with contemporary graphic panels.",
     "matches_hcd_typology": false,
     "confidence": 0.84,
-    "notes": "This building reads as a strongly altered low-rise commercial property."
+    "notes": "This building reads as a strongly altered low-rise commercial property.",
+    "photo": "IMG_20260315_154911815_HDR.jpg"
   },
   "window_arrangement": "asymmetric",
   "door_type": "storefront",
@@ -203,7 +291,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.95,
       "height_m": 2.2,
@@ -211,7 +299,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "storefront": {
@@ -227,25 +318,44 @@
     "recessed_entry": false,
     "description": "Fully modernized vape-shop frontage with printed vinyl graphics and full-height glazing.",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed corrugated metal canopy",
+      "colour": "dark red/brown"
+    },
+    "signage_text": "KENSINGTON VAPE",
+    "signage": {
+      "text": "Kensington Vape",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
-    "bond_pattern": "running bond",
+    "brick_colour_hex": "#7A4A30",
+    "bond_pattern": "running bond (lower portion)",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#4C392A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance.",
     "heritage_summary": "The property retains many of its original building features, including its chamfered corner, commercial storefront facing Augusta Avenue and Nassau Street, second storey window openings and gable ended roof supported by a pair of corner brackets. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "heritage_expression": "Character-defining facade elements include cornice, gable brackets.",
+    "secondary_material": "brick lower, stucco/parging upper",
+    "mortar_colour_hex": "#AD9D8B"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 50,
     "gable_window": {
       "present": false
     }
@@ -256,26 +366,29 @@
       "windows": [
         {
           "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.3,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "type": "double_hung",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "segmental",
+          "glazing": "2-over-2",
+          "frame_colour": "dark"
         }
-      ]
+      ],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 3.2,
-          "sill_height_m": 2.5,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "type": "fixed or casement",
+          "frame_colour": "black",
+          "arch_type": "flat",
+          "height_m": 0.8,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -291,10 +404,17 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "Two-storey mixed-material facade with a cross-gable roof, approximately 5.2 m wide, built flush to the sidewalk. Photo observation shows an ochre stucco upper storey over a fully modernized magenta-and-white vinyl storefront (Kensington Vape). A single large black-framed upper window sits above the full-height storefront glazing and graphic panels. The upper facade is re-skinned in stucco and no heritage detailing remains clearly legible on the front elevation. A chimney stack is visible behind the roofline. The building strongly reads as an altered low-rise commercial property, though a chamfered corner and gable-ended roof with corner brackets are noted in HCD records as retained features.",
+  "facade_description": "202 Baldwin St is a converted house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed in a ochre stucco upper storey over a magenta-and-white vinyl storefront palette, laid in running bond (lower portion) with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice, gable brackets.",
   "heritage_summary": "The property retains many of its original building features, including its chamfered corner, commercial storefront facing Augusta Avenue and Nassau Street, second storey window openings and gable ended roof supported by a pair of corner brackets. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -303,7 +423,133 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#7A4A30",
+    "trim": "#4C392A",
+    "roof": "#4A4A4A",
+    "accent": "#8A2020"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260315_154911815_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.75
+    ],
+    "facade_material_observed": "mixed (brick lower, stucco/parging upper)",
+    "brick_colour_hex": "#7A4A30",
+    "brick_bond_observed": "running bond (lower portion)",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 3,
+        "type": "storefront plate glass grid (2x3 layout)",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_m_est": 0.8,
+        "height_m_est": 1.0,
+        "note": "Grid of approximately 6 storefront panes (2 columns x 3 rows) with white frames. Vape product signage and imagery in windows (pink/red vape graphics). Numbers '202' and '19' visible. Dark brick below and around storefront."
+      },
+      {
+        "floor": "second",
+        "count": 1,
+        "type": "fixed or casement",
+        "frame_colour": "black",
+        "arch": "flat",
+        "width_m_est": 1.0,
+        "height_m_est": 0.8,
+        "note": "One wide horizontal window in tan/gold stucco upper wall. Black frame. Upper wall is parging/stucco in gold/tan colour. Decorative rosette medallion visible on upper wall."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center-left",
+        "type": "commercial glass",
+        "width_m_est": 0.8,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#8A2020",
+        "note": "Dark red-framed glass entry door with 'KENSINGTON VAPE' signage above"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 85,
+      "signage_text": "KENSINGTON VAPE",
+      "awning": {
+        "present": true,
+        "type": "fixed corrugated metal canopy",
+        "colour": "dark red/brown"
+      },
+      "entrance_position": "center-left",
+      "security_grille": false,
+      "note": "Small corrugated metal canopy above entry. Storefront windows filled with vape product graphics. Red 'KENSINGTON VAPE' signage. Adjacent to another business on right with food signage (donuts/sandwiches). Weathered wooden fence/hoarding at far right side. Bare tree in front."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "medallion": {
+        "present": true,
+        "type": "rosette",
+        "location": "upper facade center",
+        "colour_hex": "#C8A870"
+      }
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#C8A870",
+      "trim": "#8A2020",
+      "roof": "#4A4A4A",
+      "accent": "#8A2020"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Upper stucco/parging in tan/gold is somewhat weathered but has decorative rosette medallion (heritage detail). Lower brick darkened with age. Storefront windows completely covered in advertising graphics. Wooden hoarding/fence at right suggests adjacent vacant lot or construction. Graffiti on lower walls.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 50,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.15,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

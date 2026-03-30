@@ -7,8 +7,10 @@ Checks:
 """
 import bpy
 import math
+import re
 
 print("=== ALIGNMENT VERIFICATION ===\n")
+GARAGE_KEY_RE = re.compile(r"(?:garage|Garage)(?:Roof|Door|_roof|_door)?[_-](\d{3})")
 
 # Collect buildings (extruded meshes in Buildings collection)
 buildings = []
@@ -59,6 +61,30 @@ for obj in bpy.data.objects:
 print(f"Buildings: {len(buildings)}")
 print(f"Road points: {len(roads)}")
 print(f"Footprints: {len(footprints)}")
+
+# Collect garages (support both legacy and normalized names).
+garages = []
+for obj in bpy.data.objects:
+    if obj.type != "MESH":
+        continue
+    n = obj.name.lower()
+    if ("garage" not in n and not n.startswith("shed_")) or "roof" in n or "door" in n:
+        continue
+    verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
+    if not verts:
+        continue
+    xs = [v.x for v in verts]
+    ys = [v.y for v in verts]
+    zs = [v.z for v in verts]
+    garages.append({
+        "name": obj.name,
+        "cx": sum(xs) / len(xs),
+        "cy": sum(ys) / len(ys),
+        "xmin": min(xs), "xmax": max(xs),
+        "ymin": min(ys), "ymax": max(ys),
+        "zmin": min(zs), "zmax": max(zs),
+        "id": (GARAGE_KEY_RE.search(obj.name).group(1) if GARAGE_KEY_RE.search(obj.name) else None),
+    })
 
 # Check 1: distance from each building to nearest road
 print(f"\n--- BUILDING-TO-ROAD DISTANCE ---")
@@ -127,3 +153,27 @@ if angles:
         print(f"  WARN: buildings have scattered orientations")
 
 print(f"\n=== DONE ===")
+
+# Check 4: garage grounding and overlap quality.
+print(f"\n--- GARAGE QA ---")
+if not garages:
+    print("  No garage meshes found.")
+else:
+    grounded = sum(1 for g in garages if abs(g["zmin"]) <= 0.05)
+    print(f"  Garages: {len(garages)}")
+    print(f"  Grounded (|zmin|<=0.05): {grounded}/{len(garages)}")
+
+    overlaps = 0
+    for i in range(len(garages)):
+        a = garages[i]
+        for j in range(i + 1, len(garages)):
+            b = garages[j]
+            # Ignore same garage group (door/roof variants) if ids match.
+            if a["id"] and b["id"] and a["id"] == b["id"]:
+                continue
+            ox = min(a["xmax"], b["xmax"]) - max(a["xmin"], b["xmin"])
+            oy = min(a["ymax"], b["ymax"]) - max(a["ymin"], b["ymin"])
+            oz = min(a["zmax"], b["zmax"]) - max(a["zmin"], b["zmin"])
+            if ox > 0.05 and oy > 0.05 and oz > 0.20:
+                overlaps += 1
+    print(f"  Intersections (AABB heuristic): {overlaps}")

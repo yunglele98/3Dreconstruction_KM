@@ -1,0 +1,505 @@
+{
+  "batch_id": "batch_006",
+  "count": 50,
+  "buildings": [
+    {
+      "param_file": "424_Spadina_Ave.json",
+      "building_name": "424 Spadina Ave",
+      "address": "424 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "426_Spadina_Ave.json",
+      "building_name": "426 Spadina Ave",
+      "address": "426 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "428-430_Spadina_Ave.json",
+      "building_name": "428-430 Spadina Ave",
+      "address": "428-430 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "428_Spadina_Ave.json",
+      "building_name": "428 Spadina Ave",
+      "address": "428 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "429_Bathurst_St.json",
+      "building_name": "429 Bathurst St",
+      "address": "429 Bathurst St",
+      "photos": [
+        "IMG_20260320_172832631_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "429_College_St.json",
+      "building_name": "429 College St",
+      "address": "429 College St",
+      "photos": [
+        "IMG_20260320_173821682_HDR.jpg",
+        "IMG_20260320_173830113_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "42_Bellevue_Ave.json",
+      "building_name": "42 Bellevue Ave",
+      "address": "42 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_160713463_HDR.jpg",
+        "IMG_20260320_160716524_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "430_Spadina_Ave.json",
+      "building_name": "430 Spadina Ave",
+      "address": "430 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "431_Bathurst_St.json",
+      "building_name": "431 Bathurst St",
+      "address": "431 Bathurst St",
+      "photos": [
+        "IMG_20260320_172842184_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "431_College_St.json",
+      "building_name": "431 College St",
+      "address": "431 College St",
+      "photos": [
+        "IMG_20260320_173409055_HDR.jpg",
+        "IMG_20260320_173418249.jpg",
+        "IMG_20260320_173425803_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "433_Bathurst_St.json",
+      "building_name": "433 Bathurst St",
+      "address": "433 Bathurst St",
+      "photos": [
+        "IMG_20260320_172852161_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "435B_Bathurst_St.json",
+      "building_name": "435B Bathurst St",
+      "address": "435B Bathurst St",
+      "photos": [
+        "IMG_20260320_172902306_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "439_Bathurst_St.json",
+      "building_name": "439 Bathurst St",
+      "address": "439 Bathurst St",
+      "photos": [
+        "IMG_20260320_172911476_HDR.jpg",
+        "IMG_20260320_172918924_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "43_Wales_Ave.json",
+      "building_name": "43 Wales Ave",
+      "address": "43 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "440_Spadina_Ave.json",
+      "building_name": "440 Spadina Ave",
+      "address": "440 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "441_Bathurst_St.json",
+      "building_name": "441 Bathurst St",
+      "address": "441 Bathurst St",
+      "photos": [
+        "IMG_20260320_173216285_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "442_Spadina_Ave.json",
+      "building_name": "442 Spadina Ave",
+      "address": "442 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "443_Bathurst_St.json",
+      "building_name": "443 Bathurst St",
+      "address": "443 Bathurst St",
+      "photos": [
+        "IMG_20260320_173007360_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "444_Spadina_Ave.json",
+      "building_name": "444 Spadina Ave",
+      "address": "444 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "445_Bathurst_St.json",
+      "building_name": "445 Bathurst St",
+      "address": "445 Bathurst St",
+      "photos": [
+        "IMG_20260320_173013967_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "446_Spadina_Ave.json",
+      "building_name": "446 Spadina Ave",
+      "address": "446 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "447_Bathurst_St.json",
+      "building_name": "447 Bathurst St",
+      "address": "447 Bathurst St",
+      "photos": [
+        "IMG_20260320_173047897_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "448_Spadina_Ave.json",
+      "building_name": "448 Spadina Ave",
+      "address": "448 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "449_Bathurst_St.json",
+      "building_name": "449 Bathurst St",
+      "address": "449 Bathurst St",
+      "photos": [
+        "IMG_20260320_173052367_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "450_Spadina_Ave.json",
+      "building_name": "450 Spadina Ave",
+      "address": "450 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "452_Spadina_Ave.json",
+      "building_name": "452 Spadina Ave",
+      "address": "452 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "453_Bathurst_St.json",
+      "building_name": "453 Bathurst St",
+      "address": "453 Bathurst St",
+      "photos": [
+        "IMG_20260320_173102780_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "454_Spadina_Ave.json",
+      "building_name": "454 Spadina Ave",
+      "address": "454 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "455_Bathurst_St.json",
+      "building_name": "455 Bathurst St",
+      "address": "455 Bathurst St",
+      "photos": [
+        "IMG_20260320_173109423_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "456_Spadina_Ave.json",
+      "building_name": "456 Spadina Ave",
+      "address": "456 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "457_Bathurst_St.json",
+      "building_name": "457 Bathurst St",
+      "address": "457 Bathurst St",
+      "photos": [
+        "IMG_20260320_173119135_HDR.jpg",
+        "IMG_20260320_173122508_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "458_Spadina_Ave.json",
+      "building_name": "458 Spadina Ave",
+      "address": "458 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "459_Bathurst_St.json",
+      "building_name": "459 Bathurst St",
+      "address": "459 Bathurst St",
+      "photos": [
+        "IMG_20260320_173129247_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "45_Wales_Ave.json",
+      "building_name": "45 Wales Ave",
+      "address": "45 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "460_Spadina_Ave.json",
+      "building_name": "460 Spadina Ave",
+      "address": "460 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "461_Bathurst_St.json",
+      "building_name": "461 Bathurst St",
+      "address": "461 Bathurst St",
+      "photos": [
+        "IMG_20260320_173149805_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "462_Spadina_Ave.json",
+      "building_name": "462 Spadina Ave",
+      "address": "462 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "463_Bathurst_St.json",
+      "building_name": "463 Bathurst St",
+      "address": "463 Bathurst St",
+      "photos": [
+        "IMG_20260320_173154302_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "464_Spadina_Ave.json",
+      "building_name": "464 Spadina Ave",
+      "address": "464 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "465_Bathurst_St.json",
+      "building_name": "465 Bathurst St",
+      "address": "465 Bathurst St",
+      "photos": [
+        "IMG_20260320_173159389_HDR.jpg",
+        "IMG_20260320_173212287_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "466_Spadina_Ave.json",
+      "building_name": "466 Spadina Ave",
+      "address": "466 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "467_Bathurst_St.json",
+      "building_name": "467 Bathurst St",
+      "address": "467 Bathurst St",
+      "photos": [
+        "IMG_20260320_173227915_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "468_Spadina_Ave.json",
+      "building_name": "468 Spadina Ave",
+      "address": "468 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "469_Bathurst_St.json",
+      "building_name": "469 Bathurst St",
+      "address": "469 Bathurst St",
+      "photos": [
+        "IMG_20260320_173229969_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "46_Wales_Ave.json",
+      "building_name": "46 Wales Ave",
+      "address": "46 Wales Ave",
+      "photos": [
+        "IMG_20260320_161213867_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "471_Bathurst_St.json",
+      "building_name": "471 Bathurst St",
+      "address": "471 Bathurst St",
+      "photos": [
+        "IMG_20260320_173237313_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "473_Bathurst_St.json",
+      "building_name": "473 Bathurst St",
+      "address": "473 Bathurst St",
+      "photos": [
+        "IMG_20260320_173247280_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "474_Spadina_Ave.json",
+      "building_name": "474 Spadina Ave",
+      "address": "474 Spadina Ave",
+      "photos": [
+        "IMG_20260316_005422992_HDR.jpg",
+        "IMG_20260316_005641865_HDR.jpg",
+        "IMG_20260316_010216680_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "475_Bathurst_St.json",
+      "building_name": "475 Bathurst St",
+      "address": "475 Bathurst St",
+      "photos": [
+        "IMG_20260320_173303191_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "477_Bathurst_St.json",
+      "building_name": "477 Bathurst St",
+      "address": "477 Bathurst St",
+      "photos": [
+        "IMG_20260320_173306898_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    }
+  ]
+}

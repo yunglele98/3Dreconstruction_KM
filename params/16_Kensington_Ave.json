@@ -2,8 +2,8 @@
   "building_name": "16 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    5.19,
+    4.41
   ],
   "total_height_m": 9.6,
   "facade_width_m": 5.2,
@@ -19,16 +19,16 @@
     "lot_coverage_pct": 68.9,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Gable",
-  "roof_pitch_deg": 40,
+  "roof_type": "gable",
+  "roof_pitch_deg": 48,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "mixed — commercial ground floor, brick upper",
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick (upper); painted or modified lower; brick",
   "windows_per_floor": [
     0,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 182,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion. With its visibly layered built form, the property at 16 Kensington Avenue is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion. With its visibly layered built form, the property at 16 Kensington Avenue is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -58,8 +58,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,8 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "photo": "IMG_20260320_012334115_HDR.jpg",
     "reference_photos": [
@@ -108,7 +109,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "16 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "16 KENSINGTON AVE"
     ],
@@ -121,6 +122,73 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_pitch_deg: 40 -> 48",
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 250",
+      "floor_heights_m: [4.8, 4.8] -> [5.19, 4.41]",
+      "windows_detail: 1 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 2] -> [0, 2, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:48.025533+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:43.600949+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:13.965953+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled"
+        ],
+        "timestamp": "2026-03-29T08:07:16.954773+00:00"
+      }
+    ],
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.037390Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #A55B3C",
+        "roof": "#5A5A5A \u2192 #575656",
+        "trim": "#3A2A20 \u2192 #473120",
+        "mortar": "#B0A898 \u2192 #B3A190"
+      }
     ]
   },
   "storefront": {
@@ -128,7 +196,24 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.7,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": false,
+      "type": null,
+      "colour": null
+    },
+    "width_pct": 75,
+    "signage": {
+      "text": "Miriam And Micah Vintage",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "source_photo": "IMG_20260320_012334115_HDR.jpg",
@@ -138,10 +223,10 @@
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.5,
     "facade_colour_observed": "mixed: blue-painted glass storefront at ground level, brown/red brick upper floor, white-painted wood gable peak",
-    "facade_material_observed": "mixed",
-    "condition_observed": "fair",
+    "facade_material_observed": "brick",
+    "condition_observed": "fair; some modifications including second-floor balcony enclosure; party wall at right shows significant deterioration with peeling paint",
     "has_storefront_observed": true,
-    "signage_observed": "Miriam And Micah Vintage",
+    "signage_observed": "not clearly visible",
     "notes": "Converted house-form per HCD typology. Commercial ground floor with glass storefront. Upper floor retains Victorian character with original brick and fenestration. Front gable is legible.",
     "photo": "IMG_20260320_012334115_HDR.jpg",
     "photo_datetime": "2026-03-20T01:23:34",
@@ -155,25 +240,62 @@
     "door_count": 1,
     "door_type": "storefront",
     "door_details": "Glass storefront door integrated into full-width storefront.",
-    "storefront_description": "Full-width glass storefront at ground level with blue-tinted interior lighting. Modern commercial conversion of former residential ground floor.",
+    "storefront_description": "ground floor commercial; light blue-painted lower facade; glass storefront; appears to be a small shop",
     "overall_style": "Victorian",
     "matches_hcd_typology": true,
     "porch_present": false,
     "porch_type": "none",
     "condition": "fair",
-    "roof_type_observed": "front-facing gable",
+    "roof_type_observed": "gable; front-facing steep gable",
     "roof_features": [
       "gable"
     ],
     "_batch_agent": "claude-opus-4-6-batch18-22",
-    "_batch_timestamp": "2026-03-25T02:07:04Z"
+    "_batch_timestamp": "2026-03-25T02:07:04Z",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012334115_HDR.jpg",
+    "facade_analysis_address": "16 Kensington Ave",
+    "storeys_observed": 2,
+    "brick_colour_observed": "red-brown brick (upper); painted or modified lower",
+    "brick_colour_hex_observed": "#B85A3A",
+    "windows_observed": {
+      "gable": "1 window in gable peak with white surround",
+      "upper_floor": "2 windows; 1 larger (horizontal blinds visible), 1 smaller; white frames",
+      "ground_floor": "commercial storefront with glass door/glazed panel"
+    },
+    "doors_observed": "1 ground floor commercial glass entrance; balcony/deck visible above",
+    "decorative_elements_observed": "white-painted gable trim; bay window form; second floor has enclosed balcony/sunroom addition with glass panels",
+    "party_walls_observed": "party wall at right heavily deteriorated (peeling paint, exposed masonry); party wall at left",
+    "colour_palette_observed": {
+      "primary": "red-brown brick",
+      "trim": "white",
+      "accent": "light blue (ground floor)"
+    },
+    "bond_pattern_observed": "running bond",
+    "photo_quality": "night, rotated 90 degrees",
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 2,
+      "ba_facade_material": "mixed",
+      "height_max_m": 15.37,
+      "height_avg_m": 8.62,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "mixed: blue-painted glass storefront at ground level, brown/red brick upper floor, white-painted wood gable peak",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "active"
+    }
   },
-  "confidence": 0.7500000000000002,
+  "confidence": 0.8500000000000003,
   "notes": "Night photo. Semi-detached house-form with shared roofline and central gable. Commercial conversion at ground level. Brick cladding and flat-headed window openings visible.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -181,40 +303,73 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 1,
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A55B3C",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#473120",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "heritage_summary": "Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion.",
+    "mortar_colour_hex": "#B3A190",
+    "heritage_expression": "Character-defining elements include ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 250,
     "gable_window": {
-      "present": false
-    }
+      "present": true,
+      "type": "pointed-arch",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "pointed-arch"
+    },
+    "bargeboard_style": "simple Victorian",
+    "bargeboard_colour_hex": "#F0EDE8"
   },
   "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 4.4,
-          "sill_height_m": 3.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1"
+          "type": "1-over-1",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 0.83,
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    },
+    {
+      "floor": "Gable",
+      "windows": [
+        {
+          "count": 1,
+          "type": "fixed",
+          "frame_colour": "white",
+          "arch_type": "pointed",
+          "width_m": 0.52,
+          "height_m": 0.8,
+          "glazing": "fixed",
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -223,7 +378,9 @@
     "bargeboard": {
       "colour_hex": "#3A2A20",
       "style": "simple"
-    }
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 1
   },
   "chimneys": {
     "count": 1,
@@ -235,7 +392,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "16 Kensington Ave presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed — brick cladding with commercial storefront in a mixed — commercial ground floor, brick upper palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion. With its visibly layered built form, the property at 16 Kensington Avenue is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "16 Kensington Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
   "heritage_summary": "Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -244,8 +401,131 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A55B3C",
+    "trim": "#473120",
+    "roof": "#575656",
+    "accent": "#D8C8A0"
   },
   "volumes": [],
-  "overall_style": "Victorian"
+  "overall_style": "Victorian",
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012334115_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.5
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Storefront with glass display; partially blocked by vehicle"
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.16,
+        "height_m_est": 1.3,
+        "note": "Two white-framed windows, one with venetian blind"
+      },
+      {
+        "floor": "gable",
+        "count": 1,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "pointed",
+        "width_ratio": 0.1,
+        "height_m_est": 0.8
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 1,
+        "colour_hex": "#5A5A5A"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 48,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple Victorian",
+      "colour_hex": "#F0EDE8"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "pointed-arch"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 75,
+      "signage_text": null,
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "left",
+      "security_grille": false
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#B85A3A",
+      "trim": "#F0EDE8",
+      "roof": "#5A5A5A",
+      "accent": "#D8C8A0"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Standard bay-and-gable with red brick upper floors. Ground floor modified for commercial use. Adjacent right building has severely peeling paint on party wall (stucco), exposing deteriorated surface. White-trimmed windows in reasonable condition. Downspout visible on facade.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 1,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 250,
+  "foundation_height_m": 0.3,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

@@ -2,8 +2,8 @@
   "building_name": "146 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    3.1,
-    2.4
+    2.98,
+    2.54
   ],
   "total_height_m": 5.52,
   "facade_width_m": 5.2,
@@ -19,28 +19,28 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 1
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "brick",
-  "facade_colour": "red brick upper wall with lime-green lower storefront paint and orange signboard",
+  "facade_material": "painted brick",
+  "facade_colour": "red brick",
   "windows_per_floor": [
-    2,
+    0,
     1
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "fair",
   "hcd_data": {
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870–1889",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Commercial",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 15,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -102,22 +102,110 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "146 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "146 BALDWIN ST"
     ],
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "floor_heights_m: [3.1, 2.4] -> [2.98, 2.54]",
+      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [2, 1] -> [0, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#A83030'",
+      "colour_palette enriched from observations",
+      "facade_colour updated: painted observation"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "window_count:floor0=2",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:56.647961+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:19.731403+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].height_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:46.480942+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "win.type: 'double-hung' -> 'double_hung'",
+          "arch_type filled (unknown)",
+          "glazing filled (unknown)",
+          "frame_colour filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:42.686243+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:11.623429+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:16.784552Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#E8E0D0 \u2192 #4D3B2A",
+        "mortar": "#B0A898 \u2192 #B8A68D"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "photo_observations": {
@@ -168,7 +256,8 @@
     "roof_features": [
       "parapet_wall"
     ],
-    "signage_observed": "Xwireless sign and window posters."
+    "signage_observed": "Xwireless sign and window posters.",
+    "photo": "IMG_20260318_184505895_HDR.jpg"
   },
   "window_arrangement": "asymmetric",
   "door_type": "storefront",
@@ -200,7 +289,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.95,
       "height_m": 2.1,
@@ -208,7 +297,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "storefront": {
@@ -224,20 +316,22 @@
     "recessed_entry": false,
     "description": "Compact phone-shop storefront with bright paint and window posters.",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "Xwireless / Cell Phones, Sales, Repair, Unlocking / 647-352-9596"
   },
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A83030",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#4D3B2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable.",
-    "opening_rhythm": "The visible opening pattern is organized as 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#B8A68D"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -252,26 +346,29 @@
       "windows": [
         {
           "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.1,
-          "sill_height_m": 1.4,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "type": "double_hung",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "arch_type": "flat",
+          "glazing": "1-over-1",
+          "frame_colour": "white"
         }
-      ]
+      ],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 3.9,
-          "sill_height_m": 3.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "type": "1-over-1 double-hung",
+          "frame_colour": "dark",
+          "arch_type": "flat",
+          "height_m": 1.2,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -289,8 +386,8 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "street_setback_m": 3.0,
-  "facade_description": "Two-storey Victorian bay-and-gable rowhouse with red brick upper wall and a heavily altered ground-floor storefront. The lower facade is painted lime-green with an orange Xwireless signboard and window posters, creating a vivid commercial presence at odds with the restrained brick above. One upper window visible on the second storey. A simple fascia and coping cap the parapet. The adjacent contemporary side wall of 150 Baldwin is visible next door.",
+  "street_setback_m": 0.0,
+  "facade_description": "146 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable. The facade reads primarily as painted brick in a red brick palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",
@@ -298,7 +395,125 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A83030",
+    "trim": "#4D3B2A",
+    "roof": "#505050",
+    "accent": "#E87020"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_184505895_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85
+    ],
+    "facade_material_observed": "painted brick",
+    "brick_colour_hex": "#A83030",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "red (painted over)",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Storefront with large display windows"
+      },
+      {
+        "floor": "second",
+        "count": 1,
+        "type": "1-over-1 double-hung",
+        "frame_colour": "dark",
+        "arch": "flat",
+        "width_m_est": 0.9,
+        "height_m_est": 1.2,
+        "note": "Single upper window visible. Facade is painted red brick, aged and peeling. Graffiti tags visible."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A2A2A",
+        "note": "Glass entry door to Xwireless shop"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#505050",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 90,
+      "signage_text": "Xwireless / Cell Phones, Sales, Repair, Unlocking / 647-352-9596",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "center",
+      "security_grille": false,
+      "note": "Orange rectangular sign with Xwireless branding. Green/lime-coloured flanking panels. Ground floor has display windows showing phone accessories. Adjacent to colourful modern building (green/pink/yellow panels visible to left -- that is the 160 Baldwin condo)."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": true,
+        "projection_mm": 80,
+        "height_mm": 200,
+        "colour_hex": "#A83030",
+        "note": "Simple flat parapet with projecting cornice band, painted red"
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "note": "Old 2-storey commercial building. Red painted brick, aged. Parapet roofline with simple cornice. Heavy graffiti tagging on upper facade."
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#A83030",
+      "trim": "#505050",
+      "roof": "#505050",
+      "accent": "#E87020"
+    },
+    "condition_observed": "poor",
+    "condition_notes": "Significant paint deterioration on upper facade. Graffiti on brick. General neglect of upper storey. Storefront level maintained for business but basic. Structural appears sound but cosmetically poor.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

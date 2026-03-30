@@ -20,32 +20,32 @@
     "lot_coverage_pct": 20.7,
     "lots_sharing_footprint": 12
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "metal/wood",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    2,
+    0,
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870–1889",
+    "construction_period": "c. 1870\u20131889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 98,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructe",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructe",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Commercial",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "Golden Grams Culture Boutique (cannabis/culture shop)",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1–2) – residential building on commercial land",
+    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -98,28 +98,143 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "179 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "179 BALDWIN ST"
     ],
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "windows_per_floor: [2, 2, 1] -> [0]",
+      "colour_palette enriched from observations"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "metal/wood (garage doors)",
+        "new_value": "metal/wood",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:30:57.811385+00:00"
+      },
+      {
+        "fix": "fix_window_totals_from_handoff",
+        "task_id": "TASK-20260327-016",
+        "field": "windows_detail.count",
+        "old_total": 5,
+        "new_total": 3,
+        "new_per_floor": [
+          0,
+          2,
+          1
+        ],
+        "source": "photo_observations.windows_per_floor",
+        "timestamp": "2026-03-29T07:31:02.711343+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "metal/wood",
+        "new_value": "metal/wood",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:20.536140+00:00"
+      },
+      {
+        "fix": "fix_window_totals_from_handoff",
+        "task_id": "TASK-20260327-016",
+        "field": "windows_detail.count",
+        "old_total": 5,
+        "new_total": 3,
+        "new_per_floor": [
+          0,
+          2,
+          1
+        ],
+        "source": "photo_observations.windows_per_floor",
+        "timestamp": "2026-03-29T07:44:30.209961+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:48.558026+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1904-1913)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1904-1913)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1904-1913)"
+        ],
+        "timestamp": "2026-03-29T08:03:43.905779+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:14.748033+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled"
+        ],
+        "timestamp": "2026-03-29T08:07:17.472266+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.373268Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#2A2A2A \u2192 #353535",
+        "mortar": "#B0A898 \u2192 #BCB5A7"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -127,7 +242,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
@@ -137,10 +255,13 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
+    "trim_colour_hex": "#353535",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+    "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
+    "secondary_material": "garage doors",
+    "mortar_colour_hex": "#BCB5A7",
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -154,13 +275,14 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "Double-hung sash",
+          "count": 0,
+          "type": "double_hung",
           "width_m": 0.9,
-          "height_m": 1.9,
+          "height_m": 2.0,
           "sill_height_m": 1.3,
           "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -169,12 +291,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 3.1,
           "sill_height_m": 2.4,
           "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     },
@@ -183,12 +306,13 @@
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 2.6,
           "sill_height_m": 2.0,
           "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
@@ -208,9 +332,9 @@
     "material": "brick",
     "colour_hex": "#B85A3A"
   },
-  "street_setback_m": 3.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "Three-storey semi-detached house-form building in exposed red brick with a cross-gable roof. The facade has a 2-2-1 window arrangement using double-hung sash windows and a single panelled entry door with glazed transom. Set back approximately 3 metres from the street, distinguishing it from the zero-setback commercial row to the south. No photo observations are available for this address; description is based on database records and typology defaults.",
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "179 Baldwin St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as metal/wood in a red brick palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
   "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {
@@ -219,12 +343,140 @@
     "roof_hex": "#5A5A5A",
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#353535",
+    "roof": "#4A4A4A",
+    "accent": "#CC4466"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
     "status_source": "normalized_fix"
-  }
+  },
+  "deep_facade_analysis": {
+    "source_photo": "PXL_20260318_223043101.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 1,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0
+    ],
+    "facade_material_observed": "metal/wood (garage doors)",
+    "brick_colour_hex": null,
+    "brick_bond_observed": null,
+    "mortar_colour": null,
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "No conventional windows. Entire facade consists of two garage/roll-up doors covered in elaborate graffiti murals. Left door: colourful cartoon character (monkey with pizza). Right door: large rose flowers (pink/red/blue) with 'MEKOHAURE 7s' text. Blue-green painted metal lintel/header above doors."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "roll-up garage door",
+        "width_m_est": 2.5,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#4A8A8A",
+        "note": "Left garage door with cartoon mural"
+      },
+      {
+        "position": "right",
+        "type": "roll-up garage door",
+        "width_m_est": 2.5,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#4A8A8A",
+        "note": "Right garage door with rose mural"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 100,
+      "signage_text": null,
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "left and right (garage doors)",
+      "security_grille": false,
+      "note": "Single-storey garage/utility structure. Two roll-up metal doors fully covered in graffiti murals. Blue-green painted lintel/beam across top. No signage. Appears to be a non-retail service/storage unit."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#4A8A8A",
+      "trim": "#4A8A8A",
+      "roof": "#4A4A4A",
+      "accent": "#CC4466"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Simple single-storey garage structure. Metal doors in functional condition. Extensive graffiti murals (artistic quality, appears intentional/sanctioned). Blue-green painted header beam showing some wear. Ice/icicles visible on header suggesting water drainage issue.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "brick",
+    "facade_colour_observed": "red brick",
+    "condition": "good",
+    "windows_per_floor": [
+      0,
+      2,
+      1
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": false,
+    "photo": "PXL_20260318_223043101.jpg"
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

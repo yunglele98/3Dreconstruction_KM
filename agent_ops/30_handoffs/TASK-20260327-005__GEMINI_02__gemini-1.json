@@ -1,0 +1,210 @@
+{
+  "task_id": "TASK-20260327-005__GEMINI_02",
+  "agent": "gemini-1 (executed by claude)",
+  "report_type": "texture_script_audit",
+  "timestamp": "2026-03-27T17:39:51.262862+00:00",
+  "findings": [
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "garage",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "fence",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "bin",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "bench",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "pole",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "patio",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "facade",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "awning",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "sign",
+      "mentions": 2,
+      "status": "covered",
+      "severity": "low"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "door",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "window",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "roof",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "chimney",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures.py",
+      "element": "gutter",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "garage",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "fence",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "bin",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "bench",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "pole",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "patio",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "facade",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "awning",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "sign",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "door",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "window",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "roof",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "chimney",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    },
+    {
+      "script": "scripts/apply_textures_v5.py",
+      "element": "gutter",
+      "mentions": 0,
+      "status": "not_covered",
+      "severity": "medium"
+    }
+  ],
+  "summary": {
+    "elements_checked": 28,
+    "covered": 1,
+    "not_covered": 27,
+    "coverage_pct": 3.6
+  }
+}

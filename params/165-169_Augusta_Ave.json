@@ -2,12 +2,12 @@
   "building_name": "165-169 Augusta Ave",
   "floors": 4,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4,
-    2.4
+    1.75,
+    1.75,
+    1.75,
+    1.74
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 6.99,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -21,10 +21,10 @@
     "lot_coverage_pct": 21.2,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Concrete",
+  "facade_material": "concrete",
   "facade_colour": "grey concrete",
   "windows_per_floor": [
     0,
@@ -32,7 +32,7 @@
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -42,28 +42,28 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "commercial",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Café",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
     "business_name": "San Cafe",
     "business_category": "Fashion/Clothing",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,14 +97,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "165-169 Augusta Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "165-169 AUGUSTA AVE",
       "165 AUGUSTA AVE",
@@ -122,6 +119,77 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 9.6,
+        "new_value": 6.99,
+        "timestamp": "2026-03-29T07:30:43.100120+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:47.744937+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (unknown)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (unknown)",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:43.417730+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:13.637845+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:16.662826+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_augusta.py",
+        "street": "Augusta Ave",
+        "timestamp": "2026-03-29T07:46:42.373061+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "substring",
+      "timestamp": "2026-03-29T08:34:17.177269Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:44.091474+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:11.960554Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #454C4C",
+        "trim": "#E8E0D0 \u2192 #292929",
+        "accent": "#3A2A20 \u2192 #3E4433",
+        "mortar": "#B0A898 \u2192 #B3A48D"
+      }
     ]
   },
   "storefront": {
@@ -129,12 +197,30 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 4.5,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "signage": {
+      "text": "San Cafe",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -142,19 +228,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#8A8A8A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#292929",
     "composition": "The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a cross-gable.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double-hung sash windows, and 1 principal entrance."
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance.",
+    "mortar_colour_hex": "#B3A48D",
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "heritage_summary": "This building dates to the  period. Character-defining elements include ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -169,12 +261,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "storefront",
           "width_m": 0.9,
-          "height_m": 1.8,
+          "height_m": 2.0,
           "sill_height_m": 1.4,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     },
@@ -183,12 +276,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 1.8,
           "sill_height_m": 1.4,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     },
@@ -197,12 +291,13 @@
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.5,
+          "type": "fixed",
+          "width_m": 0.7,
+          "height_m": 0.9,
           "sill_height_m": 1.2,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "fixed",
+          "arch_type": "flat"
         }
       ]
     }
@@ -214,16 +309,103 @@
     }
   },
   "street_setback_m": 0.0,
-  "confidence": 0.8500000000000002,
-  "facade_description": "165-169 Augusta Ave presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a cross-gable. The facade reads primarily as concrete, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double-hung sash windows, and 1 principal entrance.",
+  "confidence": 0.9,
+  "facade_description": "165-169 Augusta Ave is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a cross-gable. The facade reads primarily as concrete, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance.",
   "roof_material": "Slate shingles",
+  "volumes": [],
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "concrete",
+    "facade_colour_observed": "grey concrete",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      2,
+      1
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": true,
+    "photo": "IMG_20260319_165616834_HDR.jpg"
+  },
   "colour_palette": {
-    "facade_hex": "#B85A3A",
+    "facade_hex": "#8A8A8A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A8A8A",
+    "trim": "#292929",
+    "roof": "#454C4C",
+    "accent": "#3E4433"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260319_165616834_HDR.jpg",
+    "storeys_observed": 4,
+    "facade_material_observed": "concrete",
+    "brick_colour_hex": "#8A8A8A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "storefront",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.4,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.8,
+            "sill_height_m": 1.4,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Attic / gable",
+        "windows": [
+          {
+            "count": 1,
+            "type": "fixed",
+            "width_m": 0.7,
+            "height_m": 0.9,
+            "sill_height_m": 1.2,
+            "frame_colour": "#E8E0D0",
+            "glazing": "fixed"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 0.0
 }

@@ -1,0 +1,27 @@
+{
+  "task_id": "TASK-20260327-004",
+  "title": "GIS coordinate re-alignment and error threshold report",
+  "description": "Cross-check scene placements against DB/GIS coordinates, compute per-feature error, and generate correction vectors for misaligned assets in alley lane workflow.",
+  "priority": "high",
+  "estimate_points": 3,
+  "skills": [
+    "gis",
+    "validation",
+    "python"
+  ],
+  "write_scope": [
+    "scripts/revise_params_from_db.py",
+    "scripts/verify_alignment.py",
+    "outputs"
+  ],
+  "dependencies": [
+    "TASK-20260327-003"
+  ],
+  "status": "done",
+  "created_at": "2026-03-27T00:30:00Z",
+  "owner": "claude-1",
+  "routed_at": "2026-03-27T00:30:47.955324+00:00",
+  "reassigned_at": "2026-03-27T18:12:50.520389+00:00",
+  "completed_at": "2026-03-27T18:37:39.673632+00:00",
+  "completed_by": "claude-1"
+}

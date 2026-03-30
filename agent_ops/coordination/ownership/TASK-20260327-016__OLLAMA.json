@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-20260327-016__OLLAMA",
+  "owner": "ollama-local-1",
+  "parent_task": "TASK-20260327-016",
+  "write_scope": [
+    "agent_ops/30_handoffs"
+  ],
+  "assigned_at": "2026-03-27T18:59:21.192756+00:00"
+}

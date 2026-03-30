@@ -1,0 +1,37 @@
+{
+  "task_id": "TASK-20260326-006",
+  "agent": "gemini-1",
+  "report_type": "validation",
+  "timestamp": "2026-03-27T13:55:00Z",
+  "summary": "Audit of 2061 building param files for data quality and coordinate consistency",
+  "findings": [
+    {
+      "address": "144 (cottage), Oxford St area row houses",
+      "field": "site",
+      "status": "missing",
+      "expected": "{\"lon\": ..., \"lat\": ...}",
+      "actual": "{}",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Missing site coordinates in param file; not found in _site_coordinates.json"
+    },
+    {
+      "address": "185A/186A Augusta Ave",
+      "field": "site",
+      "status": "missing",
+      "expected": "{\"lon\": ..., \"lat\": ...}",
+      "actual": "{}",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Missing site coordinates in param file"
+    }
+  ],
+  "coverage": {
+    "buildings_checked": 2061,
+    "issues_found": 145,
+    "critical": 0,
+    "high": 110,
+    "medium": 35,
+    "low": 0
+  }
+}

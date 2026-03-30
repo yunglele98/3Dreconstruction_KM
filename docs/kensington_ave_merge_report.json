@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-03-26T14:10:40",
+  "facade_photos_analyzed": 52,
+  "skipped_non_facade": 1,
+  "no_address_match": 3,
+  "unique_addresses": 44,
+  "merged_successfully": 40,
+  "db_context_merged": 95,
+  "param_file_not_found": [],
+  "errors": [],
+  "no_address_details": [
+    {
+      "filename": "IMG_20260317_124549726_HDR.jpg",
+      "csv_address": "Alley south of 54-56 Kensington Ave"
+    },
+    {
+      "filename": "IMG_20260320_012951226_HDR.jpg",
+      "csv_address": "Kensington Ave"
+    },
+    {
+      "filename": "IMG_20260320_013538087_HDR.jpg",
+      "csv_address": "181 Baldwin St (Fun Guyz) / 77 Kensington Ave (Blaze District)"
+    }
+  ]
+}

@@ -21,7 +21,8 @@
     "overall_style": "Commercial",
     "storefront_description": "Attached row including tattoo, spa, and restaurant storefronts in former houses.",
     "signage_observed": "Sad's Tattoo, Cozy Nails & Spa, and Zafron signage.",
-    "notes": "Distinctive Victorian houseform row converted to commercial use."
+    "notes": "Distinctive Victorian houseform row converted to commercial use.",
+    "photo": "IMG_20260320_174452993_HDR.jpg"
   },
   "_meta": {
     "address": "390-382 College St",
@@ -39,11 +40,8 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "hcd_data_stub",
-      "roof_material",
       "colour_palette",
-      "volumes",
-      "dimensions_backfill"
+      "roof_detail"
     ],
     "reference_photos": [
       "IMG_20260320_174452993_HDR.jpg"
@@ -53,6 +51,81 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
       "Photo: bay-and-gable commercial row ~35m"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "College St",
+        "timestamp": "2026-03-29T07:48:43.626297+00:00"
+      }
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "expand_multi_volume",
+        "volumes_created": 2,
+        "volume_ids": [
+          "commercial_ground",
+          "residential_upper"
+        ],
+        "timestamp": "2026-03-29T07:50:42.598459+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:04.158268+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:50.815118+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:37.539221+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:28.558965+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:20.378966Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.405013+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:15.695419Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#8A8A8A → #C46A4E",
+        "roof": "#5A5A5A → #5E5D5D",
+        "trim": "#E8E0D0 → #4A3727",
+        "accent": "#2A3A2A → #362D1D",
+        "mortar": "#B0A898 → #A79787"
+      }
     ]
   },
   "overall_style": "Commercial",
@@ -61,38 +134,53 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "left",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     },
     {
       "id": "door_1",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "right",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     },
     {
       "id": "door_2",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "right",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     },
     {
       "id": "door_3",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "right",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     },
     {
       "id": "door_4",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "right",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     }
   ],
   "storefront": {
@@ -108,24 +196,37 @@
     "recessed_entry": false,
     "description": "Attached row including tattoo, spa, and restaurant storefronts in former houses.",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 31.5,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    }
   },
   "building_type": "commercial",
   "party_wall_left": false,
   "party_wall_right": false,
   "facade_depth_m": 15.0,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C46A4E",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
-    "composition": "The street frontage spans roughly 5 metres across 3 storeys beneath a mixed, consistent with its commercial typology.",
-    "opening_rhythm": "The visible opening pattern is organized as 6, 6, 6 window bays from lower to upper levels, using mixed, and 5 principal entrances."
+    "trim_colour_hex": "#4A3727",
+    "composition": "The street frontage spans roughly 35 metres across 3 storeys beneath a gable, consistent with its commercial typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 4, 4, 3 window bays from lower to upper levels, using mixed, and 5 principal entrances.",
+    "mortar_colour_hex": "#A79787",
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "heritage_summary": "This commercial dates to the 1889-1903 period. Character-defining elements include ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
   },
   "windows_detail": [
     {
@@ -133,12 +234,13 @@
       "windows": [
         {
           "count": 6,
-          "type": "mixed",
+          "type": "storefront glazing",
           "width_m": 0.7,
-          "height_m": 1.4,
+          "height_m": 2.0,
           "sill_height_m": 0.9,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "plate",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -152,7 +254,8 @@
           "height_m": 1.3,
           "sill_height_m": 1.0,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     },
@@ -166,32 +269,56 @@
           "height_m": 1.3,
           "sill_height_m": 1.0,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
   ],
   "window_width_m": 0.85,
   "window_height_m": 1.3,
-  "decorative_elements": {},
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
   "street_setback_m": 2.0,
-  "confidence": 0.7500000000000001,
-  "facade_description": "390-382 College St presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5 metres across 3 storeys beneath a mixed, consistent with its commercial typology. The frontage is defined primarily by brick in a dark blue-gray, red, cream, and charcoal attached houseform commercial facades palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 6, 6, 6 window bays from lower to upper levels, using mixed, and 5 principal entrances.",
+  "confidence": 0.8500000000000002,
+  "facade_description": "390-382 College St is a commercial building with a street-level storefront. The street frontage spans roughly 35 metres across 3 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by brick in a dark blue-gray, red, cream, and charcoal attached houseform commercial facades palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 4, 3 window bays from lower to upper levels, using mixed, and 5 principal entrances.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",
     "source": "inferred_from_photo_analysis"
   },
   "roof_material": "Slate shingles",
-  "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#3A2A20",
-    "roof_hex": "#4A5A5A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
-  },
-  "volumes": [],
+  "volumes": [
+    {
+      "id": "commercial_ground",
+      "width_m": 35.0,
+      "depth_m": 15.0,
+      "floor_heights_m": [
+        3.2
+      ],
+      "total_height_m": 3.2,
+      "facade_colour": "dark blue-gray, red, cream, and charcoal attached houseform commercial facades",
+      "facade_material": "brick",
+      "roof_type": "flat"
+    },
+    {
+      "id": "residential_upper",
+      "width_m": 35.0,
+      "depth_m": 15.0,
+      "floor_heights_m": [
+        3.2,
+        3.2
+      ],
+      "total_height_m": 6.4,
+      "facade_colour": "dark blue-gray, red, cream, and charcoal attached houseform commercial facades",
+      "facade_material": "brick",
+      "roof_type": "gable"
+    }
+  ],
   "facade_width_m": 35.0,
   "total_height_m": 9.600000000000001,
   "floor_heights_m": [
@@ -200,5 +327,85 @@
     3.2
   ],
   "roof_pitch_deg": 35,
-  "site": {}
+  "site": {
+    "lon": -79.399526,
+    "lat": 43.655469
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C46A4E",
+    "trim": "#4A3727",
+    "roof": "#5E5D5D",
+    "accent": "#362D1D"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_174452993_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#8A8A8A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 6,
+            "type": "storefront glazing",
+            "width_m": 0.7,
+            "height_m": 2.0,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 6,
+            "type": "mixed",
+            "width_m": 0.7,
+            "height_m": 1.3,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 6,
+            "type": "mixed",
+            "width_m": 0.7,
+            "height_m": 1.3,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 35,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0
 }

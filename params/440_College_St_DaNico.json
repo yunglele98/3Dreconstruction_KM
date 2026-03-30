@@ -20,7 +20,8 @@
     "overall_style": "Commercial",
     "storefront_description": "Refined restaurant facade with formal central arched entry and broad glazed openings.",
     "signage_observed": "DaNico entry signage.",
-    "notes": "Standalone cream facade across from the streetcar stop."
+    "notes": "Standalone cream facade across from the streetcar stop.",
+    "photo": "IMG_20260320_173849371_HDR.jpg"
   },
   "_meta": {
     "address": "440 College St (DaNico)",
@@ -38,12 +39,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "hcd_data_stub",
-      "roof_material",
-      "colour_palette",
-      "ground_floor_arches",
-      "volumes",
-      "dimensions_backfill"
+      "colour_palette"
     ],
     "reference_photos": [
       "IMG_20260320_173849371_HDR.jpg"
@@ -67,6 +63,59 @@
     },
     "qa_photo_fixes": [
       "commercial heuristic: 8.0x12.0m"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "College St",
+        "timestamp": "2026-03-29T07:48:46.192066+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:07.558242+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:54.177418+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:41.112722+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:21.335076Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:47.065683+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:16.469499Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A → #434343",
+        "trim": "#E8E0D0 → #322922",
+        "accent": "#1A1A2A → #24242B",
+        "mortar": "#B0A898 → #A69787"
+      }
     ]
   },
   "overall_style": "Commercial",
@@ -78,7 +127,10 @@
       "type": "Arched-head door",
       "position": "center",
       "width_m": 0.85,
-      "height_m": 2.1
+      "height_m": 2.1,
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "storefront": {
@@ -94,7 +146,14 @@
     "recessed_entry": false,
     "description": "Refined restaurant facade with formal central arched entry and broad glazed openings.",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 7.2,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    }
   },
   "building_type": "commercial",
   "party_wall_left": false,
@@ -105,9 +164,11 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
-    "composition": "The street frontage spans roughly 5 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
-    "opening_rhythm": "The visible opening pattern is organized as 3, 3 window bays from lower to upper levels, using rectangular, and 1 principal entrance."
+    "trim_colour_hex": "#322922",
+    "composition": "The street frontage spans roughly 8 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 3, 3 window bays from lower to upper levels, using rectangular, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include string courses, cornice.",
+    "mortar_colour_hex": "#A69787"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -120,12 +181,13 @@
       "windows": [
         {
           "count": 3,
-          "type": "rectangular",
+          "type": "storefront glazing",
           "width_m": 0.9,
-          "height_m": 1.4,
+          "height_m": 2.0,
           "sill_height_m": 0.9,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "plate",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -139,31 +201,37 @@
           "height_m": 1.3,
           "sill_height_m": 1.0,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
   ],
   "window_width_m": 0.85,
   "window_height_m": 1.3,
-  "decorative_elements": {},
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "projection_mm": 120,
+      "height_mm": 160,
+      "colour_hex": "#5A5040"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 40,
+      "projection_mm": 20,
+      "colour_hex": "#C0B8A0"
+    }
+  },
   "street_setback_m": 2.0,
-  "confidence": 0.7500000000000001,
-  "facade_description": "440 College St (DaNico) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by stucco, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 3 window bays from lower to upper levels, using rectangular, and 1 principal entrance.",
+  "confidence": 0.8500000000000002,
+  "facade_description": "440 College St (DaNico) is a commercial building with a street-level storefront. The street frontage spans roughly 8 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by stucco, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 3 window bays from lower to upper levels, using rectangular, and 1 principal entrance. Key storefront and facade features include string courses, cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",
     "source": "inferred_from_photo_analysis"
   },
   "roof_material": "Built-up tar and gravel",
-  "colour_palette": {
-    "facade_hex": "#E8D8B0",
-    "trim_hex": "#3A2A20",
-    "roof_hex": "#3A3A3A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
-  },
   "ground_floor_arches": {
     "present": true,
     "arch_type": "segmental",
@@ -178,5 +246,74 @@
     3.2
   ],
   "roof_pitch_deg": 0,
-  "site": {}
+  "site": {
+    "lon": -79.400053,
+    "lat": 43.656995
+  },
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#D8D0C0",
+    "trim": "#322922",
+    "roof": "#434343",
+    "accent": "#24242B"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_173849371_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "stucco",
+    "brick_colour_hex": "#D8D0C0",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 3,
+            "type": "storefront glazing",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 3,
+            "type": "rectangular",
+            "width_m": 0.9,
+            "height_m": 1.3,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "cornice",
+      "string_courses"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0
 }

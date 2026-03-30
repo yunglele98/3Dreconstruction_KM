@@ -9,15 +9,15 @@
   "total_height_m": 10.0,
   "facade_width_m": 10.0,
   "facade_depth_m": 20.0,
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 35,
   "roof_features": [],
-  "facade_material": "brick",
-  "facade_colour": "grey-brown vinyl siding upper, tan brick ground, pegasus mural on gable",
+  "facade_material": "vinyl siding over original",
+  "facade_colour": "right building: buff/yellow brick; left: vinyl/aluminum siding (beige/tan); right: brick (buff/yellow) with yellow paint at upper level",
   "windows_per_floor": [
     0,
-    2,
-    2
+    3,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.8,
@@ -27,13 +27,38 @@
   "condition": "fair",
   "photo_observations": {
     "facade_colour_observed": "grey-brown vinyl siding upper, tan brick ground, pegasus mural on gable",
-    "facade_material_observed": "mixed",
+    "facade_material_observed": "left: vinyl/aluminum siding (beige/tan); right: brick (buff/yellow) with yellow paint at upper level",
     "condition": "fair",
     "has_storefront_observed": true,
-    "signage_observed": "KENSINGTON MARKET, Property For Sale 416.649.5943",
+    "signage_observed": "'KENSINGTON MARKET' (left storefront); 'Property For Sale 416.649.5943' (left); 'EXILE' mural (left upper); '55' and '60' address numbers visible; 'Sale!' signs",
     "overall_style": "Vernacular",
     "confidence": 0.7,
-    "notes": "nighttime; two house-form buildings with vinyl siding"
+    "notes": "nighttime; two house-form buildings with vinyl siding",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_013118234_HDR.jpg",
+    "facade_analysis_address": "58-60 Kensington Ave",
+    "storeys_observed": 2,
+    "brick_colour_observed": "right building: buff/yellow brick",
+    "brick_colour_hex_observed": "#D4B896",
+    "condition_observed": "left: fair, vinyl siding covers original facade; right: fair, painted facade with mural",
+    "windows_observed": {
+      "gable": "left: none visible in gable (or small)",
+      "upper_floor": "left: 2 windows (one square, one rectangular); right: 2 windows",
+      "ground_floor": "large commercial storefronts"
+    },
+    "doors_observed": "commercial entrances; both units have security grilles",
+    "roof_type_observed": "left: gable; right: flat or low pitch with parapet",
+    "decorative_elements_observed": "left: bay-and-gable form but heavily modified with siding; right: colourful painted mural above storefront (flying geese/horses, stars, moon on brown background); 'EXILE' text in yellow and red",
+    "storefront_description": "left: 'KENSINGTON MARKET' text with 'Property For Sale' sign (416.649.5943); appears to be a retail/souvenir shop with security grilles; right building: number '60' visible; security grille; 'Sale!' signs in windows; yellow zigzag trim under awning; blue-and-white striped awning",
+    "party_walls_observed": "party wall between the two buildings; party walls at edges",
+    "colour_palette_observed": {
+      "primary": "beige/tan (siding), buff brick/yellow (right)",
+      "trim": "white",
+      "accent": "yellow, red (EXILE mural), blue/white (awning stripes)"
+    },
+    "photo_quality": "night, rotated 90 degrees",
+    "photo": "IMG_20260320_013118234_HDR.jpg"
   },
   "_meta": {
     "address": "58-60 Kensington Ave",
@@ -71,10 +96,101 @@
       "59 KENSINGTON AVE",
       "60 KENSINGTON AVE"
     ],
-    "db_revision_ts": "2026-03-25T14:51:46"
+    "db_revision_ts": "2026-03-26T20:02:09",
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 200",
+      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 2, 2] -> [0, 3, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#A09070'",
+      "facade_detail.bond_pattern: 'n/a (sided)'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.2",
+      "doors_detail.steps: 1"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "vinyl siding over original",
+        "new_value": "vinyl siding over original",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:31:01.780754+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "vinyl siding over original",
+        "new_value": "vinyl siding over original",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:26.634692+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:10.327482+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "glazing filled (1889-1903)",
+          "glazing filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:56.976475+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)"
+        ],
+        "timestamp": "2026-03-29T08:05:45.338303+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:35.220082+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:22.311338Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #524A4A",
+        "trim": "#E8E0D0 \u2192 #3C2B20",
+        "mortar": "#B0A898 \u2192 #C1BAAC"
+      }
+    ]
   },
   "overall_style": "Vernacular",
-  "confidence": 0.8500000000000001,
+  "confidence": 0.9,
   "notes": "nighttime; two house-form buildings with vinyl siding",
   "doors_detail": [
     {
@@ -87,7 +203,11 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 1,
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     },
     {
       "id": "door_1",
@@ -99,7 +219,11 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 1,
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "storefront": {
@@ -115,52 +239,72 @@
     "recessed_entry": false,
     "description": null,
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "KENSINGTON MARKET (large horizontal sign, blue/yellow letters); Property For Sale 416.649.5943",
+    "awning": {
+      "present": false
+    },
+    "security_grille": true,
+    "width_pct": 75
   },
   "party_wall_left": false,
   "party_wall_right": false,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
-    "bond_pattern": "running bond",
+    "brick_colour_hex": "#A09070",
+    "bond_pattern": "n/a (sided)",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#3C2B20",
     "composition": "The street frontage spans roughly 10 metres across 3 storeys beneath a gable, consistent with its commercial typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using mixed, and 2 principal entrances."
+    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays and 1 additional bay above, using mixed, and 2 principal entrances.",
+    "mortar_colour_hex": "#C1BAAC",
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "heritage_summary": "This commercial dates to the 1889-1903 period. Character-defining elements include ground-floor storefront."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 200,
     "gable_window": {
-      "present": false
+      "present": true,
+      "type": "small fixed rectangular",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "small fixed rectangular"
     }
   },
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 1.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "count": 3,
+          "type": "1-over-1",
+          "frame_colour": "brown",
+          "arch_type": "flat",
+          "width_m": 1.5,
+          "height_m": 1.3,
+          "sill_height_m": 0.8,
+          "glazing": "2-over-2"
         }
       ]
     },
     {
-      "floor": "Third floor",
+      "floor": "Gable",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 1.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "count": 1,
+          "type": "small fixed",
+          "frame_colour": "brown",
+          "arch_type": "flat",
+          "width_m": 1.0,
+          "height_m": 0.6,
+          "sill_height_m": 0.8,
+          "glazing": "2-over-2"
         }
       ]
     }
@@ -172,7 +316,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "58-60 Kensington Ave presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 10 metres across 3 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by mixed in a grey-brown vinyl siding upper, tan brick ground, pegasus mural on gable palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 2 additional bays above, using mixed, and 2 principal entrances.",
+  "facade_description": "58-60 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 10 metres across 3 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by vinyl siding over original in a right building: buff/yellow brick; left: vinyl/aluminum siding (beige/tan); right: brick (buff/yellow) with yellow paint at upper level palette, laid in n/a (sided) with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays and 1 additional bay above, using mixed, and 2 principal entrances.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",
@@ -185,12 +329,128 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A09070",
+    "trim": "#3C2B20",
+    "roof": "#524A4A",
+    "accent": "#D4B020"
   },
   "volumes": [],
   "site": {
     "lon": -79.40076444999998,
     "lat": 43.65420609,
     "street": "Kensington Ave"
-  }
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_013118234_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.45
+    ],
+    "facade_material_observed": "vinyl siding over original",
+    "brick_colour_hex": "#A09070",
+    "brick_bond_observed": "n/a (sided)",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "storefront - Kensington Market sign with Property For Sale sign"
+      },
+      {
+        "floor": "second",
+        "count": 3,
+        "type": "1-over-1",
+        "frame_colour": "brown",
+        "arch": "flat",
+        "width_ratio": 0.15,
+        "height_m_est": 1.3
+      },
+      {
+        "floor": "gable",
+        "count": 1,
+        "type": "small fixed",
+        "frame_colour": "brown",
+        "arch": "flat",
+        "width_ratio": 0.1,
+        "height_m_est": 0.6
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center-left",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 1,
+        "colour": "brown"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": false
+    },
+    "gable_window": {
+      "present": true,
+      "type": "small fixed rectangular"
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 75,
+      "signage_text": "KENSINGTON MARKET (large horizontal sign, blue/yellow letters); Property For Sale 416.649.5943",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "left",
+      "security_grille": true,
+      "notes": "Adjacent to #60 (Exile Vintage). Vinyl siding covers upper floors. Ground floor has large display windows with diamond security grilles."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "gable_mural": "painted mural with horses/birds/stars on gable wall (whimsical folk art style)"
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#9A8A70",
+      "trim": "#6A5A4A",
+      "roof": "#5A5A5A",
+      "accent": "#D4B020"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Vinyl siding covers original facade material. Gable features painted folk-art mural with horses, birds and stars on dark brown background. Property listed for sale. Storefronts modified with modern security grilles.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 200,
+      "step_count": 1,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 200,
+  "foundation_height_m": 0.2,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

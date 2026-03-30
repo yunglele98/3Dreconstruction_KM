@@ -1,0 +1,48 @@
+﻿{
+  \"task_id\": \"TASK-20260327-QA-AUDIT\",
+  \"agent\": \"gemini-1\",
+  \"report_type\": \"quality_audit\",
+  \"timestamp\": \"2026-03-27T19:45:00Z\",
+  \"summary\": \"Comprehensive audit of parameter quality and structural consistency. Validated 1,253 active buildings.\",
+  \"findings\": [
+    {
+      \"category\": \"suspicious_dimensions\",
+      \"address\": \"103 Bellevue Ave (St. Stephen-in-the-Fields Church)\",
+      \"field\": \"facade_width_m\",
+      \"status\": \"false_positive\",
+      \"expected\": \"< 5.18m (lot width)\",
+      \"actual\": \"7.0m\",
+      \"confidence\": 0.9,
+      \"severity\": \"low\",
+      \"note\": \"Building spans 2 lots (lots_sharing_footprint: 2). Total lot width ~10.4m, so 7.0m is valid.\"
+    },
+    {
+      \"category\": \"suspicious_dimensions\",
+      \"address\": \"401 College St (Kensington Community School)\",
+      \"field\": \"facade_width_m\",
+      \"status\": \"justified\",
+      \"expected\": \"< 6.1m (lot width)\",
+      \"actual\": \"8.2m\",
+      \"confidence\": 0.9,
+      \"severity\": \"low\",
+      \"note\": \"Institutional campus spanning multiple lots. DB lot_width_ft (20.0) likely refers to a single parcel index, not the full footprint width.\"
+    },
+    {
+      \"category\": \"core_missing\",
+      \"count\": 110,
+      \"status\": \"mismatch\",
+      \"fields\": [\"building_name\", \"floors\", \"dimensions\", \"roof_type\", \"materials\", \"site.lon/lat\"],
+      \"confidence\": 1.0,
+      \"severity\": \"high\",
+      \"note\": \"110 active buildings have at least one missing core field. 16 of these are missing site coordinates entirely (e.g. 327 Bathurst St, 636 Dundas St).\"
+    }
+  ],
+  \"coverage\": {
+    \"buildings_checked\": 1253,
+    \"total_anomalies\": 145,
+    \"critical\": 0,
+    \"high\": 110,
+    \"medium\": 35,
+    \"low\": 0
+  }
+}

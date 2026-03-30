@@ -19,7 +19,7 @@
     "lot_coverage_pct": 97.8,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "brick",
@@ -32,13 +32,13 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "fair",
   "hcd_data": {
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900–1930",
+    "construction_period": "c. 1900\u20131930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
@@ -48,7 +48,7 @@
       "original_windows",
       "bay_window"
     ],
-    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -81,7 +81,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 6,
-    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -98,13 +98,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "568 Dundas St W",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "568 DUNDAS ST W"
     ],
@@ -116,11 +114,72 @@
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
-    }
+    },
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Dundas St W",
+        "timestamp": "2026-03-29T07:48:48.869641+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:10.087087+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (unknown)",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:56.743279+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: wood",
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:44.915359+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "fuzzy",
+      "timestamp": "2026-03-29T08:34:22.214127Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:47.685497+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #AA7854",
+        "roof": "#5A5A5A \u2192 #5F5353",
+        "trim": "#E8E0D0 \u2192 #423224",
+        "accent": "#3A2A20 \u2192 #2F3727",
+        "mortar": "#B0A898 \u2192 #BCAC94"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
+    ]
   },
   "bay_window": {
     "present": true,
@@ -144,17 +203,18 @@
     "door_count": 1,
     "door_type": "single",
     "has_storefront_observed": false,
-    "storefront_description": "Not a commercial storefront — community association hall",
-    "signage_observed": "安省潮州會館 CHAO CHOW ASSOCIATION OF ONTARIO CANADA, TEL (416) 340-0839, 568 DUNDAS ST. W.",
+    "storefront_description": "Not a commercial storefront \u2014 community association hall",
+    "signage_observed": "\u5b89\u7701\u6f6e\u5dde\u6703\u9928 CHAO CHOW ASSOCIATION OF ONTARIO CANADA, TEL (416) 340-0839, 568 DUNDAS ST. W.",
     "overall_style": "Institutional",
     "confidence": 0.72,
     "agent": "claude-opus-4-6",
-    "timestamp": "2026-03-24T23:30:00-04:00"
+    "timestamp": "2026-03-24T23:30:00-04:00",
+    "photo": "IMG_20260315_133109310_HDR.jpg"
   },
   "door_type": "single",
   "overall_style": "Institutional",
-  "storefront_description": "Not a commercial storefront — community association hall",
-  "confidence": 0.8700000000000001,
+  "storefront_description": "Not a commercial storefront \u2014 community association hall",
+  "confidence": 0.9,
   "doors_detail": [
     {
       "id": "door_0",
@@ -166,20 +226,24 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AA7854",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#423224",
     "composition": "The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include original windows, bay window."
+    "heritage_expression": "Character-defining facade elements include original windows, bay window.",
+    "mortar_colour_hex": "#BCAC94"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -197,7 +261,8 @@
           "height_m": 2.0,
           "sill_height_m": 1.3,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -211,7 +276,8 @@
           "height_m": 3.3,
           "sill_height_m": 2.6,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
@@ -221,20 +287,74 @@
     "bay_window_storeys": 2
   },
   "street_setback_m": 0.5,
-  "facade_description": "568 Dundas St W presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as mixed in a dark facade with large red illuminated sign palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include original windows, bay window.",
+  "facade_description": "568 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as brick in a dark facade with large red illuminated sign palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include original windows, bay window.",
   "roof_material": "Built-up tar and gravel",
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#AA7854",
+    "trim": "#423224",
+    "roof": "#5F5353",
+    "accent": "#2F3727"
   },
-  "volumes": [],
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  }
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260315_133109310_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "double_hung",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.3,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "double_hung",
+            "width_m": 0.9,
+            "height_m": 3.3,
+            "sill_height_m": 2.6,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

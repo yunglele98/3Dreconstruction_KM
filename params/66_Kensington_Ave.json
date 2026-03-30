@@ -2,8 +2,8 @@
   "building_name": "66 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    5.19,
+    4.41
   ],
   "total_height_m": 9.6,
   "facade_width_m": 5.2,
@@ -19,16 +19,16 @@
     "lot_coverage_pct": 57.6,
     "lots_sharing_footprint": 9
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "red brick",
+  "facade_colour": "buff/yellow brick; decorative diamond patterns in contrasting darker brick visible on upper facade; buff/yellow brick with decorative brick pattern",
   "windows_per_floor": [
     0,
-    2
+    1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "1914-1930",
-    "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 217,
-    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property has retained building features reflecting vernacular interpretations of early-twentieth-century architectural styles, including its brick facade with parapet and second storey window opening with brick voussoirs. The property has contextual value because it supports and maintains the historic mixed use character of the area. With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property has retained building features reflecting vernacular interpretations of early-twentieth-century architectural styles, including its brick facade with parapet and second storey window opening with brick voussoirs. The property has contextual value because it supports and maintains the historic mixed use character of the area. With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick"
     ],
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 4,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 1
   },
   "_meta": {
@@ -98,11 +98,12 @@
     "inferences_applied": [
       "roof_material",
       "colour_palette",
-      "volumes"
+      "volumes",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "66 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "66 KENSINGTON AVE"
     ],
@@ -115,11 +116,78 @@
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "eave_overhang_mm: 150",
+      "floor_heights_m: [4.8, 4.8] -> [5.19, 4.41]",
+      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [0, 2] -> [0, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#C8B878'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.15"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:stone_voussoirs",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:12.138491+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:58.639842+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)"
+        ],
+        "timestamp": "2026-03-29T08:05:48.020124+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:22.885839Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:17.539278Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "mortar": "#B0A898 \u2192 #CBC3B5"
+      }
     ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
       "present": true
+    },
+    "stone_voussoirs": {
+      "present": true,
+      "colour_hex": "#C8B898"
     }
   },
   "storefront": {
@@ -127,22 +195,79 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 4.9,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "BAZAAR (visible on sign/window area)",
+    "awning": {
+      "present": false
+    },
+    "width_pct": 80,
+    "signage": {
+      "text": "BAZAAR Gift Shop",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-25T00:00:00-04:00",
     "photo_conditions": "Night photos (1:26-1:35 AM March 20, 2026)",
     "source_photo": null,
-    "photo_quality": "limited",
+    "photo_quality": "night, rotated 90 degrees",
     "facade_colour_observed": "unknown",
-    "facade_material_observed": "brick",
-    "signage_observed": "BAZAAR Gift Shop",
+    "facade_material_observed": "buff/yellow brick with decorative brick pattern",
+    "signage_observed": "partially visible",
     "overall_style_observed": "Commercial",
     "confidence": 0.45,
-    "notes": "Night photo, limited dedicated view in this batch."
+    "notes": "Night photo, limited dedicated view in this batch.",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_013156513_HDR.jpg",
+    "facade_analysis_address": "66 Kensington Ave (BAZAAR Gift Shop)",
+    "storeys_observed": 2,
+    "brick_colour_observed": "buff/yellow brick; decorative diamond patterns in contrasting darker brick visible on upper facade",
+    "brick_colour_hex_observed": "#D4B896",
+    "condition_observed": "good; excellent preservation of decorative brickwork; one of the better-preserved upper facades in the row",
+    "windows_observed": {
+      "gable": "large window visible in gable area",
+      "upper_floor": "1 large 4-pane window (2-over-2 or 4-pane casement); distinctive",
+      "ground_floor": "commercial storefront"
+    },
+    "doors_observed": "commercial entrance",
+    "roof_type_observed": "gable; front-facing steep gable",
+    "decorative_elements_observed": "notable decorative brickwork: diamond/lozenge patterns in contrasting brick colours on upper facade; this is a well-preserved example of Victorian decorative brickwork; 4-pane upper window with clean proportions; decorative trim at gable",
+    "storefront_description": "ground floor commercial with illuminated display window (purple/violet interior lighting); appears to be a retail shop; 'SOP' or similar text visible",
+    "party_walls_observed": "party walls both sides",
+    "colour_palette_observed": {
+      "primary": "#D4B896 (buff/yellow brick)",
+      "decorative_brick": "darker contrasting brick for diamond patterns",
+      "trim": "minimal visible",
+      "accent": "purple/violet (interior lighting)"
+    },
+    "bond_pattern_observed": "running bond with decorative diamond/lozenge brick inserts",
+    "db_context": {
+      "ba_building_type": "commercial",
+      "ba_stories": 2,
+      "ba_facade_material": "brick",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "Commercial",
+      "HCD_CONSTRUCTION_DATE": "1914-1930",
+      "facade_colour_observed": "yellow-buff brick upper, dark commercial ground floor",
+      "photo_condition": "fair",
+      "ba_condition_rating": 4,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_013156513_HDR.jpg"
   },
-  "confidence": 0.6000000000000001,
+  "confidence": 0.7000000000000002,
   "notes": "Night photo, limited dedicated view in this batch.",
   "doors_detail": [
     {
@@ -155,45 +280,55 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C8B878",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#4A4A4A",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance.",
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include decorative brick.",
-    "heritage_summary": "With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area. The property has value as an early-twentieth-century two-storey Commercial building."
+    "heritage_summary": "With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area. The property has value as an early-twentieth-century two-storey Commercial building.",
+    "mortar_colour_hex": "#CBC3B5"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300
+    "eave_overhang_mm": 150
   },
   "parapet_height_m": 0.6,
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.6,
-          "sill_height_m": 2.0,
-          "frame_colour": "#4A4A4A",
-          "glazing": "1-over-1"
+          "count": 1,
+          "type": "4-pane fixed",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 1.3,
+          "height_m": 1.3,
+          "glazing": "1-over-1",
+          "sill_height_m": 0.8
         }
       ]
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "66 Kensington Ave presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick in a unknown palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double-hung sash windows, and 1 principal entrance. Key storefront and facade features include decorative brick. HCD note: The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property has retained building features reflecting vernacular interpretations of early-twentieth-century architectural styles, including its brick facade with parapet and second storey window opening with brick voussoirs. The property has contextual value because it supports and maintains the historic mixed use character of the area. With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "66 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance. Key storefront and facade features include decorative brick.",
   "heritage_summary": "With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area. The property has value as an early-twentieth-century two-storey Commercial building.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
@@ -202,7 +337,111 @@
     "roof_hex": "#3A3A3A",
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C8B878",
+    "trim": "#4A4A4A",
+    "roof": "#4A4A4A",
+    "accent": "#2A2A2A"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_013156513_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#C8B878",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "BAZAAR Gift Shop storefront with large display window"
+      },
+      {
+        "floor": "second",
+        "count": 1,
+        "type": "4-pane fixed",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.25,
+        "height_m_est": 1.3
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour": "dark"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false
+    },
+    "gable_window": {
+      "present": false
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 80,
+      "signage_text": "BAZAAR (visible on sign/window area)",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "right",
+      "security_grille": false,
+      "notes": "Large display window occupies most of ground floor. Upper floor shows buff/cream brick with single wide 4-pane window. Building appears narrow."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#C8B878",
+      "trim": "#F0EDE8",
+      "roof": "#4A4A4A",
+      "accent": "#2A2A2A"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Upper brick appears buff/cream, reasonably maintained. Storefront modernized. Night lighting makes colour assessment approximate. Building appears relatively narrow compared to neighbours.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 150,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.15,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

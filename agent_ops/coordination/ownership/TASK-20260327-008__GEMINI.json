@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-20260327-008__GEMINI",
+  "owner": "gemini-1",
+  "parent_task": "TASK-20260327-008",
+  "write_scope": [
+    "params/",
+    "scripts/"
+  ],
+  "assigned_at": "2026-03-27T17:48:38.334637+00:00"
+}

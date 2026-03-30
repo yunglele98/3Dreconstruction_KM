@@ -2,10 +2,10 @@
   "building_name": "483 Bathurst St",
   "floors": 2,
   "floor_heights_m": [
-    3.5,
-    3.8
+    2.45,
+    2.66
   ],
-  "total_height_m": 7.57,
+  "total_height_m": 5.11,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -19,16 +19,16 @@
     "lot_coverage_pct": 34.9,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Stone",
+  "facade_material": "stone",
   "facade_colour": "buff stone",
   "windows_per_floor": [
     2,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900–1930",
+    "construction_period": "c. 1900\u20131930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
@@ -48,21 +48,21 @@
       "original_windows",
       "bay_window"
     ],
-    "heritage_register": "Within HCD Boundary – Non-Contributing",
+    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
     "protection_level": 1
   },
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential – Rowhouse / Attached",
+    "land_use": "Residential \u2013 Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (511) | Commercial",
-    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -81,7 +81,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1–3)",
+    "residential_floors": "All floors (1\u20133)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -96,9 +96,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes"
+      "colour_palette"
     ],
     "photo": "IMG_20260320_173330517_HDR.jpg",
     "reference_photos": [
@@ -109,9 +107,72 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "483 Bathurst St",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "483 BATHURST ST"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 7.57,
+        "new_value": 5.11,
+        "timestamp": "2026-03-29T07:30:52.968027+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:08.525126+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (unknown)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:55.237927+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: wood",
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:42.766744+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Bathurst St",
+        "timestamp": "2026-03-29T07:48:47.532121+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:21.687114Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:47.339181+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #645C5C",
+        "trim": "#E8E0D0 \u2192 #33261D",
+        "accent": "#3A2A20 \u2192 #382A1F",
+        "mortar": "#B0A898 \u2192 #B5A58F"
+      }
     ]
   },
   "bay_window": {
@@ -135,7 +196,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
@@ -145,10 +209,11 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#33261D",
     "composition": "The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat.",
-    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include original windows, bay window."
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include original windows, bay window.",
+    "mortar_colour_hex": "#B5A58F"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -161,12 +226,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
-          "height_m": 1.6,
+          "height_m": 1.7600000000000002,
           "sill_height_m": 1.1,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -175,12 +241,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 1.7,
           "sill_height_m": 1.3,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
@@ -190,16 +257,86 @@
     "bay_window_storeys": 2
   },
   "street_setback_m": 0.5,
-  "confidence": 0.7500000000000001,
-  "facade_description": "483 Bathurst St presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as stone, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include original windows, bay window.",
+  "confidence": 0.8500000000000002,
+  "facade_description": "483 Bathurst St is a building with a street-facing facade. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as stone, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include original windows, bay window.",
   "roof_material": "Built-up tar and gravel",
+  "volumes": [],
+  "photo_observations": {
+    "source": "synthesized_from_params",
+    "facade_material_observed": "stone",
+    "facade_colour_observed": "buff stone",
+    "condition": "poor",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "window_type": "Double-hung sash",
+    "door_count": 1,
+    "chimneys": 0,
+    "porch_present": false,
+    "has_storefront": false,
+    "photo": "IMG_20260320_173330517_HDR.jpg"
+  },
   "colour_palette": {
-    "facade_hex": "#C8B898",
+    "facade_hex": "#D4B896",
     "trim_hex": "#3A2A20",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C8B898",
+    "trim": "#33261D",
+    "roof": "#645C5C",
+    "accent": "#382A1F"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_173330517_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "stone",
+    "brick_colour_hex": "#C8B898",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.7600000000000002,
+            "sill_height_m": 1.1,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.7,
+            "sill_height_m": 1.3,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "poor",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

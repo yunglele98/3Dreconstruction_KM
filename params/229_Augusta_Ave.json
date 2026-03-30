@@ -19,15 +19,15 @@
     "lot_coverage_pct": null,
     "lots_sharing_footprint": 9
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "brick",
-  "facade_colour": "black metal cladding upper, white-painted ground floor with graffiti",
+  "facade_material": "painted stucco/render",
+  "facade_colour": "painted (painted stucco/render (upper band), metal roller shutters (ground))",
   "windows_per_floor": [
-    3,
+    0,
     2
   ],
   "window_type": "storefront",
@@ -40,12 +40,12 @@
     "typology": "Commercial",
     "construction_date": "1914-1930",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 43,
-    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated wi",
+    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated wi",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -54,14 +54,14 @@
     "building_type": "commercial",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Café",
+    "commercial_use": "Restaurant / Bar / Caf\u00e9",
     "business_name": "Augusta Coffee Bar",
     "business_category": "Retail/Shop",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -101,16 +101,84 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "229 Augusta Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "229 AUGUSTA AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "windows_per_floor: [3, 2] -> [0]",
+      "colour_palette enriched from observations",
+      "facade_colour updated: painted observation"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted stucco/render (upper band), metal roller shutters (ground)",
+        "new_value": "painted stucco/render",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:31:00.017041+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted stucco/render",
+        "new_value": "painted stucco/render",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:21.734462+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:51.517370+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1914-1930)",
+          "arch_type filled (1914-1930)"
+        ],
+        "timestamp": "2026-03-29T08:03:45.893363+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #4A3A2A (medium brown)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:18.870504+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:18.278271Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:13.303850Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "mortar": "#B0A898 \u2192 #C0B6A4"
+      }
     ]
   },
   "storefront": {
@@ -118,7 +186,23 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.2,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "security_grille": true,
+    "signage_text": "KENSINGTON",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 4.680000000000001,
+      "projection_m": 1.2,
+      "colour_hex": "#D06030"
+    },
+    "signage": {
+      "text": "Augusta Coffee Bar",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "black metal cladding upper, white-painted ground floor with graffiti",
@@ -172,7 +256,8 @@
     "batch": "batch_003",
     "photo_date": "2026-03-15",
     "photo_time": "~15:55",
-    "photo_count": 1
+    "photo_count": 1,
+    "photo": "IMG_20260315_155019299_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "storefront",
@@ -204,7 +289,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.95,
       "height_m": 2.2,
@@ -212,7 +297,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#4A3A2A",
+      "colour": "medium brown"
     }
   ],
   "building_type": "commercial",
@@ -225,9 +313,11 @@
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#4A4A4A",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology.",
-    "opening_rhythm": "The visible opening pattern is organized as 3, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using storefront, and 1 principal entrance.",
     "heritage_summary": "The property is also associated wi. The property has value as an early-twentieth-century two-storey Commercial building.",
-    "heritage_expression": "Key storefront and facade features include cornice."
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "secondary_material": "upper band",
+    "mortar_colour_hex": "#C0B6A4"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -242,12 +332,13 @@
       "windows": [
         {
           "count": 3,
-          "type": "storefront",
+          "type": "storefront glazing",
           "width_m": 0.9,
           "height_m": 2.3,
           "sill_height_m": 1.6,
           "frame_colour": "#4A4A4A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -261,7 +352,8 @@
           "height_m": 3.2,
           "sill_height_m": 2.5,
           "frame_colour": "#4A4A4A",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
@@ -280,7 +372,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "229 Augusta Ave presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by mixed (metal cladding, painted masonry) in a black metal cladding upper, white-painted ground floor with graffiti palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance. Key storefront and facade features include cornice. HCD note: The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated wi",
+  "facade_description": "229 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by painted stucco/render, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using storefront, and 1 principal entrance. Key storefront and facade features include cornice.",
   "heritage_summary": "The property is also associated wi. The property has value as an early-twentieth-century two-storey Commercial building.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {
@@ -289,7 +381,110 @@
     "roof_hex": "#5A5A5A",
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#D8D0C0",
+    "trim": "#4A4A4A",
+    "accent": "#D06030",
+    "roof": "#3A3A3A"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260315_155019299_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 1,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0
+    ],
+    "facade_material_observed": "painted stucco/render (upper band), metal roller shutters (ground)",
+    "brick_colour_hex": null,
+    "brick_bond_observed": null,
+    "mortar_colour": null,
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "No conventional windows visible. Entire ground floor consists of 3-4 roller shutter bays covered in elaborate graffiti murals (dragon/monster, tropical plants/flowers, abstract, and the two-figure portrait). All shutters closed (nighttime). 'AUGUSTA COFFEE' text on white band above shutters. Blue graffiti tag ('clouds/bubble letters') visible on upper parapet."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "behind shutters",
+        "type": "commercial (behind roller shutters)",
+        "width_m_est": 1.0,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": null,
+        "note": "Entry doors behind closed roller shutters, not visible"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#3A3A3A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 100,
+      "signage_text": "AUGUSTA COFFEE",
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "center (behind shutters)",
+      "security_grille": true,
+      "note": "Wide single-storey commercial building with multiple shutter bays. White text 'AUGUSTA COFFEE' on upper facade band. 3-4 mural-covered roller shutters spanning full width. Corner location at Augusta/Baldwin. Blue graffiti on upper parapet. 'EAR' text visible at right edge suggesting adjacent business."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#E0E0E0",
+      "trim": "#1A1A1A",
+      "roof": "#3A3A3A",
+      "accent": "#4A9A4A"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Nighttime view. Building is a simple single-storey commercial structure. White upper facade band is clean. Roller shutters functional. Graffiti murals appear to be sanctioned street art (high quality). Blue graffiti tag on upper parapet is likely unsanctioned. Bike rings along sidewalk. Building reads as a low-rise market-type unit.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 0,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0
 }

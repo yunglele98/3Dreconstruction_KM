@@ -1,0 +1,464 @@
+{
+  "batch_id": "batch_007",
+  "count": 50,
+  "buildings": [
+    {
+      "param_file": "479_Bathurst_St.json",
+      "building_name": "479 Bathurst St",
+      "address": "479 Bathurst St",
+      "photos": [
+        "IMG_20260320_173319503_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "47_Wales_Ave.json",
+      "building_name": "47 Wales Ave",
+      "address": "47 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "481_Bathurst_St.json",
+      "building_name": "481 Bathurst St",
+      "address": "481 Bathurst St",
+      "photos": [
+        "IMG_20260320_173325277_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "483_Bathurst_St.json",
+      "building_name": "483 Bathurst St",
+      "address": "483 Bathurst St",
+      "photos": [
+        "IMG_20260320_173330517_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "48_Bellevue_Av.json",
+      "building_name": "48 Bellevue Av",
+      "address": "48 Bellevue Av",
+      "photos": [
+        "PXL_20260318_215052886.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "48_Wales_Ave.json",
+      "building_name": "48 Wales Ave",
+      "address": "48 Wales Ave",
+      "photos": [
+        "IMG_20260320_161219728_HDR.jpg",
+        "IMG_20260320_161224146_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "49_Wales_Ave.json",
+      "building_name": "49 Wales Ave",
+      "address": "49 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "4_Casimir_St.json",
+      "building_name": "4 Casimir St",
+      "address": "4 Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "4_Hickory_St.json",
+      "building_name": "4 Hickory St",
+      "address": "4 Hickory St",
+      "photos": [
+        "IMG_20260320_162943033_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "50_Bellvue_Av.json",
+      "building_name": "50 Bellvue Av",
+      "address": "50 Bellvue Av",
+      "photos": [
+        "IMG_20260320_160639371_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "50_Wales_Ave.json",
+      "building_name": "50 Wales Ave",
+      "address": "50 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "51_Wales_Ave.json",
+      "building_name": "51 Wales Ave",
+      "address": "51 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "52_Bellevue_Av.json",
+      "building_name": "52 Bellevue Av",
+      "address": "52 Bellevue Av",
+      "photos": [
+        "IMG_20260320_160635635_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "52_Nassau_St.json",
+      "building_name": "52 Nassau St",
+      "address": "52 Nassau St",
+      "photos": [
+        "IMG_20260320_172728292_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "53-51_Bellevue_Ave.json",
+      "building_name": "53-51 Bellevue Ave",
+      "address": "53-51 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_160524069_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "53_Wales_Ave.json",
+      "building_name": "53 Wales Ave",
+      "address": "53 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "54_Wales_Ave.json",
+      "building_name": "54 Wales Ave",
+      "address": "54 Wales Ave",
+      "photos": [
+        "IMG_20260320_161246617_HDR.jpg",
+        "IMG_20260320_161255200_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "55_Wales_Ave.json",
+      "building_name": "55 Wales Ave",
+      "address": "55 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "56_Wales_Ave.json",
+      "building_name": "56 Wales Ave",
+      "address": "56 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "57_Wales_Ave.json",
+      "building_name": "57 Wales Ave",
+      "address": "57 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "59_Wales_Ave.json",
+      "building_name": "59 Wales Ave",
+      "address": "59 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "5_Bellevue_Ave.json",
+      "building_name": "5 Bellevue Ave",
+      "address": "5 Bellevue Ave",
+      "photos": [
+        "IMG_20260315_153354612_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "5_Glen_Baillie_Pl.json",
+      "building_name": "5 Glen Baillie Pl",
+      "address": "5 Glen Baillie Pl",
+      "photos": [
+        "IMG_20260316_114340013_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "5_Oxford_St.json",
+      "building_name": "5 Oxford St",
+      "address": "5 Oxford St",
+      "photos": [
+        "IMG_20260315_151721468_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "5_Wales_Ave.json",
+      "building_name": "5 Wales Ave",
+      "address": "5 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "604_Dundas_St_W.json",
+      "building_name": "604 Dundas St W",
+      "address": "604 Dundas St W",
+      "photos": [
+        "IMG_20260319_172816154_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "60_Wales_Ave.json",
+      "building_name": "60 Wales Ave",
+      "address": "60 Wales Ave",
+      "photos": [
+        "IMG_20260320_161305353_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "61-75_Wales_Ave.json",
+      "building_name": "61-75 Wales Ave",
+      "address": "61-75 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "61_1_2_Kensington_Ave.json",
+      "building_name": "61 1/2 Kensington Ave",
+      "address": "61 1/2 Kensington Ave",
+      "photos": [
+        "IMG_20260320_012100177_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "61_Wales_Ave.json",
+      "building_name": "61 Wales Ave",
+      "address": "61 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "61A_Bellevue_Ave.json",
+      "building_name": "61A Bellevue Ave",
+      "address": "61A Bellevue Ave",
+      "photos": [
+        "IMG_20260320_155132721_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "61A_Wales_Ave.json",
+      "building_name": "61A Wales Ave",
+      "address": "61A Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "620_Dundas_St_W.json",
+      "building_name": "620 Dundas St W",
+      "address": "620 Dundas St W",
+      "photos": [
+        "IMG_20260319_172601464_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "63_Wales_Ave.json",
+      "building_name": "63 Wales Ave",
+      "address": "63 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "63A_Wales_Ave.json",
+      "building_name": "63A Wales Ave",
+      "address": "63A Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "64_Nassau_St.json",
+      "building_name": "64 Nassau St",
+      "address": "64 Nassau St",
+      "photos": [
+        "IMG_20260318_180536303_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "65_Wales_Ave.json",
+      "building_name": "65 Wales Ave",
+      "address": "65 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "65A_Wales_Ave.json",
+      "building_name": "65A Wales Ave",
+      "address": "65A Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "66_1_2_Bellevue_Ave.json",
+      "building_name": "66 1 2 Bellevue Ave",
+      "address": "66 1 2 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_161056395_HDR.jpg",
+        "IMG_20260320_161100913_HDR.jpg",
+        "IMG_20260320_161113683_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "67_Wales_Ave.json",
+      "building_name": "67 Wales Ave",
+      "address": "67 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "67A_Wales_Ave.json",
+      "building_name": "67A Wales Ave",
+      "address": "67A Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "68_Oxford_St.json",
+      "building_name": "68 Oxford St",
+      "address": "68 Oxford St",
+      "photos": [
+        "IMG_20260320_180146674_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "69_Bellevue_Ave.json",
+      "building_name": "69 Bellevue Ave",
+      "address": "69 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_154938793_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "69_Wales_Ave.json",
+      "building_name": "69 Wales Ave",
+      "address": "69 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "6_Casimir_St.json",
+      "building_name": "6 Casimir St",
+      "address": "6 Casimir St",
+      "photos": [
+        "IMG_20260320_162246054_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "6_Littlehayes_Lane.json",
+      "building_name": "6 Littlehayes Lane",
+      "address": "6 Littlehayes Lane",
+      "photos": [
+        "IMG_20260316_013445973_HDR.jpg",
+        "IMG_20260316_013457816_HDR.jpg",
+        "IMG_20260318_182428702_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "6_Nassau_St.json",
+      "building_name": "6 Nassau St",
+      "address": "6 Nassau St",
+      "photos": [
+        "IMG_20260320_155301658_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "71_Wales_Ave.json",
+      "building_name": "71 Wales Ave",
+      "address": "71 Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "71A_Wales_Ave.json",
+      "building_name": "71A Wales Ave",
+      "address": "71A Wales Ave",
+      "photos": [
+        "IMG_20260320_161421501_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    },
+    {
+      "param_file": "72_Bellevue_Ave.json",
+      "building_name": "72 Bellevue Ave",
+      "address": "72 Bellevue Ave",
+      "photos": [
+        "IMG_20260320_161056395_HDR.jpg",
+        "IMG_20260320_161100913_HDR.jpg",
+        "IMG_20260320_161113683_HDR.jpg"
+      ],
+      "photo_dir": "PHOTOS KENSINGTON"
+    }
+  ]
+}

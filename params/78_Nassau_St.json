@@ -19,7 +19,7 @@
     "lot_coverage_pct": 41.0,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
   "facade_material": "brick",
@@ -28,22 +28,22 @@
     2,
     2
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "good",
   "hcd_data": {
     "typology": "Converted House-form, House-form  Semi-detached",
     "construction_date": "1890-1903",
-    "architectural_style": "Converted House-form (78 Nassau Street), House-form (80 Nassau Street) Semi-detached (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form (78 Nassau Street), House-form (80 Nassau Street) Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 294,
-    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The property at 78 Nassau Street also has value as a late-nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a ground floor alteration. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features, including mirrored facades, shared roofline, bracketed eaves, first storey bay windows and fenestration pattern with segmentally arched openings. Each property has contextual value because it supports and maintain the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 78 Nassau Street also has value as a late-nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a ground floor alteration. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features, including mirrored facades, shared roofline, bracketed eaves, first storey bay windows and fenestration pattern with segmentally arched openings. Each property has contextual value because it supports and maintain the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "cornice",
       "decorative_brick",
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -99,25 +99,89 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "78 Nassau St",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "78 NASSAU ST"
     ],
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:gable_brackets",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:14.735744+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:04:00.184230+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:50.488787+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Nassau St",
+        "timestamp": "2026-03-29T07:48:52.797611+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:23.343493Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:48.584391+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A \u2192 #C95E40",
+        "roof": "#5A5A5A \u2192 #615858",
+        "trim": "#E8E0D0 \u2192 #303030",
+        "accent": "#2A3A2A \u2192 #473E2C",
+        "mortar": "#B0A898 \u2192 #BBAC93"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "decorative_elements": {
@@ -133,6 +197,13 @@
     "bargeboard": {
       "colour_hex": "#E8E0D0",
       "style": "decorative"
+    },
+    "gable_brackets": {
+      "type": "scroll",
+      "count": 4,
+      "projection_mm": 120,
+      "height_mm": 200,
+      "colour_hex": "#4A3A2A"
     }
   },
   "cornice": {
@@ -151,15 +222,16 @@
     "photo_time_range": "3:48-3:57 PM",
     "lighting": "daytime",
     "agent": "claude-opus-4-6",
-    "timestamp": "2026-03-25T01:00:00-04:00"
+    "timestamp": "2026-03-25T01:00:00-04:00",
+    "photo": "IMG_20260320_155435964_HDR.jpg"
   },
   "overall_style": "Victorian",
-  "confidence": 0.8000000000000002,
+  "confidence": 0.9,
   "notes": "Daytime photo from Nassau St walking pass.",
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -167,22 +239,26 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
     }
   ],
   "building_type": "residential",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C95E40",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#303030",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, house-form  semi-detached typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include cornice, decorative brick, original windows.",
-    "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features, including mirrored facades, shared roofline, bracketed eaves, first storey bay windows and fenestration pattern with segmentally arched openings. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles."
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice, decorative brick, original windows, gable brackets.",
+    "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features, including mirrored facades, shared roofline, bracketed eaves, first storey bay windows and fenestration pattern with segmentally arched openings. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
+    "mortar_colour_hex": "#BBAC93"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -202,12 +278,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
-          "height_m": 1.9,
+          "height_m": 2.0,
           "sill_height_m": 1.3,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -216,32 +293,91 @@
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
+          "type": "double_hung",
           "width_m": 0.9,
           "height_m": 2.9,
           "sill_height_m": 2.3,
           "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1"
+          "glazing": "2-over-2",
+          "arch_type": "flat"
         }
       ]
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "Two-storey converted semi-detached house-form (c. 1890-1903) in brick with a gable roof, 5.2 m wide. Party walls on both sides. Decorative cornice, decorative brickwork, and original windows survive. Paired with 80 Nassau St, sharing a roofline and mirrored facade. Ground floor altered for commercial use (Boho Chachkies); 1 dwelling unit above.",
+  "facade_description": "78 Nassau St is a converted house-form, house-form  semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, house-form  semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice, decorative brick, original windows, gable brackets.",
   "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features, including mirrored facades, shared roofline, bracketed eaves, first storey bay windows and fenestration pattern with segmentally arched openings. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
   "roof_material": "Grey asphalt shingles",
+  "volumes": [],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#E8E0D0",
     "roof_hex": "#5A5A5A",
     "accent_hex": "#E8E0D0",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C95E40",
+    "trim": "#303030",
+    "roof": "#615858",
+    "accent": "#473E2C"
   },
-  "volumes": [],
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  }
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_155435964_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.3,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 2.9,
+            "sill_height_m": 2.3,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [
+      "decorative_brickwork",
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 1.5
 }

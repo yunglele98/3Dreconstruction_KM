@@ -1,0 +1,757 @@
+{
+  "building_name": "401 College St - Kensington Community Early Learning Centre",
+  "floors": 3,
+  "floor_heights_m": [
+    4.8,
+    4.8,
+    4.2
+  ],
+  "total_height_m": 13.8,
+  "facade_width_m": 8.2,
+  "facade_depth_m": 49.4,
+  "site": {
+    "lon": -79.40573152,
+    "lat": 43.65639782,
+    "street": "College St",
+    "street_number": null,
+    "setback_m": 0.5,
+    "lot_area_sqm": 7575.916019401949,
+    "footprint_sqm": 175.9,
+    "lot_coverage_pct": 2.3,
+    "lots_sharing_footprint": 1
+  },
+  "roof_type": "Mansard",
+  "roof_pitch_deg": 68,
+  "roof_features": [],
+  "facade_material": "Brick",
+  "facade_colour": "red brick",
+  "windows_per_floor": [
+    0,
+    3,
+    2
+  ],
+  "window_type": "Double-hung sash",
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "House-form, Semi-detached, Bay-and-Gable",
+    "construction_date": "Pre-1889",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900\u20131930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "Yes",
+    "hcd_plan_index": 137,
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+    "building_features": [],
+    "heritage_register": "Part V HCD Contributing",
+    "protection_level": 4
+  },
+  "context": {
+    "building_type": "",
+    "general_use": "Commercial",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Professional / Community Services",
+    "business_name": "Kensington Community School & Kensington Kids Early Learning Centre",
+    "business_category": "",
+    "zoning": "R",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+  },
+  "assessment": {
+    "condition_rating": null,
+    "condition_issues": "",
+    "structural_concern": false,
+    "risk_score": null,
+    "signage": "",
+    "street_presence": ""
+  },
+  "city_data": {
+    "height_max_m": 16.98,
+    "height_avg_m": 14.78,
+    "footprint_sqm": 175.9,
+    "gfa_sqm": 527.7,
+    "fsi": 0.07,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 6,
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "heritage_feature_count": null
+  },
+  "_meta": {
+    "address": "401 College St",
+    "source": "postgis_export",
+    "db": "kensington",
+    "translated": true,
+    "translations_applied": [
+      "doors_detail"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail"
+    ],
+    "db_match_mode": "raw",
+    "db_address_full": "401 College St",
+    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_address_candidates": [
+      "401 COLLEGE ST"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 16.98,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "custom_passes": [
+      {
+        "pass": "pass_1_massing",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Rebuilt 401 College St as multi-volume institutional massing using field photos plus GIS-derived footprint envelope (approx. 77.4m x 54.5m OBB, area ~2176.9 sqm) and site_coordinates massing height 14.78m."
+      },
+      {
+        "pass": "pass_2_massing_refine",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Extended depth toward full footprint envelope and added stacked upper roof-band masses to match stepped blue cladding profile seen in March 2026 field photos."
+      },
+      {
+        "pass": "pass_3_massing_refine",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Added low front canopy masses and one rear upper service mass; refined front/rear recess profile while keeping detail-free massing workflow."
+      },
+      {
+        "pass": "pass_4_geometry_lock",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Locked left/center/right volume proportions and adjusted canopy/upper-tier offsets for closer alignment to observed stepped facade and roof-band massing."
+      },
+      {
+        "pass": "pass_5_facade_blockin",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Added placeholder facade bay rhythm on the primary frontage blocks (left/center/right) while preserving massing geometry from pass 4."
+      },
+      {
+        "pass": "pass_6_facade_banding",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Replaced coarse facade placeholders with lower horizontal window-band placeholders and added explicit entry-door block masses on the three primary frontage segments."
+      },
+      {
+        "pass": "pass_7_entry_align",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Reduced placeholder mullion density on the three primary facade bands and refined entry block width/position to better match observed front elevations."
+      },
+      {
+        "pass": "pass_8_predetail_lock",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Final pre-detail cleanup: simplified remaining facade placeholder bands and locked this geometry state as baseline for detailed opening/material passes."
+      },
+      {
+        "pass": "pass_9_multiband_facade",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Enabled multi-band facade placeholders via generator update and applied two-row school-window banding on primary frontage masses."
+      },
+      {
+        "pass": "pass_10_explicit_openings",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Replaced primary facade placeholder bands with explicit window and door cut-ins on three main frontage volumes."
+      },
+      {
+        "pass": "pass_11_opening_tune",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Refined primary facade opening counts, widths, sill heights, and door offsets to better match front-elevation proportions."
+      },
+      {
+        "pass": "pass_12_roofline_proxy",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Added roofline detail proxies (parapet/fascia) and canopy post massing on primary frontage segments while preserving locked geometry."
+      },
+      {
+        "pass": "pass_13_canopy_beams",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Added canopy beam proxies spanning post rows on front canopy volumes for stronger entry-structure silhouette."
+      },
+      {
+        "pass": "pass_14_roof_units",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Added rooftop mechanical unit proxies on upper masses to better match observed roof clutter and service geometry."
+      },
+      {
+        "pass": "pass_15_perimeter_fence",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Added low perimeter fence/wall proxy masses along the front edge to match the school-yard boundary seen in field photos."
+      },
+      {
+        "pass": "pass_16_fence_pickets",
+        "timestamp": "2026-03-26",
+        "author": "codex",
+        "summary": "Added vertical fence picket proxies on front boundary segments to better match observed yard fencing texture."
+      }
+    ],
+    "custom_source_photos": [
+      "IMG_20260315_150058951_HDR.jpg",
+      "IMG_20260315_150250031_HDR.jpg",
+      "IMG_20260315_150257259_HDR.jpg",
+      "IMG_20260315_150320317_HDR.jpg",
+      "IMG_20260315_150353013_HDR.jpg",
+      "IMG_20260315_150355853_HDR.jpg",
+      "IMG_20260315_150401668_HDR.jpg",
+      "IMG_20260315_150419479_HDR.jpg",
+      "IMG_20260320_174230805_HDR.jpg",
+      "IMG_20260320_174320544_HDR.jpg",
+      "IMG_20260320_174401008_HDR.jpg",
+      "IMG_20260320_174430049_HDR.jpg",
+      "IMG_20260320_174506577_HDR.jpg",
+      "IMG_20260320_174530546_HDR.jpg"
+    ],
+    "custom_workflow_note": "Pass 16 keeps pass-15 setup and adds vertical picket proxies on perimeter fence segments.",
+    "custom_geometry_baseline_locked": true,
+    "custom_geometry_lock_reference": {
+      "footprint_obb_m": [
+        77.404,
+        54.473
+      ],
+      "target_height_m": 14.78
+    }
+  },
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "colour_hex": "#3A2A20",
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      }
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#8A5C43",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#1E3F73",
+    "composition": "The street elevation spans roughly 8.2 metres across 3 storeys and is capped by a mansard, consistent with its semi-detached bay-and-gable house-form typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays and 2 additional bays above, using double-hung sash windows, and 1 principal entrance.",
+    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s."
+  },
+  "roof_colour": "#1E4F93",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.4,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "Double-hung sash",
+          "width_m": 0.9,
+          "height_m": 2.2,
+          "sill_height_m": 1.7,
+          "frame_colour": "#3A2A20",
+          "glazing": "1-over-1"
+        }
+      ]
+    }
+  ],
+  "bay_window": {
+    "present": true,
+    "type": "Three-sided projecting bay",
+    "width_m": 21.8,
+    "projection_m": 0.6,
+    "floors": [
+      0,
+      1
+    ]
+  },
+  "decorative_elements": {
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 2
+  },
+  "chimneys": {
+    "count": 0
+  },
+  "street_setback_m": 2.0,
+  "confidence": 0.9,
+  "facade_description": "401 College St - Kensington Community Early Learning Centre is a bay-and-gable house-form building. The street elevation spans roughly 8.2 metres across 3 storeys and is capped by a mansard, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays and 2 additional bays above, using double-hung sash windows, and 1 principal entrance.",
+  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+  "roof_material": "Blue metal cladding",
+  "colour_palette": {
+    "facade_hex": "#8A5C43",
+    "trim_hex": "#1E3F73",
+    "roof_hex": "#1E4F93",
+    "accent_hex": "#1E3F73",
+    "door_hex": "#2F3A52",
+    "mortar_hex": "#C8C0B0"
+  },
+  "volumes": [
+    {
+      "id": "modern_addition",
+      "width_m": 22.5,
+      "depth_m": 40.0,
+      "floor_heights_m": [
+        4.8,
+        4.4
+      ],
+      "total_height_m": 9.6,
+      "facade_colour": "#8A5C43",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "base": {
+        "height_m": 1.9
+      },
+      "curtain_wall": null,
+      "window_rows": [
+        {
+          "count": 5,
+          "width_m": 2.55,
+          "height_m": 0.85,
+          "sill_height_m": 1.95,
+          "z_offset_m": 0.0,
+          "frame_colour": "#2F3A52",
+          "add_frames": false
+        },
+        {
+          "count": 5,
+          "width_m": 2.55,
+          "height_m": 0.85,
+          "sill_height_m": 1.95,
+          "z_offset_m": 1.3,
+          "frame_colour": "#2F3A52",
+          "add_frames": false
+        }
+      ],
+      "doors_detail": [
+        {
+          "position": "left",
+          "x_offset_m": 0.35,
+          "width_m": 1.7,
+          "height_m": 2.3
+        }
+      ],
+      "door_colour_hex": "#2F3A52",
+      "parapet_height_m": 0.34,
+      "parapet_thickness_m": 0.16,
+      "fascia_depth_m": 0.24,
+      "fascia_height_m": 0.26,
+      "trim_colour_hex": "#1E4F93"
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 4.6,
+      "z_offset_m": 3.2,
+      "width_m": 14.0,
+      "depth_m": 7.0,
+      "floor_heights_m": [
+        0.85
+      ],
+      "total_height_m": 0.85,
+      "facade_colour": "#1E4F93",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "canopy_post_count": 3,
+      "canopy_post_width_m": 0.24,
+      "canopy_post_depth_m": 0.24,
+      "canopy_post_height_m": 2.7,
+      "canopy_post_inset_m": 0.55,
+      "canopy_beam_height_m": 0.24,
+      "canopy_beam_depth_m": 0.26,
+      "canopy_beam_z_m": 2.72,
+      "door_colour_hex": "#2F3A52"
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 1.2,
+      "z_offset_m": 9.0,
+      "width_m": 22.5,
+      "depth_m": 35.0,
+      "floor_heights_m": [
+        3.4
+      ],
+      "total_height_m": 3.4,
+      "facade_colour": "#1E4F93",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "roof_units": [
+        {
+          "width_m": 1.8,
+          "depth_m": 1.2,
+          "height_m": 0.75,
+          "x_offset_m": -4.0,
+          "y_offset_m": -12.0
+        },
+        {
+          "width_m": 2.1,
+          "depth_m": 1.3,
+          "height_m": 0.8,
+          "x_offset_m": 3.6,
+          "y_offset_m": -18.5
+        }
+      ]
+    },
+    {
+      "id": "modern_addition",
+      "width_m": 21.5,
+      "depth_m": 53.0,
+      "floor_heights_m": [
+        4.5,
+        4.3,
+        4.1
+      ],
+      "total_height_m": 12.9,
+      "facade_colour": "#8A5C43",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "base": {
+        "height_m": 2.0
+      },
+      "curtain_wall": null,
+      "window_rows": [
+        {
+          "count": 6,
+          "width_m": 2.15,
+          "height_m": 0.9,
+          "sill_height_m": 2.0,
+          "z_offset_m": 0.0,
+          "frame_colour": "#2F3A52",
+          "add_frames": false
+        },
+        {
+          "count": 6,
+          "width_m": 2.15,
+          "height_m": 0.9,
+          "sill_height_m": 2.0,
+          "z_offset_m": 1.28,
+          "frame_colour": "#2F3A52",
+          "add_frames": false
+        }
+      ],
+      "doors_detail": [
+        {
+          "position": "center",
+          "x_offset_m": 0.2,
+          "width_m": 1.9,
+          "height_m": 2.45
+        }
+      ],
+      "door_colour_hex": "#2F3A52",
+      "parapet_height_m": 0.36,
+      "parapet_thickness_m": 0.16,
+      "fascia_depth_m": 0.24,
+      "fascia_height_m": 0.28,
+      "trim_colour_hex": "#1E4F93"
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 4.5,
+      "z_offset_m": 3.2,
+      "width_m": 14.5,
+      "depth_m": 7.2,
+      "floor_heights_m": [
+        0.9
+      ],
+      "total_height_m": 0.9,
+      "facade_colour": "#1E4F93",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "canopy_post_count": 3,
+      "canopy_post_width_m": 0.24,
+      "canopy_post_depth_m": 0.24,
+      "canopy_post_height_m": 2.75,
+      "canopy_post_inset_m": 0.55,
+      "canopy_beam_height_m": 0.24,
+      "canopy_beam_depth_m": 0.26,
+      "canopy_beam_z_m": 2.78,
+      "door_colour_hex": "#2F3A52"
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 1.2,
+      "z_offset_m": 12.2,
+      "width_m": 21.5,
+      "depth_m": 47.0,
+      "floor_heights_m": [
+        3.8
+      ],
+      "total_height_m": 3.8,
+      "facade_colour": "#1E4F93",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "roof_units": [
+        {
+          "width_m": 2.2,
+          "depth_m": 1.4,
+          "height_m": 0.85,
+          "x_offset_m": -3.0,
+          "y_offset_m": -16.0
+        },
+        {
+          "width_m": 1.6,
+          "depth_m": 1.1,
+          "height_m": 0.7,
+          "x_offset_m": 4.1,
+          "y_offset_m": -22.0
+        }
+      ]
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": -9.5,
+      "z_offset_m": 9.2,
+      "width_m": 13.0,
+      "depth_m": 16.0,
+      "floor_heights_m": [
+        2.8
+      ],
+      "total_height_m": 2.8,
+      "facade_colour": "#1E4F93",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null
+    },
+    {
+      "id": "modern_addition",
+      "width_m": 33.4,
+      "depth_m": 43.5,
+      "floor_heights_m": [
+        4.3,
+        4.0,
+        3.7
+      ],
+      "total_height_m": 12.0,
+      "facade_colour": "#8A5C43",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "base": {
+        "height_m": 1.95
+      },
+      "curtain_wall": null,
+      "window_rows": [
+        {
+          "count": 7,
+          "width_m": 2.35,
+          "height_m": 0.85,
+          "sill_height_m": 1.9,
+          "z_offset_m": 0.0,
+          "frame_colour": "#2F3A52",
+          "add_frames": false
+        },
+        {
+          "count": 7,
+          "width_m": 2.35,
+          "height_m": 0.85,
+          "sill_height_m": 1.9,
+          "z_offset_m": 1.3,
+          "frame_colour": "#2F3A52",
+          "add_frames": false
+        }
+      ],
+      "doors_detail": [
+        {
+          "position": "right",
+          "x_offset_m": -0.6,
+          "width_m": 2.0,
+          "height_m": 2.4
+        }
+      ],
+      "door_colour_hex": "#2F3A52",
+      "parapet_height_m": 0.34,
+      "parapet_thickness_m": 0.15,
+      "fascia_depth_m": 0.22,
+      "fascia_height_m": 0.24,
+      "trim_colour_hex": "#1E4F93"
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 4.4,
+      "z_offset_m": 3.2,
+      "width_m": 22.0,
+      "depth_m": 6.8,
+      "floor_heights_m": [
+        0.85
+      ],
+      "total_height_m": 0.85,
+      "facade_colour": "#1E4F93",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "canopy_post_count": 4,
+      "canopy_post_width_m": 0.24,
+      "canopy_post_depth_m": 0.24,
+      "canopy_post_height_m": 2.7,
+      "canopy_post_inset_m": 0.55,
+      "canopy_beam_height_m": 0.24,
+      "canopy_beam_depth_m": 0.26,
+      "canopy_beam_z_m": 2.72,
+      "door_colour_hex": "#2F3A52"
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 1.0,
+      "z_offset_m": 11.0,
+      "width_m": 33.4,
+      "depth_m": 35.0,
+      "floor_heights_m": [
+        3.2
+      ],
+      "total_height_m": 3.2,
+      "facade_colour": "#1E4F93",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "roof_units": [
+        {
+          "width_m": 2.4,
+          "depth_m": 1.5,
+          "height_m": 0.9,
+          "x_offset_m": -6.2,
+          "y_offset_m": -11.8
+        },
+        {
+          "width_m": 2.0,
+          "depth_m": 1.3,
+          "height_m": 0.8,
+          "x_offset_m": 6.8,
+          "y_offset_m": -19.0
+        }
+      ]
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 7.8,
+      "z_offset_m": 0.0,
+      "width_m": 22.5,
+      "depth_m": 1.2,
+      "floor_heights_m": [
+        1.55
+      ],
+      "total_height_m": 1.55,
+      "facade_colour": "#A5875A",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "fence_pickets": {
+        "count": 34,
+        "width_m": 0.065,
+        "depth_m": 0.04,
+        "height_m": 1.45,
+        "inset_m": 0.03,
+        "colour_hex": "#B99661"
+      }
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 7.8,
+      "z_offset_m": 0.0,
+      "width_m": 21.5,
+      "depth_m": 1.2,
+      "floor_heights_m": [
+        1.55
+      ],
+      "total_height_m": 1.55,
+      "facade_colour": "#A5875A",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "fence_pickets": {
+        "count": 32,
+        "width_m": 0.065,
+        "depth_m": 0.04,
+        "height_m": 1.45,
+        "inset_m": 0.03,
+        "colour_hex": "#B99661"
+      }
+    },
+    {
+      "id": "modern_addition",
+      "stack_with_previous": true,
+      "y_offset_m": 7.8,
+      "z_offset_m": 0.0,
+      "width_m": 33.4,
+      "depth_m": 1.2,
+      "floor_heights_m": [
+        1.55
+      ],
+      "total_height_m": 1.55,
+      "facade_colour": "#A5875A",
+      "facade_material": "brick",
+      "roof_type": "flat",
+      "curtain_wall": null,
+      "fence_pickets": {
+        "count": 48,
+        "width_m": 0.065,
+        "depth_m": 0.04,
+        "height_m": 1.45,
+        "inset_m": 0.03,
+        "colour_hex": "#B99661"
+      }
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "skipped": true,
+  "skip_reason": "Backup/variant of 401_College_St"
+}

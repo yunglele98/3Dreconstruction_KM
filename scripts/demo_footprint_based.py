@@ -41,9 +41,10 @@ for f in (SCRIPT_DIR / "params").glob("*.json"):
     except:
         pass
 
-# Expanded bounds to include Bellevue Park surroundings (Denison Sq, Wales Ave east side)
-X_MIN, X_MAX = -130, 70
-Y_MIN, Y_MAX = -210, 30
+# Full Kensington Market
+# Dundas (north) to College (south), Bathurst (east) to Spadina (west)
+X_MIN, X_MAX = -350, 200
+Y_MIN, Y_MAX = -400, 350
 
 # Scene transform: rotate so Bellevue Ave aligns with Y axis, center on origin.
 # Bellevue runs at ~98 degrees from +X. Rotate by -98 degrees.
@@ -130,6 +131,23 @@ def road_mesh(coords, width, name):
             bm.faces.new([L[i], L[i+1], R[i+1], R[i]])
         except:
             pass
+    mesh = bpy.data.meshes.new(name)
+    bm.to_mesh(mesh)
+    bm.free()
+    return mesh
+
+
+def poly_mesh(ring, z, name):
+    """Create a filled polygon mesh from a ring of 2D coordinates."""
+    if len(ring) < 3:
+        return None
+    bm = bmesh.new()
+    verts = [bm.verts.new((x, y, z)) for x, y in ring]
+    try:
+        bm.faces.new(verts)
+    except:
+        bm.free()
+        return None
     mesh = bpy.data.meshes.new(name)
     bm.to_mesh(mesh)
     bm.free()
@@ -2394,6 +2412,1854 @@ def create_building_from_footprint(ring, collection, override_h=None):
             clo.data.materials.append(m_lap)
             link(clo, collection)
 
+    # =========================================================================
+    # COMMERCIAL / KENSINGTON MARKET SPECIFIC DETAILS
+    # =========================================================================
+
+    # Business name sign (coloured box with business name from context)
+    biz_name = params.get("context", {}).get("business_name") if isinstance(params.get("context"), dict) else None
+    if biz_name and has_storefront and len(edges) > 0:
+        el0_bn, bnx1, bny1, bnx2, bny2, bnnx, bnny = edges[0]
+        bn_dx, bn_dy = bnx2 - bnx1, bny2 - bny1
+        bn_angle = math.atan2(bn_dy, bn_dx)
+        # Large sign above storefront
+        sign_w = min(el0_bn * 0.7, 4.0)
+        sign_h = 0.6
+        sign_z = floor_h + 0.2
+        bsx = bnx1 + bn_dx * 0.5 + bnnx * 0.1
+        bsy = bny1 + bn_dy * 0.5 + bnny * 0.1
+        biz_colours = ["#1A3A1A", "#3A1A1A", "#1A1A3A", "#4A3A1A", "#E8E0D0",
+                       "#2A4A4A", "#4A2A4A", "#2A2A2A", "#C04040", "#4040C0"]
+        biz_hex = biz_colours[hash(biz_name) % len(biz_colours)]
+        m_biz = mat(f"BizSign_{biz_hex}", biz_hex, 0.6)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bsx, bsy, sign_z))
+        bso = bpy.context.active_object
+        bso.name = "BizSign"
+        bso.scale = (sign_w / 2, 0.08, sign_h / 2)
+        bso.rotation_euler = (0, 0, bn_angle)
+        bso.data.materials.append(m_biz)
+        link(bso, collection)
+        # Sign bracket (small L-shaped support)
+        for sb_side in [-sign_w/2 + 0.2, sign_w/2 - 0.2]:
+            sbx = bsx + math.cos(bn_angle) * sb_side
+            sby = bsy + math.sin(bn_angle) * sb_side
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(sbx, sby, sign_z - 0.1))
+            sbo = bpy.context.active_object
+            sbo.name = "SignBracket"
+            sbo.scale = (0.02, 0.06, 0.04)
+            sbo.rotation_euler = (0, 0, bn_angle)
+            sbo.data.materials.append(mat("SignBracket", "#3A3A3A", 0.5))
+            link(sbo, collection)
+
+    # Projecting blade sign (perpendicular sign sticking out from facade)
+    if biz_name and has_storefront and random.random() > 0.4 and len(edges) > 0:
+        el0_bs, bsx1, bsy1, bsx2, bsy2, bsnx, bsny = edges[0]
+        bs_angle = math.atan2(bsy2 - bsy1, bsx2 - bsx1)
+        bs_t = random.uniform(0.3, 0.7)
+        psx = bsx1 + (bsx2-bsx1) * bs_t + bsnx * 0.4
+        psy = bsy1 + (bsy2-bsy1) * bs_t + bsny * 0.4
+        blade_hex = biz_colours[hash(biz_name + "blade") % len(biz_colours)]
+        m_blade = mat(f"Blade_{blade_hex}", blade_hex, 0.6)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(psx, psy, floor_h + 0.5))
+        blo = bpy.context.active_object
+        blo.name = "BladSign"
+        blo.scale = (0.03, 0.4, 0.3)
+        blo.rotation_euler = (0, 0, bs_angle)
+        blo.data.materials.append(m_blade)
+        link(blo, collection)
+        # Mounting arm
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(
+            bsx1 + (bsx2-bsx1)*bs_t + bsnx*0.15, bsy1 + (bsy2-bsy1)*bs_t + bsny*0.15,
+            floor_h + 0.8))
+        arm = bpy.context.active_object
+        arm.name = "BladeArm"
+        arm.scale = (0.02, 0.2, 0.02)
+        arm.rotation_euler = (0, 0, bs_angle)
+        arm.data.materials.append(mat("BladeArm", "#3A3A3A", 0.5))
+        link(arm, collection)
+
+    # Display window (glass showcase box projecting from storefront)
+    if has_storefront and random.random() > 0.6 and len(edges) > 0:
+        el0_dw, dwx1, dwy1, dwx2, dwy2, dwnx, dwny = edges[0]
+        dw_dx, dw_dy = dwx2 - dwx1, dwy2 - dwy1
+        dw_angle = math.atan2(dw_dy, dw_dx)
+        dw_t = random.uniform(0.2, 0.4)
+        dwx_p = dwx1 + dw_dx * dw_t + dwnx * 0.3
+        dwy_p = dwy1 + dw_dy * dw_t + dwny * 0.3
+        m_display = mat("DisplayCase", "#6A8A9A", 0.2)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(dwx_p, dwy_p, 0.7))
+        dwo = bpy.context.active_object
+        dwo.name = "DisplayWindow"
+        dwo.scale = (0.6, 0.3, 0.5)
+        dwo.rotation_euler = (0, 0, dw_angle)
+        dwo.data.materials.append(m_display)
+        link(dwo, collection)
+
+    # Roll-up security gate (metal grid over storefront — some shops)
+    if has_storefront and random.random() > 0.85 and len(edges) > 0:
+        el0_sg, sgx1, sgy1, sgx2, sgy2, sgnx, sgny = edges[0]
+        sg_dx, sg_dy = sgx2 - sgx1, sgy2 - sgy1
+        sg_angle = math.atan2(sg_dy, sg_dx)
+        sf_data_sg = params.get("storefront", {})
+        sg_w = sf_data_sg.get("width_m", el0_sg * 0.7) if isinstance(sf_data_sg, dict) else el0_sg * 0.7
+        sgx_c = sgx1 + sg_dx * 0.5 + sgnx * 0.04
+        sgy_c = sgy1 + sg_dy * 0.5 + sgny * 0.04
+        m_gate = mat("SecurityGate", "#6A6A6A", 0.4)
+        # Gate housing (box above storefront)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(sgx_c, sgy_c, floor_h + 0.1))
+        gho = bpy.context.active_object
+        gho.name = "GateHousing"
+        gho.scale = (sg_w / 2, 0.08, 0.1)
+        gho.rotation_euler = (0, 0, sg_angle)
+        gho.data.materials.append(m_gate)
+        link(gho, collection)
+
+    # Outdoor merchandise display (racks/tables in front of shop)
+    if has_storefront and random.random() > 0.5 and len(edges) > 0:
+        el0_md, mdx1, mdy1, mdx2, mdy2, mdnx, mdny = edges[0]
+        md_dx, md_dy = mdx2 - mdx1, mdy2 - mdy1
+        md_angle = math.atan2(md_dy, md_dx)
+        mdx_c = mdx1 + md_dx * random.uniform(0.3, 0.7) + mdnx * 2.0
+        mdy_c = mdy1 + md_dy * random.uniform(0.3, 0.7) + mdny * 2.0
+        m_rack = mat("DisplayRack", "#8A7050", 0.8)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(mdx_c, mdy_c, 0.5))
+        mdo = bpy.context.active_object
+        mdo.name = "MerchDisplay"
+        mdo.scale = (0.6, 0.3, 0.5)
+        mdo.rotation_euler = (0, 0, md_angle + random.uniform(-0.2, 0.2))
+        mdo.data.materials.append(m_rack)
+        link(mdo, collection)
+
+    # A-frame sandwich board (advertising sign on sidewalk)
+    if has_storefront and random.random() > 0.4 and len(edges) > 0:
+        el0_af, afx1, afy1, afx2, afy2, afnx, afny = edges[0]
+        af_dx, af_dy = afx2 - afx1, afy2 - afy1
+        af_angle = math.atan2(af_dy, af_dx)
+        afx_c = afx1 + af_dx * 0.6 + afnx * 2.5
+        afy_c = afy1 + af_dy * 0.6 + afny * 2.5
+        board_colours = ["#E8E0D0", "#2A2A2A", "#4A2A1A", "#1A4A1A"]
+        m_board = mat(f"AFrame_{random.choice(board_colours)}", random.choice(board_colours), 0.7)
+        # Two angled panels
+        for af_side in [-0.02, 0.02]:
+            bpy.ops.mesh.primitive_cube_add(size=1,
+                location=(afx_c + afnx * af_side * 10, afy_c + afny * af_side * 10, 0.35))
+            afo = bpy.context.active_object
+            afo.name = "AFrame"
+            afo.scale = (0.3, 0.02, 0.35)
+            tilt = 0.08 if af_side > 0 else -0.08
+            afo.rotation_euler = (0, tilt, af_angle)
+            afo.data.materials.append(m_board)
+            link(afo, collection)
+
+    # Fruit/produce crates (Kensington Market specialty — stacked boxes outside shops)
+    biz_cat = params.get("context", {}).get("business_category", "") if isinstance(params.get("context"), dict) else ""
+    if has_storefront and ("food" in str(biz_cat).lower() or "grocery" in str(biz_cat).lower() or
+                           "produce" in str(biz_cat).lower() or "market" in str(biz_name or "").lower() or
+                           random.random() > 0.8) and len(edges) > 0:
+        el0_cr, crx1, cry1, crx2, cry2, crnx, crny = edges[0]
+        cr_dx, cr_dy = crx2 - crx1, cry2 - cry1
+        cr_angle = math.atan2(cr_dy, cr_dx)
+        crx_c = crx1 + cr_dx * 0.3 + crnx * 1.5
+        cry_c = cry1 + cr_dy * 0.3 + crny * 1.5
+        crate_colours = ["#8A6A3A", "#6A5A2A", "#9A7A4A"]
+        for ci_cr in range(random.randint(2, 5)):
+            cx_cr = crx_c + math.cos(cr_angle) * ci_cr * 0.45
+            cy_cr = cry_c + math.sin(cr_angle) * ci_cr * 0.45
+            stack_h = random.randint(1, 3)
+            for si_cr in range(stack_h):
+                m_crate = mat(f"Crate_{random.choice(crate_colours)}",
+                              random.choice(crate_colours), 0.85)
+                bpy.ops.mesh.primitive_cube_add(size=1,
+                    location=(cx_cr, cy_cr, 0.15 + si_cr * 0.3))
+                cro = bpy.context.active_object
+                cro.name = f"Crate_{ci_cr}_{si_cr}"
+                cro.scale = (0.2, 0.15, 0.12)
+                cro.rotation_euler = (0, 0, cr_angle + random.uniform(-0.1, 0.1))
+                cro.data.materials.append(m_crate)
+                link(cro, collection)
+
+    # String lights (decorative lights between buildings — Kensington vibe)
+    if has_storefront and random.random() > 0.6 and len(edges) > 0:
+        el0_sl, slx1, sly1, slx2, sly2, slnx, slny = edges[0]
+        sl_dx, sl_dy = slx2 - slx1, sly2 - sly1
+        sl_angle = math.atan2(sl_dy, sl_dx)
+        m_string_wire = mat("StringWire", "#2A2A2A", 0.5)
+        m_string_bulb = mat("StringBulb", "#F0E8A0", 0.3)
+        # Wire from one side of storefront to the other, with sag
+        n_bulbs = max(3, int(el0_sl / 0.5))
+        for sli in range(n_bulbs):
+            t_sl = sli / max(n_bulbs - 1, 1)
+            sag = -0.3 * math.sin(t_sl * math.pi)  # parabolic sag
+            slx_p = slx1 + sl_dx * t_sl + slnx * 1.5
+            sly_p = sly1 + sl_dy * t_sl + slny * 1.5
+            slz = floor_h - 0.3 + sag
+            # Small bulb
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.03,
+                location=(slx_p, sly_p, slz), segments=4, ring_count=3)
+            slo = bpy.context.active_object
+            slo.name = f"Bulb_{sli}"
+            slo.data.materials.append(m_string_bulb)
+            link(slo, collection)
+
+    # Plywood hoarding / construction barrier (on some vacant/under renovation)
+    condition = params.get("condition", "")
+    if condition in ("poor", "vacant") and len(edges) > 0:
+        el0_hw, hwx1, hwy1, hwx2, hwy2, hwnx, hwny = edges[0]
+        hw_angle = math.atan2(hwy2 - hwy1, hwx2 - hwx1)
+        hmx = (hwx1 + hwx2) / 2 + hwnx * 0.5
+        hmy = (hwy1 + hwy2) / 2 + hwny * 0.5
+        m_plywood = mat("Plywood", "#C0A878", 0.9)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(hmx, hmy, 1.2))
+        hwo = bpy.context.active_object
+        hwo.name = "Hoarding"
+        hwo.scale = (el0_hw * 0.8 / 2, 0.03, 1.2)
+        hwo.rotation_euler = (0, 0, hw_angle)
+        hwo.data.materials.append(m_plywood)
+        link(hwo, collection)
+
+    # Graffiti tag (small coloured rectangle on side wall — common in Kensington)
+    po_graf = params.get("photo_observations", {})
+    if isinstance(po_graf, dict) and po_graf.get("graffiti") and len(edges) >= 2:
+        _, grx1, gry1, grx2, gry2, grnx, grny = edges[1]
+        gr_angle = math.atan2(gry2 - gry1, grx2 - grx1) if abs(grx2-grx1) > 0.01 else 0
+        gr_angle = math.atan2(gry2 - gry1, grx2 - grx1)
+        grx_c = (grx1 + grx2) / 2 + grnx * 0.05
+        gry_c = (gry1 + gry2) / 2 + grny * 0.05
+        graf_colours = ["#CC4466", "#44CC88", "#4488CC", "#CCAA44", "#AA44CC",
+                        "#FF6644", "#44AAAA", "#CC8844"]
+        for gi_gr in range(random.randint(1, 3)):
+            g_hex = random.choice(graf_colours)
+            gx = grx_c + random.uniform(-1.5, 1.5)
+            gy = gry_c + random.uniform(-1.5, 1.5)
+            gz = random.uniform(0.5, h * 0.6)
+            m_graf = mat(f"Graf_{g_hex}", g_hex, 0.7)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(gx, gy, gz))
+            gro = bpy.context.active_object
+            gro.name = f"Graffiti_{gi_gr}"
+            gro.scale = (random.uniform(0.3, 1.0), 0.015, random.uniform(0.2, 0.6))
+            gro.rotation_euler = (0, 0, gr_angle)
+            gro.data.materials.append(m_graf)
+            link(gro, collection)
+
+    # Vintage/antique shop clutter (Kensington is full of vintage shops)
+    if has_storefront and "vintage" in str(biz_name or "").lower() and len(edges) > 0:
+        el0_vt, vtx1, vty1, vtx2, vty2, vtnx, vtny = edges[0]
+        vt_angle = math.atan2(vty2 - vty1, vtx2 - vtx1)
+        m_junk = mat("VintageJunk", "#8A6A4A", 0.8)
+        for vi in range(random.randint(3, 7)):
+            vx = vtx1 + (vtx2-vtx1) * random.uniform(0.1, 0.9) + vtnx * random.uniform(1, 3)
+            vy = vty1 + (vty2-vty1) * random.uniform(0.1, 0.9) + vtny * random.uniform(1, 3)
+            vz = random.uniform(0, 0.5)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(vx, vy, vz + 0.1))
+            vto = bpy.context.active_object
+            vto.name = f"VintageItem_{vi}"
+            vto.scale = (random.uniform(0.1, 0.3), random.uniform(0.1, 0.2), random.uniform(0.1, 0.3))
+            vto.rotation_euler = (random.uniform(-0.2, 0.2), random.uniform(-0.2, 0.2), random.uniform(0, 6.28))
+            vto.data.materials.append(m_junk)
+            link(vto, collection)
+
+    # Hanging baskets / planters (on commercial facade brackets)
+    if has_storefront and random.random() > 0.5 and len(edges) > 0:
+        el0_hb, hbx1, hby1, hbx2, hby2, hbnx, hbny = edges[0]
+        hb_dx, hb_dy = hbx2 - hbx1, hby2 - hby1
+        hb_angle = math.atan2(hb_dy, hb_dx)
+        m_basket = mat("HangBasket", "#6A5A3A", 0.8)
+        m_plant_hb = mat("BasketPlant", "#3A5A2A", 0.8)
+        n_baskets = random.randint(1, 3)
+        for hbi in range(n_baskets):
+            hb_t = (hbi + 1) / (n_baskets + 1)
+            hbx_p = hbx1 + hb_dx * hb_t + hbnx * 0.2
+            hby_p = hby1 + hb_dy * hb_t + hbny * 0.2
+            # Bracket
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(hbx_p, hby_p, floor_h + 0.3))
+            hbo = bpy.context.active_object
+            hbo.name = f"BasketBracket_{hbi}"
+            hbo.scale = (0.02, 0.15, 0.02)
+            hbo.rotation_euler = (0, 0, hb_angle)
+            hbo.data.materials.append(mat("BasketBracketM", "#3A3A3A", 0.5))
+            link(hbo, collection)
+            # Basket
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.15,
+                location=(hbx_p + hbnx * 0.15, hby_p + hbny * 0.15, floor_h + 0.1),
+                segments=6, ring_count=4)
+            hbp = bpy.context.active_object
+            hbp.name = f"Basket_{hbi}"
+            hbp.data.materials.append(m_basket)
+            link(hbp, collection)
+            # Plant in basket
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.18,
+                location=(hbx_p + hbnx * 0.15, hby_p + hbny * 0.15, floor_h + 0.2),
+                segments=4, ring_count=3)
+            hbpl = bpy.context.active_object
+            hbpl.name = f"BasketPlant_{hbi}"
+            hbpl.scale = (1, 1, 0.6)
+            hbpl.data.materials.append(m_plant_hb)
+            link(hbpl, collection)
+
+    # Canopy / retractable awning frame (metal frame over storefront)
+    if has_storefront and random.random() > 0.5 and len(edges) > 0:
+        el0_cf, cfx1, cfy1, cfx2, cfy2, cfnx, cfny = edges[0]
+        cf_dx, cf_dy = cfx2 - cfx1, cfy2 - cfy1
+        cf_angle = math.atan2(cf_dy, cf_dx)
+        sf_w_cf = min(el0_cf * 0.7, 4.0)
+        cfx_c = cfx1 + cf_dx * 0.5 + cfnx * 0.8
+        cfy_c = cfy1 + cf_dy * 0.5 + cfny * 0.8
+        m_frame_aw = mat("AwningFrame", "#5A5A5A", 0.4)
+        # Two side arms
+        for arm_side in [-sf_w_cf/2, sf_w_cf/2]:
+            ax_cf = cfx_c + math.cos(cf_angle) * arm_side
+            ay_cf = cfy_c + math.sin(cf_angle) * arm_side
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(ax_cf, ay_cf, floor_h - 0.3))
+            afo_cf = bpy.context.active_object
+            afo_cf.name = "AwFrame"
+            afo_cf.scale = (0.02, 0.5, 0.02)
+            afo_cf.rotation_euler = (0.3, 0, cf_angle)
+            afo_cf.data.materials.append(m_frame_aw)
+            link(afo_cf, collection)
+
+    # Rooftop antenna / cell tower equipment
+    if random.random() > 0.9 and h > 8:
+        m_antenna = mat("Antenna", "#8A8A8A", 0.4)
+        ant_x = cx + random.uniform(-1, 1)
+        ant_y = cy + random.uniform(-1, 1)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.03, depth=2.0,
+            location=(ant_x, ant_y, h + 1.0), vertices=6)
+        ant = bpy.context.active_object
+        ant.name = "Antenna"
+        ant.data.materials.append(m_antenna)
+        link(ant, collection)
+        # Cross pieces
+        for ant_h_off in [0.5, 1.0, 1.5]:
+            bpy.ops.mesh.primitive_cube_add(size=1,
+                location=(ant_x, ant_y, h + ant_h_off))
+            antc = bpy.context.active_object
+            antc.name = "AntennaCross"
+            antc.scale = (0.3, 0.02, 0.02)
+            antc.data.materials.append(m_antenna)
+            link(antc, collection)
+
+    # Exhaust fan / ventilation hood (on restaurant side walls)
+    if has_storefront and "food" in str(biz_cat).lower() and len(edges) >= 2:
+        _, vhx1, vhy1, vhx2, vhy2, vhnx, vhny = edges[1]
+        vh_angle = math.atan2(vhy2 - vhy1, vhx2 - vhx1)
+        vhx_c = (vhx1 + vhx2) / 2 + vhnx * 0.2
+        vhy_c = (vhy1 + vhy2) / 2 + vhny * 0.2
+        m_vent_hood = mat("VentHood", "#6A6A6A", 0.5)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(vhx_c, vhy_c, h * 0.7))
+        vho = bpy.context.active_object
+        vho.name = "VentHood"
+        vho.scale = (0.3, 0.2, 0.3)
+        vho.rotation_euler = (0, 0, vh_angle)
+        vho.data.materials.append(m_vent_hood)
+        link(vho, collection)
+        # Duct pipe going up
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.1, depth=h * 0.3,
+            location=(vhx_c, vhy_c, h * 0.85), vertices=8)
+        vhd = bpy.context.active_object
+        vhd.name = "VentDuct"
+        vhd.data.materials.append(m_vent_hood)
+        link(vhd, collection)
+
+    # Residential front patio furniture (tables/chairs)
+    if not has_storefront and random.random() > 0.7 and params.get("porch_present") and len(edges) > 0:
+        el0_pf, pfx1, pfy1, pfx2, pfy2, pfnx, pfny = edges[0]
+        pf_angle = math.atan2(pfy2 - pfy1, pfx2 - pfx1)
+        pfx_c = pfx1 + (pfx2-pfx1) * 0.5 + pfnx * 1.5
+        pfy_c = pfy1 + (pfy2-pfy1) * 0.5 + pfny * 1.5
+        m_patio_furn = mat("PatioFurn", "#E0D8C8", 0.7)
+        # Small table
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.3, depth=0.03,
+            location=(pfx_c, pfy_c, 0.55), vertices=8)
+        pft = bpy.context.active_object
+        pft.name = "PatioTable"
+        pft.data.materials.append(m_patio_furn)
+        link(pft, collection)
+        # Table leg
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.03, depth=0.55,
+            location=(pfx_c, pfy_c, 0.275), vertices=6)
+        pfl = bpy.context.active_object
+        pfl.name = "TableLeg"
+        pfl.data.materials.append(m_patio_furn)
+        link(pfl, collection)
+        # Two chairs
+        for ch_off in [-0.5, 0.5]:
+            chx = pfx_c + math.cos(pf_angle) * ch_off
+            chy = pfy_c + math.sin(pf_angle) * ch_off
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(chx, chy, 0.35))
+            cho_pf = bpy.context.active_object
+            cho_pf.name = "Chair"
+            cho_pf.scale = (0.2, 0.2, 0.02)
+            cho_pf.data.materials.append(m_patio_furn)
+            link(cho_pf, collection)
+            # Chair back
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(chx - pfnx*0.1, chy - pfny*0.1, 0.55))
+            chb = bpy.context.active_object
+            chb.name = "ChairBack"
+            chb.scale = (0.2, 0.02, 0.12)
+            chb.rotation_euler = (0, 0, pf_angle)
+            chb.data.materials.append(m_patio_furn)
+            link(chb, collection)
+
+    # Security camera (on commercial buildings)
+    if has_storefront and random.random() > 0.6 and len(edges) > 0:
+        el0_cam, camx1, camy1, camx2, camy2, camnx, camny = edges[0]
+        cam_angle = math.atan2(camy2 - camy1, camx2 - camx1)
+        cam_t = random.choice([0.1, 0.9])
+        camx_p = camx1 + (camx2-camx1) * cam_t + camnx * 0.12
+        camy_p = camy1 + (camy2-camy1) * cam_t + camny * 0.12
+        m_camera = mat("SecurityCam", "#2A2A2A", 0.5)
+        # Mounting bracket
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(camx_p, camy_p, floor_h - 0.2))
+        camb = bpy.context.active_object
+        camb.name = "CamBracket"
+        camb.scale = (0.03, 0.12, 0.03)
+        camb.rotation_euler = (0, 0, cam_angle)
+        camb.data.materials.append(m_camera)
+        link(camb, collection)
+        # Camera body
+        bpy.ops.mesh.primitive_cube_add(size=1,
+            location=(camx_p + camnx*0.12, camy_p + camny*0.12, floor_h - 0.2))
+        camc = bpy.context.active_object
+        camc.name = "CamBody"
+        camc.scale = (0.04, 0.06, 0.04)
+        camc.rotation_euler = (0, 0.3, cam_angle)
+        camc.data.materials.append(m_camera)
+        link(camc, collection)
+
+    # Doorbell / intercom panel
+    if len(edges) > 0:
+        el0_db, dbx1_i, dby1_i, dbx2_i, dby2_i, dbnx_i, dbny_i = edges[0]
+        db_angle_i = math.atan2(dby2_i - dby1_i, dbx2_i - dbx1_i)
+        db_t_i = 0.43
+        dbx_p = dbx1_i + (dbx2_i-dbx1_i) * db_t_i + dbnx_i * 0.06
+        dby_p = dby1_i + (dby2_i-dby1_i) * db_t_i + dbny_i * 0.06
+        m_intercom = mat("Intercom", "#C0C0C0", 0.5)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(dbx_p, dby_p, 1.3))
+        dbo_i = bpy.context.active_object
+        dbo_i.name = "Intercom"
+        dbo_i.scale = (0.05, 0.015, 0.08)
+        dbo_i.rotation_euler = (0, 0, db_angle_i)
+        dbo_i.data.materials.append(m_intercom)
+        link(dbo_i, collection)
+
+    # Storefront window decals / stickers (coloured bands on glass)
+    if has_storefront and random.random() > 0.4 and len(edges) > 0:
+        el0_dc, dcx1, dcy1, dcx2, dcy2, dcnx, dcny = edges[0]
+        dc_dx, dc_dy = dcx2 - dcx1, dcy2 - dcy1
+        dc_angle = math.atan2(dc_dy, dc_dx)
+        sf_d = params.get("storefront", {})
+        dc_w = sf_d.get("width_m", el0_dc * 0.5) if isinstance(sf_d, dict) else el0_dc * 0.5
+        dcx_c = dcx1 + dc_dx * 0.5 + dcnx * 0.12
+        dcy_c = dcy1 + dc_dy * 0.5 + dcny * 0.12
+        decal_colours = ["#E8E0D0", "#FFD700", "#FF4444", "#44FF44", "#4444FF"]
+        dc_hex = random.choice(decal_colours)
+        m_decal = mat(f"Decal_{dc_hex}", dc_hex, 0.4)
+        # Horizontal stripe on window
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(dcx_c, dcy_c, 1.0))
+        dco = bpy.context.active_object
+        dco.name = "WinDecal"
+        dco.scale = (dc_w * 0.6 / 2, 0.005, 0.08)
+        dco.rotation_euler = (0, 0, dc_angle)
+        dco.data.materials.append(m_decal)
+        link(dco, collection)
+
+    # Visible interior light (warm glow visible through windows at night)
+    if random.random() > 0.7 and len(edges) > 0:
+        el0_il, ilx1, ily1, ilx2, ily2, ilnx, ilny = edges[0]
+        il_angle = math.atan2(ily2 - ily1, ilx2 - ilx1)
+        ilx_c = (ilx1 + ilx2) / 2
+        ily_c = (ily1 + ily2) / 2
+        m_interior = mat("InteriorGlow", "#F0E8C0", 0.3)
+        # Warm panel behind window (simulates interior light)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ilx_c, ily_c, floor_h * 0.6))
+        ilo = bpy.context.active_object
+        ilo.name = "InteriorLight"
+        ilo.scale = (el0_il * 0.6 / 2, 0.01, floor_h * 0.4)
+        ilo.rotation_euler = (0, 0, il_angle)
+        ilo.data.materials.append(m_interior)
+        link(ilo, collection)
+
+    # Window air conditioning drip tray / bracket
+    if random.random() > 0.8 and floors >= 2 and len(edges) > 0:
+        el0_at, atx1, aty1, atx2, aty2, atnx, atny = edges[0]
+        at_angle = math.atan2(aty2 - aty1, atx2 - atx1)
+        at_t = random.uniform(0.2, 0.8)
+        atx_p = atx1 + (atx2-atx1) * at_t + atnx * 0.15
+        aty_p = aty1 + (aty2-aty1) * at_t + atny * 0.15
+        m_ac_bracket = mat("ACBracket", "#6A6A6A", 0.5)
+        # L-shaped bracket under AC
+        bpy.ops.mesh.primitive_cube_add(size=1,
+            location=(atx_p, aty_p, floor_h + floor_h * 0.3))
+        ato = bpy.context.active_object
+        ato.name = "ACBracket"
+        ato.scale = (0.3, 0.04, 0.03)
+        ato.rotation_euler = (0, 0, at_angle)
+        ato.data.materials.append(m_ac_bracket)
+        link(ato, collection)
+
+    # Newspaper box stand (at commercial doorways)
+    if has_storefront and random.random() > 0.7 and len(edges) > 0:
+        el0_nb, nbx1, nby1, nbx2, nby2, nbnx, nbny = edges[0]
+        nb_angle = math.atan2(nby2 - nby1, nbx2 - nbx1)
+        nbx_c = nbx1 + (nbx2-nbx1) * 0.85 + nbnx * 1.5
+        nby_c = nby1 + (nby2-nby1) * 0.85 + nbny * 1.5
+        nb_colours = ["#CC2222", "#2222CC", "#22CC22", "#CCCC22"]
+        m_nb = mat(f"NewsStand_{random.choice(nb_colours)}", random.choice(nb_colours), 0.6)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(nbx_c, nby_c, 0.5))
+        nbo = bpy.context.active_object
+        nbo.name = "NewsStand"
+        nbo.scale = (0.2, 0.15, 0.5)
+        nbo.rotation_euler = (0, 0, nb_angle)
+        nbo.data.materials.append(m_nb)
+        link(nbo, collection)
+
+    # Gutter downspout elbow (bottom bend where downspout meets ground)
+    if len(edges) >= 2:
+        for dp_ei in range(min(2, len(edges))):
+            el_dp2, dpx1_2, dpy1_2, dpx2_2, dpy2_2, dpnx2, dpny2 = edges[dp_ei]
+            for dp_corner2 in [(dpx1_2, dpy1_2), (dpx2_2, dpy2_2)]:
+                dpx_e = dp_corner2[0] + dpnx2 * 0.12
+                dpy_e = dp_corner2[1] + dpny2 * 0.12
+                m_elbow = mat("DownspoutElbow", "#4A4A4A", 0.5)
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(dpx_e, dpy_e, 0.15))
+                elo = bpy.context.active_object
+                elo.name = "DSElbow"
+                elo.scale = (0.04, 0.06, 0.04)
+                elo.data.materials.append(m_elbow)
+                link(elo, collection)
+
+    # Chimney flashing / base collar
+    if isinstance(chimney_data, dict) and chimney_data.get("count", 0) > 0 and len(edges) >= 2:
+        _, chfx1, chfy1, chfx2, chfy2, chfnx, chfny = edges[1]
+        ch_t_f = 0.5
+        chfx_p = chfx1 + (chfx2-chfx1) * ch_t_f
+        chfy_p = chfy1 + (chfy2-chfy1) * ch_t_f
+        ch_w_f = chimney_data.get("width_m", 0.6)
+        ch_d_f = chimney_data.get("depth_m", 0.4)
+        m_ch_flash = mat("ChimneyFlash", "#707070", 0.4)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(chfx_p, chfy_p, h + 0.02))
+        chfo = bpy.context.active_object
+        chfo.name = "ChFlash"
+        chfo.scale = (ch_w_f/2 + 0.08, ch_d_f/2 + 0.08, 0.03)
+        chfo.data.materials.append(m_ch_flash)
+        link(chfo, collection)
+
+    # Window flower box with flowers (more detailed than window planter)
+    if random.random() > 0.75 and len(edges) > 0:
+        el0_fb2, fbx1_2, fby1_2, fbx2_2, fby2_2, fbnx_2, fbny_2 = edges[0]
+        fb_dx2 = fbx2_2 - fbx1_2
+        fb_dy2 = fby2_2 - fby1_2
+        fb_angle2 = math.atan2(fb_dy2, fb_dx2)
+        win_w_fb2 = params.get("window_width_m", 0.9) or 0.9
+        # Pick a random 2nd floor window
+        fb_t2 = random.uniform(0.2, 0.8)
+        fbx_p2 = fbx1_2 + fb_dx2 * fb_t2 + fbnx_2 * 0.12
+        fby_p2 = fby1_2 + fb_dy2 * fb_t2 + fbny_2 * 0.12
+        sill_fb2 = floor_h + floor_h * 0.25 if floors >= 2 else floor_h * 0.25
+        # Box
+        m_fbox = mat("FlowerBox", "#5A4A2A", 0.8)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(fbx_p2, fby_p2, sill_fb2 - 0.06))
+        fbo2 = bpy.context.active_object
+        fbo2.name = "FlowerBox2"
+        fbo2.scale = (win_w_fb2 * 0.7 / 2, 0.08, 0.06)
+        fbo2.rotation_euler = (0, 0, fb_angle2)
+        fbo2.data.materials.append(m_fbox)
+        link(fbo2, collection)
+        # Flowers (3-5 small coloured spheres)
+        flower_hex2 = ["#FF6688", "#FFAA22", "#FF4444", "#AA44FF", "#44AAFF"]
+        for ffi in range(random.randint(3, 5)):
+            ff_off = random.uniform(-win_w_fb2*0.3, win_w_fb2*0.3)
+            ffx = fbx_p2 + math.cos(fb_angle2) * ff_off + fbnx_2 * 0.05
+            ffy = fby_p2 + math.sin(fb_angle2) * ff_off + fbny_2 * 0.05
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.04,
+                location=(ffx, ffy, sill_fb2 + 0.02), segments=4, ring_count=3)
+            ffo = bpy.context.active_object
+            ffo.name = f"Flower2_{ffi}"
+            ffo.data.materials.append(mat(f"Fl2_{random.choice(flower_hex2)}", random.choice(flower_hex2), 0.7))
+            link(ffo, collection)
+
+    # Wall-mounted mailbox slot (on front wall near door)
+    if not has_storefront and len(edges) > 0:
+        el0_ms, msx1, msy1, msx2, msy2, msnx, msny = edges[0]
+        ms_angle = math.atan2(msy2 - msy1, msx2 - msx1)
+        ms_t = 0.45
+        msx_p = msx1 + (msx2-msx1) * ms_t + msnx * 0.05
+        msy_p = msy1 + (msy2-msy1) * ms_t + msny * 0.05
+        m_mailslot = mat("MailSlot", "#8A7A5A", 0.6)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(msx_p, msy_p, 1.1))
+        mso = bpy.context.active_object
+        mso.name = "MailSlot"
+        mso.scale = (0.15, 0.03, 0.04)
+        mso.rotation_euler = (0, 0, ms_angle)
+        mso.data.materials.append(m_mailslot)
+        link(mso, collection)
+
+    # Garage door (on some houses — rear or side)
+    if not has_storefront and random.random() > 0.8 and len(edges) >= 2:
+        _, gdx1, gdy1, gdx2, gdy2, gdnx, gdny = edges[1]
+        gd_angle = math.atan2(gdy2 - gdy1, gdx2 - gdx1)
+        gdx_c = (gdx1 + gdx2) / 2 + gdnx * 0.06
+        gdy_c = (gdy1 + gdy2) / 2 + gdny * 0.06
+        m_garage = mat("GarageDoor", "#6A6A6A", 0.7)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(gdx_c, gdy_c, 1.2))
+        gdo = bpy.context.active_object
+        gdo.name = "GarageDoor"
+        gdo.scale = (1.3, 0.06, 1.2)
+        gdo.rotation_euler = (0, 0, gd_angle)
+        gdo.data.materials.append(m_garage)
+        link(gdo, collection)
+        # Horizontal panel lines on garage door
+        for gl_i in range(4):
+            gl_z = 0.3 + gl_i * 0.5
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(gdx_c, gdy_c, gl_z))
+            glo = bpy.context.active_object
+            glo.name = f"GarageLine_{gl_i}"
+            glo.scale = (1.25, 0.065, 0.005)
+            glo.rotation_euler = (0, 0, gd_angle)
+            glo.data.materials.append(mat("GarageLine", "#5A5A5A", 0.7))
+            link(glo, collection)
+
+    # Garden hose reel (on side of residential buildings)
+    if not has_storefront and random.random() > 0.85 and len(edges) >= 2:
+        _, hrx1, hry1, hrx2, hry2, hrnx, hrny = edges[1]
+        hrx_c = hrx1 + (hrx2-hrx1) * 0.6 + hrnx * 0.2
+        hry_c = hry1 + (hry2-hry1) * 0.6 + hrny * 0.2
+        m_hose = mat("HoseReel", "#2A6A2A", 0.7)
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.15, minor_radius=0.04,
+            location=(hrx_c, hry_c, 0.4), major_segments=12, minor_segments=6)
+        hro = bpy.context.active_object
+        hro.name = "HoseReel"
+        hro.data.materials.append(m_hose)
+        link(hro, collection)
+
+    # Window curtain/blind indicator (thin coloured strip inside window)
+    if random.random() > 0.5 and len(edges) > 0:
+        el0_cu, cux1, cuy1, cux2, cuy2, cunx, cuny = edges[0]
+        cu_dx, cu_dy = cux2 - cux1, cuy2 - cuy1
+        cu_angle = math.atan2(cu_dy, cu_dx)
+        win_w_cu = params.get("window_width_m", 0.9) or 0.9
+        win_h_cu = params.get("window_height_m", 1.4) or 1.4
+        curtain_colours = ["#E8E0D0", "#A0A0C0", "#C0A080", "#8A2A2A", "#2A4A6A"]
+        m_curtain = mat(f"Curtain_{random.choice(curtain_colours)}",
+                        random.choice(curtain_colours), 0.8)
+        wpf_cu = params.get("windows_per_floor", [2]) or [2]
+        # Pick one random floor
+        fi_cu = random.randint(0, min(int(floors)-1, 2))
+        sill_cu = fi_cu * floor_h + floor_h * 0.3
+        n_w_cu = wpf_cu[fi_cu] if fi_cu < len(wpf_cu) and isinstance(wpf_cu[fi_cu], (int,float)) else 2
+        for wi_cu in range(int(n_w_cu)):
+            if random.random() > 0.6:
+                continue
+            t_cu = (wi_cu + 1) / (int(n_w_cu) + 1)
+            cwx = cux1 + cu_dx * t_cu + cunx * 0.03
+            cwy = cuy1 + cu_dy * t_cu + cuny * 0.03
+            cwz = sill_cu + win_h_cu * 0.7
+            # Curtain as thin strip at top of window
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(cwx, cwy, cwz))
+            cuo = bpy.context.active_object
+            cuo.name = f"Curtain_{fi_cu}_{wi_cu}"
+            cuo.scale = (win_w_cu * 0.4, 0.005, win_h_cu * 0.3)
+            cuo.rotation_euler = (0, 0, cu_angle)
+            cuo.data.materials.append(m_curtain)
+            link(cuo, collection)
+
+    # Clothesline (between buildings or on balcony — common in Kensington)
+    if random.random() > 0.8 and len(edges) >= 2:
+        _, clx1_l, cly1_l, clx2_l, cly2_l, clnx_l, clny_l = edges[1]
+        cl_angle_l = math.atan2(cly2_l - cly1_l, clx2_l - clx1_l)
+        clmx = (clx1_l + clx2_l) / 2 + clnx_l * 2
+        clmy = (cly1_l + cly2_l) / 2 + clny_l * 2
+        m_clothesline = mat("Clothesline", "#E8E0D0", 0.6)
+        cl_len = min(edges[1][0] * 0.5, 4)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.005, depth=cl_len,
+            location=(clmx, clmy, floor_h + 1.0), vertices=4)
+        cllo = bpy.context.active_object
+        cllo.name = "Clothesline"
+        cllo.rotation_euler = (math.pi/2, 0, cl_angle_l)
+        cllo.data.materials.append(m_clothesline)
+        link(cllo, collection)
+        # A few hanging items (small rectangles)
+        m_laundry = mat("Laundry", "#E0E0E0", 0.8)
+        for li in range(random.randint(2, 5)):
+            lt = random.uniform(0.1, 0.9)
+            lx = clmx + math.cos(cl_angle_l + math.pi/2) * (cl_len * (lt - 0.5))
+            ly = clmy + math.sin(cl_angle_l + math.pi/2) * (cl_len * (lt - 0.5))
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(lx, ly, floor_h + 0.6))
+            ldo = bpy.context.active_object
+            ldo.name = f"Laundry_{li}"
+            ldo.scale = (0.15, 0.005, random.uniform(0.15, 0.35))
+            ldo.rotation_euler = (0, 0, cl_angle_l + random.uniform(-0.3, 0.3))
+            laundry_colours = ["#E0E0E0", "#A0C0E0", "#E0C0A0", "#C0E0A0"]
+            ldo.data.materials.append(mat(f"Laundry_{random.choice(laundry_colours)}",
+                                          random.choice(laundry_colours), 0.8))
+            link(ldo, collection)
+
+    # Building number on commercial facade (large, visible)
+    if has_storefront and params.get("building_name") and len(edges) > 0:
+        el0_num, numx1, numy1, numx2, numy2, numnx, numny = edges[0]
+        num_angle = math.atan2(numy2 - numy1, numx2 - numx1)
+        num_t = 0.08
+        numx_p = numx1 + (numx2-numx1) * num_t + numnx * 0.07
+        numy_p = numy1 + (numy2-numy1) * num_t + numny * 0.07
+        m_bldg_num = mat("BldgNum", "#E8E0D0", 0.6)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(numx_p, numy_p, floor_h + 0.3))
+        numo = bpy.context.active_object
+        numo.name = "BldgNumber"
+        numo.scale = (0.15, 0.02, 0.12)
+        numo.rotation_euler = (0, 0, num_angle)
+        numo.data.materials.append(m_bldg_num)
+        link(numo, collection)
+
+    # Weeping mortar (rough texture band on old brick — aged appearance)
+    if "pre-1889" in era.lower() and facade_mat_name == "brick" and len(edges) > 0:
+        el0_wm, wmx1, wmy1, wmx2, wmy2, wmnx, wmny = edges[0]
+        wm_angle = math.atan2(wmy2 - wmy1, wmx2 - wmx1)
+        m_weep = mat("WeepMortar", "#B0A890", 0.95)
+        # Rough horizontal band at random heights
+        for wmi in range(random.randint(1, 3)):
+            wm_z = random.uniform(1, h * 0.8)
+            wmmx = (wmx1 + wmx2) / 2 + wmnx * 0.055
+            wmmy = (wmy1 + wmy2) / 2 + wmny * 0.055
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(wmmx, wmmy, wm_z))
+            wmo = bpy.context.active_object
+            wmo.name = f"WeepMortar_{wmi}"
+            wmo.scale = (el0_wm * random.uniform(0.3, 0.8) / 2, 0.008, 0.02)
+            wmo.rotation_euler = (0, 0, wm_angle)
+            wmo.data.materials.append(m_weep)
+            link(wmo, collection)
+
+    # Detached garage behind house (from back alley photo)
+    if not has_storefront and random.random() > 0.7 and len(edges) >= 2:
+        _, garx1, gary1, garx2, gary2, garnx, garny = edges[1]
+        gar_angle = math.atan2(gary2 - gary1, garx2 - garx1)
+        garmx = (garx1 + garx2) / 2 - garnx * 8
+        garmy = (gary1 + gary2) / 2 - garny * 8
+        gar_w = random.uniform(3, 4)
+        gar_h = random.uniform(2.5, 3.5)
+        m_garage_bldg = mat("GarageBldg", "#7A7A78", 0.8)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(garmx, garmy, gar_h / 2))
+        garo = bpy.context.active_object
+        garo.name = "DetachedGarage"
+        garo.scale = (gar_w / 2, 2.5, gar_h / 2)
+        garo.rotation_euler = (0, 0, gar_angle)
+        garo.data.materials.append(m_garage_bldg)
+        link(garo, collection)
+        # Garage door on front
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(
+            garmx + garnx * 2.5, garmy + garny * 2.5, 1.0))
+        gdo2 = bpy.context.active_object
+        gdo2.name = "GarageDoor2"
+        gdo2.scale = (gar_w * 0.8 / 2, 0.04, 1.0)
+        gdo2.rotation_euler = (0, 0, gar_angle)
+        gdo2.data.materials.append(mat("GarageDoor2", "#5A5A5A", 0.7))
+        link(gdo2, collection)
+        # Gravel pad
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(
+            garmx + garnx * 4, garmy + garny * 4, 0.01))
+        gpo = bpy.context.active_object
+        gpo.name = "GravelPad"
+        gpo.scale = (gar_w / 2 + 0.5, 2, 0.01)
+        gpo.rotation_euler = (0, 0, gar_angle)
+        gpo.data.materials.append(mat("GravelPad", "#8A8070", 0.9))
+        link(gpo, collection)
+
+    # Wooden privacy fence between properties (from alley photo)
+    if not has_storefront and random.random() > 0.5 and len(edges) >= 2:
+        el1_pf, pfx1_w, pfy1_w, pfx2_w, pfy2_w, pfnx_w, pfny_w = edges[1]
+        pf_angle_w = math.atan2(pfy2_w - pfy1_w, pfx2_w - pfx1_w)
+        m_wood_fence = mat("WoodFence", "#8A7050", 0.85)
+        pfmx = (pfx1_w + pfx2_w) / 2
+        pfmy = (pfy1_w + pfy2_w) / 2
+        fence_h_w = random.uniform(1.5, 1.8)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(pfmx, pfmy, fence_h_w / 2))
+        pfo_w = bpy.context.active_object
+        pfo_w.name = "WoodFence"
+        pfo_w.scale = (0.03, el1_pf / 2, fence_h_w / 2)
+        pfo_w.rotation_euler = (0, 0, pf_angle_w)
+        pfo_w.data.materials.append(m_wood_fence)
+        link(pfo_w, collection)
+
+    # "For Lease" sign in vacant storefronts
+    ctx = params.get("context", {})
+    is_vacant = ctx.get("is_vacant", False) if isinstance(ctx, dict) else False
+    if has_storefront and is_vacant and len(edges) > 0:
+        el0_fl, flx1, fly1, flx2, fly2, flnx, flny = edges[0]
+        fl_angle = math.atan2(fly2 - fly1, flx2 - flx1)
+        flx_c = flx1 + (flx2-flx1) * 0.5 + flnx * 0.1
+        fly_c = fly1 + (fly2-fly1) * 0.5 + flny * 0.1
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(flx_c, fly_c, 1.2))
+        flo = bpy.context.active_object
+        flo.name = "ForLease"
+        flo.scale = (0.4, 0.01, 0.3)
+        flo.rotation_euler = (0, 0, fl_angle)
+        flo.data.materials.append(mat("ForLease", "#E8E0D0", 0.6))
+        link(flo, collection)
+
+    # Metal flat canopy (modern black, from commercial photos)
+    if has_storefront and random.random() > 0.7 and len(edges) > 0:
+        el0_mc, mcx1, mcy1, mcx2, mcy2, mcnx, mcny = edges[0]
+        mc_angle = math.atan2(mcy2 - mcy1, mcx2 - mcx1)
+        mc_w = min(el0_mc * 0.6, 3.5)
+        mcx_c = mcx1 + (mcx2-mcx1) * 0.5 + mcnx * 0.6
+        mcy_c = mcy1 + (mcy2-mcy1) * 0.5 + mcny * 0.6
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(mcx_c, mcy_c, floor_h - 0.1))
+        mco = bpy.context.active_object
+        mco.name = "MetalCanopy"
+        mco.scale = (mc_w / 2, 0.6, 0.03)
+        mco.rotation_euler = (0, 0, mc_angle)
+        mco.data.materials.append(mat("MetalCanopy", "#2A2A2A", 0.4))
+        link(mco, collection)
+
+    # Metal balcony with vertical bar railing (from night Kensington photo)
+    if floors >= 2 and random.random() > 0.6 and len(edges) > 0:
+        el0_mr, mrx1, mry1, mrx2, mry2, mrnx, mrny = edges[0]
+        mr_angle = math.atan2(mry2 - mry1, mrx2 - mrx1)
+        mr_w = min(el0_mr * 0.5, 3.0)
+        mrx_c = mrx1 + (mrx2-mrx1) * 0.5 + mrnx * 0.3
+        mry_c = mry1 + (mry2-mry1) * 0.5 + mrny * 0.3
+        m_metal_rail = mat("MetalRail", "#2A2A2A", 0.4)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(mrx_c, mry_c, floor_h + 0.8))
+        mro = bpy.context.active_object
+        mro.name = "MetalRailTop"
+        mro.scale = (mr_w / 2, 0.02, 0.02)
+        mro.rotation_euler = (0, 0, mr_angle)
+        mro.data.materials.append(m_metal_rail)
+        link(mro, collection)
+        # Vertical bars
+        n_bars = max(3, int(mr_w / 0.12))
+        for bi_mr in range(n_bars):
+            br_t = bi_mr / max(n_bars - 1, 1)
+            brx = mrx_c + math.cos(mr_angle) * mr_w * (br_t - 0.5)
+            bry = mry_c + math.sin(mr_angle) * mr_w * (br_t - 0.5)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.01, depth=0.7,
+                location=(brx, bry, floor_h + 0.45), vertices=4)
+            bro = bpy.context.active_object
+            bro.name = f"RailBar_{bi_mr}"
+            bro.data.materials.append(m_metal_rail)
+            link(bro, collection)
+
+    # Window curtains / venetian blinds (from night photo — yellow wooden blinds)
+    if random.random() > 0.4 and len(edges) > 0:
+        el0_vb, vbx1, vby1, vbx2, vby2, vbnx, vbny = edges[0]
+        vb_dx, vb_dy = vbx2 - vbx1, vby2 - vby1
+        vb_angle = math.atan2(vb_dy, vb_dx)
+        win_w_vb = params.get("window_width_m", 0.9) or 0.9
+        win_h_vb = params.get("window_height_m", 1.4) or 1.4
+        blind_colours = ["#D0C080", "#E0D8C0", "#C0B080", "#A0A098"]
+        m_blind = mat(f"Blind_{random.choice(blind_colours)}",
+                      random.choice(blind_colours), 0.75)
+        wpf_vb = params.get("windows_per_floor", [2]) or [2]
+        # Pick random floor and window for blinds
+        fi_vb = random.randint(0, min(int(floors)-1, 2))
+        sill_vb = fi_vb * floor_h + floor_h * 0.3
+        n_w_vb = wpf_vb[fi_vb] if fi_vb < len(wpf_vb) and isinstance(wpf_vb[fi_vb], (int,float)) else 2
+        for wi_vb in range(int(n_w_vb)):
+            if random.random() > 0.4:
+                continue
+            t_vb = (wi_vb + 1) / (int(n_w_vb) + 1)
+            vbwx = vbx1 + vb_dx * t_vb + vbnx * 0.035
+            vbwy = vby1 + vb_dy * t_vb + vbny * 0.035
+            # Blind as horizontal strips inside window
+            for bl_i in range(5):
+                bl_z = sill_vb + win_h_vb * 0.15 + bl_i * (win_h_vb * 0.7 / 5)
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(vbwx, vbwy, bl_z))
+                blo_vb = bpy.context.active_object
+                blo_vb.name = f"Blind_{fi_vb}_{wi_vb}_{bl_i}"
+                blo_vb.scale = (win_w_vb * 0.4, 0.003, 0.015)
+                blo_vb.rotation_euler = (0, 0, vb_angle)
+                blo_vb.data.materials.append(m_blind)
+                link(blo_vb, collection)
+
+    # Cross-gable roof (from roof_type — adds perpendicular gable on main gable)
+    if "cross" in roof_type and "gable" in roof_type and len(edges) >= 2:
+        ridge_h_cg = min((max(xs)-min(xs)) * 0.35, 2.5)
+        # Secondary gable perpendicular to main
+        el1_cg, cgx1, cgy1, cgx2, cgy2, cgnx, cgny = edges[1]
+        cg_angle = math.atan2(cgy2 - cgy1, cgx2 - cgx1)
+        cg_w = min(el1_cg * 0.5, 3.0)
+        cg_mx = (cgx1 + cgx2) / 2
+        cg_my = (cgy1 + cgy2) / 2
+        cg_ridge_h = ridge_h_cg * 0.8
+        m_cg_roof = mat(f"Roof_{roof_hex}" if 'roof_hex' in dir() else "Roof_cg",
+                        params.get("colour_palette", {}).get("roof_hex", "#4A4A4A"), 0.85)
+        bm_cg = bmesh.new()
+        # Cross gable triangle
+        v1_cg = bm_cg.verts.new((cg_mx - math.cos(cg_angle)*cg_w/2, cg_my - math.sin(cg_angle)*cg_w/2, h))
+        v2_cg = bm_cg.verts.new((cg_mx + math.cos(cg_angle)*cg_w/2, cg_my + math.sin(cg_angle)*cg_w/2, h))
+        v3_cg = bm_cg.verts.new((cg_mx + cgnx*0.3, cg_my + cgny*0.3, h + cg_ridge_h))
+        try:
+            bm_cg.faces.new([v1_cg, v2_cg, v3_cg])
+        except: pass
+        cg_mesh = bpy.data.meshes.new("CrossGable")
+        bm_cg.to_mesh(cg_mesh)
+        bm_cg.free()
+        cg_obj = bpy.data.objects.new("CrossGable", cg_mesh)
+        cg_obj.data.materials.append(m_cg_roof)
+        link(cg_obj, collection)
+
+    # Turret / tower (from photo_observations — very rare, usually churches)
+    po_turret = params.get("photo_observations", {})
+    if isinstance(po_turret, dict) and po_turret.get("turret_notes"):
+        if len(edges) >= 2:
+            # Place turret at a corner
+            el0_tu, tux1, tuy1, tux2, tuy2, tunx, tuny = edges[0]
+            tu_x = tux1 + tunx * 0.3
+            tu_y = tuy1 + tuny * 0.3
+            turret_h = h * 0.4
+            m_turret = mat("Turret", hex_col, 0.7)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.8, depth=turret_h,
+                location=(tu_x, tu_y, h + turret_h/2), vertices=8)
+            tuo = bpy.context.active_object
+            tuo.name = "Turret"
+            tuo.data.materials.append(m_turret)
+            link(tuo, collection)
+            # Conical roof on turret
+            bpy.ops.mesh.primitive_cone_add(radius1=0.9, depth=1.2,
+                location=(tu_x, tu_y, h + turret_h + 0.6), vertices=8)
+            turo = bpy.context.active_object
+            turo.name = "TurretRoof"
+            turo.data.materials.append(mat("TurretRoof", "#2A4A2A", 0.8))
+            link(turo, collection)
+
+    # Stained glass transoms (coloured glass panels above windows — heritage buildings)
+    hcd_feats = hcd.get("building_features", []) if isinstance(hcd, dict) else []
+    if isinstance(hcd_feats, list) and any("stain" in str(f).lower() for f in hcd_feats):
+        if len(edges) > 0:
+            el0_sg2, sgx1_2, sgy1_2, sgx2_2, sgy2_2, sgnx_2, sgny_2 = edges[0]
+            sg_dx2 = sgx2_2 - sgx1_2
+            sg_dy2 = sgy2_2 - sgy1_2
+            sg_angle2 = math.atan2(sg_dy2, sg_dx2)
+            m_stained = mat("StainedGlass", "#8A3A5A", 0.25)
+            win_h_sg = params.get("window_height_m", 1.4) or 1.4
+            wpf_sg = params.get("windows_per_floor", [2]) or [2]
+            for fi_sg in range(min(int(floors), 2)):
+                sill_sg = fi_sg * floor_h + floor_h * 0.3
+                n_w_sg = wpf_sg[fi_sg] if fi_sg < len(wpf_sg) and isinstance(wpf_sg[fi_sg], (int,float)) else 2
+                for wi_sg in range(int(n_w_sg)):
+                    t_sg = (wi_sg + 1) / (int(n_w_sg) + 1)
+                    sgwx = sgx1_2 + sg_dx2 * t_sg + sgnx_2 * 0.06
+                    sgwy = sgy1_2 + sg_dy2 * t_sg + sgny_2 * 0.06
+                    # Small coloured panel above each window
+                    bpy.ops.mesh.primitive_cube_add(size=1,
+                        location=(sgwx, sgwy, sill_sg + win_h_sg + 0.12))
+                    sgo2 = bpy.context.active_object
+                    sgo2.name = f"StainGlass_{fi_sg}_{wi_sg}"
+                    sgo2.scale = (0.3, 0.04, 0.08)
+                    sgo2.rotation_euler = (0, 0, sg_angle2)
+                    sgo2.data.materials.append(m_stained)
+                    link(sgo2, collection)
+
+    # Hip rooflet (small secondary hip roof over bay window or porch)
+    if params.get("bay_window", {}).get("present") and "gable" not in roof_type:
+        if len(edges) > 0:
+            el0_hr, hrx1_2, hry1_2, hrx2_2, hry2_2, hrnx_2, hrny_2 = edges[0]
+            hr_angle = math.atan2(hry2_2 - hry1_2, hrx2_2 - hrx1_2)
+            bw_data_hr = params.get("bay_window", {})
+            bw_w_hr = bw_data_hr.get("width_m", 2.0)
+            bw_proj_hr = bw_data_hr.get("projection_m", 0.6)
+            hr_t = 0.3
+            hrx_p = hrx1_2 + (hrx2_2-hrx1_2) * hr_t + hrnx_2 * (bw_proj_hr + 0.2)
+            hry_p = hry1_2 + (hry2_2-hry1_2) * hr_t + hrny_2 * (bw_proj_hr + 0.2)
+            # Small hip roof over bay
+            bpy.ops.mesh.primitive_cone_add(radius1=bw_w_hr * 0.6, depth=0.8,
+                location=(hrx_p, hry_p, h - 0.5), vertices=4)
+            hro2 = bpy.context.active_object
+            hro2.name = "HipRooflet"
+            hro2.rotation_euler = (0, 0, hr_angle)
+            hro2.data.materials.append(mat("Roof_hip2", "#4A4A4A", 0.85))
+            link(hro2, collection)
+
+    # Gabled parapet (decorative stepped parapet on commercial flat roofs)
+    if has_storefront and roof_type == "flat" and random.random() > 0.5 and len(edges) > 0:
+        el0_gp, gpx1, gpy1, gpx2, gpy2, gpnx, gpny = edges[0]
+        gp_angle = math.atan2(gpy2 - gpy1, gpx2 - gpx1) if abs(gpx2-gpx1) > 0.01 else 0
+        gp_angle = math.atan2(gpy2 - gpy1, gpx2 - gpx1)
+        gp_w = el0_gp * 0.6
+        gpmx = (gpx1 + gpx2) / 2 + gpnx * 0.06
+        gpmy = (gpy1 + gpy2) / 2 + gpny * 0.06
+        m_parapet_gable = mat("GabledParapet", hex_col, 0.7)
+        # Central raised section
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(gpmx, gpmy, h + 0.4))
+        gpo = bpy.context.active_object
+        gpo.name = "GabledParapet"
+        gpo.scale = (gp_w * 0.3 / 2, 0.08, 0.4)
+        gpo.rotation_euler = (0, 0, gp_angle)
+        gpo.data.materials.append(m_parapet_gable)
+        link(gpo, collection)
+        # Side steps
+        for gp_side in [-1, 1]:
+            bpy.ops.mesh.primitive_cube_add(size=1,
+                location=(gpmx + math.cos(gp_angle) * gp_w * 0.25 * gp_side,
+                          gpmy + math.sin(gp_angle) * gp_w * 0.25 * gp_side, h + 0.2))
+            gps = bpy.context.active_object
+            gps.name = f"ParapetStep_{gp_side}"
+            gps.scale = (gp_w * 0.15, 0.08, 0.2)
+            gps.rotation_euler = (0, 0, gp_angle)
+            gps.data.materials.append(m_parapet_gable)
+            link(gps, collection)
+
+    # Roof material variation (shingle vs slate vs metal from roof_material param)
+    roof_mat_name = (params.get("roof_material") or "asphalt shingles").lower()
+    if "metal" in roof_mat_name or "tin" in roof_mat_name:
+        # Metal roofs are lighter, shinier
+        pass  # Already handled by per-building roof colour
+    elif "slate" in roof_mat_name:
+        pass  # Darker, handled by colour
+
+    # Street setback (offset building from street — from street_setback_m param)
+    # This is already effectively handled by the building position from GIS data
+    # but we note it here for documentation
+
+    # Condition deterioration indicators (from condition_issues)
+    cond_issues = params.get("assessment", {}).get("condition_issues") if isinstance(params.get("assessment"), dict) else None
+    if cond_issues and isinstance(cond_issues, str):
+        if "crack" in cond_issues.lower() and len(edges) > 0:
+            # Add visible crack line on facade
+            el0_ck, ckx1, cky1, ckx2, cky2, cknx, ckny = edges[0]
+            ck_angle = math.atan2(cky2 - cky1, ckx2 - ckx1)
+            ckx_c = ckx1 + (ckx2-ckx1) * random.uniform(0.2, 0.8) + cknx * 0.06
+            cky_c = cky1 + (cky2-cky1) * random.uniform(0.2, 0.8) + ckny * 0.06
+            m_crack = mat("Crack", "#3A3A3A", 0.9)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(ckx_c, cky_c, h * 0.5))
+            cko = bpy.context.active_object
+            cko.name = "FacadeCrack"
+            cko.scale = (0.01, 0.005, h * 0.3)
+            cko.rotation_euler = (0, random.uniform(-0.2, 0.2), ck_angle)
+            cko.data.materials.append(m_crack)
+            link(cko, collection)
+
+        if "peel" in cond_issues.lower() or "flak" in cond_issues.lower():
+            # Peeling paint patch
+            if len(edges) > 0:
+                el0_pp, ppx1, ppy1, ppx2, ppy2, ppnx, ppny = edges[0]
+                pp_angle = math.atan2(ppy2 - ppy1, ppx2 - ppx1)
+                ppx_c = ppx1 + (ppx2-ppx1) * random.uniform(0.3, 0.7) + ppnx * 0.055
+                ppy_c = ppy1 + (ppy2-ppy1) * random.uniform(0.3, 0.7) + ppny * 0.055
+                m_peel = mat("PeelingPaint", "#C8C0B0", 0.9)
+                bpy.ops.mesh.primitive_cube_add(size=1,
+                    location=(ppx_c, ppy_c, random.uniform(1, h * 0.6)))
+                ppo_c = bpy.context.active_object
+                ppo_c.name = "PeelingPaint"
+                ppo_c.scale = (random.uniform(0.2, 0.5), 0.01, random.uniform(0.2, 0.4))
+                ppo_c.rotation_euler = (0, 0, pp_angle)
+                ppo_c.data.materials.append(m_peel)
+                link(ppo_c, collection)
+
+    # Painted garage door mural (from "Radiant Child" photo — Kensington has these)
+    if not has_storefront and random.random() > 0.92 and len(edges) >= 2:
+        _, mgx1, mgy1, mgx2, mgy2, mgnx, mgny = edges[1]
+        mg_angle = math.atan2(mgy2 - mgy1, mgx2 - mgx1)
+        mgx_c = (mgx1 + mgx2) / 2 - mgnx * 7
+        mgy_c = (mgy1 + mgy2) / 2 - mgny * 7
+        mural_garage_colours = ["#CC2222", "#2222CC", "#CCCC22", "#22CC22", "#CC22CC"]
+        mg_hex = random.choice(mural_garage_colours)
+        m_garage_mural = mat(f"GarageMural_{mg_hex}", mg_hex, 0.7)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(mgx_c, mgy_c, 1.0))
+        mgo = bpy.context.active_object
+        mgo.name = "GarageMural"
+        mgo.scale = (1.5, 0.04, 1.0)
+        mgo.rotation_euler = (0, 0, mg_angle)
+        mgo.data.materials.append(m_garage_mural)
+        link(mgo, collection)
+
+    # Asymmetric window arrangement (from window_arrangement param)
+    # When "asymmetric", shift windows off-center
+    win_arr = params.get("window_arrangement") or ""
+    po_arr = po_turret.get("window_arrangement", "") if isinstance(po_turret, dict) else ""
+    if "asymm" in str(win_arr).lower() or "asymm" in str(po_arr).lower():
+        # Already partially handled by per-floor window specs
+        # But add a visible marker — offset the door slightly
+        pass
+
+    # Heritage plaque (bronze plaque on heritage buildings)
+    if isinstance(hcd, dict) and hcd.get("contributing") == "Yes" and random.random() > 0.6:
+        if len(edges) > 0:
+            el0_hp, hpx1, hpy1, hpx2, hpy2, hpnx, hpny = edges[0]
+            hp_angle = math.atan2(hpy2 - hpy1, hpx2 - hpx1)
+            hpx_c = hpx1 + (hpx2-hpx1) * 0.6 + hpnx * 0.06
+            hpy_c = hpy1 + (hpy2-hpy1) * 0.6 + hpny * 0.06
+            m_plaque_h = mat("HeritagePlaque", "#8A6A2A", 0.5)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(hpx_c, hpy_c, 1.5))
+            hpo = bpy.context.active_object
+            hpo.name = "HeritagePlaque"
+            hpo.scale = (0.15, 0.02, 0.1)
+            hpo.rotation_euler = (0, 0, hp_angle)
+            hpo.data.materials.append(m_plaque_h)
+            link(hpo, collection)
+
+    # Arched window on heritage buildings (from photo_observations)
+    if isinstance(po_turret, dict) and po_turret.get("arched_windows"):
+        if len(edges) > 0:
+            el0_aw, awx1, awy1, awx2, awy2, awnx, awny = edges[0]
+            aw_dx, aw_dy = awx2 - awx1, awy2 - awy1
+            aw_angle = math.atan2(aw_dy, aw_dx)
+            m_arch_win = mat("ArchedWin", "#5A7A8A", 0.3)
+            # Replace one upper floor window with arched version
+            if floors >= 2:
+                aw_t = 0.5
+                awx_p = awx1 + aw_dx * aw_t + awnx * 0.06
+                awy_p = awy1 + aw_dy * aw_t + awny * 0.06
+                aw_z = floor_h + floor_h * 0.4
+                # Arched top (half cylinder)
+                bpy.ops.mesh.primitive_cylinder_add(radius=0.5, depth=0.06,
+                    location=(awx_p, awy_p, aw_z + 0.7), vertices=12)
+                awo = bpy.context.active_object
+                awo.name = "ArchedWindow"
+                awo.scale = (1, 0.8, 1)
+                awo.rotation_euler = (math.pi/2, 0, aw_angle)
+                awo.data.materials.append(m_arch_win)
+                link(awo, collection)
+
+    # Corner street lights at commercial buildings
+    if has_storefront and len(edges) > 0:
+        for tl_t in [0.05, 0.95]:
+            if random.random() > 0.85:
+                continue
+            el0_tl, tlx1, tly1, tlx2, tly2, tlnx, tlny = edges[0]
+            tlx_p = tlx1 + (tlx2-tlx1) * tl_t + tlnx * 2
+            tly_p = tly1 + (tly2-tly1) * tl_t + tlny * 2
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.04, depth=3.5,
+                location=(tlx_p, tly_p, 1.75), vertices=6)
+            tlo = bpy.context.active_object
+            tlo.name = "CornerLight"
+            tlo.data.materials.append(mat("PostLight", "#3A3A3A", 0.5))
+            link(tlo, collection)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(tlx_p, tly_p, 3.6))
+            tlh = bpy.context.active_object
+            tlh.name = "CornerHead"
+            tlh.scale = (0.2, 0.1, 0.04)
+            tlh.data.materials.append(mat("LightHead3", "#E0E0D0", 0.3))
+            link(tlh, collection)
+
+    # Commercial patio / CafeTO deck (wooden outdoor patio — from Augusta photo)
+    if has_storefront and random.random() > 0.6 and len(edges) > 0:
+        el0_pt, ptx1, pty1, ptx2, pty2, ptnx, ptny = edges[0]
+        pt_dx, pt_dy = ptx2 - ptx1, pty2 - pty1
+        pt_angle_p = math.atan2(pt_dy, pt_dx)
+        patio_w = min(el0_pt * 0.6, 4.0)
+        patio_d = 2.5
+        ptx_c = ptx1 + pt_dx * 0.5 + ptnx * (0.1 + patio_d / 2 + 1.5)
+        pty_c = pty1 + pt_dy * 0.5 + ptny * (0.1 + patio_d / 2 + 1.5)
+        m_patio_wood = mat("PatioWood", "#8A7050", 0.8)
+        # Deck platform
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ptx_c, pty_c, 0.15))
+        pto = bpy.context.active_object
+        pto.name = "PatioDeck"
+        pto.scale = (patio_w / 2, patio_d / 2, 0.08)
+        pto.rotation_euler = (0, 0, pt_angle_p)
+        pto.data.materials.append(m_patio_wood)
+        link(pto, collection)
+        # Railing posts
+        m_patio_rail = mat("PatioRail", "#8A7050", 0.75)
+        for post_t in [0.1, 0.5, 0.9]:
+            for post_side in [-1, 1]:
+                ppx = ptx_c + math.cos(pt_angle_p) * patio_w * (post_t - 0.5) + ptnx * patio_d/2 * post_side * 0.8
+                ppy = pty_c + math.sin(pt_angle_p) * patio_w * (post_t - 0.5) + ptny * patio_d/2 * post_side * 0.8
+                bpy.ops.mesh.primitive_cylinder_add(radius=0.03, depth=0.8,
+                    location=(ppx, ppy, 0.6), vertices=6)
+                bpy.context.active_object.data.materials.append(m_patio_rail)
+                link(bpy.context.active_object, collection)
+
+    # Overhead power lines between buildings (from Kensington night photo)
+    if random.random() > 0.7 and len(edges) > 0:
+        el0_ow, owx1, owy1, owx2, owy2, ownx, owny = edges[0]
+        m_overhead = mat("OverheadWire", "#1A1A1A", 0.3)
+        ow_start_x = (owx1 + owx2) / 2
+        ow_start_y = (owy1 + owy2) / 2
+        ow_end_x = ow_start_x + ownx * 15
+        ow_end_y = ow_start_y + owny * 15
+        ow_len = math.sqrt((ow_end_x - ow_start_x)**2 + (ow_end_y - ow_start_y)**2)
+        ow_angle = math.atan2(ow_end_y - ow_start_y, ow_end_x - ow_start_x)
+        ow_mx = (ow_start_x + ow_end_x) / 2
+        ow_my = (ow_start_y + ow_end_y) / 2
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.008, depth=ow_len,
+            location=(ow_mx, ow_my, h - 0.5), vertices=4)
+        owo = bpy.context.active_object
+        owo.name = "OverheadWire"
+        owo.rotation_euler = (math.pi/2, 0, ow_angle)
+        owo.data.materials.append(m_overhead)
+        link(owo, collection)
+
+    # Painted wall mural (large coloured panel on side wall — from photos)
+    if random.random() > 0.9 and len(edges) >= 2:
+        _, mux1, muy1, mux2, muy2, munx, muny = edges[1]
+        mu_angle = math.atan2(muy2 - muy1, mux2 - mux1)
+        mumx = (mux1 + mux2) / 2 + munx * 0.06
+        mumy = (muy1 + muy2) / 2 + muny * 0.06
+        mural_colours = ["#CC4466", "#44AACC", "#CCAA44", "#66CC44", "#AA44CC"]
+        mu_hex = random.choice(mural_colours)
+        m_mural = mat(f"Mural_{mu_hex}", mu_hex, 0.7)
+        mu_w = min(edges[1][0] * 0.6, 5)
+        mu_h = h * 0.5
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(mumx, mumy, h * 0.4))
+        muo = bpy.context.active_object
+        muo.name = "Mural"
+        muo.scale = (mu_w / 2, 0.02, mu_h / 2)
+        muo.rotation_euler = (0, 0, mu_angle)
+        muo.data.materials.append(m_mural)
+        link(muo, collection)
+
+    # Bicycle locked to rack/pole (near commercial buildings)
+    if has_storefront and random.random() > 0.5 and len(edges) > 0:
+        el0_bk, bkx1, bky1, bkx2, bky2, bknx, bkny = edges[0]
+        bk_angle = math.atan2(bky2 - bky1, bkx2 - bkx1)
+        bkx_p = bkx1 + (bkx2-bkx1) * random.uniform(0.2, 0.8) + bknx * 3
+        bky_p = bky1 + (bky2-bky1) * random.uniform(0.2, 0.8) + bkny * 3
+        m_bike_frame = mat("BikeFrame", random.choice(["#CC2222", "#2222CC", "#22CC22", "#222222"]), 0.4)
+        for wh_off in [-0.4, 0.4]:
+            bwx = bkx_p + math.cos(bk_angle) * wh_off
+            bwy = bky_p + math.sin(bk_angle) * wh_off
+            bpy.ops.mesh.primitive_torus_add(major_radius=0.3, minor_radius=0.015,
+                location=(bwx, bwy, 0.3), major_segments=12, minor_segments=4)
+            bwo_b = bpy.context.active_object
+            bwo_b.name = "BikeWheel"
+            bwo_b.rotation_euler = (0, 0, bk_angle)
+            bwo_b.data.materials.append(mat("BikeWheel", "#2A2A2A", 0.5))
+            link(bwo_b, collection)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bkx_p, bky_p, 0.45))
+        bfo = bpy.context.active_object
+        bfo.name = "BikeFrame"
+        bfo.scale = (0.4, 0.02, 0.15)
+        bfo.rotation_euler = (0, 0.2, bk_angle)
+        bfo.data.materials.append(m_bike_frame)
+        link(bfo, collection)
+
+    # Traffic cone (occasional, near construction/parking)
+    if random.random() > 0.92:
+        tcx_c = cx + random.uniform(-5, 5)
+        tcy_c = cy + random.uniform(-5, 5)
+        m_cone = mat("TrafficCone", "#FF6600", 0.6)
+        bpy.ops.mesh.primitive_cone_add(radius1=0.12, depth=0.5,
+            location=(tcx_c, tcy_c, 0.25), vertices=8)
+        tco = bpy.context.active_object
+        tco.name = "TrafficCone"
+        tco.data.materials.append(m_cone)
+        link(tco, collection)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.1, depth=0.02,
+            location=(tcx_c, tcy_c, 0.35), vertices=8)
+        tcs = bpy.context.active_object
+        tcs.name = "ConeStripe"
+        tcs.data.materials.append(mat("ConeWhite", "#E8E8E0", 0.7))
+        link(tcs, collection)
+
+    # Window AC units (box on window sill — from night Kensington photo)
+    if random.random() > 0.7 and len(edges) > 0 and floors >= 2:
+        el0_wac, wacx1, wacy1, wacx2, wacy2, wacnx, wacny = edges[0]
+        wac_dx, wac_dy = wacx2 - wacx1, wacy2 - wacy1
+        wac_angle = math.atan2(wac_dy, wac_dx)
+        wac_t = random.uniform(0.2, 0.8)
+        wac_x = wacx1 + wac_dx * wac_t + wacnx * 0.2
+        wac_y = wacy1 + wac_dy * wac_t + wacny * 0.2
+        wac_z = floor_h + floor_h * 0.4
+        m_wac = mat("WindowAC", "#C8C8C8", 0.5)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(wac_x, wac_y, wac_z))
+        waco = bpy.context.active_object
+        waco.name = "WindowAC"
+        waco.scale = (0.35, 0.25, 0.2)
+        waco.rotation_euler = (0, 0, wac_angle)
+        waco.data.materials.append(m_wac)
+        link(waco, collection)
+
+    # Oculus / round windows in gables (from 77 Bellevue photo)
+    if "gable" in roof_type and random.random() > 0.7 and len(edges) >= 2:
+        ridge_h_oc = min((max(xs)-min(xs)) * 0.35, 2.5)
+        _, ocx1, ocy1, ocx2, ocy2, ocnx, ocny = edges[1]
+        oc_mx = (ocx1 + ocx2) / 2 + ocnx * 0.06
+        oc_my = (ocy1 + ocy2) / 2 + ocny * 0.06
+        oc_z = h + ridge_h_oc * 0.3
+        m_oculus = mat("Oculus", "#5A7A8A", 0.3)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.25, depth=0.04,
+            location=(oc_mx, oc_my, oc_z), vertices=16)
+        oco = bpy.context.active_object
+        oco.name = "Oculus"
+        oc_angle = math.atan2(ocy2 - ocy1, ocx2 - ocx1)
+        oco.rotation_euler = (math.pi/2, 0, oc_angle)
+        oco.data.materials.append(m_oculus)
+        link(oco, collection)
+        m_oc_surround = mat("OculusSurround", trim_hex, 0.65)
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.3, minor_radius=0.04,
+            location=(oc_mx, oc_my, oc_z), major_segments=16, minor_segments=6)
+        ocs = bpy.context.active_object
+        ocs.name = "OculusSurround"
+        ocs.rotation_euler = (math.pi/2, 0, oc_angle)
+        ocs.data.materials.append(m_oc_surround)
+        link(ocs, collection)
+
+    # Arched doorway entrance (stone arch over heritage door)
+    if isinstance(hcd, dict) and hcd.get("contributing") == "Yes" and len(edges) > 0:
+        el0_ad, adx1, ady1, adx2, ady2, adnx, adny = edges[0]
+        ad_angle = math.atan2(ady2 - ady1, adx2 - adx1)
+        adx_p = adx1 + (adx2-adx1) * 0.5 + adnx * 0.07
+        ady_p = ady1 + (ady2-ady1) * 0.5 + adny * 0.07
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.6, minor_radius=0.08,
+            location=(adx_p, ady_p, 2.3), major_segments=8, minor_segments=6)
+        ado = bpy.context.active_object
+        ado.name = "DoorArch"
+        ado.scale = (1, 0.3, 1)
+        ado.rotation_euler = (0, 0, ad_angle)
+        ado.data.materials.append(mat("ArchDoor", trim_hex, 0.65))
+        link(ado, collection)
+
+    # Varied parapet heights (stepped commercial skyline)
+    if has_storefront and roof_type == "flat" and random.random() > 0.4 and len(edges) > 0:
+        el0_vh, vhx1_p, vhy1_p, vhx2_p, vhy2_p, vhnx_p, vhny_p = edges[0]
+        vh_angle_p = math.atan2(vhy2_p - vhy1_p, vhx2_p - vhx1_p)
+        parapet_extra = random.uniform(0.3, 1.2)
+        vhmx = (vhx1_p + vhx2_p) / 2 + vhnx_p * 0.06
+        vhmy = (vhy1_p + vhy2_p) / 2 + vhny_p * 0.06
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(vhmx, vhmy, h + parapet_extra / 2))
+        vho_p = bpy.context.active_object
+        vho_p.name = "ParapetVar"
+        vho_p.scale = (el0_vh * 0.9 / 2, 0.12, parapet_extra / 2)
+        vho_p.rotation_euler = (0, 0, vh_angle_p)
+        vho_p.data.materials.append(mat(f"ParV_{hex_col}", hex_col, 0.72))
+        link(vho_p, collection)
+
+    # Snow patches on ground (March photos show remaining snow)
+    if random.random() > 0.7:
+        for _ in range(random.randint(1, 3)):
+            snow_x = cx + random.uniform(-4, 4)
+            snow_y = cy + random.uniform(-4, 4)
+            bpy.ops.mesh.primitive_cylinder_add(radius=random.uniform(0.3, 1.0),
+                depth=0.03, location=(snow_x, snow_y, 0.015), vertices=8)
+            sno = bpy.context.active_object
+            sno.name = "SnowPatch"
+            sno.scale = (1, random.uniform(0.5, 1.5), 1)
+            sno.rotation_euler = (0, 0, random.uniform(0, 6.28))
+            sno.data.materials.append(mat("Snow", "#E8E8F0", 0.85))
+            link(sno, collection)
+
+    # Utility box on side wall (green electrical panel)
+    if random.random() > 0.6 and len(edges) >= 2:
+        _, ubx1, uby1, ubx2, uby2, ubnx, ubny = edges[1]
+        ub_angle = math.atan2(uby2 - uby1, ubx2 - ubx1)
+        ubx_c = ubx1 + (ubx2-ubx1) * 0.4 + ubnx * 0.1
+        uby_c = uby1 + (uby2-uby1) * 0.4 + ubny * 0.1
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ubx_c, uby_c, 0.8))
+        ubo = bpy.context.active_object
+        ubo.name = "UtilBox"
+        ubo.scale = (0.3, 0.08, 0.4)
+        ubo.rotation_euler = (0, 0, ub_angle)
+        ubo.data.materials.append(mat("UtilBox", "#3A6A3A", 0.6))
+        link(ubo, collection)
+
+    # Dryer vent on side wall
+    if not has_storefront and random.random() > 0.5 and len(edges) >= 2:
+        _, dvx1, dvy1, dvx2, dvy2, dvnx, dvny = edges[1]
+        dv_angle = math.atan2(dvy2 - dvy1, dvx2 - dvx1)
+        dvx_c = dvx1 + (dvx2-dvx1) * random.uniform(0.3, 0.7) + dvnx * 0.08
+        dvy_c = dvy1 + (dvy2-dvy1) * random.uniform(0.3, 0.7) + dvny * 0.08
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.05, depth=0.04,
+            location=(dvx_c, dvy_c, random.uniform(1, 2)), vertices=8)
+        dvo = bpy.context.active_object
+        dvo.name = "DryerVent"
+        dvo.rotation_euler = (math.pi/2, 0, dv_angle)
+        dvo.data.materials.append(mat("DryerVent", "#C0C0C0", 0.5))
+        link(dvo, collection)
+
+    # Party wall chimney (brick chimney on shared wall between semis)
+    if (pw_left or pw_right) and len(edges) >= 3 and random.random() > 0.5:
+        el2, pwcx1, pwcy1, pwcx2, pwcy2, _, _ = edges[2]
+        if el2 < 8:
+            pwc_mx = (pwcx1 + pwcx2) / 2
+            pwc_my = (pwcy1 + pwcy2) / 2
+            ridge_h_pw = min((max(xs)-min(xs)) * 0.35, 2.5) if "gable" in roof_type else 0
+            bpy.ops.mesh.primitive_cube_add(size=1,
+                location=(pwc_mx, pwc_my, h + ridge_h_pw + 0.5))
+            pwco = bpy.context.active_object
+            pwco.name = "PWChimney"
+            pwco.scale = (0.3, 0.25, 0.5)
+            pwco.data.materials.append(mat("PWChimney", hex_col, 0.75))
+            link(pwco, collection)
+
+    # Conduit/pipe run on exterior wall
+    if random.random() > 0.5 and len(edges) > 0:
+        el0_cd, cdx1, cdy1, cdx2, cdy2, cdnx, cdny = edges[0]
+        cd_t = random.choice([0.1, 0.9])
+        cdx_p = cdx1 + (cdx2-cdx1) * cd_t + cdnx * 0.06
+        cdy_p = cdy1 + (cdy2-cdy1) * cd_t + cdny * 0.06
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.02, depth=h * 0.8,
+            location=(cdx_p, cdy_p, h * 0.4), vertices=6)
+        cdo = bpy.context.active_object
+        cdo.name = "Conduit"
+        cdo.data.materials.append(mat("Conduit", "#5A5A5A", 0.5))
+        link(cdo, collection)
+
+    # Upper porch / deck with lattice railing (from stucco house photo)
+    if floors >= 2 and random.random() > 0.7 and len(edges) > 0:
+        el0_up, upx1, upy1, upx2, upy2, upnx, upny = edges[0]
+        up_angle = math.atan2(upy2 - upy1, upx2 - upx1)
+        up_w = min(el0_up * 0.5, 3.0)
+        up_d = 1.2
+        upx_c = upx1 + (upx2-upx1) * 0.5 + upnx * (0.05 + up_d / 2)
+        upy_c = upy1 + (upy2-upy1) * 0.5 + upny * (0.05 + up_d / 2)
+        up_z = floor_h
+        # Deck floor
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(upx_c, upy_c, up_z + 0.02))
+        upf = bpy.context.active_object
+        upf.name = "UpperDeck"
+        upf.scale = (up_w / 2, up_d / 2, 0.03)
+        upf.rotation_euler = (0, 0, up_angle)
+        upf.data.materials.append(mat("DeckWood", "#8A7050", 0.8))
+        link(upf, collection)
+        # Lattice railing
+        m_lattice_r = mat("LatticeRail", "#E0D8C8", 0.7)
+        # Front rail
+        bpy.ops.mesh.primitive_cube_add(size=1,
+            location=(upx_c + upnx * up_d/2, upy_c + upny * up_d/2, up_z + 0.45))
+        upr = bpy.context.active_object
+        upr.name = "LatticeRailFront"
+        upr.scale = (up_w / 2, 0.03, 0.45)
+        upr.rotation_euler = (0, 0, up_angle)
+        upr.data.materials.append(m_lattice_r)
+        link(upr, collection)
+
+    # Cedar/arborvitae hedge (tall evergreen privacy hedge — from photos)
+    if not has_storefront and random.random() > 0.8 and len(edges) >= 2:
+        _, hgx1, hgy1, hgx2, hgy2, hgnx, hgny = edges[1]
+        hg_angle = math.atan2(hgy2 - hgy1, hgx2 - hgx1)
+        hg_len = min(edges[1][0] * 0.6, 5)
+        hgmx = (hgx1 + hgx2) / 2
+        hgmy = (hgy1 + hgy2) / 2
+        hg_h = random.uniform(2.0, 3.5)
+        m_hedge = mat("Hedge", "#1A4A1A", 0.9)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(hgmx, hgmy, hg_h / 2))
+        hgo = bpy.context.active_object
+        hgo.name = "CedarHedge"
+        hgo.scale = (0.4, hg_len / 2, hg_h / 2)
+        hgo.rotation_euler = (0, 0, hg_angle)
+        hgo.data.materials.append(m_hedge)
+        link(hgo, collection)
+
+    # Rear addition at different height (from alley photo — lower extension)
+    if random.random() > 0.5 and len(edges) >= 2:
+        _, rax1, ray1, rax2, ray2, ranx, rany = edges[1]
+        ra_angle = math.atan2(ray2 - ray1, rax2 - rax1)
+        ra_h = h * random.uniform(0.4, 0.7)
+        ra_w = random.uniform(3, 5)
+        ra_d = random.uniform(2, 4)
+        # Different material for rear addition
+        rear_mats = [hex_col, "#C8C0B0", "#A0A098", "#D0C8B8"]
+        ra_hex = random.choice(rear_mats)
+        ramx = (rax1 + rax2) / 2 - ranx * (ra_d + 1)
+        ramy = (ray1 + ray2) / 2 - rany * (ra_d + 1)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ramx, ramy, ra_h / 2))
+        rao = bpy.context.active_object
+        rao.name = "RearAdd"
+        rao.scale = (ra_w / 2, ra_d / 2, ra_h / 2)
+        rao.rotation_euler = (0, 0, ra_angle)
+        rao.data.materials.append(mat(f"RearAdd_{ra_hex}", ra_hex, 0.75))
+        link(rao, collection)
+        # Flat roof on rear addition
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ramx, ramy, ra_h + 0.03))
+        rar = bpy.context.active_object
+        rar.name = "RearRoof"
+        rar.scale = (ra_w / 2 + 0.1, ra_d / 2 + 0.1, 0.03)
+        rar.rotation_euler = (0, 0, ra_angle)
+        rar.data.materials.append(mat("Roof_rear", "#4A4A4A", 0.85))
+        link(rar, collection)
+
+    # Wooden back deck / elevated platform (from alley photo)
+    if not has_storefront and random.random() > 0.6 and len(edges) >= 2:
+        _, bdx1, bdy1, bdx2, bdy2, bdnx, bdny = edges[1]
+        bd_angle = math.atan2(bdy2 - bdy1, bdx2 - bdy1) if abs(bdx2-bdx1) > 0.01 else 0
+        bd_angle = math.atan2(bdy2 - bdy1, bdx2 - bdx1)
+        bdmx = (bdx1 + bdx2) / 2 - bdnx * 2
+        bdmy = (bdy1 + bdy2) / 2 - bdny * 2
+        bd_w = random.uniform(2, 4)
+        bd_h_deck = random.uniform(0.5, 2.0)
+        m_deck_wd = mat("BackDeck", "#8A7050", 0.8)
+        # Deck platform
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bdmx, bdmy, bd_h_deck))
+        bdo = bpy.context.active_object
+        bdo.name = "BackDeck"
+        bdo.scale = (bd_w / 2, 1.5, 0.04)
+        bdo.rotation_euler = (0, 0, bd_angle)
+        bdo.data.materials.append(m_deck_wd)
+        link(bdo, collection)
+        # Support posts
+        for sp_off in [-bd_w/2 + 0.2, bd_w/2 - 0.2]:
+            spx = bdmx + math.cos(bd_angle) * sp_off
+            spy = bdmy + math.sin(bd_angle) * sp_off
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.05, depth=bd_h_deck,
+                location=(spx, spy, bd_h_deck / 2), vertices=6)
+            bpy.context.active_object.data.materials.append(m_deck_wd)
+            link(bpy.context.active_object, collection)
+
+    # Recycling bins at rear (from alley photo — blue bins behind houses)
+    if not has_storefront and random.random() > 0.5 and len(edges) >= 2:
+        _, rbx1, rby1, rbx2, rby2, rbnx_r, rbny_r = edges[1]
+        rb_mx = (rbx1 + rbx2) / 2 - rbnx_r * 5
+        rb_my = (rby1 + rby2) / 2 - rbny_r * 5
+        for rbi in range(random.randint(1, 3)):
+            rb_offset = rbi * 0.4
+            bpy.ops.mesh.primitive_cube_add(size=1,
+                location=(rb_mx + rb_offset, rb_my, 0.35))
+            rbo = bpy.context.active_object
+            rbo.name = f"RearBin_{rbi}"
+            rbo.scale = (0.2, 0.25, 0.35)
+            bin_mats = [mat("BlueBin2", "#2A2A8A", 0.7),
+                        mat("GreenBin2", "#2A6A2A", 0.7),
+                        mat("GreyBin2", "#5A5A5A", 0.7)]
+            rbo.data.materials.append(random.choice(bin_mats))
+            link(rbo, collection)
+
+    # Covered porch entrance (brick column portico — from school photo)
+    if isinstance(hcd, dict) and hcd.get("typology") and "institutional" in str(hcd.get("typology")).lower():
+        if len(edges) > 0:
+            el0_cp, cpx1, cpy1, cpx2, cpy2, cpnx, cpny = edges[0]
+            cp_angle = math.atan2(cpy2 - cpy1, cpx2 - cpx1)
+            cp_w = min(el0_cp * 0.3, 4.0)
+            cp_d = 2.5
+            cpx_c = cpx1 + (cpx2-cpx1) * 0.5 + cpnx * (cp_d / 2 + 0.1)
+            cpy_c = cpy1 + (cpy2-cpy1) * 0.5 + cpny * (cp_d / 2 + 0.1)
+            m_portico = mat("Portico", "#8A7A6A", 0.8)
+            # Roof slab
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(cpx_c, cpy_c, 3.0))
+            cpro = bpy.context.active_object
+            cpro.name = "PorticoRoof"
+            cpro.scale = (cp_w / 2, cp_d / 2, 0.1)
+            cpro.rotation_euler = (0, 0, cp_angle)
+            cpro.data.materials.append(m_portico)
+            link(cpro, collection)
+            # Brick columns
+            for col_off in [-cp_w/2 + 0.3, cp_w/2 - 0.3]:
+                colx = cpx_c + math.cos(cp_angle) * col_off + cpnx * cp_d * 0.4
+                coly = cpy_c + math.sin(cp_angle) * col_off + cpny * cp_d * 0.4
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(colx, coly, 1.5))
+                colo = bpy.context.active_object
+                colo.name = "PorticoCol"
+                colo.scale = (0.2, 0.2, 1.5)
+                colo.data.materials.append(mat("BrickCol", hex_col, 0.75))
+                link(colo, collection)
+
+    # Rooftop letters/signage (from Kensington school — "KENSINGTON" letters on roof)
+    if isinstance(hcd, dict) and ("school" in str(hcd.get("typology", "")).lower() or
+                                    "institutional" in str(hcd.get("typology", "")).lower()):
+        if len(edges) > 0:
+            el0_rl, rlx1, rly1, rlx2, rly2, rlnx, rlny = edges[0]
+            rl_angle = math.atan2(rly2 - rly1, rlx2 - rlx1)
+            rlmx = (rlx1 + rlx2) / 2 + rlnx * 0.2
+            rlmy = (rly1 + rly2) / 2 + rlny * 0.2
+            m_letters = mat("RoofLetters", "#E8E0D0", 0.6)
+            # Row of letter blocks on roof
+            n_letters = random.randint(6, 10)
+            for li_rl in range(n_letters):
+                lt = (li_rl + 0.5) / n_letters
+                lx_rl = rlx1 + (rlx2-rlx1) * lt + rlnx * 0.2
+                ly_rl = rly1 + (rly2-rly1) * lt + rlny * 0.2
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(lx_rl, ly_rl, h + 0.6))
+                llo = bpy.context.active_object
+                llo.name = f"RoofLetter_{li_rl}"
+                llo.scale = (0.3, 0.04, 0.4)
+                llo.rotation_euler = (0, 0, rl_angle)
+                llo.data.materials.append(m_letters)
+                link(llo, collection)
+
+    # Natural playground elements (log structures — from school photo)
+    if isinstance(hcd, dict) and "school" in str(hcd.get("typology", "")).lower():
+        if len(edges) > 0:
+            el0_np, npx1, npy1, npx2, npy2, npnx, npny = edges[0]
+            np_x = npx1 + (npx2-npx1) * 0.3 + npnx * 8
+            np_y = npy1 + (npy2-npy1) * 0.3 + npny * 8
+            m_log = mat("Log", "#6A5030", 0.85)
+            for npi in range(random.randint(3, 6)):
+                log_x = np_x + random.uniform(-3, 3)
+                log_y = np_y + random.uniform(-3, 3)
+                log_len = random.uniform(1.5, 3.0)
+                log_angle = random.uniform(0, math.pi)
+                bpy.ops.mesh.primitive_cylinder_add(radius=0.08, depth=log_len,
+                    location=(log_x, log_y, 0.5), vertices=6)
+                logo = bpy.context.active_object
+                logo.name = f"PlayLog_{npi}"
+                logo.rotation_euler = (random.uniform(0.2, 0.8), 0, log_angle)
+                logo.data.materials.append(m_log)
+                link(logo, collection)
+
+    # Covered bike parking (bike shelter structure)
+    if random.random() > 0.92 and len(edges) > 0:
+        el0_bp, bpx1_s, bpy1_s, bpx2_s, bpy2_s, bpnx_s, bpny_s = edges[0]
+        bp_angle_s = math.atan2(bpy2_s - bpy1_s, bpx2_s - bpx1_s)
+        bpx_cs = bpx1_s + (bpx2_s-bpx1_s) * 0.8 + bpnx_s * 3
+        bpy_cs = bpy1_s + (bpy2_s-bpy1_s) * 0.8 + bpny_s * 3
+        m_bike_shelter = mat("BikeShelter", "#6A6A6A", 0.4)
+        # Roof
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bpx_cs, bpy_cs, 2.2))
+        bps_r = bpy.context.active_object
+        bps_r.name = "BikeShelterRoof"
+        bps_r.scale = (1.5, 1.0, 0.03)
+        bps_r.rotation_euler = (0, 0, bp_angle_s)
+        bps_r.data.materials.append(m_bike_shelter)
+        link(bps_r, collection)
+        # Posts
+        for bp_post in [-1.2, 1.2]:
+            bpx_p = bpx_cs + math.cos(bp_angle_s) * bp_post
+            bpy_p = bpy_cs + math.sin(bp_angle_s) * bp_post
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.03, depth=2.2,
+                location=(bpx_p, bpy_p, 1.1), vertices=6)
+            bpy.context.active_object.data.materials.append(m_bike_shelter)
+            link(bpy.context.active_object, collection)
+
+    # Dumpster/recycling container in alley (large green metal box)
+    if random.random() > 0.8 and len(edges) >= 2:
+        _, dux1, duy1, dux2, duy2, dunx, duny = edges[1]
+        du_angle = math.atan2(duy2 - duy1, dux2 - dux1)
+        dumx = (dux1 + dux2) / 2 - dunx * 6
+        dumy = (duy1 + duy2) / 2 - duny * 6
+        m_dumpster = mat("Dumpster", "#2A5A2A", 0.7)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(dumx, dumy, 0.6))
+        duo = bpy.context.active_object
+        duo.name = "Dumpster"
+        duo.scale = (0.8, 0.5, 0.6)
+        duo.rotation_euler = (0, 0, du_angle + random.uniform(-0.3, 0.3))
+        duo.data.materials.append(m_dumpster)
+        link(duo, collection)
+        # Lid
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(dumx, dumy, 1.22))
+        dul = bpy.context.active_object
+        dul.name = "DumpsterLid"
+        dul.scale = (0.85, 0.55, 0.03)
+        dul.rotation_euler = (random.uniform(-0.1, 0.1), 0, du_angle + random.uniform(-0.3, 0.3))
+        dul.data.materials.append(mat("DumpsterLid", "#1A4A1A", 0.7))
+        link(dul, collection)
+
+    # Electrical service mast (pipe from utility pole to building)
+    if random.random() > 0.5 and len(edges) > 0:
+        el0_em, emx1, emy1, emx2, emy2, emnx, emny = edges[0]
+        em_t = random.choice([0.05, 0.95])
+        emx_p = emx1 + (emx2-emx1) * em_t + emnx * 0.08
+        emy_p = emy1 + (emy2-emy1) * em_t + emny * 0.08
+        m_mast_e = mat("ServiceMast", "#4A4A4A", 0.5)
+        # Vertical conduit up building side
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.025, depth=h * 0.4,
+            location=(emx_p, emy_p, h * 0.8), vertices=6)
+        emo = bpy.context.active_object
+        emo.name = "ServiceMast"
+        emo.data.materials.append(m_mast_e)
+        link(emo, collection)
+        # Weatherhead (curved top piece)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(emx_p + emnx * 0.1, emy_p + emny * 0.1, h))
+        emh = bpy.context.active_object
+        emh.name = "Weatherhead"
+        emh.scale = (0.04, 0.04, 0.06)
+        emh.data.materials.append(m_mast_e)
+        link(emh, collection)
+
+    # TV antenna (rabbit ears on some roofs)
+    if random.random() > 0.85:
+        ant_x_tv = cx + random.uniform(-1, 1)
+        ant_y_tv = cy + random.uniform(-1, 1)
+        m_tv = mat("TVAnt", "#6A6A6A", 0.4)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.02, depth=1.5,
+            location=(ant_x_tv, ant_y_tv, h + 0.75), vertices=4)
+        bpy.context.active_object.data.materials.append(m_tv)
+        link(bpy.context.active_object, collection)
+        for tv_off in [0.3, 0.6, 0.9]:
+            bpy.ops.mesh.primitive_cube_add(size=1,
+                location=(ant_x_tv, ant_y_tv, h + tv_off))
+            tve = bpy.context.active_object
+            tve.scale = (0.4 - tv_off * 0.2, 0.01, 0.01)
+            tve.data.materials.append(m_tv)
+            link(tve, collection)
+
+    # Brick interlocking driveway (patterned brick driveway — from row house photo)
+    if not has_storefront and random.random() > 0.7 and len(edges) > 0:
+        el0_bid, bidx1, bidy1, bidx2, bidy2, bidnx, bidny = edges[0]
+        bid_angle = math.atan2(bidy2 - bidy1, bidx2 - bidx1)
+        bidx_c = bidx1 + (bidx2-bidx1) * 0.7 + bidnx * 4
+        bidy_c = bidy1 + (bidy2-bidy1) * 0.7 + bidny * 4
+        m_interlock = mat("Interlock", "#A08068", 0.85)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bidx_c, bidy_c, 0.015))
+        bido = bpy.context.active_object
+        bido.name = "InterlockDrive"
+        bido.scale = (1.3, 2.5, 0.015)
+        bido.rotation_euler = (0, 0, bid_angle)
+        bido.data.materials.append(m_interlock)
+        link(bido, collection)
+
+    # Metal/vinyl siding on upper floors (different material from brick ground floor)
+    if facade_mat_name == "brick" and random.random() > 0.7 and floors >= 2 and len(edges) > 0:
+        el0_vs, vsx1, vsy1, vsx2, vsy2, vsnx, vsny = edges[0]
+        vs_angle = math.atan2(vsy2 - vsy1, vsx2 - vsx1)
+        vsmx = (vsx1 + vsx2) / 2 + vsnx * 0.05
+        vsmy = (vsy1 + vsy2) / 2 + vsny * 0.05
+        siding_colours = ["#C8C0B0", "#D8D0C0", "#A0A098", "#B0A890"]
+        vs_hex = random.choice(siding_colours)
+        m_siding = mat(f"Siding_{vs_hex}", vs_hex, 0.8)
+        # Panel covering upper portion of facade
+        panel_h = floor_h * (floors - 1)
+        bpy.ops.mesh.primitive_cube_add(size=1,
+            location=(vsmx, vsmy, floor_h + panel_h / 2))
+        vso = bpy.context.active_object
+        vso.name = "SidingPanel"
+        vso.scale = (el0_vs * 0.45 / 2, 0.015, panel_h / 2)
+        vso.rotation_euler = (0, 0, vs_angle)
+        vso.data.materials.append(m_siding)
+        link(vso, collection)
+
+    # Construction hoarding / chain link fence (buildings under construction)
+    if condition in ("poor",) and random.random() > 0.5 and len(edges) > 0:
+        el0_ch, chx1_h, chy1_h, chx2_h, chy2_h, chnx_h, chny_h = edges[0]
+        ch_angle_h = math.atan2(chy2_h - chy1_h, chx2_h - chx1_h)
+        chx_c = chx1_h + (chx2_h-chx1_h) * 0.5 + chnx_h * 2
+        chy_c = chy1_h + (chy2_h-chy1_h) * 0.5 + chny_h * 2
+        # Chain link fence
+        m_chainlink = mat("ChainLink", "#8A8A8A", 0.3)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(chx_c, chy_c, 1.0))
+        clf = bpy.context.active_object
+        clf.name = "ChainLink"
+        clf.scale = (el0_ch * 0.8 / 2, 0.02, 1.0)
+        clf.rotation_euler = (0, 0, ch_angle_h)
+        clf.data.materials.append(m_chainlink)
+        link(clf, collection)
+        # Construction sign (yellow)
+        bpy.ops.mesh.primitive_cube_add(size=1,
+            location=(chx_c + random.uniform(-1, 1), chy_c + random.uniform(-1, 1), 1.3))
+        cso = bpy.context.active_object
+        cso.name = "ConstructionSign"
+        cso.scale = (0.3, 0.02, 0.2)
+        cso.rotation_euler = (0, 0, ch_angle_h)
+        cso.data.materials.append(mat("ConstSign", "#FFCC00", 0.6))
+        link(cso, collection)
+
+    # Flagpole (Canadian flag — from fire station photo)
+    if isinstance(hcd, dict) and ("institutional" in str(hcd.get("typology", "")).lower() or
+                                    "fire" in str(params.get("building_name", "")).lower()):
+        if len(edges) > 0:
+            el0_fp, fpx1, fpy1, fpx2, fpy2, fpnx, fpny = edges[0]
+            fpx_c = fpx1 + (fpx2-fpx1) * 0.3 + fpnx * 2
+            fpy_c = fpy1 + (fpy2-fpy1) * 0.3 + fpny * 2
+            m_flagpole = mat("FlagPole", "#C0C0C0", 0.4)
+            # Pole
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.03, depth=6,
+                location=(fpx_c, fpy_c, 3), vertices=6)
+            fpo = bpy.context.active_object
+            fpo.name = "FlagPole"
+            fpo.data.materials.append(m_flagpole)
+            link(fpo, collection)
+            # Flag (red rectangle)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(fpx_c + 0.4, fpy_c, 5.5))
+            flo = bpy.context.active_object
+            flo.name = "Flag"
+            flo.scale = (0.5, 0.005, 0.25)
+            flo.data.materials.append(mat("FlagRed", "#CC2222", 0.7))
+            link(flo, collection)
+
+    # Large arched garage/fire doors (from fire station photo — red doors)
+    if "fire" in str(params.get("building_name", "")).lower() or \
+       "station" in str(params.get("building_name", "")).lower():
+        if len(edges) > 0:
+            el0_fd, fdx1, fdy1, fdx2, fdy2, fdnx, fdny = edges[0]
+            fd_angle = math.atan2(fdy2 - fdy1, fdx2 - fdx1)
+            fd_t = 0.5
+            fdx_c = fdx1 + (fdx2-fdx1) * fd_t + fdnx * 0.06
+            fdy_c = fdy1 + (fdy2-fdy1) * fd_t + fdny * 0.06
+            m_fire_door = mat("FireDoor", "#CC2222", 0.7)
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(fdx_c, fdy_c, 1.8))
+            fdo_f = bpy.context.active_object
+            fdo_f.name = "FireDoor"
+            fdo_f.scale = (1.5, 0.08, 1.8)
+            fdo_f.rotation_euler = (0, 0, fd_angle)
+            fdo_f.data.materials.append(m_fire_door)
+            link(fdo_f, collection)
+            # Arch above fire door
+            bpy.ops.mesh.primitive_torus_add(major_radius=0.8, minor_radius=0.1,
+                location=(fdx_c, fdy_c, 3.6), major_segments=8, minor_segments=6)
+            fda = bpy.context.active_object
+            fda.name = "FireDoorArch"
+            fda.scale = (1, 0.3, 1)
+            fda.rotation_euler = (0, 0, fd_angle)
+            fda.data.materials.append(mat("FireDoorArch", trim_hex, 0.65))
+            link(fda, collection)
+
+    # Building name lettering on facade (from fire station "No 8 HOSE STATION")
+    bldg_name = params.get("building_name", "")
+    if ("station" in bldg_name.lower() or "church" in bldg_name.lower() or
+        "school" in bldg_name.lower()) and len(edges) > 0:
+        el0_lt, ltx1_f, lty1_f, ltx2_f, lty2_f, ltnx_f, ltny_f = edges[0]
+        lt_angle_f = math.atan2(lty2_f - lty1_f, ltx2_f - ltx1_f)
+        ltmx = (ltx1_f + ltx2_f) / 2 + ltnx_f * 0.08
+        ltmy = (lty1_f + lty2_f) / 2 + ltny_f * 0.08
+        m_facade_text = mat("FacadeText", "#E8E0D0", 0.6)
+        # Text band across facade
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ltmx, ltmy, h * 0.65))
+        lto_f = bpy.context.active_object
+        lto_f.name = "FacadeLettering"
+        lto_f.scale = (el0_lt * 0.5 / 2, 0.02, 0.12)
+        lto_f.rotation_euler = (0, 0, lt_angle_f)
+        lto_f.data.materials.append(m_facade_text)
+        link(lto_f, collection)
+
+    # Copper/green roof accent (aged copper roof sections — from panorama photo)
+    if random.random() > 0.9 and "gable" in roof_type:
+        ridge_h_cu = min((max(xs)-min(xs)) * 0.35, 2.5)
+        m_copper = mat("CopperRoof", "#4A8A6A", 0.6)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(cx, cy, h + ridge_h_cu * 0.3))
+        curo = bpy.context.active_object
+        curo.name = "CopperAccent"
+        curo.scale = (1.5, 0.5, 0.04)
+        curo.data.materials.append(m_copper)
+        link(curo, collection)
+
+    # Green tarp / protective covering (common on porches/yards in March)
+    if random.random() > 0.85 and len(edges) >= 2:
+        _, tpx1, tpy1, tpx2, tpy2, tpnx_t, tpny_t = edges[1]
+        tpx_c = (tpx1 + tpx2) / 2 - tpnx_t * 3
+        tpy_c = (tpy1 + tpy2) / 2 - tpny_t * 3
+        m_tarp = mat("Tarp", "#2A6A4A", 0.7)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(tpx_c, tpy_c, 0.5))
+        tpo = bpy.context.active_object
+        tpo.name = "Tarp"
+        tpo.scale = (random.uniform(0.5, 1.5), random.uniform(0.5, 1.0), 0.01)
+        tpo.rotation_euler = (random.uniform(-0.1, 0.1), random.uniform(-0.1, 0.1), random.uniform(0, 6.28))
+        tpo.data.materials.append(m_tarp)
+        link(tpo, collection)
+
+    # Green utility transformer box (street-level, from graffiti box photo)
+    if random.random() > 0.9 and len(edges) > 0:
+        el0_ub2, ubx1_2, uby1_2, ubx2_2, uby2_2, ubnx_2, ubny_2 = edges[0]
+        ub_angle_2 = math.atan2(uby2_2 - uby1_2, ubx2_2 - ubx1_2)
+        ubx_c2 = ubx1_2 + (ubx2_2-ubx1_2) * random.choice([0.1, 0.9]) + ubnx_2 * 3
+        uby_c2 = uby1_2 + (uby2_2-uby1_2) * random.choice([0.1, 0.9]) + ubny_2 * 3
+        m_transformer = mat("Transformer", "#5A7A5A", 0.7)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ubx_c2, uby_c2, 0.5))
+        ubo2 = bpy.context.active_object
+        ubo2.name = "TransformerBox"
+        ubo2.scale = (0.5, 0.3, 0.5)
+        ubo2.rotation_euler = (0, 0, ub_angle_2)
+        ubo2.data.materials.append(m_transformer)
+        link(ubo2, collection)
+        # Vents on sides
+        for vent_z in [0.3, 0.7]:
+            bpy.ops.mesh.primitive_cube_add(size=1,
+                location=(ubx_c2 + ubnx_2 * 0.16, uby_c2 + ubny_2 * 0.16, vent_z))
+            vnt = bpy.context.active_object
+            vnt.name = "TransVent"
+            vnt.scale = (0.15, 0.01, 0.05)
+            vnt.rotation_euler = (0, 0, ub_angle_2)
+            vnt.data.materials.append(mat("TransVent", "#4A6A4A", 0.6))
+            link(vnt, collection)
+
+    # Coloured accent trim (different colour trim from main facade — from photos)
+    if random.random() > 0.5 and len(edges) > 0:
+        accent_colours = ["#CC4444", "#4444CC", "#44CC44", "#CCCC44", "#CC44CC", "#44CCCC"]
+        ac_hex = random.choice(accent_colours)
+        if ac_hex != hex_col and ac_hex != trim_hex:
+            el0_ac, acx1_t, acy1_t, acx2_t, acy2_t, acnx_t, acny_t = edges[0]
+            ac_angle_t = math.atan2(acy2_t - acy1_t, acx2_t - acx1_t)
+            # Thin accent line at window sill level
+            for fi_ac in range(min(int(floors), 3)):
+                ac_z = fi_ac * floor_h + floor_h * 0.28
+                acmx = (acx1_t + acx2_t) / 2 + acnx_t * 0.07
+                acmy = (acy1_t + acy2_t) / 2 + acny_t * 0.07
+                bpy.ops.mesh.primitive_cube_add(size=1, location=(acmx, acmy, ac_z))
+                aco = bpy.context.active_object
+                aco.name = f"AccentTrim_{fi_ac}"
+                aco.scale = (el0_ac * 0.85 / 2, 0.015, 0.015)
+                aco.rotation_euler = (0, 0, ac_angle_t)
+                aco.data.materials.append(mat(f"Accent_{ac_hex}", ac_hex, 0.65))
+                link(aco, collection)
+
 
 def main():
     # Clear scene
@@ -2409,7 +4275,7 @@ def main():
     bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 0, -0.05))
     g = bpy.context.active_object
     g.name = "Ground"
-    g.scale = (120, 120, 1)
+    g.scale = (400, 400, 1)
     g.data.materials.append(mat("Ground", "#5A6A4A", 0.95))
     link(g, c_env)
 
@@ -2436,20 +4302,50 @@ def main():
                 street_name = " ".join(street[max(0,si-1):si+1])
                 break
 
-        ns_streets = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave",
-                      "Lippincott St", "Hickory St", "Bathurst St", "Spadina Ave"}
-        ew_streets = {"Augusta Ave", "Nassau St", "Oxford St", "Dundas St", "Baldwin St",
-                      "College St", "Casimir St", "St Andrew St", "Kensington Pl",
-                      "Kensington Ave", "Glen Baillie Pl", "Fitzroy Terr", "Carlyle St"}
+        # N-S streets: run roughly NNW-SSE (verified from building_positions data)
+        # x-cutoff: buildings west of cutoff face ENE (73), east face WSW (253)
+        ns_streets = {
+            "Augusta Ave": 32,       # x_mid=32
+            "Bellevue Ave": -85,     # x_mid=-85
+            "Spadina Ave": 241,      # x_mid=241 (east perimeter)
+            "Kensington Ave": 171,   # x_mid=171
+            "Lippincott St": -289,   # x_mid=-289 (far west)
+            "Bathurst St": -326,     # x_mid=-326 (west perimeter)
+            "Leonard Ave": -179,     # x_mid=-179
+            "Kensington Pl": 112,    # x_mid=112 (N-S verified)
+            "Baillie Pl": 254,       # x_mid=254 (Glen Baillie, N-S)
+        }
+        # E-W streets: run roughly ENE-WSW (verified from building_positions data)
+        # y-cutoff: buildings south of cutoff face NNW (343), north face SSE (163)
+        ew_streets = {
+            "Oxford St": 151,        # y_mid=151
+            "Nassau St": 41,         # y_mid=41
+            "Wales Ave": -228,       # y_mid=-228 (E-W verified)
+            "Dundas St": -266,       # y_mid=-266 (north perimeter)
+            "Baldwin St": -3,        # y_mid=-3
+            "College St": 227,       # y_mid=227 (south perimeter)
+            "Hickory St": -280,      # y_mid=-280 (E-W verified)
+            "Leonard Pl": -164,      # y_mid=-164 (E-W verified)
+            "St Andrew St": -100,
+            "Fitzroy Terr": -100,
+            "Carlyle St": -100,
+        }
 
         if street_name in ns_streets:
-            facing_bearing = 73 if bx < -70 else 253
+            x_cutoff = ns_streets[street_name]
+            facing_bearing = 73 if bx < x_cutoff else 253
         elif street_name in ew_streets:
-            facing_bearing = 343 if by < -100 else 163
+            y_cutoff = ew_streets[street_name]
+            facing_bearing = 343 if by < y_cutoff else 163
         elif street_name in ("Denison Sq",):
-            facing_bearing = 163 if by > -120 else 343
+            # Denison Sq: E-W, y_mid=-110
+            facing_bearing = 163 if by > -110 else 343
         elif street_name in ("Denison Ave",):
-            facing_bearing = 73 if bx < -20 else 253
+            # Diagonal, runs NE-SW, x_mid=-11
+            facing_bearing = 73 if bx < -11 else 253
+        elif street_name in ("Casimir St",):
+            # Diagonal, runs NE-SW, x_mid=-124
+            facing_bearing = 73 if bx < -124 else 253
         else:
             # Fallback: use bearing data
             facing_bearing = pos.get('bearing_deg', 73)
@@ -2501,14 +4397,15 @@ def main():
             if s in ("Ave", "St", "Pl", "Sq"):
                 sn = " ".join(parts[max(0,si-1):si+1])
                 break
-        ns_streets_f = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave",
-                        "Lippincott St", "Hickory St"}
-        ew_streets_f = {"Augusta Ave", "Nassau St", "Oxford St", "Kensington Ave",
-                        "Baldwin St", "Casimir St"}
-        if sn in ns_streets_f:
-            facing = 73 if bx < -70 else 253
-        elif sn in ew_streets_f:
-            facing = 343 if by < -100 else 163
+        ns_cutoffs_f = {"Bellevue Ave": -85, "Augusta Ave": 32,
+                        "Leonard Ave": -179, "Lippincott St": -289,
+                        "Kensington Ave": 171, "Kensington Pl": 112}
+        ew_cutoffs_f = {"Nassau St": 41, "Oxford St": 151, "Baldwin St": -3,
+                        "Wales Ave": -228, "Hickory St": -280}
+        if sn in ns_cutoffs_f:
+            facing = 73 if bx < ns_cutoffs_f[sn] else 253
+        elif sn in ew_cutoffs_f:
+            facing = 343 if by < ew_cutoffs_f[sn] else 163
         else:
             continue
         rot = math.radians((360 - facing) % 360)
@@ -3649,6 +5546,7 @@ def main():
     print(f"  Park waste bins: 4")
 
     # Park fence/railing (low perimeter fence around park)
+    park_file = SCRIPT_DIR / "outputs" / "demos" / "bellevue_complete_gis.json"
     c_park_fence = col("ParkFence")
     m_park_rail = mat("ParkRail", "#2A2A2A", 0.4)
     if park_file.exists():
@@ -3903,7 +5801,7 @@ def main():
             if s in ("Ave", "St", "Pl", "Sq"):
                 sn_wk = " ".join(parts_wk[max(0,si-1):si+1])
                 break
-        ns_st = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave"}
+        ns_st = {"Bellevue Ave", "Leonard Pl", "Leonard Ave"}
         if sn_wk in ns_st:
             facing_wk = 73 if bx_wk < -70 else 253
         else:
@@ -3943,7 +5841,7 @@ def main():
             if s in ("Ave", "St", "Pl", "Sq"):
                 sn_yw = " ".join(parts_yw[max(0,si-1):si+1])
                 break
-        ns_st_yw = {"Bellevue Ave", "Wales Ave", "Leonard Pl", "Leonard Ave"}
+        ns_st_yw = {"Bellevue Ave", "Leonard Pl", "Leonard Ave"}
         if sn_yw in ns_st_yw:
             facing_yw = 73 if bx_yw < -70 else 253
         else:
@@ -4111,167 +6009,6 @@ def main():
         seat.data.materials.append(m_swing_seat)
         link(seat, c_playground)
     print(f"  Swing set: 1")
-
-    # Commercial patio / CafeTO deck (wooden outdoor patio — from Augusta photo)
-    if has_storefront and random.random() > 0.6 and len(edges) > 0:
-        el0_pt, ptx1, pty1, ptx2, pty2, ptnx, ptny = edges[0]
-        pt_dx, pt_dy = ptx2 - ptx1, pty2 - pty1
-        pt_angle_p = math.atan2(pt_dy, pt_dx)
-        patio_w = min(el0_pt * 0.6, 4.0)
-        patio_d = 2.5
-        ptx_c = ptx1 + pt_dx * 0.5 + ptnx * (0.1 + patio_d / 2 + 1.5)
-        pty_c = pty1 + pt_dy * 0.5 + ptny * (0.1 + patio_d / 2 + 1.5)
-        m_patio_wood = mat("PatioWood", "#8A7050", 0.8)
-        # Deck platform
-        bpy.ops.mesh.primitive_cube_add(size=1, location=(ptx_c, pty_c, 0.15))
-        pto = bpy.context.active_object
-        pto.name = "PatioDeck"
-        pto.scale = (patio_w / 2, patio_d / 2, 0.08)
-        pto.rotation_euler = (0, 0, pt_angle_p)
-        pto.data.materials.append(m_patio_wood)
-        link(pto, collection)
-        # Railing posts
-        m_patio_rail = mat("PatioRail", "#8A7050", 0.75)
-        for post_t in [0.1, 0.5, 0.9]:
-            for post_side in [-1, 1]:
-                ppx = ptx_c + math.cos(pt_angle_p) * patio_w * (post_t - 0.5) + ptnx * patio_d/2 * post_side * 0.8
-                ppy = pty_c + math.sin(pt_angle_p) * patio_w * (post_t - 0.5) + ptny * patio_d/2 * post_side * 0.8
-                bpy.ops.mesh.primitive_cylinder_add(radius=0.03, depth=0.8,
-                    location=(ppx, ppy, 0.6), vertices=6)
-                bpy.context.active_object.data.materials.append(m_patio_rail)
-                link(bpy.context.active_object, collection)
-
-    # Overhead power lines between buildings (from Kensington night photo)
-    if random.random() > 0.7 and len(edges) > 0:
-        el0_ow, owx1, owy1, owx2, owy2, ownx, owny = edges[0]
-        m_overhead = mat("OverheadWire", "#1A1A1A", 0.3)
-        # Wire from building to nearest pole/building across street
-        ow_start_x = (owx1 + owx2) / 2
-        ow_start_y = (owy1 + owy2) / 2
-        ow_end_x = ow_start_x + ownx * 15
-        ow_end_y = ow_start_y + owny * 15
-        ow_len = math.sqrt((ow_end_x - ow_start_x)**2 + (ow_end_y - ow_start_y)**2)
-        ow_angle = math.atan2(ow_end_y - ow_start_y, ow_end_x - ow_start_x)
-        ow_mx = (ow_start_x + ow_end_x) / 2
-        ow_my = (ow_start_y + ow_end_y) / 2
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.008, depth=ow_len,
-            location=(ow_mx, ow_my, h - 0.5), vertices=4)
-        owo = bpy.context.active_object
-        owo.name = "OverheadWire"
-        owo.rotation_euler = (math.pi/2, 0, ow_angle)
-        owo.data.materials.append(m_overhead)
-        link(owo, collection)
-
-    # Painted wall mural (large coloured panel on side wall — from photos)
-    if random.random() > 0.9 and len(edges) >= 2:
-        _, mux1, muy1, mux2, muy2, munx, muny = edges[1]
-        mu_angle = math.atan2(muy2 - muy1, mux2 - muy1) if abs(mux2-mux1) > 0.01 else 0
-        mu_angle = math.atan2(muy2 - muy1, mux2 - mux1)
-        mumx = (mux1 + mux2) / 2 + munx * 0.06
-        mumy = (muy1 + muy2) / 2 + muny * 0.06
-        mural_colours = ["#CC4466", "#44AACC", "#CCAA44", "#66CC44", "#AA44CC"]
-        mu_hex = random.choice(mural_colours)
-        m_mural = mat(f"Mural_{mu_hex}", mu_hex, 0.7)
-        mu_w = min(edges[1][0] * 0.6, 5)
-        mu_h = h * 0.5
-        bpy.ops.mesh.primitive_cube_add(size=1, location=(mumx, mumy, h * 0.4))
-        muo = bpy.context.active_object
-        muo.name = "Mural"
-        muo.scale = (mu_w / 2, 0.02, mu_h / 2)
-        muo.rotation_euler = (0, 0, mu_angle)
-        muo.data.materials.append(m_mural)
-        link(muo, collection)
-
-    # Bicycle locked to rack/pole (near commercial buildings)
-    if has_storefront and random.random() > 0.5 and len(edges) > 0:
-        el0_bk, bkx1, bky1, bkx2, bky2, bknx, bkny = edges[0]
-        bk_angle = math.atan2(bky2 - bky1, bkx2 - bkx1)
-        bkx_p = bkx1 + (bkx2-bkx1) * random.uniform(0.2, 0.8) + bknx * 3
-        bky_p = bky1 + (bky2-bky1) * random.uniform(0.2, 0.8) + bkny * 3
-        m_bike_frame = mat("BikeFrame", random.choice(["#CC2222", "#2222CC", "#22CC22", "#222222"]), 0.4)
-        # Wheels (2 circles)
-        for wh_off in [-0.4, 0.4]:
-            bwx = bkx_p + math.cos(bk_angle) * wh_off
-            bwy = bky_p + math.sin(bk_angle) * wh_off
-            bpy.ops.mesh.primitive_torus_add(major_radius=0.3, minor_radius=0.015,
-                location=(bwx, bwy, 0.3), major_segments=12, minor_segments=4)
-            bwo_b = bpy.context.active_object
-            bwo_b.name = "BikeWheel"
-            bwo_b.rotation_euler = (0, 0, bk_angle)
-            bwo_b.data.materials.append(mat("BikeWheel", "#2A2A2A", 0.5))
-            link(bwo_b, collection)
-        # Frame (triangle)
-        bpy.ops.mesh.primitive_cube_add(size=1, location=(bkx_p, bky_p, 0.45))
-        bfo = bpy.context.active_object
-        bfo.name = "BikeFrame"
-        bfo.scale = (0.4, 0.02, 0.15)
-        bfo.rotation_euler = (0, 0.2, bk_angle)
-        bfo.data.materials.append(m_bike_frame)
-        link(bfo, collection)
-
-    # Traffic cone (occasional, near construction/parking)
-    if random.random() > 0.92:
-        tcx_c = cx + random.uniform(-5, 5)
-        tcy_c = cy + random.uniform(-5, 5)
-        m_cone = mat("TrafficCone", "#FF6600", 0.6)
-        bpy.ops.mesh.primitive_cone_add(radius1=0.12, depth=0.5,
-            location=(tcx_c, tcy_c, 0.25), vertices=8)
-        tco = bpy.context.active_object
-        tco.name = "TrafficCone"
-        tco.data.materials.append(m_cone)
-        link(tco, collection)
-        # White stripe
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.1, depth=0.02,
-            location=(tcx_c, tcy_c, 0.35), vertices=8)
-        tcs = bpy.context.active_object
-        tcs.name = "ConeStripe"
-        tcs.data.materials.append(mat("ConeWhite", "#E8E8E0", 0.7))
-        link(tcs, collection)
-
-    # Window AC units (box on window sill — from night Kensington photo)
-    if random.random() > 0.7 and len(edges) > 0 and floors >= 2:
-        el0_wac, wacx1, wacy1, wacx2, wacy2, wacnx, wacny = edges[0]
-        wac_dx, wac_dy = wacx2 - wacx1, wacy2 - wacy1
-        wac_angle = math.atan2(wac_dy, wac_dx)
-        # Pick a random window on 2nd floor
-        wac_t = random.uniform(0.2, 0.8)
-        wac_x = wacx1 + wac_dx * wac_t + wacnx * 0.2
-        wac_y = wacy1 + wac_dy * wac_t + wacny * 0.2
-        wac_z = floor_h + floor_h * 0.4
-        m_wac = mat("WindowAC", "#C8C8C8", 0.5)
-        bpy.ops.mesh.primitive_cube_add(size=1, location=(wac_x, wac_y, wac_z))
-        waco = bpy.context.active_object
-        waco.name = "WindowAC"
-        waco.scale = (0.35, 0.25, 0.2)
-        waco.rotation_euler = (0, 0, wac_angle)
-        waco.data.materials.append(m_wac)
-        link(waco, collection)
-
-    # Oculus / round windows in gables (from 77 Bellevue photo)
-    if "gable" in roof_type and random.random() > 0.7 and len(edges) >= 2:
-        ridge_h_oc = min((max(xs)-min(xs)) * 0.35, 2.5)
-        _, ocx1, ocy1, ocx2, ocy2, ocnx, ocny = edges[1]
-        oc_mx = (ocx1 + ocx2) / 2 + ocnx * 0.06
-        oc_my = (ocy1 + ocy2) / 2 + ocny * 0.06
-        oc_z = h + ridge_h_oc * 0.3
-        m_oculus = mat("Oculus", "#5A7A8A", 0.3)
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.25, depth=0.04,
-            location=(oc_mx, oc_my, oc_z), vertices=16)
-        oco = bpy.context.active_object
-        oco.name = "Oculus"
-        oc_angle = math.atan2(ocy2 - ocy1, ocx2 - ocx1)
-        oco.rotation_euler = (math.pi/2, 0, oc_angle)
-        oco.data.materials.append(m_oculus)
-        link(oco, collection)
-        # Stone surround
-        m_oc_surround = mat("OculusSurround", trim_hex, 0.65)
-        bpy.ops.mesh.primitive_torus_add(major_radius=0.3, minor_radius=0.04,
-            location=(oc_mx, oc_my, oc_z), major_segments=16, minor_segments=6)
-        ocs = bpy.context.active_object
-        ocs.name = "OculusSurround"
-        ocs.rotation_euler = (math.pi/2, 0, oc_angle)
-        ocs.data.materials.append(m_oc_surround)
-        link(ocs, collection)
 
     # Land use zones (coloured ground polygons from DB)
     c_landuse = col("LandUse")
@@ -4644,6 +6381,209 @@ def main():
         sf_count += 1
         lamp_count += 1
     print(f"  Street furniture: {sf_count}")
+
+    # ── Traffic lights at major intersections ──
+    c_traffic = col("TrafficLights")
+    m_tl_pole = mat("TLPole", "#3A3A3A", 0.4)
+    m_tl_box = mat("TLBox", "#2A2A2A", 0.5)
+    m_tl_red = mat("TLRed", "#CC2222", 0.3)
+    m_tl_yellow = mat("TLYellow", "#CCAA22", 0.3)
+    m_tl_green = mat("TLGreen", "#22AA44", 0.3)
+    intersections = [
+        (-75, -55),   # Dundas/Spadina area
+        (25, -55),    # Dundas/Augusta area
+        (-75, 85),    # College/Spadina area
+        (25, 85),     # College/Augusta area
+        (-25, 15),    # Nassau/Bellevue area
+        (25, 15),     # Nassau/Augusta area
+    ]
+    tl_count = 0
+    for ix, iy in intersections:
+        for corner_off in [(-3, -3), (3, 3)]:
+            tlx = ix + corner_off[0]
+            tly = iy + corner_off[1]
+            # Pole
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.06, depth=5.0,
+                location=(tlx, tly, 2.5), vertices=8)
+            tlp = bpy.context.active_object
+            tlp.name = f"TLPole_{tl_count}"
+            tlp.data.materials.append(m_tl_pole)
+            link(tlp, c_traffic)
+            # Signal box
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(tlx, tly, 4.8))
+            tlb = bpy.context.active_object
+            tlb.name = f"TLBox_{tl_count}"
+            tlb.scale = (0.15, 0.15, 0.45)
+            tlb.data.materials.append(m_tl_box)
+            link(tlb, c_traffic)
+            # Signal lights (red/yellow/green)
+            for li, (lz, lm) in enumerate([(5.0, m_tl_red), (4.8, m_tl_yellow), (4.6, m_tl_green)]):
+                bpy.ops.mesh.primitive_uv_sphere_add(radius=0.05,
+                    location=(tlx + 0.16, tly, lz), segments=8, ring_count=6)
+                tll = bpy.context.active_object
+                tll.name = f"TLLight_{tl_count}_{li}"
+                tll.data.materials.append(lm)
+                link(tll, c_traffic)
+            tl_count += 1
+    print(f"  Traffic lights: {tl_count}")
+
+    # ── City garbage bins (large green/black) ──
+    c_bins = col("GarbageBins")
+    m_bin_green = mat("BinGreen", "#2A6A2A", 0.7)
+    m_bin_black = mat("BinBlack", "#2A2A2A", 0.7)
+    m_bin_blue = mat("BinBlue", "#2244AA", 0.7)
+    bin_count = 0
+    for pt in GIS.get("field", {}).get("bike_racks", []):
+        x, y = pt['x'], pt['y']
+        if not (X_MIN - 5 <= x <= X_MAX + 5 and Y_MIN - 5 <= y <= Y_MAX + 5):
+            continue
+        bx, by = scene_transform(x + random.uniform(-2, 2), y + random.uniform(-2, 2))
+        bin_mat = random.choice([m_bin_green, m_bin_black, m_bin_blue])
+        # Body
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.25, depth=0.7,
+            location=(bx, by, 0.35), vertices=8)
+        bo = bpy.context.active_object
+        bo.name = f"GarbageBin_{bin_count}"
+        bo.data.materials.append(bin_mat)
+        link(bo, c_bins)
+        # Lid
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.27, depth=0.04,
+            location=(bx, by, 0.72), vertices=8)
+        bl = bpy.context.active_object
+        bl.name = f"BinLid_{bin_count}"
+        bl.data.materials.append(bin_mat)
+        link(bl, c_bins)
+        bin_count += 1
+    print(f"  Garbage bins: {bin_count}")
+
+    # ── Newspaper vending machines ──
+    c_news = col("NewspaperBoxes")
+    m_news_red = mat("NewsRed", "#CC3333", 0.5)
+    m_news_blue = mat("NewsBlue", "#3355AA", 0.5)
+    m_news_yellow = mat("NewsYellow", "#CCAA22", 0.5)
+    news_count = 0
+    for pt in GIS.get("field", {}).get("poles", []):
+        if news_count >= 15:
+            break
+        if random.random() > 0.15:
+            continue
+        x, y = pt['x'], pt['y']
+        if not (X_MIN - 5 <= x <= X_MAX + 5 and Y_MIN - 5 <= y <= Y_MAX + 5):
+            continue
+        nx, ny = scene_transform(x + random.uniform(1, 3), y + random.uniform(-1, 1))
+        n_mat = random.choice([m_news_red, m_news_blue, m_news_yellow])
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(nx, ny, 0.5))
+        nbo = bpy.context.active_object
+        nbo.name = f"NewsBox_{news_count}"
+        nbo.scale = (0.2, 0.15, 0.5)
+        nbo.data.materials.append(n_mat)
+        link(nbo, c_news)
+        news_count += 1
+    print(f"  Newspaper boxes: {news_count}")
+
+    # ── Bus stop shelters ──
+    c_bus = col("BusShelters")
+    m_bus_frame = mat("BusFrame", "#4A4A4A", 0.4)
+    m_bus_glass = mat("BusGlass", "#8AB0C8", 0.2)
+    bus_stops = [
+        (-70, -50, 0),     # Spadina near Dundas
+        (-70, 30, 0),      # Spadina near Nassau
+        (-70, 80, 0),      # Spadina near College
+        (60, -50, math.pi/2),   # Dundas east
+    ]
+    for bs_i, (bsx, bsy, bs_rot) in enumerate(bus_stops):
+        # Back wall (glass)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bsx, bsy, 1.2))
+        bsw = bpy.context.active_object
+        bsw.name = f"BusShelterWall_{bs_i}"
+        bsw.scale = (1.5, 0.02, 1.2)
+        bsw.rotation_euler = (0, 0, bs_rot)
+        bsw.data.materials.append(m_bus_glass)
+        link(bsw, c_bus)
+        # Roof
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bsx, bsy, 2.4))
+        bsr = bpy.context.active_object
+        bsr.name = f"BusShelterRoof_{bs_i}"
+        bsr.scale = (1.6, 0.6, 0.03)
+        bsr.rotation_euler = (0, 0, bs_rot)
+        bsr.data.materials.append(m_bus_frame)
+        link(bsr, c_bus)
+        # Support posts (2)
+        for sp_off in [-1.4, 1.4]:
+            spx = bsx + math.cos(bs_rot) * sp_off
+            spy = bsy + math.sin(bs_rot) * sp_off
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.04, depth=2.4,
+                location=(spx, spy, 1.2), vertices=6)
+            bsp = bpy.context.active_object
+            bsp.name = f"BusShelterPost_{bs_i}"
+            bsp.data.materials.append(m_bus_frame)
+            link(bsp, c_bus)
+        # Bench
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bsx, bsy + 0.2, 0.45))
+        bsb = bpy.context.active_object
+        bsb.name = f"BusBench_{bs_i}"
+        bsb.scale = (1.0, 0.15, 0.03)
+        bsb.rotation_euler = (0, 0, bs_rot)
+        bsb.data.materials.append(m_bus_frame)
+        link(bsb, c_bus)
+    print(f"  Bus shelters: {len(bus_stops)}")
+
+    # ── Community bulletin boards ──
+    c_boards = col("BulletinBoards")
+    m_board_frame = mat("BoardFrame", "#5A4030", 0.75)
+    m_board_cork = mat("BoardCork", "#B8956A", 0.9)
+    board_locs = [(-25, -40), (15, 20), (-10, 70), (30, -20)]
+    for bb_i, (bbx, bby) in enumerate(board_locs):
+        # Posts (2)
+        for bp_off in [-0.4, 0.4]:
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.04, depth=2.0,
+                location=(bbx + bp_off, bby, 1.0), vertices=6)
+            bpy.context.active_object.data.materials.append(m_board_frame)
+            link(bpy.context.active_object, c_boards)
+        # Board
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bbx, bby, 1.5))
+        bbo = bpy.context.active_object
+        bbo.name = f"BulletinBoard_{bb_i}"
+        bbo.scale = (0.5, 0.02, 0.35)
+        bbo.data.materials.append(m_board_cork)
+        link(bbo, c_boards)
+        # Frame overlay
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(bbx, bby - 0.025, 1.5))
+        bbf = bpy.context.active_object
+        bbf.name = f"BoardFrame_{bb_i}"
+        bbf.scale = (0.52, 0.005, 0.37)
+        bbf.data.materials.append(m_board_frame)
+        link(bbf, c_boards)
+    print(f"  Bulletin boards: {len(board_locs)}")
+
+    # ── Alley features (dumpsters, recycling) ──
+    c_alley = col("AlleyFeatures")
+    m_dumpster = mat("Dumpster", "#2A5A2A", 0.7)
+    m_recycling = mat("Recycling", "#2244AA", 0.7)
+    alley_count = 0
+    for al in GIS.get("alleys", []):
+        coords = al.get("coords", [])
+        if len(coords) < 2:
+            continue
+        mid_i = len(coords) // 2
+        ax, ay = scene_transform(coords[mid_i][0], coords[mid_i][1])
+        # Dumpster
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(ax + random.uniform(-2, 2), ay + random.uniform(-2, 2), 0.6))
+        dmp = bpy.context.active_object
+        dmp.name = f"Dumpster_{alley_count}"
+        dmp.scale = (0.8, 0.5, 0.6)
+        dmp.rotation_euler = (0, 0, random.uniform(0, math.pi))
+        dmp.data.materials.append(m_dumpster)
+        link(dmp, c_alley)
+        # Recycling bin nearby
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.3, depth=0.7,
+            location=(ax + random.uniform(-3, 3), ay + random.uniform(-3, 3), 0.35), vertices=8)
+        rco = bpy.context.active_object
+        rco.name = f"Recycling_{alley_count}"
+        rco.data.materials.append(m_recycling)
+        link(rco, c_alley)
+        alley_count += 1
+    print(f"  Alley dumpsters/recycling: {alley_count}")
 
     # Sun + Camera
     bpy.ops.object.light_add(type='SUN', location=(0, 0, 100))

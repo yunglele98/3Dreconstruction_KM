@@ -1,0 +1,164 @@
+{
+  "task_id": "TASK-20260326-006",
+  "agent": "gemini-1",
+  "report_type": "coordinate_recovery_audit",
+  "timestamp": "2026-03-27T19:30:00Z",
+  "summary": "Attempted to recover missing coordinates for active buildings. Successfully matched 0 buildings.",
+  "findings": [
+    {
+      "address": "327 Bathurst St Sanderson Library",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address '327 BATHURST ST'"
+    },
+    {
+      "address": "3A Fitzroy Terr",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address '3A FITZROY TERRACE'"
+    },
+    {
+      "address": "57 Kensington school building",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address '57 KENSINGTON SCHOOL BUILDING'"
+    },
+    {
+      "address": "636 Dundas St",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address '636 DUNDAS ST'"
+    },
+    {
+      "address": "707 Dundas St",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address '707 DUNDAS ST'"
+    },
+    {
+      "address": "750 Dundas St Tim hortons Pharmasave Appletree Medical Centre MedWest Medical Building - closed 356 Bathurst St Irene s Flowers",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address '750 DUNDAS ST'"
+    },
+    {
+      "address": "Bellevue Ave house with teal balcony",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'BELLEVUE AVE'"
+    },
+    {
+      "address": "Brick house Bellevue area",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'BRICK HOUSE, BELLEVUE'"
+    },
+    {
+      "address": "Dundas St W CAAM United Hardware Ltd",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'DUNDAS ST W CAAM UNITED HARDWARE LTD BUILDING'"
+    },
+    {
+      "address": "Fairland Cannabis Pho Ngon Augusta Ave",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'FAIRLAND CANNABIS'"
+    },
+    {
+      "address": "House with porch lattice Bellevue area",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'HOUSE WITH PORCH'"
+    },
+    {
+      "address": "House with white siding Bellevue area",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'HOUSE WITH WHITE SIDING, BELLEVUE'"
+    },
+    {
+      "address": "Pink purple houses Bellevue area",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'PINK'"
+    },
+    {
+      "address": "Red brick church near Oxford St",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'RED BRICK CHURCH, NEAR OXFORD ST'"
+    },
+    {
+      "address": "White painted brick house Bellevue area",
+      "field": "site.lon/lat",
+      "status": "still_missing",
+      "expected": "coordinates",
+      "actual": "null",
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "No coordinate match found in DB for loose address 'WHITE PAINTED BRICK HOUSE, BELLEVUE'"
+    }
+  ],
+  "coverage": {
+    "total_missing_checked": 15,
+    "recovered": 0,
+    "still_missing": 15
+  }
+}

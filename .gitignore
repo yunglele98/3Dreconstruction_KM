@@ -1,0 +1,47 @@
+# === Kensington Market Gitea Repo .gitignore ===
+# Binary outputs (too large for Git, stay on disk)
+outputs/
+*.blend
+*.blend1
+*.fbx
+*.glb
+*.gltf
+*.png
+*.jpg
+*.jpeg
+
+# Field photos (1,867 files, ~8GB)
+PHOTOS KENSINGTON/
+PHOTOS KENSINGTON sorted/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Temp / lock files
+*.lock
+*.tmp
+agent_ops/coordination/locks/*.lock
+
+# Archive (legacy data, not needed in version control)
+archive/
+
+# Large data files
+*.csv
+!PHOTOS KENSINGTON/csv/photo_address_index.csv
+
+# Batch output logs
+fbx_batch_log.txt
+missing_list.txt
+regen_list.txt

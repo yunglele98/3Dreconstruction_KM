@@ -11,7 +11,23 @@ Usage:
 """
 
 import json
+import os
+import tempfile
 from pathlib import Path
+
+
+def _atomic_write_json(filepath, data, ensure_ascii=True):
+    """Write JSON atomically via temp file + rename to prevent corruption."""
+    filepath = Path(filepath)
+    with tempfile.NamedTemporaryFile(
+        mode="w", dir=filepath.parent, delete=False,
+        suffix=".tmp", encoding="utf-8",
+    ) as tmp:
+        json.dump(data, tmp, indent=2, ensure_ascii=ensure_ascii)
+        tmp.write("\n")
+        tmp_path = Path(tmp.name)
+    os.replace(str(tmp_path), str(filepath))
+
 
 PARAMS_DIR = Path(__file__).parent.parent / "params"
 
@@ -434,9 +450,7 @@ def translate_file(filepath: Path) -> tuple[bool, str]:
     meta["translations_applied"] = translations
     data["_meta"] = meta
 
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-        f.write("\n")
+    _atomic_write_json(filepath, data)
 
     return True, ", ".join(translations)
 

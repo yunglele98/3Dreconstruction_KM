@@ -15,6 +15,7 @@ Or from Blender scripting tab:
 
 import bpy
 import bmesh
+import addon_utils
 import json
 import math
 import os
@@ -46,8 +47,51 @@ def clear_scene():
             bpy.data.materials.remove(block)
 
 
-def get_or_create_material(name, colour_hex=None, colour_rgb=None, roughness=0.8):
-    """Get existing material or create a new Principled BSDF material."""
+def _safe_tan(degrees, lo=5.0, hi=85.0):
+    """Return tan(degrees) with the angle clamped to [lo, hi] to avoid infinity.
+
+    Roof pitches of 0° produce zero ridge height (harmless but wrong) and 90°
+    makes tan() explode.  Clamping to 5-85° keeps geometry sane for the full
+    param dataset.
+    """
+    clamped = max(lo, min(hi, float(degrees)))
+    return math.tan(math.radians(clamped))
+
+
+def _clamp_positive(value, default, minimum=0.5):
+    """Return *value* if it is a positive number >= *minimum*, else *default*.
+
+    Prevents zero-width / zero-depth / zero-height geometry that would crash
+    bmesh boolean or produce degenerate cubes.
+    """
+    try:
+        v = float(value)
+        return v if v >= minimum else default
+    except (TypeError, ValueError):
+        return default
+
+
+def _get_bsdf(mat):
+    """Safely retrieve the Principled BSDF node from a material.
+
+    Returns the node, or None if the material has no node tree or no
+    Principled BSDF.  All procedural material functions should use this
+    instead of raw ``nodes.get("Principled BSDF")`` to avoid
+    AttributeError on shader-less materials.
+    """
+    if not mat or not mat.node_tree:
+        return None
+    return mat.node_tree.nodes.get("Principled BSDF")
+
+
+def get_or_create_material(name, colour_hex=None, colour_rgb=None, roughness=0.8,
+                           metallic=0.0):
+    """Get existing material or create a new Principled BSDF material.
+
+    Args:
+        metallic: Metallic value (0.0 = dielectric, 1.0 = full metal).
+            Used for storefront mullions, railings, and other metal trim.
+    """
     if name in bpy.data.materials:
         return bpy.data.materials[name]
     mat = bpy.data.materials.new(name=name)
@@ -59,6 +103,8 @@ def get_or_create_material(name, colour_hex=None, colour_rgb=None, roughness=0.8
         elif colour_rgb:
             bsdf.inputs["Base Color"].default_value = (*colour_rgb, 1.0)
         bsdf.inputs["Roughness"].default_value = roughness
+        if metallic > 0.0 and "Metallic" in bsdf.inputs:
+            bsdf.inputs["Metallic"].default_value = metallic
     return mat
 
 
@@ -98,8 +144,22 @@ def _add_wall_coords(nodes, links, target_input, scale_val=8.0):
     return texcoord, mapping
 
 
-def create_brick_material(name, brick_hex, mortar_hex="#B0A898", scale=8.0):
-    """Create a procedural brick material with mortar lines and bump."""
+def create_brick_material(name, brick_hex, mortar_hex="#B0A898", scale=8.0,
+                          bond_pattern="running", polychrome_hex=None):
+    """Create a procedural brick material with mortar lines, colour variation, and bump.
+
+    Args:
+        name: Blender material name.
+        brick_hex: Primary brick colour hex.
+        mortar_hex: Mortar colour hex.
+        scale: UV tiling scale.
+        bond_pattern: "running" (default stretcher bond), "flemish" (alternating
+                      header/stretcher widths), or "stack" (no offset).
+        polychrome_hex: Optional secondary brick colour hex for polychromatic
+                        brickwork. When set, replaces the darkened Color2 with
+                        the accent colour, creating visible decorative bands
+                        (common in Victorian-era Kensington Market buildings).
+    """
     if name in bpy.data.materials:
         return bpy.data.materials[name]
 
@@ -107,192 +167,680 @@ def create_brick_material(name, brick_hex, mortar_hex="#B0A898", scale=8.0):
     nodes = mat.node_tree.nodes
     links = mat.node_tree.links
 
-    # Keep default Principled BSDF and Output, just add texture nodes
-    bsdf = nodes.get("Principled BSDF")
+    bsdf = _get_bsdf(mat)
     output = nodes.get("Material Output")
+    if not bsdf:
+        return mat
     bsdf.inputs["Roughness"].default_value = 0.85
+
+    # Bond pattern presets — controls brick node offset and dimensions
+    bond = (bond_pattern or "running").lower().strip()
+    if "flemish" in bond:
+        # Flemish: alternating header/stretcher per row, narrower bricks,
+        # offset every other row by a different amount
+        brick_width = 0.35
+        row_height = 0.25
+        offset_val = 0.5
+        offset_freq = 1  # alternates every row
+    elif "stack" in bond:
+        # Stack bond: bricks aligned vertically, no offset
+        brick_width = 0.5
+        row_height = 0.25
+        offset_val = 0.0
+        offset_freq = 1
+    else:
+        # Running bond (default stretcher): half-brick offset every row
+        brick_width = 0.5
+        row_height = 0.25
+        offset_val = 0.5
+        offset_freq = 2
 
     # Brick texture
     brick = nodes.new('ShaderNodeTexBrick')
     brick.location = (0, 0)
     r, g, b = hex_to_rgb(brick_hex)
     brick.inputs["Color1"].default_value = (r, g, b, 1.0)
-    brick.inputs["Color2"].default_value = (r * 0.85, g * 0.85, b * 0.85, 1.0)
+    if polychrome_hex and polychrome_hex.startswith("#"):
+        # Polychromatic brickwork: accent colour for alternating brick courses
+        pr, pg, pb = hex_to_rgb(polychrome_hex)
+        brick.inputs["Color2"].default_value = (pr, pg, pb, 1.0)
+    else:
+        # Colour variation: Color2 is slightly darker + warmer for natural brick look
+        brick.inputs["Color2"].default_value = (
+            min(1.0, r * 0.82 + 0.02),
+            g * 0.80,
+            b * 0.78,
+            1.0
+        )
     mr, mg, mb = hex_to_rgb(mortar_hex)
     brick.inputs["Mortar"].default_value = (mr, mg, mb, 1.0)
-    brick.inputs["Scale"].default_value = 1.0  # scale handled by mapping node
+    brick.inputs["Scale"].default_value = 1.0
     brick.inputs["Mortar Size"].default_value = 0.015
     brick.inputs["Mortar Smooth"].default_value = 0.1
-    brick.inputs["Brick Width"].default_value = 0.5
-    brick.inputs["Row Height"].default_value = 0.25
+    brick.inputs["Brick Width"].default_value = brick_width
+    brick.inputs["Row Height"].default_value = row_height
+    brick.offset = offset_val
+    brick.offset_frequency = offset_freq
 
     # Box-projection wall coordinates
     _add_wall_coords(nodes, links, brick.inputs["Vector"], scale_val=scale)
 
-    # Bump from brick pattern
+    # Noise overlay for per-brick colour variation (weathering/age)
+    noise = nodes.new('ShaderNodeTexNoise')
+    noise.location = (-200, 200)
+    noise.inputs["Scale"].default_value = 25.0
+    noise.inputs["Detail"].default_value = 3.0
+    noise.inputs["Roughness"].default_value = 0.6
+
+    # Mix brick colour with noise for subtle variation
+    mix_colour = nodes.new('ShaderNodeMixRGB')
+    mix_colour.location = (200, 0)
+    mix_colour.blend_type = 'OVERLAY'
+    mix_colour.inputs["Fac"].default_value = 0.08  # subtle 8% overlay
+    links.new(brick.outputs["Color"], mix_colour.inputs["Color1"])
+    links.new(noise.outputs["Color"], mix_colour.inputs["Color2"])
+
+    # Bump from brick pattern — stronger mortar groove depth
     bump = nodes.new('ShaderNodeBump')
     bump.location = (200, -200)
-    bump.inputs["Strength"].default_value = 0.3
-    bump.inputs["Distance"].default_value = 0.01
+    bump.inputs["Strength"].default_value = 0.4
+    bump.inputs["Distance"].default_value = 0.012
 
-    links.new(brick.outputs["Color"], bsdf.inputs["Base Color"])
+    links.new(mix_colour.outputs["Color"], bsdf.inputs["Base Color"])
     links.new(brick.outputs["Fac"], bump.inputs["Height"])
     links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    # Roughness variation — mortar is smoother than brick faces
+    rough_mix = nodes.new('ShaderNodeMixRGB')
+    rough_mix.location = (200, -350)
+    rough_mix.inputs["Color1"].default_value = (0.85, 0.85, 0.85, 1.0)  # brick roughness
+    rough_mix.inputs["Color2"].default_value = (0.6, 0.6, 0.6, 1.0)    # mortar roughness
+    links.new(brick.outputs["Fac"], rough_mix.inputs["Fac"])
+    links.new(rough_mix.outputs["Color"], bsdf.inputs["Roughness"])
 
     return mat
 
 
 def create_wood_material(name, wood_hex):
-    """Create a procedural wood grain material."""
+    """Create a procedural wood grain material with knots and weathering."""
     if name in bpy.data.materials:
         return bpy.data.materials[name]
 
     mat = bpy.data.materials.new(name=name)
     nodes = mat.node_tree.nodes
     links = mat.node_tree.links
-    bsdf = nodes.get("Principled BSDF")
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
     bsdf.inputs["Roughness"].default_value = 0.65
 
+    r, g, b = hex_to_rgb(wood_hex)
+
+    # Wood grain via wave texture
     wave = nodes.new('ShaderNodeTexWave')
     wave.location = (0, 0)
     wave.wave_type = 'RINGS'
     wave.inputs["Scale"].default_value = 3.0
     wave.inputs["Distortion"].default_value = 8.0
-    wave.inputs["Detail"].default_value = 3.0
+    wave.inputs["Detail"].default_value = 4.0
+    wave.inputs["Detail Scale"].default_value = 2.0
 
     ramp = nodes.new('ShaderNodeValToRGB')
     ramp.location = (200, 0)
-    r, g, b = hex_to_rgb(wood_hex)
-    ramp.color_ramp.elements[0].color = (r * 0.7, g * 0.7, b * 0.7, 1.0)
+    ramp.color_ramp.elements[0].color = (r * 0.65, g * 0.65, b * 0.65, 1.0)
     ramp.color_ramp.elements[1].color = (r, g, b, 1.0)
 
-    # Box-projection wall coordinates (wave has its own scale, mapping just does coords)
     _add_wall_coords(nodes, links, wave.inputs["Vector"], scale_val=1.0)
 
+    # Knot pattern — scattered dark spots
+    voronoi = nodes.new('ShaderNodeTexVoronoi')
+    voronoi.location = (-200, 200)
+    voronoi.inputs["Scale"].default_value = 8.0
+    voronoi.distance = 'EUCLIDEAN'
+
+    # Mix grain with knots
+    knot_mix = nodes.new('ShaderNodeMixRGB')
+    knot_mix.location = (400, 0)
+    knot_mix.blend_type = 'DARKEN'
+    knot_mix.inputs["Fac"].default_value = 0.05
+    links.new(ramp.outputs["Color"], knot_mix.inputs["Color1"])
+    links.new(voronoi.outputs["Distance"], knot_mix.inputs["Color2"])
+
+    # Bump — wood grain ridges
     bump = nodes.new('ShaderNodeBump')
     bump.location = (200, -200)
-    bump.inputs["Strength"].default_value = 0.15
+    bump.inputs["Strength"].default_value = 0.2
+    bump.inputs["Distance"].default_value = 0.005
 
     links.new(wave.outputs["Fac"], ramp.inputs["Fac"])
-    links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
+    links.new(knot_mix.outputs["Color"], bsdf.inputs["Base Color"])
     links.new(wave.outputs["Fac"], bump.inputs["Height"])
     links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    # Roughness variation — grain ridges are smoother than flat wood
+    rough_mix = nodes.new('ShaderNodeMixRGB')
+    rough_mix.location = (200, -350)
+    rough_mix.inputs["Color1"].default_value = (0.65, 0.65, 0.65, 1.0)  # flat grain
+    rough_mix.inputs["Color2"].default_value = (0.45, 0.45, 0.45, 1.0)  # ridge polish
+    links.new(wave.outputs["Fac"], rough_mix.inputs["Fac"])
+    links.new(rough_mix.outputs["Color"], bsdf.inputs["Roughness"])
 
     return mat
 
 
-def create_roof_material(name, roof_hex):
-    """Create a procedural roof shingle material with texture."""
+def create_roof_material(name, roof_hex, condition="fair"):
+    """Create a procedural roof shingle material with weathering streaks and edge wear.
+
+    Args:
+        condition: Building condition ("good"/"fair"/"poor") — affects moss and
+                   weathering intensity.
+    """
     if name in bpy.data.materials:
         return bpy.data.materials[name]
 
     mat = bpy.data.materials.new(name=name)
     nodes = mat.node_tree.nodes
     links = mat.node_tree.links
-    bsdf = nodes.get("Principled BSDF")
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
     bsdf.inputs["Roughness"].default_value = 0.92
 
+    r, g, b = hex_to_rgb(roof_hex)
+
+    # Shingle pattern via brick texture
     shingle = nodes.new('ShaderNodeTexBrick')
     shingle.location = (0, 0)
-    r, g, b = hex_to_rgb(roof_hex)
-    shingle.inputs["Color1"].default_value = (r * 1.2, g * 1.2, b * 1.2, 1.0)
-    shingle.inputs["Color2"].default_value = (r * 0.7, g * 0.7, b * 0.7, 1.0)
+    shingle.inputs["Color1"].default_value = (
+        min(1.0, r * 1.15), min(1.0, g * 1.15), min(1.0, b * 1.15), 1.0)
+    shingle.inputs["Color2"].default_value = (r * 0.75, g * 0.75, b * 0.75, 1.0)
     shingle.inputs["Mortar"].default_value = (r * 0.4, g * 0.4, b * 0.4, 1.0)
-    shingle.inputs["Scale"].default_value = 1.0  # scale via mapping
+    shingle.inputs["Scale"].default_value = 1.0
     shingle.inputs["Mortar Size"].default_value = 0.02
     shingle.inputs["Brick Width"].default_value = 0.25
     shingle.inputs["Row Height"].default_value = 0.12
 
-    # Roof uses Generated with X+Y for consistent shingle pattern on sloped faces
     _add_wall_coords(nodes, links, shingle.inputs["Vector"], scale_val=15.0)
 
+    # Weathering streaks — vertical dark bands from water runoff
+    streak = nodes.new('ShaderNodeTexNoise')
+    streak.location = (-200, 300)
+    streak.inputs["Scale"].default_value = 2.0
+    streak.inputs["Detail"].default_value = 1.0
+    streak.inputs["Roughness"].default_value = 0.3
+    streak.inputs["Distortion"].default_value = 3.0  # stretched vertically
+
+    streak_mix = nodes.new('ShaderNodeMixRGB')
+    streak_mix.location = (300, 0)
+    streak_mix.blend_type = 'DARKEN'
+    streak_mix.inputs["Fac"].default_value = 0.1
+    links.new(shingle.outputs["Color"], streak_mix.inputs["Color1"])
+    links.new(streak.outputs["Color"], streak_mix.inputs["Color2"])
+
+    # Moss/algae patches on north-facing slopes (subtle green tint)
+    moss = nodes.new('ShaderNodeTexNoise')
+    moss.location = (-200, 500)
+    moss.inputs["Scale"].default_value = 5.0
+    moss.inputs["Detail"].default_value = 4.0
+
+    moss_colour = nodes.new('ShaderNodeMixRGB')
+    moss_colour.location = (500, 0)
+    moss_colour.blend_type = 'MIX'
+    # Condition-scaled moss: poor→15%, fair→4%, good→1%
+    moss_pct = {"good": 0.01, "fair": 0.04, "poor": 0.15}.get(
+        str(condition).lower(), 0.04
+    )
+    moss_colour.inputs["Fac"].default_value = moss_pct
+    moss_colour.inputs["Color2"].default_value = (0.2, 0.3, 0.15, 1.0)
+    links.new(streak_mix.outputs["Color"], moss_colour.inputs["Color1"])
+
+    links.new(moss_colour.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Bump — shingle edges
     bump = nodes.new('ShaderNodeBump')
     bump.location = (200, -200)
-    bump.inputs["Strength"].default_value = 0.4
-
-    links.new(shingle.outputs["Color"], bsdf.inputs["Base Color"])
+    bump.inputs["Strength"].default_value = 0.5
+    bump.inputs["Distance"].default_value = 0.008
     links.new(shingle.outputs["Fac"], bump.inputs["Height"])
     links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
 
     return mat
 
 
-def create_glass_material(name="mat_glass"):
-    """Create a realistic glass material with transparency and reflection."""
-    if name in bpy.data.materials:
-        return bpy.data.materials[name]
+def create_metal_roof_material(name, roof_hex):
+    """Create a procedural standing-seam metal roof material with subtle panel lines.
 
-    mat = bpy.data.materials.new(name=name)
-    bsdf = mat.node_tree.nodes.get("Principled BSDF")
-
-    bsdf.inputs["Base Color"].default_value = (0.7, 0.82, 0.88, 1.0)
-    bsdf.inputs["Roughness"].default_value = 0.02
-    bsdf.inputs["Alpha"].default_value = 0.3
-    # Try transmission for glass look
-    for key in ["Transmission Weight", "Transmission"]:
-        if key in bsdf.inputs:
-            bsdf.inputs[key].default_value = 0.7
-            break
-
-    try:
-        mat.blend_method = 'BLEND'
-    except:
-        pass
-    return mat
-
-
-def create_stone_material(name, stone_hex):
-    """Create a procedural stone/concrete material."""
+    Used for metal, copper, tin, and galvanised roofing instead of the shingle
+    brick-texture approach.
+    """
     if name in bpy.data.materials:
         return bpy.data.materials[name]
 
     mat = bpy.data.materials.new(name=name)
     nodes = mat.node_tree.nodes
     links = mat.node_tree.links
-    bsdf = nodes.get("Principled BSDF")
-    bsdf.inputs["Roughness"].default_value = 0.75
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+    r, g, b = hex_to_rgb(roof_hex)
+
+    bsdf.inputs["Roughness"].default_value = 0.35
+    bsdf.inputs["Base Color"].default_value = (r, g, b, 1.0)
+    # Metal roofs are reflective
+    if "Metallic" in bsdf.inputs:
+        bsdf.inputs["Metallic"].default_value = 0.75
+
+    # Standing seam pattern — vertical ridges via wave texture
+    wave = nodes.new('ShaderNodeTexWave')
+    wave.location = (0, 0)
+    wave.wave_type = 'BANDS'
+    wave.bands_direction = 'X'
+    wave.inputs["Scale"].default_value = 12.0
+    wave.inputs["Distortion"].default_value = 0.0
+    wave.inputs["Detail"].default_value = 0.0
+
+    _add_wall_coords(nodes, links, wave.inputs["Vector"], scale_val=4.0)
+
+    # Colour variation across panels — subtle shift per panel
+    ramp = nodes.new('ShaderNodeValToRGB')
+    ramp.location = (200, 0)
+    ramp.color_ramp.elements[0].color = (r * 0.90, g * 0.90, b * 0.90, 1.0)
+    ramp.color_ramp.elements[1].color = (
+        min(1.0, r * 1.05), min(1.0, g * 1.05), min(1.0, b * 1.05), 1.0
+    )
+    links.new(wave.outputs["Fac"], ramp.inputs["Fac"])
+    links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Weathering noise — subtle oxidation variation
+    noise = nodes.new('ShaderNodeTexNoise')
+    noise.location = (-200, 300)
+    noise.inputs["Scale"].default_value = 8.0
+    noise.inputs["Detail"].default_value = 3.0
+
+    weather_mix = nodes.new('ShaderNodeMixRGB')
+    weather_mix.location = (400, 0)
+    weather_mix.blend_type = 'DARKEN'
+    weather_mix.inputs["Fac"].default_value = 0.06
+    links.new(ramp.outputs["Color"], weather_mix.inputs["Color1"])
+    links.new(noise.outputs["Color"], weather_mix.inputs["Color2"])
+    links.new(weather_mix.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Bump — seam ridge profile
+    bump = nodes.new('ShaderNodeBump')
+    bump.location = (200, -200)
+    bump.inputs["Strength"].default_value = 0.3
+    bump.inputs["Distance"].default_value = 0.015
+    links.new(wave.outputs["Fac"], bump.inputs["Height"])
+    links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    # Roughness variation — seam ridges smoother, panels slightly rougher
+    rough_mix = nodes.new('ShaderNodeMixRGB')
+    rough_mix.location = (200, -350)
+    rough_mix.inputs["Color1"].default_value = (0.38, 0.38, 0.38, 1.0)  # panel
+    rough_mix.inputs["Color2"].default_value = (0.25, 0.25, 0.25, 1.0)  # seam
+    links.new(wave.outputs["Fac"], rough_mix.inputs["Fac"])
+    links.new(rough_mix.outputs["Color"], bsdf.inputs["Roughness"])
+
+    return mat
+
+
+def create_copper_patina_material(name, roof_hex):
+    """Create a copper roof material with verdigris patina weathering.
+
+    Aged copper develops a green-brown oxide layer (verdigris) that is
+    visually distinct from galvanised steel or painted metal.  The shader
+    blends the original copper tone with patina green, uses lower metallic
+    (oxidised surface is mostly dielectric), rougher finish, and stronger
+    weathering noise than the generic standing-seam shader.
+    """
+    if name in bpy.data.materials:
+        return bpy.data.materials[name]
+
+    mat = bpy.data.materials.new(name=name)
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+
+    # Base copper colour from param (usually brownish-orange)
+    r, g, b = hex_to_rgb(roof_hex)
+
+    # Verdigris patina tones — green-blue oxide
+    patina_r, patina_g, patina_b = 0.30, 0.52, 0.42
+
+    # Oxidised copper is mostly dielectric with residual metallic gleam
+    bsdf.inputs["Roughness"].default_value = 0.55
+    if "Metallic" in bsdf.inputs:
+        bsdf.inputs["Metallic"].default_value = 0.45
+
+    # Standing seam pattern (same panel geometry as generic metal)
+    wave = nodes.new('ShaderNodeTexWave')
+    wave.location = (0, 0)
+    wave.wave_type = 'BANDS'
+    wave.bands_direction = 'X'
+    wave.inputs["Scale"].default_value = 12.0
+    wave.inputs["Distortion"].default_value = 0.0
+    wave.inputs["Detail"].default_value = 0.0
+
+    _add_wall_coords(nodes, links, wave.inputs["Vector"], scale_val=4.0)
+
+    # Noise mask — drives patina distribution (crevices/exposed areas)
+    patina_noise = nodes.new('ShaderNodeTexNoise')
+    patina_noise.location = (-400, 200)
+    patina_noise.inputs["Scale"].default_value = 5.0
+    patina_noise.inputs["Detail"].default_value = 6.0
+    patina_noise.inputs["Roughness"].default_value = 0.7
+
+    # Colour ramp to sharpen patina boundaries
+    patina_ramp = nodes.new('ShaderNodeValToRGB')
+    patina_ramp.location = (-200, 200)
+    patina_ramp.color_ramp.elements[0].position = 0.35
+    patina_ramp.color_ramp.elements[0].color = (0.0, 0.0, 0.0, 1.0)
+    patina_ramp.color_ramp.elements[1].position = 0.65
+    patina_ramp.color_ramp.elements[1].color = (1.0, 1.0, 1.0, 1.0)
+    links.new(patina_noise.outputs["Fac"], patina_ramp.inputs["Fac"])
+
+    # Panel colour variation on the copper base
+    panel_ramp = nodes.new('ShaderNodeValToRGB')
+    panel_ramp.location = (200, 0)
+    panel_ramp.color_ramp.elements[0].color = (r * 0.85, g * 0.85, b * 0.85, 1.0)
+    panel_ramp.color_ramp.elements[1].color = (
+        min(1.0, r * 1.08), min(1.0, g * 1.08), min(1.0, b * 1.08), 1.0
+    )
+    links.new(wave.outputs["Fac"], panel_ramp.inputs["Fac"])
+
+    # Mix copper base with patina green, driven by noise mask
+    patina_mix = nodes.new('ShaderNodeMixRGB')
+    patina_mix.location = (400, 100)
+    patina_mix.blend_type = 'MIX'
+    patina_mix.inputs["Fac"].default_value = 0.0  # driven by ramp
+    links.new(patina_ramp.outputs["Color"], patina_mix.inputs["Fac"])
+    links.new(panel_ramp.outputs["Color"], patina_mix.inputs["Color1"])
+    patina_mix.inputs["Color2"].default_value = (patina_r, patina_g, patina_b, 1.0)
+    links.new(patina_mix.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Weathering overlay — extra grime in crevices
+    weather_noise = nodes.new('ShaderNodeTexNoise')
+    weather_noise.location = (-200, -100)
+    weather_noise.inputs["Scale"].default_value = 14.0
+    weather_noise.inputs["Detail"].default_value = 4.0
+
+    weather_mix = nodes.new('ShaderNodeMixRGB')
+    weather_mix.location = (600, 100)
+    weather_mix.blend_type = 'DARKEN'
+    weather_mix.inputs["Fac"].default_value = 0.12
+    links.new(patina_mix.outputs["Color"], weather_mix.inputs["Color1"])
+    links.new(weather_noise.outputs["Color"], weather_mix.inputs["Color2"])
+    links.new(weather_mix.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Bump — seam ridges plus patina surface irregularity
+    bump = nodes.new('ShaderNodeBump')
+    bump.location = (400, -200)
+    bump.inputs["Strength"].default_value = 0.35
+    bump.inputs["Distance"].default_value = 0.018
+
+    # Combine seam bump with patina texture bump
+    bump_add = nodes.new('ShaderNodeMath')
+    bump_add.location = (200, -200)
+    bump_add.operation = 'ADD'
+    links.new(wave.outputs["Fac"], bump_add.inputs[0])
+    # Patina surface roughness adds micro-bump
+    patina_bump_noise = nodes.new('ShaderNodeTexNoise')
+    patina_bump_noise.location = (0, -300)
+    patina_bump_noise.inputs["Scale"].default_value = 30.0
+    patina_bump_noise.inputs["Detail"].default_value = 5.0
+    bump_scale = nodes.new('ShaderNodeMath')
+    bump_scale.location = (100, -300)
+    bump_scale.operation = 'MULTIPLY'
+    bump_scale.inputs[1].default_value = 0.3
+    links.new(patina_bump_noise.outputs["Fac"], bump_scale.inputs[0])
+    links.new(bump_scale.outputs["Value"], bump_add.inputs[1])
+    links.new(bump_add.outputs["Value"], bump.inputs["Height"])
+    links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    # Roughness — patina areas rougher than exposed copper
+    rough_mix = nodes.new('ShaderNodeMixRGB')
+    rough_mix.location = (400, -350)
+    rough_mix.inputs["Color1"].default_value = (0.45, 0.45, 0.45, 1.0)  # copper panel
+    rough_mix.inputs["Color2"].default_value = (0.70, 0.70, 0.70, 1.0)  # patina area
+    links.new(patina_ramp.outputs["Color"], rough_mix.inputs["Fac"])
+    links.new(rough_mix.outputs["Color"], bsdf.inputs["Roughness"])
+
+    # Metallic — patina areas less metallic than exposed copper
+    metal_mix = nodes.new('ShaderNodeMixRGB')
+    metal_mix.location = (400, -500)
+    metal_mix.inputs["Color1"].default_value = (0.65, 0.65, 0.65, 1.0)  # copper
+    metal_mix.inputs["Color2"].default_value = (0.15, 0.15, 0.15, 1.0)  # patina
+    links.new(patina_ramp.outputs["Color"], metal_mix.inputs["Fac"])
+    if "Metallic" in bsdf.inputs:
+        links.new(metal_mix.outputs["Color"], bsdf.inputs["Metallic"])
+
+    return mat
+
+
+def select_roof_material(name, roof_hex, params=None):
+    """Choose shingle, metal, or copper patina roof material.
+
+    Copper/verdigris materials use the patina shader with oxidised green-brown
+    tones.  Other metal keywords (tin, galvanised, steel, standing seam) use
+    the generic standing-seam metal shader.  Everything else (asphalt, shingle,
+    slate, tile, or unspecified) uses the shingle/brick pattern.
+    """
+    rm = ""
+    condition = "fair"
+    if params:
+        rm = str(params.get("roof_material", "")).lower()
+        condition = (params.get("condition") or "fair").lower()
+    # Copper-specific keywords → patina shader
+    copper_keywords = ("copper", "verdigris", "patina")
+    if any(kw in rm for kw in copper_keywords):
+        return create_copper_patina_material(name, roof_hex)
+    # Other metals → standing-seam shader
+    metal_keywords = ("metal", "tin", "galvanised", "galvanized",
+                      "standing seam", "steel", "aluminum", "aluminium")
+    if any(kw in rm for kw in metal_keywords):
+        return create_metal_roof_material(name, roof_hex)
+    return create_roof_material(name, roof_hex, condition=condition)
+
+
+def create_glass_material(name="mat_glass", glass_type="residential"):
+    """Create a realistic glass material with sky reflection tint and dark interior.
+
+    Args:
+        name: Material name for Blender cache.
+        glass_type: "residential" (darker, less transparent) or "storefront"
+                    (larger panes, more transparent, warmer interior tint).
+    """
+    if name in bpy.data.materials:
+        return bpy.data.materials[name]
+
+    mat = bpy.data.materials.new(name=name)
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+
+    # Glass type presets — storefront vs residential
+    glass_type = (glass_type or "residential").lower()
+    if glass_type == "storefront":
+        # Storefront: larger clear panes, warmer interior from merchandise/lighting
+        interior_colour = (0.20, 0.22, 0.20, 1.0)  # warm grey-green
+        reflection_colour = (0.50, 0.58, 0.65, 1.0)  # slightly warmer sky
+        alpha = 0.20
+        roughness = 0.02
+        transmission = 0.75
+        specular = 0.85
+        fresnel_blend = 0.25
+    else:
+        # Residential: darker interior, smaller panes, more reflection
+        interior_colour = (0.15, 0.18, 0.22, 1.0)  # cool blue-grey
+        reflection_colour = (0.55, 0.65, 0.75, 1.0)  # sky reflection
+        alpha = 0.35
+        roughness = 0.03
+        transmission = 0.6
+        specular = 0.8
+        fresnel_blend = 0.3
+
+    bsdf.inputs["Base Color"].default_value = interior_colour
+    bsdf.inputs["Roughness"].default_value = roughness
+    bsdf.inputs["Alpha"].default_value = alpha
+    # Specular/reflection for sky bounce
+    for key in ["Specular IOR Level", "Specular"]:
+        if key in bsdf.inputs:
+            bsdf.inputs[key].default_value = specular
+            break
+    # Transmission for see-through
+    for key in ["Transmission Weight", "Transmission"]:
+        if key in bsdf.inputs:
+            bsdf.inputs[key].default_value = transmission
+            break
+
+    # Fresnel-like variation — more reflective at glancing angles
+    layer_weight = nodes.new('ShaderNodeLayerWeight')
+    layer_weight.location = (-200, 0)
+    layer_weight.inputs["Blend"].default_value = fresnel_blend
+
+    # Mix dark interior with sky reflection colour at edges
+    mix = nodes.new('ShaderNodeMixRGB')
+    mix.location = (0, 0)
+    mix.inputs["Color1"].default_value = interior_colour
+    mix.inputs["Color2"].default_value = reflection_colour
+    links.new(layer_weight.outputs["Facing"], mix.inputs["Fac"])
+    links.new(mix.outputs["Color"], bsdf.inputs["Base Color"])
+
+    try:
+        mat.blend_method = 'BLEND'
+    except (AttributeError, TypeError):
+        pass
+    return mat
+
+
+def create_stone_material(name, stone_hex, condition="fair"):
+    """Create a procedural stone/concrete material with veining and weathering.
+
+    Args:
+        name: Material name for Blender cache.
+        stone_hex: Base stone colour as hex string.
+        condition: Building condition — "good", "fair", or "poor".
+            Controls staining/algae overlay intensity.
+    """
+    if name in bpy.data.materials:
+        return bpy.data.materials[name]
+
+    condition = (condition or "fair").lower()
+    stain_fac = {"good": 0.02, "fair": 0.05, "poor": 0.14}.get(condition, 0.05)
+    bump_strength = {"good": 0.18, "fair": 0.25, "poor": 0.35}.get(condition, 0.25)
+    base_roughness = {"good": 0.78, "fair": 0.85, "poor": 0.92}.get(condition, 0.85)
+
+    mat = bpy.data.materials.new(name=name)
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+    bsdf.inputs["Roughness"].default_value = base_roughness
 
     r, g, b = hex_to_rgb(stone_hex)
 
+    # Fine grain noise — stone surface texture
     noise = nodes.new('ShaderNodeTexNoise')
     noise.location = (0, 0)
     noise.inputs["Scale"].default_value = 25.0
     noise.inputs["Detail"].default_value = 6.0
     noise.inputs["Roughness"].default_value = 0.6
 
+    # Larger scale noise — natural stone veining/colour bands
+    vein = nodes.new('ShaderNodeTexNoise')
+    vein.location = (0, 200)
+    vein.inputs["Scale"].default_value = 3.0
+    vein.inputs["Detail"].default_value = 2.0
+    vein.inputs["Roughness"].default_value = 0.4
+    vein.inputs["Distortion"].default_value = 1.5
+
     ramp = nodes.new('ShaderNodeValToRGB')
     ramp.location = (200, 0)
-    ramp.color_ramp.elements[0].color = (r * 0.85, g * 0.85, b * 0.85, 1.0)
+    ramp.color_ramp.elements[0].color = (r * 0.82, g * 0.82, b * 0.82, 1.0)
     ramp.color_ramp.elements[1].color = (r, g, b, 1.0)
 
-    # Box-projection wall coordinates (noise has its own scale, mapping just does coords)
+    # Mix fine + vein noise
+    mix_noise = nodes.new('ShaderNodeMixRGB')
+    mix_noise.location = (100, 100)
+    mix_noise.blend_type = 'MIX'
+    mix_noise.inputs["Fac"].default_value = 0.3
+    links.new(noise.outputs["Fac"], mix_noise.inputs["Color1"])
+    links.new(vein.outputs["Fac"], mix_noise.inputs["Color2"])
+
     _add_wall_coords(nodes, links, noise.inputs["Vector"], scale_val=1.0)
+
+    # Staining/algae overlay — condition-driven darkening
+    stain_noise = nodes.new('ShaderNodeTexNoise')
+    stain_noise.location = (-200, 400)
+    stain_noise.inputs["Scale"].default_value = 6.0
+    stain_noise.inputs["Detail"].default_value = 3.0
+    stain_noise.inputs["Roughness"].default_value = 0.8
+
+    stain_mix = nodes.new('ShaderNodeMixRGB')
+    stain_mix.location = (400, 0)
+    stain_mix.blend_type = 'DARKEN'
+    stain_mix.inputs["Fac"].default_value = stain_fac
+
+    links.new(mix_noise.outputs["Color"], ramp.inputs["Fac"])
+    links.new(ramp.outputs["Color"], stain_mix.inputs["Color1"])
+    links.new(stain_noise.outputs["Color"], stain_mix.inputs["Color2"])
+    links.new(stain_mix.outputs["Color"], bsdf.inputs["Base Color"])
 
     bump = nodes.new('ShaderNodeBump')
     bump.location = (200, -200)
-    bump.inputs["Strength"].default_value = 0.2
-
-    links.new(noise.outputs["Fac"], ramp.inputs["Fac"])
-    links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
+    bump.inputs["Strength"].default_value = bump_strength
+    bump.inputs["Distance"].default_value = 0.008
     links.new(noise.outputs["Fac"], bump.inputs["Height"])
     links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    # Roughness variation — polished veining vs rough grain
+    rough_mix = nodes.new('ShaderNodeMixRGB')
+    rough_mix.location = (200, -350)
+    rough_grain = min(1.0, base_roughness + 0.02)
+    rough_polish = max(0.0, base_roughness - 0.20)
+    rough_mix.inputs["Color1"].default_value = (rough_grain, rough_grain, rough_grain, 1.0)
+    rough_mix.inputs["Color2"].default_value = (rough_polish, rough_polish, rough_polish, 1.0)
+    links.new(vein.outputs["Fac"], rough_mix.inputs["Fac"])
+    links.new(rough_mix.outputs["Color"], bsdf.inputs["Roughness"])
 
     return mat
 
 
-def create_painted_material(name, paint_hex):
-    """Create a painted surface material with slight wear/aging."""
+def create_painted_material(name, paint_hex, condition="fair"):
+    """Create a painted surface material with wear/aging, edge chipping, and bump.
+
+    Args:
+        name: Material name for Blender cache.
+        paint_hex: Base paint colour as hex string.
+        condition: Building condition — "good", "fair", or "poor".
+            Controls weathering intensity: good=2%, fair=6%, poor=18%.
+    """
     if name in bpy.data.materials:
         return bpy.data.materials[name]
+
+    condition = (condition or "fair").lower()
+    # Condition-driven weathering parameters
+    weather_fac = {"good": 0.02, "fair": 0.06, "poor": 0.18}.get(condition, 0.06)
+    bump_strength = {"good": 0.06, "fair": 0.10, "poor": 0.20}.get(condition, 0.10)
+    base_roughness = {"good": 0.68, "fair": 0.75, "poor": 0.85}.get(condition, 0.75)
+    colour_fade = {"good": 0.96, "fair": 0.92, "poor": 0.82}.get(condition, 0.92)
 
     mat = bpy.data.materials.new(name=name)
     nodes = mat.node_tree.nodes
     links = mat.node_tree.links
-    bsdf = nodes.get("Principled BSDF")
-    bsdf.inputs["Roughness"].default_value = 0.55
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+    bsdf.inputs["Roughness"].default_value = base_roughness
 
     r, g, b = hex_to_rgb(paint_hex)
 
+    # Fine surface noise — paint texture
     noise = nodes.new('ShaderNodeTexNoise')
     noise.location = (0, 0)
     noise.inputs["Scale"].default_value = 40.0
@@ -300,16 +848,143 @@ def create_painted_material(name, paint_hex):
 
     ramp = nodes.new('ShaderNodeValToRGB')
     ramp.location = (200, 0)
-    ramp.color_ramp.elements[0].color = (r * 0.92, g * 0.92, b * 0.92, 1.0)
+    ramp.color_ramp.elements[0].color = (r * colour_fade, g * colour_fade, b * colour_fade, 1.0)
     ramp.color_ramp.elements[1].color = (r, g, b, 1.0)
 
-    # Box-projection wall coordinates (noise has its own scale, mapping just does coords)
     _add_wall_coords(nodes, links, noise.inputs["Vector"], scale_val=1.0)
 
+    # Weathering overlay — larger patches of discolouration near edges
+    weather = nodes.new('ShaderNodeTexNoise')
+    weather.location = (-200, 300)
+    weather.inputs["Scale"].default_value = 4.0
+    weather.inputs["Detail"].default_value = 2.0
+    weather.inputs["Roughness"].default_value = 0.7
+
+    # Darken paint slightly in weathered areas (condition-scaled)
+    weather_mix = nodes.new('ShaderNodeMixRGB')
+    weather_mix.location = (400, 0)
+    weather_mix.blend_type = 'DARKEN'
+    weather_mix.inputs["Fac"].default_value = weather_fac
+
     links.new(noise.outputs["Fac"], ramp.inputs["Fac"])
-    links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
+    links.new(ramp.outputs["Color"], weather_mix.inputs["Color1"])
+    links.new(weather.outputs["Color"], weather_mix.inputs["Color2"])
+    links.new(weather_mix.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Bump — paint surface texture (stronger on poor condition)
+    bump = nodes.new('ShaderNodeBump')
+    bump.location = (200, -200)
+    bump.inputs["Strength"].default_value = bump_strength
+    bump.inputs["Distance"].default_value = 0.003
+    links.new(noise.outputs["Fac"], bump.inputs["Height"])
+    links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    # Roughness variation — weathered patches are rougher than fresh paint
+    rough_mix = nodes.new('ShaderNodeMixRGB')
+    rough_mix.location = (400, -200)
+    rough_fresh = max(0.0, base_roughness - 0.05)
+    rough_worn = min(1.0, base_roughness + 0.13)
+    rough_mix.inputs["Color1"].default_value = (rough_fresh, rough_fresh, rough_fresh, 1.0)
+    rough_mix.inputs["Color2"].default_value = (rough_worn, rough_worn, rough_worn, 1.0)
+    links.new(weather.outputs["Fac"], rough_mix.inputs["Fac"])
+    links.new(rough_mix.outputs["Color"], bsdf.inputs["Roughness"])
 
     return mat
+
+
+def create_canvas_material(name, canvas_hex):
+    """Create a woven canvas/fabric material for awnings and canopies.
+
+    Features a fine weave pattern via wave texture, subtle fold creasing,
+    and higher roughness than painted surfaces (matte fabric finish).
+    """
+    if name in bpy.data.materials:
+        return bpy.data.materials[name]
+
+    mat = bpy.data.materials.new(name=name)
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+    bsdf.inputs["Roughness"].default_value = 0.82
+
+    r, g, b = hex_to_rgb(canvas_hex)
+
+    # Woven fabric pattern — crossed wave textures for warp/weft
+    warp = nodes.new('ShaderNodeTexWave')
+    warp.location = (0, 0)
+    warp.wave_type = 'BANDS'
+    warp.bands_direction = 'X'
+    warp.inputs["Scale"].default_value = 80.0
+    warp.inputs["Distortion"].default_value = 0.2
+    warp.inputs["Detail"].default_value = 1.0
+
+    weft = nodes.new('ShaderNodeTexWave')
+    weft.location = (0, 200)
+    weft.wave_type = 'BANDS'
+    weft.bands_direction = 'Z'
+    weft.inputs["Scale"].default_value = 80.0
+    weft.inputs["Distortion"].default_value = 0.2
+    weft.inputs["Detail"].default_value = 1.0
+
+    _add_wall_coords(nodes, links, warp.inputs["Vector"], scale_val=1.0)
+
+    # Combine warp + weft into crosshatch weave pattern
+    weave_add = nodes.new('ShaderNodeMath')
+    weave_add.location = (200, 100)
+    weave_add.operation = 'ADD'
+    links.new(warp.outputs["Fac"], weave_add.inputs[0])
+    links.new(weft.outputs["Fac"], weave_add.inputs[1])
+
+    # Colour variation across fabric — slight thread colour shift
+    ramp = nodes.new('ShaderNodeValToRGB')
+    ramp.location = (400, 100)
+    ramp.color_ramp.elements[0].color = (r * 0.88, g * 0.88, b * 0.88, 1.0)
+    ramp.color_ramp.elements[1].color = (
+        min(1.0, r * 1.04), min(1.0, g * 1.04), min(1.0, b * 1.04), 1.0
+    )
+    links.new(weave_add.outputs["Value"], ramp.inputs["Fac"])
+
+    # Fold/crease noise — larger scale folds from gravity
+    fold = nodes.new('ShaderNodeTexNoise')
+    fold.location = (-200, 300)
+    fold.inputs["Scale"].default_value = 3.0
+    fold.inputs["Detail"].default_value = 2.0
+    fold.inputs["Roughness"].default_value = 0.6
+
+    weather_mix = nodes.new('ShaderNodeMixRGB')
+    weather_mix.location = (600, 100)
+    weather_mix.blend_type = 'DARKEN'
+    weather_mix.inputs["Fac"].default_value = 0.08
+    links.new(ramp.outputs["Color"], weather_mix.inputs["Color1"])
+    links.new(fold.outputs["Color"], weather_mix.inputs["Color2"])
+    links.new(weather_mix.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Bump — weave texture gives micro-surface relief
+    bump = nodes.new('ShaderNodeBump')
+    bump.location = (400, -200)
+    bump.inputs["Strength"].default_value = 0.12
+    bump.inputs["Distance"].default_value = 0.002
+    links.new(weave_add.outputs["Value"], bump.inputs["Height"])
+    links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    # Roughness variation — fold creases are slightly smoother from wear
+    rough_mix = nodes.new('ShaderNodeMixRGB')
+    rough_mix.location = (600, -200)
+    rough_mix.inputs["Color1"].default_value = (0.85, 0.85, 0.85, 1.0)  # fabric
+    rough_mix.inputs["Color2"].default_value = (0.72, 0.72, 0.72, 1.0)  # crease
+    links.new(fold.outputs["Fac"], rough_mix.inputs["Fac"])
+    links.new(rough_mix.outputs["Color"], bsdf.inputs["Roughness"])
+
+    return mat
+
+
+def get_utility_anchor_height(params):
+    """Calculate realistic utility wire anchor height (mid-facade spaghetti)."""
+    total_h = params.get("total_height_m", 9.0)
+    # Urban Realism: Anchor at ~70% height for classic Kensington grit
+    return params.get("utility_anchor_height_m", total_h * 0.7)
 
 
 def hex_to_rgb(hex_str):
@@ -465,34 +1140,114 @@ def create_box(name, width, depth, height, location=(0, 0, 0)):
     return obj
 
 
-def boolean_cut(target, cutter, remove_cutter=True):
-    """Apply a boolean difference operation."""
-    # Triangulate cutter for reliable booleans with curved geometry
-    bpy.context.view_layer.objects.active = cutter
+def _clean_mesh(obj):
+    """Remove doubles, dissolve degenerates, recalculate normals on *obj*."""
+    bpy.context.view_layer.objects.active = obj
     bpy.ops.object.mode_set(mode='EDIT')
     bpy.ops.mesh.select_all(action='SELECT')
-    bpy.ops.mesh.quads_convert_to_tris(quad_method='BEAUTY', ngon_method='BEAUTY')
+    try:
+        bpy.ops.mesh.remove_doubles(threshold=0.0001)
+    except Exception:
+        pass
+    try:
+        bpy.ops.mesh.dissolve_degenerate(threshold=0.0001)
+    except Exception:
+        pass
+    try:
+        bpy.ops.mesh.normals_make_consistent(inside=False)
+    except Exception:
+        pass
     bpy.ops.object.mode_set(mode='OBJECT')
 
-    mod = target.modifiers.new(name="Bool", type='BOOLEAN')
-    mod.operation = 'DIFFERENCE'
-    mod.object = cutter
-    # EXACT solver is more reliable for arched/curved cuts
-    for solver in ['EXACT', 'FAST', 'FLOAT']:
+
+def boolean_cut(target, cutter, remove_cutter=True):
+    """Apply a boolean difference operation with retry and mesh-cleanup."""
+    if target is None or cutter is None:
+        if remove_cutter and cutter is not None:
+            try:
+                bpy.data.objects.remove(cutter, do_unlink=True)
+            except Exception:
+                pass
+        return
+
+    # Triangulate cutter for reliable booleans with curved geometry
+    try:
+        bpy.context.view_layer.objects.active = cutter
+        bpy.ops.object.mode_set(mode='EDIT')
+        bpy.ops.mesh.select_all(action='SELECT')
+        bpy.ops.mesh.quads_convert_to_tris(quad_method='BEAUTY', ngon_method='BEAUTY')
+        bpy.ops.object.mode_set(mode='OBJECT')
+    except Exception as exc:
+        print(f"    [WARN] Cutter triangulation failed ({exc}), proceeding anyway")
         try:
-            mod.solver = solver
+            bpy.ops.object.mode_set(mode='OBJECT')
+        except Exception:
+            pass
+
+    # Try boolean with up to 3 attempts: raw → clean-target → clean-both
+    solvers = ['EXACT', 'FAST', 'FLOAT']
+    succeeded = False
+
+    for attempt in range(3):
+        if attempt == 1:
+            # Second attempt: clean target mesh before retry
+            _clean_mesh(target)
+        elif attempt == 2:
+            # Third attempt: clean both meshes
+            _clean_mesh(target)
+            if cutter is not None:
+                _clean_mesh(cutter)
+
+        for solver in solvers:
+            mod = target.modifiers.new(name="Bool", type='BOOLEAN')
+            mod.operation = 'DIFFERENCE'
+            mod.object = cutter
+            try:
+                mod.solver = solver
+            except TypeError:
+                target.modifiers.remove(mod)
+                continue
+
+            bpy.context.view_layer.objects.active = target
+            try:
+                bpy.ops.object.modifier_apply(modifier=mod.name)
+                succeeded = True
+                break
+            except RuntimeError as exc:
+                # Modifier apply failed — remove it and try next solver
+                print(f"    [WARN] Boolean {solver} attempt {attempt + 1} failed: {exc}")
+                try:
+                    target.modifiers.remove(mod)
+                except Exception:
+                    pass
+                continue
+
+        if succeeded:
             break
-        except TypeError:
-            continue
-    bpy.context.view_layer.objects.active = target
-    bpy.ops.object.modifier_apply(modifier=mod.name)
-    if remove_cutter:
-        bpy.data.objects.remove(cutter, do_unlink=True)
+
+    if not succeeded:
+        # All attempts exhausted — log and clean up without crashing
+        name = getattr(target, "name", "?")
+        cutter_name = getattr(cutter, "name", "?")
+        print(f"    [ERROR] Boolean cut failed after 3 attempts: target={name}, cutter={cutter_name}")
+
+    if remove_cutter and cutter is not None:
+        try:
+            bpy.data.objects.remove(cutter, do_unlink=True)
+        except Exception:
+            pass
+
     # Fix normals after boolean
-    bpy.ops.object.mode_set(mode='EDIT')
-    bpy.ops.mesh.select_all(action='SELECT')
-    bpy.ops.mesh.normals_make_consistent(inside=False)
-    bpy.ops.object.mode_set(mode='OBJECT')
+    try:
+        bpy.ops.object.mode_set(mode='EDIT')
+        bpy.ops.mesh.select_all(action='SELECT')
+        bpy.ops.mesh.normals_make_consistent(inside=False)
+        bpy.ops.object.mode_set(mode='OBJECT')
+    except Exception:
+        try:
+            bpy.ops.object.mode_set(mode='OBJECT')
+        except Exception:
+            pass
 
 
 def create_arch_cutter(name, width, height, spring_height, arch_type="semicircular",
@@ -570,20 +1325,20 @@ def create_arch_cutter(name, width, height, spring_height, arch_type="semicircul
     # Front face
     try:
         bm.faces.new(front_verts)
-    except:
-        pass
+    except (ValueError, IndexError):
+        pass  # Duplicate face or degenerate verts
     # Back face
     try:
         bm.faces.new(list(reversed(back_verts)))
-    except:
-        pass
+    except (ValueError, IndexError):
+        pass  # Duplicate face or degenerate verts
     # Side faces
     for i in range(n):
         j = (i + 1) % n
         try:
             bm.faces.new([front_verts[i], front_verts[j], back_verts[j], back_verts[i]])
-        except:
-            pass
+        except (ValueError, IndexError):
+            pass  # Duplicate face or degenerate verts
 
     mesh = bpy.data.meshes.new(name)
     bm.to_mesh(mesh)
@@ -602,6 +1357,56 @@ def create_rect_cutter(name, width, height, depth=0.5):
     obj.scale = (width, depth, height)
     bpy.ops.object.transform_apply(scale=True)
     return obj
+
+
+def get_accent_hex(params):
+    """Get accent colour hex from colour_palette, falling back to stone default."""
+    cp = params.get("colour_palette", {})
+    if isinstance(cp, dict):
+        accent = cp.get("accent", {})
+        if isinstance(accent, dict):
+            h = accent.get("hex_approx", "")
+            if h and h.startswith("#"):
+                return h
+    return "#D4C9A8"
+
+
+def get_stone_element_hex(params, element_dict=None, default="#D4C9A8"):
+    """Resolve colour for stone decorative elements (voussoirs, string courses, etc.).
+
+    Priority: element dict → colour_palette.accent → hardcoded default.
+    """
+    if isinstance(element_dict, dict):
+        h = element_dict.get("colour_hex", "")
+        if h and h.startswith("#"):
+            return h
+    return get_accent_hex(params)
+
+
+def get_condition_roughness_bias(params):
+    """Return roughness bias based on building condition.
+
+    poor → +0.08 (more weathered), good → -0.04 (cleaner surfaces).
+    """
+    condition = (params.get("condition") or "fair").lower()
+    rating = params.get("assessment", {})
+    if isinstance(rating, dict):
+        cr = rating.get("condition_rating")
+        if isinstance(cr, (int, float)):
+            if cr <= 2:
+                condition = "poor"
+            elif cr >= 4:
+                condition = "good"
+    return {"good": -0.04, "fair": 0.0, "poor": 0.08}.get(condition, 0.0)
+
+
+def get_condition_saturation_shift(params):
+    """Return saturation multiplier based on building condition.
+
+    poor → 0.85 (desaturated/faded), good → 1.0.
+    """
+    condition = (params.get("condition") or "fair").lower()
+    return {"good": 1.0, "fair": 0.95, "poor": 0.85}.get(condition, 0.95)
 
 
 def get_facade_hex(params):
@@ -706,12 +1511,15 @@ def apply_hcd_guide_defaults(params):
         decorative = {}
         params["decorative_elements"] = decorative
 
+    # Resolve stone decorative element colour from colour_palette.accent
+    stone_hex = get_accent_hex(params)
+
     if has("string course", "string courses") and "string_courses" not in decorative:
         decorative["string_courses"] = {
             "present": True,
             "width_mm": 140,
             "projection_mm": 25,
-            "colour_hex": "#D4C9A8",
+            "colour_hex": stone_hex,
         }
 
     if has("quoin", "quoining") and "quoins" not in decorative:
@@ -719,19 +1527,19 @@ def apply_hcd_guide_defaults(params):
             "present": True,
             "strip_width_mm": 220,
             "projection_mm": 18,
-            "colour_hex": "#D4C9A8",
+            "colour_hex": stone_hex,
         }
 
     if has("voussoir", "voussoirs") and "stone_voussoirs" not in decorative and "voussoirs" not in decorative:
         decorative["stone_voussoirs"] = {
             "present": True,
-            "colour_hex": "#D4C9A8",
+            "colour_hex": stone_hex,
         }
 
     if has("stone lintel", "stone lintels", "stone sills") and "stone_lintels" not in decorative:
         decorative["stone_lintels"] = {
             "present": True,
-            "colour_hex": "#D4C9A8",
+            "colour_hex": stone_hex,
         }
 
     if has("bargeboard") and "bargeboard" not in decorative:
@@ -763,7 +1571,7 @@ def apply_hcd_guide_defaults(params):
             "present": True,
             "projection_mm": 180,
             "height_mm": 220,
-            "colour_hex": "#D4C9A8",
+            "colour_hex": stone_hex,
         }
 
     if has("bay window", "bay windows", "double-height bay", "double-height bays") and "bay_window" not in params:
@@ -808,17 +1616,21 @@ def apply_hcd_guide_defaults(params):
 # ---------------------------------------------------------------------------
 
 def create_walls(params, depth=None):
-    """Create the main building walls as a hollow box."""
-    width = params.get("facade_width_m", 6.0)
+    """Create the main building walls as a hollow box with water table and party wall blanking."""
+    width = _clamp_positive(params.get("facade_width_m"), 6.0, minimum=1.0)
     if depth is None:
-        depth = params.get("facade_depth_m", DEFAULT_DEPTH)
-    total_h = params.get("total_height_m", 9.0)
+        depth = _clamp_positive(params.get("facade_depth_m"), DEFAULT_DEPTH, minimum=1.0)
+    else:
+        depth = _clamp_positive(depth, DEFAULT_DEPTH, minimum=1.0)
+    total_h = _clamp_positive(params.get("total_height_m"), 9.0, minimum=2.0)
 
     # Get wall height (up to eave, not gable peak)
     floor_heights = params.get("floor_heights_m", [3.0])
-    wall_h = sum(floor_heights)
+    if not floor_heights or not isinstance(floor_heights, list):
+        floor_heights = [3.0]
+    wall_h = sum(max(0.5, float(fh)) for fh in floor_heights)
 
-    wall_thickness = 0.3
+    wall_thickness = params.get("wall_thickness_m", 0.3)
 
     # Outer box
     outer = create_box("walls_outer", width, depth, wall_h, location=(0, 0, 0))
@@ -852,23 +1664,113 @@ def create_walls(params, depth=None):
             mortar_hex = "#8A8A8A"
         elif "light" in str(mc).lower():
             mortar_hex = "#C0B8A8"
+        elif isinstance(mc, str) and mc.startswith("#"):
+            mortar_hex = mc
+
+    # Bond pattern from facade_detail or deep_facade_analysis
+    bond_pattern = "running"
+    if isinstance(fd, dict):
+        bp = (fd.get("bond_pattern") or "").lower()
+        if bp:
+            bond_pattern = bp
+    dfa = params.get("deep_facade_analysis", {})
+    if isinstance(dfa, dict):
+        bp_dfa = (dfa.get("brick_bond_observed") or "").lower()
+        if bp_dfa:
+            bond_pattern = bp_dfa
+
+    # Polychromatic brick accent colour (Victorian decorative banding)
+    polychrome_hex = None
+    if isinstance(dfa, dict):
+        poly = dfa.get("polychromatic_brick")
+        if isinstance(poly, dict):
+            ph = poly.get("accent_hex", "")
+            if ph and ph.startswith("#"):
+                polychrome_hex = ph
+    de = params.get("decorative_elements", {})
+    if isinstance(de, dict) and not polychrome_hex:
+        poly_de = de.get("polychromatic_brick")
+        if isinstance(poly_de, dict):
+            ph = poly_de.get("colour_hex", "")
+            if ph and ph.startswith("#"):
+                polychrome_hex = ph
+
+    condition = (params.get("condition") or "fair").lower()
 
     if "brick" in mat_type:
-        mat = create_brick_material(f"mat_brick_{hex_id}", facade_hex, mortar_hex)
+        mat = create_brick_material(f"mat_brick_{hex_id}", facade_hex, mortar_hex,
+                                    bond_pattern=bond_pattern,
+                                    polychrome_hex=polychrome_hex)
     elif "stone" in mat_type or "concrete" in mat_type:
-        mat = create_stone_material(f"mat_stone_{hex_id}", facade_hex)
+        mat = create_stone_material(f"mat_stone_{hex_id}", facade_hex,
+                                    condition=condition)
+    elif "clapboard" in mat_type or "wood siding" in mat_type:
+        mat = create_wood_material(f"mat_wood_{hex_id}", facade_hex)
     elif (
         "paint" in mat_type
         or "stucco" in mat_type
-        or "clapboard" in mat_type
         or "wood" in mat_type
         or "vinyl" in mat_type
         or "siding" in mat_type
     ):
-        mat = create_painted_material(f"mat_painted_{hex_id}", facade_hex)
+        mat = create_painted_material(f"mat_painted_{hex_id}", facade_hex,
+                                      condition=condition)
     else:
-        mat = create_brick_material(f"mat_facade_{hex_id}", facade_hex, mortar_hex)
+        mat = create_brick_material(f"mat_facade_{hex_id}", facade_hex, mortar_hex,
+                                    bond_pattern=bond_pattern,
+                                    polychrome_hex=polychrome_hex)
+
+    # Condition-based weathering: bias base roughness by building condition
+    roughness_bias = get_condition_roughness_bias(params)
+    if roughness_bias != 0.0:
+        bsdf = mat.node_tree.nodes.get("Principled BSDF")
+        if bsdf:
+            base_r = bsdf.inputs["Roughness"].default_value
+            if isinstance(base_r, float):
+                bsdf.inputs["Roughness"].default_value = max(0.1, min(1.0, base_r + roughness_bias))
+
     assign_material(outer, mat)
+
+    # Water table — subtle stone band at base of facade (above foundation)
+    foundation_h = params.get("foundation_height_m", 0.3)
+    wt_h = 0.08  # water table height
+    wt_proj = 0.02  # slight projection
+    trim_hex = get_trim_hex(params)
+    wt_mat = create_stone_material(f"mat_watertable_{trim_hex.lstrip('#')}",
+                                    trim_hex, condition=condition)
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    wt = bpy.context.active_object
+    wt.name = "water_table"
+    wt.scale = (width + wt_proj * 2, wt_proj * 2, wt_h)
+    bpy.ops.object.transform_apply(scale=True)
+    wt.location = (0, wt_proj, foundation_h + wt_h / 2)
+    assign_material(wt, wt_mat)
+
+    # Party wall blanking — close off exposed side walls with flat material
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+    pw_mat = get_or_create_material("mat_party_wall", colour_hex="#6A6A6A", roughness=0.95)
+    hw = width / 2
+
+    if party_left:
+        bpy.ops.mesh.primitive_plane_add(size=1)
+        pw = bpy.context.active_object
+        pw.name = "party_wall_left"
+        pw.scale = (1, depth, wall_h)
+        bpy.ops.object.transform_apply(scale=True)
+        pw.rotation_euler.y = math.pi / 2
+        pw.location = (-hw - 0.005, -depth / 2, wall_h / 2)
+        assign_material(pw, pw_mat)
+
+    if party_right:
+        bpy.ops.mesh.primitive_plane_add(size=1)
+        pw = bpy.context.active_object
+        pw.name = "party_wall_right"
+        pw.scale = (1, depth, wall_h)
+        bpy.ops.object.transform_apply(scale=True)
+        pw.rotation_euler.y = math.pi / 2
+        pw.location = (hw + 0.005, -depth / 2, wall_h / 2)
+        assign_material(pw, pw_mat)
 
     return outer, wall_h, width, depth
 
@@ -1076,15 +1978,23 @@ def cut_windows(wall_obj, params, wall_h, facade_width, bldg_id=""):
             # Special case: gable/attic window — center in gable triangle
             if floor_idx >= 2.5 and "gable" in str(params.get("roof_type", "")).lower():
                 pitch = params.get("roof_pitch_deg", 35)
-                ridge_h = (facade_width / 2) * math.tan(math.radians(pitch))
+                ridge_h = (facade_width / 2) * _safe_tan(pitch)
                 gable_center_z = wall_h + ridge_h * 0.45  # slightly below center
                 sill_h = gable_center_z - h / 2
             else:
-                explicit_sill = win_spec.get("sill_height_above_grade_m",
-                                win_spec.get("sill_height_m",
-                                floor_data.get("sill_height_above_grade_m")))
-                if explicit_sill is not None:
-                    sill_h = z_base + float(explicit_sill)
+                # Resolve sill height — above_grade is absolute, sill_height_m is
+                # relative to this floor's base
+                sill_above_grade = (
+                    win_spec.get("sill_height_above_grade_m")
+                    or floor_data.get("sill_height_above_grade_m")
+                )
+                sill_relative = win_spec.get("sill_height_m")
+                if sill_above_grade is not None:
+                    # Absolute from ground level — do NOT add z_base
+                    sill_h = float(sill_above_grade)
+                elif sill_relative is not None:
+                    # Relative to this floor's base
+                    sill_h = z_base + float(sill_relative)
                 else:
                     sill_h = z_base + max(0.8, (floor_h_here - h) / 2)
 
@@ -1119,9 +2029,16 @@ def cut_windows(wall_obj, params, wall_h, facade_width, bldg_id=""):
             else:
                 # Generic even spacing
                 total_win_width = count * w + (count - 1) * max(0.3, (facade_width - count * w) / (count + 1))
+                # Clamp total window span to facade width so windows stay inside the wall
+                if total_win_width > facade_width:
+                    total_win_width = facade_width
                 start_x = -total_win_width / 2 + w / 2
                 spacing = (total_win_width - w) / max(1, count - 1) if count > 1 else 0
                 x_positions = [start_x + i * spacing if count > 1 else 0 for i in range(count)]
+
+            # Clamp all window x-positions to stay within facade bounds
+            hw_limit = facade_width / 2 - w / 2 - 0.05
+            x_positions = [max(-hw_limit, min(hw_limit, xp)) for xp in x_positions]
 
             for i, x in enumerate(x_positions):
 
@@ -1157,15 +2074,26 @@ def cut_windows(wall_obj, params, wall_h, facade_width, bldg_id=""):
                 frame_d = 0.06  # frame depth (projection)
                 # Per-building frame colour from JSON (some have dark bronze, others white)
                 frame_hex = trim_hex
+                frame_is_metal = False
                 wf_colour = win_spec.get("frame_colour", win_spec.get("frame_colour_hex", ""))
                 if isinstance(wf_colour, str) and wf_colour.startswith("#"):
                     frame_hex = wf_colour
                 elif isinstance(wf_colour, str) and "bronze" in wf_colour.lower():
                     frame_hex = "#4A3A2A"
+                    frame_is_metal = True
                 elif isinstance(wf_colour, str) and "dark" in wf_colour.lower():
                     frame_hex = "#3A3A3A"
-                frame_mat = get_or_create_material(f"mat_frame_{frame_hex.lstrip('#')}",
-                    colour_hex=frame_hex, roughness=0.5)
+                elif isinstance(wf_colour, str) and any(
+                    kw in wf_colour.lower() for kw in ("metal", "aluminum", "steel")
+                ):
+                    frame_is_metal = True
+                if frame_is_metal:
+                    frame_mat = get_or_create_material(
+                        f"mat_frame_metal_{frame_hex.lstrip('#')}",
+                        colour_hex=frame_hex, roughness=0.3, metallic=0.7)
+                else:
+                    frame_mat = create_wood_material(
+                        f"mat_frame_wood_{frame_hex.lstrip('#')}", frame_hex)
 
                 # Top frame
                 bpy.ops.mesh.primitive_cube_add(size=1)
@@ -1617,7 +2545,7 @@ def cut_doors(wall_obj, params, facade_width):
             aw_hex = aw.get("colour_hex", "")
             if not aw_hex or not aw_hex.startswith("#"):
                 aw_hex = colour_name_to_hex(str(aw.get("colour", "dark_grey")))
-            aw_mat = get_or_create_material(f"mat_awning_{i}", colour_hex=aw_hex, roughness=0.6)
+            aw_mat = create_canvas_material(f"mat_awning_{aw_hex.lstrip('#')}", aw_hex)
             bpy.ops.mesh.primitive_cube_add(size=1)
             canopy = bpy.context.active_object
             canopy.name = f"door_awning_{i}"
@@ -1633,14 +2561,27 @@ def cut_doors(wall_obj, params, facade_width):
 def create_gable_walls(params, wall_h, width, depth, bldg_id=""):
     """Create triangular gable walls to fill the gap between wall top and roof."""
     pitch = params.get("roof_pitch_deg", 35)
-    pitch_rad = math.radians(pitch)
-    ridge_height = (width / 2) * math.tan(pitch_rad)
+    ridge_height = (width / 2) * _safe_tan(pitch)
 
     facade_hex = get_facade_hex(params)
     hex_id = facade_hex.lstrip('#')
     mat_type = str(params.get("facade_material", "brick")).lower()
+    # Resolve bond pattern for gable walls (same as main facade)
+    fd_gw = params.get("facade_detail", {})
+    bond_gw = "running"
+    if isinstance(fd_gw, dict):
+        bp_gw = (fd_gw.get("bond_pattern") or "").lower()
+        if bp_gw:
+            bond_gw = bp_gw
+    dfa_gw = params.get("deep_facade_analysis", {})
+    if isinstance(dfa_gw, dict):
+        bp_dfa_gw = (dfa_gw.get("brick_bond_observed") or "").lower()
+        if bp_dfa_gw:
+            bond_gw = bp_dfa_gw
+
     if "brick" in mat_type:
-        mat = create_brick_material(f"mat_brick_{hex_id}", facade_hex)
+        mat = create_brick_material(f"mat_brick_{hex_id}", facade_hex,
+                                    bond_pattern=bond_gw)
     elif "stone" in mat_type or "concrete" in mat_type:
         mat = create_stone_material(f"mat_stone_{hex_id}", facade_hex)
     elif (
@@ -1653,7 +2594,8 @@ def create_gable_walls(params, wall_h, width, depth, bldg_id=""):
     ):
         mat = create_painted_material(f"mat_painted_{hex_id}", facade_hex)
     else:
-        mat = create_brick_material(f"mat_facade_{hex_id}", facade_hex)
+        mat = create_brick_material(f"mat_facade_{hex_id}", facade_hex,
+                                    bond_pattern=bond_gw)
 
     objects = []
     wall_t = 0.3
@@ -1691,9 +2633,8 @@ def create_gable_walls(params, wall_h, width, depth, bldg_id=""):
 def create_gable_roof(params, wall_h, width, depth):
     """Create a gable roof."""
     pitch = params.get("roof_pitch_deg", 35)
-    pitch_rad = math.radians(pitch)
 
-    ridge_height = (width / 2) * math.tan(pitch_rad)
+    ridge_height = (width / 2) * _safe_tan(pitch)
 
     roof_hex = get_roof_hex(params)
 
@@ -1747,8 +2688,21 @@ def create_gable_roof(params, wall_h, width, depth):
     bpy.context.view_layer.objects.active = obj
     bpy.ops.object.modifier_apply(modifier=mod.name)
 
-    mat = create_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex)
+    mat = select_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex, params)
     assign_material(obj, mat)
+
+    # Ridge cap — contrasting strip along the roof peak
+    trim_hex = get_trim_hex(params)
+    ridge_mat = get_or_create_material(f"mat_ridge_{trim_hex.lstrip('#')}",
+                                        colour_hex=trim_hex, roughness=0.5)
+    ridge_len = abs(y_front - y_back)
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    ridge_cap = bpy.context.active_object
+    ridge_cap.name = "ridge_cap"
+    ridge_cap.scale = (0.08, ridge_len, 0.04)
+    bpy.ops.object.transform_apply(scale=True)
+    ridge_cap.location = (0, (y_front + y_back) / 2, wall_h + ridge_height + 0.02)
+    assign_material(ridge_cap, ridge_mat)
 
     return obj, ridge_height
 
@@ -1760,7 +2714,6 @@ def create_cross_gable_roof(params, wall_h, width, depth):
     Secondary: front-facing cross-gable projecting forward from main roof.
     """
     pitch = params.get("roof_pitch_deg", 35)
-    pitch_rad = math.radians(pitch)
 
     roof_hex = get_roof_hex(params)
     roof_thick = 0.08
@@ -1776,7 +2729,7 @@ def create_cross_gable_roof(params, wall_h, width, depth):
     # --- Main side gable (ridge parallel to facade, runs left-right) ---
     # Ridge height governed by width (shorter facade dimension), not depth.
     # Using depth would produce absurd heights on deep lots (e.g. 32m * tan(45°) = 16m).
-    main_ridge_height = (width / 2) * math.tan(pitch_rad)
+    main_ridge_height = (width / 2) * _safe_tan(pitch)
     half_w = width / 2 + overhang * 0.5
     y_front = overhang
     y_back = -depth - overhang
@@ -1814,12 +2767,12 @@ def create_cross_gable_roof(params, wall_h, width, depth):
     bpy.context.view_layer.objects.active = obj_main
     bpy.ops.object.modifier_apply(modifier=mod.name)
 
-    mat = create_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex)
+    mat = select_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex, params)
     assign_material(obj_main, mat)
 
     # --- Secondary cross-gable (front-facing, projects forward) ---
     cross_w = width * 0.5  # roughly half facade width
-    cross_ridge_height = (cross_w / 2) * math.tan(pitch_rad)
+    cross_ridge_height = (cross_w / 2) * _safe_tan(pitch)
     # Ensure cross ridge meets or slightly exceeds main ridge
     if cross_ridge_height < main_ridge_height:
         cross_ridge_height = main_ridge_height * 1.05
@@ -1879,9 +2832,8 @@ def create_hip_roof(params, wall_h, width, depth):
     pitch = params.get("roof_pitch_deg", 25)
     if pitch < 5:
         pitch = 25  # sensible default for hip roofs with missing/zero pitch
-    pitch_rad = math.radians(pitch)
 
-    hip_height = min(width, depth) / 2 * math.tan(pitch_rad)
+    hip_height = min(width, depth) / 2 * _safe_tan(pitch)
     ridge_len = abs(depth - width) / 2
 
     roof_hex = get_roof_hex(params)
@@ -1932,30 +2884,89 @@ def create_hip_roof(params, wall_h, width, depth):
     obj = bpy.data.objects.new("roof", mesh)
     bpy.context.collection.objects.link(obj)
 
-    mat = create_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex)
+    mat = select_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex, params)
     assign_material(obj, mat)
 
     return obj, hip_height
 
 
 def create_flat_roof(params, wall_h, width, depth):
-    """Create a flat roof with parapet."""
+    """Create a flat roof with parapet walls, coping cap, and roof surface."""
     parapet_h = 0.3
     cornice = params.get("cornice", {})
     if isinstance(cornice, dict):
         parapet_h = cornice.get("height_mm", 300) / 1000
+    parapet_h = max(0.2, min(parapet_h, 0.8))
 
+    parapet_thickness = 0.15
+    coping_proj = 0.03  # coping overhang beyond parapet
+
+    roof_hex = get_roof_hex(params)
+    roof_mat = select_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex, params)
+    trim_hex = get_trim_hex(params)
+    parapet_mat = get_or_create_material("mat_parapet", colour_hex=get_facade_hex(params), roughness=0.85)
+    coping_mat = create_stone_material(f"mat_coping_{trim_hex.lstrip('#')}", trim_hex)
+
+    hw = width / 2
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+
+    # Roof surface plane
     bpy.ops.mesh.primitive_plane_add(size=1)
     roof = bpy.context.active_object
     roof.name = "roof_flat"
     roof.scale = (width + 0.1, depth + 0.1, 1)
     bpy.ops.object.transform_apply(scale=True)
-    # Walls go from y=0 to y=-depth, center at y=-depth/2
     roof.location = (0, -depth / 2, wall_h + 0.01)
+    assign_material(roof, roof_mat)
 
-    roof_hex = get_roof_hex(params)
-    mat = create_roof_material(f"mat_roof_{roof_hex.lstrip('#')}", roof_hex)
-    assign_material(roof, mat)
+    # Front parapet wall
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    pf = bpy.context.active_object
+    pf.name = "parapet_front"
+    pf.scale = (width + 0.02, parapet_thickness, parapet_h)
+    bpy.ops.object.transform_apply(scale=True)
+    pf.location = (0, parapet_thickness / 2, wall_h + parapet_h / 2)
+    assign_material(pf, parapet_mat)
+
+    # Front coping cap
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    cf = bpy.context.active_object
+    cf.name = "coping_front"
+    cf.scale = (width + coping_proj * 2 + 0.02, parapet_thickness + coping_proj * 2, 0.04)
+    bpy.ops.object.transform_apply(scale=True)
+    cf.location = (0, parapet_thickness / 2, wall_h + parapet_h + 0.02)
+    assign_material(cf, coping_mat)
+
+    # Side parapets (skip party wall sides)
+    # Side parapet ratio — heritage buildings typically have side parapets at
+    # 75-85% of front height, tapering toward the back.  Allow override from
+    # roof_detail.side_parapet_ratio (0.0-1.0).
+    rd = params.get("roof_detail", {})
+    side_ratio = 0.80  # default
+    if isinstance(rd, dict):
+        sr = rd.get("side_parapet_ratio")
+        if isinstance(sr, (int, float)) and 0.0 < sr <= 1.0:
+            side_ratio = float(sr)
+    side_parapet_h = parapet_h * side_ratio
+
+    if not party_left:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        pl = bpy.context.active_object
+        pl.name = "parapet_left"
+        pl.scale = (parapet_thickness, depth, side_parapet_h)
+        bpy.ops.object.transform_apply(scale=True)
+        pl.location = (-hw, -depth / 2, wall_h + side_parapet_h / 2)
+        assign_material(pl, parapet_mat)
+
+    if not party_right:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        pr = bpy.context.active_object
+        pr.name = "parapet_right"
+        pr.scale = (parapet_thickness, depth, side_parapet_h)
+        bpy.ops.object.transform_apply(scale=True)
+        pr.location = (hw, -depth / 2, wall_h + side_parapet_h / 2)
+        assign_material(pr, parapet_mat)
 
     return roof, parapet_h
 
@@ -1968,7 +2979,7 @@ def create_porch(params, facade_width):
     if not porch_data.get("present", porch_data.get("type")):
         return []
 
-    porch_w = porch_data.get("width_m", facade_width)
+    porch_w = min(porch_data.get("width_m", facade_width), facade_width)
     porch_d = porch_data.get("depth_m", 2.0)
     porch_h = porch_data.get("height_m", 2.8)
     floor_h = porch_data.get("floor_height_above_grade_m",
@@ -1995,7 +3006,7 @@ def create_porch(params, facade_width):
     if isinstance(posts_data, dict):
         post_colour = posts_data.get("colour_hex", "#3A2A20")
 
-    post_mat = get_or_create_material("mat_post", colour_hex=post_colour, roughness=0.6)
+    post_mat = create_wood_material(f"mat_post_{post_colour.lstrip('#')}", post_colour)
 
     # Porch beam (placed first so we know its z)
     beam_h = 0.12
@@ -2057,7 +3068,7 @@ def create_porch(params, facade_width):
             step.scale = (step_w, run, rise)
             bpy.ops.object.transform_apply(scale=True)
             step.location = (step_x, porch_d + run * (s + 0.5), rise * (step_count - s - 0.5))
-            step_mat = get_or_create_material("mat_concrete", colour_hex="#A0A0A0", roughness=0.9)
+            step_mat = create_stone_material("mat_porch_step", "#9A9A9A")
             assign_material(step, step_mat)
             objects.append(step)
 
@@ -2216,7 +3227,7 @@ def create_porch(params, facade_width):
 
 
 def create_chimney(params, wall_h, ridge_height, width):
-    """Create chimneys based on roof detail."""
+    """Create chimneys with corbelled cap and flue pot."""
     roof_detail = params.get("roof_detail", {})
     chimney_data = None
 
@@ -2229,33 +3240,50 @@ def create_chimney(params, wall_h, ridge_height, width):
         if any("chimney" in str(f).lower() for f in features):
             chimney_data = {"count": 1}
         else:
-            return []
+            # Check top-level chimneys field
+            ch_top = params.get("chimneys", {})
+            if isinstance(ch_top, dict) and ch_top.get("count", 0) > 0:
+                chimney_data = ch_top
+            elif isinstance(ch_top, int) and ch_top > 0:
+                chimney_data = {"count": ch_top}
+            else:
+                return []
 
     count = chimney_data.get("count", 0)
     if count == 0:
         return []
 
     objects = []
-    # Use facade brick colour for chimneys
     facade_hex = get_facade_hex(params)
-    brick_mat = get_or_create_material("mat_chimney_brick", colour_hex=facade_hex, roughness=0.85)
+    brick_mat = create_brick_material(f"mat_chimney_brick_{facade_hex.lstrip('#')}",
+                                       facade_hex, "#8A8A8A", scale=12.0)
+    cap_mat = create_stone_material("mat_chimney_cap", "#6A6A6A")
 
     hw = width / 2
     depth = params.get("facade_depth_m", DEFAULT_DEPTH)
 
+    # Build chimney positions from data or defaults
+    chimney_specs = []
     for key in ["left_chimney", "right_chimney"]:
         ch = chimney_data.get(key, {})
-        if not isinstance(ch, dict):
-            continue
+        if isinstance(ch, dict) and ch:
+            chimney_specs.append((key, ch))
 
-        ch_w = ch.get("width_m", 0.5)
-        ch_d = ch.get("depth_m", 0.4)
+    # If no explicit left/right but count > 0, create defaults
+    if not chimney_specs and count > 0:
+        if count >= 2:
+            chimney_specs.append(("left_chimney", {"position": "left", "width_m": 0.5, "depth_m": 0.4}))
+            chimney_specs.append(("right_chimney", {"position": "right", "width_m": 0.5, "depth_m": 0.4}))
+        else:
+            chimney_specs.append(("right_chimney", {"position": "right", "width_m": 0.5, "depth_m": 0.4}))
+
+    for key, ch in chimney_specs:
+        ch_w = min(ch.get("width_m", 0.5), width * 0.4)  # cap at 40% of facade
+        ch_d = min(ch.get("depth_m", 0.4), depth * 0.3)   # cap at 30% of depth
         above = ch.get("height_above_ridge_m", 1.0)
-        above = min(above, 1.5)  # cap chimney extension above ridge
+        above = min(above, 1.5)
 
         pos = str(ch.get("position", key)).lower()
-
-        # X position: party wall chimneys sit at the building edge
         if "left" in pos:
             x = -hw + ch_w / 2
         elif "right" in pos:
@@ -2263,16 +3291,12 @@ def create_chimney(params, wall_h, ridge_height, width):
         else:
             x = 0
 
-        # Chimney extends from partway down the wall up above the ridge
-        # Start below eave line so it looks embedded in the roof
         ch_bottom = wall_h * 0.6
         ch_top = wall_h + ridge_height + above
         ch_h = ch_top - ch_bottom
+        ch_y = -depth * 0.3
 
-        # Y position: centered on building depth (near ridge for gable roofs)
-        # For front-gable buildings, ridge runs front-to-back, chimneys at sides
-        ch_y = -depth * 0.3  # slightly toward front
-
+        # Main chimney shaft
         bpy.ops.mesh.primitive_cube_add(size=1)
         chimney = bpy.context.active_object
         chimney.name = f"chimney_{key}"
@@ -2281,6 +3305,36 @@ def create_chimney(params, wall_h, ridge_height, width):
         chimney.location = (x, ch_y, ch_bottom + ch_h / 2)
         assign_material(chimney, brick_mat)
         objects.append(chimney)
+
+        # Corbelled cap — wider band at top
+        cap_proj = 0.04
+        cap_h = 0.08
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        corbel = bpy.context.active_object
+        corbel.name = f"chimney_corbel_{key}"
+        corbel.scale = (ch_w + cap_proj * 2, ch_d + cap_proj * 2, cap_h)
+        bpy.ops.object.transform_apply(scale=True)
+        corbel.location = (x, ch_y, ch_top - cap_h / 2)
+        assign_material(corbel, brick_mat)
+        objects.append(corbel)
+
+        # Concrete cap slab
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        slab = bpy.context.active_object
+        slab.name = f"chimney_cap_{key}"
+        slab.scale = (ch_w + cap_proj * 3, ch_d + cap_proj * 3, 0.04)
+        bpy.ops.object.transform_apply(scale=True)
+        slab.location = (x, ch_y, ch_top + 0.02)
+        assign_material(slab, cap_mat)
+        objects.append(slab)
+
+        # Flue pot — small cylinder on top
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.08, depth=0.15, vertices=8)
+        flue = bpy.context.active_object
+        flue.name = f"chimney_flue_{key}"
+        flue.location = (x, ch_y, ch_top + 0.04 + 0.075)
+        assign_material(flue, cap_mat)
+        objects.append(flue)
 
     return objects
 
@@ -2323,9 +3377,12 @@ def create_bay_window(params, wall_h, facade_width):
     glass_mat = create_glass_material("mat_glass")
     trim_mat = get_or_create_material("mat_trim_white", colour_hex="#F0F0F0", roughness=0.5)
 
+    facade_depth = params.get("facade_depth_m", 10.0)
     for bay, floor_idx in bay_specs:
         proj = bay.get("projection_m", 0.4)
-        bay_w = bay.get("width_m", 2.5)
+        # Clamp projection to 20% of facade depth (prevents geometry beyond footprint)
+        proj = min(proj, facade_depth * 0.2, 1.5)
+        bay_w = min(bay.get("width_m", 2.5), facade_width - 0.2)  # leave 0.1m each side
         bay_h = bay.get("height_m", 2.0)
         sill_offset = bay.get("sill_height_m", 0.5)
 
@@ -2367,14 +3424,16 @@ def create_bay_window(params, wall_h, facade_width):
             elif "center" in pos_lower or "centre" in pos_lower:
                 x_offset = 0.0
 
-        # --- Determine if canted (3-sided) or box ---
+        # --- Determine bay type: canted (3-sided), oriel, or box ---
         bay_type = bay.get("type", "")
         sides = bay.get("sides", 0)
+        bay_type_lower = str(bay_type).lower()
         is_canted = (
             sides == 3
-            or "three_sided" in str(bay_type).lower()
-            or "canted" in str(bay_type).lower()
+            or "three_sided" in bay_type_lower
+            or "canted" in bay_type_lower
         )
+        is_oriel = "oriel" in bay_type_lower
 
         if is_canted:
             objects.extend(_create_canted_bay(
@@ -2387,20 +3446,62 @@ def create_bay_window(params, wall_h, facade_width):
                 facade_mat, glass_mat, trim_mat
             ))
 
+        # Oriel bays: add corbel brackets underneath (cantilevered, not ground-supported)
+        if is_oriel:
+            corbel_z = z_base + sill_offset
+            corbel_depth = proj * 0.9
+            corbel_h = min(0.4, sill_offset * 0.6) if sill_offset > 0.3 else 0.25
+            stone_hex = get_trim_hex(params)
+            corbel_mat = create_stone_material(
+                f"mat_corbel_{stone_hex.lstrip('#')}", stone_hex)
+            # Two corbels — left and right thirds of bay width
+            for ci, cx in enumerate([x_offset - bay_w / 3, x_offset + bay_w / 3]):
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                corbel = bpy.context.active_object
+                corbel.name = f"bay_corbel_{ci}"
+                corbel.scale = (0.15, corbel_depth * 0.5, corbel_h)
+                bpy.ops.object.transform_apply(scale=True)
+                corbel.location = (cx, corbel_depth * 0.25, corbel_z - corbel_h / 2)
+                assign_material(corbel, corbel_mat)
+                objects.append(corbel)
+            # Decorative angled bracket faces (triangular profile)
+            for ci, cx in enumerate([x_offset - bay_w / 3, x_offset + bay_w / 3]):
+                bm = bmesh.new()
+                v0 = bm.verts.new((cx - 0.06, 0.01, corbel_z))
+                v1 = bm.verts.new((cx + 0.06, 0.01, corbel_z))
+                v2 = bm.verts.new((cx + 0.06, corbel_depth * 0.4, corbel_z))
+                v3 = bm.verts.new((cx - 0.06, corbel_depth * 0.4, corbel_z))
+                v4 = bm.verts.new((cx - 0.06, 0.01, corbel_z - corbel_h))
+                v5 = bm.verts.new((cx + 0.06, 0.01, corbel_z - corbel_h))
+                bm.faces.new([v0, v1, v2, v3])  # top
+                bm.faces.new([v4, v5, v1, v0])  # front
+                bm.faces.new([v0, v3, v4])       # left triangle
+                bm.faces.new([v1, v5, v2])       # right triangle
+                bracket_mesh = bpy.data.meshes.new(f"bay_bracket_{ci}")
+                bm.to_mesh(bracket_mesh)
+                bm.free()
+                bracket_obj = bpy.data.objects.new(f"bay_bracket_{ci}", bracket_mesh)
+                bpy.context.collection.objects.link(bracket_obj)
+                assign_material(bracket_obj, corbel_mat)
+                objects.append(bracket_obj)
+
     return objects
 
 
 def _create_box_bay(bay, proj, bay_w, bay_h, z_base, sill_offset, x_offset,
                     facade_mat, glass_mat, trim_mat):
-    """Create a rectangular (flat-front) box bay window."""
+    """Create a rectangular (flat-front) box bay window with sill, frames, and side windows."""
     objects = []
+    z_bot = z_base + sill_offset
+    z_top = z_bot + bay_h
 
+    # Main bay box
     bpy.ops.mesh.primitive_cube_add(size=1)
     bay_obj = bpy.context.active_object
     bay_obj.name = "bay_window"
     bay_obj.scale = (bay_w, proj, bay_h)
     bpy.ops.object.transform_apply(scale=True)
-    bay_obj.location = (x_offset, proj / 2, z_base + sill_offset + bay_h / 2)
+    bay_obj.location = (x_offset, proj / 2, z_bot + bay_h / 2)
     assign_material(bay_obj, facade_mat)
     objects.append(bay_obj)
 
@@ -2409,25 +3510,73 @@ def _create_box_bay(bay, proj, bay_w, bay_h, z_base, sill_offset, x_offset,
     win_w = bay.get("individual_window_width_m", bay_w / win_count * 0.8)
     win_h = bay.get("individual_window_height_m", bay_h * 0.7)
 
+    frame_mat = get_or_create_material("mat_frame_2A2A2A", colour_hex="#2A2A2A", roughness=0.4)
+
     for i in range(win_count):
         x = x_offset - bay_w / 2 + bay_w / win_count * (i + 0.5)
+        # Glass pane
         bpy.ops.mesh.primitive_plane_add(size=1)
         g = bpy.context.active_object
         g.name = f"bay_glass_{i}"
-        g.scale = (win_w * 0.9, 1, win_h * 0.9)
+        g.scale = (win_w * 0.85, 1, win_h * 0.85)
         bpy.ops.object.transform_apply(scale=True)
         g.rotation_euler.x = math.pi / 2
-        g.location = (x, proj + 0.01, z_base + sill_offset + bay_h / 2)
+        g.location = (x, proj + 0.01, z_bot + bay_h / 2)
         assign_material(g, glass_mat)
         objects.append(g)
 
-    # Cornice
+        # Window frame surround
+        for fx, fw, fh, fn in [
+            (x, win_w + 0.04, 0.03, "frame_top"),       # top
+            (x, win_w + 0.04, 0.03, "frame_bot"),       # bottom
+            (x - win_w / 2 - 0.015, 0.03, win_h, "frame_left"),  # left
+            (x + win_w / 2 + 0.015, 0.03, win_h, "frame_right"), # right
+        ]:
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            fr = bpy.context.active_object
+            fr.name = f"bay_{fn}_{i}"
+            if "top" in fn or "bot" in fn:
+                fr.scale = (fw, 0.03, fh)
+                z_fr = z_bot + bay_h / 2 + (win_h / 2 + 0.015 if "top" in fn else -win_h / 2 - 0.015)
+                fr.location = (fx, proj + 0.02, z_fr)
+            else:
+                fr.scale = (fw, 0.03, fh)
+                fr.location = (fx, proj + 0.02, z_bot + bay_h / 2)
+            bpy.ops.object.transform_apply(scale=True)
+            assign_material(fr, frame_mat)
+            objects.append(fr)
+
+    # Side windows (one on each side of the bay)
+    side_win_h = win_h * 0.8
+    side_win_w = proj * 0.6
+    for side, sx in [("L", x_offset - bay_w / 2), ("R", x_offset + bay_w / 2)]:
+        bpy.ops.mesh.primitive_plane_add(size=1)
+        sg = bpy.context.active_object
+        sg.name = f"bay_side_glass_{side}"
+        sg.scale = (1, side_win_w, side_win_h)
+        bpy.ops.object.transform_apply(scale=True)
+        sg.rotation_euler.z = math.pi / 2
+        sg.location = (sx + (0.01 if side == "R" else -0.01), proj / 2, z_bot + bay_h / 2)
+        assign_material(sg, glass_mat)
+        objects.append(sg)
+
+    # Sill — projecting stone ledge at bottom
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    bay_sill = bpy.context.active_object
+    bay_sill.name = "bay_sill"
+    bay_sill.scale = (bay_w + 0.08, proj + 0.1, 0.05)
+    bpy.ops.object.transform_apply(scale=True)
+    bay_sill.location = (x_offset, proj / 2, z_bot - 0.025)
+    assign_material(bay_sill, trim_mat)
+    objects.append(bay_sill)
+
+    # Cornice cap
     bpy.ops.mesh.primitive_cube_add(size=1)
     bay_cap = bpy.context.active_object
     bay_cap.name = "bay_cornice"
     bay_cap.scale = (bay_w + 0.1, proj + 0.15, 0.08)
     bpy.ops.object.transform_apply(scale=True)
-    bay_cap.location = (x_offset, proj / 2, z_base + sill_offset + bay_h + 0.04)
+    bay_cap.location = (x_offset, proj / 2, z_top + 0.04)
     assign_material(bay_cap, trim_mat)
     objects.append(bay_cap)
 
@@ -2606,11 +3755,19 @@ def create_storefront(params, wall_obj, facade_width):
 
     # Storefront dimensions
     sf_w = sf.get("width_m", facade_width * 0.85)
+    # Clamp storefront width to facade width
+    sf_w = min(sf_w, facade_width - 0.1)
     sf_h = sf.get("height_m", 2.5)
     bulkhead_h = 0.0
     bulkhead = sf.get("bulkhead", {})
     if isinstance(bulkhead, dict) and bulkhead.get("present", True):
         bulkhead_h = bulkhead.get("height_m", sf.get("bulkhead_height_m", 0.4))
+
+    # Cap storefront top to ground floor height so it doesn't cut into second floor
+    floor_heights = params.get("floor_heights_m", [3.5])
+    ground_floor_h = float(floor_heights[0]) if floor_heights else 3.5
+    if bulkhead_h + sf_h > ground_floor_h - 0.15:
+        sf_h = max(1.5, ground_floor_h - bulkhead_h - 0.15)
 
     # Cut the storefront opening from the wall
     cutter = create_rect_cutter("sf_cut", sf_w, sf_h, depth=0.8)
@@ -2620,7 +3777,7 @@ def create_storefront(params, wall_obj, facade_width):
     boolean_cut(wall_obj, cutter)
 
     # Glass panel (full storefront)
-    glass_mat = create_glass_material("mat_sf_glass")
+    glass_mat = create_glass_material("mat_sf_glass", glass_type="storefront")
     bpy.ops.mesh.primitive_plane_add(size=1)
     gp = bpy.context.active_object
     gp.name = "storefront_glass"
@@ -2644,7 +3801,8 @@ def create_storefront(params, wall_obj, facade_width):
     if "bronze" in str(frame_desc).lower():
         mullion_hex = "#4A3A2A"
 
-    mullion_mat = get_or_create_material(f"mat_sf_mullion", colour_hex=mullion_hex, roughness=0.3)
+    mullion_mat = get_or_create_material("mat_sf_mullion", colour_hex=mullion_hex,
+                                         roughness=0.3, metallic=0.85)
 
     # Vertical mullions
     for mi in range(panel_count + 1):
@@ -2686,6 +3844,84 @@ def create_storefront(params, wall_obj, facade_width):
         assign_material(bk, bk_mat)
         objects.append(bk)
 
+    # Transom bar — horizontal divider between storefront glass and upper facade
+    transom_z = bulkhead_h + sf_h
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    tb = bpy.context.active_object
+    tb.name = "sf_transom_bar"
+    tb.scale = (sf_w + 0.15, 0.08, 0.06)
+    bpy.ops.object.transform_apply(scale=True)
+    tb.location = (0, 0.03, transom_z)
+    assign_material(tb, mullion_mat)
+    objects.append(tb)
+
+    # Signage band — above transom bar for commercial buildings
+    signage = sf.get("signage", {})
+    if isinstance(signage, dict) and signage.get("text"):
+        sign_h = signage.get("height_m", 0.5)
+        sign_w = signage.get("width_m", sf_w * 0.8)
+        sign_hex = signage.get("colour_hex", "#F0EDE8")
+        sign_mat = get_or_create_material("mat_signage", colour_hex=sign_hex, roughness=0.4)
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        sign_obj = bpy.context.active_object
+        sign_obj.name = "sf_signage"
+        sign_obj.scale = (sign_w, 0.03, sign_h)
+        bpy.ops.object.transform_apply(scale=True)
+        sign_obj.location = (0, 0.04, transom_z + 0.03 + sign_h / 2)
+        assign_material(sign_obj, sign_mat)
+        objects.append(sign_obj)
+
+    # Recessed entrance — if entrance data exists, cut a deeper recess
+    entrance = sf.get("entrance", {})
+    if isinstance(entrance, dict) and entrance.get("width_m"):
+        ent_w = entrance.get("width_m", 1.2)
+        ent_h = entrance.get("height_m", 2.4)
+        ent_pos = str(entrance.get("position", "center")).lower()
+        if "left" in ent_pos:
+            ent_x = -sf_w / 2 + ent_w / 2 + 0.3
+        elif "right" in ent_pos:
+            ent_x = sf_w / 2 - ent_w / 2 - 0.3
+        else:
+            ent_x = 0
+
+        # Recess floor — darker threshold
+        threshold_mat = get_or_create_material("mat_threshold", colour_hex="#4A4A4A", roughness=0.7)
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        recess = bpy.context.active_object
+        recess.name = "sf_recess_floor"
+        recess.scale = (ent_w + 0.1, 0.3, 0.02)
+        bpy.ops.object.transform_apply(scale=True)
+        recess.location = (ent_x, -0.15, 0.01)
+        assign_material(recess, threshold_mat)
+        objects.append(recess)
+
+    # Security grille — rolling shutter track
+    grille = sf.get("security_grille", {})
+    if isinstance(grille, dict) and grille.get("present"):
+        grille_mat = get_or_create_material("mat_grille_track", colour_hex="#5A5A5A", roughness=0.3)
+        _bsdf = grille_mat.node_tree.nodes.get("Principled BSDF")
+        if _bsdf and "Metallic" in _bsdf.inputs:
+            _bsdf.inputs["Metallic"].default_value = 0.85
+        # Track channels on each side
+        for gx in [-sf_w / 2 - 0.02, sf_w / 2 + 0.02]:
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            track = bpy.context.active_object
+            track.name = f"sf_grille_track"
+            track.scale = (0.03, 0.05, sf_h)
+            bpy.ops.object.transform_apply(scale=True)
+            track.location = (gx, 0.03, bulkhead_h + sf_h / 2)
+            assign_material(track, grille_mat)
+            objects.append(track)
+        # Housing box at top
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        housing = bpy.context.active_object
+        housing.name = "sf_grille_housing"
+        housing.scale = (sf_w + 0.1, 0.12, 0.1)
+        bpy.ops.object.transform_apply(scale=True)
+        housing.location = (0, 0.06, transom_z + 0.05)
+        assign_material(housing, grille_mat)
+        objects.append(housing)
+
     # Awning
     awning = sf.get("awning", {})
     if isinstance(awning, dict) and awning.get("present", awning.get("type")):
@@ -2711,7 +3947,7 @@ def create_storefront(params, wall_obj, facade_width):
         aw_obj = bpy.data.objects.new("awning", mesh)
         bpy.context.collection.objects.link(aw_obj)
 
-        aw_mat = get_or_create_material("mat_awning", colour_hex=aw_hex, roughness=0.6)
+        aw_mat = create_canvas_material(f"mat_awning_{aw_hex.lstrip('#')}", aw_hex)
         assign_material(aw_obj, aw_mat)
         objects.append(aw_obj)
 
@@ -2732,7 +3968,7 @@ def create_string_courses(params, wall_h, width, depth, bldg_id=""):
             return []
 
     objects = []
-    sc_hex = sc.get("colour_hex", "#D4C9A8")
+    sc_hex = sc.get("colour_hex", get_accent_hex(params))
     sc_h = sc.get("height_mm", sc.get("width_mm", 120))
     if isinstance(sc_h, (int, float)):
         sc_h = sc_h / 1000
@@ -2759,20 +3995,48 @@ def create_string_courses(params, wall_h, width, depth, bldg_id=""):
         if "parapet_base" in pos_text or "parapet base" in pos_text:
             z_positions.append(wall_h - sc_h / 2)
 
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+    hw = width / 2
+
     seen = set()
     for i, z in enumerate(sorted(z_positions)):
         z_key = round(z, 4)
         if z_key in seen:
             continue
         seen.add(z_key)
+
+        # Front band
         bpy.ops.mesh.primitive_cube_add(size=1)
         band = bpy.context.active_object
-        band.name = f"string_course_{i}"
+        band.name = f"string_course_{i}_{bldg_id}"
         band.scale = (width + sc_proj * 2, sc_proj, sc_h)
         bpy.ops.object.transform_apply(scale=True)
         band.location = (0, sc_proj / 2, z)
         assign_material(band, sc_mat)
         objects.append(band)
+
+        # Side return bands (wrap around corners, skip party walls)
+        return_depth = min(0.3, depth * 0.05)  # short return, not full depth
+        if not party_left:
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            lr = bpy.context.active_object
+            lr.name = f"string_course_{i}_left_{bldg_id}"
+            lr.scale = (sc_proj, return_depth, sc_h)
+            bpy.ops.object.transform_apply(scale=True)
+            lr.location = (-hw - sc_proj / 2, -return_depth / 2, z)
+            assign_material(lr, sc_mat)
+            objects.append(lr)
+
+        if not party_right:
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            rr = bpy.context.active_object
+            rr.name = f"string_course_{i}_right_{bldg_id}"
+            rr.scale = (sc_proj, return_depth, sc_h)
+            bpy.ops.object.transform_apply(scale=True)
+            rr.location = (hw + sc_proj / 2, -return_depth / 2, z)
+            assign_material(rr, sc_mat)
+            objects.append(rr)
 
     return objects
 
@@ -2781,6 +4045,8 @@ def _create_corbel_band(name_prefix, cx, y_face, z_base, width, course_count=3,
                         brick_w=0.22, brick_h=0.075, base_proj=0.035,
                         step_proj=0.02, colour_hex="#B85A3A"):
     """Create a simple stepped corbel table along a front-facing wall."""
+    if width < 0.1:
+        return []
     objects = []
     mat = create_brick_material(f"mat_{name_prefix}_{colour_hex.lstrip('#')}", colour_hex)
     count = max(3, int(width / max(brick_w, 0.18)))
@@ -2831,7 +4097,7 @@ def _create_arch_voussoirs(name_prefix, cx, y_face, sill_z, width, height, sprin
 
 
 def create_corbelling(params, wall_h, width, depth, bldg_id=""):
-    """Create simple corbel tables from decorative metadata."""
+    """Create corbel tables on front and exposed sides."""
     dec = params.get("decorative_elements", {})
     if not isinstance(dec, dict):
         return []
@@ -2854,8 +4120,27 @@ def create_corbelling(params, wall_h, width, depth, bldg_id=""):
 
     facade_hex = get_facade_hex(params)
     z_base = wall_h - 0.28
-    return _create_corbel_band(f"corbel_{bldg_id}", 0, 0.02, z_base, width,
-                               course_count=course_count, colour_hex=facade_hex)
+    objects = _create_corbel_band(f"corbel_front_{bldg_id}", 0, 0.02, z_base, width,
+                                  course_count=course_count, colour_hex=facade_hex)
+
+    # Side corbelling on exposed (non-party-wall) sides
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+    hw = width / 2
+
+    if not party_left:
+        side_objs = _create_corbel_band(f"corbel_left_{bldg_id}", -hw - 0.02, -depth * 0.15,
+                                         z_base, depth * 0.3,
+                                         course_count=course_count, colour_hex=facade_hex)
+        objects.extend(side_objs)
+
+    if not party_right:
+        side_objs = _create_corbel_band(f"corbel_right_{bldg_id}", hw + 0.02, -depth * 0.15,
+                                         z_base, depth * 0.3,
+                                         course_count=course_count, colour_hex=facade_hex)
+        objects.extend(side_objs)
+
+    return objects
 
 
 def create_tower(params, bldg_id=""):
@@ -2896,7 +4181,7 @@ def create_tower(params, bldg_id=""):
 
     # String courses between tower levels
     levels = tower_data.get("level_details", [])
-    sc_mat = get_or_create_material(f"mat_tower_sc_{bldg_id}", colour_hex="#D4C9A8", roughness=0.6)
+    sc_mat = get_or_create_material(f"mat_tower_sc_{bldg_id}", colour_hex=get_accent_hex(params), roughness=0.6)
     z = 0
     for lvl in levels:
         if isinstance(lvl, dict):
@@ -2975,7 +4260,7 @@ def create_quoins(params, wall_h, width, depth, bldg_id=""):
         return []
 
     objects = []
-    q_hex = quoins.get("colour_hex", "#D4C9A8")
+    q_hex = quoins.get("colour_hex", get_accent_hex(params))
     q_w = quoins.get("strip_width_mm", 200) / 1000
     q_proj = quoins.get("projection_mm", 15) / 1000
 
@@ -3000,15 +4285,31 @@ def create_quoins(params, wall_h, width, depth, bldg_id=""):
             (hw, "quoin_right"),
         ]
 
+    # Create alternating block pattern (long/short stones stacked)
+    block_h_long = 0.25
+    block_h_short = 0.18
+    block_w_long = q_w
+    block_w_short = q_w * 0.65
+
     for x, name in positions:
-        bpy.ops.mesh.primitive_cube_add(size=1)
-        q = bpy.context.active_object
-        q.name = name
-        q.scale = (q_w, q_proj, wall_h)
-        bpy.ops.object.transform_apply(scale=True)
-        q.location = (x, q_proj / 2, wall_h / 2)
-        assign_material(q, q_mat)
-        objects.append(q)
+        z = 0
+        block_idx = 0
+        while z < wall_h - 0.1:
+            is_long = (block_idx % 2 == 0)
+            bh = block_h_long if is_long else block_h_short
+            bw = block_w_long if is_long else block_w_short
+
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            q = bpy.context.active_object
+            q.name = f"{name}_{block_idx}"
+            q.scale = (bw, q_proj, bh - 0.005)  # small gap between blocks
+            bpy.ops.object.transform_apply(scale=True)
+            q.location = (x, q_proj / 2, z + bh / 2)
+            assign_material(q, q_mat)
+            objects.append(q)
+
+            z += bh
+            block_idx += 1
 
     return objects
 
@@ -3037,8 +4338,7 @@ def create_bargeboard(params, wall_h, width, depth, bldg_id=""):
         bb = {"type": "simple", "colour_hex": "#3E2A1A"}
 
     pitch = params.get("roof_pitch_deg", 35)
-    pitch_rad = math.radians(pitch)
-    ridge_height = (width / 2) * math.tan(pitch_rad)
+    ridge_height = (width / 2) * _safe_tan(pitch)
 
     # Get eave overhang for positioning
     rd = params.get("roof_detail", {})
@@ -3052,7 +4352,7 @@ def create_bargeboard(params, wall_h, width, depth, bldg_id=""):
     bb_proj = overhang  # bargeboard hangs at the eave overhang
     bb_thick = 0.04
 
-    bb_mat = get_or_create_material(f"mat_bargeboard_{bb_hex.lstrip('#')}", colour_hex=bb_hex, roughness=0.6)
+    bb_mat = create_wood_material(f"mat_bargeboard_{bb_hex.lstrip('#')}", bb_hex)
 
     objects = []
     half_w = width / 2
@@ -3150,22 +4450,25 @@ def create_cornice_band(params, wall_h, width, depth, bldg_id=""):
     else:
         height = 0.15
 
-    # Cornice colour — usually matches trim
+    # Cornice colour — usually matches trim or accent stone
     cornice_hex = cornice.get("colour_hex", "")
     if not isinstance(cornice_hex, str) or not cornice_hex.startswith("#"):
         colour_palette = params.get("colour_palette", {})
         trim = colour_palette.get("trim", {})
-        cornice_hex = "#D4C9A8"
+        cornice_hex = get_accent_hex(params)
         if isinstance(trim, dict):
-            cornice_hex = trim.get("hex_approx", "#D4C9A8")
+            cornice_hex = trim.get("hex_approx", cornice_hex)
         else:
             cornice_hex = get_trim_hex(params)
 
-    mat = get_or_create_material(f"mat_cornice_{cornice_hex.lstrip('#')}", colour_hex=cornice_hex, roughness=0.5)
+    mat = create_stone_material(f"mat_cornice_{cornice_hex.lstrip('#')}", cornice_hex)
 
     objects = []
 
-    # Front cornice
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+
+    # Front cornice — main band
     bpy.ops.mesh.primitive_cube_add(size=1)
     c = bpy.context.active_object
     c.name = f"cornice_front_{bldg_id}"
@@ -3175,14 +4478,55 @@ def create_cornice_band(params, wall_h, width, depth, bldg_id=""):
     assign_material(c, mat)
     objects.append(c)
 
-    # Side cornices
-    for side_x, side_name in [(-width / 2 - proj / 2, "left"), (width / 2 + proj / 2, "right")]:
+    # Soffit — sheltered underside, smoother than exposed cornice top
+    soffit_mat = get_or_create_material("mat_soffit", colour_hex=cornice_hex, roughness=0.45)
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    soffit = bpy.context.active_object
+    soffit.name = f"cornice_soffit_{bldg_id}"
+    soffit.scale = (width + proj * 2, proj, 0.015)
+    bpy.ops.object.transform_apply(scale=True)
+    soffit.location = (0, proj / 2, wall_h + 0.008)
+    assign_material(soffit, soffit_mat)
+    objects.append(soffit)
+
+    # Dentil course — small repeating blocks below main band (Pre-1889 and ornate styles)
+    cornice_type = str(cornice.get("type", "simple")).lower()
+    era = str(params.get("hcd_data", {}).get("construction_date", "")).lower() if isinstance(params.get("hcd_data"), dict) else ""
+    if cornice_type in ("dentil", "decorative", "bracketed") or "pre-1889" in era:
+        dentil_w = 0.04
+        dentil_h = 0.04
+        dentil_spacing = 0.08
+        dentil_z = wall_h + 0.01
+        num_dentils = int(width / dentil_spacing)
+        for di in range(num_dentils):
+            dx = -width / 2 + dentil_spacing / 2 + di * dentil_spacing
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            d = bpy.context.active_object
+            d.name = f"dentil_{bldg_id}_{di}"
+            d.scale = (dentil_w, proj * 0.6, dentil_h)
+            bpy.ops.object.transform_apply(scale=True)
+            d.location = (dx, proj * 0.3, dentil_z)
+            assign_material(d, mat)
+            objects.append(d)
+
+    # Side cornices (skip party wall sides)
+    if not party_left:
         bpy.ops.mesh.primitive_cube_add(size=1)
         sc = bpy.context.active_object
-        sc.name = f"cornice_{side_name}_{bldg_id}"
+        sc.name = f"cornice_left_{bldg_id}"
         sc.scale = (proj, depth, height)
         bpy.ops.object.transform_apply(scale=True)
-        sc.location = (side_x, -depth / 2, wall_h + height / 2)
+        sc.location = (-width / 2 - proj / 2, -depth / 2, wall_h + height / 2)
+        assign_material(sc, mat)
+        objects.append(sc)
+
+    if not party_right:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        sc = bpy.context.active_object
+        sc.name = f"cornice_right_{bldg_id}"
+        sc.scale = (proj, depth, height)
+        bpy.ops.object.transform_apply(scale=True)
+        sc.location = (width / 2 + proj / 2, -depth / 2, wall_h + height / 2)
         assign_material(sc, mat)
         objects.append(sc)
 
@@ -3257,7 +4601,7 @@ def create_hip_rooflet(params, wall_h, width, depth, bldg_id=""):
     pitch = hip.get("pitch_deg", 20)
     base_w = max(1.2, min(width * 0.22, 2.5))
     base_d = max(1.2, min(depth * 0.18, 2.2))
-    rise = min(base_w, base_d) * 0.35 * math.tan(math.radians(max(5, pitch)))
+    rise = min(base_w, base_d) * 0.35 * _safe_tan(pitch)
     x = width * 0.28 if "corner" in str(hip.get("location", "")).lower() else 0
     y = -depth * 0.28
     z = wall_h
@@ -3312,16 +4656,16 @@ def create_window_lintels(params, wall_h, facade_width, bldg_id=""):
     if not has_lintels:
         return []
 
-    # Lintel material — usually stone/cream
-    lintel_hex = "#D4C9A8"
+    # Lintel material — usually stone/cream, uses colour_palette.accent as fallback
+    lintel_hex = get_accent_hex(params)
     if isinstance(dec, dict):
         lint = dec.get("lintels", dec.get("stone_lintels", {}))
         if isinstance(lint, dict):
-            lintel_hex = lint.get("colour_hex", lint.get("colour", "#D4C9A8"))
+            lintel_hex = lint.get("colour_hex", lint.get("colour", lintel_hex))
             if not lintel_hex.startswith("#"):
                 lintel_hex = colour_name_to_hex(str(lintel_hex))
 
-    mat = get_or_create_material(f"mat_lintel_{lintel_hex.lstrip('#')}", colour_hex=lintel_hex, roughness=0.5)
+    mat = create_stone_material(f"mat_lintel_{lintel_hex.lstrip('#')}", lintel_hex)
     objects = []
 
     for floor_data in windows_detail:
@@ -3357,28 +4701,62 @@ def create_window_lintels(params, wall_h, facade_width, bldg_id=""):
             start_x = -total_win_w / 2 + w / 2
             spacing = (total_win_w - w) / max(1, count - 1) if count > 1 else 0
 
+            # Check arch type for lintel shape
+            arch_type = str(win_spec.get("arch_type", win_spec.get("head_shape", "flat"))).lower()
+
             for i in range(count):
                 x = start_x + i * spacing if count > 1 else 0
 
                 # Lintel (above window)
                 bpy.ops.mesh.primitive_cube_add(size=1)
                 lt = bpy.context.active_object
-                lt.name = f"lintel_{floor_idx}_{i}"
+                lt.name = f"lintel_{floor_idx}_{i}_{bldg_id}"
                 lt.scale = (w + 0.08, 0.06, 0.07)
                 bpy.ops.object.transform_apply(scale=True)
                 lt.location = (x, 0.03, sill_h + h + 0.035)
                 assign_material(lt, mat)
                 objects.append(lt)
 
-                # Sill (below window) — slightly wider and more projecting
+                # Keystone for segmental/arched lintels
+                if "segmental" in arch_type or "arch" in arch_type or "round" in arch_type:
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    ks = bpy.context.active_object
+                    ks.name = f"keystone_{floor_idx}_{i}_{bldg_id}"
+                    ks.scale = (0.08, 0.07, 0.12)
+                    bpy.ops.object.transform_apply(scale=True)
+                    ks.location = (x, 0.035, sill_h + h + 0.06)
+                    assign_material(ks, mat)
+                    objects.append(ks)
+
+                # Drip mould — small shelf above lintel to shed water
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                dm = bpy.context.active_object
+                dm.name = f"drip_mould_{floor_idx}_{i}_{bldg_id}"
+                dm.scale = (w + 0.12, 0.03, 0.015)
+                bpy.ops.object.transform_apply(scale=True)
+                dm.location = (x, 0.05, sill_h + h + 0.075)
+                assign_material(dm, mat)
+                objects.append(dm)
+
+                # Sill (below window) — slightly wider, more projecting, with nose
                 bpy.ops.mesh.primitive_cube_add(size=1)
                 sl = bpy.context.active_object
-                sl.name = f"sill_{floor_idx}_{i}"
+                sl.name = f"sill_{floor_idx}_{i}_{bldg_id}"
                 sl.scale = (w + 0.1, 0.08, 0.04)
                 bpy.ops.object.transform_apply(scale=True)
                 sl.location = (x, 0.04, sill_h - 0.02)
                 assign_material(sl, mat)
                 objects.append(sl)
+
+                # Sill nose — projecting front edge
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                sn = bpy.context.active_object
+                sn.name = f"sill_nose_{floor_idx}_{i}_{bldg_id}"
+                sn.scale = (w + 0.12, 0.02, 0.02)
+                bpy.ops.object.transform_apply(scale=True)
+                sn.location = (x, 0.09, sill_h - 0.03)
+                assign_material(sn, mat)
+                objects.append(sn)
 
     return objects
 
@@ -3501,7 +4879,7 @@ def create_ridge_finial(params, wall_h, width, depth, bldg_id=""):
         return []
 
     pitch = params.get("roof_pitch_deg", 35)
-    ridge_height = (width / 2) * math.tan(math.radians(pitch))
+    ridge_height = (width / 2) * _safe_tan(pitch)
 
     finial_h = ridge_el.get("height_m", 0.3)
     finial_hex = ridge_el.get("colour_hex", "#4A4A4A")
@@ -3571,7 +4949,6 @@ def create_voussoirs(params, wall_h, facade_width, bldg_id=""):
             continue
 
         floor_idx = int(_normalize_floor_index(fd.get("floor", 1), floor_heights))
-
         z_base = sum(floor_heights[:max(0, floor_idx - 1)])
 
         wins = fd.get("windows", [])
@@ -3579,39 +4956,55 @@ def create_voussoirs(params, wall_h, facade_width, bldg_id=""):
             if not isinstance(w, dict):
                 continue
 
-            arch = w.get("arch", {})
-            wtype = str(w.get("type", "")).lower()
-            if not ("arch" in wtype or (isinstance(arch, dict) and arch)):
-                continue
-
             count = w.get("count", 1)
             win_w = w.get("width_m", 0.8)
             win_h = w.get("height_m", 1.3)
             sill_h = w.get("sill_height_m", 0.8)
+            arch_type = str(w.get("arch_type", w.get("head_shape", "flat"))).lower()
 
             spacing = facade_width / (count + 1)
             for ci in range(count):
                 cx = -facade_width / 2 + spacing * (ci + 1)
                 win_top_z = z_base + sill_h + win_h
 
-                # Create voussoir stones around arch
-                num_stones = 9
-                radius = win_w / 2 + 0.04
-                stone_w = 0.08
-                stone_d = 0.12
-                for si in range(num_stones):
-                    angle = math.pi * si / (num_stones - 1)
-                    sx = cx + radius * math.cos(angle)
-                    sz = win_top_z - win_w / 2 + radius * math.sin(angle)
+                if "segmental" in arch_type or "round" in arch_type or "semi" in arch_type:
+                    # Full arched voussoir ring
+                    num_stones = 9
+                    radius = win_w / 2 + 0.04
+                    stone_w = 0.08
+                    stone_d = 0.12
+                    for si in range(num_stones):
+                        angle = math.pi * si / (num_stones - 1)
+                        sx = cx + radius * math.cos(angle)
+                        sz = win_top_z - win_w / 2 + radius * math.sin(angle)
 
-                    bpy.ops.mesh.primitive_cube_add(size=1)
-                    stone = bpy.context.active_object
-                    stone.name = f"voussoir_{bldg_id}_{ci}_{si}"
-                    stone.scale = (stone_w, stone_d, 0.06)
-                    stone.location = (sx, 0.16, sz)
-                    stone.rotation_euler.y = -(angle - math.pi / 2)
-                    assign_material(stone, mat)
-                    objects.append(stone)
+                        bpy.ops.mesh.primitive_cube_add(size=1)
+                        stone = bpy.context.active_object
+                        stone.name = f"voussoir_{bldg_id}_{floor_idx}_{ci}_{si}"
+                        stone.scale = (stone_w, stone_d, 0.06)
+                        stone.location = (sx, 0.16, sz)
+                        stone.rotation_euler.y = -(angle - math.pi / 2)
+                        assign_material(stone, mat)
+                        objects.append(stone)
+                else:
+                    # Flat brick voussoirs — row of angled bricks above window
+                    num_bricks = max(5, int(win_w / 0.08))
+                    brick_w = win_w / num_bricks
+                    brick_h = 0.10
+                    for bi in range(num_bricks):
+                        bx = cx - win_w / 2 + brick_w / 2 + bi * brick_w
+                        # Fan angle: bricks angle from center outward
+                        fan_angle = (bi - num_bricks / 2) / num_bricks * 0.3
+
+                        bpy.ops.mesh.primitive_cube_add(size=1)
+                        brick = bpy.context.active_object
+                        brick.name = f"voussoir_flat_{bldg_id}_{floor_idx}_{ci}_{bi}"
+                        brick.scale = (brick_w - 0.003, 0.06, brick_h)
+                        bpy.ops.object.transform_apply(scale=True)
+                        brick.location = (bx, 0.03, win_top_z + brick_h / 2 + 0.01)
+                        brick.rotation_euler.y = fan_angle
+                        assign_material(brick, mat)
+                        objects.append(brick)
 
     return objects
 
@@ -3643,7 +5036,7 @@ def create_gable_shingles(params, wall_h, width, depth, bldg_id=""):
 
     pitch = params.get("roof_pitch_deg", 35)
     half_w = width / 2
-    ridge_h = half_w * math.tan(math.radians(pitch))
+    ridge_h = half_w * _safe_tan(pitch)
 
     mat = get_or_create_material(f"mat_shingle_{shingle_hex.lstrip('#')}", colour_hex=shingle_hex, roughness=0.7)
 
@@ -3735,7 +5128,7 @@ def create_dormer(params, wall_h, width, depth, bldg_id=""):
             dz_base = wall_h
         else:
             pitch = params.get("roof_pitch_deg", 35)
-            dz_base = wall_h + (width / 2) * math.tan(math.radians(pitch)) * 0.3
+            dz_base = wall_h + (width / 2) * _safe_tan(pitch) * 0.3
 
         dy = -depth * 0.3  # set back from front
 
@@ -3790,9 +5183,79 @@ def create_dormer(params, wall_h, width, depth, bldg_id=""):
             d_roof_mat = create_roof_material(f"mat_droof_{d_roof_hex.lstrip('#')}", d_roof_hex)
             assign_material(cone, d_roof_mat)
             objects.append(cone)
+        elif "shed" in d_type:
+            # Shed dormer — single slope from front (high) to back (low)
+            shed_rise = d_depth * _safe_tan(min(d_pitch, 25))
+            bm = bmesh.new()
+            hw = d_w / 2 + 0.05
+            y_f = dy + d_depth / 2 + 0.05
+            y_b = dy - d_depth / 2 - 0.05
+
+            # Front edge is higher, back edge meets main roof
+            v0 = bm.verts.new((-hw + dx, y_b, top_z))
+            v1 = bm.verts.new((hw + dx, y_b, top_z))
+            v2 = bm.verts.new((hw + dx, y_f, top_z + shed_rise))
+            v3 = bm.verts.new((-hw + dx, y_f, top_z + shed_rise))
+
+            bm.faces.new([v0, v1, v2, v3])  # single slope
+
+            d_mesh = bpy.data.meshes.new(f"dormer_shed_roof_{di}")
+            bm.to_mesh(d_mesh)
+            bm.free()
+
+            d_roof_obj = bpy.data.objects.new(f"dormer_shed_roof_{bldg_id}_{di}", d_mesh)
+            bpy.context.collection.objects.link(d_roof_obj)
+
+            mod = d_roof_obj.modifiers.new("Solidify", 'SOLIDIFY')
+            mod.thickness = 0.05
+            mod.offset = -1
+            bpy.context.view_layer.objects.active = d_roof_obj
+            bpy.ops.object.modifier_apply(modifier=mod.name)
+
+            d_roof_mat = create_roof_material(f"mat_droof_{d_roof_hex.lstrip('#')}", d_roof_hex)
+            assign_material(d_roof_obj, d_roof_mat)
+            objects.append(d_roof_obj)
+        elif "hip" in d_type:
+            # Hipped dormer — four-sided roof with ridgeline shorter than base
+            d_ridge = (d_w / 2) * _safe_tan(d_pitch) * 0.7
+            bm = bmesh.new()
+            hw = d_w / 2 + 0.05
+            y_f = dy + d_depth / 2 + 0.05
+            y_b = dy - d_depth / 2 - 0.05
+            ridge_inset = d_depth * 0.3  # hip ridgeline shorter than base
+
+            v0 = bm.verts.new((-hw + dx, y_b, top_z))
+            v1 = bm.verts.new((hw + dx, y_b, top_z))
+            v2 = bm.verts.new((hw + dx, y_f, top_z))
+            v3 = bm.verts.new((-hw + dx, y_f, top_z))
+            # Ridge endpoints inset from front/back
+            v4 = bm.verts.new((dx, y_b + ridge_inset, top_z + d_ridge))
+            v5 = bm.verts.new((dx, y_f - ridge_inset, top_z + d_ridge))
+
+            bm.faces.new([v0, v3, v5, v4])  # left slope
+            bm.faces.new([v1, v4, v5, v2])  # right slope
+            bm.faces.new([v2, v5, v3])      # front hip triangle
+            bm.faces.new([v0, v4, v1])      # back hip triangle
+
+            d_mesh = bpy.data.meshes.new(f"dormer_hip_roof_{di}")
+            bm.to_mesh(d_mesh)
+            bm.free()
+
+            d_roof_obj = bpy.data.objects.new(f"dormer_hip_roof_{bldg_id}_{di}", d_mesh)
+            bpy.context.collection.objects.link(d_roof_obj)
+
+            mod = d_roof_obj.modifiers.new("Solidify", 'SOLIDIFY')
+            mod.thickness = 0.05
+            mod.offset = -1
+            bpy.context.view_layer.objects.active = d_roof_obj
+            bpy.ops.object.modifier_apply(modifier=mod.name)
+
+            d_roof_mat = create_roof_material(f"mat_droof_{d_roof_hex.lstrip('#')}", d_roof_hex)
+            assign_material(d_roof_obj, d_roof_mat)
+            objects.append(d_roof_obj)
         else:
-            # Standard gable roof
-            d_ridge = (d_w / 2) * math.tan(math.radians(d_pitch))
+            # Standard gable roof (default)
+            d_ridge = (d_w / 2) * _safe_tan(d_pitch)
             bm = bmesh.new()
             hw = d_w / 2 + 0.05
             y_f = dy + d_depth / 2 + 0.05
@@ -3888,12 +5351,10 @@ def create_fascia_boards(params, wall_h, width, depth, bldg_id=""):
         if fc and fc.startswith("#"):
             fascia_hex = fc
 
-    mat = get_or_create_material(f"mat_fascia_{fascia_hex.lstrip('#')}",
-                                  colour_hex=fascia_hex, roughness=0.5)
+    mat = create_wood_material(f"mat_fascia_{fascia_hex.lstrip('#')}", fascia_hex)
 
     pitch = params.get("roof_pitch_deg", 35)
-    pitch_rad = math.radians(pitch)
-    ridge_h = (width / 2) * math.tan(pitch_rad)
+    ridge_h = (width / 2) * _safe_tan(pitch)
 
     rd2 = params.get("roof_detail", {})
     eave_mm = 300
@@ -4150,8 +5611,8 @@ def create_turned_posts(porch_objs, params, facade_width):
         return porch_objs
 
     post_colour = posts_data.get("colour_hex", "#3A2A20")
-    post_mat = get_or_create_material(f"mat_turned_post_{post_colour.lstrip('#')}",
-                                       colour_hex=post_colour, roughness=0.55)
+    post_mat = create_wood_material(f"mat_turned_post_{post_colour.lstrip('#')}",
+                                    post_colour)
 
     # Find and replace existing porch_post objects
     new_objs = []
@@ -4267,8 +5728,7 @@ def create_storefront_awning(params, facade_width, bldg_id=""):
             aw_hex = val
             break
 
-    aw_mat = get_or_create_material(f"mat_awning_{aw_hex.lstrip('#')}",
-                                     colour_hex=aw_hex, roughness=0.7)
+    aw_mat = create_canvas_material(f"mat_awning_{aw_hex.lstrip('#')}", aw_hex)
 
     # Awning as a sloped plane
     bm = bmesh.new()
@@ -4330,15 +5790,43 @@ def create_storefront_awning(params, facade_width, bldg_id=""):
 
 
 def create_foundation(params, width, depth, bldg_id=""):
-    """Create visible foundation/water table at ground level."""
-    foundation_h = 0.2
-    foundation_proj = 0.03  # slight projection from wall face
+    """Create visible foundation/water table at ground level with stone coursing."""
+    foundation_h = params.get("foundation_height_m", 0.3)
+    if not isinstance(foundation_h, (int, float)) or foundation_h <= 0:
+        foundation_h = 0.3
+    foundation_proj = 0.04  # projection from wall face
 
-    stone_mat = create_stone_material("mat_foundation", "#7A7A78")
+    # Foundation colour — typically grey limestone or rubble stone
+    dfa = params.get("deep_facade_analysis", {})
+    depth_notes = dfa.get("depth_notes", {}) if isinstance(dfa, dict) else {}
+    if isinstance(depth_notes, dict) and depth_notes.get("foundation_height_m_est"):
+        est_h = depth_notes["foundation_height_m_est"]
+        if isinstance(est_h, (int, float)) and est_h > 0:
+            foundation_h = est_h
+
+    # Foundation colour based on construction era
+    construction_date = params.get("hcd_data", {}).get("construction_date", "")
+    if isinstance(construction_date, str):
+        construction_date = construction_date.strip()
+
+    # Select foundation colour by era
+    if any(x in construction_date for x in ["Pre-1889", "pre-1889", "1889-1903"]):
+        foundation_colour = "#7A7570"  # rubble stone
+    elif any(x in construction_date for x in ["1904-1913"]):
+        foundation_colour = "#7A7A78"  # dressed stone (current default)
+    elif any(x in construction_date for x in ["1914-1930"]):
+        foundation_colour = "#9A9690"  # concrete-like
+    else:
+        foundation_colour = "#7A7A78"  # default fallback
+
+    stone_mat = create_stone_material(f"mat_foundation_{bldg_id}", foundation_colour)
 
     objects = []
+    hw = width / 2
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
 
-    # Front
+    # Front foundation wall
     bpy.ops.mesh.primitive_cube_add(size=1)
     ff = bpy.context.active_object
     ff.name = f"foundation_front_{bldg_id}"
@@ -4348,7 +5836,7 @@ def create_foundation(params, width, depth, bldg_id=""):
     assign_material(ff, stone_mat)
     objects.append(ff)
 
-    # Back
+    # Back foundation wall
     bpy.ops.mesh.primitive_cube_add(size=1)
     fb = bpy.context.active_object
     fb.name = f"foundation_back_{bldg_id}"
@@ -4358,39 +5846,66 @@ def create_foundation(params, width, depth, bldg_id=""):
     assign_material(fb, stone_mat)
     objects.append(fb)
 
-    # Left side
-    bpy.ops.mesh.primitive_cube_add(size=1)
-    fl = bpy.context.active_object
-    fl.name = f"foundation_left_{bldg_id}"
-    fl.scale = (foundation_proj * 2, depth + foundation_proj * 2, foundation_h)
-    bpy.ops.object.transform_apply(scale=True)
-    fl.location = (-width / 2 - foundation_proj, -depth / 2, foundation_h / 2)
-    assign_material(fl, stone_mat)
-    objects.append(fl)
+    # Left side (skip if party wall — neighbour's foundation is flush)
+    if not party_left:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        fl = bpy.context.active_object
+        fl.name = f"foundation_left_{bldg_id}"
+        fl.scale = (foundation_proj * 2, depth + foundation_proj * 2, foundation_h)
+        bpy.ops.object.transform_apply(scale=True)
+        fl.location = (-hw - foundation_proj, -depth / 2, foundation_h / 2)
+        assign_material(fl, stone_mat)
+        objects.append(fl)
 
-    # Right side
-    bpy.ops.mesh.primitive_cube_add(size=1)
-    fr = bpy.context.active_object
-    fr.name = f"foundation_right_{bldg_id}"
-    fr.scale = (foundation_proj * 2, depth + foundation_proj * 2, foundation_h)
-    bpy.ops.object.transform_apply(scale=True)
-    fr.location = (width / 2 + foundation_proj, -depth / 2, foundation_h / 2)
-    assign_material(fr, stone_mat)
-    objects.append(fr)
+    # Right side (skip if party wall)
+    if not party_right:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        fr = bpy.context.active_object
+        fr.name = f"foundation_right_{bldg_id}"
+        fr.scale = (foundation_proj * 2, depth + foundation_proj * 2, foundation_h)
+        bpy.ops.object.transform_apply(scale=True)
+        fr.location = (hw + foundation_proj, -depth / 2, foundation_h / 2)
+        assign_material(fr, stone_mat)
+        objects.append(fr)
+
+    # Stone coursing lines on front face — horizontal grooves every ~0.15m
+    groove_mat = get_or_create_material("mat_foundation_groove", colour_hex="#606060", roughness=0.95)
+    course_h = 0.15
+    z = course_h
+    while z < foundation_h - 0.05:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        groove = bpy.context.active_object
+        groove.name = f"foundation_course_{bldg_id}_{int(z*100)}"
+        groove.scale = (width + foundation_proj * 2.5, 0.005, 0.01)
+        bpy.ops.object.transform_apply(scale=True)
+        groove.location = (0, foundation_proj + 0.005, z)
+        assign_material(groove, groove_mat)
+        objects.append(groove)
+        z += course_h
 
     return objects
 
 
 def create_gutters(params, wall_h, width, depth, bldg_id=""):
-    """Create gutters along eaves and downspouts at corners."""
+    """Create gutters along eaves, downspouts at corners, and elbow connectors."""
     roof_type = str(params.get("roof_type", "gable")).lower()
     if "flat" in roof_type:
         return []  # flat roofs have internal drainage
 
-    gutter_mat = get_or_create_material("mat_gutter", colour_hex="#4A4A4A", roughness=0.4)
+    # Copper gutters on buildings with copper roofing use the patina shader
+    rm = str(params.get("roof_material", "")).lower()
+    if any(kw in rm for kw in ("copper", "verdigris", "patina")):
+        gutter_mat = create_copper_patina_material("mat_gutter_copper", "#B87333")
+    else:
+        gutter_mat = get_or_create_material("mat_gutter", colour_hex="#4A4A4A", roughness=0.35)
+        # Metal gutters/downspouts: set metallic for PBR realism
+        bsdf = gutter_mat.node_tree.nodes.get("Principled BSDF")
+        if bsdf and "Metallic" in bsdf.inputs:
+            bsdf.inputs["Metallic"].default_value = 0.85
 
     objects = []
     gutter_r = 0.04
+    downspout_r = 0.025
 
     rd = params.get("roof_detail", {})
     eave_mm = 300
@@ -4399,6 +5914,10 @@ def create_gutters(params, wall_h, width, depth, bldg_id=""):
     else:
         eave_mm = params.get("eave_overhang_mm", 300)
     overhang = eave_mm / 1000.0
+
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+    hw = width / 2
 
     # Front gutter (horizontal along eave)
     bpy.ops.mesh.primitive_cylinder_add(radius=gutter_r, depth=width + overhang,
@@ -4420,14 +5939,46 @@ def create_gutters(params, wall_h, width, depth, bldg_id=""):
     assign_material(gb, gutter_mat)
     objects.append(gb)
 
-    # Downspouts at front corners
-    for side, sx in [("L", -width / 2 - 0.02), ("R", width / 2 + 0.02)]:
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.025, depth=wall_h, vertices=6)
+    # Downspouts at front corners (skip party wall sides)
+    downspout_positions = []
+    if not party_left:
+        downspout_positions.append(("L", -hw - 0.02))
+    if not party_right:
+        downspout_positions.append(("R", hw + 0.02))
+
+    for side, sx in downspout_positions:
+        # Vertical downspout pipe
+        bpy.ops.mesh.primitive_cylinder_add(radius=downspout_r, depth=wall_h - 0.3, vertices=6)
         ds = bpy.context.active_object
         ds.name = f"downspout_{side}_{bldg_id}"
-        ds.location = (sx, overhang + 0.02, wall_h / 2)
+        ds.location = (sx, overhang + 0.02, (wall_h - 0.3) / 2)
         assign_material(ds, gutter_mat)
         objects.append(ds)
+
+        # Upper elbow — connects gutter to downspout
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=downspout_r * 1.3, segments=6, ring_count=4)
+        elbow_top = bpy.context.active_object
+        elbow_top.name = f"gutter_elbow_top_{side}_{bldg_id}"
+        elbow_top.location = (sx, overhang + 0.02, wall_h - 0.05)
+        assign_material(elbow_top, gutter_mat)
+        objects.append(elbow_top)
+
+        # Lower elbow — downspout to ground discharge
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=downspout_r * 1.3, segments=6, ring_count=4)
+        elbow_bot = bpy.context.active_object
+        elbow_bot.name = f"gutter_elbow_bot_{side}_{bldg_id}"
+        elbow_bot.location = (sx, overhang + 0.02, 0.15)
+        assign_material(elbow_bot, gutter_mat)
+        objects.append(elbow_bot)
+
+        # Ground discharge — short horizontal pipe
+        bpy.ops.mesh.primitive_cylinder_add(radius=downspout_r, depth=0.2, vertices=6)
+        discharge = bpy.context.active_object
+        discharge.name = f"gutter_discharge_{side}_{bldg_id}"
+        discharge.rotation_euler.x = math.pi / 2
+        discharge.location = (sx, overhang + 0.12, 0.08)
+        assign_material(discharge, gutter_mat)
+        objects.append(discharge)
 
     return objects
 
@@ -4519,8 +6070,7 @@ def create_porch_lattice(params, facade_width, bldg_id=""):
 
     porch_d = porch_data.get("depth_m", 2.0)
     trim_hex = get_trim_hex(params)
-    lattice_mat = get_or_create_material(f"mat_lattice_{trim_hex.lstrip('#')}",
-                                          colour_hex=trim_hex, roughness=0.6)
+    lattice_mat = create_wood_material(f"mat_lattice_{trim_hex.lstrip('#')}", trim_hex)
 
     objects = []
 
@@ -4613,8 +6163,7 @@ def create_porch_lattice(params, facade_width, bldg_id=""):
     objects.append(lattice_obj)
 
     # Frame border around lattice panel
-    frame_mat = get_or_create_material(f"mat_lattice_frame_{trim_hex.lstrip('#')}",
-                                        colour_hex=trim_hex, roughness=0.55)
+    frame_mat = create_wood_material(f"mat_lattice_frame_{trim_hex.lstrip('#')}", trim_hex)
     for fname, fscale, floc in [
         ("top", (porch_w, 0.03, 0.03), (0, porch_d, floor_h)),
         ("bot", (porch_w, 0.03, 0.03), (0, porch_d, 0.015)),
@@ -4664,7 +6213,11 @@ def create_step_handrails(params, facade_width, bldg_id=""):
     if step_count < 2:
         return []
 
-    rail_mat = get_or_create_material("mat_handrail", colour_hex="#2A2A2A", roughness=0.3)
+    rail_mat = get_or_create_material("mat_handrail", colour_hex="#2A2A2A", roughness=0.25)
+    # Wrought iron handrails: set metallic
+    bsdf = rail_mat.node_tree.nodes.get("Principled BSDF")
+    if bsdf and "Metallic" in bsdf.inputs:
+        bsdf.inputs["Metallic"].default_value = 0.90
     objects = []
 
     total_run = step_count * run
@@ -4672,7 +6225,7 @@ def create_step_handrails(params, facade_width, bldg_id=""):
     rail_angle = math.atan2(floor_h, total_run)
 
     for side, sx in [("L", step_x - step_w / 2 - 0.04), ("R", step_x + step_w / 2 + 0.04)]:
-        # Sloped rail
+        # Sloped top rail
         bpy.ops.mesh.primitive_cylinder_add(radius=0.02, depth=rail_len, vertices=8)
         rail = bpy.context.active_object
         rail.name = f"handrail_{side}_{bldg_id}"
@@ -4681,23 +6234,55 @@ def create_step_handrails(params, facade_width, bldg_id=""):
         assign_material(rail, rail_mat)
         objects.append(rail)
 
-        # Bottom post — from ground level (z=0) up to rail height
-        bot_post_h = 0.9
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.015, depth=bot_post_h, vertices=8)
+        # Bottom newel post — thicker, decorative
+        bot_post_h = 0.95
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.02, depth=bot_post_h, vertices=8)
         bp = bpy.context.active_object
         bp.name = f"rail_post_bot_{side}_{bldg_id}"
         bp.location = (sx, porch_d + total_run, bot_post_h / 2)
         assign_material(bp, rail_mat)
         objects.append(bp)
 
-        # Top post — from porch deck to rail height
-        top_post_h = 0.9
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.015, depth=top_post_h, vertices=8)
+        # Newel cap ball
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.03, segments=8, ring_count=6)
+        bc = bpy.context.active_object
+        bc.name = f"rail_newel_bot_{side}_{bldg_id}"
+        bc.location = (sx, porch_d + total_run, bot_post_h + 0.01)
+        assign_material(bc, rail_mat)
+        objects.append(bc)
+
+        # Top newel post
+        top_post_h = 0.95
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.02, depth=top_post_h, vertices=8)
         tp = bpy.context.active_object
         tp.name = f"rail_post_top_{side}_{bldg_id}"
         tp.location = (sx, porch_d, floor_h + top_post_h / 2)
         assign_material(tp, rail_mat)
         objects.append(tp)
+
+        # Top newel cap
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.03, segments=8, ring_count=6)
+        tc = bpy.context.active_object
+        tc.name = f"rail_newel_top_{side}_{bldg_id}"
+        tc.location = (sx, porch_d, floor_h + top_post_h + 0.01)
+        assign_material(tc, rail_mat)
+        objects.append(tc)
+
+        # Intermediate balusters along stair slope
+        baluster_spacing = 0.15
+        num_balusters = max(1, int(total_run / baluster_spacing))
+        for bi in range(1, num_balusters):
+            frac = bi / num_balusters
+            by = porch_d + total_run * (1 - frac)
+            bz_base = floor_h * frac
+            bz_top = bz_base + 0.85
+            bal_h = bz_top - bz_base
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.008, depth=bal_h, vertices=6)
+            bal = bpy.context.active_object
+            bal.name = f"rail_baluster_{side}_{bi}_{bldg_id}"
+            bal.location = (sx, by, bz_base + bal_h / 2)
+            assign_material(bal, rail_mat)
+            objects.append(bal)
 
     return objects
 
@@ -4723,6 +6308,995 @@ def get_trim_hex(params):
 
 
 # ---------------------------------------------------------------------------
+# Additional architectural detail generators
+# ---------------------------------------------------------------------------
+
+
+def create_window_shutters(params, wall_h, facade_width, bldg_id=""):
+    """Create decorative shutters flanking windows (common Pre-1889 houses)."""
+    dec = params.get("decorative_elements", {})
+    if not isinstance(dec, dict):
+        return []
+    shutters = dec.get("shutters", {})
+    if not isinstance(shutters, dict) or not shutters.get("present", False):
+        return []
+
+    shutter_hex = shutters.get("colour_hex", get_trim_hex(params))
+    shutter_mat = get_or_create_material(f"mat_shutter_{shutter_hex.lstrip('#')}",
+                                          colour_hex=shutter_hex, roughness=0.6)
+    objects = []
+    floor_heights = params.get("floor_heights_m", [3.0])
+    windows_detail = get_effective_windows_detail(params)
+
+    for fd in windows_detail:
+        if not isinstance(fd, dict):
+            continue
+        floor_idx = int(_normalize_floor_index(fd.get("floor", 1), floor_heights))
+        z_base = sum(floor_heights[:max(0, floor_idx - 1)])
+        for w in fd.get("windows", []):
+            if not isinstance(w, dict):
+                continue
+            count = w.get("count", 1)
+            win_w = w.get("width_m", 0.85)
+            win_h = w.get("height_m", 1.3)
+            fi = max(0, min(floor_idx - 1, len(floor_heights) - 1))
+            floor_h = floor_heights[fi] if floor_heights else 3.0
+            sill_h = z_base + max(0.8, (floor_h - win_h) / 2)
+            spacing = facade_width / (count + 1)
+            for ci in range(count):
+                cx = -facade_width / 2 + spacing * (ci + 1)
+                # Left shutter
+                for side, sx in [("L", cx - win_w / 2 - 0.06), ("R", cx + win_w / 2 + 0.06)]:
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    sh = bpy.context.active_object
+                    sh.name = f"shutter_{side}_{floor_idx}_{ci}_{bldg_id}"
+                    sh.scale = (0.05, 0.02, win_h * 0.95)
+                    bpy.ops.object.transform_apply(scale=True)
+                    sh.location = (sx, 0.01, sill_h + win_h / 2)
+                    assign_material(sh, shutter_mat)
+                    objects.append(sh)
+                    # Louver lines on shutter face
+                    louver_count = int(win_h / 0.08)
+                    for li in range(louver_count):
+                        lz = sill_h + 0.04 + li * 0.08
+                        bpy.ops.mesh.primitive_cube_add(size=1)
+                        lv = bpy.context.active_object
+                        lv.name = f"louver_{side}_{floor_idx}_{ci}_{li}"
+                        lv.scale = (0.045, 0.005, 0.003)
+                        bpy.ops.object.transform_apply(scale=True)
+                        lv.location = (sx, 0.025, lz)
+                        assign_material(lv, shutter_mat)
+                        objects.append(lv)
+    return objects
+
+
+def create_address_plaque(params, facade_width, bldg_id=""):
+    """Create a small address number plaque near the front door."""
+    building_name = params.get("building_name", "")
+    if not building_name:
+        return []
+
+    # Extract house number
+    import re as _re
+    m = _re.match(r"(\d+[A-Za-z]?)", building_name)
+    if not m:
+        return []
+
+    objects = []
+    plaque_mat = get_or_create_material("mat_plaque", colour_hex="#2A2A2A", roughness=0.3)
+
+    # Position near the door — right side, at eye height
+    plaque_x = min(facade_width / 4, 1.0)
+    plaque_z = 2.0  # eye height
+
+    # Plaque backing
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    plaque = bpy.context.active_object
+    plaque.name = f"address_plaque_{bldg_id}"
+    plaque.scale = (0.2, 0.015, 0.12)
+    bpy.ops.object.transform_apply(scale=True)
+    plaque.location = (plaque_x, 0.015, plaque_z)
+    assign_material(plaque, plaque_mat)
+    objects.append(plaque)
+
+    return objects
+
+
+def create_utility_box(params, facade_width, bldg_id=""):
+    """Create a utility meter box on the facade — ubiquitous in Kensington."""
+    objects = []
+    # Only add on residential buildings
+    ctx = params.get("context", {})
+    if ctx.get("building_type") == "institutional":
+        return []
+
+    box_mat = get_or_create_material("mat_utility_box", colour_hex="#8A8A8A", roughness=0.4)
+    _bsdf = box_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.70
+
+    # Position: low on facade, to one side
+    box_x = facade_width / 3
+    box_z = 1.2
+
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    box = bpy.context.active_object
+    box.name = f"utility_meter_{bldg_id}"
+    box.scale = (0.3, 0.12, 0.4)
+    bpy.ops.object.transform_apply(scale=True)
+    box.location = (box_x, 0.06, box_z)
+    assign_material(box, box_mat)
+    objects.append(box)
+
+    # Conduit pipe running up from box
+    pipe_mat = get_or_create_material("mat_conduit", colour_hex="#6A6A6A", roughness=0.3)
+    _bsdf = pipe_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.80
+    bpy.ops.mesh.primitive_cylinder_add(radius=0.015, depth=1.5, vertices=6)
+    pipe = bpy.context.active_object
+    pipe.name = f"utility_conduit_{bldg_id}"
+    pipe.location = (box_x + 0.1, 0.03, box_z + 0.2 + 0.75)
+    assign_material(pipe, pipe_mat)
+    objects.append(pipe)
+
+    return objects
+
+
+def create_window_frames(params, wall_h, facade_width, bldg_id=""):
+    """Create visible window frame surrounds (trim boards) around each window opening."""
+    windows_detail = get_effective_windows_detail(params)
+    floor_heights = params.get("floor_heights_m", [3.0])
+    if not windows_detail:
+        return []
+
+    trim_hex = get_trim_hex(params)
+    frame_mat = get_or_create_material(f"mat_window_frame_{trim_hex.lstrip('#')}",
+                                        colour_hex=trim_hex, roughness=0.5)
+    objects = []
+    frame_w = 0.05  # frame width
+    frame_d = 0.03  # frame depth/projection
+
+    for fd in windows_detail:
+        if not isinstance(fd, dict):
+            continue
+        floor_idx = int(_normalize_floor_index(fd.get("floor", 1), floor_heights))
+        z_base = sum(floor_heights[:max(0, floor_idx - 1)])
+
+        for w in fd.get("windows", []):
+            if not isinstance(w, dict):
+                continue
+            count = w.get("count", 1)
+            if count == 0:
+                continue
+            win_w = w.get("width_m", 0.85)
+            win_h = w.get("height_m", 1.3)
+            fi = max(0, min(floor_idx - 1, len(floor_heights) - 1))
+            floor_h = floor_heights[fi] if floor_heights else 3.0
+            sill_h = z_base + max(0.8, (floor_h - win_h) / 2)
+
+            spacing = facade_width / (count + 1)
+            for ci in range(count):
+                cx = -facade_width / 2 + spacing * (ci + 1)
+                z_mid = sill_h + win_h / 2
+
+                # Top frame (header)
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                top = bpy.context.active_object
+                top.name = f"frame_top_{floor_idx}_{ci}_{bldg_id}"
+                top.scale = (win_w + frame_w * 2, frame_d, frame_w)
+                bpy.ops.object.transform_apply(scale=True)
+                top.location = (cx, frame_d / 2, sill_h + win_h + frame_w / 2)
+                assign_material(top, frame_mat)
+                objects.append(top)
+
+                # Bottom frame
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                bot = bpy.context.active_object
+                bot.name = f"frame_bot_{floor_idx}_{ci}_{bldg_id}"
+                bot.scale = (win_w + frame_w * 2, frame_d, frame_w)
+                bpy.ops.object.transform_apply(scale=True)
+                bot.location = (cx, frame_d / 2, sill_h - frame_w / 2)
+                assign_material(bot, frame_mat)
+                objects.append(bot)
+
+                # Left side frame
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                left = bpy.context.active_object
+                left.name = f"frame_left_{floor_idx}_{ci}_{bldg_id}"
+                left.scale = (frame_w, frame_d, win_h)
+                bpy.ops.object.transform_apply(scale=True)
+                left.location = (cx - win_w / 2 - frame_w / 2, frame_d / 2, z_mid)
+                assign_material(left, frame_mat)
+                objects.append(left)
+
+                # Right side frame
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                right = bpy.context.active_object
+                right.name = f"frame_right_{floor_idx}_{ci}_{bldg_id}"
+                right.scale = (frame_w, frame_d, win_h)
+                bpy.ops.object.transform_apply(scale=True)
+                right.location = (cx + win_w / 2 + frame_w / 2, frame_d / 2, z_mid)
+                assign_material(right, frame_mat)
+                objects.append(right)
+
+                # Meeting rail — horizontal bar at mid-height (double-hung windows)
+                win_type = str(w.get("type", "double_hung")).lower()
+                if "double" in win_type or "hung" in win_type:
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    rail = bpy.context.active_object
+                    rail.name = f"frame_meeting_{floor_idx}_{ci}_{bldg_id}"
+                    rail.scale = (win_w, frame_d, 0.025)
+                    bpy.ops.object.transform_apply(scale=True)
+                    rail.location = (cx, frame_d / 2 + 0.005, z_mid)
+                    assign_material(rail, frame_mat)
+                    objects.append(rail)
+
+    return objects
+
+
+def create_downpipe_brackets(params, wall_h, width, bldg_id=""):
+    """Create small wall brackets holding downspout pipes."""
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+    roof_type = str(params.get("roof_type", "gable")).lower()
+    if "flat" in roof_type:
+        return []
+
+    bracket_mat = get_or_create_material("mat_pipe_bracket", colour_hex="#4A4A4A", roughness=0.4)
+    _bsdf = bracket_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.75
+    objects = []
+    hw = width / 2
+
+    rd = params.get("roof_detail", {})
+    overhang = (rd.get("eave_overhang_mm", 300) if isinstance(rd, dict) else 300) / 1000.0
+
+    positions = []
+    if not party_left:
+        positions.append(-hw - 0.02)
+    if not party_right:
+        positions.append(hw + 0.02)
+
+    for sx in positions:
+        # Brackets at regular intervals up the wall
+        bracket_z = 0.5
+        while bracket_z < wall_h - 0.3:
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            br = bpy.context.active_object
+            br.name = f"pipe_bracket_{bldg_id}_{int(bracket_z*10)}"
+            br.scale = (0.06, 0.04, 0.02)
+            bpy.ops.object.transform_apply(scale=True)
+            br.location = (sx, overhang + 0.02, bracket_z)
+            assign_material(br, bracket_mat)
+            objects.append(br)
+            bracket_z += 1.5
+
+    return objects
+
+
+def create_balconies(params, wall_h, facade_width, bldg_id=""):
+    """Create balconies — projecting platforms with railings on upper floors."""
+    balcony_type = str(params.get("balcony_type", "")).lower()
+    balcony_count = params.get("balconies", 0)
+    if isinstance(balcony_count, dict):
+        balcony_count = balcony_count.get("count", 0)
+    if not balcony_type and not balcony_count:
+        return []
+    if isinstance(balcony_count, bool):
+        balcony_count = 1 if balcony_count else 0
+    if not balcony_count or balcony_count < 1:
+        balcony_count = 1
+
+    floor_heights = params.get("floor_heights_m", [3.0, 3.0])
+    if len(floor_heights) < 2:
+        return []  # balconies need at least 2 floors
+
+    objects = []
+    trim_hex = get_trim_hex(params)
+    rail_mat = get_or_create_material("mat_balcony_rail", colour_hex="#2A2A2A", roughness=0.3)
+    _bsdf = rail_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.90
+    deck_mat = get_or_create_material(f"mat_balcony_deck_{trim_hex.lstrip('#')}",
+                                       colour_hex="#6A6A6A", roughness=0.7)
+
+    # Balcony at second floor level
+    z_base = floor_heights[0]
+    bal_w = min(facade_width * 0.5, 3.0)
+    bal_proj = 1.0
+    bal_thick = 0.08
+    rail_h = 1.0
+
+    for bi in range(min(balcony_count, 3)):
+        if balcony_count == 1:
+            bx = 0
+        else:
+            bx = -facade_width / 4 + (facade_width / 2) * bi / max(1, balcony_count - 1)
+
+        # Deck slab
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        deck = bpy.context.active_object
+        deck.name = f"balcony_deck_{bi}_{bldg_id}"
+        deck.scale = (bal_w, bal_proj, bal_thick)
+        bpy.ops.object.transform_apply(scale=True)
+        deck.location = (bx, bal_proj / 2, z_base - bal_thick / 2)
+        assign_material(deck, deck_mat)
+        objects.append(deck)
+
+        # Underside bracket supports (two triangular brackets)
+        bracket_mat = get_or_create_material("mat_balcony_bracket", colour_hex="#4A4A4A", roughness=0.5)
+        for side, sx in [("L", bx - bal_w / 3), ("R", bx + bal_w / 3)]:
+            bm = bmesh.new()
+            v0 = bm.verts.new((sx - 0.03, 0, z_base - bal_thick))
+            v1 = bm.verts.new((sx + 0.03, 0, z_base - bal_thick))
+            v2 = bm.verts.new((sx + 0.03, bal_proj * 0.7, z_base - bal_thick))
+            v3 = bm.verts.new((sx - 0.03, 0, z_base - bal_thick - 0.4))
+            v4 = bm.verts.new((sx + 0.03, 0, z_base - bal_thick - 0.4))
+            bm.faces.new([v0, v1, v2])
+            bm.faces.new([v0, v3, v4, v1])
+            bm.faces.new([v3, v0, v2])
+            bm.faces.new([v1, v4, v2])
+            bm.faces.new([v3, v2, v4])
+            mesh = bpy.data.meshes.new(f"bal_bracket_{side}_{bi}")
+            bm.to_mesh(mesh)
+            bm.free()
+            br_obj = bpy.data.objects.new(f"bal_bracket_{side}_{bi}_{bldg_id}", mesh)
+            bpy.context.collection.objects.link(br_obj)
+            assign_material(br_obj, bracket_mat)
+            objects.append(br_obj)
+
+        # Railing — front and sides
+        # Front rail
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.02, depth=bal_w, vertices=8)
+        fr = bpy.context.active_object
+        fr.name = f"balcony_rail_front_{bi}_{bldg_id}"
+        fr.rotation_euler.y = math.pi / 2
+        fr.location = (bx, bal_proj, z_base + rail_h)
+        assign_material(fr, rail_mat)
+        objects.append(fr)
+
+        # Side rails
+        for side, sx in [("L", bx - bal_w / 2), ("R", bx + bal_w / 2)]:
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.02, depth=bal_proj, vertices=8)
+            sr = bpy.context.active_object
+            sr.name = f"balcony_rail_{side}_{bi}_{bldg_id}"
+            sr.rotation_euler.x = math.pi / 2
+            sr.location = (sx, bal_proj / 2, z_base + rail_h)
+            assign_material(sr, rail_mat)
+            objects.append(sr)
+
+        # Vertical balusters on front
+        num_bal = max(3, int(bal_w / 0.12))
+        for vi in range(num_bal + 1):
+            vx = bx - bal_w / 2 + (bal_w / num_bal) * vi
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.01, depth=rail_h, vertices=6)
+            vb = bpy.context.active_object
+            vb.name = f"balcony_baluster_{bi}_{vi}_{bldg_id}"
+            vb.location = (vx, bal_proj, z_base + rail_h / 2)
+            assign_material(vb, rail_mat)
+            objects.append(vb)
+
+    return objects
+
+
+def create_decorative_brickwork(params, wall_h, width, depth, bldg_id=""):
+    """Create decorative brick patterns — raised bands, diamond inserts, header courses."""
+    dec = params.get("decorative_elements", {})
+    if not isinstance(dec, dict):
+        return []
+    db = dec.get("decorative_brickwork", {})
+    if not db:
+        return []
+    if isinstance(db, dict) and db.get("present") is False:
+        return []
+
+    objects = []
+    facade_hex = get_facade_hex(params)
+    # Decorative brick is same material but slightly darker/contrasting
+    r, g, b = hex_to_rgb(facade_hex)
+    contrast_hex = "#{:02X}{:02X}{:02X}".format(
+        max(0, int(r * 0.7 * 255)), max(0, int(g * 0.65 * 255)), max(0, int(b * 0.6 * 255)))
+    brick_mat = get_or_create_material(f"mat_dec_brick_{bldg_id}", colour_hex=contrast_hex, roughness=0.85)
+
+    floor_heights = params.get("floor_heights_m", [3.0])
+
+    # Decorative band between floors — soldier course (bricks turned on end)
+    band_h = 0.065  # one brick height turned on end
+    band_proj = 0.015
+    z = 0
+    for i, fh in enumerate(floor_heights[:-1]):
+        z += fh
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        band = bpy.context.active_object
+        band.name = f"dec_brick_band_{i}_{bldg_id}"
+        band.scale = (width + band_proj, band_proj * 2, band_h)
+        bpy.ops.object.transform_apply(scale=True)
+        band.location = (0, band_proj, z)
+        assign_material(band, brick_mat)
+        objects.append(band)
+
+    # Diamond brick pattern in gable (if gable roof)
+    roof_type = str(params.get("roof_type", "")).lower()
+    diamond_count = 0
+    if isinstance(db, dict):
+        diamond_count = db.get("diamond_brick_count", 0)
+        if not diamond_count and db.get("diamond_pattern"):
+            diamond_count = 1
+    if "gable" in roof_type and diamond_count > 0:
+        pitch = params.get("roof_pitch_deg", 35)
+        ridge_h = (width / 2) * _safe_tan(pitch)
+        gable_center_z = wall_h + ridge_h * 0.4
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        diamond = bpy.context.active_object
+        diamond.name = f"dec_diamond_{bldg_id}"
+        diamond.scale = (0.15, 0.02, 0.15)
+        bpy.ops.object.transform_apply(scale=True)
+        diamond.rotation_euler.y = math.pi / 4  # rotate 45 degrees
+        diamond.location = (0, 0.02, gable_center_z)
+        assign_material(diamond, brick_mat)
+        objects.append(diamond)
+
+    return objects
+
+
+def create_pilasters(params, wall_h, width, depth, bldg_id=""):
+    """Create pilasters — flat columns projecting from the facade."""
+    dec = params.get("decorative_elements", {})
+    if not isinstance(dec, dict):
+        return []
+    pil = dec.get("pilasters", {})
+    if not isinstance(pil, dict) or not pil:
+        return []
+
+    objects = []
+    pil_w = pil.get("width_mm", 200) / 1000
+    pil_proj = pil.get("projection_mm", 40) / 1000
+    pil_hex = pil.get("colour_hex", get_facade_hex(params))
+    pil_mat = get_or_create_material(f"mat_pilaster_{pil_hex.lstrip('#')}", colour_hex=pil_hex, roughness=0.8)
+
+    # Default: pilasters flanking the facade
+    count = pil.get("count", 2)
+    hw = width / 2
+
+    if count == 2:
+        positions = [(-hw + pil_w / 2, "pilaster_left"), (hw - pil_w / 2, "pilaster_right")]
+    elif count == 4:
+        third = width / 3
+        positions = [
+            (-hw + pil_w / 2, "pilaster_far_left"),
+            (-third / 2, "pilaster_inner_left"),
+            (third / 2, "pilaster_inner_right"),
+            (hw - pil_w / 2, "pilaster_far_right"),
+        ]
+    else:
+        spacing = width / max(1, count - 1)
+        positions = [(-hw + spacing * i, f"pilaster_{i}") for i in range(count)]
+
+    for x, name in positions:
+        # Main shaft
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        shaft = bpy.context.active_object
+        shaft.name = f"{name}_{bldg_id}"
+        shaft.scale = (pil_w, pil_proj, wall_h - 0.2)
+        bpy.ops.object.transform_apply(scale=True)
+        shaft.location = (x, pil_proj / 2, wall_h / 2)
+        assign_material(shaft, pil_mat)
+        objects.append(shaft)
+
+        # Capital (top detail) — wider flared top
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        cap = bpy.context.active_object
+        cap.name = f"{name}_cap_{bldg_id}"
+        cap.scale = (pil_w + 0.04, pil_proj + 0.02, 0.08)
+        bpy.ops.object.transform_apply(scale=True)
+        cap.location = (x, pil_proj / 2, wall_h - 0.04)
+        assign_material(cap, pil_mat)
+        objects.append(cap)
+
+        # Base (bottom plinth)
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        base = bpy.context.active_object
+        base.name = f"{name}_base_{bldg_id}"
+        base.scale = (pil_w + 0.03, pil_proj + 0.015, 0.1)
+        bpy.ops.object.transform_apply(scale=True)
+        base.location = (x, pil_proj / 2, 0.05)
+        assign_material(base, pil_mat)
+        objects.append(base)
+
+    return objects
+
+
+def create_window_hoods(params, wall_h, facade_width, bldg_id=""):
+    """Create projecting window hoods / label moulds above windows."""
+    dec = params.get("decorative_elements", {})
+    if not isinstance(dec, dict):
+        return []
+    hoods = dec.get("window_hoods", {})
+    if not hoods:
+        return []
+    if isinstance(hoods, dict) and hoods.get("present") is False:
+        return []
+
+    hood_hex = get_accent_hex(params)
+    if isinstance(hoods, dict):
+        hood_hex = hoods.get("colour_hex", get_trim_hex(params))
+    hood_mat = get_or_create_material(f"mat_hood_{hood_hex.lstrip('#')}", colour_hex=hood_hex, roughness=0.5)
+
+    objects = []
+    floor_heights = params.get("floor_heights_m", [3.0])
+    windows_detail = get_effective_windows_detail(params)
+
+    for fd in windows_detail:
+        if not isinstance(fd, dict):
+            continue
+        floor_idx = int(_normalize_floor_index(fd.get("floor", 1), floor_heights))
+        z_base = sum(floor_heights[:max(0, floor_idx - 1)])
+        for w in fd.get("windows", []):
+            if not isinstance(w, dict):
+                continue
+            count = w.get("count", 1)
+            win_w = w.get("width_m", 0.85)
+            win_h = w.get("height_m", 1.3)
+            fi = max(0, min(floor_idx - 1, len(floor_heights) - 1))
+            floor_h = floor_heights[fi] if floor_heights else 3.0
+            sill_h = z_base + max(0.8, (floor_h - win_h) / 2)
+            spacing = facade_width / (count + 1)
+
+            for ci in range(count):
+                cx = -facade_width / 2 + spacing * (ci + 1)
+                hood_z = sill_h + win_h + 0.02
+
+                # Hood shelf — projecting ledge above window
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                shelf = bpy.context.active_object
+                shelf.name = f"hood_shelf_{floor_idx}_{ci}_{bldg_id}"
+                shelf.scale = (win_w + 0.15, 0.08, 0.04)
+                bpy.ops.object.transform_apply(scale=True)
+                shelf.location = (cx, 0.06, hood_z + 0.02)
+                assign_material(shelf, hood_mat)
+                objects.append(shelf)
+
+                # Hood back plate — vertical face above window
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                back = bpy.context.active_object
+                back.name = f"hood_back_{floor_idx}_{ci}_{bldg_id}"
+                back.scale = (win_w + 0.12, 0.02, 0.1)
+                bpy.ops.object.transform_apply(scale=True)
+                back.location = (cx, 0.01, hood_z + 0.07)
+                assign_material(back, hood_mat)
+                objects.append(back)
+
+                # Small end brackets (corbels supporting the hood)
+                for side, sx in [("L", cx - win_w / 2 - 0.04), ("R", cx + win_w / 2 + 0.04)]:
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    cb = bpy.context.active_object
+                    cb.name = f"hood_corbel_{side}_{floor_idx}_{ci}_{bldg_id}"
+                    cb.scale = (0.04, 0.06, 0.08)
+                    bpy.ops.object.transform_apply(scale=True)
+                    cb.location = (sx, 0.04, hood_z)
+                    assign_material(cb, hood_mat)
+                    objects.append(cb)
+
+    return objects
+
+
+def create_sign_band(params, wall_h, width, bldg_id=""):
+    """Create a sign band / signage fascia at parapet level (31 commercial buildings)."""
+    rf = params.get("roof_features", [])
+    has_sign_band = any("sign_band" in str(f).lower() or "sign band" in str(f).lower()
+                        for f in (rf if isinstance(rf, list) else []))
+    if not has_sign_band:
+        return []
+
+    objects = []
+    sign_hex = "#E8E0D0"
+    sign_mat = get_or_create_material(f"mat_sign_band_{bldg_id}", colour_hex=sign_hex, roughness=0.4)
+    frame_mat = get_or_create_material("mat_sign_frame", colour_hex="#3A3A3A", roughness=0.5)
+    _bsdf = frame_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.70
+
+    sign_h = 0.6
+    sign_proj = 0.03
+
+    # Sign panel
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    panel = bpy.context.active_object
+    panel.name = f"sign_band_panel_{bldg_id}"
+    panel.scale = (width * 0.9, sign_proj, sign_h)
+    bpy.ops.object.transform_apply(scale=True)
+    panel.location = (0, sign_proj / 2, wall_h + sign_h / 2 + 0.05)
+    assign_material(panel, sign_mat)
+    objects.append(panel)
+
+    # Frame border around sign
+    border_w = 0.03
+    for part, sx, sy, sw, sh in [
+        ("top", 0, sign_proj / 2, width * 0.9 + border_w * 2, border_w),
+        ("bot", 0, sign_proj / 2, width * 0.9 + border_w * 2, border_w),
+    ]:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        fr = bpy.context.active_object
+        fr.name = f"sign_band_frame_{part}_{bldg_id}"
+        fr.scale = (sw, sign_proj + 0.01, sh)
+        bpy.ops.object.transform_apply(scale=True)
+        z_fr = wall_h + sign_h + 0.05 + border_w / 2 if part == "top" else wall_h + 0.05 - border_w / 2
+        fr.location = (sx, sy, z_fr)
+        assign_material(fr, frame_mat)
+        objects.append(fr)
+
+    return objects
+
+
+def create_sill_noses(params, wall_h, facade_width, bldg_id=""):
+    """Create projecting drip edges on all window sills (prevents water damage)."""
+    windows_detail = get_effective_windows_detail(params)
+    floor_heights = params.get("floor_heights_m", [3.0])
+    if not windows_detail:
+        return []
+
+    trim_hex = get_trim_hex(params)
+    sill_mat = get_or_create_material(f"mat_sill_{trim_hex.lstrip('#')}", colour_hex=trim_hex, roughness=0.5)
+    objects = []
+
+    for fd in windows_detail:
+        if not isinstance(fd, dict):
+            continue
+        floor_idx = int(_normalize_floor_index(fd.get("floor", 1), floor_heights))
+        z_base = sum(floor_heights[:max(0, floor_idx - 1)])
+        for w in fd.get("windows", []):
+            if not isinstance(w, dict):
+                continue
+            count = w.get("count", 1)
+            if count == 0:
+                continue
+            win_w = w.get("width_m", 0.85)
+            win_h = w.get("height_m", 1.3)
+            fi = max(0, min(floor_idx - 1, len(floor_heights) - 1))
+            floor_h = floor_heights[fi] if floor_heights else 3.0
+            sill_h = z_base + max(0.8, (floor_h - win_h) / 2)
+            spacing = facade_width / (count + 1)
+
+            for ci in range(count):
+                cx = -facade_width / 2 + spacing * (ci + 1)
+                # Projecting stone sill with drip groove
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                sill = bpy.context.active_object
+                sill.name = f"sill_proj_{floor_idx}_{ci}_{bldg_id}"
+                sill.scale = (win_w + 0.08, 0.07, 0.035)
+                bpy.ops.object.transform_apply(scale=True)
+                sill.location = (cx, 0.05, sill_h - 0.018)
+                assign_material(sill, sill_mat)
+                objects.append(sill)
+
+    return objects
+
+
+def create_door_transoms(params, facade_width, bldg_id=""):
+    """Create glazed transom windows above doors (1,311 doors have transom data)."""
+    doors = params.get("doors_detail", [])
+    if not doors:
+        return []
+    glass_mat = create_glass_material("mat_glass")
+    trim_hex = get_trim_hex(params)
+    frame_mat = get_or_create_material(f"mat_transom_frame_{trim_hex.lstrip('#')}",
+                                        colour_hex=trim_hex, roughness=0.5)
+    objects = []
+    for di, door in enumerate(doors):
+        if not isinstance(door, dict):
+            continue
+        transom = door.get("transom", {})
+        if not isinstance(transom, dict) or not transom.get("present", False):
+            continue
+        t_h = transom.get("height_m", 0.4)
+        door_w = door.get("width_m", 1.0)
+        door_h = door.get("height_m", 2.2)
+        pos = str(door.get("position", "center")).lower()
+        dx = -facade_width / 4 if "left" in pos else facade_width / 4 if "right" in pos else 0
+        transom_z = door_h + t_h / 2
+        bpy.ops.mesh.primitive_plane_add(size=1)
+        tg = bpy.context.active_object
+        tg.name = f"transom_glass_{di}_{bldg_id}"
+        tg.scale = (door_w * 0.9, 1, t_h * 0.8)
+        bpy.ops.object.transform_apply(scale=True)
+        tg.rotation_euler.x = math.pi / 2
+        tg.location = (dx, -0.02, transom_z)
+        assign_material(tg, glass_mat)
+        objects.append(tg)
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        tf = bpy.context.active_object
+        tf.name = f"transom_frame_{di}_{bldg_id}"
+        tf.scale = (door_w + 0.04, 0.04, t_h + 0.03)
+        bpy.ops.object.transform_apply(scale=True)
+        tf.location = (dx, 0.01, transom_z)
+        assign_material(tf, frame_mat)
+        objects.append(tf)
+        # Center mullion
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        mul = bpy.context.active_object
+        mul.name = f"transom_mul_{di}_{bldg_id}"
+        mul.scale = (0.015, 0.02, t_h * 0.75)
+        bpy.ops.object.transform_apply(scale=True)
+        mul.location = (dx, -0.01, transom_z)
+        assign_material(mul, frame_mat)
+        objects.append(mul)
+    return objects
+
+
+def create_ground_floor_arches(params, wall_h, facade_width, bldg_id=""):
+    """Create arched openings at ground floor (328 buildings)."""
+    gfa = params.get("ground_floor_arches", {})
+    arch_type = str(params.get("ground_floor_arch_type", "none")).lower()
+    if arch_type == "none" and not gfa:
+        return []
+    if not isinstance(gfa, dict):
+        gfa = {}
+    objects = []
+    trim_hex = get_trim_hex(params)
+    arch_mat = create_stone_material(f"mat_arch_{trim_hex.lstrip('#')}", trim_hex)
+    for key in ["left_arch", "centre_arch", "right_arch"]:
+        arch = gfa.get(key, {})
+        if not isinstance(arch, dict) or not arch:
+            continue
+        a_w = arch.get("total_width_m", 2.0)
+        a_h = arch.get("total_height_m", 2.5)
+        a_type = str(arch.get("type", arch_type)).lower()
+        ax = -facade_width / 3 if "left" in key else facade_width / 3 if "right" in key else 0
+        for side, sx in [("L", ax - a_w / 2 - 0.05), ("R", ax + a_w / 2 + 0.05)]:
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            j = bpy.context.active_object
+            j.name = f"arch_jamb_{side}_{key}_{bldg_id}"
+            j.scale = (0.1, 0.06, a_h)
+            bpy.ops.object.transform_apply(scale=True)
+            j.location = (sx, 0.03, a_h / 2)
+            assign_material(j, arch_mat)
+            objects.append(j)
+        if "round" in a_type or "segmental" in a_type:
+            num_stones = 11
+            radius = a_w / 2 + 0.06
+            for si in range(num_stones):
+                angle = math.pi * si / (num_stones - 1)
+                sx = ax + radius * math.cos(angle)
+                sz = a_h - a_w / 2 + radius * math.sin(angle)
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                stone = bpy.context.active_object
+                stone.name = f"arch_stone_{key}_{si}_{bldg_id}"
+                stone.scale = (0.1, 0.07, 0.08)
+                bpy.ops.object.transform_apply(scale=True)
+                stone.location = (sx, 0.04, sz)
+                stone.rotation_euler.y = -(angle - math.pi / 2)
+                assign_material(stone, arch_mat)
+                objects.append(stone)
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            ks = bpy.context.active_object
+            ks.name = f"arch_keystone_{key}_{bldg_id}"
+            ks.scale = (0.12, 0.08, 0.15)
+            bpy.ops.object.transform_apply(scale=True)
+            ks.location = (ax, 0.04, a_h + 0.05)
+            assign_material(ks, arch_mat)
+            objects.append(ks)
+        else:
+            bpy.ops.mesh.primitive_cube_add(size=1)
+            lt = bpy.context.active_object
+            lt.name = f"arch_lintel_{key}_{bldg_id}"
+            lt.scale = (a_w + 0.2, 0.06, 0.1)
+            bpy.ops.object.transform_apply(scale=True)
+            lt.location = (ax, 0.03, a_h + 0.05)
+            assign_material(lt, arch_mat)
+            objects.append(lt)
+    return objects
+
+
+def create_eave_returns(params, wall_h, width, depth, bldg_id=""):
+    """Create eave returns at gable ends."""
+    roof_type = str(params.get("roof_type", "")).lower()
+    if "gable" not in roof_type:
+        return []
+    party_left = params.get("party_wall_left", False)
+    party_right = params.get("party_wall_right", False)
+    trim_hex = get_trim_hex(params)
+    mat = get_or_create_material(f"mat_eave_return_{trim_hex.lstrip('#')}",
+                                  colour_hex=trim_hex, roughness=0.5)
+    objects = []
+    hw = width / 2
+    rd = params.get("roof_detail", {})
+    overhang = (rd.get("eave_overhang_mm", 300) if isinstance(rd, dict) else 300) / 1000.0
+    for side, sx, skip in [("L", -hw - overhang * 0.5, party_left),
+                            ("R", hw + overhang * 0.5, party_right)]:
+        if skip:
+            continue
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        ret = bpy.context.active_object
+        ret.name = f"eave_return_{side}_{bldg_id}"
+        ret.scale = (overhang, 0.25, 0.1)
+        bpy.ops.object.transform_apply(scale=True)
+        ret.location = (sx, overhang - 0.125, wall_h + 0.05)
+        assign_material(ret, mat)
+        objects.append(ret)
+    return objects
+
+
+def create_drip_edge(params, wall_h, width, bldg_id=""):
+    """Create metal drip edge along eave line."""
+    if "flat" in str(params.get("roof_type", "")).lower():
+        return []
+    objects = []
+    drip_mat = get_or_create_material("mat_drip_edge", colour_hex="#5A5A5A", roughness=0.3)
+    # Galvanised metal flashing
+    _bsdf = drip_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.80
+    rd = params.get("roof_detail", {})
+    overhang = (rd.get("eave_overhang_mm", 300) if isinstance(rd, dict) else 300) / 1000.0
+    depth = params.get("facade_depth_m", 10.0)
+    for name, y in [("front", overhang + 0.008), ("back", -depth - overhang - 0.008)]:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        de = bpy.context.active_object
+        de.name = f"drip_edge_{name}_{bldg_id}"
+        de.scale = (width + overhang * 2, 0.015, 0.025)
+        bpy.ops.object.transform_apply(scale=True)
+        de.location = (0, y, wall_h - 0.01)
+        assign_material(de, drip_mat)
+        objects.append(de)
+    return objects
+
+
+def create_door_surround(params, facade_width, bldg_id=""):
+    """Create decorative door surround with pilasters and entablature."""
+    doors = params.get("doors_detail", [])
+    if not doors:
+        return []
+    era = str((params.get("hcd_data") or {}).get("construction_date", "")).lower()
+    if "1914" in era or "1930" in era or "post" in era:
+        return []
+    objects = []
+    trim_hex = get_trim_hex(params)
+    mat = get_or_create_material(f"mat_door_surround_{trim_hex.lstrip('#')}",
+                                  colour_hex=trim_hex, roughness=0.5)
+    door = doors[0] if isinstance(doors[0], dict) else {}
+    door_w = door.get("width_m", 1.0)
+    door_h = door.get("height_m", 2.2)
+    pos = str(door.get("position", "center")).lower()
+    dx = -facade_width / 4 if "left" in pos else facade_width / 4 if "right" in pos else 0
+    pil_w, pil_proj = 0.08, 0.04
+    for side, sx in [("L", dx - door_w / 2 - pil_w / 2 - 0.02),
+                     ("R", dx + door_w / 2 + pil_w / 2 + 0.02)]:
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        pil = bpy.context.active_object
+        pil.name = f"door_pil_{side}_{bldg_id}"
+        pil.scale = (pil_w, pil_proj, door_h)
+        bpy.ops.object.transform_apply(scale=True)
+        pil.location = (sx, pil_proj / 2, door_h / 2)
+        assign_material(pil, mat)
+        objects.append(pil)
+    ent_w = door_w + pil_w * 2 + 0.12
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    ent = bpy.context.active_object
+    ent.name = f"door_ent_{bldg_id}"
+    ent.scale = (ent_w, pil_proj + 0.02, 0.08)
+    bpy.ops.object.transform_apply(scale=True)
+    ent.location = (dx, pil_proj / 2, door_h + 0.04)
+    assign_material(ent, mat)
+    objects.append(ent)
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    cap = bpy.context.active_object
+    cap.name = f"door_cap_{bldg_id}"
+    cap.scale = (ent_w + 0.06, pil_proj + 0.04, 0.03)
+    bpy.ops.object.transform_apply(scale=True)
+    cap.location = (dx, pil_proj / 2 + 0.01, door_h + 0.095)
+    assign_material(cap, mat)
+    objects.append(cap)
+    return objects
+
+
+def create_soffit_vents(params, wall_h, width, depth, bldg_id=""):
+    """Create soffit vents in eave overhang."""
+    if "flat" in str(params.get("roof_type", "")).lower():
+        return []
+    objects = []
+    vent_mat = get_or_create_material("mat_soffit_vent", colour_hex="#3A3A3A", roughness=0.5)
+    rd = params.get("roof_detail", {})
+    overhang = (rd.get("eave_overhang_mm", 300) if isinstance(rd, dict) else 300) / 1000.0
+    if overhang < 0.15:
+        return []
+    num_vents = max(1, int(width / 1.5))
+    for vi in range(num_vents):
+        vx = -width / 2 + 1.5 / 2 + vi * 1.5
+        if vx > width / 2:
+            break
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        vent = bpy.context.active_object
+        vent.name = f"soffit_vent_{vi}_{bldg_id}"
+        vent.scale = (0.15, overhang * 0.4, 0.005)
+        bpy.ops.object.transform_apply(scale=True)
+        vent.location = (vx, overhang * 0.5, wall_h - 0.12)
+        assign_material(vent, vent_mat)
+        objects.append(vent)
+    return objects
+
+
+def create_vent_pipes(params, wall_h, width, depth, bldg_id=""):
+    """Create plumbing vent pipes through roof."""
+    objects = []
+    pipe_mat = get_or_create_material("mat_vent_pipe", colour_hex="#5A5A5A", roughness=0.4)
+    pitch = params.get("roof_pitch_deg", 35)
+    ridge_h = (width / 2) * _safe_tan(pitch)
+    pipe_h = 0.6
+    pipe_x = width * 0.15
+    pipe_y = -depth * 0.6
+    pipe_z = wall_h + ridge_h * 0.3
+    bpy.ops.mesh.primitive_cylinder_add(radius=0.04, depth=pipe_h, vertices=8)
+    pipe = bpy.context.active_object
+    pipe.name = f"vent_pipe_{bldg_id}"
+    pipe.location = (pipe_x, pipe_y, pipe_z + pipe_h / 2)
+    assign_material(pipe, pipe_mat)
+    objects.append(pipe)
+    bpy.ops.mesh.primitive_cylinder_add(radius=0.06, depth=0.02, vertices=8)
+    cap = bpy.context.active_object
+    cap.name = f"vent_cap_{bldg_id}"
+    cap.location = (pipe_x, pipe_y, pipe_z + pipe_h + 0.01)
+    assign_material(cap, pipe_mat)
+    objects.append(cap)
+    return objects
+
+
+def create_mail_slot(params, facade_width, bldg_id=""):
+    """Create brass mail slot in front door."""
+    if params.get("has_storefront"):
+        return []
+    objects = []
+    slot_mat = get_or_create_material("mat_mail_slot", colour_hex="#C0A030", roughness=0.25)
+    # Brass mail slot
+    _bsdf = slot_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.95
+    doors = params.get("doors_detail", [])
+    dx = 0
+    if doors and isinstance(doors[0], dict):
+        pos = str(doors[0].get("position", "center")).lower()
+        dx = -facade_width / 4 if "left" in pos else facade_width / 4 if "right" in pos else 0
+    bpy.ops.mesh.primitive_cube_add(size=1)
+    slot = bpy.context.active_object
+    slot.name = f"mail_slot_{bldg_id}"
+    slot.scale = (0.2, 0.015, 0.04)
+    bpy.ops.object.transform_apply(scale=True)
+    slot.location = (dx, -0.02, 1.1)
+    assign_material(slot, slot_mat)
+    objects.append(slot)
+    return objects
+
+
+def create_kick_plate(params, facade_width, bldg_id=""):
+    """Create metal kick plate at bottom of front door."""
+    doors = params.get("doors_detail", [])
+    if not doors:
+        return []
+    objects = []
+    plate_mat = get_or_create_material("mat_kick_plate", colour_hex="#C0A060", roughness=0.25)
+    # Brass/bronze kick plate
+    _bsdf = plate_mat.node_tree.nodes.get("Principled BSDF")
+    if _bsdf and "Metallic" in _bsdf.inputs:
+        _bsdf.inputs["Metallic"].default_value = 0.90
+    for di, door in enumerate(doors):
+        if not isinstance(door, dict):
+            continue
+        door_w = door.get("width_m", 1.0)
+        pos = str(door.get("position", "center")).lower()
+        dx = -facade_width / 4 if "left" in pos else facade_width / 4 if "right" in pos else 0
+        bpy.ops.mesh.primitive_cube_add(size=1)
+        kp = bpy.context.active_object
+        kp.name = f"kick_plate_{di}_{bldg_id}"
+        kp.scale = (door_w * 0.9, 0.01, 0.2)
+        bpy.ops.object.transform_apply(scale=True)
+        kp.location = (dx, -0.01, 0.1)
+        assign_material(kp, plate_mat)
+        objects.append(kp)
+    return objects
+
+
+# ---------------------------------------------------------------------------
 # Main building generator
 # ---------------------------------------------------------------------------
 
@@ -4739,9 +7313,36 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
     volumes = params.get("volumes", [])
     all_objs = []
 
+    # Resolve bond pattern and polychrome for all volumes (inherited from main params)
+    mv_bond = "running"
+    fd_mv = params.get("facade_detail", {})
+    if isinstance(fd_mv, dict):
+        bp_mv = (fd_mv.get("bond_pattern") or "").lower()
+        if bp_mv:
+            mv_bond = bp_mv
+    dfa_mv = params.get("deep_facade_analysis", {})
+    if isinstance(dfa_mv, dict):
+        bp_dfa_mv = (dfa_mv.get("brick_bond_observed") or "").lower()
+        if bp_dfa_mv:
+            mv_bond = bp_dfa_mv
+    mv_polychrome = None
+    if isinstance(dfa_mv, dict):
+        poly_mv = dfa_mv.get("polychromatic_brick")
+        if isinstance(poly_mv, dict):
+            ph_mv = poly_mv.get("accent_hex", "")
+            if ph_mv and ph_mv.startswith("#"):
+                mv_polychrome = ph_mv
+
     # Track x position for placing volumes side by side
-    total_width = sum(v.get("width_m", 5) for v in volumes)
+    total_width = 0
+    for v in volumes:
+        if not isinstance(v, dict):
+            continue
+        if v.get("stack_with_previous"):
+            continue
+        total_width += v.get("width_m", 5)
     x_cursor = -total_width / 2
+    prev_cx = None
 
     def log_volume_feature(name, before_count):
         delta = len(all_objs) - before_count
@@ -4778,16 +7379,26 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
 
     for vi, vol in enumerate(volumes):
         vol_id = vol.get("id", f"vol_{vi}")
-        vol_w = vol.get("width_m", 5.0)
-        vol_d = vol.get("depth_m", 10.0)
+        vol_w = _clamp_positive(vol.get("width_m"), 5.0, minimum=1.0)
+        vol_d = _clamp_positive(vol.get("depth_m"), 10.0, minimum=1.0)
         vol_floors = vol.get("floor_heights_m", [3.5])
-        vol_h = sum(vol_floors)
-        vol_total_h = vol.get("total_height_m", vol_h)
+        if not vol_floors or not isinstance(vol_floors, list):
+            vol_floors = [3.5]
+        vol_h = sum(max(0.5, float(fh)) for fh in vol_floors)
+        vol_total_h = _clamp_positive(vol.get("total_height_m"), vol_h, minimum=2.0)
 
         print(f"  Volume: {vol_id} ({vol_w}m x {vol_d}m x {vol_total_h}m)")
 
         # Volume center x
-        vol_cx = x_cursor + vol_w / 2
+        stack_with_previous = bool(vol.get("stack_with_previous", False))
+        if stack_with_previous and prev_cx is not None:
+            vol_cx = prev_cx
+        else:
+            vol_cx = x_cursor + vol_w / 2
+        vol_cx += float(vol.get("x_offset_m", 0.0))
+        vol_y_off = float(vol.get("y_offset_m", 0.0))
+        vol_z_off = float(vol.get("z_offset_m", 0.0))
+        vol_start_idx = len(all_objs)
 
         # Facade material
         fc = str(vol.get("facade_colour", vol.get("facade_material", "brick"))).lower()
@@ -4810,7 +7421,9 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
             outer.name = f"tower_{bldg_id}"
 
             tower_mat = create_brick_material(f"mat_tower_{vol_hex.lstrip('#')}",
-                                               vol_hex, mortar_hex)
+                                               vol_hex, mortar_hex,
+                                               bond_pattern=mv_bond,
+                                               polychrome_hex=mv_polychrome)
             assign_material(outer, tower_mat)
             all_objs.append(outer)
             tower_string_course_count = 0
@@ -4982,6 +7595,81 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
                 all_objs.append(cap)
             log_volume_feature("Tower parapet/coping", parapet_start)
 
+            # Optional open belfry + spire cap
+            spire_start = len(all_objs)
+            spire = vol.get("spire", {})
+            if isinstance(spire, dict) and spire:
+                spire_h = float(spire.get("height_m", 4.0))
+                spire_w = float(spire.get("base_width_m", vol_w * 0.9))
+                spire_d = float(spire.get("base_depth_m", vol_d * 0.9))
+                spire_style = str(spire.get("style", "pyramid")).lower()
+
+                if "open" in spire_style or spire.get("open_belfry", False):
+                    # Four slender corner posts at top stage
+                    post_w = max(0.08, min(0.16, spire_w * 0.08))
+                    post_d = post_w
+                    post_h = max(0.8, spire_h * 0.45)
+                    for sx in (-1, 1):
+                        for sy in (-1, 1):
+                            bpy.ops.mesh.primitive_cube_add(size=1)
+                            post = bpy.context.active_object
+                            post.name = f"tower_belfry_post_{sx}_{sy}_{bldg_id}"
+                            post.scale = (post_w, post_d, post_h)
+                            bpy.ops.object.transform_apply(scale=True)
+                            post.location = (
+                                vol_cx + sx * (spire_w / 2 - post_w / 2),
+                                -vol_d / 2 + sy * (spire_d / 2 - post_d / 2),
+                                vol_total_h + post_h / 2,
+                            )
+                            assign_material(post, tower_mat)
+                            all_objs.append(post)
+
+                # Spire body
+                bm = bmesh.new()
+                hw = spire_w / 2
+                hd = spire_d / 2
+                z0 = vol_total_h + 0.02
+                apex = bm.verts.new((vol_cx, -vol_d / 2, z0 + spire_h))
+                v0 = bm.verts.new((vol_cx - hw, -vol_d / 2 - hd, z0))
+                v1 = bm.verts.new((vol_cx + hw, -vol_d / 2 - hd, z0))
+                v2 = bm.verts.new((vol_cx + hw, -vol_d / 2 + hd, z0))
+                v3 = bm.verts.new((vol_cx - hw, -vol_d / 2 + hd, z0))
+                bm.faces.new([v0, v1, apex])
+                bm.faces.new([v1, v2, apex])
+                bm.faces.new([v2, v3, apex])
+                bm.faces.new([v3, v0, apex])
+                bm.faces.new([v0, v3, v2, v1])
+                smesh = bpy.data.meshes.new(f"tower_spire_{bldg_id}")
+                bm.to_mesh(smesh)
+                bm.free()
+                sobj = bpy.data.objects.new(f"tower_spire_{bldg_id}", smesh)
+                bpy.context.collection.objects.link(sobj)
+                spire_hex = str(spire.get("colour_hex", "#2E3138"))
+                if not spire_hex.startswith("#"):
+                    spire_hex = colour_name_to_hex(spire_hex)
+                spire_mat = get_or_create_material(f"mat_tower_spire_{spire_hex.lstrip('#')}", colour_hex=spire_hex, roughness=0.65)
+                assign_material(sobj, spire_mat)
+                all_objs.append(sobj)
+
+                if spire.get("cross", False):
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    cross_v = bpy.context.active_object
+                    cross_v.name = f"tower_cross_v_{bldg_id}"
+                    cross_v.scale = (0.04, 0.04, 0.45)
+                    bpy.ops.object.transform_apply(scale=True)
+                    cross_v.location = (vol_cx, -vol_d / 2, z0 + spire_h + 0.25)
+                    assign_material(cross_v, get_or_create_material("mat_tower_cross", colour_hex="#8A8A8A", roughness=0.4))
+                    all_objs.append(cross_v)
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    cross_h = bpy.context.active_object
+                    cross_h.name = f"tower_cross_h_{bldg_id}"
+                    cross_h.scale = (0.18, 0.04, 0.04)
+                    bpy.ops.object.transform_apply(scale=True)
+                    cross_h.location = (vol_cx, -vol_d / 2, z0 + spire_h + 0.25)
+                    assign_material(cross_h, get_or_create_material("mat_tower_cross", colour_hex="#8A8A8A", roughness=0.4))
+                    all_objs.append(cross_h)
+            log_volume_feature("Tower spire", spire_start)
+
             vegetation_start = len(all_objs)
             vegetation = top_level.get("vegetation", {})
             if isinstance(vegetation, dict) and vegetation:
@@ -5014,7 +7702,8 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
             base = vol.get("base", {})
             base_h = base.get("height_m", 1.0) if isinstance(base, dict) else 1.0
             base_mat = create_brick_material(f"mat_modern_base_{vol_hex.lstrip('#')}",
-                                              "#B85A3A", mortar_hex)
+                                              "#B85A3A", mortar_hex,
+                                              bond_pattern=mv_bond)
             assign_material(outer, base_mat)
             all_objs.append(outer)
 
@@ -5026,62 +7715,378 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
                 bay_w = cw.get("bay_width_m", 2.2)
                 bay_h = cw.get("bay_height_m", 5.5)
                 mullion_w = cw.get("mullion_width_mm", 80) / 1000.0
+                band_count = max(1, int(cw.get("band_count", 1) or 1))
+                band_gap = float(cw.get("band_gap_m", 0.35) or 0.35)
+                z_base = float(cw.get("z_base_m", base_h) or base_h)
+                add_mid_mullion = bool(cw.get("mid_mullion", True))
 
-                glass_mat = create_glass_material("mat_curtain_glass")
+                glass_mat = create_glass_material("mat_curtain_glass", glass_type="storefront")
                 mullion_hex = cw.get("mullion_colour", "#2A2A2A")
                 if not mullion_hex.startswith("#"):
                     mullion_hex = "#2A2A2A"
                 mullion_mat = get_or_create_material("mat_mullion", colour_hex=mullion_hex, roughness=0.4)
 
                 cw_start_x = vol_cx - (bay_count * bay_w) / 2 + bay_w / 2
-                cw_z = base_h + bay_h / 2
+                for ri in range(band_count):
+                    cw_z = z_base + bay_h / 2 + ri * (bay_h + band_gap)
+                    for bi in range(bay_count):
+                        bx = cw_start_x + bi * bay_w
 
-                for bi in range(bay_count):
-                    bx = cw_start_x + bi * bay_w
+                        # Glass panel
+                        bpy.ops.mesh.primitive_plane_add(size=1)
+                        gp = bpy.context.active_object
+                        gp.name = f"curtain_glass_{ri}_{bi}_{bldg_id}"
+                        gp.scale = (bay_w - mullion_w, 1, bay_h)
+                        bpy.ops.object.transform_apply(scale=True)
+                        gp.rotation_euler.x = math.pi / 2
+                        gp.location = (bx, 0.16, cw_z)
+                        assign_material(gp, glass_mat)
+                        all_objs.append(gp)
 
-                    # Glass panel
-                    bpy.ops.mesh.primitive_plane_add(size=1)
-                    gp = bpy.context.active_object
-                    gp.name = f"curtain_glass_{bi}_{bldg_id}"
-                    gp.scale = (bay_w - mullion_w, 1, bay_h)
-                    bpy.ops.object.transform_apply(scale=True)
-                    gp.rotation_euler.x = math.pi / 2
-                    gp.location = (bx, 0.16, cw_z)
-                    assign_material(gp, glass_mat)
-                    all_objs.append(gp)
+                        # Vertical mullion (right side of each bay)
+                        bpy.ops.mesh.primitive_cube_add(size=1)
+                        mul = bpy.context.active_object
+                        mul.name = f"mullion_{ri}_{bi}_{bldg_id}"
+                        mul.scale = (mullion_w, 0.08, bay_h)
+                        bpy.ops.object.transform_apply(scale=True)
+                        mul.location = (bx + bay_w / 2, 0.14, cw_z)
+                        assign_material(mul, mullion_mat)
+                        all_objs.append(mul)
 
-                    # Vertical mullion (right side of each bay)
-                    bpy.ops.mesh.primitive_cube_add(size=1)
-                    mul = bpy.context.active_object
-                    mul.name = f"mullion_{bi}_{bldg_id}"
-                    mul.scale = (mullion_w, 0.08, bay_h)
-                    bpy.ops.object.transform_apply(scale=True)
-                    mul.location = (bx + bay_w / 2, 0.14, cw_z)
-                    assign_material(mul, mullion_mat)
-                    all_objs.append(mul)
-
-                # Horizontal mullion at mid height
-                bpy.ops.mesh.primitive_cube_add(size=1)
-                hmul = bpy.context.active_object
-                hmul.name = f"mullion_h_{bldg_id}"
-                hmul.scale = (bay_count * bay_w, 0.08, mullion_w)
-                bpy.ops.object.transform_apply(scale=True)
-                hmul.location = (vol_cx, 0.14, base_h + bay_h / 2)
-                assign_material(hmul, mullion_mat)
-                all_objs.append(hmul)
+                    # Horizontal mullion at mid height (optional)
+                    if add_mid_mullion:
+                        bpy.ops.mesh.primitive_cube_add(size=1)
+                        hmul = bpy.context.active_object
+                        hmul.name = f"mullion_h_{ri}_{bldg_id}"
+                        hmul.scale = (bay_count * bay_w, 0.08, mullion_w)
+                        bpy.ops.object.transform_apply(scale=True)
+                        hmul.location = (vol_cx, 0.14, cw_z)
+                        assign_material(hmul, mullion_mat)
+                        all_objs.append(hmul)
             log_volume_feature("Curtain wall", curtain_start)
+
+            # Explicit openings for modern blocks (optional, used for coarse facade cut-ins)
+            modern_openings_start = len(all_objs)
+            win_rows = vol.get("window_rows", [])
+            if isinstance(win_rows, list):
+                for ri, row in enumerate(win_rows):
+                    if not isinstance(row, dict):
+                        continue
+                    count = int(row.get("count", 0) or 0)
+                    if count <= 0:
+                        continue
+                    ww = float(row.get("width_m", 1.2))
+                    wh = float(row.get("height_m", 1.0))
+                    sill = float(row.get("sill_height_m", 1.0))
+                    row_z_off = float(row.get("z_offset_m", 0.0) or 0.0)
+                    row_x_off = float(row.get("x_offset_m", 0.0) or 0.0)
+                    spacing = vol_w / (count + 1)
+                    frame_hex = str(row.get("frame_colour", "#2F3A52"))
+                    if not frame_hex.startswith("#"):
+                        frame_hex = colour_name_to_hex(frame_hex)
+                    frame_mat = get_or_create_material(f"mat_modern_frame_{frame_hex.lstrip('#')}", colour_hex=frame_hex, roughness=0.45)
+                    add_frames = bool(row.get("add_frames", True))
+                    positions = row.get("positions_m", [])
+                    use_positions = isinstance(positions, list) and len(positions) > 0
+
+                    iter_count = len(positions) if use_positions else count
+                    for wi in range(iter_count):
+                        if use_positions:
+                            wx = vol_cx + float(positions[wi] or 0.0) + row_x_off
+                        else:
+                            wx = vol_cx - vol_w / 2 + spacing * (wi + 1) + row_x_off
+                        cutter = create_rect_cutter(f"modern_win_cut_{ri}_{wi}_{bldg_id}", ww, wh, depth=0.8)
+                        cutter.location.x = wx
+                        cutter.location.y = 0.01
+                        cutter.location.z = sill + row_z_off + wh / 2
+                        boolean_cut(outer, cutter)
+
+                        bpy.ops.mesh.primitive_plane_add(size=1)
+                        gl = bpy.context.active_object
+                        gl.name = f"modern_glass_{ri}_{wi}_{bldg_id}"
+                        gl.scale = (ww * 0.88, 1, wh * 0.88)
+                        bpy.ops.object.transform_apply(scale=True)
+                        gl.rotation_euler.x = math.pi / 2
+                        gl.location = (wx, 0.02, sill + row_z_off + wh / 2)
+                        assign_material(gl, create_glass_material())
+                        all_objs.append(gl)
+
+                        if add_frames:
+                            ft = 0.04
+                            for fn, fs, fl in [
+                                ("t", (ww + ft, 0.05, ft), (wx, 0.03, sill + row_z_off + wh)),
+                                ("b", (ww + ft, 0.05, ft), (wx, 0.03, sill + row_z_off)),
+                                ("l", (ft, 0.05, wh), (wx - ww / 2, 0.03, sill + row_z_off + wh / 2)),
+                                ("r", (ft, 0.05, wh), (wx + ww / 2, 0.03, sill + row_z_off + wh / 2)),
+                            ]:
+                                bpy.ops.mesh.primitive_cube_add(size=1)
+                                fr = bpy.context.active_object
+                                fr.name = f"modern_frame_{fn}_{ri}_{wi}_{bldg_id}"
+                                fr.scale = fs
+                                bpy.ops.object.transform_apply(scale=True)
+                                fr.location = fl
+                                assign_material(fr, frame_mat)
+                                all_objs.append(fr)
+                        if row.get("add_horizontal_mullion", False):
+                            bpy.ops.mesh.primitive_cube_add(size=1)
+                            hbar = bpy.context.active_object
+                            hbar.name = f"modern_hmullion_{ri}_{bldg_id}"
+                            hbar.scale = (vol_w / 2, 0.03, 0.015)
+                            bpy.ops.object.transform_apply(scale=True)
+                            hbar.location = (vol_cx, 0.14, sill + row_z_off + wh / 2)
+                            assign_material(hbar, frame_mat)
+                            all_objs.append(hbar)
+
+            vol_doors = vol.get("doors_detail", [])
+            if isinstance(vol_doors, list):
+                door_hex = str(vol.get("door_colour_hex", "#2F3A52"))
+                if not door_hex.startswith("#"):
+                    door_hex = colour_name_to_hex(door_hex)
+                door_roughness = float(vol.get("door_roughness", 0.45) or 0.45)
+                door_mat = get_or_create_material(
+                    f"mat_modern_door_{door_hex.lstrip('#')}",
+                    colour_hex=door_hex,
+                    roughness=door_roughness,
+                )
+                for di, ds in enumerate(vol_doors):
+                    if not isinstance(ds, dict):
+                        continue
+                    dw = float(ds.get("width_m", 1.2))
+                    dh = float(ds.get("height_m", 2.2))
+                    dpos = str(ds.get("position", "center")).lower()
+                    if "left" in dpos:
+                        dx = vol_cx - vol_w * 0.28
+                    elif "right" in dpos:
+                        dx = vol_cx + vol_w * 0.28
+                    else:
+                        dx = vol_cx
+                    dx += float(ds.get("x_offset_m", 0.0) or 0.0)
+
+                    cutter = create_rect_cutter(f"modern_door_cut_{di}_{bldg_id}", dw, dh, depth=0.8)
+                    cutter.location.x = dx
+                    cutter.location.y = 0.01
+                    cutter.location.z = dh / 2
+                    boolean_cut(outer, cutter)
+
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    dmesh = bpy.context.active_object
+                    dmesh.name = f"modern_door_{di}_{bldg_id}"
+                    dmesh.scale = (dw * 0.92, 0.03, dh * 0.96)
+                    bpy.ops.object.transform_apply(scale=True)
+                    dmesh.location = (dx, 0.03, dh / 2)
+                    assign_material(dmesh, door_mat)
+                    all_objs.append(dmesh)
+                    frame_depth = float(ds.get("frame_depth_m", 0.04) or 0.04)
+                    frame_mat = get_or_create_material(f"mat_modern_doorframe_{door_hex.lstrip('#')}", colour_hex=door_hex, roughness=door_roughness)
+                    for fn, fl_offset in (("left", -dw / 2), ("right", dw / 2)):
+                        bpy.ops.mesh.primitive_cube_add(size=1)
+                        df = bpy.context.active_object
+                        df.name = f"door_frame_{fn}_{di}_{bldg_id}"
+                        df.scale = (0.02, frame_depth / 2, dh)
+                        bpy.ops.object.transform_apply(scale=True)
+                        x_off = dx + fl_offset
+                        df.location = (x_off, 0.02, dh / 2)
+                        assign_material(df, frame_mat)
+                        all_objs.append(df)
+            log_volume_feature("Modern explicit openings", modern_openings_start)
 
             # Flat roof
             modern_roof_start = len(all_objs)
-            bpy.ops.mesh.primitive_plane_add(size=1)
-            mroof = bpy.context.active_object
-            mroof.name = f"modern_roof_{bldg_id}"
-            mroof.scale = (vol_w + 0.1, vol_d + 0.1, 1)
-            bpy.ops.object.transform_apply(scale=True)
-            mroof.location = (vol_cx, -vol_d / 2, vol_h + 0.01)
-            roof_mat = get_or_create_material("mat_roof_flat_modern", colour_hex="#4A4A4A", roughness=0.9)
-            assign_material(mroof, roof_mat)
-            all_objs.append(mroof)
+            if not bool(vol.get("skip_flat_roof", False)):
+                bpy.ops.mesh.primitive_plane_add(size=1)
+                mroof = bpy.context.active_object
+                mroof.name = f"modern_roof_{bldg_id}"
+                mroof.scale = (vol_w + 0.1, vol_d + 0.1, 1)
+                bpy.ops.object.transform_apply(scale=True)
+                mroof.location = (vol_cx, -vol_d / 2, vol_h + 0.01)
+                roof_mat = get_or_create_material("mat_roof_flat_modern", colour_hex="#4A4A4A", roughness=0.9)
+                assign_material(mroof, roof_mat)
+                all_objs.append(mroof)
+
+            # Optional roofline proxy details (parapet/fascia/canopy posts)
+            roofline_start = len(all_objs)
+            parapet_h = float(vol.get("parapet_height_m", 0.0) or 0.0)
+            parapet_t = float(vol.get("parapet_thickness_m", 0.18) or 0.18)
+            fascia_d = float(vol.get("fascia_depth_m", 0.0) or 0.0)
+            fascia_h = float(vol.get("fascia_height_m", 0.35) or 0.35)
+            trim_hex = str(vol.get("trim_colour_hex", get_trim_hex(params)))
+            if not trim_hex.startswith("#"):
+                trim_hex = colour_name_to_hex(trim_hex)
+            trim_roughness = float(vol.get("trim_roughness", 0.55) or 0.55)
+            trim_mat = get_or_create_material(
+                f"mat_modern_trim_{trim_hex.lstrip('#')}",
+                colour_hex=trim_hex,
+                roughness=trim_roughness,
+            )
+
+            if parapet_h > 0.01:
+                # Front
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                pf = bpy.context.active_object
+                pf.name = f"modern_parapet_f_{bldg_id}"
+                pf.scale = (vol_w / 2, parapet_t / 2, parapet_h / 2)
+                bpy.ops.object.transform_apply(scale=True)
+                pf.location = (vol_cx, parapet_t / 2, vol_h + parapet_h / 2)
+                assign_material(pf, trim_mat)
+                all_objs.append(pf)
+                # Back
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                pb = bpy.context.active_object
+                pb.name = f"modern_parapet_b_{bldg_id}"
+                pb.scale = (vol_w / 2, parapet_t / 2, parapet_h / 2)
+                bpy.ops.object.transform_apply(scale=True)
+                pb.location = (vol_cx, -vol_d - parapet_t / 2, vol_h + parapet_h / 2)
+                assign_material(pb, trim_mat)
+                all_objs.append(pb)
+                # Left
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                pl = bpy.context.active_object
+                pl.name = f"modern_parapet_l_{bldg_id}"
+                pl.scale = (parapet_t / 2, vol_d / 2 + parapet_t, parapet_h / 2)
+                bpy.ops.object.transform_apply(scale=True)
+                pl.location = (vol_cx - vol_w / 2 - parapet_t / 2, -vol_d / 2, vol_h + parapet_h / 2)
+                assign_material(pl, trim_mat)
+                all_objs.append(pl)
+                # Right
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                pr = bpy.context.active_object
+                pr.name = f"modern_parapet_r_{bldg_id}"
+                pr.scale = (parapet_t / 2, vol_d / 2 + parapet_t, parapet_h / 2)
+                bpy.ops.object.transform_apply(scale=True)
+                pr.location = (vol_cx + vol_w / 2 + parapet_t / 2, -vol_d / 2, vol_h + parapet_h / 2)
+                assign_material(pr, trim_mat)
+                all_objs.append(pr)
+
+            if fascia_d > 0.01:
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                fb = bpy.context.active_object
+                fb.name = f"modern_fascia_{bldg_id}"
+                fb.scale = (vol_w / 2, fascia_d / 2, fascia_h / 2)
+                bpy.ops.object.transform_apply(scale=True)
+                fb.location = (vol_cx, fascia_d / 2, vol_h - fascia_h / 2)
+                assign_material(fb, trim_mat)
+                all_objs.append(fb)
+
+            post_count = int(vol.get("canopy_post_count", 0) or 0)
+            if post_count > 0:
+                post_w = float(vol.get("canopy_post_width_m", 0.25) or 0.25)
+                post_d = float(vol.get("canopy_post_depth_m", 0.25) or 0.25)
+                post_h = float(vol.get("canopy_post_height_m", max(2.4, vol_h - 0.08)) or max(2.4, vol_h - 0.08))
+                post_inset = float(vol.get("canopy_post_inset_m", 0.4) or 0.4)
+                door_hex = str(vol.get("door_colour_hex", "#2F3A52"))
+                if not door_hex.startswith("#"):
+                    door_hex = colour_name_to_hex(door_hex)
+                post_roughness = float(vol.get("post_roughness", 0.6) or 0.6)
+                post_mat = get_or_create_material(
+                    f"mat_canopy_post_{door_hex.lstrip('#')}",
+                    colour_hex=door_hex,
+                    roughness=post_roughness,
+                )
+                denom = post_count + 1
+                for pi in range(post_count):
+                    px = vol_cx - vol_w / 2 + (pi + 1) * (vol_w / denom)
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    post = bpy.context.active_object
+                    post.name = f"canopy_post_{pi}_{bldg_id}"
+                    post.scale = (post_w / 2, post_d / 2, post_h / 2)
+                    bpy.ops.object.transform_apply(scale=True)
+                    post.location = (px, post_inset, post_h / 2)
+                    assign_material(post, post_mat)
+                    all_objs.append(post)
+
+                beam_h = float(vol.get("canopy_beam_height_m", 0.0) or 0.0)
+                if beam_h > 0.01:
+                    beam_d = float(vol.get("canopy_beam_depth_m", 0.2) or 0.2)
+                    beam_z = float(vol.get("canopy_beam_z_m", post_h) or post_h)
+                    beam_w = max(0.4, vol_w - 2 * post_inset)
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    beam = bpy.context.active_object
+                    beam.name = f"canopy_beam_{bldg_id}"
+                    beam.scale = (beam_w / 2, beam_d / 2, beam_h / 2)
+                    bpy.ops.object.transform_apply(scale=True)
+                    beam.location = (vol_cx, post_inset, beam_z - beam_h / 2)
+                    assign_material(beam, post_mat)
+                    all_objs.append(beam)
+
+            roof_units = vol.get("roof_units", [])
+            if isinstance(roof_units, list):
+                for ui, unit in enumerate(roof_units):
+                    if not isinstance(unit, dict):
+                        continue
+                    uw = float(unit.get("width_m", 1.2) or 1.2)
+                    ud = float(unit.get("depth_m", 1.0) or 1.0)
+                    uh = float(unit.get("height_m", 0.8) or 0.8)
+                    ux = float(unit.get("x_offset_m", 0.0) or 0.0)
+                    uy = float(unit.get("y_offset_m", -vol_d * 0.5) or -vol_d * 0.5)
+                    uz = float(unit.get("z_offset_m", vol_h + 0.05) or (vol_h + 0.05))
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    ru = bpy.context.active_object
+                    ru.name = f"roof_unit_{ui}_{bldg_id}"
+                    ru.scale = (uw / 2, ud / 2, uh / 2)
+                    bpy.ops.object.transform_apply(scale=True)
+                    ru.location = (vol_cx + ux, uy, uz + uh / 2)
+                    unit_roughness = float(unit.get("roughness", 0.7) or 0.7)
+                    unit_mat = get_or_create_material(
+                        f"mat_roof_unit_{ui}_{bldg_id}",
+                        colour_hex="#6A7078",
+                        roughness=unit_roughness,
+                    )
+                    assign_material(ru, unit_mat)
+                    all_objs.append(ru)
+
+            pickets = vol.get("fence_pickets", {})
+            if isinstance(pickets, dict) and pickets:
+                count = max(2, int(pickets.get("count", 24) or 24))
+                pw = float(pickets.get("width_m", 0.07) or 0.07)
+                pd = float(pickets.get("depth_m", 0.05) or 0.05)
+                ph = float(pickets.get("height_m", max(1.2, vol_h - 0.2)) or max(1.2, vol_h - 0.2))
+                inset = float(pickets.get("inset_m", 0.02) or 0.02)
+                lift = float(pickets.get("lift_m", 0.0) or 0.0)
+                phex = str(pickets.get("colour_hex", "#B99661"))
+                if not phex.startswith("#"):
+                    phex = colour_name_to_hex(phex)
+                pmat = get_or_create_material(f"mat_fence_picket_{phex.lstrip('#')}", colour_hex=phex, roughness=0.85)
+                for pi in range(count):
+                    px = vol_cx - vol_w / 2 + (pi + 0.5) * (vol_w / count)
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    pk = bpy.context.active_object
+                    pk.name = f"fence_picket_{pi}_{bldg_id}"
+                    pk.scale = (pw / 2, pd / 2, ph / 2)
+                    bpy.ops.object.transform_apply(scale=True)
+                    pk.location = (px, inset, lift + ph / 2)
+                    assign_material(pk, pmat)
+                    all_objs.append(pk)
+            lights = vol.get("sidewalk_lights", [])
+            if isinstance(lights, list) and lights:
+                light_color = str(lights[0].get("colour_hex", "#F7E85C"))
+                if not light_color.startswith("#"):
+                    light_color = colour_name_to_hex(light_color)
+                light_mat = get_or_create_material("mat_sidewalk_light", colour_hex=light_color, roughness=0.15)
+                pole_mat = get_or_create_material("mat_sidewalk_pole", colour_hex="#0E0E0E", roughness=0.35)
+                _bsdf = pole_mat.node_tree.nodes.get("Principled BSDF")
+                if _bsdf and "Metallic" in _bsdf.inputs:
+                    _bsdf.inputs["Metallic"].default_value = 0.75
+                spacing = vol_w / (len(lights) + 1)
+                for li, light in enumerate(lights):
+                    lx = vol_cx - vol_w / 2 + spacing * (li + 1)
+                    pole_h = float(light.get("height_m", 2.8) or 2.8)
+                    pole_d = float(light.get("diameter_m", 0.08) or 0.08)
+                    lamp_d = float(light.get("lamp_diameter_m", 0.28) or 0.28)
+                    bpy.ops.mesh.primitive_cylinder_add(radius=pole_d / 2, depth=pole_h)
+                    pole = bpy.context.active_object
+                    pole.name = f"sidewalk_pole_{li}_{bldg_id}"
+                    pole.location = (lx, inset, pole_h / 2)
+                    assign_material(pole, pole_mat)
+                    all_objs.append(pole)
+
+                    bpy.ops.mesh.primitive_uv_sphere_add(radius=lamp_d / 2)
+                    lamp = bpy.context.active_object
+                    lamp.name = f"sidewalk_lamp_{li}_{bldg_id}"
+                    lamp.location = (lx, inset, pole_h + lamp_d / 2)
+                    assign_material(lamp, light_mat)
+                    all_objs.append(lamp)
+
+            log_volume_feature("Modern roofline proxies", roofline_start)
             log_volume_feature("Modern roof", modern_roof_start)
 
         else:
@@ -5095,9 +8100,210 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
             outer.name = f"hall_{bldg_id}"
 
             hall_mat = create_brick_material(f"mat_hall_{vol_hex.lstrip('#')}",
-                                              vol_hex, mortar_hex)
+                                              vol_hex, mortar_hex,
+                                              bond_pattern=mv_bond,
+                                              polychrome_hex=mv_polychrome)
             assign_material(outer, hall_mat)
             all_objs.append(outer)
+
+            # Volume-specific openings (for detailed multi-volume churches)
+            detail_openings_start = len(all_objs)
+            win_rows = vol.get("windows_detail", vol.get("window_rows", []))
+            if isinstance(win_rows, list):
+                for ri, row in enumerate(win_rows):
+                    if not isinstance(row, dict):
+                        continue
+                    count = int(row.get("count", 0) or 0)
+                    if count <= 0:
+                        continue
+                    ww = float(row.get("width_m", 0.9))
+                    wh = float(row.get("height_m", 1.8))
+                    sill = float(row.get("sill_height_m", 0.9))
+                    row_type = str(row.get("type", ""))
+                    arch_type = str(row.get("arch_type", ""))
+                    if not arch_type:
+                        arch_type = "pointed" if "lancet" in row_type.lower() or "pointed" in row_type.lower() else "segmental"
+                    spacing = vol_w / (count + 1)
+                    frame_hex = str(row.get("frame_colour", "#3A3A3A"))
+                    if not frame_hex.startswith("#"):
+                        frame_hex = colour_name_to_hex(frame_hex)
+                    frame_mat = get_or_create_material(f"mat_volframe_{frame_hex.lstrip('#')}", colour_hex=frame_hex, roughness=0.5)
+
+                    for wi in range(count):
+                        wx = vol_cx - vol_w / 2 + spacing * (wi + 1)
+                        if arch_type in ("pointed", "segmental", "semicircular"):
+                            spring_h = wh * 0.72
+                            cutter = create_arch_cutter(
+                                f"vol_win_cut_{ri}_{wi}_{bldg_id}",
+                                ww,
+                                wh,
+                                spring_h,
+                                arch_type=arch_type,
+                                depth=0.8,
+                            )
+                        else:
+                            cutter = create_rect_cutter(f"vol_win_cut_{ri}_{wi}_{bldg_id}", ww, wh, depth=0.8)
+                            cutter.location.z = wh / 2
+
+                        cutter.location.x = wx
+                        cutter.location.y = 0.01
+                        cutter.location.z += sill
+                        boolean_cut(outer, cutter)
+
+                        # Glass
+                        bpy.ops.mesh.primitive_plane_add(size=1)
+                        gl = bpy.context.active_object
+                        gl.name = f"vol_glass_{ri}_{wi}_{bldg_id}"
+                        gl.scale = (ww * 0.85, 1, wh * 0.85)
+                        bpy.ops.object.transform_apply(scale=True)
+                        gl.rotation_euler.x = math.pi / 2
+                        gl.location = (wx, 0.02, sill + wh / 2)
+                        assign_material(gl, create_glass_material())
+                        all_objs.append(gl)
+
+                        # Simple frame
+                        ft = 0.04
+                        for fn, fs, fl in [
+                            ("t", (ww + ft, 0.05, ft), (wx, 0.03, sill + wh)),
+                            ("b", (ww + ft * 2, 0.06, ft), (wx, 0.03, sill)),
+                            ("l", (ft, 0.05, wh), (wx - ww / 2, 0.03, sill + wh / 2)),
+                            ("r", (ft, 0.05, wh), (wx + ww / 2, 0.03, sill + wh / 2)),
+                        ]:
+                            bpy.ops.mesh.primitive_cube_add(size=1)
+                            fr = bpy.context.active_object
+                            fr.name = f"vol_frame_{fn}_{ri}_{wi}_{bldg_id}"
+                            fr.scale = fs
+                            bpy.ops.object.transform_apply(scale=True)
+                            fr.location = fl
+                            assign_material(fr, frame_mat)
+                            all_objs.append(fr)
+
+            vol_doors = vol.get("doors_detail", [])
+            if isinstance(vol_doors, list):
+                door_mat = get_or_create_material("mat_vol_door", colour_hex="#7B2132", roughness=0.45)
+                for di, ds in enumerate(vol_doors):
+                    if not isinstance(ds, dict):
+                        continue
+                    dw = float(ds.get("width_m", 1.0))
+                    dh = float(ds.get("height_m", 2.2))
+                    dpos = str(ds.get("position", "center")).lower()
+                    if "left" in dpos:
+                        dx = vol_cx - vol_w * 0.25
+                    elif "right" in dpos:
+                        dx = vol_cx + vol_w * 0.25
+                    else:
+                        dx = vol_cx
+
+                    dtype = str(ds.get("type", "")).lower()
+                    is_arched = "arch" in dtype or "pointed" in dtype or "gothic" in dtype
+                    if is_arched:
+                        cutter = create_arch_cutter(
+                            f"vol_door_cut_{di}_{bldg_id}",
+                            dw,
+                            dh,
+                            dh * 0.72,
+                            arch_type="pointed" if ("pointed" in dtype or "gothic" in dtype) else "segmental",
+                            depth=0.8,
+                        )
+                    else:
+                        cutter = create_rect_cutter(f"vol_door_cut_{di}_{bldg_id}", dw, dh, depth=0.8)
+                        cutter.location.z = dh / 2
+                    cutter.location.x = dx
+                    cutter.location.y = 0.01
+                    boolean_cut(outer, cutter)
+
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    d_obj = bpy.context.active_object
+                    d_obj.name = f"vol_door_{di}_{bldg_id}"
+                    d_obj.scale = (dw * 0.92, 0.06, dh * 0.95)
+                    bpy.ops.object.transform_apply(scale=True)
+                    d_obj.location = (dx, 0.04, dh * 0.48)
+                    assign_material(d_obj, door_mat)
+                    all_objs.append(d_obj)
+
+            buttress_count = int(vol.get("buttress_count", 0) or 0)
+            if buttress_count > 0:
+                buttress_mat = create_stone_material("mat_vol_buttress", "#4E4A43")
+                b_w = float(vol.get("buttress_width_m", 0.34))
+                b_d = float(vol.get("buttress_depth_m", 0.45))
+                b_h = float(vol.get("buttress_height_m", max(2.2, vol_h * 0.85)))
+                stepped = bool(vol.get("buttress_stepped", False))
+                spacing = vol_w / (buttress_count + 1)
+                for bi in range(buttress_count):
+                    bx = vol_cx - vol_w / 2 + spacing * (bi + 1)
+                    bpy.ops.mesh.primitive_cube_add(size=1)
+                    bt = bpy.context.active_object
+                    bt.name = f"vol_buttress_{bi}_{bldg_id}"
+                    bt.scale = (b_w, b_d, b_h)
+                    bpy.ops.object.transform_apply(scale=True)
+                    bt.location = (bx, b_d / 2, b_h / 2)
+                    assign_material(bt, buttress_mat)
+                    all_objs.append(bt)
+                    if stepped:
+                        bpy.ops.mesh.primitive_cube_add(size=1)
+                        bt2 = bpy.context.active_object
+                        bt2.name = f"vol_buttress_step_{bi}_{bldg_id}"
+                        bt2.scale = (b_w * 0.72, b_d * 0.72, b_h * 0.45)
+                        bpy.ops.object.transform_apply(scale=True)
+                        bt2.location = (bx, b_d * 0.65, b_h * 0.72)
+                        assign_material(bt2, buttress_mat)
+                        all_objs.append(bt2)
+
+            # Optional repeated chapel gables along front face
+            chapel_gable_count = int(vol.get("chapel_gable_count", 0) or 0)
+            if chapel_gable_count > 0:
+                cg_start = len(all_objs)
+                cg_w = float(vol.get("chapel_gable_width_m", 2.6))
+                cg_d = float(vol.get("chapel_gable_depth_m", 1.8))
+                cg_h = float(vol.get("chapel_gable_height_m", 3.2))
+                cg_y = float(vol.get("chapel_gable_y_m", cg_d / 2))
+                spacing = vol_w / (chapel_gable_count + 1)
+                for ci in range(chapel_gable_count):
+                    cx = vol_cx - vol_w / 2 + spacing * (ci + 1)
+                    # Small gable wall
+                    gbm = bmesh.new()
+                    v0 = gbm.verts.new((cx - cg_w / 2, cg_y, vol_h))
+                    v1 = gbm.verts.new((cx + cg_w / 2, cg_y, vol_h))
+                    v2 = gbm.verts.new((cx, cg_y, vol_h + cg_h))
+                    gbm.faces.new([v0, v1, v2])
+                    gmesh = bpy.data.meshes.new(f"chapel_gable_{ci}_{bldg_id}")
+                    gbm.to_mesh(gmesh)
+                    gbm.free()
+                    gobj = bpy.data.objects.new(f"chapel_gable_{ci}_{bldg_id}", gmesh)
+                    bpy.context.collection.objects.link(gobj)
+                    mod = gobj.modifiers.new("Solidify", 'SOLIDIFY')
+                    mod.thickness = 0.24
+                    mod.offset = 0
+                    bpy.context.view_layer.objects.active = gobj
+                    bpy.ops.object.modifier_apply(modifier=mod.name)
+                    assign_material(gobj, hall_mat)
+                    all_objs.append(gobj)
+
+                    # Small roof for this chapel gable
+                    rbm = bmesh.new()
+                    ov = 0.12
+                    vv0 = rbm.verts.new((cx - cg_w / 2 - ov, cg_y + cg_d, vol_h))
+                    vv1 = rbm.verts.new((cx + cg_w / 2 + ov, cg_y + cg_d, vol_h))
+                    vv2 = rbm.verts.new((cx + cg_w / 2 + ov, cg_y - ov, vol_h))
+                    vv3 = rbm.verts.new((cx - cg_w / 2 - ov, cg_y - ov, vol_h))
+                    vv4 = rbm.verts.new((cx, cg_y + cg_d, vol_h + cg_h * 0.75))
+                    vv5 = rbm.verts.new((cx, cg_y - ov, vol_h + cg_h * 0.75))
+                    rbm.faces.new([vv0, vv3, vv5, vv4])
+                    rbm.faces.new([vv1, vv4, vv5, vv2])
+                    rm = bpy.data.meshes.new(f"chapel_roof_{ci}_{bldg_id}")
+                    rbm.to_mesh(rm)
+                    rbm.free()
+                    robj = bpy.data.objects.new(f"chapel_roof_{ci}_{bldg_id}", rm)
+                    bpy.context.collection.objects.link(robj)
+                    rmod = robj.modifiers.new("Solidify", 'SOLIDIFY')
+                    rmod.thickness = 0.06
+                    rmod.offset = -1
+                    bpy.context.view_layer.objects.active = robj
+                    bpy.ops.object.modifier_apply(modifier=rmod.name)
+                    assign_material(robj, create_roof_material(f"mat_chapelroof_{bldg_id}", get_roof_hex(params)))
+                    all_objs.append(robj)
+                log_volume_feature("Chapel gables", cg_start)
+            log_volume_feature("Volume-specific openings/details", detail_openings_start)
 
             # Engine bay arch (ground floor)
             ground_opening_start = len(all_objs)
@@ -5246,7 +8452,7 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
             if "gable" in roof_type:
                 roof_start = len(all_objs)
                 pitch = vol.get("roof_pitch_deg", 35)
-                ridge_h = (vol_w / 2) * math.tan(math.radians(pitch))
+                ridge_h = (vol_w / 2) * _safe_tan(pitch)
 
                 bm = bmesh.new()
                 hw = vol_w / 2 + 0.15
@@ -5356,7 +8562,43 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
                         all_objs.append(ring)
                 log_volume_feature("Oculus", oculus_start)
 
-        x_cursor += vol_w
+        # Offset this volume after geometry creation (supports side chapel strips / annex shifts)
+        if vol_y_off != 0.0 or vol_z_off != 0.0:
+            for obj in all_objs[vol_start_idx:]:
+                if obj:
+                    obj.location.y += vol_y_off
+                    obj.location.z += vol_z_off
+
+        # --- Seam filler between adjacent volumes ---
+        # When two volumes sit side by side (not stacked), add a thin strip of
+        # wall material at the junction to prevent light leaks at the seam.
+        if vi > 0 and not stack_with_previous:
+            prev_vol = volumes[vi - 1] if isinstance(volumes[vi - 1], dict) else {}
+            prev_h = sum(max(0.5, float(fh)) for fh in (prev_vol.get("floor_heights_m") or [3.5]))
+            seam_h = min(vol_h, prev_h)  # height of shared wall = shorter of the two
+            seam_x = vol_cx - vol_w / 2  # left edge of current volume
+            seam_depth = max(vol_d, prev_vol.get("depth_m", 10.0))
+            if seam_h > 0.5:
+                bpy.ops.mesh.primitive_cube_add(size=1)
+                seam = bpy.context.active_object
+                seam.name = f"seam_filler_{vi}_{bldg_id}"
+                seam.scale = (0.02, seam_depth / 2, seam_h / 2)
+                bpy.ops.object.transform_apply(scale=True)
+                seam.location = (seam_x, -seam_depth / 2, seam_h / 2)
+                seam_mat = create_brick_material(
+                    f"mat_seam_{vol_hex.lstrip('#')}", vol_hex, mortar_hex,
+                    bond_pattern=mv_bond)
+                assign_material(seam, seam_mat)
+                all_objs.append(seam)
+
+            # Log eave height mismatch for QA
+            if abs(vol_h - prev_h) > 0.5:
+                print(f"    [WARN] Eave height mismatch at seam {vi}: "
+                      f"prev={prev_h:.1f}m vs current={vol_h:.1f}m (delta={abs(vol_h - prev_h):.1f}m)")
+
+        if not stack_with_previous:
+            x_cursor += vol_w
+            prev_cx = vol_cx
 
     all_objs = [o for o in all_objs if _obj_valid(o)]
     pre_join_count = len(all_objs)
@@ -5381,921 +8623,167 @@ def generate_multi_volume(params, offset=(0, 0, 0)):
     # Move all to collection with offset
     col = bpy.data.collections.new(f"building_{bldg_id}")
     bpy.context.scene.collection.children.link(col)
+def generate_st_stephens_custom(params, offset=(0, 0, 0)):
+    """Custom one-off generator for St. Stephen-in-the-Fields Church.
 
-    ox, oy, oz = offset
-    for obj in all_objs:
-        if obj:
-            obj.location.x += ox
-            obj.location.y += oy
-            obj.location.z += oz
-            for c in obj.users_collection:
-                c.objects.unlink(obj)
-            col.objects.link(obj)
-
-    print(f"  [OK] Multi-volume total objects: {len([o for o in all_objs if o])}")
-    return col
-
-
-def generate_building(params, offset=(0, 0, 0), rotation=0.0):
-    """Generate a complete 3D building from JSON parameters."""
-    params = apply_hcd_guide_defaults(params)
-
-    # Check for multi-volume buildings
-    volumes = params.get("volumes", [])
-    if len(volumes) >= 2:
-        return generate_multi_volume(params, offset)
-
-    address = "unknown"
+    This bypasses generic house-form assumptions and builds a church-like
+    massing directly (nave, chapel bay run, tower/spire, and rear annexes).
+    """
+    address = "103 Bellevue Ave"
     meta = params.get("_meta", {})
     if isinstance(meta, dict):
-        address = meta.get("address", "unknown")
-
+        address = meta.get("address", address)
     bldg_id = address.replace(" ", "_").replace(",", "").replace(".", "")
-    print(f"[GENERATE] {address}")
+    print(f"[GENERATE CUSTOM] {address} (St. Stephen)")
 
-    # HCD-derived defaults (used as fallbacks when params don't specify)
-    era_defaults = get_era_defaults(params)
-    typology_hints = get_typology_hints(params)
+    facade_hex = get_facade_hex(params)
+    roof_hex = get_roof_hex(params)
+    trim_hex = get_trim_hex(params)
 
-    depth = params.get("facade_depth_m", DEFAULT_DEPTH)
+    brick_mat = create_brick_material(f"mat_custom_brick_{facade_hex.lstrip('#')}", facade_hex, "#8A8A8A")
+    roof_mat = create_roof_material(f"mat_custom_roof_{roof_hex.lstrip('#')}", roof_hex)
+    stone_mat = create_stone_material(f"mat_custom_stone_{trim_hex.lstrip('#')}", trim_hex)
+    glass_mat = create_glass_material(f"mat_custom_glass_{bldg_id}")
+    stucco_mat = create_painted_material(f"mat_custom_stucco_{bldg_id}", "#B8826B")
+    door_mat = get_or_create_material(f"mat_custom_door_{bldg_id}", colour_hex="#7B2132", roughness=0.45)
 
-    # 1. Create walls
-    wall_obj, wall_h, width, depth = create_walls(params, depth)
-    print(f"  Walls: {width:.1f}m x {depth:.1f}m x {wall_h:.1f}m")
+    all_objs = []
 
-    # 2. Cut window openings
-    windows = cut_windows(wall_obj, params, wall_h, width, bldg_id)
-    print(f"  Windows: {len(windows)} elements")
-
-    # 3. Cut door openings
-    doors = cut_doors(wall_obj, params, width)
-    if doors:
-        print(f"  Doors: {len(doors)} elements")
-
-    # 4. Create roof
-    roof_type = str(params.get("roof_type", "gable")).lower()
-    ridge_height = 0
-    gable_objs = []
-
-    if "flat" in roof_type:
-        roof_obj, parapet_h = create_flat_roof(params, wall_h, width, depth)
-        print(f"  Roof: flat with {parapet_h:.1f}m parapet")
-    elif "hip" in roof_type:
-        roof_obj, ridge_height = create_hip_roof(params, wall_h, width, depth)
-        print(f"  Roof: hip, peak +{ridge_height:.1f}m")
-    elif "cross" in roof_type or "bay-and-gable" in roof_type or "bay_and_gable" in roof_type:
-        roof_obj, ridge_height = create_cross_gable_roof(params, wall_h, width, depth)
-        gable_objs = create_gable_walls(params, wall_h, width, depth, bldg_id)
-        print(f"  Roof: cross-gable, ridge +{ridge_height:.1f}m, +{len(gable_objs)} gable walls")
-    elif "gable" in roof_type:
-        roof_obj, ridge_height = create_gable_roof(params, wall_h, width, depth)
-        gable_objs = create_gable_walls(params, wall_h, width, depth, bldg_id)
-        print(f"  Roof: gable, ridge +{ridge_height:.1f}m, +{len(gable_objs)} gable walls")
-    else:
-        roof_obj, ridge_height = create_gable_roof(params, wall_h, width, depth)
-        gable_objs = create_gable_walls(params, wall_h, width, depth, bldg_id)
-
-    # 5. Porch
-    porch_objs = create_porch(params, width)
-    if porch_objs:
-        print(f"  Porch: {len(porch_objs)} elements")
-
-    # 6. Bay windows
-    bay_objs = create_bay_window(params, wall_h, width)
-    if bay_objs:
-        print(f"  Bay window: {len(bay_objs)} elements")
-
-    # 7. Chimneys
-    chimney_objs = create_chimney(params, wall_h, ridge_height, width)
-    if chimney_objs:
-        print(f"  Chimneys: {len(chimney_objs)}")
-
-    # 8. Storefront
-    sf_objs = create_storefront(params, wall_obj, width)
-    if sf_objs:
-        print(f"  Storefront: {len(sf_objs)} elements")
-
-    # 9. String courses
-    sc_objs = create_string_courses(params, wall_h, width, depth, bldg_id)
-    if sc_objs:
-        print(f"  String courses: {len(sc_objs)}")
-
-    # 10. Quoins
-    quoin_objs = create_quoins(params, wall_h, width, depth, bldg_id)
-    if quoin_objs:
-        print(f"  Quoins: {len(quoin_objs)}")
-
-    # 11. Tower (for fire station etc)
-    tower_objs = create_tower(params, bldg_id)
-    if tower_objs:
-        print(f"  Tower: {len(tower_objs)} elements")
-
-    # 12. Bargeboard (decorative rake boards on gable)
-    bb_objs = []
-    if "gable" in roof_type:
-        bb_objs = create_bargeboard(params, wall_h, width, depth, bldg_id)
-        if bb_objs:
-            print(f"  Bargeboard: {len(bb_objs)} elements")
-
-    # 13. Cornice band
-    cornice_objs = create_cornice_band(params, wall_h, width, depth, bldg_id)
-    if cornice_objs:
-        print(f"  Cornice: {len(cornice_objs)} elements")
-
-    # 13b. Corbel table / stepped brickwork
-    corbel_objs = create_corbelling(params, wall_h, width, depth, bldg_id)
-    if corbel_objs:
-        print(f"  Corbelling: {len(corbel_objs)} elements")
-
-    # 14. Window lintels and sills
-    lintel_objs = create_window_lintels(params, wall_h, width, bldg_id)
-    if lintel_objs:
-        print(f"  Lintels/sills: {len(lintel_objs)} elements")
-
-    # 14b. Stained-glass transoms
-    transom_objs = create_stained_glass_transoms(params, width, bldg_id)
-    if transom_objs:
-        print(f"  Transoms: {len(transom_objs)} elements")
-
-    # 15. Brackets (gable and porch)
-    bracket_objs = create_brackets(params, wall_h, width, depth, bldg_id)
-    if bracket_objs:
-        print(f"  Brackets: {len(bracket_objs)} elements")
-
-    # 16. Ridge finial
-    finial_objs = []
-    if "gable" in roof_type:
-        finial_objs = create_ridge_finial(params, wall_h, width, depth, bldg_id)
-        if finial_objs:
-            print(f"  Finial: {len(finial_objs)} elements")
-
-    # 17. Voussoirs (arch stones)
-    voussoir_objs = create_voussoirs(params, wall_h, width, bldg_id)
-    if voussoir_objs:
-        print(f"  Voussoirs: {len(voussoir_objs)} elements")
-
-    # 18. Gable fish-scale shingles
-    shingle_objs = []
-    if "gable" in roof_type:
-        shingle_objs = create_gable_shingles(params, wall_h, width, depth, bldg_id)
-        if shingle_objs:
-            print(f"  Gable shingles: {len(shingle_objs)} elements")
-
-    # 19. Dormer
-    dormer_objs = create_dormer(params, wall_h, width, depth, bldg_id)
-    if dormer_objs:
-        print(f"  Dormer: {len(dormer_objs)} elements")
-
-    # 20. Fascia and soffit boards
-    fascia_objs = create_fascia_boards(params, wall_h, width, depth, bldg_id)
-    if fascia_objs:
-        print(f"  Fascia/soffit: {len(fascia_objs)} elements")
-
-    # 21. Parapet coping (flat roofs)
-    parapet_objs = create_parapet_coping(params, wall_h, width, depth, bldg_id)
-    if parapet_objs:
-        print(f"  Parapet/coping: {len(parapet_objs)} elements")
-
-    # 21a. Small rooftop hip element / penthouse cap
-    hip_rooflet_objs = create_hip_rooflet(params, wall_h, width, depth, bldg_id)
-    if hip_rooflet_objs:
-        print(f"  Hip rooflet: {len(hip_rooflet_objs)} elements")
-
-    # 21b. Gabled parapet
-    gp_objs = create_gabled_parapet(params, wall_h, width, depth, bldg_id)
-    if gp_objs:
-        print(f"  Gabled parapet: {len(gp_objs)} elements")
-
-    # 22. Turned porch posts (replace cylinders with Victorian turned posts)
-    porch_objs = create_turned_posts(porch_objs, params, width)
-
-    # 23. Storefront awning and signage
-    awning_objs = create_storefront_awning(params, width, bldg_id)
-    if awning_objs:
-        print(f"  Awning/sign: {len(awning_objs)} elements")
-
-    # 24. Foundation/water table
-    found_objs = create_foundation(params, width, depth, bldg_id)
-    if found_objs:
-        print(f"  Foundation: {len(found_objs)} elements")
-
-    # 25. Gutters and downspouts
-    gutter_objs = create_gutters(params, wall_h, width, depth, bldg_id)
-    if gutter_objs:
-        print(f"  Gutters: {len(gutter_objs)} elements")
-
-    # 26. Chimney caps
-    chimney_cap_objs = create_chimney_caps(params, wall_h, ridge_height, width, bldg_id)
-    if chimney_cap_objs:
-        print(f"  Chimney caps: {len(chimney_cap_objs)} elements")
-
-    # 27. Porch lattice skirt
-    lattice_objs = create_porch_lattice(params, width, bldg_id)
-    if lattice_objs:
-        print(f"  Lattice skirt: {len(lattice_objs)} elements")
-
-    # 28. Step handrails
-    handrail_objs = create_step_handrails(params, width, bldg_id)
-    if handrail_objs:
-        print(f"  Handrails: {len(handrail_objs)} elements")
-
-    # Collect all objects
-    all_objs = [wall_obj, roof_obj] + gable_objs + windows + doors + porch_objs + bay_objs + \
-               chimney_objs + sf_objs + sc_objs + quoin_objs + tower_objs + corbel_objs + \
-               bb_objs + cornice_objs + lintel_objs + transom_objs + bracket_objs + finial_objs + \
-               voussoir_objs + shingle_objs + dormer_objs + fascia_objs + parapet_objs + \
-               hip_rooflet_objs + awning_objs + found_objs + gutter_objs + chimney_cap_objs + \
-               lattice_objs + handrail_objs + gp_objs
-
-    # Join small objects by type to reduce clutter
     def _obj_valid(o):
         try:
             return o is not None and o.name is not None
         except ReferenceError:
             return False
 
-    def join_by_prefix(prefix, objs_list):
-        """Join all objects whose name starts with prefix into a single mesh."""
-        targets = []
-        for o in objs_list:
-            try:
-                if o and o.name.startswith(prefix):
-                    targets.append(o)
-            except ReferenceError:
-                continue
-        if len(targets) < 2:
-            return objs_list
-        bpy.ops.object.select_all(action='DESELECT')
-        for o in targets:
-            o.select_set(True)
-        bpy.context.view_layer.objects.active = targets[0]
-        bpy.ops.object.join()
-        joined = bpy.context.active_object
-        joined.name = f"{prefix}{bldg_id}"
-        # Replace in list: keep joined, remove others
-        new_list = [o for o in objs_list if _obj_valid(o) and o not in targets]
-        new_list.append(joined)
-        return new_list
+    def _gable_roof(name, width, depth, eave_z, ridge_z, cx=0.0, cy=0.0, overhang=0.25):
+        bm = bmesh.new()
+        hw = width / 2 + overhang
+        hd = depth / 2 + overhang
+        # Build in local object coordinates; position with object.location.
+        v0 = bm.verts.new((-hw, -hd, eave_z))
+        v1 = bm.verts.new((hw, -hd, eave_z))
+        v2 = bm.verts.new((hw, hd, eave_z))
+        v3 = bm.verts.new((-hw, hd, eave_z))
+        v4 = bm.verts.new((0.0, -hd, ridge_z))
+        v5 = bm.verts.new((0.0, hd, ridge_z))
+        bm.faces.new([v0, v3, v5, v4])
+        bm.faces.new([v1, v4, v5, v2])
+        bm.faces.new([v2, v5, v3])
+        bm.faces.new([v0, v4, v1])
+        rmesh = bpy.data.meshes.new(name)
+        bm.to_mesh(rmesh)
+        bm.free()
+        robj = bpy.data.objects.new(name, rmesh)
+        bpy.context.collection.objects.link(robj)
+        mod = robj.modifiers.new("Solidify", 'SOLIDIFY')
+        mod.thickness = 0.08
+        mod.offset = -1
+        bpy.context.view_layer.objects.active = robj
+        bpy.ops.object.modifier_apply(modifier=mod.name)
+        robj.location.x = cx
+        robj.location.y = cy
+        assign_material(robj, roof_mat)
+        return robj
 
-    all_objs = [o for o in all_objs if _obj_valid(o)]
-    pre_join_count = len(all_objs)
+    def _gable_end_wall(name, width, eave_z, ridge_z, cy, thickness=0.18):
+        bm = bmesh.new()
+        hw = width / 2
+        ht = thickness / 2
+        # Build in local coordinates; place at cy using object.location.
+        v0 = bm.verts.new((-hw, -ht, 0.0))
+        v1 = bm.verts.new((hw, -ht, 0.0))
+        v2 = bm.verts.new((hw, ht, 0.0))
+        v3 = bm.verts.new((-hw, ht, 0.0))
+        v4 = bm.verts.new((-hw, -ht, eave_z))
+        v5 = bm.verts.new((hw, -ht, eave_z))
+        v6 = bm.verts.new((hw, ht, eave_z))
+        v7 = bm.verts.new((-hw, ht, eave_z))
+        va = bm.verts.new((0.0, -ht, ridge_z))
+        vb = bm.verts.new((0.0, ht, ridge_z))
 
-    all_objs = join_by_prefix("frame_", all_objs)
-    all_objs = join_by_prefix("muntin_", all_objs)
-    all_objs = join_by_prefix("glass_", all_objs)
-    all_objs = join_by_prefix("baluster_", all_objs)
-    all_objs = join_by_prefix("bay_glass_", all_objs)
-    all_objs = join_by_prefix("step_", all_objs)
-    all_objs = join_by_prefix("lintel_", all_objs)
-    all_objs = join_by_prefix("sill_", all_objs)
-    all_objs = join_by_prefix("bracket_", all_objs)
-    all_objs = join_by_prefix("porch_bracket_", all_objs)
-    all_objs = join_by_prefix("bargeboard_", all_objs)
-    all_objs = join_by_prefix("voussoir_", all_objs)
-    all_objs = join_by_prefix("shingle_", all_objs)
-    all_objs = join_by_prefix("dormer_frame_", all_objs)
-    all_objs = join_by_prefix("dormer_cheek_", all_objs)
-    all_objs = join_by_prefix("fascia_", all_objs)
-    all_objs = join_by_prefix("soffit_", all_objs)
-    all_objs = join_by_prefix("parapet_", all_objs)
-    all_objs = join_by_prefix("coping_", all_objs)
-    all_objs = join_by_prefix("turned_seg_", all_objs)
-    all_objs = join_by_prefix("lattice_", all_objs)
-    all_objs = join_by_prefix("foundation_", all_objs)
-    all_objs = join_by_prefix("gutter_", all_objs)
-    all_objs = join_by_prefix("downspout_", all_objs)
-    all_objs = join_by_prefix("chimcap_", all_objs)
-    all_objs = join_by_prefix("handrail_", all_objs)
-    all_objs = join_by_prefix("rail_post_", all_objs)
-    all_objs = join_by_prefix("hall_frame_", all_objs)
-    all_objs = join_by_prefix("hall_glass_", all_objs)
-    all_objs = join_by_prefix("curtain_glass_", all_objs)
-    all_objs = join_by_prefix("mullion_", all_objs)
-    all_objs = join_by_prefix("tower_glass_", all_objs)
-    all_objs = join_by_prefix("tower_corner_", all_objs)
-    all_objs = join_by_prefix("tower_veg_", all_objs)
-    all_objs = join_by_prefix("tower_corbel_", all_objs)
-    all_objs = join_by_prefix("engine_voussoir_", all_objs)
-    all_objs = join_by_prefix("transom_", all_objs)
-    all_objs = join_by_prefix("quoin_", all_objs)
-    all_objs = join_by_prefix("string_course_", all_objs)
-    all_objs = join_by_prefix("cornice_", all_objs)
+        bm.faces.new([v0, v1, v2, v3])      # bottom
+        bm.faces.new([v0, v4, v5, v1])      # side
+        bm.faces.new([v1, v5, v6, v2])      # side
+        bm.faces.new([v2, v6, v7, v3])      # side
+        bm.faces.new([v3, v7, v4, v0])      # side
+        bm.faces.new([v4, va, v5])          # front triangle
+        bm.faces.new([v7, v6, vb])          # back triangle
+        bm.faces.new([v4, v7, vb, va])      # top left slope
+        bm.faces.new([v5, va, vb, v6])      # top right slope
 
-    post_join_count = len(all_objs)
-    if post_join_count < pre_join_count:
-        print(f"  Joined objects: {pre_join_count} -> {post_join_count}")
+        m = bpy.data.meshes.new(name)
+        bm.to_mesh(m)
+        bm.free()
+        obj = bpy.data.objects.new(name, m)
+        bpy.context.collection.objects.link(obj)
+        obj.location.y = cy
+        assign_material(obj, brick_mat)
+        return obj
 
-    # Move to building collection and apply offset directly (no parent empty = no clutter)
-    col = bpy.data.collections.new(f"building_{bldg_id}")
-    bpy.context.scene.collection.children.link(col)
+    def _box_center(name, width, depth, height, cx, cy, bz=0.0):
+        """Create box using center-XY and bottom-Z coordinates."""
+        return create_box(name, width, depth, height, location=(cx, cy + depth / 2, bz))
 
-    ox, oy, oz = offset
-    for obj in all_objs:
-        if _obj_valid(obj):
-            # Apply rotation around origin (Z-axis) before offset
-            if rotation != 0.0:
-                cos_r = math.cos(rotation)
-                sin_r = math.sin(rotation)
-                x, y = obj.location.x, obj.location.y
-                obj.location.x = x * cos_r - y * sin_r
-                obj.location.y = x * sin_r + y * cos_r
-                obj.rotation_euler.z += rotation
-            obj.location.x += ox
-            obj.location.y += oy
-            obj.location.z += oz
-            # Move to building collection
-            for c in obj.users_collection:
-                c.objects.unlink(obj)
-            col.objects.link(obj)
+    def _polygon_prism(name, points_xy, z0, z1, material):
+        """Create vertical prism from 2D footprint points."""
+        bm = bmesh.new()
+        bottom = [bm.verts.new((x, y, z0)) for x, y in points_xy]
+        top = [bm.verts.new((x, y, z1)) for x, y in points_xy]
+        bm.faces.new(bottom)
+        bm.faces.new(list(reversed(top)))
+        n = len(points_xy)
+        for i in range(n):
+            j = (i + 1) % n
+            bm.faces.new([bottom[i], bottom[j], top[j], top[i]])
+        m = bpy.data.meshes.new(name)
+        bm.to_mesh(m)
+        bm.free()
+        obj = bpy.data.objects.new(name, m)
+        bpy.context.collection.objects.link(obj)
+        assign_material(obj, material)
+        return obj
 
-    # Store HCD metadata as custom properties on the collection
-    if 'hcd_data' in params:
-        hcd = params['hcd_data']
-        col['hcd_reference'] = hcd.get('hcd_reference_number', 0)
-        col['hcd_typology'] = hcd.get('typology', '')
-        col['hcd_construction_date'] = hcd.get('construction_date', '')
-        col['hcd_character_sub_area'] = hcd.get('character_sub_area', '')
-        col['hcd_statement'] = hcd.get('statement_of_contribution', '')
+    # Main nave (GIS-calibrated envelope)
+    use_footprint_base = False
+    if use_footprint_base:
+        # GID 411057 footprint (SRID 2952) recentered to centroid, in metres.
+        footprint_pts = [
+            (1.844, 10.083), (1.414, 11.709), (5.143, 12.696), (5.284, 12.162),
+            (12.532, 14.081), (14.067, 8.281), (16.762, 8.995), (19.025, 0.446),
+            (20.424, -4.589), (17.742, -5.349), (10.466, -7.276), (10.339, -6.796),
+            (7.121, -7.668), (7.156, -7.800), (-14.591, -13.556), (-15.321, -10.797),
+            (-15.942, -10.961), (-16.757, -7.882), (-17.624, -8.112), (-19.174, -2.255),
+            (-18.382, -2.046), (-19.223, 1.136), (-18.838, 1.238), (-19.671, 4.389),
+        ]
+        base = _polygon_prism(f"custom_footprint_base_{bldg_id}", footprint_pts, 0.0, 8.7, brick_mat)
+        all_objs.append(base)
 
-    print(f"  [OK] Total objects: {len([o for o in all_objs if o])}")
-    return col
-
-
-# ---------------------------------------------------------------------------
-# Multi-building loader
-# ---------------------------------------------------------------------------
-
-def load_and_generate(params_path, spacing=15.0, match=None, limit=None):
-    """Load one or more JSON param files and generate buildings."""
-    clear_scene()
-
-    path = Path(params_path)
-
-    # Load site coordinates from GIS export (SRID 2952, local metres)
-    site_coords_path = Path(__file__).parent / "params" / "_site_coordinates.json"
-    site_coords = None
-    if site_coords_path.exists():
-        with open(site_coords_path, encoding="utf-8") as gf:
-            site_coords = json.load(gf)
-        print(f"Loaded site coordinates: {len(site_coords)} buildings (from PostGIS)")
-
-    # Legacy geocode fallback
-    geocode_path = Path(__file__).parent / "archive" / "geocode.json"
-    geocode = None
-    if geocode_path.exists():
-        with open(geocode_path) as gf:
-            geocode = json.load(gf)
-        print(f"Loaded geocode.json: {len(geocode)} entries (legacy fallback)")
-
-    if path.is_file():
-        files = [path]
-    elif path.is_dir():
-        files = sorted(path.glob("*.json"))
-        files = [f for f in files if not f.name.startswith("_")]
-        if match:
-            needle = str(match).lower()
-            files = [f for f in files if needle in f.stem.lower()]
-        if isinstance(limit, int) and limit > 0:
-            files = files[:limit]
-    else:
-        print(f"[ERROR] Path not found: {params_path}")
-        return
-
-    print(f"=== Parametric Building Generator ===")
-    print(f"Files: {len(files)}")
-
-    buildings = []
-    manifest_buildings = []
-    for i, f in enumerate(files):
-        print(f"\n--- [{i+1}/{len(files)}] {f.name} ---")
-        with open(f) as fp:
-            params = json.load(fp)
-
-        if 'hcd_data' in params:
-            hcd = params['hcd_data']
-            print(f"  HCD #{hcd.get('hcd_reference_number', '?')}: {hcd.get('typology', 'Unknown')}, {hcd.get('construction_date', 'Unknown')}")
-            if hcd.get('discrepancies'):
-                print(f"  Discrepancies: {'; '.join(hcd['discrepancies'])}")
-
-        # Determine building position:
-        # 1. Site coordinates from PostGIS GIS export (preferred)
-        # 2. Legacy geocode.json fallback
-        # 3. Linear spacing as last resort
-        address = params.get("building_name") or params.get("_meta", {}).get("address", "")
-        geo_key = f.stem
-
-        if site_coords and address and address in site_coords:
-            sc = site_coords[address]
-            rotation = math.radians(sc.get("rotation_deg", 0))
-            offset = (sc["x"], sc["y"], 0)
-        elif site_coords:
-            # Try matching by filename stem (address with underscores)
-            stem_addr = geo_key.replace("_", " ")
-            if stem_addr in site_coords:
-                sc = site_coords[stem_addr]
-                offset = (sc["x"], sc["y"], 0)
-                rotation = math.radians(sc.get("rotation_deg", 0))
-            elif geocode and geo_key in geocode:
-                gc = geocode[geo_key]
-                offset = (gc["blender_x"], gc["blender_y"], 0)
-                rotation = math.radians(gc.get("rotation_deg", 0))
-            else:
-                offset = (i * spacing, 0, 0)
-                rotation = 0.0
-        elif geocode and geo_key in geocode:
-            gc = geocode[geo_key]
-            offset = (gc["blender_x"], gc["blender_y"], 0)
-            rotation = math.radians(gc.get("rotation_deg", 0))
-        else:
-            offset = (i * spacing, 0, 0)
-            rotation = 0.0
-        bldg = generate_building(params, offset=offset, rotation=rotation)
-        buildings.append(bldg)
-        hcd = params.get("hcd_data", {}) if isinstance(params.get("hcd_data"), dict) else {}
-        manifest_buildings.append({
-            "param_file": str(f.resolve()),
-            "building_name": params.get("building_name") or params.get("_meta", {}).get("address", f.stem),
-            "collection_name": bldg.name if bldg else None,
-            "hcd_reference_number": hcd.get("hcd_reference_number"),
-            "typology": hcd.get("typology"),
-            "construction_date": hcd.get("construction_date"),
-        })
-
-    # Setup camera and lighting
-    setup_scene(buildings, spacing)
-
-    print(f"\n=== Done: {len(buildings)} buildings generated ===")
-    return {
-        "collections": buildings,
-        "files": files,
-        "buildings": manifest_buildings,
-    }
-
-
-def setup_scene(buildings, spacing):
-    """Set up camera, sun, and render settings."""
-    # Compute scene bounds from all building collections
-    all_xs, all_ys = [], []
-    for col in buildings:
-        if col:
-            for obj in col.objects:
-                if obj.type == 'MESH':
-                    all_xs.append(obj.location.x)
-                    all_ys.append(obj.location.y)
-
-    if all_xs:
-        center_x = (min(all_xs) + max(all_xs)) / 2
-        center_y = (min(all_ys) + max(all_ys)) / 2
-        spread = max(max(all_xs) - min(all_xs), max(all_ys) - min(all_ys))
-        # For neighbourhood-scale (many buildings), keep a wide view
-        # For single/few buildings, frame tightly around the building(s)
-        if spread > 50:
-            extent = spread
-        else:
-            extent = max(spread, 30)
-    else:
-        n = len(buildings)
-        center_x = (n - 1) * spacing / 2
-        center_y = 0
-        extent = n * spacing
-
-    # Sun light
-    bpy.ops.object.light_add(type='SUN', location=(center_x, center_y + 50, 50))
-    sun = bpy.context.active_object
-    sun.name = "Sun"
-    sun.data.energy = 4.0
-    sun.rotation_euler = (math.radians(55), math.radians(10), math.radians(200))
-
-    # Camera — angled perspective view
-    n_buildings = len([c for c in buildings if c])
-    if n_buildings <= 3:
-        # Close-up: eye-level 3/4 view for single/few buildings
-        cam_dist = max(extent * 0.6, 20)
-        cam_height = cam_dist * 0.5
-        cam_x = center_x + cam_dist * 0.4
-        cam_y = center_y - cam_dist * 0.5
-        cam_pitch = math.degrees(math.atan2(cam_height, cam_dist * 0.5))
-        bpy.ops.object.camera_add(location=(cam_x, cam_y, cam_height))
-        cam = bpy.context.active_object
-        cam.name = "Camera"
-        cam.rotation_euler = (math.radians(cam_pitch), 0, math.radians(155))
-    else:
-        # Wide neighbourhood view
-        cam_height = extent * 0.8
-        bpy.ops.object.camera_add(location=(center_x, center_y - extent * 0.4, cam_height))
-        cam = bpy.context.active_object
-        cam.name = "Camera"
-        cam.rotation_euler = (math.radians(60), 0, math.radians(180))
-    bpy.context.scene.camera = cam
-
-    # Render settings
-    scene = bpy.context.scene
-    try:
-        scene.render.engine = 'BLENDER_EEVEE'
-    except:
-        try:
-            scene.render.engine = 'BLENDER_EEVEE_NEXT'
-        except:
-            pass
-
-    scene.render.resolution_x = 1920
-    scene.render.resolution_y = 1080
-
-    # Ground plane
-    ground_size = max(extent * 2, 200)
-    bpy.ops.mesh.primitive_plane_add(size=ground_size, location=(center_x, center_y, 0))
-    ground = bpy.context.active_object
-    ground.name = "ground"
-    ground_mat = get_or_create_material("mat_ground", colour_hex="#505050", roughness=0.95)
-    assign_material(ground, ground_mat)
-
-
-def default_output_paths(params_path, output_blend=None, output_dir=None, render_path=None):
-    """Compute default .blend and optional render output paths."""
-    path = Path(params_path)
-    if output_dir:
-        out_dir = Path(output_dir)
-    elif path.is_file():
-        out_dir = path.parent.parent / "outputs"
-    else:
-        out_dir = path.parent / "outputs"
-
-    if path.is_file():
-        stem = path.stem
-        blend_default = out_dir / f"{stem}.blend"
-        render_default = out_dir / f"{stem}.png"
-    else:
-        blend_default = out_dir / "kensington_pilot.blend"
-        render_default = out_dir / "kensington_pilot.png"
-
-    blend_path = Path(output_blend) if output_blend else blend_default
-    render_out = Path(render_path) if render_path else None
-    return blend_path.resolve(), (render_out.resolve() if render_out else render_default.resolve())
-
-
-def default_manifest_path(blend_path):
-    """Place the run manifest next to the output .blend file."""
-    return blend_path.with_suffix(".manifest.json")
-
-
-def write_manifest(manifest_path, params_path, blend_path, render_path, do_render, run_data):
-    """Write a machine-readable summary of the generation run."""
-    run_data = run_data or {}
-    payload = {
-        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
-        "params_path": str(Path(params_path).resolve()),
-        "blend_path": str(blend_path),
-        "render_path": str(render_path) if do_render else None,
-        "building_count": len(run_data.get("buildings", [])),
-        "buildings": run_data.get("buildings", []),
-    }
-    manifest_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(manifest_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2)
-        f.write("\n")
-    print(f"Manifest: {manifest_path}")
-
-
-def purge_orphans_safe():
-    """Purge Blender orphan data with operator fallback for headless/context issues."""
-    try:
-        bpy.ops.outliner.orphans_purge(do_local_ids=True, do_linked_ids=True, do_recursive=True)
-    except Exception:
-        # Fallback: manually purge orphan meshes and materials
-        for block in list(bpy.data.meshes):
-            if block.users == 0:
-                bpy.data.meshes.remove(block)
-        for block in list(bpy.data.materials):
-            if block.users == 0:
-                bpy.data.materials.remove(block)
-
-
-def resolve_batch_files(params_dir, output_dir=None, do_render=False,
-                        skip_existing=False, match=None, limit=None):
-    """Resolve which batch files would be processed and where outputs would go."""
-    params_dir = Path(params_dir)
-    files = sorted(f for f in params_dir.glob("*.json") if not f.name.startswith("_"))
-    if match:
-        needle = match.lower()
-        files = [f for f in files if needle in f.stem.lower()]
-    if isinstance(limit, int) and limit > 0:
-        files = files[:limit]
-
-    out_dir = Path(output_dir) if output_dir else params_dir.parent / "outputs"
-    plans = []
-    for f in files:
-        # Skip param files marked as skipped (non-buildings, duplicates)
-        try:
-            with open(f, encoding="utf-8") as fh:
-                pdata = json.load(fh)
-            if pdata.get("skipped"):
-                continue
-        except Exception:
-            pass
-        blend_path, render_path = default_output_paths(str(f), output_dir=str(out_dir))
-        manifest_path = default_manifest_path(blend_path)
-        skipped = bool(skip_existing and blend_path.exists())
-        plans.append({
-            "param_file": str(f.resolve()),
-            "blend_path": str(blend_path),
-            "render_path": str(render_path) if do_render else None,
-            "manifest_path": str(manifest_path),
-            "skipped": skipped,
-        })
-    return plans
-
-
-def generate_batch_individual(params_dir, output_dir=None, do_render=False,
-                              skip_existing=False, match=None, limit=None):
-    """Generate one .blend per param file plus a batch manifest."""
-    params_dir = Path(params_dir)
-    plans = resolve_batch_files(
-        params_dir,
-        output_dir=output_dir,
-        do_render=do_render,
-        skip_existing=skip_existing,
-        match=match,
-        limit=limit,
+    nave_w = 13.6
+    nave_d = 31.0
+    nave_eave = 8.0
+    nave_ridge = 13.4
+    nave = _box_center(f"custom_nave_{bldg_id}", nave_w, nave_d, nave_eave, 0, 0, 0)
+    assign_material(nave, brick_mat)
+    all_objs.append(nave)
+    nave_roof = _gable_roof(f"custom_nave_roof_{bldg_id}", nave_w, nave_d, nave_eave, nave_ridge, 0, 0, overhang=0.18)
+    all_objs.append(nave_roof)
+    nave_front_gable = _gable_end_wall(
+        f"custom_nave_front_gable_{bldg_id}",
+        nave_w - 0.25,
+        nave_eave,
+        nave_ridge - 0.15,
+        nave_d / 2 - 0.12,
+        thickness=0.22,
     )
-    if not plans:
-        print(f"[ERROR] No param files found in: {params_dir}")
-        return None
-
-    out_dir = Path(output_dir) if output_dir else params_dir.parent / "outputs"
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    batch_manifest = {
-        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
-        "params_path": str(params_dir.resolve()),
-        "mode": "batch_individual",
-        "building_count": len(plans),
-        "filters": {
-            "match": match,
-            "limit": limit,
-            "skip_existing": skip_existing,
-        },
-        "counts": {
-            "completed": 0,
-            "skipped": 0,
-            "failed": 0,
-        },
-        "buildings": [],
-    }
-
-    print(f"=== Parametric Building Generator ===")
-    print(f"Files: {len(plans)}")
-    print("Mode: batch individual")
-
-    for i, plan in enumerate(plans, start=1):
-        f = Path(plan["param_file"])
-        blend_path = Path(plan["blend_path"])
-        render_path = Path(plan["render_path"]) if plan["render_path"] else None
-        manifest_path = Path(plan["manifest_path"])
-        print(f"\n--- [{i}/{len(plans)}] {f.name} ---")
-
-        if plan["skipped"]:
-            print(f"  [SKIP] Existing output: {blend_path.name}")
-            batch_manifest["counts"]["skipped"] += 1
-            batch_manifest["buildings"].append({
-                "param_file": str(f.resolve()),
-                "blend_path": str(blend_path),
-                "render_path": str(render_path) if do_render and render_path and render_path.exists() else None,
-                "manifest_path": str(manifest_path) if manifest_path.exists() else None,
-                "skipped": True,
-                "status": "skipped",
-            })
-            continue
-
-        try:
-            run_data = load_and_generate(str(f), spacing=15.0)
-
-            purge_orphans_safe()
-            bpy.ops.wm.save_as_mainfile(filepath=str(blend_path))
-            print(f"Saved: {blend_path}")
-
-            rendered = None
-            if do_render:
-                bpy.context.scene.render.filepath = str(render_path)
-                bpy.ops.render.render(write_still=True)
-                rendered = str(render_path)
-                print(f"Rendered: {render_path}")
-
-            write_manifest(manifest_path, str(f), blend_path, render_path, do_render, run_data)
-            batch_manifest["counts"]["completed"] += 1
-            batch_manifest["buildings"].append({
-                "param_file": str(f.resolve()),
-                "blend_path": str(blend_path),
-                "render_path": rendered,
-                "manifest_path": str(manifest_path),
-                "summary": run_data.get("buildings", [{}])[0] if run_data else {},
-                "skipped": False,
-                "status": "completed",
-            })
-        except Exception as e:
-            print(f"  [FAIL] {f.name}: {e}")
-            batch_manifest["counts"]["failed"] += 1
-            batch_manifest["buildings"].append({
-                "param_file": str(f.resolve()),
-                "blend_path": str(blend_path),
-                "render_path": None,
-                "manifest_path": None,
-                "skipped": False,
-                "status": "failed",
-                "error": str(e),
-            })
-
-    batch_manifest_path = out_dir / "batch.manifest.json"
-    with open(batch_manifest_path, "w") as f:
-        json.dump(batch_manifest, f, indent=2)
-        f.write("\n")
-    print(f"\nBatch manifest: {batch_manifest_path}")
-    return batch_manifest
-
-
-# ---------------------------------------------------------------------------
-# Entry point
-# ---------------------------------------------------------------------------
-
-if __name__ == "__main__":
-    import sys
-
-    # Parse args after "--"
-    argv = sys.argv
-    params_path = str(PARAMS_DIR)
-    output_blend = None
-    output_dir = None
-    render_output = None
-    manifest_output = None
-    do_render = False
-    batch_individual = False
-    skip_existing = False
-    match_filter = None
-    limit = None
-    dry_run = False
-
-    if "--" in argv:
-        args = argv[argv.index("--") + 1:]
-
-        def _get_value(idx):
-            nxt = idx + 1
-            if nxt >= len(args):
-                return None
-            value = args[nxt]
-            if isinstance(value, str) and value.startswith("--"):
-                return None
-            return value
-
-        i = 0
-        while i < len(args):
-            arg = args[i]
-            if arg in ("--params", "--single"):
-                value = _get_value(i)
-                if value is None:
-                    print(f"[WARN] Missing value for {arg}; keeping default params path")
-                else:
-                    params_path = value
-                    i += 1
-            elif arg == "--output-blend":
-                value = _get_value(i)
-                if value is None:
-                    print("[WARN] Missing value for --output-blend; ignoring")
-                else:
-                    output_blend = value
-                    i += 1
-            elif arg == "--output-dir":
-                value = _get_value(i)
-                if value is None:
-                    print("[WARN] Missing value for --output-dir; ignoring")
-                else:
-                    output_dir = value
-                    i += 1
-            elif arg == "--render":
-                do_render = True
-            elif arg == "--batch-individual":
-                batch_individual = True
-            elif arg == "--skip-existing":
-                skip_existing = True
-            elif arg == "--dry-run":
-                dry_run = True
-            elif arg == "--match":
-                value = _get_value(i)
-                if value is None:
-                    print("[WARN] Missing value for --match; ignoring")
-                else:
-                    match_filter = value
-                    i += 1
-            elif arg == "--limit":
-                value = _get_value(i)
-                if value is None:
-                    print("[WARN] Missing value for --limit; ignoring")
-                else:
-                    try:
-                        limit = int(value)
-                    except ValueError:
-                        print(f"[WARN] Invalid --limit '{value}'; ignoring")
-                        limit = None
-                    i += 1
-            elif arg == "--render-output":
-                value = _get_value(i)
-                if value is None:
-                    print("[WARN] Missing value for --render-output; ignoring")
-                else:
-                    render_output = value
-                    i += 1
-            elif arg == "--manifest-output":
-                value = _get_value(i)
-                if value is None:
-                    print("[WARN] Missing value for --manifest-output; ignoring")
-                else:
-                    manifest_output = value
-                    i += 1
-            elif isinstance(arg, str) and arg.startswith("--"):
-                print(f"[WARN] Unknown option: {arg}")
-            i += 1
-
-    if dry_run:
-        path = Path(params_path)
-        if path.is_dir() and batch_individual:
-            plans = resolve_batch_files(
-                path,
-                output_dir=output_dir,
-                do_render=do_render,
-                skip_existing=skip_existing,
-                match=match_filter,
-                limit=limit,
-            )
-            print("=== Dry Run ===")
-            print(f"Mode: batch individual")
-            print(f"Files: {len(plans)}")
-            for plan in plans:
-                status = "SKIP" if plan["skipped"] else "RUN"
-                print(f"[{status}] {Path(plan['param_file']).name} -> {Path(plan['blend_path']).name}")
-                if plan["render_path"]:
-                    print(f"       render: {Path(plan['render_path']).name}")
-                print(f"       manifest: {Path(plan['manifest_path']).name}")
-        else:
-            blend_path, render_path = default_output_paths(
-                params_path,
-                output_blend=output_blend,
-                output_dir=output_dir,
-                render_path=render_output,
-            )
-            manifest_path = Path(manifest_output).resolve() if manifest_output else default_manifest_path(blend_path)
-            print("=== Dry Run ===")
-            print(f"Params: {Path(params_path).resolve()}")
-            print(f"Blend: {blend_path}")
-            if do_render:
-                print(f"Render: {render_path}")
-            print(f"Manifest: {manifest_path}")
-        sys.exit(0)
-
-    if Path(params_path).is_dir() and batch_individual:
-        try:
-            generate_batch_individual(
-                params_path,
-                output_dir=output_dir,
-                do_render=do_render,
-                skip_existing=skip_existing,
-                match=match_filter,
-                limit=limit,
-            )
-        except Exception as e:
-            print(f"Batch generation failed: {e}")
-        sys.exit(0)
-
-    # Generate buildings
-    run_data = load_and_generate(params_path, match=match_filter, limit=limit)
-    if run_data is None:
-        print("[ERROR] Generation aborted due to invalid input path.")
-        sys.exit(1)
-
-    blend_path, render_path = default_output_paths(
-        params_path,
-        output_blend=output_blend,
-        output_dir=output_dir,
-        render_path=render_output,
+    all_objs.append(nave_front_gable)
+    nave_rear_gable = _gable_end_wall(
+        f"custom_nave_rear_gable_{bldg_id}",
+        nave_w - 0.25,
+        nave_eave,
+        nave_ridge - 0.15,
+        -nave_d / 2 + 0.12,
+        thickness=0.22,
     )
-    manifest_path = Path(manifest_output).resolve() if manifest_output else default_manifest_path(blend_path)
-    blend_path.parent.mkdir(parents=True, exist_ok=True)
+    all_objs.append(nave_rear_gable)
 
-    # Purge orphan data to reduce file size
-    purge_orphans_safe()
-    try:
-        bpy.ops.wm.save_as_mainfile(filepath=str(blend_path))
-        print(f"Saved: {blend_path}")
-    except Exception as e:
-        print(f"Could not save .blend file: {e}")
-
-    if do_render:
-        render_path.parent.mkdir(parents=True, exist_ok=True)
-        bpy.context.scene.render.filepath = str(render_path)
-        try:
-            bpy.ops.render.render(write_still=True)
-            print(f"Rendered: {render_path}")
-        except Exception as e:
-            print(f"Could not render snapshot: {e}")
-
-    try:
-        write_manifest(manifest_path, params_path, blend_path, render_path, do_render, run_data)
-    except Exception as e:
-        print(f"Could not write manifest: {e}")
+    # F

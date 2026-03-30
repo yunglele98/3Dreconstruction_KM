@@ -14,38 +14,38 @@
     "lat": 43.65363655,
     "street": "Kensington Ave",
     "street_number": 39,
-    "setback_m": 0.0,
+    "setback_m": 0.3,
     "lot_area_sqm": 140.0169954426109,
     "footprint_sqm": 57.1,
     "lot_coverage_pct": 40.8,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Flat",
-  "roof_pitch_deg": 0,
+  "roof_type": "gable",
+  "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "brick",
-  "facade_colour": "varied brick and stone",
+  "facade_material": "mixed",
+  "facade_colour": "left: painted/stucco (white/cream with green); right: painted (white/grey)",
   "windows_per_floor": [
-    2,
+    0,
     2,
     1
   ],
-  "window_type": "Double-hung sash",
+  "window_type": "double_hung",
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "fair",
   "hcd_data": {
     "typology": "House-Form, Row",
     "construction_date": "1904-1913",
-    "architectural_style": "House-Form, Row (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "1904-1913 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-Form, Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1900,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 209,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows",
@@ -64,8 +64,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "39 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "39 KENSINGTON AVE"
     ],
@@ -117,13 +117,111 @@
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "NOTE: storey mismatch DB=3 vs photo=2",
+      "roof_type: 'flat' -> 'Gable'",
+      "roof_pitch_deg: 0 -> 45",
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 250",
+      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [2, 2, 1] -> [0, 2, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#E8E0D0'",
+      "facade_detail.bond_pattern: 'not visible (painted/clad)'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1",
+      "site.setback_m: 0.3"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "add_decorative:ornamental_shingles",
+        "timestamp": "2026-03-29T07:15:58Z"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:31:01.520232+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 1.0,
+        "timestamp": "2026-03-29T07:44:25.658838+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:04.323686+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "glazing filled (1904-1913)",
+          "glazing filled (1904-1913)"
+        ],
+        "timestamp": "2026-03-29T08:03:51.014449+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:37.781443+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:20.420584Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #4F4646",
+        "trim": "#2A2A2A \u2192 #3B3A3A",
+        "mortar": "#B0A898 \u2192 #A59C8B"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "bay_window": {
@@ -141,12 +239,21 @@
       "present": true
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "bargeboard": {
+      "colour_hex": "#2A2A2A",
+      "style": "decorative"
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "colour_hex": "#6A5A4A",
+      "exposure_mm": 150
+    }
   },
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -154,66 +261,74 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 1,
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
-    "bond_pattern": "running bond",
+    "brick_colour_hex": "#E8E0D0",
+    "bond_pattern": "not visible (painted/clad)",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
-    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance.",
+    "trim_colour_hex": "#3B3A3A",
+    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick.",
-    "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window."
+    "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#A59C8B"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300
+    "eave_overhang_mm": 250,
+    "bargeboard_style": "simple",
+    "bargeboard_colour_hex": "#E8E0D0",
+    "gable_window": {
+      "present": true,
+      "type": "rectangular",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "rectangular"
+    }
   },
   "parapet_height_m": 0.6,
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 1.8,
-          "sill_height_m": 1.2,
-          "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1"
-        }
-      ]
+      "windows": [],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.6,
-          "sill_height_m": 2.0,
-          "frame_colour": "#2A2A2A",
+          "type": "1-over-1",
+          "frame_colour": "#E8E0D0",
+          "arch_type": "flat",
+          "width_m": 0.73,
+          "height_m": 1.4,
+          "sill_height_m": 0.8,
           "glazing": "1-over-1"
         }
       ]
     },
     {
-      "floor": "Third floor",
+      "floor": "Gable",
       "windows": [
         {
           "count": 1,
-          "type": "Double-hung sash",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.7,
-          "frame_colour": "#2A2A2A",
+          "type": "rectangular",
+          "frame_colour": "#E8E0D0",
+          "arch_type": "flat",
+          "width_m": 0.52,
+          "height_m": 0.7,
+          "sill_height_m": 0.8,
           "glazing": "1-over-1"
         }
       ]
@@ -229,22 +344,191 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "confidence": 0.7500000000000001,
-  "facade_description": "39 Kensington Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double-hung sash windows, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "confidence": 0.8500000000000002,
+  "facade_description": "39 Kensington Ave is a row-house building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as mixed in a left: painted/stucco (white/cream with green); right: painted (white/grey) palette, laid in not visible (painted/clad) with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick.",
   "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
-    "facade_hex": "#B85A3A",
+    "facade_hex": "#8A8A8A",
     "trim_hex": "#2A2A2A",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#E8E0D0",
+    "trim": "#3B3A3A",
+    "roof": "#4F4646",
+    "accent": "#6ABF40"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  }
+    "status_source": "normalized_fix",
+    "signage_text": "CUTLASS (implied from address assignment)",
+    "awning": {
+      "present": false
+    },
+    "security_grille": true,
+    "width_pct": 70
+  },
+  "photo_observations": {
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012812670_HDR.jpg",
+    "facade_analysis_address": "39 Kensington Ave (CUTLASS)",
+    "storeys_observed": 2,
+    "facade_material_observed": "left: painted/stucco (white/cream with green); right: painted (white/grey)",
+    "condition_observed": "fair; painted over original materials",
+    "windows_observed": {
+      "gable": "1 window per gable peak",
+      "upper_floor": "2 windows per unit; white frames",
+      "ground_floor": "commercial"
+    },
+    "doors_observed": "commercial entrances",
+    "roof_type_observed": "gable; two front-facing gables side by side",
+    "decorative_elements_observed": "bay-and-gable form; white-painted trim; gable ornament",
+    "storefront_description": "left: green-painted lower facade with commercial use; right: white/grey painted with glass storefront; patio area visible with brick paving",
+    "signage_observed": "not clearly legible",
+    "party_walls_observed": "party walls both sides",
+    "colour_palette_observed": {
+      "primary": "white/cream, green",
+      "trim": "white"
+    },
+    "photo_quality": "night, rotated 90 degrees",
+    "db_context": {
+      "ba_building_type": "residential",
+      "ba_stories": 3,
+      "ba_facade_material": "mixed",
+      "height_max_m": 14.7,
+      "height_avg_m": 6.89,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-Form, Row",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "facade_colour_observed": "varied brick and stone",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "n/a"
+    },
+    "photo": "IMG_20260320_012812670_HDR.jpg"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012812670_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.45
+    ],
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#E8E0D0",
+    "brick_bond_observed": "not visible (painted/clad)",
+    "mortar_colour": "not visible",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 1,
+        "type": "plate glass",
+        "frame_colour": "#4A6A40",
+        "arch": "flat",
+        "width_ratio": 0.35,
+        "height_m_est": 2.0,
+        "note": "Large storefront window, green painted cladding surround, bright green/lime green painted panels. Security grille over storefront."
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.14,
+        "height_m_est": 1.4,
+        "note": "White-framed double-hung windows on white/light grey painted facade."
+      },
+      {
+        "floor": "gable",
+        "count": 1,
+        "type": "rectangular",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.1,
+        "height_m_est": 0.7
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 1,
+        "colour": "#4A6A40"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple",
+      "colour_hex": "#E8E0D0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "rectangular"
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 70,
+      "signage_text": "CUTLASS (implied from address assignment)",
+      "awning": {
+        "present": false
+      },
+      "entrance_position": "left",
+      "security_grille": true,
+      "note": "Ground floor has bright lime-green painted horizontal clapboard/panel cladding. Large storefront window with security diamond-pattern metal grille. Small commercial entrance at left."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#E0D8C8",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#6ABF40"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Upper facade painted white/cream, appears to be original brick concealed by paint. Ground floor has green-painted cladding, somewhat worn. Gable intact. Adjacent building to left has matching gable form (typical Kensington pair).",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 1,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 250,
+  "foundation_height_m": 0.3,
+  "wall_thickness_m": 0.3
 }

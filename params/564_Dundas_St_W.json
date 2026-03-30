@@ -19,10 +19,10 @@
     "lot_coverage_pct": 49.1,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "brick",
   "facade_colour": "white painted storefront fascia with brick surround",
   "windows_per_floor": [
     2,
@@ -95,13 +95,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "564 Dundas St W",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "564 DUNDAS ST W"
     ],
@@ -111,14 +109,82 @@
       "new_total_height_m": 9.6,
       "floors": 2.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Dundas St W",
+        "timestamp": "2026-03-29T07:48:48.834033+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:10.069906+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (unknown)",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:56.729132+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:44.885318+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:22.205934Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:47.679555+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:17.077395Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #A9612D",
+        "roof": "#5A5A5A → #565656",
+        "trim": "#E8E0D0 → #252525",
+        "accent": "#1A1A2A → #494131",
+        "mortar": "#B0A898 → #AA9A8B"
+      }
+    ]
   },
   "storefront": {
     "type": "Commercial ground floor",
     "status": "active",
     "width_m": 5.2,
     "height_m": 5.1,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 5.49,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    },
+    "signage": {
+      "text": "Win's Flowers",
+      "type": "fascia",
+      "width_m": 4.0,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "source_photo": "IMG_20260320_011858585_HDR.jpg",
@@ -138,7 +204,8 @@
     "overall_style": "Commercial",
     "confidence": 0.8,
     "agent": "claude-opus-4-6",
-    "timestamp": "2026-03-24T23:30:00-04:00"
+    "timestamp": "2026-03-24T23:30:00-04:00",
+    "photo": "IMG_20260320_011858585_HDR.jpg"
   },
   "door_type": "double",
   "overall_style": "Commercial",
@@ -155,20 +222,25 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A9612D",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#252525",
     "composition": "The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat.",
-    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance."
+    "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#AA9A8B"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -181,12 +253,13 @@
       "windows": [
         {
           "count": 2,
-          "type": "storefront",
+          "type": "storefront glazing",
           "width_m": 0.9,
           "height_m": 2.3,
           "sill_height_m": 1.5,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "plate",
+          "arch_type": "flat"
         }
       ]
     },
@@ -200,22 +273,86 @@
           "height_m": 2.9,
           "sill_height_m": 2.2,
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
   ],
-  "decorative_elements": {},
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "projection_mm": 150,
+      "height_mm": 200,
+      "colour_hex": "#4A3A30"
+    }
+  },
   "street_setback_m": 0.5,
-  "facade_description": "564 Dundas St W presents a street-facing facade within the Kensington Market HCD. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
+  "facade_description": "564 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Built-up tar and gravel",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#E8E0D4",
     "trim_hex": "#3A2A20",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A9612D",
+    "trim": "#252525",
+    "roof": "#565656",
+    "accent": "#494131"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_011858585_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "storefront glazing",
+            "width_m": 0.9,
+            "height_m": 2.3,
+            "sill_height_m": 1.5,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "storefront",
+            "width_m": 0.9,
+            "height_m": 2.9,
+            "sill_height_m": 2.2,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

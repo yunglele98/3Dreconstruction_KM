@@ -1,0 +1,126 @@
+{
+  "task_id": "TASK-20260327-005__GEMINI",
+  "agent": "gemini-1 (executed by claude)",
+  "report_type": "texture_validation",
+  "timestamp": "2026-03-27T17:39:35.623442+00:00",
+  "findings": [
+    {
+      "field": "scripts/apply_textures.py",
+      "status": "exists",
+      "actual": "4911 bytes",
+      "confidence": 1.0,
+      "severity": "info"
+    },
+    {
+      "field": "scripts/apply_textures_v5.py",
+      "status": "exists",
+      "actual": "4190 bytes",
+      "confidence": 1.0,
+      "severity": "info"
+    },
+    {
+      "field": "photo_folder_garage",
+      "status": "found",
+      "actual": [
+        "Garages with graffiti, alley",
+        "Keith Haring mural garage",
+        "Parking garage",
+        "Parking garage exterior",
+        "Portugal Auto Garage"
+      ],
+      "confidence": 0.9,
+      "severity": "info"
+    },
+    {
+      "field": "photo_folder_fence",
+      "status": "no_dedicated_folder",
+      "expected": "folder containing \"fence\"",
+      "actual": "not found",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "No dedicated fence photo folder \u2014 textures may need manual sourcing"
+    },
+    {
+      "field": "photo_folder_bin",
+      "status": "no_dedicated_folder",
+      "expected": "folder containing \"bin\"",
+      "actual": "not found",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "No dedicated bin photo folder \u2014 textures may need manual sourcing"
+    },
+    {
+      "field": "photo_folder_bench",
+      "status": "no_dedicated_folder",
+      "expected": "folder containing \"bench\"",
+      "actual": "not found",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "No dedicated bench photo folder \u2014 textures may need manual sourcing"
+    },
+    {
+      "field": "photo_folder_pole",
+      "status": "no_dedicated_folder",
+      "expected": "folder containing \"pole\"",
+      "actual": "not found",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "No dedicated pole photo folder \u2014 textures may need manual sourcing"
+    },
+    {
+      "field": "photo_folder_patio",
+      "status": "no_dedicated_folder",
+      "expected": "folder containing \"patio\"",
+      "actual": "not found",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "No dedicated patio photo folder \u2014 textures may need manual sourcing"
+    },
+    {
+      "field": "photo_folder_facade",
+      "status": "no_dedicated_folder",
+      "expected": "folder containing \"facade\"",
+      "actual": "not found",
+      "confidence": 0.7,
+      "severity": "medium",
+      "note": "No dedicated facade photo folder \u2014 textures may need manual sourcing"
+    },
+    {
+      "field": "photo_folder_mural",
+      "status": "found",
+      "actual": [
+        "Chinatown Mural Lane",
+        "Keith Haring mural garage",
+        "Nassau St _ Chinatown Mural Lane"
+      ],
+      "confidence": 0.9,
+      "severity": "info"
+    }
+  ],
+  "coverage": {
+    "sorted_folders": 110,
+    "total_photos_in_sorted": 3608,
+    "folder_names": [
+      ".claude",
+      "Alley area",
+      "Alley view",
+      "Alley with caution tape",
+      "Antique_vintage shop, Kensington",
+      "Augusta Ave",
+      "Augusta Ave _ Baldwin St",
+      "Augusta Ave _ College St",
+      "Augusta Ave _ Denison Ave",
+      "Augusta Ave _ Dundas St W",
+      "Augusta Ave _ Nassau St",
+      "Baldwin St",
+      "Baldwin St _ Spadina Ave",
+      "Bathurst St",
+      "Bathurst St _ College St"
+    ],
+    "issues_found": 6,
+    "critical": 0,
+    "high": 0,
+    "medium": 6,
+    "low": 0
+  }
+}

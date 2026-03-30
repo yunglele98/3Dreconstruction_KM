@@ -22,7 +22,7 @@ except ImportError:
     print("[ERROR] psycopg2 not installed. Run: pip install psycopg2-binary")
     sys.exit(1)
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 
 DATA_DIR = Path("C:/Users/liam1/DOWNLOADS/MASTERLIST/DATA")
 
@@ -178,7 +178,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Preview without importing")
     args = parser.parse_args()
 
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
 
     print("=== Field Survey Import ===")
     print(f"Source: {DATA_DIR}")
@@ -201,3 +201,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

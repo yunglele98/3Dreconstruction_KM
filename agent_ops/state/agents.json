@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-03-26T00:00:00Z",
+  "agents": [
+    {
+      "id": "codex-1",
+      "provider": "codex",
+      "status": "available",
+      "capacity": 3,
+      "skills": [
+        "python",
+        "blender",
+        "pipeline",
+        "integration"
+      ]
+    },
+    {
+      "id": "codex-2",
+      "provider": "codex",
+      "status": "available",
+      "capacity": 2,
+      "skills": [
+        "python",
+        "qa",
+        "automation",
+        "render"
+      ]
+    },
+    {
+      "id": "claude-1",
+      "provider": "claude",
+      "status": "available",
+      "capacity": 2,
+      "skills": [
+        "planning",
+        "docs",
+        "risk",
+        "coordination",
+        "decomposition",
+        "review"
+      ]
+    },
+    {
+      "id": "gemini-1",
+      "provider": "gemini",
+      "status": "available",
+      "capacity": 4,
+      "skills": [
+        "research",
+        "gis",
+        "validation",
+        "photo-analysis",
+        "heritage-data",
+        "facade-audit",
+        "cross-reference",
+        "provenance"
+      ]
+    },
+    {
+      "id": "ollama-local-1",
+      "provider": "ollama",
+      "status": "available",
+      "capacity": 6,
+      "skills": [
+        "test",
+        "lint",
+        "batch"
+      ]
+    },
+    {
+      "id": "ollama-local-2",
+      "provider": "ollama",
+      "status": "available",
+      "capacity": 6,
+      "skills": [
+        "render",
+        "artifact-check",
+        "monitoring"
+      ]
+    }
+  ]
+}

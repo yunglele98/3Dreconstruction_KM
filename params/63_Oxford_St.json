@@ -18,10 +18,10 @@
     "lot_coverage_pct": 5.8,
     "lots_sharing_footprint": 2
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
   "windows_per_floor": [
     0
@@ -35,15 +35,15 @@
   "hcd_data": {
     "typology": "Parks/Open Space",
     "construction_date": "",
-    "architectural_style": "Parks/Open Space (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "n/a (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Parks/Open Space (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "n/a (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": null,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
-    "statement_of_contribution": "Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A ",
+    "statement_of_contribution": "Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A ",
     "building_features": [],
-    "heritage_register": "N/A – Open Space",
+    "heritage_register": "N/A \u2013 Open Space",
     "protection_level": 0
   },
   "context": {
@@ -93,14 +93,11 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "63 Oxford St",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "63 OXFORD ST"
     ],
@@ -110,7 +107,76 @@
       "new_total_height_m": 4.8,
       "floors": 1.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.9,
+        "timestamp": "2026-03-29T07:31:01.854319+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.9,
+        "timestamp": "2026-03-29T07:44:26.899391+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:11.739489+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (unknown)",
+          "frame_colour filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:58.201385+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: wood",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:47.177489+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_oxford.py",
+        "street": "Oxford St",
+        "timestamp": "2026-03-29T07:47:05.287824+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:22.753658Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:48.054709+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #4C5252",
+        "trim": "#E8E0D0 \u2192 #38291F",
+        "mortar": "#B0A898 \u2192 #C1B9AB"
+      }
+    ]
   },
   "photo_observations": {
     "facade_colour_observed": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
@@ -168,7 +234,8 @@
         "confidence": 0.4,
         "notes": "Parkette not a building facade; snow-covered open space with fencing confirmed"
       }
-    ]
+    ],
+    "photo": "IMG_20260318_145230301_HDR.jpg"
   },
   "window_arrangement": "irregular",
   "door_type": "single",
@@ -204,11 +271,13 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
+    "trim_colour_hex": "#38291F",
     "composition": "The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology.",
-    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed.",
-    "heritage_summary": "A. Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#C1B9AB"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -217,8 +286,39 @@
       "present": false
     }
   },
-  "windows_detail": [],
-  "doors_detail": [],
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 0,
+          "type": "mixed",
+          "width_m": 0.85,
+          "height_m": 1.3,
+          "glazing": "mixed",
+          "sill_height_m": 0.8,
+          "arch_type": "flat",
+          "frame_colour": "white"
+        }
+      ]
+    }
+  ],
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "colour_hex": "#E8E0D0",
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      },
+      "material": "wood"
+    }
+  ],
   "decorative_elements": {
     "bargeboard": {
       "colour_hex": "#E8E0D0",
@@ -233,16 +333,57 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "63 Oxford St presents a parks/open space facade within the Kensington Market HCD. The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology. The facade reads primarily as mixed in a open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed. Character-defining facade elements include cornice. HCD note: Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A",
-  "heritage_summary": "A. Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+  "facade_description": "63 Oxford St is a parks/open space building. The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology. The facade reads primarily as mixed in a open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
   "roof_material": "Slate shingles",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#38291F",
+    "roof": "#4C5252",
+    "accent": "#E8E0D0"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_145230301_HDR.jpg",
+    "storeys_observed": 1,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 0,
+            "type": "mixed",
+            "width_m": 0.85,
+            "height_m": 1.3,
+            "glazing": "mixed"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 2.0
 }

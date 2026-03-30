@@ -19,13 +19,13 @@
     "lot_coverage_pct": 92.9,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
     "front_gable",
     "shutter"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "yellow-painted storefront with black trim and closed metal shutter",
   "windows_per_floor": [
     1,
@@ -40,13 +40,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form, Row (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 33,
-    "statement_of_contribution": "The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding. The property at 270 Augusta Avenue also retains its cross- gabled roofline, fenestration pattern and double-height projecting bay window. The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. 274 Augusta Avenue has also retained its flat headed window openings at the second storey above a one-storey commercial addition. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding. The property at 270 Augusta Avenue also retains its cross- gabled roofline, fenestration pattern and double-height projecting bay window. The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. 274 Augusta Avenue has also retained its flat headed window openings at the second storey above a one-storey commercial addition. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -100,18 +100,86 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "volumes"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "270 Augusta Ave",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:09",
     "db_address_candidates": [
       "270 AUGUSTA AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.77,
+        "timestamp": "2026-03-29T07:31:00.703029+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.77,
+        "timestamp": "2026-03-29T07:44:23.565264+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:55.994973+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (pre-1889)",
+          "arch_type filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:47.206186+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:21.879455+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_augusta.py",
+        "street": "Augusta Ave",
+        "timestamp": "2026-03-29T07:46:48.959066+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:18.750985Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:45.261745+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:13.848445Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A \u2192 #3C3C3C",
+        "trim": "#3A2A20 \u2192 #281D16",
+        "accent": "#3A2A20 \u2192 #493021",
+        "mortar": "#B0A898 \u2192 #B2A190"
+      }
     ]
   },
   "storefront": {
@@ -119,7 +187,25 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.8,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "signage": {
+      "text": "Paradise Bound",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "yellow-painted storefront with black trim and closed metal shutter",
@@ -170,7 +256,8 @@
     "alterations_visible": "commercialized ground floor beneath residential upper levels",
     "matches_hcd_typology": false,
     "confidence": 0.77,
-    "notes": "Observed in the wider group view with 272 and 274. Batch 009 daytime confirmation. | [batch_009_update] Daytime photo; Paradise Bound appears closed. Confirms previous observations."
+    "notes": "Observed in the wider group view with 272 and 274. Batch 009 daytime confirmation. | [batch_009_update] Daytime photo; Paradise Bound appears closed. Confirms previous observations.",
+    "photo": "IMG_20260318_142206496_HDR.jpg"
   },
   "window_arrangement": "symmetric",
   "door_type": "storefront",
@@ -202,7 +289,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -210,7 +297,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "balcony_detail": {
@@ -223,15 +313,17 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#7A7A7A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#281D16",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_summary": "The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding.",
-    "heritage_expression": "Character-defining facade elements include cornice."
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#B2A190"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -244,12 +336,13 @@
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
+          "type": "storefront glazing",
           "width_m": 0.9,
           "height_m": 2.6,
           "sill_height_m": 1.7,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "plate",
+          "arch_type": "segmental"
         }
       ]
     },
@@ -263,7 +356,8 @@
           "height_m": 4.7,
           "sill_height_m": 3.7,
           "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "glazing": "2-over-2",
+          "arch_type": "segmental"
         }
       ]
     }
@@ -287,16 +381,73 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "270 Augusta Ave presents a row-house facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology. The facade reads primarily as mixed in a yellow-painted storefront with black trim and closed metal shutter palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice. HCD note: The properties have value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding. The property at 270 Augusta Avenue also retains its cross- gabled roofline, fenestration pattern and double-height projecting bay window. The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. 274 Augusta Avenue has also retained its flat headed window openings at the second storey above a one-storey commercial addition. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "270 Augusta Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology. The facade reads primarily as mixed in a yellow-painted storefront with black trim and closed metal shutter palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding.",
   "roof_material": "Built-up tar and gravel",
+  "volumes": [],
   "colour_palette": {
     "facade_hex": "#C8B060",
     "trim_hex": "#3A2A20",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#7A7A7A",
+    "trim": "#281D16",
+    "roof": "#3C3C3C",
+    "accent": "#493021"
   },
-  "volumes": []
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_142206496_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#7A7A7A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "storefront glazing",
+            "width_m": 0.9,
+            "height_m": 2.6,
+            "sill_height_m": 1.7,
+            "frame_colour": "#3A2A20",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 4.7,
+            "sill_height_m": 3.7,
+            "frame_colour": "#3A2A20",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 0.0
 }

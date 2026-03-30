@@ -1,0 +1,34 @@
+# Qdrant custom configuration
+# Mount this into the container at /qdrant/config/production.yaml
+# docker run ... -v ./qdrant_config.yaml:/qdrant/config/production.yaml
+
+service:
+  # Default was 5s — way too low for batch embedding ingestion
+  # or when Qdrant is cold-starting after idle
+  host: 0.0.0.0
+  http_port: 6333
+  grpc_port: 6334
+
+  # Increase timeouts to prevent 408s
+  request_timeout_sec: 60
+  max_request_size_mb: 32
+  enable_cors: true
+
+storage:
+  # Performance tuning for Alienware SSD
+  performance:
+    max_search_threads: 0          # 0 = auto (uses all cores)
+    max_optimization_threads: 2    # background index building
+
+  # WAL config for durability
+  wal:
+    wal_capacity_mb: 64
+    wal_segments_ahead: 2
+
+  # Optimizer — tune for your ~1,241 building embeddings
+  optimizers:
+    default_segment_number: 2
+    max_segment_size_kb: 200000    # 200MB segments
+    memmap_threshold_kb: 50000     # mmap files > 50MB
+    indexing_threshold_kb: 20000   # build index after 20MB
+    flush_interval_sec: 5

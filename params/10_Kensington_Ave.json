@@ -2,8 +2,8 @@
   "building_name": "10 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    2.9,
-    2.3
+    2.76,
+    2.35
   ],
   "total_height_m": 5.11,
   "facade_width_m": 5.2,
@@ -19,13 +19,13 @@
     "lot_coverage_pct": 40.7,
     "lots_sharing_footprint": 3
   },
-  "roof_type": "Cross-gable",
+  "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
-  "facade_colour": "dark green/olive painted storefront, red brick upper",
+  "facade_material": "brick",
+  "facade_colour": "buff/yellow-brown brick; brick",
   "windows_per_floor": [
-    1,
+    0,
     2
   ],
   "window_type": "mixed",
@@ -102,16 +102,72 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "db_match_mode": "raw",
     "db_address_full": "10 Kensington Ave",
-    "db_revision_ts": "2026-03-25T14:51:44",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "10 KENSINGTON AVE"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 250",
+      "floor_heights_m: [2.9, 2.3] -> [2.76, 2.35]",
+      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [1, 2] -> [0, 2, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#C47040'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.2",
+      "doors_detail.steps: 1"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:44.231846+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:08.107196+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "substring",
+      "timestamp": "2026-03-29T08:34:16.120262Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:11.183195Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 → #4F3727",
+        "mortar": "#B0A898 → #AE9F90"
+      }
     ]
   },
   "bay_window": {
@@ -140,7 +196,22 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 4.9,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "URBAN CATWALK WHOLESALE & RETAIL",
+    "awning": {
+      "present": true,
+      "type": "fixed flat",
+      "colour": "#2A5A2A"
+    },
+    "security_grille": true,
+    "width_pct": 85,
+    "signage": {
+      "text": "Urban Catwalk",
+      "type": "projecting",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "agent": "claude-opus-4-6",
@@ -157,11 +228,51 @@
     "door_count": 1,
     "door_type": "storefront",
     "has_storefront_observed": true,
-    "storefront_description": "Urban Catwalk vintage/wholesale clothing shop with dark green facade, display window",
-    "signage_observed": "URBAN CATWALK, WHOLESALE & RETAIL, 416·972·7102",
+    "storefront_description": "'Urban Catwalk' vintage/wholesale retail; large illuminated storefront window with security grille; yellow signage with green lettering; additional sandwich board sign at street level",
+    "signage_observed": "'URBAN CATWALK - WHOLESALE & RETAIL'; phone number visible; additional A-frame sign at street",
     "overall_style": "Victorian",
-    "roof_type_observed": "Gable",
-    "confidence": 0.75
+    "roof_type_observed": "gable; front-facing steep gable; multiple gable peaks visible in row behind",
+    "confidence": 0.75,
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012216600_HDR.jpg",
+    "facade_analysis_address": "10 Kensington Ave (Urban Catwalk)",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_observed": "buff/yellow-brown brick",
+    "brick_colour_hex_observed": "#D4B896",
+    "condition_observed": "fair; original form preserved; commercial modifications at ground level",
+    "windows_observed": {
+      "gable": "1 window in gable peak",
+      "upper_floor": "2 windows visible; appear to be 1-over-1 double-hung with dark frames",
+      "ground_floor": "large commercial storefront windows"
+    },
+    "doors_observed": "commercial entrance at ground floor",
+    "decorative_elements_observed": "bay-and-gable Victorian form; white trim at gable edges",
+    "party_walls_observed": "party wall both sides; concrete/stucco party wall visible at right",
+    "colour_palette_observed": {
+      "primary": "buff/yellow-brown brick",
+      "trim": "white",
+      "accent": "yellow and green (signage)"
+    },
+    "bond_pattern_observed": "running bond",
+    "photo_quality": "night, rotated 90 degrees",
+    "db_context": {
+      "ba_building_type": "mixed_use",
+      "ba_stories": 2,
+      "ba_facade_material": "brick",
+      "height_max_m": 10.49,
+      "height_avg_m": 5.11,
+      "lot_width_ft": 17,
+      "lot_depth_ft": 105,
+      "HCD_TYPOLOGY": "House-form, Semi-detached, Bay-and-Gable (8 Kensington Avenue), Converted House-form, Semi-detached (10",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "facade_colour_observed": "warm red-brown brick upper storey, dark-painted ground floor storefront with black metal framing",
+      "photo_condition": "fair",
+      "ba_condition_rating": 3,
+      "ba_storefront_status": "active"
+    },
+    "photo": "IMG_20260320_012958779_HDR.jpg"
   },
   "door_type": "storefront",
   "overall_style": "Victorian",
@@ -170,7 +281,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.85,
       "height_m": 2.1,
@@ -178,61 +289,79 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "steps": 1,
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "residential",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C47040",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#4F3727",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, decorative brick, original windows.",
-    "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, polychromatic brickwork, round arched attic windows, and flat headed windows at the second storey. The property at 8 Kensington Avenue has also retained its first storey bay window."
+    "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, polychromatic brickwork, round arched attic windows, and flat headed windows at the second storey. The property at 8 Kensington Avenue has also retained its first storey bay window.",
+    "mortar_colour_hex": "#AE9F90"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 250,
     "gable_window": {
-      "present": false
+      "present": true,
+      "type": "pointed-arch",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "pointed-arch"
     },
     "bargeboard": {
       "present": true,
       "style": "decorative",
       "colour_hex": "#3A2A20"
-    }
+    },
+    "bargeboard_style": "simple",
+    "bargeboard_colour_hex": "#C8B8A0"
   },
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.5,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
-        }
-      ]
+      "windows": [],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.5,
-          "sill_height_m": 2.0,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "type": "1-over-1",
+          "frame_colour": "dark/brown",
+          "arch_type": "flat",
+          "width_m": 0.78,
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    },
+    {
+      "floor": "Gable",
+      "windows": [
+        {
+          "count": 1,
+          "type": "fixed",
+          "frame_colour": "dark",
+          "arch_type": "pointed",
+          "width_m": 0.52,
+          "height_m": 0.8,
+          "glazing": "fixed",
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -247,7 +376,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "10 Kensington Ave presents a bay-and-gable domestic facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, original windows. HCD note: Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The property at 10 Kensington Avenue also has value for its modifications to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, polychromatic brickwork, round arched attic windows, and flat headed windows at the second storey. The property at 8 Kensington Avenue has also retained its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+  "facade_description": "10 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, original windows.",
   "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, polychromatic brickwork, round arched attic windows, and flat headed windows at the second storey. The property at 8 Kensington Avenue has also retained its first storey bay window.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -256,7 +385,129 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#C47040",
+    "trim": "#4F3727",
+    "roof": "#5A5A5A",
+    "accent": "#2A7A2A"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012958779_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.5
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#C47040",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Full-width storefront with 'URBAN CATWALK' signage, large plate glass display window with mannequins/clothing visible; security grille partially down"
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "dark/brown",
+        "arch": "flat",
+        "width_ratio": 0.15,
+        "height_m_est": 1.3
+      },
+      {
+        "floor": "gable",
+        "count": 1,
+        "type": "1-over-1",
+        "frame_colour": "dark",
+        "arch": "pointed",
+        "width_ratio": 0.1,
+        "height_m_est": 0.8
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 1,
+        "colour_hex": "#3A3A3A"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 48,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple",
+      "colour_hex": "#C8B8A0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "pointed-arch"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 85,
+      "signage_text": "URBAN CATWALK WHOLESALE & RETAIL",
+      "awning": {
+        "present": true,
+        "type": "fixed flat",
+        "colour": "#2A5A2A"
+      },
+      "entrance_position": "right",
+      "security_grille": true
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#C47040",
+      "trim": "#C8B8A0",
+      "roof": "#5A5A5A",
+      "accent": "#2A7A2A"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Orange-toned brick in reasonable condition. Green fixed awning over storefront with yellow lettering on dark green background. Signage: 'URBAN CATWALK' in large green/yellow letters and separate A-frame sidewalk sign. Security grille on storefront. Purple accent light on right party wall from adjacent building. Second-floor windows dark-framed.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 250,
+      "step_count": 1,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 250,
+  "foundation_height_m": 0.2,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

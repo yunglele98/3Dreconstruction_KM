@@ -20,7 +20,7 @@
     "lot_coverage_pct": 43.4,
     "lots_sharing_footprint": 4
   },
-  "roof_type": "Gable",
+  "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
     "decorative_bargeboard",
@@ -186,7 +186,8 @@
     "alterations_visible": "Some possible replacement windows on lower floors; otherwise well-preserved Victorian semi-detached",
     "matches_hcd_typology": true,
     "confidence": 0.8,
-    "notes": "Photo shows row of 4 houses (19-25 Oxford St). This is the leftmost unit. Night photo with good illumination."
+    "notes": "Photo shows row of 4 houses (19-25 Oxford St). This is the leftmost unit. Night photo with good illumination.",
+    "photo": "IMG_20260315_151635829_HDR.jpg"
   },
   "_meta": {
     "address": "19 Oxford St",
@@ -208,20 +209,70 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "ground_floor_arches",
-      "volumes",
-      "roof_detail"
+      "colour_palette"
     ],
     "db_match_mode": "raw",
     "db_address_full": "19 Oxford St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "19 OXFORD ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_oxford.py",
+        "street": "Oxford St",
+        "timestamp": "2026-03-29T07:46:59.956696+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:49.946115+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)"
+        ],
+        "timestamp": "2026-03-29T08:03:44.996073+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:17.055896+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:17.855560Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:44.530279+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "porch_enriched": "2026-03-29T08:38:22.074102Z",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #CB7952",
+        "roof": "#5A5A5A → #535252",
+        "trim": "#2A2A2A → #242323",
+        "accent": "#3A2A20 → #2F3626",
+        "mortar": "#B0A898 → #C2BAA8"
+      }
     ]
   },
   "window_arrangement": "symmetric",
@@ -247,7 +298,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Single-leaf panelled door",
+      "type": "panelled wood",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.2,
@@ -255,7 +306,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "balcony_detail": {
@@ -269,15 +323,16 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#CB7952",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
+    "trim_colour_hex": "#242323",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, decorative brick, original windows, cornice, quoins.",
-    "heritage_summary": "Constructed as a pair, they retain most of their original building features including their shared roofline, mirrored facades, brick cladding with decorative brickwork and stonework, mix of rounded and flat arch openings, recessed front entrances, and gables with decorative woodwork and recessed balconies. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street."
+    "heritage_summary": "Constructed as a pair, they retain most of their original building features including their shared roofline, mirrored facades, brick cladding with decorative brickwork and stonework, mix of rounded and flat arch openings, recessed front entrances, and gables with decorative woodwork and recessed balconies. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
+    "mortar_colour_hex": "#C2BAA8"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -299,10 +354,11 @@
           "count": 2,
           "type": "mixed",
           "width_m": 0.9,
-          "height_m": 1.8,
+          "height_m": 1.9800000000000002,
           "sill_height_m": 1.2,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -316,7 +372,8 @@
           "height_m": 2.2,
           "sill_height_m": 1.8,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -330,7 +387,8 @@
           "height_m": 1.9,
           "sill_height_m": 1.5,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
@@ -345,22 +403,111 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "19 Oxford St presents a house-form, semi-detached facade within the Kensington Market HCD. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, original windows, cornice, quoins. HCD note: Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District's early residential development from the 1850s to the early 1900s. Constructed as a pair, they retain most of their original building features including their shared roofline, mirrored facades, brick cladding with decorative brickwork and stonework, mix of rounded and flat arch openings, recessed front entrances, and gables with decorative woodwork and recessed balconies. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+  "facade_description": "19 Oxford St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, original windows, cornice, quoins.",
   "heritage_summary": "Constructed as a pair, they retain most of their original building features including their shared roofline, mirrored facades, brick cladding with decorative brickwork and stonework, mix of rounded and flat arch openings, recessed front entrances, and gables with decorative woodwork and recessed balconies. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
   "roof_material": "Grey asphalt shingles",
-  "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#2A2A2A",
-    "roof_hex": "#5A5A5A",
-    "accent_hex": "#2A2A2A",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
-  },
   "ground_floor_arches": {
     "present": true,
     "arch_type": "flat",
     "count": 2,
     "spring_height_ratio": 0.7
   },
-  "volumes": []
+  "volumes": [],
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#CB7952",
+    "trim": "#242323",
+    "roof": "#535252",
+    "accent": "#2F3626"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260315_151635829_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.9800000000000002,
+            "sill_height_m": 1.2,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 2.2,
+            "sill_height_m": 1.8,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.9,
+            "sill_height_m": 1.5,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [
+      "decorative_brickwork",
+      "quoins",
+      "window_hoods",
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "porch_width_m": 2.6,
+  "porch_depth_m": 1.8,
+  "porch_height_m": 3.9,
+  "porch_detail": {
+    "columns": {
+      "count": 2,
+      "type": "tapered_square",
+      "material": "wood"
+    },
+    "railing": {
+      "present": true,
+      "height_m": 0.9,
+      "type": "baluster"
+    },
+    "step_count": 2
+  }
 }

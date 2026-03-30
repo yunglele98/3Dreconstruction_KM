@@ -16,7 +16,7 @@ except Exception:  # noqa: BLE001
     psycopg2 = None
 
 try:
-    from db_config import DB_CONFIG
+    from db_config import DB_CONFIG, get_connection
 except Exception:  # noqa: BLE001
     DB_CONFIG = None
 
@@ -439,6 +439,29 @@ def fix_file(
         changed = True
         stats["has_storefront_normalized"] += 1
 
+    # Urban Realism: Morphological Zone Setback Alignment
+    context = data.get("context", {})
+    zone = normalize_text(context.get("morphological_zone"))
+    current_setback = to_float(data.get("street_setback_m"))
+    
+    # 0m setback for market core/spine
+    if ("market spine" in zone or "market street" in zone) and current_setback != 0.0:
+        data["street_setback_m"] = 0.0
+        changed = True
+        stats["setback_clamped_to_zero_market_core"] += 1
+    elif not current_setback and current_setback != 0.0:
+        # Default fallback for residential if missing
+        data["street_setback_m"] = 2.0
+        changed = True
+        stats["setback_defaulted_residential"] += 1
+
+    # Urban Realism: Storefront/Porch Exclusion
+    if data.get("has_storefront") and data.get("porch", {}).get("present"):
+        data["porch"]["present"] = False
+        data["porch"]["removed_reason"] = "storefront_conflict"
+        changed = True
+        stats["porch_removed_due_to_storefront"] += 1
+
     windows_per_floor = data.get("windows_per_floor")
     if floors_raw is None and isinstance(windows_per_floor, list) and len(windows_per_floor) > 1:
         data["floors"] = len(windows_per_floor)
@@ -590,7 +613,7 @@ def main() -> int:
     site_cache: dict[str, tuple[float | None, float | None, Any, Any] | None] = {}
     if not args.no_db_fill and psycopg2 is not None and DB_CONFIG is not None:
         try:
-            db_conn = psycopg2.connect(**DB_CONFIG)
+            db_conn = get_connection()
         except Exception:
             db_conn = None
 
@@ -617,3 +640,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

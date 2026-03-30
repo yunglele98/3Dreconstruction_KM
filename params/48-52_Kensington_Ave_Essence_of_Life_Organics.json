@@ -2,20 +2,20 @@
   "building_name": "48-52 Kensington Ave (Essence of Life Organics)",
   "floors": 2,
   "floor_heights_m": [
-    4.5,
-    3.5
+    4.32,
+    3.68
   ],
   "total_height_m": 8.0,
   "facade_width_m": 12.0,
   "facade_depth_m": 20.0,
-  "roof_type": "Gable",
+  "roof_type": "flat",
   "roof_pitch_deg": 30,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "red-brown brick upper with white trim and cornice",
+  "facade_colour": "red brick, well-preserved; brick",
   "windows_per_floor": [
     0,
-    3
+    4
   ],
   "window_type": "double_hung",
   "window_width_m": 0.8,
@@ -33,10 +33,35 @@
     ],
     "cornice": "decorative",
     "has_storefront_observed": true,
-    "signage_observed": "Essence Of Life Natural Food Market, Organika",
+    "signage_observed": "'Essence of Life - NATURAL FOOD MARKET'; Organika supplement displays; artistic painted hoarding/barrier",
     "overall_style": "Victorian",
     "confidence": 0.75,
-    "notes": "nighttime; wide facade spanning multiple addresses; well-maintained"
+    "notes": "nighttime; wide facade spanning multiple addresses; well-maintained",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012958779_HDR.jpg",
+    "facade_analysis_address": "48-52 Kensington Ave (Essence of Life Organics)",
+    "storeys_observed": 2,
+    "brick_colour_observed": "red brick, well-preserved",
+    "brick_colour_hex_observed": "#B85A3A",
+    "condition_observed": "good; well-maintained brick facade; clear decorative elements; original parapet ornament preserved",
+    "windows_observed": {
+      "upper_floor": "3 windows visible; white-painted surrounds; appear to be 1-over-1 double-hung",
+      "ground_floor": "large commercial storefront windows"
+    },
+    "doors_observed": "commercial entrance",
+    "roof_type_observed": "flat with decorative parapet; white-painted cornice/parapet trim; circular medallion/roundel in parapet",
+    "decorative_elements_observed": "elaborate white-painted parapet with cornice moulding; circular medallion/roundel decoration in parapet centre; decorative brickwork; white window surrounds; this is a more formal Victorian commercial building (not bay-and-gable)",
+    "storefront_description": "'Essence of Life - Natural Food Market' with black awning and white text; Organika branding visible; large storefront windows; painted barrier/hoarding with landscape mural (reclining figure, trees, sky)",
+    "party_walls_observed": "party wall at right (stucco/concrete)",
+    "colour_palette_observed": {
+      "primary": "#B85A3A (red brick)",
+      "trim": "white (parapet, window surrounds)",
+      "accent": "black (awning), multicolour (mural hoarding)"
+    },
+    "bond_pattern_observed": "running bond; decorative brick details visible (possible header course, medallion)",
+    "photo_quality": "night, upright, good",
+    "photo": "IMG_20260320_012958779_HDR.jpg"
   },
   "_meta": {
     "address": "48-52 Kensington Ave",
@@ -59,7 +84,8 @@
       "roof_material",
       "colour_palette",
       "volumes",
-      "roof_detail"
+      "roof_detail",
+      "window_type_diversity"
     ],
     "reference_photos": [
       "IMG_20260320_012958779_HDR.jpg"
@@ -77,7 +103,62 @@
       "51 KENSINGTON AVE",
       "52 KENSINGTON AVE"
     ],
-    "db_revision_ts": "2026-03-25T14:51:46"
+    "db_revision_ts": "2026-03-26T20:02:09",
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_type: 'gable' -> 'Flat'",
+      "eave_overhang_mm: 100",
+      "floor_heights_m: [4.5, 3.5] -> [4.32, 3.68]",
+      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
+      "windows_per_floor: [0, 3] -> [0, 4]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#9A5038'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.2"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:08.496517+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)"
+        ],
+        "timestamp": "2026-03-29T08:05:42.712952+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:21.677960Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:16.756791Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A → #4D5353",
+        "trim": "#E8E0D0 → #503C2A",
+        "mortar": "#B0A898 → #BEB7AA"
+      }
+    ]
   },
   "cornice": {
     "present": true,
@@ -100,7 +181,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     },
     {
       "id": "door_1",
@@ -112,7 +196,10 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
     }
   ],
   "storefront": {
@@ -128,24 +215,36 @@
     "recessed_entry": false,
     "description": null,
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage_text": "Essence of Life Natural Food Market (dark sign with white serif text and circular logo); ORGANIKA (left display)",
+    "awning": {
+      "present": true,
+      "type": "fixed fabric",
+      "colour": "black and white striped"
+    },
+    "width_pct": 90,
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "building_type": "residential",
   "party_wall_left": false,
   "party_wall_right": false,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#9A5038",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#E8E0D0",
-    "composition": "The street frontage spans roughly 12 metres across 2 storeys beneath a gable, consistent with its commercial typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 2 principal entrances.",
-    "heritage_expression": "Key storefront and facade features include cornice."
+    "trim_colour_hex": "#503C2A",
+    "composition": "The street frontage spans roughly 12 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 4 upper-window bays, using double hung, and 2 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "mortar_colour_hex": "#BEB7AA"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300,
+    "eave_overhang_mm": 100,
     "gable_window": {
       "present": false
     },
@@ -157,16 +256,22 @@
   },
   "windows_detail": [
     {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 3,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.6,
-          "sill_height_m": 1.2,
+          "count": 4,
+          "type": "1-over-1",
           "frame_colour": "#E8E0D0",
-          "glazing": "single pane"
+          "arch_type": "flat",
+          "width_m": 1.44,
+          "height_m": 1.4,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
         }
       ]
     }
@@ -185,7 +290,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "48-52 Kensington Ave (Essence of Life Organics) presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 12 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "facade_description": "48-52 Kensington Ave (Essence of Life Organics) is a commercial building with a street-level storefront. The street frontage spans roughly 12 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays, using double hung, and 2 principal entrances. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",
@@ -198,7 +303,11 @@
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#9A5038",
+    "trim": "#503C2A",
+    "roof": "#4D5353",
+    "accent": "#2A2A2A"
   },
   "volumes": [],
   "site": {
@@ -206,5 +315,131 @@
     "lat": 43.65394668,
     "street": "Kensington Ave",
     "street_number": 46
-  }
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012958779_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#9A5038",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 3,
+        "type": "plate glass",
+        "frame_colour": "#3A3A3A",
+        "arch": "flat",
+        "width_ratio": 0.25,
+        "height_m_est": 2.0,
+        "note": "Wide commercial storefront spanning multiple units. 'Essence of Life Natural Food Market' signage. Left portion has 'Organika' display. Painted mural fence/barrier along sidewalk (figure in landscape). Black-and-white striped awning."
+      },
+      {
+        "floor": "second",
+        "count": 4,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.12,
+        "height_m_est": 1.4,
+        "note": "Four white-framed windows across the facade. Red brick clearly visible at this level. White-painted cornice/fascia band at roofline."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "center-left",
+        "type": "commercial glass",
+        "width_m_est": 1.0,
+        "transom": false,
+        "steps": 0,
+        "colour": "dark"
+      },
+      {
+        "position": "center-right",
+        "type": "commercial glass",
+        "width_m_est": 1.0,
+        "transom": false,
+        "steps": 0,
+        "colour": "dark"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": false
+    },
+    "gable_window": {
+      "present": false
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 90,
+      "signage_text": "Essence of Life Natural Food Market (dark sign with white serif text and circular logo); ORGANIKA (left display)",
+      "awning": {
+        "present": true,
+        "type": "fixed fabric",
+        "colour": "black and white striped"
+      },
+      "entrance_position": "center",
+      "security_grille": false,
+      "note": "Wide commercial building spanning several original lot widths. Prominent black-and-white striped awning. 'Essence of Life' circular logo and text signage. Painted mural on temporary fence/hoarding along sidewalk (figure reclining in landscape). Left section has Organika product display. Red brick upper facade is clean and well-maintained. White cornice band at roofline."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": true,
+        "projection_mm": 150,
+        "height_mm": 250,
+        "colour_hex": "#EEEAE0",
+        "note": "White-painted cornice/fascia band running full width at roofline. Classical proportions with simple moulding profile."
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false,
+      "mural": {
+        "present": true,
+        "location": "sidewalk fence/barrier",
+        "subject": "Painted figure reclining in a landscape with trees and sky, on temporary barrier/hoarding"
+      }
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#9A5038",
+      "trim": "#EEEAE0",
+      "roof": "#5A5A5A",
+      "accent": "#2A2A2A"
+    },
+    "condition_observed": "good",
+    "condition_notes": "Best-maintained building in this stretch. Red brick is clean and joints appear intact at upper level. White cornice band well-preserved. Awning in good condition. Sidewalk has temporary painted barrier/hoarding. Overall a solid, well-kept commercial building.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 100,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 100,
+  "foundation_height_m": 0.2,
+  "parapet_height_m": 0.6,
+  "wall_thickness_m": 0.3,
+  "inferred_setback_m": 0.0
 }

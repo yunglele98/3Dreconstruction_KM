@@ -2,8 +2,8 @@
   "building_name": "194 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    3.9,
-    3.0
+    3.8,
+    3.17
   ],
   "total_height_m": 6.97,
   "facade_width_m": 5.2,
@@ -19,8 +19,8 @@
     "lot_coverage_pct": 87.6,
     "lots_sharing_footprint": 8
   },
-  "roof_type": "Flat",
-  "roof_pitch_deg": 0,
+  "roof_type": "gable",
+  "roof_pitch_deg": 50,
   "roof_features": [
     "chimney",
     "front_gable"
@@ -28,8 +28,8 @@
   "facade_material": "brick",
   "facade_colour": "red brick upper facade with dark trim over a shuttered black storefront",
   "windows_per_floor": [
-    1,
-    1
+    0,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -114,12 +114,68 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "194 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "194 BALDWIN ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_type: 'flat' -> 'Gable'",
+      "roof_pitch_deg: 0 -> 50",
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 200",
+      "floor_heights_m: [3.9, 3.0] -> [3.8, 3.17]",
+      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [1, 1] -> [0, 1, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#A0523C'",
+      "colour_palette enriched from observations",
+      "decorative_elements.stone_voussoirs added",
+      "storefront.awning added",
+      "storefront.security_grille added",
+      "foundation_height_m: 0.2"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:49.691292+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "glazing filled (pre-1889)",
+          "glazing filled (pre-1889)"
+        ],
+        "timestamp": "2026-03-29T08:03:44.753964+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:16.516507+00:00"
+      }
+    ],
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 → #32251C",
+        "mortar": "#B0A898 → #BFAC93"
+      }
     ]
   },
   "decorative_elements": {
@@ -132,6 +188,13 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "stone_voussoirs": {
+      "present": true
+    },
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "decorative"
     }
   },
   "storefront": {
@@ -139,7 +202,14 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.5,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed sign/awning",
+      "colour": "#2A5A2A"
+    },
+    "security_grille": true,
+    "signage_text": "Tom's Place (partially visible)"
   },
   "photo_observations": {
     "facade_colour_observed": "red brick upper facade with dark trim over a shuttered black storefront",
@@ -224,7 +294,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -232,60 +302,80 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A0523C",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
-    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
-    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
+    "trim_colour_hex": "#32251C",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, row typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, cornice.",
-    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings."
+    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings.",
+    "mortar_colour_hex": "#BFAC93"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300
+    "eave_overhang_mm": 200,
+    "bargeboard_style": "simple Victorian",
+    "bargeboard_colour_hex": "#3A3A3A",
+    "gable_window": {
+      "present": true,
+      "type": "small fixed",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "small fixed"
+    }
   },
   "parapet_height_m": 0.6,
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.5,
-          "sill_height_m": 1.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
-        }
-      ]
+      "windows": [],
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 3.8,
-          "sill_height_m": 2.9,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "type": "unknown (obscured by graffiti)",
+          "frame_colour": "unknown",
+          "arch_type": "segmental",
+          "height_m": 1.3,
+          "width_m": 0.85,
+          "sill_height_m": 0.8,
+          "glazing": "2-over-2"
+        }
+      ]
+    },
+    {
+      "floor": "Gable",
+      "windows": [
+        {
+          "count": 1,
+          "type": "small fixed or 1-over-1",
+          "frame_colour": "unknown",
+          "arch_type": "pointed",
+          "height_m": 0.8,
+          "width_m": 0.85,
+          "sill_height_m": 0.8,
+          "glazing": "2-over-2"
         }
       ]
     }
   ],
-  "street_setback_m": 3.0,
-  "facade_description": "Two-storey red brick facade with a flat roof, approximately 5.2 m wide. Part of the pre-1889 converted house-form row at 188-194 Baldwin St. Photo observation shows a closed storefront with heavy black-and-white graffiti on shutter panels at grade, with the upper brick facade and steep front-gabled roof intact above. Two brick chimneys rise along the attached roofline. Asymmetric window arrangement with one opening per floor. The Tom's Place awning is visible adjacent. The shared gables and surviving brickwork above the storefront level remain the clearest heritage elements despite the neglected street-level condition.",
+  "street_setback_m": 0.0,
+  "facade_description": "194 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, cornice.",
   "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
@@ -294,7 +384,138 @@
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A0523C",
+    "trim": "#32251C",
+    "roof": "#4A4A4A",
+    "accent": "#2A5A2A"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_182724309_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.2,
+      1.0,
+      0.5
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#A0523C",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 2,
+        "type": "fixed plate glass behind grille",
+        "frame_colour": "#3A3A3A",
+        "arch": "flat",
+        "width_m_est": 1.5,
+        "height_m_est": 2.0,
+        "note": "Two storefront windows behind corrugated metal/security grilles, heavily graffitied"
+      },
+      {
+        "floor": "second",
+        "count": 1,
+        "type": "unknown (obscured by graffiti)",
+        "frame_colour": "unknown",
+        "arch": "segmental",
+        "width_m_est": 0.9,
+        "height_m_est": 1.3,
+        "note": "At least one window visible behind graffiti, appears to have segmental arch head in brick"
+      },
+      {
+        "floor": "gable",
+        "count": 1,
+        "type": "small fixed or 1-over-1",
+        "frame_colour": "unknown",
+        "arch": "pointed",
+        "width_m_est": 0.6,
+        "height_m_est": 0.8,
+        "note": "Small window in gable peak, partially visible behind graffiti/tags"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "right",
+        "type": "commercial",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#2A5A2A",
+        "note": "Entrance under green Tom's Place awning/signage at right side"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 50,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple Victorian",
+      "colour_hex": "#3A3A3A"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "small fixed"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 80,
+      "signage_text": "Tom's Place (partially visible)",
+      "awning": {
+        "present": true,
+        "type": "fixed sign/awning",
+        "colour": "#2A5A2A"
+      },
+      "entrance_position": "right",
+      "security_grille": true
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": true,
+        "colour_hex": "#A0523C",
+        "note": "Brick voussoirs over second-floor window"
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#A0523C",
+      "trim": "#3A3A3A",
+      "roof": "#4A4A4A",
+      "accent": "#2A5A2A"
+    },
+    "condition_observed": "poor",
+    "condition_notes": "Extremely heavy graffiti covering most of the upper facade brickwork. Ground floor corrugated cladding also heavily tagged. Classic Victorian bay-and-gable form still readable beneath the vandalism. Bargeboard and gable profile intact. Brick appears structurally sound but aesthetically compromised. Finial posts at gable ends still present.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.2,
+      "eave_overhang_mm_est": 200,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 200,
+  "foundation_height_m": 0.2,
+  "wall_thickness_m": 0.3
 }

@@ -26,7 +26,7 @@ except ImportError:
     print("[ERROR] psycopg2 not installed. Run: pip install psycopg2-binary")
     sys.exit(1)
 
-from db_config import DB_CONFIG
+from db_config import DB_CONFIG, get_connection
 
 OUTPUT_DIR = Path(__file__).parent.parent
 
@@ -77,27 +77,78 @@ def fetch_massing_3d(conn):
 
 
 def fetch_roads(conn):
-    """Fetch road centerlines (SRID 2952)."""
+    """Fetch road centerlines in SRID 2952.
+
+    Primary source is `opendata.road_centerlines`. If that table is present
+    but empty in local dev, fall back to `public.road_network` and clip to the
+    study area for manageable output size.
+    """
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-    cur.execute("""
-        SELECT gid,
-               ST_AsGeoJSON(geom) as geojson
-        FROM opendata.road_centerlines
-    """)
-    rows = cur.fetchall()
+    cur.execute("SELECT count(*) AS n FROM opendata.road_centerlines")
+    n = cur.fetchone()["n"]
+    if n and int(n) > 0:
+        cur.execute("""
+            SELECT gid,
+                   ST_AsGeoJSON(geom) as geojson
+            FROM opendata.road_centerlines
+        """)
+        rows = cur.fetchall()
+    else:
+        # `public.road_network.geom` is typically lon/lat with unknown SRID in
+        # this dataset snapshot, so assign 4326 before reprojecting.
+        cur.execute("""
+            WITH sa AS (
+                SELECT ST_Transform(geometry, 4326) AS g
+                FROM opendata.study_area
+                LIMIT 1
+            )
+            SELECT gid,
+                   ST_AsGeoJSON(
+                       ST_Transform(ST_SetSRID(rn.geom, 4326), 2952)
+                   ) AS geojson
+            FROM public.road_network rn, sa
+            WHERE rn.geom IS NOT NULL
+              AND rn.fclass NOT IN ('footway', 'path', 'steps', 'pedestrian')
+              AND ST_Intersects(ST_SetSRID(rn.geom, 4326), sa.g)
+        """)
+        rows = cur.fetchall()
     cur.close()
     return rows
 
 
 def fetch_sidewalks(conn):
-    """Fetch sidewalk geometry (SRID 2952)."""
+    """Fetch sidewalk geometry in SRID 2952.
+
+    Primary source is `opendata.sidewalks`. If empty, infer walkable segments
+    from `public.road_network` classes that map to sidewalks/paths.
+    """
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-    cur.execute("""
-        SELECT gid,
-               ST_AsGeoJSON(geometry) as geojson
-        FROM opendata.sidewalks
-    """)
-    rows = cur.fetchall()
+    cur.execute("SELECT count(*) AS n FROM opendata.sidewalks")
+    n = cur.fetchone()["n"]
+    if n and int(n) > 0:
+        cur.execute("""
+            SELECT gid,
+                   ST_AsGeoJSON(geometry) as geojson
+            FROM opendata.sidewalks
+        """)
+        rows = cur.fetchall()
+    else:
+        cur.execute("""
+            WITH sa AS (
+                SELECT ST_Transform(geometry, 4326) AS g
+                FROM opendata.study_area
+                LIMIT 1
+            )
+            SELECT gid,
+                   ST_AsGeoJSON(
+                       ST_Transform(ST_SetSRID(rn.geom, 4326), 2952)
+                   ) AS geojson
+            FROM public.road_network rn, sa
+            WHERE rn.geom IS NOT NULL
+              AND rn.fclass IN ('footway', 'path', 'steps', 'pedestrian')
+              AND ST_Intersects(ST_SetSRID(rn.geom, 4326), sa.g)
+        """)
+        rows = cur.fetchall()
     cur.close()
     return rows
 
@@ -768,7 +819,7 @@ def main():
     args = parser.parse_args()
 
     include_massing = not args.no_massing
-    conn = psycopg2.connect(**DB_CONFIG)
+    conn = get_connection()
 
     print("=== GIS Scene Export ===")
     print(f"Origin: {ORIGIN_X}, {ORIGIN_Y} (SRID 2952)")
@@ -794,3 +845,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

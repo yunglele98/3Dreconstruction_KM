@@ -2,8 +2,8 @@
   "building_name": "188 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    3.9,
-    3.0
+    3.65,
+    3.32
   ],
   "total_height_m": 6.97,
   "facade_width_m": 5.2,
@@ -19,7 +19,7 @@
     "lot_coverage_pct": 74.5,
     "lots_sharing_footprint": 8
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
     "skylight",
@@ -103,7 +103,8 @@
     "inferences_applied": [
       "roof_material",
       "colour_palette",
-      "volumes"
+      "volumes",
+      "window_type_diversity"
     ],
     "photo": "IMG_20260318_182808371_HDR.jpg",
     "reference_photos": [
@@ -115,12 +116,55 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "188 Baldwin St",
-    "db_revision_ts": "2026-03-25T14:51:45",
+    "db_revision_ts": "2026-03-26T20:02:08",
     "db_address_candidates": [
       "188 BALDWIN ST"
     ],
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "eave_overhang_mm: 50",
+      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.15"
+    ],
+    "patched": true,
+    "patches_applied": [
+      "windows_detail_enrich"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].width_m",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:49.182675+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)"
+        ],
+        "timestamp": "2026-03-29T08:05:15.695704+00:00"
+      }
+    ],
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "storefront_enriched": "2026-03-29T08:38:12.476586Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#3A2A20 → #412C1D",
+        "mortar": "#B0A898 → #958374"
+      }
     ]
   },
   "decorative_elements": {
@@ -140,7 +184,15 @@
     "status": "active",
     "width_m": 4.4,
     "height_m": 5.5,
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "security_grille": true,
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 4.680000000000001,
+      "projection_m": 1.2,
+      "colour_hex": "#E8D040"
+    }
   },
   "photo_observations": {
     "facade_colour_observed": "red brick facade with white fascia over a shuttered storefront opening",
@@ -225,7 +277,7 @@
   "doors_detail": [
     {
       "id": "door_0",
-      "type": "Commercial storefront door",
+      "type": "recessed glass entrance",
       "position": "center",
       "width_m": 0.9,
       "height_m": 2.1,
@@ -233,46 +285,59 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#9C5038",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#412C1D",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 0 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, cornice.",
-    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings."
+    "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings.",
+    "mortar_colour_hex": "#958374"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
-    "eave_overhang_mm": 300
+    "eave_overhang_mm": 50
   },
   "parapet_height_m": 0.6,
   "windows_detail": [
     {
       "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true,
+      "count": 1,
+      "width_m": 0.95,
+      "height_m": 1.2
+    },
+    {
+      "floor": "Second floor",
       "windows": [
         {
-          "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.5,
-          "sill_height_m": 1.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane"
+          "count": 0,
+          "type": "1-over-1 (obscured)",
+          "frame_colour": "unknown",
+          "arch_type": "flat/segmental",
+          "height_m": 1.2,
+          "glazing": "2-over-2",
+          "width_m": 0.85,
+          "sill_height_m": 0.8
         }
       ]
     }
   ],
-  "street_setback_m": 3.0,
-  "facade_description": "188 Baldwin St is a narrow late nineteenth-century row building whose original house-form upper facade survives above a heavily altered commercial ground floor. The second-storey brickwork and shared gabled roofline still read as part of the historic Baldwin Street row, while the lower level has been simplified into a shuttered storefront bay with visible wear, graffiti, and a plain fascia.",
+  "street_setback_m": 0.0,
+  "facade_description": "188 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 0 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, cornice.",
   "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and shared roofline. 188, 190, 192, and 194 Baldwin Street have also retained their shared gables, polychrome brick detailing, and second storey window openings.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
@@ -281,7 +346,124 @@
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
+    "mortar_hex": "#C8C0B0",
+    "facade": "#9C5038",
+    "trim": "#412C1D",
+    "roof": "#4A4A4A",
+    "accent": "#E8D040"
   },
-  "volumes": []
+  "volumes": [],
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_182939846_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.1,
+      1.0
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#9C5038",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 1,
+        "type": "fixed plate glass",
+        "frame_colour": "#3A3A3A",
+        "arch": "flat",
+        "width_m_est": 1.5,
+        "height_m_est": 2.0,
+        "note": "Storefront window behind corrugated cladding"
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1 (obscured)",
+        "frame_colour": "unknown",
+        "arch": "flat/segmental",
+        "width_m_est": 0.8,
+        "height_m_est": 1.2,
+        "note": "Two windows behind graffiti"
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 0,
+        "colour_hex": "#3A3A3A"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up/membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false,
+      "style": null,
+      "colour_hex": null
+    },
+    "gable_window": {
+      "present": false,
+      "type": null
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 80,
+      "signage_text": null,
+      "awning": {
+        "present": false,
+        "type": null,
+        "colour": null
+      },
+      "entrance_position": "left",
+      "security_grille": true
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#9C5038",
+      "trim": "#3A3A3A",
+      "roof": "#4A4A4A",
+      "accent": "#E8D040"
+    },
+    "condition_observed": "poor",
+    "condition_notes": "Same as primary 188 angle. Duplicate view confirms heavy graffiti coverage and corrugated ground floor. Colourful striped awning barely visible at far right edge (likely next building). Packages and waste visible at sidewalk level.",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "porch_depth_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "eave_overhang_mm_est": 50,
+      "step_count": 0,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.15,
+  "wall_thickness_m": 0.3
 }

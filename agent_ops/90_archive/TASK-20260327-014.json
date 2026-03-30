@@ -1,0 +1,22 @@
+{
+  "task_id": "TASK-20260327-014",
+  "title": "Enrich generic door types from storefront/typology context",
+  "description": "68 buildings have only generic residential/commercial door types. Infer specific types: storefront buildings \u2192 recessed glass entrance, Victorian houses \u2192 panelled wood with transom, row houses \u2192 side entrance. Update doors_detail with type, material, transom presence.",
+  "priority": "medium",
+  "estimate_points": 2,
+  "skills": [
+    "python",
+    "pipeline",
+    "heritage-data"
+  ],
+  "write_scope": [
+    "params/"
+  ],
+  "dependencies": [],
+  "owner": "codex-1",
+  "status": "done",
+  "created_at": "2026-03-27T18:57:10Z",
+  "routed_at": "2026-03-27T18:59:20.763380+00:00",
+  "completed_at": "2026-03-28T17:20:05.100386+00:00",
+  "completed_by": "gemini-1"
+}

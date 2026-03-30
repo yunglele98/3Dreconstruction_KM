@@ -11,8 +11,23 @@ Usage:
 """
 
 import json
+import os
 import re
+import tempfile
 from pathlib import Path
+
+
+def _atomic_write_json(filepath, data, ensure_ascii=True):
+    """Write JSON atomically via temp file + rename to prevent corruption."""
+    filepath = Path(filepath)
+    with tempfile.NamedTemporaryFile(
+        mode="w", dir=filepath.parent, delete=False,
+        suffix=".tmp", encoding="utf-8",
+    ) as tmp:
+        json.dump(data, tmp, indent=2, ensure_ascii=ensure_ascii)
+        tmp.write("\n")
+        tmp_path = Path(tmp.name)
+    os.replace(str(tmp_path), str(filepath))
 
 PARAMS_DIR = Path(__file__).parent.parent / "params"
 
@@ -66,8 +81,12 @@ FACADE_HEX_MAP = {
     "cream": "#E8D8B0",
     "orange": "#C87040",
     "grey": "#8A8A8A",
+    "gray": "#8A8A8A",
     "white": "#E8E0D4",
     "painted": "#D8D0C0",
+    "concrete": "#A8A8A8",
+    "metal": "#7A7A7A",
+    "glass": "#A0C0D0",
 }
 
 TRIM_BY_ERA = {
@@ -100,8 +119,14 @@ def infer_facade_hex(material: str, colour: str) -> str:
         return "#B85A3A"
     if "stucco" in combined or "render" in combined:
         return "#D8D0C0"
+    if "concrete" in combined or "cement" in combined:
+        return "#A8A8A8"
     if "stone" in combined:
         return "#C8B898"
+    if "metal" in combined:
+        return "#7A7A7A"
+    if "glass" in combined:
+        return "#A0C0D0"
     return "#B85A3A"
 
 
@@ -264,7 +289,10 @@ def infer_ground_floor_arches(data: dict) -> bool:
     has_arches = False
     arch_type = "segmental"
 
-    if "arched" in window_type or "arched" in door_type:
+    # Use regex to find whole words 'arch' or 'arched'
+    arch_pattern = re.compile(r'\barch(ed)?\b')
+
+    if arch_pattern.search(window_type) or arch_pattern.search(door_type):
         has_arches = True
         if "round" in window_type or "semicircular" in window_type:
             arch_type = "round"
@@ -514,9 +542,7 @@ def infer_file(filepath: Path) -> tuple[bool, str]:
     meta["inferences_applied"] = inferences
     data["_meta"] = meta
 
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-        f.write("\n")
+    _atomic_write_json(filepath, data)
 
     return True, ", ".join(inferences)
 
@@ -531,7 +557,7 @@ def main():
         changed, msg = infer_file(f)
         if changed:
             filled += 1
-            print(f"  [INFERRED] {f.name}: {msg}")
+            print(f"  [INFERRED] {f.name.encode('ascii', 'replace').decode()}: {msg}")
         else:
             skipped += 1
 

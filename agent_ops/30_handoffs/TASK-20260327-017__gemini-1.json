@@ -1,0 +1,2852 @@
+{
+  "task_id": "TASK-20260327-017",
+  "agent": "gemini-1",
+  "timestamp": "2026-03-28T01:50:00Z",
+  "summary": "Validated protected fields for 384 buildings in batches 1-8. Found 284 issues.",
+  "findings": [
+    {
+      "address": "102 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.96,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "10 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "112 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.69,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "118 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.03,
+      "actual": 8.08,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "11 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.92,
+      "actual": 13.11,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "12 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.5,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "132 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.59,
+      "actual": 12.18,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "135 Nassau St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.95,
+      "actual": 14.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "138 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.05,
+      "actual": 9.99,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "138 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.7,
+      "actual": 12.29,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "13 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "140 Denison Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.42,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "141 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.57,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "144-148 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.43,
+      "actual": 8.89,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "144 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.43,
+      "actual": 8.89,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "144 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.7,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "144 Denison Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.44,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "146 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.43,
+      "actual": 8.89,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "147 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.78,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "148 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.43,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "148 Denison Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.09,
+      "actual": 6.5,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "149 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.78,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "14 Hickory St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.04,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "14 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.5,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "150 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.86,
+      "actual": 9.54,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "152 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.86,
+      "actual": 9.54,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "152 Nassau St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.67,
+      "actual": 8.67,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "153A Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.97,
+      "actual": 9.1,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "153B Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.97,
+      "actual": 9.1,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "154 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.86,
+      "actual": 9.54,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "155A Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.18,
+      "actual": 9.33,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "156 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.86,
+      "actual": 9.54,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "15 Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.99,
+      "actual": 7.85,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "15 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "160 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.86,
+      "actual": 9.54,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "161 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.85,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "165-169 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.99,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "165 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.99,
+      "actual": 7.85,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "16 1/2 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.14,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "171 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.6,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "173 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.6,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "175 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "177 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "179 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "17 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "181 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 13.93,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "182 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.04,
+      "actual": 4.5,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "183 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 13.93,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "184 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.04,
+      "actual": 4.5,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "185 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 13.93,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "185 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.5,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "185D Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.5,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "186 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.04,
+      "actual": 4.5,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "187 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 13.93,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "187 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.5,
+      "actual": 11.64,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "189 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 13.93,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "189 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.8,
+      "actual": 11.64,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "189A Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.8,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "18 1/2 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.66,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "191 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "191 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.8,
+      "actual": 11.64,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "191A Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 11.64,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "192-194 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.61,
+      "actual": 13.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "192 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.61,
+      "actual": 13.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "193 1/2 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "193 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 13.93,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "193 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 11.64,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "194 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.61,
+      "actual": 13.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "195 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 11.42,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "197 1/2 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "197 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.76,
+      "actual": 11.42,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "199 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "199 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "199A Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "19 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "1 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.48,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "200A Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.12,
+      "actual": 8.85,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "201 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "203 Baldwin St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "205A Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.16,
+      "actual": 11.42,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "208 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.15,
+      "actual": 4.25,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "209 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.56,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "20 1/2 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.66,
+      "actual": 6.51,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "20 St Andrew St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.85,
+      "actual": 13.17,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "219 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "21 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "221 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 6.51,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "223 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "225 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.68,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "228 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.09,
+      "actual": 6.06,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "237 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.12,
+      "actual": 8.85,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "23 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "241 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.12,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "243 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.12,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "251 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.73,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "252 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.04,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "256C Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.5,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "256D Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.71,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "258 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.71,
+      "actual": 10.78,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "25 Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.15,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "25 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.35,
+      "actual": 13.18,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "25 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "25A Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.15,
+      "actual": 11.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "267 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.94,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "26 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.49,
+      "actual": 11.59,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "271 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.2,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "277 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "277A Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.72,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "27 Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.15,
+      "actual": 11.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "27 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.0,
+      "actual": 6.57,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "27A Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.15,
+      "actual": 11.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "281A Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.72,
+      "actual": 11.46,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "282 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.8,
+      "actual": 12.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "292 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "294-296 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "294 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "295 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.81,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "296 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "297 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.0,
+      "actual": 18.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "298-300 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.43,
+      "actual": 12.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "29 Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.15,
+      "actual": 11.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "29 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.09,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "2 Glen Baillie Pl",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.62,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "2 Nassau St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 6.77,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "300 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.43,
+      "actual": 12.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "301 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.62,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "306 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 18.77,
+      "actual": 26.24,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "309 Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.62,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "310-316 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 20.56,
+      "actual": 28.31,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "310 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 20.56,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "318 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.56,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "321A Augusta Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.24,
+      "actual": 8.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "322 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.56,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "323 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 13.69,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "324 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.56,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "326 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.56,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "328 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.56,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "32 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.53,
+      "actual": 9.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "32A Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.65,
+      "actual": 13.26,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "32C Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.65,
+      "actual": 13.26,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "32E Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.65,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "334 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.45,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "335 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 16.2,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "336 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.45,
+      "actual": 11.77,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "338 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.45,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "33 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.03,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "340 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.45,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "341 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 4.22,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "356 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.85,
+      "actual": 13.91,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "358 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.85,
+      "actual": 13.91,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "35 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.03,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "362 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.8,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "366A Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.8,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "368 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.11,
+      "actual": 8.57,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "370 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 3.88,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "372 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 3.88,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "374 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 3.88,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "37 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.03,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "380 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.7,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "382 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.7,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "384 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.7,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "386 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.7,
+      "actual": 8.37,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "388 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 12.7,
+      "actual": 8.37,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "390 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.46,
+      "actual": 10.22,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "392 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.46,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "394 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.46,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "399 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 36.2,
+      "actual": 18.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "39 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.21,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "3 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.43,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "3 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.48,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "400 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "401 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 14.78,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "402 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "404 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "406 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "408 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "409 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.73,
+      "actual": 12.27,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "410 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "411 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.52,
+      "actual": 5.08,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "412 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 14.4,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "414 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 8.43,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "415 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.52,
+      "actual": 5.08,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "416 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 8.43,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "418 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "419 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.52,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "41 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.21,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "420 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "421 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.52,
+      "actual": 13.13,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "422 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 10.33,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "423 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.52,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "424 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.26,
+      "actual": 11.84,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "426 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 11.16,
+      "actual": 11.84,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "428-430 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.43,
+      "actual": 13.81,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "428 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.43,
+      "actual": 13.81,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "429 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.74,
+      "actual": 12.04,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "429 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.52,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "42 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.19,
+      "actual": 8.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "430 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.43,
+      "actual": 13.81,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "431 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.68,
+      "actual": 13.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "431 College St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.52,
+      "actual": 8.09,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "433 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.68,
+      "actual": 13.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "435B Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.68,
+      "actual": 13.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "439 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.99,
+      "actual": 14.22,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "440 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 3.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "441 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.99,
+      "actual": 14.22,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "442 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "443 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.34,
+      "actual": 10.52,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "444 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "445 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.34,
+      "actual": 10.52,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "446 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "448 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "450 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "452 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "454 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "456 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "457 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.32,
+      "actual": 12.96,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "458 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "459 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.59,
+      "actual": 12.96,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "460 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "461 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.59,
+      "actual": 12.96,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "462 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "463 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.59,
+      "actual": 12.96,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "464 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "465 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.59,
+      "actual": 12.32,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "466 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "467 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.49,
+      "actual": 12.32,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "468 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 9.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "469 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.49,
+      "actual": 9.91,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "471 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.18,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "473 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.47,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "474 Spadina Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 3.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "475 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.94,
+      "actual": 7.58,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "477 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.94,
+      "actual": 7.58,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "479 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.11,
+      "actual": 7.57,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "481 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.11,
+      "actual": 7.57,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "483 Bathurst St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.11,
+      "actual": 7.57,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "4 Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.27,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "4 Hickory St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.12,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "51 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.71,
+      "actual": 7.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "53 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.71,
+      "actual": 7.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "54 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.04,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "55 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.71,
+      "actual": 7.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "56 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.04,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "57 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.71,
+      "actual": 7.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "59 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.71,
+      "actual": 7.72,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "5 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.43,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "5 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.17,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "604 Dundas St W",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.05,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "60 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.04,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "61A Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.83,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "620 Dundas St W",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.22,
+      "actual": 8.95,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "64 Nassau St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 3.3,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "68 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.99,
+      "actual": 10.42,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "69 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.63,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "6 Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.27,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "6 Littlehayes Lane",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.12,
+      "actual": 8.85,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "6 Nassau St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 3.73,
+      "actual": 4.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "71 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.82,
+      "actual": 13.07,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "71A Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.82,
+      "actual": 13.07,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "72 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.68,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "73 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.13,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "73 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.82,
+      "actual": 13.07,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "73A Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.82,
+      "actual": 13.07,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "75 Bellevue Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.63,
+      "actual": 12.51,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "75 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 9.13,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "75 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.82,
+      "actual": 13.07,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "75A Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.82,
+      "actual": 13.07,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "76 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.1,
+      "actual": 12.62,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "77 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.73,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "78 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.08,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "79 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.98,
+      "actual": 11.86,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "7 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.29,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "7 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.17,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "83 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.33,
+      "actual": 13.54,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "85 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.33,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "85 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 5.73,
+      "actual": 7.2,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "86A Nassau St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.83,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "87 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.33,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "8 Casimir St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 8.27,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "8 Hickory St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.12,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "8 Nassau St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.78,
+      "actual": 11.8,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "8 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 10.3,
+      "actual": 6.0,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "9 Oxford St",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 6.29,
+      "actual": 9.6,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    },
+    {
+      "address": "9 Wales Ave",
+      "field": "total_height_m",
+      "status": "modified",
+      "expected": 7.92,
+      "actual": 13.11,
+      "confidence": 1.0,
+      "severity": "high",
+      "note": "Total height deviates significantly from GIS massing height."
+    }
+  ],
+  "coverage": {
+    "buildings_checked": 384,
+    "issues_found": 284
+  }
+}

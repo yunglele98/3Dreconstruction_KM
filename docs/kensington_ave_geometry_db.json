@@ -1,0 +1,3374 @@
+{
+  "building_assessment_fields": [
+    {
+      "ADDRESS_FULL": "2 Kensington Ave",
+      "ba_street_number": 2,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 14.0,
+      "height_avg_m": 7.76,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-Form, Detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "2A Kensington Ave",
+      "ba_street_number": 2,
+      "ba_stories": 2,
+      "ba_building_type": "commercial",
+      "height_max_m": 11.46,
+      "height_avg_m": 7.61,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-Form, Detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "4 Kensington Ave",
+      "ba_street_number": 4,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 16.41,
+      "height_avg_m": 7.96,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Converted House-form, Semi-detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; bay_window",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "6 Kensington Ave",
+      "ba_street_number": 4,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 16.41,
+      "height_avg_m": 7.96,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Converted House-form, Semi-detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; bay_window",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "10 Kensington Ave",
+      "ba_street_number": 8,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.49,
+      "height_avg_m": 5.11,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Semi-detached, Bay-and-Gable (8 Kensington Avenue), Converted House-form, Semi-detached (10",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; decorative_brick; original_windows",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "8 Kensington Ave",
+      "ba_street_number": 8,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.49,
+      "height_avg_m": 5.11,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Semi-detached, Bay-and-Gable (8 Kensington Avenue), Converted House-form, Semi-detached (10",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; decorative_brick; original_windows",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "10A Kensington Ave",
+      "ba_street_number": 10,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.49,
+      "height_avg_m": 5.11,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "cornice; decorative_brick",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "11 Kensington Ave",
+      "ba_street_number": 11,
+      "ba_stories": 3,
+      "ba_building_type": "residential",
+      "height_max_m": 13.34,
+      "height_avg_m": 8.82,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Semi-detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "13 Kensington Ave",
+      "ba_street_number": 11,
+      "ba_stories": 3,
+      "ba_building_type": "residential",
+      "height_max_m": 20.71,
+      "height_avg_m": 8.85,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Semi-detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "12A Kensington Ave",
+      "ba_street_number": 12,
+      "ba_stories": 3,
+      "ba_building_type": "residential",
+      "height_max_m": 17.23,
+      "height_avg_m": 9.76,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "stone",
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "original_windows; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "12 Kensington Ave",
+      "ba_street_number": 12,
+      "ba_stories": 2,
+      "ba_building_type": "residential",
+      "height_max_m": 15.15,
+      "height_avg_m": 7.94,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Converted House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "14 Kensington Ave",
+      "ba_street_number": 12,
+      "ba_stories": 2,
+      "ba_building_type": "residential",
+      "height_max_m": 15.15,
+      "height_avg_m": 7.94,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Converted House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "19 Kensington Ave",
+      "ba_street_number": 15,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 20.71,
+      "height_avg_m": 8.85,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "17 Kensington Ave",
+      "ba_street_number": 15,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 20.71,
+      "height_avg_m": 8.85,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "15 Kensington Ave",
+      "ba_street_number": 15,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 20.71,
+      "height_avg_m": 8.85,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "18 Kensington Ave",
+      "ba_street_number": 16,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 15.37,
+      "height_avg_m": 8.62,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "16 Kensington Ave",
+      "ba_street_number": 16,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 15.37,
+      "height_avg_m": 8.62,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "20 Kensington Ave",
+      "ba_street_number": 20,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.38,
+      "height_avg_m": 6.27,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Semi-Detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; original_windows; cornice",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "22 Kensington Ave",
+      "ba_street_number": 20,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.38,
+      "height_avg_m": 6.27,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Semi-Detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; original_windows; cornice",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "23 Kensington Ave",
+      "ba_street_number": 21,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 19.89,
+      "height_avg_m": 7.36,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Converted House-form (25 Kensington Ave); House-form (21-23 Kensington Ave), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows; cornice",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "25 Kensington Ave",
+      "ba_street_number": 21,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 19.89,
+      "height_avg_m": 7.36,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Converted House-form (25 Kensington Ave); House-form (21-23 Kensington Ave), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows; cornice",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "21 Kensington Ave",
+      "ba_street_number": 21,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 19.89,
+      "height_avg_m": 7.36,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Converted House-form (25 Kensington Ave); House-form (21-23 Kensington Ave), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows; cornice",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "24 Kensington Ave",
+      "ba_street_number": 24,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.1,
+      "height_avg_m": 9.93,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-Form, Semi-Detached, Bay-and-Gable (26 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "26 Kensington Ave",
+      "ba_street_number": 24,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.1,
+      "height_avg_m": 9.93,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-Form, Semi-Detached, Bay-and-Gable (26 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "33 Kensington Ave",
+      "ba_street_number": 27,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.5,
+      "height_avg_m": 5.35,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "31 Kensington Ave",
+      "ba_street_number": 27,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.5,
+      "height_avg_m": 5.35,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "29 Kensington Ave",
+      "ba_street_number": 27,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.5,
+      "height_avg_m": 5.35,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "27 Kensington Ave",
+      "ba_street_number": 27,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.5,
+      "height_avg_m": 5.35,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "28 Kensington Ave",
+      "ba_street_number": 28,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.3,
+      "height_avg_m": 9.39,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "wood_siding",
+      "HCD_TYPOLOGY": "Converted House-form, Detached, Bay-and-Gable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "original_windows; bay_window",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "36 Kensington Ave",
+      "ba_street_number": 30,
+      "ba_stories": 2,
+      "ba_building_type": "residential",
+      "height_max_m": 11.94,
+      "height_avg_m": 7.91,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "34 Kensington Ave",
+      "ba_street_number": 30,
+      "ba_stories": 2,
+      "ba_building_type": "residential",
+      "height_max_m": 11.94,
+      "height_avg_m": 7.91,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "32 Kensington Ave",
+      "ba_street_number": 30,
+      "ba_stories": 2,
+      "ba_building_type": "residential",
+      "height_max_m": 11.94,
+      "height_avg_m": 7.91,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "30 Kensington Ave",
+      "ba_street_number": 30,
+      "ba_stories": 2,
+      "ba_building_type": "residential",
+      "height_max_m": 12.3,
+      "height_avg_m": 9.39,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "37 Kensington Ave",
+      "ba_street_number": 35,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 14.7,
+      "height_avg_m": 6.89,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (35 Kensington Avenue), House-form (37 Kensington Avenue), Semi-detached, Bay-andGable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; decorative_brick",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "35 Kensington Ave",
+      "ba_street_number": 35,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 14.7,
+      "height_avg_m": 6.89,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (35 Kensington Avenue), House-form (37 Kensington Avenue), Semi-detached, Bay-andGable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; decorative_brick",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "40 Kensington Ave",
+      "ba_street_number": 38,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.13,
+      "height_avg_m": 7.46,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Commercial (38 Kensington Avenue), Converted House-form (40 Kensington Avenue), Semi-detached, Bay-andGable (40 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; decorative_brick",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "38 Kensington Ave",
+      "ba_street_number": 38,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.13,
+      "height_avg_m": 7.46,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Commercial (38 Kensington Avenue), Converted House-form (40 Kensington Avenue), Semi-detached, Bay-andGable (40 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "bay_window; decorative_brick",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "43 Kensington Ave",
+      "ba_street_number": 39,
+      "ba_stories": 3,
+      "ba_building_type": "residential",
+      "height_max_m": 7.63,
+      "height_avg_m": 3.91,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "39 Kensington Ave",
+      "ba_street_number": 39,
+      "ba_stories": 3,
+      "ba_building_type": "residential",
+      "height_max_m": 14.7,
+      "height_avg_m": 6.89,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "45 Kensington Ave",
+      "ba_street_number": 39,
+      "ba_stories": 3,
+      "ba_building_type": "residential",
+      "height_max_m": 13.27,
+      "height_avg_m": 7.69,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "41 Kensington Ave",
+      "ba_street_number": 39,
+      "ba_stories": 3,
+      "ba_building_type": "residential",
+      "height_max_m": 14.7,
+      "height_avg_m": 6.89,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "House-Form, Row",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "ba_storefront_status": "n/a",
+      "ba_heritage_features": "bay_window; original_windows; decorative_brick",
+      "ba_heritage_count": 3
+    },
+    {
+      "ADDRESS_FULL": "42 Kensington Ave",
+      "ba_street_number": 42,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.15,
+      "height_avg_m": 7.25,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Commercial (42 Kensington Avenue), Converted House-form (44 Kensington Avenue), Semi-detached, Bay-andGable (44 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; bay_window",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "44 Kensington Ave",
+      "ba_street_number": 42,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.15,
+      "height_avg_m": 7.25,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "mixed",
+      "HCD_TYPOLOGY": "Commercial (42 Kensington Avenue), Converted House-form (44 Kensington Avenue), Semi-detached, Bay-andGable (44 Kensington Avenue)",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; bay_window",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "46 Kensington Ave",
+      "ba_street_number": 46,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.15,
+      "height_avg_m": 7.25,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "50 Kensington Ave",
+      "ba_street_number": 46,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.23,
+      "height_avg_m": 5.8,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "52 Kensington Ave",
+      "ba_street_number": 46,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.23,
+      "height_avg_m": 5.8,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "48 Kensington Ave",
+      "ba_street_number": 46,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 12.23,
+      "height_avg_m": 5.8,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "49 Kensington Ave",
+      "ba_street_number": 47,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 13.27,
+      "height_avg_m": 7.69,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form (47 Kensington Avenue), Converted House-form (49 Kensington Avenue), Semi-detached, Bay-andGable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "47 Kensington Ave",
+      "ba_street_number": 47,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 13.27,
+      "height_avg_m": 7.69,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form (47 Kensington Avenue), Converted House-form (49 Kensington Avenue), Semi-detached, Bay-andGable",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; original_windows",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "51 Kensington Ave",
+      "ba_street_number": 51,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 11.15,
+      "height_avg_m": 4.24,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "stucco",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "cornice; bay_window",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "53 Kensington Ave",
+      "ba_street_number": 53,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 8.28,
+      "height_avg_m": 3.15,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "stucco",
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "54 Kensington Ave",
+      "ba_street_number": 54,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 17.74,
+      "height_avg_m": 9.46,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Commercial",
+      "HCD_CONSTRUCTION_DATE": "1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "55 Kensington Ave",
+      "ba_street_number": 55,
+      "ba_stories": 1,
+      "ba_building_type": "commercial",
+      "height_max_m": 8.28,
+      "height_avg_m": 3.15,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "other",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "60 Kensington Ave",
+      "ba_street_number": 60,
+      "ba_stories": 2,
+      "ba_building_type": "commercial",
+      "height_max_m": 10.72,
+      "height_avg_m": 4.36,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "61 12 Kensington Ave",
+      "ba_street_number": 61,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": null,
+      "height_avg_m": null,
+      "lot_width_ft": null,
+      "lot_depth_ft": null,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "64 Kensington Ave",
+      "ba_street_number": 64,
+      "ba_stories": 2,
+      "ba_building_type": "commercial",
+      "height_max_m": 10.72,
+      "height_avg_m": 4.36,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "66 Kensington Ave",
+      "ba_street_number": 66,
+      "ba_stories": 2,
+      "ba_building_type": "commercial",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Commercial",
+      "HCD_CONSTRUCTION_DATE": "1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick",
+      "ba_heritage_count": 1
+    },
+    {
+      "ADDRESS_FULL": "70 Kensington Ave",
+      "ba_street_number": 70,
+      "ba_stories": 2,
+      "ba_building_type": "commercial",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "71 Kensington Ave",
+      "ba_street_number": 71,
+      "ba_stories": 2,
+      "ba_building_type": "commercial",
+      "height_max_m": 16.71,
+      "height_avg_m": 8.44,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "Converted House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "cornice; decorative_brick",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "72 Kensington Ave",
+      "ba_street_number": 72,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "73 Kensington Ave",
+      "ba_street_number": 73,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 16.71,
+      "height_avg_m": 8.44,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "other",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "74 Kensington Ave",
+      "ba_street_number": 74,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "stone",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "75 Kensington Ave",
+      "ba_street_number": 75,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 16.71,
+      "height_avg_m": 8.44,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "other",
+      "HCD_TYPOLOGY": "House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "76 Kensington Ave",
+      "ba_street_number": 76,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "stone",
+      "HCD_TYPOLOGY": "House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": "decorative_brick; cornice",
+      "ba_heritage_count": 2
+    },
+    {
+      "ADDRESS_FULL": "77 Kensington Ave",
+      "ba_street_number": 77,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 16.71,
+      "height_avg_m": 8.44,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "concrete",
+      "HCD_TYPOLOGY": "House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "78 Kensington Ave",
+      "ba_street_number": 78,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "79 Kensington Ave",
+      "ba_street_number": 79,
+      "ba_stories": 3,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 16.71,
+      "height_avg_m": 8.44,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "concrete",
+      "HCD_TYPOLOGY": "House-form, Semi-detached",
+      "HCD_CONSTRUCTION_DATE": "1904-1913",
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "80 Kensington Ave",
+      "ba_street_number": 80,
+      "ba_stories": 2,
+      "ba_building_type": "mixed_use",
+      "height_max_m": 10.57,
+      "height_avg_m": 6.5,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": "brick",
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": "active",
+      "ba_heritage_features": null,
+      "ba_heritage_count": 0
+    },
+    {
+      "ADDRESS_FULL": "65 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 10.77,
+      "height_avg_m": 5.71,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "Converted House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "61 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 10.77,
+      "height_avg_m": 5.71,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "Converted House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "67 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 10.77,
+      "height_avg_m": 5.71,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "Converted House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "63 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 10.77,
+      "height_avg_m": 5.71,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "Converted House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "9 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 13.34,
+      "height_avg_m": 8.82,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "House-form (3-5 Kensington Avenue), Converted House-form (7-9 Kensington Avenue and 560 Dundas Street West),",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "56D Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 17.74,
+      "height_avg_m": 9.46,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "Commercial",
+      "HCD_CONSTRUCTION_DATE": "1914-1930",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "56B Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 17.74,
+      "height_avg_m": 9.46,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "61 1/2 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 10.77,
+      "height_avg_m": 5.71,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "3 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 13.34,
+      "height_avg_m": 8.82,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "House-form (3-5 Kensington Avenue), Converted House-form (7-9 Kensington Avenue and 560 Dundas Street West),",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "58 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 17.74,
+      "height_avg_m": 9.46,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": null,
+      "HCD_CONSTRUCTION_DATE": null,
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "69 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 10.77,
+      "height_avg_m": 5.71,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "Converted House-form, Row",
+      "HCD_CONSTRUCTION_DATE": "Pre-1889, 1914-1930",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "7 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 13.34,
+      "height_avg_m": 8.82,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "House-form (3-5 Kensington Avenue), Converted House-form (7-9 Kensington Avenue and 560 Dundas Street West),",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    },
+    {
+      "ADDRESS_FULL": "5 Kensington Ave",
+      "ba_street_number": null,
+      "ba_stories": null,
+      "ba_building_type": null,
+      "height_max_m": 13.34,
+      "height_avg_m": 8.82,
+      "lot_width_ft": 17.0,
+      "lot_depth_ft": 105.0,
+      "ba_facade_material": null,
+      "HCD_TYPOLOGY": "House-form (3-5 Kensington Avenue), Converted House-form (7-9 Kensington Avenue and 560 Dundas Street West),",
+      "HCD_CONSTRUCTION_DATE": "1890-1903",
+      "ba_storefront_status": null,
+      "ba_heritage_features": null,
+      "ba_heritage_count": null
+    }
+  ],
+  "massing_3d_heights": [
+    {
+      "ADDRESS_FULL": "2A Kensington Ave",
+      "height_min_m": 0.452,
+      "height_max_m": 11.462,
+      "height_avg_m": 7.607,
+      "massing_area_sqm": 366.8382376078632
+    },
+    {
+      "ADDRESS_FULL": "2 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 14.005,
+      "height_avg_m": 7.7627,
+      "massing_area_sqm": 132.92593603989414
+    },
+    {
+      "ADDRESS_FULL": "4 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 16.41,
+      "height_avg_m": 7.9609,
+      "massing_area_sqm": 231.7377233860735
+    },
+    {
+      "ADDRESS_FULL": "6 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 16.41,
+      "height_avg_m": 7.9609,
+      "massing_area_sqm": 231.7377233860735
+    },
+    {
+      "ADDRESS_FULL": "8 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.491,
+      "height_avg_m": 5.1105,
+      "massing_area_sqm": 250.5516314064494
+    },
+    {
+      "ADDRESS_FULL": "10 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.491,
+      "height_avg_m": 5.1105,
+      "massing_area_sqm": 250.5516314064494
+    },
+    {
+      "ADDRESS_FULL": "13 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.338,
+      "height_avg_m": 8.8229,
+      "massing_area_sqm": 647.2464114731365
+    },
+    {
+      "ADDRESS_FULL": "11 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.338,
+      "height_avg_m": 8.8229,
+      "massing_area_sqm": 647.2464114731365
+    },
+    {
+      "ADDRESS_FULL": "14 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 15.151,
+      "height_avg_m": 7.9442,
+      "massing_area_sqm": 334.8464308545417
+    },
+    {
+      "ADDRESS_FULL": "12 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 15.151,
+      "height_avg_m": 7.9442,
+      "massing_area_sqm": 334.8464308545417
+    },
+    {
+      "ADDRESS_FULL": "17 Kensington Ave",
+      "height_min_m": 2.3927,
+      "height_max_m": 20.712,
+      "height_avg_m": 8.851,
+      "massing_area_sqm": 291.3148030224141
+    },
+    {
+      "ADDRESS_FULL": "19 Kensington Ave",
+      "height_min_m": 2.3927,
+      "height_max_m": 20.712,
+      "height_avg_m": 8.851,
+      "massing_area_sqm": 291.3148030224141
+    },
+    {
+      "ADDRESS_FULL": "15 Kensington Ave",
+      "height_min_m": 2.3927,
+      "height_max_m": 20.712,
+      "height_avg_m": 8.851,
+      "massing_area_sqm": 291.3148030224141
+    },
+    {
+      "ADDRESS_FULL": "18 Kensington Ave",
+      "height_min_m": 0.2506,
+      "height_max_m": 15.368,
+      "height_avg_m": 8.6183,
+      "massing_area_sqm": 169.65371703058005
+    },
+    {
+      "ADDRESS_FULL": "16 Kensington Ave",
+      "height_min_m": 0.2506,
+      "height_max_m": 15.368,
+      "height_avg_m": 8.6183,
+      "massing_area_sqm": 169.65371703058005
+    },
+    {
+      "ADDRESS_FULL": "20 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.376,
+      "height_avg_m": 6.2652,
+      "massing_area_sqm": 190.492203442413
+    },
+    {
+      "ADDRESS_FULL": "22 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.376,
+      "height_avg_m": 6.2652,
+      "massing_area_sqm": 190.492203442413
+    },
+    {
+      "ADDRESS_FULL": "25 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 19.894,
+      "height_avg_m": 7.3555,
+      "massing_area_sqm": 373.3183275006176
+    },
+    {
+      "ADDRESS_FULL": "23 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 19.894,
+      "height_avg_m": 7.3555,
+      "massing_area_sqm": 373.3183275006176
+    },
+    {
+      "ADDRESS_FULL": "21 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 19.894,
+      "height_avg_m": 7.3555,
+      "massing_area_sqm": 373.3183275006176
+    },
+    {
+      "ADDRESS_FULL": "26 Kensington Ave",
+      "height_min_m": 3.483,
+      "height_max_m": 12.099,
+      "height_avg_m": 9.9277,
+      "massing_area_sqm": 143.4629791834373
+    },
+    {
+      "ADDRESS_FULL": "24 Kensington Ave",
+      "height_min_m": 3.483,
+      "height_max_m": 12.099,
+      "height_avg_m": 9.9277,
+      "massing_area_sqm": 143.4629791834373
+    },
+    {
+      "ADDRESS_FULL": "27 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.503,
+      "height_avg_m": 5.3493,
+      "massing_area_sqm": 585.4165544222442
+    },
+    {
+      "ADDRESS_FULL": "29 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.503,
+      "height_avg_m": 5.3493,
+      "massing_area_sqm": 585.4165544222442
+    },
+    {
+      "ADDRESS_FULL": "33 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.503,
+      "height_avg_m": 5.3493,
+      "massing_area_sqm": 585.4165544222442
+    },
+    {
+      "ADDRESS_FULL": "31 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.503,
+      "height_avg_m": 5.3493,
+      "massing_area_sqm": 585.4165544222442
+    },
+    {
+      "ADDRESS_FULL": "28 Kensington Ave",
+      "height_min_m": 1.9721,
+      "height_max_m": 12.295,
+      "height_avg_m": 9.3923,
+      "massing_area_sqm": 90.78619326921131
+    },
+    {
+      "ADDRESS_FULL": "34 Kensington Ave",
+      "height_min_m": 1.4631,
+      "height_max_m": 11.938,
+      "height_avg_m": 7.9117,
+      "massing_area_sqm": 377.6690162642792
+    },
+    {
+      "ADDRESS_FULL": "36 Kensington Ave",
+      "height_min_m": 1.4631,
+      "height_max_m": 11.938,
+      "height_avg_m": 7.9117,
+      "massing_area_sqm": 377.6690162642792
+    },
+    {
+      "ADDRESS_FULL": "30 Kensington Ave",
+      "height_min_m": 1.4631,
+      "height_max_m": 11.938,
+      "height_avg_m": 7.9117,
+      "massing_area_sqm": 377.6690162642792
+    },
+    {
+      "ADDRESS_FULL": "32 Kensington Ave",
+      "height_min_m": 1.4631,
+      "height_max_m": 11.938,
+      "height_avg_m": 7.9117,
+      "massing_area_sqm": 377.6690162642792
+    },
+    {
+      "ADDRESS_FULL": "37 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 14.701,
+      "height_avg_m": 6.886,
+      "massing_area_sqm": 228.5398969867864
+    },
+    {
+      "ADDRESS_FULL": "35 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 14.701,
+      "height_avg_m": 6.886,
+      "massing_area_sqm": 228.5398969867864
+    },
+    {
+      "ADDRESS_FULL": "40 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.13,
+      "height_avg_m": 7.4598,
+      "massing_area_sqm": 228.88709307761334
+    },
+    {
+      "ADDRESS_FULL": "38 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 11.13,
+      "height_avg_m": 7.4598,
+      "massing_area_sqm": 228.88709307761334
+    },
+    {
+      "ADDRESS_FULL": "41 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "45 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "43 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "39 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "42 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 12.153,
+      "height_avg_m": 7.2454,
+      "massing_area_sqm": 168.43103333302062
+    },
+    {
+      "ADDRESS_FULL": "44 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 12.153,
+      "height_avg_m": 7.2454,
+      "massing_area_sqm": 168.43103333302062
+    },
+    {
+      "ADDRESS_FULL": "48 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 12.228,
+      "height_avg_m": 5.7954,
+      "massing_area_sqm": 500.6422233799903
+    },
+    {
+      "ADDRESS_FULL": "46 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 12.228,
+      "height_avg_m": 5.7954,
+      "massing_area_sqm": 500.6422233799903
+    },
+    {
+      "ADDRESS_FULL": "50 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 12.228,
+      "height_avg_m": 5.7954,
+      "massing_area_sqm": 500.6422233799903
+    },
+    {
+      "ADDRESS_FULL": "52 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 12.228,
+      "height_avg_m": 5.7954,
+      "massing_area_sqm": 500.6422233799903
+    },
+    {
+      "ADDRESS_FULL": "49 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "47 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "51 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "53 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "54 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 17.745,
+      "height_avg_m": 9.4582,
+      "massing_area_sqm": 750.1316228209923
+    },
+    {
+      "ADDRESS_FULL": "55 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.266,
+      "height_avg_m": 7.687,
+      "massing_area_sqm": 739.7224697245564
+    },
+    {
+      "ADDRESS_FULL": "60 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 17.745,
+      "height_avg_m": 9.4582,
+      "massing_area_sqm": 750.1316228209923
+    },
+    {
+      "ADDRESS_FULL": "64 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "66 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "70 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "71 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 16.712,
+      "height_avg_m": 8.4418,
+      "massing_area_sqm": 875.3905414850324
+    },
+    {
+      "ADDRESS_FULL": "72 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "73 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 16.712,
+      "height_avg_m": 8.4418,
+      "massing_area_sqm": 875.3905414850324
+    },
+    {
+      "ADDRESS_FULL": "74 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "75 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 16.712,
+      "height_avg_m": 8.4418,
+      "massing_area_sqm": 875.3905414850324
+    },
+    {
+      "ADDRESS_FULL": "76 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "77 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 16.712,
+      "height_avg_m": 8.4418,
+      "massing_area_sqm": 875.3905414850324
+    },
+    {
+      "ADDRESS_FULL": "78 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "79 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 16.712,
+      "height_avg_m": 8.4418,
+      "massing_area_sqm": 875.3905414850324
+    },
+    {
+      "ADDRESS_FULL": "80 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.572,
+      "height_avg_m": 6.4989,
+      "massing_area_sqm": 1167.036371861912
+    },
+    {
+      "ADDRESS_FULL": "7 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.338,
+      "height_avg_m": 8.8229,
+      "massing_area_sqm": 647.2464114731365
+    },
+    {
+      "ADDRESS_FULL": "67 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.772,
+      "height_avg_m": 5.7062,
+      "massing_area_sqm": 759.6828934063235
+    },
+    {
+      "ADDRESS_FULL": "58 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 17.745,
+      "height_avg_m": 9.4582,
+      "massing_area_sqm": 750.1316228209923
+    },
+    {
+      "ADDRESS_FULL": "69 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.772,
+      "height_avg_m": 5.7062,
+      "massing_area_sqm": 759.6828934063235
+    },
+    {
+      "ADDRESS_FULL": "61 1/2 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.772,
+      "height_avg_m": 5.7062,
+      "massing_area_sqm": 759.6828934063235
+    },
+    {
+      "ADDRESS_FULL": "56B Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 17.745,
+      "height_avg_m": 9.4582,
+      "massing_area_sqm": 750.1316228209923
+    },
+    {
+      "ADDRESS_FULL": "56D Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 17.745,
+      "height_avg_m": 9.4582,
+      "massing_area_sqm": 750.1316228209923
+    },
+    {
+      "ADDRESS_FULL": "9 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.338,
+      "height_avg_m": 8.8229,
+      "massing_area_sqm": 647.2464114731365
+    },
+    {
+      "ADDRESS_FULL": "63 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.772,
+      "height_avg_m": 5.7062,
+      "massing_area_sqm": 759.6828934063235
+    },
+    {
+      "ADDRESS_FULL": "65 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.772,
+      "height_avg_m": 5.7062,
+      "massing_area_sqm": 759.6828934063235
+    },
+    {
+      "ADDRESS_FULL": "5 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.338,
+      "height_avg_m": 8.8229,
+      "massing_area_sqm": 647.2464114731365
+    },
+    {
+      "ADDRESS_FULL": "61 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 10.772,
+      "height_avg_m": 5.7062,
+      "massing_area_sqm": 759.6828934063235
+    },
+    {
+      "ADDRESS_FULL": "3 Kensington Ave",
+      "height_min_m": 0.0,
+      "height_max_m": 13.338,
+      "height_avg_m": 8.8229,
+      "massing_area_sqm": 647.2464114731365
+    }
+  ],
+  "footprint_dimensions": [
+    {
+      "ADDRESS_FULL": "2 Kensington Ave",
+      "env_xmin": 312833.0315900997,
+      "env_ymin": 4834765.629753238,
+      "env_xmax": 312857.1561996885,
+      "env_ymax": 4834778.562919062,
+      "footprint_sqm": 132.74359361162016,
+      "approx_side_m": 11.521440604873167
+    },
+    {
+      "ADDRESS_FULL": "2A Kensington Ave",
+      "env_xmin": 312847.8201965672,
+      "env_ymin": 4834739.913849873,
+      "env_xmax": 312867.773716521,
+      "env_ymax": 4834772.800823339,
+      "footprint_sqm": 367.0791548108617,
+      "approx_side_m": 19.159309873032008
+    },
+    {
+      "ADDRESS_FULL": "4 Kensington Ave",
+      "env_xmin": 312832.13192064135,
+      "env_ymin": 4834772.921412802,
+      "env_xmax": 312857.1726857875,
+      "env_ymax": 4834791.303612629,
+      "footprint_sqm": 231.74075889974046,
+      "approx_side_m": 15.223033827057616
+    },
+    {
+      "ADDRESS_FULL": "6 Kensington Ave",
+      "env_xmin": 312832.13192064135,
+      "env_ymin": 4834772.921412802,
+      "env_xmax": 312857.1726857875,
+      "env_ymax": 4834791.303612629,
+      "footprint_sqm": 231.74075889974046,
+      "approx_side_m": 15.223033827057616
+    },
+    {
+      "ADDRESS_FULL": "10 Kensington Ave",
+      "env_xmin": 312821.3365206649,
+      "env_ymin": 4834782.9351639915,
+      "env_xmax": 312853.6555996012,
+      "env_ymax": 4834802.151712756,
+      "footprint_sqm": 250.63980904598372,
+      "approx_side_m": 15.831607910947762
+    },
+    {
+      "ADDRESS_FULL": "8 Kensington Ave",
+      "env_xmin": 312821.3365206649,
+      "env_ymin": 4834782.9351639915,
+      "env_xmax": 312853.6555996012,
+      "env_ymax": 4834802.151712756,
+      "footprint_sqm": 250.63980904598372,
+      "approx_side_m": 15.831607910947762
+    },
+    {
+      "ADDRESS_FULL": "10A Kensington Ave",
+      "env_xmin": 312815.877506082,
+      "env_ymin": 4834784.091842851,
+      "env_xmax": 312823.49463965406,
+      "env_ymax": 4834792.106841341,
+      "footprint_sqm": 38.854285673441446,
+      "approx_side_m": 6.233320597678371
+    },
+    {
+      "ADDRESS_FULL": "11 Kensington Ave",
+      "env_xmin": 312875.28004906117,
+      "env_ymin": 4834747.8470558105,
+      "env_xmax": 312909.52910795144,
+      "env_ymax": 4834791.458392311,
+      "footprint_sqm": 664.3207116800072,
+      "approx_side_m": 25.774419715679482
+    },
+    {
+      "ADDRESS_FULL": "13 Kensington Ave",
+      "env_xmin": 312875.28004906117,
+      "env_ymin": 4834747.8470558105,
+      "env_xmax": 312909.52910795144,
+      "env_ymax": 4834791.458392311,
+      "footprint_sqm": 664.3207116800072,
+      "approx_side_m": 25.774419715679482
+    },
+    {
+      "ADDRESS_FULL": "12 Kensington Ave",
+      "env_xmin": 312817.4394412139,
+      "env_ymin": 4834795.866667854,
+      "env_xmax": 312849.5254080491,
+      "env_ymax": 4834815.189836654,
+      "footprint_sqm": 334.8518936301263,
+      "approx_side_m": 18.298958812733755
+    },
+    {
+      "ADDRESS_FULL": "14 Kensington Ave",
+      "env_xmin": 312817.4394412139,
+      "env_ymin": 4834795.866667854,
+      "env_xmax": 312849.5254080491,
+      "env_ymax": 4834815.189836654,
+      "footprint_sqm": 334.8518936301263,
+      "approx_side_m": 18.298958812733755
+    },
+    {
+      "ADDRESS_FULL": "15 Kensington Ave",
+      "env_xmin": 312873.1424038219,
+      "env_ymin": 4834788.322462907,
+      "env_xmax": 312897.79687900475,
+      "env_ymax": 4834809.343298892,
+      "footprint_sqm": 291.31499215951607,
+      "approx_side_m": 17.067952195841073
+    },
+    {
+      "ADDRESS_FULL": "19 Kensington Ave",
+      "env_xmin": 312873.1424038219,
+      "env_ymin": 4834788.322462907,
+      "env_xmax": 312897.79687900475,
+      "env_ymax": 4834809.343298892,
+      "footprint_sqm": 291.31499215951607,
+      "approx_side_m": 17.067952195841073
+    },
+    {
+      "ADDRESS_FULL": "17 Kensington Ave",
+      "env_xmin": 312873.1424038219,
+      "env_ymin": 4834788.322462907,
+      "env_xmax": 312897.79687900475,
+      "env_ymax": 4834809.343298892,
+      "footprint_sqm": 291.31499215951607,
+      "approx_side_m": 17.067952195841073
+    },
+    {
+      "ADDRESS_FULL": "16 Kensington Ave",
+      "env_xmin": 312816.8240543707,
+      "env_ymin": 4834807.308900631,
+      "env_xmax": 312844.78429331555,
+      "env_ymax": 4834822.743790314,
+      "footprint_sqm": 169.80164791702788,
+      "approx_side_m": 13.030796135195573
+    },
+    {
+      "ADDRESS_FULL": "18 Kensington Ave",
+      "env_xmin": 312816.8240543707,
+      "env_ymin": 4834807.308900631,
+      "env_xmax": 312844.78429331555,
+      "env_ymax": 4834822.743790314,
+      "footprint_sqm": 169.80164791702788,
+      "approx_side_m": 13.030796135195573
+    },
+    {
+      "ADDRESS_FULL": "22 Kensington Ave",
+      "env_xmin": 312819.56037250155,
+      "env_ymin": 4834817.00794412,
+      "env_xmax": 312845.2999277924,
+      "env_ymax": 4834832.317259123,
+      "footprint_sqm": 190.40645717683407,
+      "approx_side_m": 13.7987846268008
+    },
+    {
+      "ADDRESS_FULL": "20 Kensington Ave",
+      "env_xmin": 312819.56037250155,
+      "env_ymin": 4834817.00794412,
+      "env_xmax": 312845.2999277924,
+      "env_ymax": 4834832.317259123,
+      "footprint_sqm": 190.40645717683407,
+      "approx_side_m": 13.7987846268008
+    },
+    {
+      "ADDRESS_FULL": "25 Kensington Ave",
+      "env_xmin": 312866.7584052898,
+      "env_ymin": 4834803.062960689,
+      "env_xmax": 312900.4670291885,
+      "env_ymax": 4834827.242853703,
+      "footprint_sqm": 373.338757388196,
+      "approx_side_m": 19.321976021830583
+    },
+    {
+      "ADDRESS_FULL": "21 Kensington Ave",
+      "env_xmin": 312866.7584052898,
+      "env_ymin": 4834803.062960689,
+      "env_xmax": 312900.4670291885,
+      "env_ymax": 4834827.242853703,
+      "footprint_sqm": 373.338757388196,
+      "approx_side_m": 19.321976021830583
+    },
+    {
+      "ADDRESS_FULL": "23 Kensington Ave",
+      "env_xmin": 312866.7584052898,
+      "env_ymin": 4834803.062960689,
+      "env_xmax": 312900.4670291885,
+      "env_ymax": 4834827.242853703,
+      "footprint_sqm": 373.338757388196,
+      "approx_side_m": 19.321976021830583
+    },
+    {
+      "ADDRESS_FULL": "26 Kensington Ave",
+      "env_xmin": 312821.70840413077,
+      "env_ymin": 4834830.4967727745,
+      "env_xmax": 312840.1318054772,
+      "env_ymax": 4834845.062922732,
+      "footprint_sqm": 143.46295435325135,
+      "approx_side_m": 11.977602195483508
+    },
+    {
+      "ADDRESS_FULL": "24 Kensington Ave",
+      "env_xmin": 312821.70840413077,
+      "env_ymin": 4834830.4967727745,
+      "env_xmax": 312840.1318054772,
+      "env_ymax": 4834845.062922732,
+      "footprint_sqm": 143.46295435325135,
+      "approx_side_m": 11.977602195483508
+    },
+    {
+      "ADDRESS_FULL": "29 Kensington Ave",
+      "env_xmin": 312859.6600146419,
+      "env_ymin": 4834820.650737498,
+      "env_xmax": 312896.6616844138,
+      "env_ymax": 4834850.66182932,
+      "footprint_sqm": 586.0326106746011,
+      "approx_side_m": 24.20811043172517
+    },
+    {
+      "ADDRESS_FULL": "27 Kensington Ave",
+      "env_xmin": 312859.6600146419,
+      "env_ymin": 4834820.650737498,
+      "env_xmax": 312896.6616844138,
+      "env_ymax": 4834850.66182932,
+      "footprint_sqm": 586.0326106746011,
+      "approx_side_m": 24.20811043172517
+    },
+    {
+      "ADDRESS_FULL": "31 Kensington Ave",
+      "env_xmin": 312859.6600146419,
+      "env_ymin": 4834820.650737498,
+      "env_xmax": 312896.6616844138,
+      "env_ymax": 4834850.66182932,
+      "footprint_sqm": 586.0326106746011,
+      "approx_side_m": 24.20811043172517
+    },
+    {
+      "ADDRESS_FULL": "33 Kensington Ave",
+      "env_xmin": 312859.6600146419,
+      "env_ymin": 4834820.650737498,
+      "env_xmax": 312896.6616844138,
+      "env_ymax": 4834850.66182932,
+      "footprint_sqm": 586.0326106746011,
+      "approx_side_m": 24.20811043172517
+    },
+    {
+      "ADDRESS_FULL": "28 Kensington Ave",
+      "env_xmin": 312820.2502364104,
+      "env_ymin": 4834840.889832613,
+      "env_xmax": 312837.5243779719,
+      "env_ymax": 4834851.167641265,
+      "footprint_sqm": 91.10389704372763,
+      "approx_side_m": 9.54483614546251
+    },
+    {
+      "ADDRESS_FULL": "32 Kensington Ave",
+      "env_xmin": 312808.7970901778,
+      "env_ymin": 4834845.801871471,
+      "env_xmax": 312836.5419957719,
+      "env_ymax": 4834870.0046772575,
+      "footprint_sqm": 377.62595796952985,
+      "approx_side_m": 19.432600391340575
+    },
+    {
+      "ADDRESS_FULL": "36 Kensington Ave",
+      "env_xmin": 312808.7970901778,
+      "env_ymin": 4834845.801871471,
+      "env_xmax": 312836.5419957719,
+      "env_ymax": 4834870.0046772575,
+      "footprint_sqm": 377.62595796952985,
+      "approx_side_m": 19.432600391340575
+    },
+    {
+      "ADDRESS_FULL": "30 Kensington Ave",
+      "env_xmin": 312808.7970901778,
+      "env_ymin": 4834845.801871471,
+      "env_xmax": 312836.5419957719,
+      "env_ymax": 4834870.0046772575,
+      "footprint_sqm": 377.62595796952985,
+      "approx_side_m": 19.432600391340575
+    },
+    {
+      "ADDRESS_FULL": "34 Kensington Ave",
+      "env_xmin": 312808.7970901778,
+      "env_ymin": 4834845.801871471,
+      "env_xmax": 312836.5419957719,
+      "env_ymax": 4834870.0046772575,
+      "footprint_sqm": 377.62595796952985,
+      "approx_side_m": 19.432600391340575
+    },
+    {
+      "ADDRESS_FULL": "35 Kensington Ave",
+      "env_xmin": 312856.60225225927,
+      "env_ymin": 4834843.238831351,
+      "env_xmax": 312889.8242573054,
+      "env_ymax": 4834861.752944602,
+      "footprint_sqm": 228.5341189693389,
+      "approx_side_m": 15.117344970904742
+    },
+    {
+      "ADDRESS_FULL": "37 Kensington Ave",
+      "env_xmin": 312856.60225225927,
+      "env_ymin": 4834843.238831351,
+      "env_xmax": 312889.8242573054,
+      "env_ymax": 4834861.752944602,
+      "footprint_sqm": 228.5341189693389,
+      "approx_side_m": 15.117344970904742
+    },
+    {
+      "ADDRESS_FULL": "40 Kensington Ave",
+      "env_xmin": 312800.67029620067,
+      "env_ymin": 4834862.520846296,
+      "env_xmax": 312829.8632234831,
+      "env_ymax": 4834878.964825696,
+      "footprint_sqm": 228.8799318656456,
+      "approx_side_m": 15.12877826744928
+    },
+    {
+      "ADDRESS_FULL": "38 Kensington Ave",
+      "env_xmin": 312800.67029620067,
+      "env_ymin": 4834862.520846296,
+      "env_xmax": 312829.8632234831,
+      "env_ymax": 4834878.964825696,
+      "footprint_sqm": 228.8799318656456,
+      "approx_side_m": 15.12877826744928
+    },
+    {
+      "ADDRESS_FULL": "43 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "41 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "39 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "41 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "45 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "39 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "45 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "43 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "42 Kensington Ave",
+      "env_xmin": 312806.63641744707,
+      "env_ymin": 4834874.075698723,
+      "env_xmax": 312827.25941370055,
+      "env_ymax": 4834887.8268640395,
+      "footprint_sqm": 168.42824890304155,
+      "approx_side_m": 12.977990942478021
+    },
+    {
+      "ADDRESS_FULL": "44 Kensington Ave",
+      "env_xmin": 312806.63641744707,
+      "env_ymin": 4834874.075698723,
+      "env_xmax": 312827.25941370055,
+      "env_ymax": 4834887.8268640395,
+      "footprint_sqm": 168.42824890304155,
+      "approx_side_m": 12.977990942478021
+    },
+    {
+      "ADDRESS_FULL": "48 Kensington Ave",
+      "env_xmin": 312791.621809774,
+      "env_ymin": 4834882.843952461,
+      "env_xmax": 312824.46196543233,
+      "env_ymax": 4834907.206164917,
+      "footprint_sqm": 500.6201080874914,
+      "approx_side_m": 22.37454151681083
+    },
+    {
+      "ADDRESS_FULL": "50 Kensington Ave",
+      "env_xmin": 312791.621809774,
+      "env_ymin": 4834882.843952461,
+      "env_xmax": 312824.46196543233,
+      "env_ymax": 4834907.206164917,
+      "footprint_sqm": 500.6201080874914,
+      "approx_side_m": 22.37454151681083
+    },
+    {
+      "ADDRESS_FULL": "52 Kensington Ave",
+      "env_xmin": 312791.621809774,
+      "env_ymin": 4834882.843952461,
+      "env_xmax": 312824.46196543233,
+      "env_ymax": 4834907.206164917,
+      "footprint_sqm": 500.6201080874914,
+      "approx_side_m": 22.37454151681083
+    },
+    {
+      "ADDRESS_FULL": "46 Kensington Ave",
+      "env_xmin": 312791.621809774,
+      "env_ymin": 4834882.843952461,
+      "env_xmax": 312824.46196543233,
+      "env_ymax": 4834907.206164917,
+      "footprint_sqm": 500.6201080874914,
+      "approx_side_m": 22.37454151681083
+    },
+    {
+      "ADDRESS_FULL": "47 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "49 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "49 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "47 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "51 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "51 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "53 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "53 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "54 Kensington Ave",
+      "env_xmin": 312769.90112375235,
+      "env_ymin": 4834904.730208643,
+      "env_xmax": 312823.85265474656,
+      "env_ymax": 4834936.927878743,
+      "footprint_sqm": 945.9404689403059,
+      "approx_side_m": 30.75614522238289
+    },
+    {
+      "ADDRESS_FULL": "54 Kensington Ave",
+      "env_xmin": 312770.4380833335,
+      "env_ymin": 4834899.023185515,
+      "env_xmax": 312823.6404150696,
+      "env_ymax": 4834936.855928909,
+      "footprint_sqm": 750.1171358297984,
+      "approx_side_m": 27.388266389638435
+    },
+    {
+      "ADDRESS_FULL": "55 Kensington Ave",
+      "env_xmin": 312837.44246168085,
+      "env_ymin": 4834851.880256203,
+      "env_xmax": 312882.8092212179,
+      "env_ymax": 4834908.341804015,
+      "footprint_sqm": 1252.852653961552,
+      "approx_side_m": 35.395658688058795
+    },
+    {
+      "ADDRESS_FULL": "55 Kensington Ave",
+      "env_xmin": 312843.4583677206,
+      "env_ymin": 4834853.30594678,
+      "env_xmax": 312879.46069039166,
+      "env_ymax": 4834903.066669675,
+      "footprint_sqm": 739.7181654466516,
+      "approx_side_m": 27.197760302029497
+    },
+    {
+      "ADDRESS_FULL": "60 Kensington Ave",
+      "env_xmin": 312770.4380833335,
+      "env_ymin": 4834899.023185515,
+      "env_xmax": 312823.6404150696,
+      "env_ymax": 4834936.855928909,
+      "footprint_sqm": 750.1171358297984,
+      "approx_side_m": 27.388266389638435
+    },
+    {
+      "ADDRESS_FULL": "60 Kensington Ave",
+      "env_xmin": 312769.90112375235,
+      "env_ymin": 4834904.730208643,
+      "env_xmax": 312823.85265474656,
+      "env_ymax": 4834936.927878743,
+      "footprint_sqm": 945.9404689403059,
+      "approx_side_m": 30.75614522238289
+    },
+    {
+      "ADDRESS_FULL": "64 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "66 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "70 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "71 Kensington Ave",
+      "env_xmin": 312816.1045076913,
+      "env_ymin": 4834948.9837028645,
+      "env_xmax": 312857.2481599165,
+      "env_ymax": 4834990.656916409,
+      "footprint_sqm": 875.3944319284768,
+      "approx_side_m": 29.58706528076884
+    },
+    {
+      "ADDRESS_FULL": "71 Kensington Ave",
+      "env_xmin": 312824.26781573455,
+      "env_ymin": 4834949.751813063,
+      "env_xmax": 312836.89441363787,
+      "env_ymax": 4834962.576473115,
+      "footprint_sqm": 98.69517480748617,
+      "approx_side_m": 9.93454451937713
+    },
+    {
+      "ADDRESS_FULL": "72 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "73 Kensington Ave",
+      "env_xmin": 312824.26781573455,
+      "env_ymin": 4834949.751813063,
+      "env_xmax": 312836.89441363787,
+      "env_ymax": 4834962.576473115,
+      "footprint_sqm": 98.69517480748617,
+      "approx_side_m": 9.93454451937713
+    },
+    {
+      "ADDRESS_FULL": "73 Kensington Ave",
+      "env_xmin": 312816.1045076913,
+      "env_ymin": 4834948.9837028645,
+      "env_xmax": 312857.2481599165,
+      "env_ymax": 4834990.656916409,
+      "footprint_sqm": 875.3944319284768,
+      "approx_side_m": 29.58706528076884
+    },
+    {
+      "ADDRESS_FULL": "74 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "75 Kensington Ave",
+      "env_xmin": 312816.1045076913,
+      "env_ymin": 4834948.9837028645,
+      "env_xmax": 312857.2481599165,
+      "env_ymax": 4834990.656916409,
+      "footprint_sqm": 875.3944319284768,
+      "approx_side_m": 29.58706528076884
+    },
+    {
+      "ADDRESS_FULL": "75 Kensington Ave",
+      "env_xmin": 312816.83973143593,
+      "env_ymin": 4834959.385687992,
+      "env_xmax": 312838.0115283619,
+      "env_ymax": 4834984.108259939,
+      "footprint_sqm": 316.5201766281198,
+      "approx_side_m": 17.791013929175588
+    },
+    {
+      "ADDRESS_FULL": "76 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "77 Kensington Ave",
+      "env_xmin": 312816.1045076913,
+      "env_ymin": 4834948.9837028645,
+      "env_xmax": 312857.2481599165,
+      "env_ymax": 4834990.656916409,
+      "footprint_sqm": 875.3944319284768,
+      "approx_side_m": 29.58706528076884
+    },
+    {
+      "ADDRESS_FULL": "77 Kensington Ave",
+      "env_xmin": 312816.83973143593,
+      "env_ymin": 4834959.385687992,
+      "env_xmax": 312838.0115283619,
+      "env_ymax": 4834984.108259939,
+      "footprint_sqm": 316.5201766281198,
+      "approx_side_m": 17.791013929175588
+    },
+    {
+      "ADDRESS_FULL": "78 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "79 Kensington Ave",
+      "env_xmin": 312829.8932954009,
+      "env_ymin": 4834951.739458802,
+      "env_xmax": 312852.0898153526,
+      "env_ymax": 4834988.048857269,
+      "footprint_sqm": 415.157946003784,
+      "approx_side_m": 20.375425050874007
+    },
+    {
+      "ADDRESS_FULL": "79 Kensington Ave",
+      "env_xmin": 312816.1045076913,
+      "env_ymin": 4834948.9837028645,
+      "env_xmax": 312857.2481599165,
+      "env_ymax": 4834990.656916409,
+      "footprint_sqm": 875.3944319284768,
+      "approx_side_m": 29.58706528076884
+    },
+    {
+      "ADDRESS_FULL": "80 Kensington Ave",
+      "env_xmin": 312774.39789504535,
+      "env_ymin": 4834930.170553224,
+      "env_xmax": 312815.59715836466,
+      "env_ymax": 4834976.448311422,
+      "footprint_sqm": 1167.049841049469,
+      "approx_side_m": 34.162111191339875
+    },
+    {
+      "ADDRESS_FULL": "56B Kensington Ave",
+      "env_xmin": 312770.4380833335,
+      "env_ymin": 4834899.023185515,
+      "env_xmax": 312823.6404150696,
+      "env_ymax": 4834936.855928909,
+      "footprint_sqm": 750.1171358297984,
+      "approx_side_m": 27.388266389638435
+    },
+    {
+      "ADDRESS_FULL": "56B Kensington Ave",
+      "env_xmin": 312769.90112375235,
+      "env_ymin": 4834904.730208643,
+      "env_xmax": 312823.85265474656,
+      "env_ymax": 4834936.927878743,
+      "footprint_sqm": 945.9404689403059,
+      "approx_side_m": 30.75614522238289
+    },
+    {
+      "ADDRESS_FULL": "61 1/2 Kensington Ave",
+      "env_xmin": 312825.9344154427,
+      "env_ymin": 4834909.603851234,
+      "env_xmax": 312862.88104539824,
+      "env_ymax": 4834953.184572486,
+      "footprint_sqm": 759.6990138160319,
+      "approx_side_m": 27.56263800538751
+    },
+    {
+      "ADDRESS_FULL": "69 Kensington Ave",
+      "env_xmin": 312825.9344154427,
+      "env_ymin": 4834909.603851234,
+      "env_xmax": 312862.88104539824,
+      "env_ymax": 4834953.184572486,
+      "footprint_sqm": 759.6990138160319,
+      "approx_side_m": 27.56263800538751
+    },
+    {
+      "ADDRESS_FULL": "58 Kensington Ave",
+      "env_xmin": 312770.4380833335,
+      "env_ymin": 4834899.023185515,
+      "env_xmax": 312823.6404150696,
+      "env_ymax": 4834936.855928909,
+      "footprint_sqm": 750.1171358297984,
+      "approx_side_m": 27.388266389638435
+    },
+    {
+      "ADDRESS_FULL": "58 Kensington Ave",
+      "env_xmin": 312769.90112375235,
+      "env_ymin": 4834904.730208643,
+      "env_xmax": 312823.85265474656,
+      "env_ymax": 4834936.927878743,
+      "footprint_sqm": 945.9404689403059,
+      "approx_side_m": 30.75614522238289
+    },
+    {
+      "ADDRESS_FULL": "67 Kensington Ave",
+      "env_xmin": 312825.9344154427,
+      "env_ymin": 4834909.603851234,
+      "env_xmax": 312862.88104539824,
+      "env_ymax": 4834953.184572486,
+      "footprint_sqm": 759.6990138160319,
+      "approx_side_m": 27.56263800538751
+    },
+    {
+      "ADDRESS_FULL": "61 Kensington Ave",
+      "env_xmin": 312825.9344154427,
+      "env_ymin": 4834909.603851234,
+      "env_xmax": 312862.88104539824,
+      "env_ymax": 4834953.184572486,
+      "footprint_sqm": 759.6990138160319,
+      "approx_side_m": 27.56263800538751
+    },
+    {
+      "ADDRESS_FULL": "56D Kensington Ave",
+      "env_xmin": 312769.90112375235,
+      "env_ymin": 4834904.730208643,
+      "env_xmax": 312823.85265474656,
+      "env_ymax": 4834936.927878743,
+      "footprint_sqm": 945.9404689403059,
+      "approx_side_m": 30.75614522238289
+    },
+    {
+      "ADDRESS_FULL": "56D Kensington Ave",
+      "env_xmin": 312770.4380833335,
+      "env_ymin": 4834899.023185515,
+      "env_xmax": 312823.6404150696,
+      "env_ymax": 4834936.855928909,
+      "footprint_sqm": 750.1171358297984,
+      "approx_side_m": 27.388266389638435
+    },
+    {
+      "ADDRESS_FULL": "9 Kensington Ave",
+      "env_xmin": 312875.28004906117,
+      "env_ymin": 4834747.8470558105,
+      "env_xmax": 312909.52910795144,
+      "env_ymax": 4834791.458392311,
+      "footprint_sqm": 664.3207116800072,
+      "approx_side_m": 25.774419715679482
+    },
+    {
+      "ADDRESS_FULL": "3 Kensington Ave",
+      "env_xmin": 312875.28004906117,
+      "env_ymin": 4834747.8470558105,
+      "env_xmax": 312909.52910795144,
+      "env_ymax": 4834791.458392311,
+      "footprint_sqm": 664.3207116800072,
+      "approx_side_m": 25.774419715679482
+    },
+    {
+      "ADDRESS_FULL": "65 Kensington Ave",
+      "env_xmin": 312825.9344154427,
+      "env_ymin": 4834909.603851234,
+      "env_xmax": 312862.88104539824,
+      "env_ymax": 4834953.184572486,
+      "footprint_sqm": 759.6990138160319,
+      "approx_side_m": 27.56263800538751
+    },
+    {
+      "ADDRESS_FULL": "63 Kensington Ave",
+      "env_xmin": 312825.9344154427,
+      "env_ymin": 4834909.603851234,
+      "env_xmax": 312862.88104539824,
+      "env_ymax": 4834953.184572486,
+      "footprint_sqm": 759.6990138160319,
+      "approx_side_m": 27.56263800538751
+    },
+    {
+      "ADDRESS_FULL": "5 Kensington Ave",
+      "env_xmin": 312875.28004906117,
+      "env_ymin": 4834747.8470558105,
+      "env_xmax": 312909.52910795144,
+      "env_ymax": 4834791.458392311,
+      "footprint_sqm": 664.3207116800072,
+      "approx_side_m": 25.774419715679482
+    },
+    {
+      "ADDRESS_FULL": "7 Kensington Ave",
+      "env_xmin": 312875.28004906117,
+      "env_ymin": 4834747.8470558105,
+      "env_xmax": 312909.52910795144,
+      "env_ymax": 4834791.458392311,
+      "footprint_sqm": 664.3207116800072,
+      "approx_side_m": 25.774419715679482
+    }
+  ],
+  "photo_analysis": [
+    {
+      "ADDRESS_FULL": "2 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark storefront with small upper windows and houseform roofline",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "good",
+      "photo_notes": "Compact barbershop frontage on Kensington."
+    },
+    {
+      "ADDRESS_FULL": "2A Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark houseform frontage with a narrow commercial opening and muted signage",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "fair",
+      "photo_notes": "Shared corner/frontage between the end of El Rey and Crows Nest Barbershop."
+    },
+    {
+      "ADDRESS_FULL": "4 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark storefront with bright sign band and mixed painted trim",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": "Shared frontage between Hi and Tibetan Village Store."
+    },
+    {
+      "ADDRESS_FULL": "6 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "not clearly visible \u2014 night photo",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "No dedicated facade photo in this batch. Visible in 4/6 Kensington Ave photo as the right unit. Tibetan Village Store wooden sign visible. Semi-detached pair with 4 Kensington Ave."
+    },
+    {
+      "ADDRESS_FULL": "10 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "warm red-brown brick upper storey, dark-painted ground floor storefront with black metal framing",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "fair",
+      "photo_notes": "Night photo. Narrow 2-storey commercial on Kensington Ave pedestrian strip. Typical converted Victorian house-form with ground-floor retail. Adjacent to similar row of converted houses. Party wall visible on right side (shared with neighbour)."
+    },
+    {
+      "ADDRESS_FULL": "8 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "10A Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "11 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "13 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red and cream houseform frontage with narrow storefront insertions",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Houseform storefront segment with Causa Culture signage."
+    },
+    {
+      "ADDRESS_FULL": "12A Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "buff stone",
+      "photo_overall_style": null,
+      "photo_condition": "good",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "12 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark storefront with bright illuminated interior and narrow houseform top",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "good",
+      "photo_notes": "Night-lit shopfront in the Kensington retail row."
+    },
+    {
+      "ADDRESS_FULL": "14 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark storefront with eclectic retail display and small upper windows",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "good",
+      "photo_notes": "Dense small-shop frontage with strong character retail signage."
+    },
+    {
+      "ADDRESS_FULL": "19 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "17 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark houseform storefront with warm interior lighting and narrow upper gables",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": "Small shopfront within the Kensington row."
+    },
+    {
+      "ADDRESS_FULL": "15 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "16 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "mixed: blue-painted glass storefront at ground level, brown/red brick upper floor, white-painted wood gable peak",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Converted house-form per HCD typology. Commercial ground floor with glass storefront. Upper floor retains Victorian character with original brick and fenestration. Front gable is legible."
+    },
+    {
+      "ADDRESS_FULL": "18 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "not clearly visible \u2014 night photo",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "No dedicated facade photo in this batch. Part of 16-18 Kensington Ave semi-detached pair. Shared roofline with central gable."
+    },
+    {
+      "ADDRESS_FULL": "22 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "not clearly visible \u2014 night photo",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "No dedicated facade photo in this batch. Part of 20-22 Kensington Ave pair. Large painted mural covers most of facade per existing assessment."
+    },
+    {
+      "ADDRESS_FULL": "20 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "not clearly visible \u2014 night photo",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "No dedicated facade photo in this batch. Part of 20-22 Kensington Ave pair. Cocktail Emporium business. Bay-and-gable semi-detached with mirrored facades."
+    },
+    {
+      "ADDRESS_FULL": "25 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "muted houseform frontage with multiple restaurant/retail signs and patio railings",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": "Multi-tenant Kensington storefront row with dispensary and taco bar uses."
+    },
+    {
+      "ADDRESS_FULL": "21 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "not clearly visible \u2014 night photo",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Multi-address photo, limited view. Visible in 25/23/21 Kensington Ave photo. Placos Tacos Mexican Food & Bar at ground level."
+    },
+    {
+      "ADDRESS_FULL": "23 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "not clearly visible \u2014 night photo",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Multi-address photo, limited view. Visible in 25/23/21 Kensington Ave photo. Part of Victorian row with 21 and 25 Kensington Ave."
+    },
+    {
+      "ADDRESS_FULL": "24 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "26 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "29 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "33 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "warm yellow-brown brick on upper floors, dark painted commercial ground floor with illuminated Uncle Vintage Co sign",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime photo; Victorian house-form with cross-gable"
+    },
+    {
+      "ADDRESS_FULL": "31 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "27 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark storefront with fashion retail signage and narrow upper residential massing",
+      "photo_overall_style": null,
+      "photo_condition": "good",
+      "photo_notes": "Fashion retail frontage in the main Kensington strip."
+    },
+    {
+      "ADDRESS_FULL": "28 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "painted wood",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "34 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "32 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "30 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "36 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "37 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "35 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark brown/black painted ground floor with blue-lit storefront windows; exposed red-brown brick on upper floors; large painted mural above storefront",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Night photo. Converted House-form per HCD typology. The original Victorian semi-detached house-form is visible in the gable roofline and upper-floor brick, though heavily modified at street level. Victorian red brick house visible in background at right."
+    },
+    {
+      "ADDRESS_FULL": "38 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "40 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "brown/bronze storefront, blue upper",
+      "photo_overall_style": "Commercial/Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Night photo (IMG_20260320_012906257_HDR.jpg), rotated. 2-storey commercial. Victorian gable peak visible above commercial addition. Adjacent to 42 Kensington Ave (Butterfly)."
+    },
+    {
+      "ADDRESS_FULL": "39 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "41 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "45 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "43 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "varied brick and stone",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "42 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "mixed",
+      "photo_overall_style": "Commercial/Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Only partially visible in IMG_20260320_012906257_HDR.jpg (adjacent to 40 Kensington Ave). Limited visibility; most details inferred from adjacency to 40. Low confidence due to partial view."
+    },
+    {
+      "ADDRESS_FULL": "44 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "grey/beige siding upper, blue neon-lit ground floor",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime with strong blue neon; small house converted to vintage shop"
+    },
+    {
+      "ADDRESS_FULL": "46 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red-brown brick upper, ground floor dominated by colourful mural",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; ground floor heavily decorated with mural art"
+    },
+    {
+      "ADDRESS_FULL": "50 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "unknown",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": "Part of 48-52 range. Night photo, limited dedicated view in this batch."
+    },
+    {
+      "ADDRESS_FULL": "52 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "unknown",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": "Part of 48-52 range. Night photo, limited dedicated view in this batch."
+    },
+    {
+      "ADDRESS_FULL": "48 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "commercial row",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "poor",
+      "photo_notes": "Part of 48-52 range \u2014 limited individual view. Night photo, limited dedicated view in this batch."
+    },
+    {
+      "ADDRESS_FULL": "49 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "47 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "poor",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "51 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "off-white stucco",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "53 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "off-white stucco",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "54 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick with large street mural at ground level",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; three-storey commercial with multiple retail units"
+    },
+    {
+      "ADDRESS_FULL": "55 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "other",
+      "photo_overall_style": "Victorian Bay-and-Gable (obscured by mural)",
+      "photo_condition": "fair",
+      "photo_notes": "Limited visibility. Business is Lost Gen Vintage. Facade entirely covered in mural art, making architectural detail assessment difficult. Low confidence."
+    },
+    {
+      "ADDRESS_FULL": "60 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "brown/maroon painted upper with pegasus/star murals, yellow trim, blue striped awning",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; number 60 visible; decorative painted facade"
+    },
+    {
+      "ADDRESS_FULL": "64 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "tan/beige upper, dark metal storefront surround",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; single-storey European delicatessen"
+    },
+    {
+      "ADDRESS_FULL": "66 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "yellow-buff brick upper, dark commercial ground floor",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; yellow brick house-form with gable roof"
+    },
+    {
+      "ADDRESS_FULL": "70 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "71 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "tan/beige painted wood clapboard siding on upper floor, dark brown/black commercial ground floor",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "fair",
+      "photo_notes": "Converted House-form per HCD typology. Style corrected from Vernacular to Victorian - the underlying house-form with gable roof dates to the Victorian era despite wood clapboard cladding alteration. Commercial ground floor is expected for this typology."
+    },
+    {
+      "ADDRESS_FULL": "72 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "73 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "white/grey stucco upper, bright yellow painted ground with zigzag trim",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; bright yellow ground floor with multiple display windows"
+    },
+    {
+      "ADDRESS_FULL": "74 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "yellow-brown brick, pink accent above storefront, baby blue storefront surround",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; yellow brick with colourful painted accents; Juliet balcony on upper floor"
+    },
+    {
+      "ADDRESS_FULL": "75 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "black painted ground floor with large graffiti mural; white/cream cladding visible on adjacent structure; number 75 in yellow",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "poor",
+      "photo_notes": "matches_hcd corrected from false to true. Style corrected from Vernacular to Victorian. Despite heavy street-level alterations (black paint, graffiti), the house-form with gable roof is still legible. The semi-detached pair form is consistent with the 1904-1913 construction date."
+    },
+    {
+      "ADDRESS_FULL": "76 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "white-painted brick entire facade, blue GLOBAL CHEESE sign",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "good",
+      "photo_notes": "well-lit nighttime photo; iconic Kensington Market cheese shop"
+    },
+    {
+      "ADDRESS_FULL": "77 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "unknown",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; three-storey white clapboard; multiple commercial tenants"
+    },
+    {
+      "ADDRESS_FULL": "78 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "79 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "unknown",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "Part of 77-79 range. Night photo, limited dedicated view in this batch."
+    },
+    {
+      "ADDRESS_FULL": "80 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "yellow-brown brick upper, pink painted storefront with checkered sign",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "nighttime; charming pink-themed storefront"
+    },
+    {
+      "ADDRESS_FULL": "65 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "61 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "unknown",
+      "photo_overall_style": "Commercial",
+      "photo_condition": "fair",
+      "photo_notes": "Part of 61-57 range. Night photo, limited dedicated view in this batch."
+    },
+    {
+      "ADDRESS_FULL": "67 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "Dark-painted commercial ground floor with brown brick upper storey behind orange-and-white striped awning",
+      "photo_overall_style": "Victorian",
+      "photo_condition": "poor",
+      "photo_notes": "Correctly a Converted House-form per HCD. Commercial ground floor IS expected for this typology. Front gable and brick west elevation from HCD statement still present but concealed by awning. matches_hcd corrected from false to true."
+    },
+    {
+      "ADDRESS_FULL": "58 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "unknown",
+      "photo_overall_style": "Vernacular",
+      "photo_condition": "fair",
+      "photo_notes": "Night photo, limited dedicated view in this batch."
+    },
+    {
+      "ADDRESS_FULL": "63 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "9 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark painted storefront with neon-lit interior and houseform upper floor",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": "Shared building segment with Soma I and Dreamland Hair Salon."
+    },
+    {
+      "ADDRESS_FULL": "56D Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "56B Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "3 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "69 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "61 1/2 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    },
+    {
+      "ADDRESS_FULL": "7 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "dark red brick with black storefront framing and overhead signage",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": "Corner strip with Dreamland Hair Salon frontage and the side of People Hair Salon."
+    },
+    {
+      "ADDRESS_FULL": "5 Kensington Ave",
+      "photo_analyzed": true,
+      "photo_facade_colour": "red brick",
+      "photo_overall_style": null,
+      "photo_condition": "fair",
+      "photo_notes": null
+    }
+  ]
+}

@@ -12,6 +12,142 @@
     ],
     "reference_photo_count": 1,
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
-    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON"
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012841865_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.45
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#9A5A38",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "light grey",
+    "polychromatic_brick": false,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "Row of commercial storefronts. Awnings (one red/pink) visible. Various shop entrances."
+      },
+      {
+        "floor": "second",
+        "count": 6,
+        "type": "1-over-1",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.1,
+        "height_m_est": 1.4,
+        "note": "Multiple windows across the terrace row, white frames. Some with AC units."
+      },
+      {
+        "floor": "gable",
+        "count": 3,
+        "type": "rectangular",
+        "frame_colour": "#E8E0D0",
+        "arch": "flat",
+        "width_ratio": 0.08,
+        "height_m_est": 0.7,
+        "note": "Small gable windows visible on multiple units."
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "various",
+        "type": "commercial glass",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 1,
+        "colour": "dark",
+        "note": "Multiple commercial entrances along the row"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 45,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple",
+      "colour_hex": "#E8E0D0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "rectangular"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "note": "Bay windows may exist but are obscured by commercial ground-floor modifications and viewing angle."
+    },
+    "storefront_observed": {
+      "width_pct": 85,
+      "signage_text": "Multiple shops including Space Vintage area",
+      "awning": {
+        "present": true,
+        "type": "fixed fabric",
+        "colour": "pink/red on one unit, dark on others"
+      },
+      "entrance_position": "distributed",
+      "security_grille": false,
+      "note": "Wide-angle view of a row of 3-4 bay-and-gable rowhouses converted to commercial at ground level. Red brick predominates. One porch with bay window form visible. Night photo with sodium-vapour lighting gives warm cast."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#9A5A38",
+      "trim": "#E8E0D0",
+      "roof": "#5A5A5A",
+      "accent": "#C8405A"
+    },
+    "condition_observed": "fair",
+    "condition_notes": "Terrace row of bay-and-gable houses. Red brick mostly intact. Various ground-floor commercial modifications. Night photo limits detail assessment. Tree obstructs portions of the view.",
+    "depth_notes": {
+      "setback_m_est": 0.3,
+      "porch_depth_m_est": 0.8,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 250,
+      "step_count": 2
+    }
+  },
+  "facade_detail": {
+    "brick_colour_hex": "#9A5A38",
+    "bond_pattern": "running bond",
+    "mortar_colour": "light grey"
+  },
+  "storefront": {
+    "signage_text": "Multiple shops including Space Vintage area",
+    "awning": {
+      "present": true,
+      "type": "fixed fabric",
+      "colour": "pink/red on one unit, dark on others"
+    },
+    "width_pct": 85
+  },
+  "colour_palette": {
+    "facade": "#9A5A38",
+    "trim": "#E8E0D0",
+    "roof": "#5A5A5A",
+    "accent": "#C8405A"
   }
 }

@@ -20,7 +20,7 @@
     "lot_coverage_pct": 89.4,
     "lots_sharing_footprint": 1
   },
-  "roof_type": "Flat",
+  "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
     "parapet_wall"
@@ -36,7 +36,7 @@
   "window_width_m": 0.95,
   "window_height_m": 1.45,
   "door_count": 2,
-  "has_storefront": false,
+  "has_storefront": true,
   "condition": "good",
   "hcd_data": {
     "typology": "Commercial",
@@ -105,10 +105,7 @@
     "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
     "gaps_filled": true,
     "inferences_applied": [
-      "roof_material",
-      "colour_palette",
-      "ground_floor_arches",
-      "volumes"
+      "colour_palette"
     ],
     "photo": "IMG_20260316_104629480_HDR.jpg",
     "reference_photos": [
@@ -123,7 +120,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "91 Oxford St",
-    "db_revision_ts": "2026-03-25T14:51:46",
+    "db_revision_ts": "2026-03-26T20:02:10",
     "db_address_candidates": [
       "91 OXFORD ST"
     ],
@@ -135,13 +132,70 @@
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
     "qa_autofix_medium_low": {
-      "timestamp": "2026-03-25T14:42:39",
+      "timestamp": "2026-03-27T14:58:20",
       "changes": [
         "has_storefront:set_False"
       ]
     },
     "qa_depth_fixes": [
       "32m -> 22.4m (lot_depth_ft=105.0 -> depth=22.4m (70% of lot))"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_oxford.py",
+        "street": "Oxford St",
+        "timestamp": "2026-03-29T07:47:06.235747+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:16.157163+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)",
+          "arch_type filled (1904-1913)"
+        ],
+        "timestamp": "2026-03-29T08:04:01.538580+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: wood",
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:52.393554+00:00"
+      }
+    ],
+    "colour_palette_rebuilt": "2026-03-29T08:35:48.929361+00:00",
+    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #E57750",
+        "roof": "#5A5A5A → #5A4E4F",
+        "trim": "#2A2A2A → #333232",
+        "accent": "#3A2A20 → #2F2F36",
+        "mortar": "#B0A898 → #BAB2A3"
+      }
+    ],
+    "qa_final_fixes": [
+      {
+        "fixes": [
+          "has_storefront=true"
+        ],
+        "timestamp": "2026-03-29T17:48:42.323235+00:00"
+      }
     ]
   },
   "decorative_elements": {
@@ -259,22 +313,26 @@
         "present": true,
         "height_m": 0.4,
         "type": "glazed"
-      }
+      },
+      "material": "wood",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
     }
   ],
   "building_type": "residential",
   "party_wall_left": false,
   "party_wall_right": false,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#E57750",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
+    "trim_colour_hex": "#333232",
     "composition": "The street frontage spans roughly 5.2 metres across 3 storeys beneath a flat, consistent with its commercial typology.",
     "opening_rhythm": "The visible opening pattern is organized as 4, 6, 6 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
     "heritage_expression": "Key storefront and facade features include cornice, decorative brick, original windows, string courses.",
-    "heritage_summary": "For its unique characteristics and history, the building is considered a landmark within the District. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation."
+    "heritage_summary": "For its unique characteristics and history, the building is considered a landmark within the District. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation.",
+    "mortar_colour_hex": "#BAB2A3"
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -286,13 +344,14 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
+          "count": 4,
           "type": "mixed",
           "width_m": 0.9,
-          "height_m": 1.9,
+          "height_m": 2.0,
           "sill_height_m": 1.3,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -300,13 +359,14 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
+          "count": 6,
           "type": "mixed",
           "width_m": 0.9,
           "height_m": 3.3,
           "sill_height_m": 2.6,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     },
@@ -314,29 +374,22 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 1,
+          "count": 6,
           "type": "mixed",
           "width_m": 0.9,
           "height_m": 2.8,
           "sill_height_m": 2.2,
           "frame_colour": "#2A2A2A",
-          "glazing": "single pane"
+          "glazing": "1-over-1",
+          "arch_type": "flat"
         }
       ]
     }
   ],
   "street_setback_m": 3.0,
-  "facade_description": "91 Oxford St presents a commercial street frontage within the Kensington Market HCD. The street frontage spans roughly 5.2 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 6, 6 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice, decorative brick, original windows, string courses. HCD note: The property has value as a unique Commercial building within the District with building features suggesting Edwardian and early-twentieth-century architectural styles. As a place of employment for the working class, the property has cultural heritage value for its direct association with the development of the district as a complete community. Constructed in 1906 as a telephone exchange building, the property is notable for its scale, form, and massing which is unique within the surrounding residential neighbourhood. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation. Constructed to meet the infrastructure needs of the surrounding area, the property is visually, historically, and functionally linked to its surroundings. For its unique characteristics and history, the building is considered a landmark within the District.",
+  "facade_description": "91 Oxford St is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 6, 6 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice, decorative brick, original windows, string courses.",
   "heritage_summary": "For its unique characteristics and history, the building is considered a landmark within the District. The property retains a high degree of integrity with brick cladding with decorative brickwork, decorative stonework, flat headed and segmentally arched window openings and round arched central entrance on the north elevation.",
   "roof_material": "Built-up tar and gravel",
-  "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#2A2A2A",
-    "roof_hex": "#3A3A3A",
-    "accent_hex": "#2A2A2A",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0"
-  },
   "ground_floor_arches": {
     "present": true,
     "arch_type": "flat",
@@ -348,5 +401,86 @@
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
     "status_source": "normalized_fix"
-  }
+  },
+  "colour_palette": {
+    "facade_hex": "#D4B896",
+    "trim_hex": "#2A2A2A",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#2A2A2A",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#E57750",
+    "trim": "#333232",
+    "roof": "#5A4E4F",
+    "accent": "#2F2F36"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260316_104629480_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 4,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.3,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 6,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 3.3,
+            "sill_height_m": 2.6,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 6,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 2.8,
+            "sill_height_m": 2.2,
+            "frame_colour": "#2A2A2A",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "decorative_brickwork",
+      "string_courses",
+      "window_hoods",
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15
 }
