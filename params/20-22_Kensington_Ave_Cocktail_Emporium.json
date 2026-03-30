@@ -1,7 +1,7 @@
 {
   "building_name": "20-22 Kensington Ave (Cocktail Emporium)",
   "floors": 2,
-  "facade_material": "painted brick/stucco",
+  "facade_material": "Brick",
   "facade_colour": "painted (painted brick/stucco)",
   "door_count": 1,
   "door_type": "storefront",
@@ -76,7 +76,7 @@
       "21 KENSINGTON AVE",
       "22 KENSINGTON AVE"
     ],
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "qa_photo_fixes": [
       "commercial heuristic: 8.0x12.0m"
     ],
@@ -139,15 +139,15 @@
       "timestamp": "2026-03-29T08:34:17.959468Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.831482Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #9B5A47",
-        "trim": "#E8E0D0 \u2192 #463424",
-        "mortar": "#B0A898 \u2192 #AEA694"
+        "facade": "#B85A3A → #9B5A47",
+        "trim": "#E8E0D0 → #463424",
+        "mortar": "#B0A898 → #AEA694"
       }
     ]
   },
@@ -265,7 +265,7 @@
   },
   "street_setback_m": 2.0,
   "confidence": 0.9,
-  "facade_description": "20-22 Kensington Ave (Cocktail Emporium) is a commercial building with a street-level storefront. The street frontage spans roughly 8 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by painted brick/stucco, laid in running bond (painted over) with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 1 principal entrance.",
+  "facade_description": "20-22 Kensington Ave (Cocktail Emporium) is a commercial building with a street-level storefront. The street frontage spans roughly 8 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond (painted over) with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 1 principal entrance.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

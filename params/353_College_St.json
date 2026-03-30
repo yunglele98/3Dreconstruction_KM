@@ -21,7 +21,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "n/a - vacant lot",
+  "facade_material": "Brick",
   "facade_colour": "N/A - vacant lot",
   "windows_per_floor": [
     0
@@ -36,14 +36,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -56,8 +56,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -76,7 +76,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "353 College St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "353 COLLEGE ST"
     ],
@@ -169,16 +169,19 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.102111+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:15.294673Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #5E5E5E",
-        "trim": "#E8E0D0 \u2192 #32251C",
-        "accent": "#1A1A2A \u2192 #513728",
-        "mortar": "#B0A898 \u2192 #ADA696"
+        "roof": "#5A5A5A → #5E5E5E",
+        "trim": "#E8E0D0 → #32251C",
+        "accent": "#1A1A2A → #513728",
+        "mortar": "#B0A898 → #ADA696"
+      },
+      {
+        "facade": "#B85A3A → #D27355"
       }
     ]
   },
@@ -244,7 +247,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#D27355",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -285,7 +288,7 @@
     }
   },
   "street_setback_m": 0.5,
-  "facade_description": "353 College St is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat. The facade reads primarily as n/a - vacant lot, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "353 College St is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat. The facade reads primarily as brick in a n/a - vacant lot palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "colour_palette": {
@@ -295,7 +298,7 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
+    "facade": "#D27355",
     "trim": "#32251C",
     "roof": "#5E5E5E",
     "accent": "#513728"

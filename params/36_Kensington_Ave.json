@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-Form, Row, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue) (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-Form, Row, Bay-and-Gable (30 & 36 Kensington Avenue) (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 200,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines with dormers, brick cladding, decorative wooden gable brackets and trim, and fenestration pattern. The properties at 30 and 36 Kensington Avenue also retain their double-height bay windows. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows",
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -101,7 +101,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "36 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "36 KENSINGTON AVE"
     ],
@@ -168,16 +168,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.256989+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #993D2B",
-        "roof": "#5A5A5A \u2192 #5D554C",
-        "trim": "#3A2A20 \u2192 #433224",
-        "accent": "#3A2A20 \u2192 #2E3E2D",
-        "mortar": "#B0A898 \u2192 #BEAC94"
+        "facade": "#B85A3A → #993D2B",
+        "roof": "#5A5A5A → #5D554C",
+        "trim": "#3A2A20 → #433224",
+        "accent": "#3A2A20 → #2E3E2D",
+        "mortar": "#B0A898 → #BEAC94"
       }
     ],
     "qa_final_fixes": [
@@ -187,7 +187,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.989034Z"
   },
   "bay_window": {
     "present": true,
@@ -305,7 +306,18 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "db_context": {

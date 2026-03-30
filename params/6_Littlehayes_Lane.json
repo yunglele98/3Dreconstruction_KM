@@ -37,8 +37,8 @@
   "hcd_data": {
     "typology": "",
     "construction_date": "",
-    "architectural_style": "Victorian Vernacular \u2013 Workers Cottage",
-    "construction_period": "c. 1870\u20131889",
+    "architectural_style": "Victorian Vernacular – Workers Cottage",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "commercial",
     "general_use": "Commercial",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Laneway | Single address",
-    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -78,7 +78,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 7,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "6 Littlehayes Lane",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "6 LITTLEHAYES LANE"
     ],
@@ -158,16 +158,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.341394+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BF6351",
-        "roof": "#5A5A5A \u2192 #494E4E",
-        "trim": "#E8E0D0 \u2192 #272727",
-        "accent": "#3A2A20 \u2192 #2A2B22",
-        "mortar": "#B0A898 \u2192 #B4AB98"
+        "facade": "#B85A3A → #BF6351",
+        "roof": "#5A5A5A → #494E4E",
+        "trim": "#E8E0D0 → #272727",
+        "accent": "#3A2A20 → #2A2B22",
+        "mortar": "#B0A898 → #B4AB98"
       }
     ]
   },

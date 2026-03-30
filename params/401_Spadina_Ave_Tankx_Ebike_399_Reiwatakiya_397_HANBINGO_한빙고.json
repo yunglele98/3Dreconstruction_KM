@@ -1,7 +1,7 @@
 {
   "building_name": "397-401 Spadina Ave (Hanbingo / Reiwatakiya / Tankx row segment)",
   "floors": 3,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "dark narrow-bay storefronts in black, pink, and blue below older red-brick upper walls",
   "windows_per_floor": [
     3,
@@ -73,7 +73,7 @@
     "photo": "IMG_20260321_012429922_HDR.jpg"
   },
   "_meta": {
-    "address": "401 Spadina Ave (Tankx Ebike) / 399 (Reiwatakiya) / 397 (HANBINGO \ud55c\ube59\uace0)",
+    "address": "401 Spadina Ave (Tankx Ebike) / 399 (Reiwatakiya) / 397 (HANBINGO 한빙고)",
     "photo": "IMG_20260321_012429922_HDR.jpg",
     "agent": "codex-gpt-5",
     "timestamp": "2026-03-24T16:35:00-04:00",
@@ -107,7 +107,7 @@
       "400 SPADINA AVE",
       "401 SPADINA AVE"
     ],
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "qa_photo_fixes": [
       "Commercial strip ~18m on Spadina"
     ],
@@ -163,16 +163,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.581417+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:15.859389Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #545454",
-        "trim": "#E8E0D0 \u2192 #222222",
-        "accent": "#2A3A2A \u2192 #352B1D",
-        "mortar": "#B0A898 \u2192 #BEB6A4"
+        "roof": "#5A5A5A → #545454",
+        "trim": "#E8E0D0 → #222222",
+        "accent": "#2A3A2A → #352B1D",
+        "mortar": "#B0A898 → #BEB6A4"
       }
     ]
   },
@@ -333,7 +333,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "397-401 Spadina Ave (Hanbingo / Reiwatakiya / Tankx row segment) is a commercial building with a street-level storefront. The street frontage spans roughly 18 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a dark narrow-bay storefronts in black, pink, and blue below older red-brick upper walls palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 4, 4 window bays from lower to upper levels, using mixed, and 3 principal entrances. Key storefront and facade features include cornice.",
+  "facade_description": "397-401 Spadina Ave (Hanbingo / Reiwatakiya / Tankx row segment) is a commercial building with a street-level storefront. The street frontage spans roughly 18 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a dark narrow-bay storefronts in black, pink, and blue below older red-brick upper walls palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 4, 4 window bays from lower to upper levels, using mixed, and 3 principal entrances. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

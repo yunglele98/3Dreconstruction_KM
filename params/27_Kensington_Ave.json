@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "left: brown/dark brick; centre-right: grey/white stone or rough-cast render; brick (left unit brown), stone/rough-cast stucco (centre units grey/white)",
   "windows_per_floor": [
     0,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Converted House-form (27, & 33 Kensington Avenue) House-form, Row",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form (27, 29, & 33 Kensington Avenue) House-form (31 Kensington Avenue), Row, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 197,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The properties at 27, 29, and 33 Kensington Avenue also have value for the modifications made to accommodate a commercial conversion through ground floor alterations, including a one- storey commercial addition at 33 Kensington Avenue. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified). 33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The properties at 27, 29, and 33 Kensington Avenue also have value for the modifications made to accommodate a commercial conversion through ground floor alterations, including a one- storey commercial addition at 33 Kensington Avenue. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified). 33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 4,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "27 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "27 KENSINGTON AVE"
     ],
@@ -188,15 +188,15 @@
       "timestamp": "2026-03-29T08:34:18.883425Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.034070Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #535252",
-        "trim": "#3A2A20 \u2192 #493828",
-        "mortar": "#B0A898 \u2192 #A3947D"
+        "roof": "#5A5A5A → #535252",
+        "trim": "#3A2A20 → #493828",
+        "mortar": "#B0A898 → #A3947D"
       }
     ]
   },
@@ -252,7 +252,7 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.5,
-    "facade_colour_observed": "brick \u2014 visible above commercial ground floor",
+    "facade_colour_observed": "brick — visible above commercial ground floor",
     "facade_material_observed": "brick (left unit brown), stone/rough-cast stucco (centre units grey/white)",
     "condition_observed": "fair to poor; some deterioration visible; mix of original and modified elements; white railing/fence at left",
     "has_storefront_observed": true,
@@ -394,7 +394,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "27 Kensington Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology. The facade reads primarily as mixed in a left: brown/dark brick; centre-right: grey/white stone or rough-cast render; brick (left unit brown), stone/rough-cast stucco (centre units grey/white) palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, gable brackets.",
+  "facade_description": "27 Kensington Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology. The facade reads primarily as mixed masonry in a left: brown/dark brick; centre-right: grey/white stone or rough-cast render; brick (left unit brown), stone/rough-cast stucco (centre units grey/white) palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, gable brackets.",
   "heritage_summary": "33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified).",
   "roof_material": "Slate shingles",
   "colour_palette": {

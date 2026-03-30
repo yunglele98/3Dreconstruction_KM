@@ -72,7 +72,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "36 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "36 BELLEVUE AVE"
     ],
@@ -132,17 +132,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.251391+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "porch_enriched": "2026-03-29T08:38:23.364019Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AB5C44",
-        "roof": "#5A5A5A \u2192 #5F5F5F",
-        "trim": "#E8E0D0 \u2192 #34251D",
-        "accent": "#2A3A2A \u2192 #333B29",
-        "mortar": "#B0A898 \u2192 #A99A89"
+        "facade": "#B85A3A → #AB5C44",
+        "roof": "#5A5A5A → #5F5F5F",
+        "trim": "#E8E0D0 → #34251D",
+        "accent": "#2A3A2A → #333B29",
+        "mortar": "#B0A898 → #A99A89"
       }
     ]
   },

@@ -116,16 +116,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.484163+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #953F21",
-        "roof": "#5A5A5A \u2192 #505050",
-        "trim": "#3A2A20 \u2192 #402D22",
-        "accent": "#3A2A20 \u2192 #3B4532",
-        "mortar": "#B0A898 \u2192 #A8977F"
+        "facade": "#B85A3A → #953F21",
+        "roof": "#5A5A5A → #505050",
+        "trim": "#3A2A20 → #402D22",
+        "accent": "#3A2A20 → #3B4532",
+        "mortar": "#B0A898 → #A8977F"
       }
     ]
   },
@@ -249,7 +249,7 @@
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.4,
     "facade_colour_observed": "red/painted facade",
-    "facade_material_observed": "painted brick or rendered \u2014 red with white/cream trim",
+    "facade_material_observed": "painted brick or rendered — red with white/cream trim",
     "condition_observed": "fair",
     "has_storefront_observed": false,
     "overall_style": "Victorian",

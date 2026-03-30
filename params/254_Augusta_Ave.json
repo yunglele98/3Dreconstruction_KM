@@ -1,10 +1,8 @@
 {
   "building_name": "254 Augusta Ave",
-  "floors": 3,
+  "floors": 1,
   "floor_heights_m": [
-    1.37,
-    1.37,
-    1.37
+    4.1
   ],
   "total_height_m": 4.1,
   "facade_width_m": 5.2,
@@ -28,9 +26,7 @@
   "facade_material": "brick",
   "facade_colour": "dark red-brown brick facade with pale wood storefront infill and black trim",
   "windows_per_floor": [
-    2,
-    4,
-    4
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -42,12 +38,12 @@
     "typology": "Commercial, Row",
     "construction_date": "1914-1930",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 57,
-    "statement_of_contribution": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District’s pattern of commercial adaptation and expansion that began in ",
+    "statement_of_contribution": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in ",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -62,8 +58,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -82,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -104,12 +100,12 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "254 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "254 AUGUSTA AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
+      "timestamp": "2026-03-30T02:31:50",
       "old_total_height_m": 4.1,
       "new_total_height_m": 7.2,
       "floors": 3.0,
@@ -160,15 +156,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.082946+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.609837Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A → #E1B996",
-        "roof": "#5A5A5A → #595959",
-        "mortar": "#B0A898 → #C8C0AE"
+        "facade": "#B85A3A \u2192 #E1B996",
+        "roof": "#5A5A5A \u2192 #595959",
+        "mortar": "#B0A898 \u2192 #C8C0AE"
       }
     ],
     "qa_final_fixes": [
@@ -178,6 +174,9 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "height_fixes": [
+      "qa_height_mismatch: 7.2m/3F -> 4.1m/1F (LiDAR avg: 4.1m)"
     ]
   },
   "storefront": {
@@ -325,9 +324,9 @@
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#4A4A4A",
-    "composition": "The street frontage spans roughly 5.2 metres across 3 storeys beneath a cross-gable, consistent with its commercial, row typology.",
-    "opening_rhythm": "The visible opening pattern is organized as 2, 4, 4 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
-    "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District’s pattern of commercial adaptation and expansion that began in.",
+    "composition": "The street frontage spans roughly 5.2 metres across 1 storeys beneath a cross-gable, consistent with its commercial, row typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
+    "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in.",
     "heritage_expression": "Key storefront and facade features include cornice.",
     "mortar_colour_hex": "#C8C0AE"
   },
@@ -399,8 +398,8 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "254 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 3 storeys beneath a cross-gable, consistent with its commercial, row typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 4, 4 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
-  "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District’s pattern of commercial adaptation and expansion that began in.",
+  "facade_description": "254 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 1 storeys beneath a cross-gable, consistent with its commercial, row typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],
   "colour_palette": {

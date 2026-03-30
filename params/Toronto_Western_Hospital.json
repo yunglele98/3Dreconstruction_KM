@@ -1,7 +1,7 @@
 {
   "building_name": "Toronto Western Hospital campus",
   "floors": 8,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "red brick structural piers and end walls with beige concrete floor bands, dark strip windows, silver-gray mechanical enclosures, and a pale glazed emergency base",
   "windows_per_floor": [
     3,
@@ -180,16 +180,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:49.427359+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "porch_enriched": "2026-03-29T08:38:26.071396Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #564D4D",
-        "trim": "#E8E0D0 \u2192 #37271E",
-        "accent": "#3A2A20 \u2192 #394132",
-        "mortar": "#B0A898 \u2192 #AFA797"
+        "roof": "#5A5A5A → #564D4D",
+        "trim": "#E8E0D0 → #37271E",
+        "accent": "#3A2A20 → #394132",
+        "mortar": "#B0A898 → #AFA797"
       }
     ]
   },
@@ -412,7 +412,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "Toronto Western Hospital campus is an institutional building. The principal elevation spans roughly 50 metres across 8 storeys and is capped by a flat, consistent with its institutional typology. The principal elevation is faced primarily in mixed in a red brick structural piers and end walls with beige concrete floor bands, dark strip windows, silver-gray mechanical enclosures, and a pale glazed emergency base palette, laid in running bond with light grey mortar joints. The elevation is ordered in broad vertical bays, with a 3, 3, 3, 3, 3, 3, 3, 3 opening rhythm from lower to upper levels, using mixed, and 4 principal entrances. Key heritage elements on the principal elevation include cornice.",
+  "facade_description": "Toronto Western Hospital campus is an institutional building. The principal elevation spans roughly 50 metres across 8 storeys and is capped by a flat, consistent with its institutional typology. The principal elevation is faced primarily in mixed masonry in a red brick structural piers and end walls with beige concrete floor bands, dark strip windows, silver-gray mechanical enclosures, and a pale glazed emergency base palette, laid in running bond with light grey mortar joints. The elevation is ordered in broad vertical bays, with a 3, 3, 3, 3, 3, 3, 3, 3 opening rhythm from lower to upper levels, using mixed, and 4 principal entrances. Key heritage elements on the principal elevation include cornice.",
   "hcd_data": {
     "typology": "institutional",
     "construction_date": "Mid-20th Century / Modern Additions",

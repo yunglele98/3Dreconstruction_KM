@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "white-painted low commercial facade with bold black signboards and mural-painted lower walls",
   "windows_per_floor": [
     3,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "1914-1930",
-    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 23,
-    "statement_of_contribution": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property has retained its original form and many building features including rug-brick cladding and second storey window openings with brick voussoirs and pediment. Anchoring the northeast corner of Augusta Avenue and Baldwin Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Baldwin Street.",
+    "statement_of_contribution": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property has retained its original form and many building features including rug-brick cladding and second storey window openings with brick voussoirs and pediment. Anchoring the northeast corner of Augusta Avenue and Baldwin Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Baldwin Street.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -110,7 +110,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "235 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "235 AUGUSTA AVE"
     ],
@@ -188,15 +188,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.915187+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.389898Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #585858",
-        "accent": "#1A1A2A \u2192 #352C1E",
-        "mortar": "#B0A898 \u2192 #D1CABA"
+        "roof": "#5A5A5A → #585858",
+        "accent": "#1A1A2A → #352C1E",
+        "mortar": "#B0A898 → #D1CABA"
       }
     ]
   },
@@ -273,7 +273,7 @@
     "roof_features": [
       "parapet_wall"
     ],
-    "signage_observed": "Taquer\u00eda El Pastorcito signs advertising tacos, burritos, quesadillas, tortas, beers, margaritas, and tequilas.",
+    "signage_observed": "Taquería El Pastorcito signs advertising tacos, burritos, quesadillas, tortas, beers, margaritas, and tequilas.",
     "photo": "IMG_20260315_155200176_HDR.jpg"
   },
   "window_arrangement": "asymmetric",
@@ -387,7 +387,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "235 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a white-painted low commercial facade with bold black signboards and mural-painted lower walls palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 0 window bays from lower to upper levels, using storefront, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "facade_description": "235 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a white-painted low commercial facade with bold black signboards and mural-painted lower walls palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 0 window bays from lower to upper levels, using storefront, and 2 principal entrances. Key storefront and facade features include cornice.",
   "heritage_summary": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Baldwin Street.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],

@@ -25,7 +25,7 @@
     "glass_guard",
     "box_bay"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "light gray stone-look cladding with white smooth panels and dark gray metal-framed glazing",
   "windows_per_floor": [
     3,
@@ -41,12 +41,12 @@
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 268,
-    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th",
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -61,8 +61,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -111,7 +111,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "98 Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "98 OXFORD ST"
     ],
@@ -189,15 +189,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.999482+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #444343",
-        "trim": "#3A2A20 \u2192 #533828",
-        "accent": "#3A2A20 \u2192 #32251C",
-        "mortar": "#B0A898 \u2192 #9A8C7C"
+        "roof": "#5A5A5A → #444343",
+        "trim": "#3A2A20 → #533828",
+        "accent": "#3A2A20 → #32251C",
+        "mortar": "#B0A898 → #9A8C7C"
       }
     ],
     "qa_final_fixes": [
@@ -207,7 +207,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.374817Z"
   },
   "photo_observations": {
     "facade_colour_observed": "light gray stone-look cladding with white smooth panels and dark gray metal-framed glazing",
@@ -326,7 +327,7 @@
     "trim_colour_hex": "#533828",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th.",
+    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
     "heritage_expression": "Character-defining facade elements include cornice.",
     "secondary_material": "mixed (previously mixed)",
     "mortar_colour_hex": "#9A8C7C"
@@ -395,14 +396,21 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "98 Oxford St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as mixed in a light gray stone-look cladding with white smooth panels and dark gray metal-framed glazing palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
-  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th.",
+  "facade_description": "98 Oxford St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as mixed masonry in a light gray stone-look cladding with white smooth panels and dark gray metal-framed glazing palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage": {
+      "text": "Tatami Imports",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "colour_palette": {
     "facade_hex": "#8A8A8A",

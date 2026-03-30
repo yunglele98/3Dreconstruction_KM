@@ -2,11 +2,11 @@
   "building_name": "443 Bathurst St",
   "floors": 3,
   "floor_heights_m": [
-    2.21,
-    2.21,
-    1.92
+    2.4,
+    2.4,
+    2.4
   ],
-  "total_height_m": 6.34,
+  "total_height_m": 7.2,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
@@ -50,21 +50,21 @@
       "original_windows",
       "decorative_brick"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (511) | Commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20133)",
+    "residential_floors": "All floors (1–3)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -109,7 +109,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "443 Bathurst St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "443 BATHURST ST"
     ],
@@ -167,18 +167,25 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.084580+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B06845",
-        "roof": "#5A5A5A \u2192 #535252",
-        "trim": "#E8E0D0 \u2192 #3E2D21",
-        "accent": "#3A2A20 \u2192 #563E2B",
-        "mortar": "#B0A898 \u2192 #AAA395"
+        "facade": "#B85A3A → #B06845",
+        "roof": "#5A5A5A → #535252",
+        "trim": "#E8E0D0 → #3E2D21",
+        "accent": "#3A2A20 → #563E2B",
+        "mortar": "#B0A898 → #AAA395"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 6.34,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "decorative_elements": {
     "decorative_brickwork": {

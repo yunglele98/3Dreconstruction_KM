@@ -1,7 +1,7 @@
 {
   "building_name": "417 Spadina Ave (Mexi-Pak Fusion Taco's)",
   "floors": 2,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "bright yellow painted storefront with green sign fascia and menu-covered display window",
   "windows_per_floor": [
     2,
@@ -71,7 +71,7 @@
     "photo": "IMG_20260321_012517627_HDR.jpg"
   },
   "_meta": {
-    "address": "417 Spadina Ave (Mexi-Pak FusionTaco\u00b4S)",
+    "address": "417 Spadina Ave (Mexi-Pak FusionTaco´S)",
     "photo": "IMG_20260321_012517627_HDR.jpg",
     "agent": "codex-gpt-5",
     "timestamp": "2026-03-24T16:35:00-04:00",
@@ -152,16 +152,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.710596+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.036417Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #545454",
-        "trim": "#E8E0D0 \u2192 #433223",
-        "accent": "#2A3A2A \u2192 #403625",
-        "mortar": "#B0A898 \u2192 #BAA990"
+        "roof": "#5A5A5A → #545454",
+        "trim": "#E8E0D0 → #433223",
+        "accent": "#2A3A2A → #403625",
+        "mortar": "#B0A898 → #BAA990"
       }
     ]
   },
@@ -287,7 +287,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "417 Spadina Ave (Mexi-Pak Fusion Taco's) is a commercial building with a street-level storefront. The street frontage spans roughly 8 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a bright yellow painted storefront with green sign fascia and menu-covered display window palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Key storefront and facade features include cornice.",
+  "facade_description": "417 Spadina Ave (Mexi-Pak Fusion Taco's) is a commercial building with a street-level storefront. The street frontage spans roughly 8 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a bright yellow painted storefront with green sign fascia and menu-covered display window palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

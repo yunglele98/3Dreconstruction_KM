@@ -2,11 +2,11 @@
   "building_name": "223 Augusta Ave",
   "floors": 3,
   "floor_heights_m": [
-    1.89,
-    1.89,
-    1.9
+    2.4,
+    2.4,
+    2.4
   ],
-  "total_height_m": 5.68,
+  "total_height_m": 7.2,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -40,12 +40,12 @@
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 39,
-    "statement_of_contribution": "The properties at 219 and 225 Augusta Avenue each have value as a nineteenth-century House- form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as the outside two of a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including a cross-gabled roofline, brick cladding and fenestration. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 19. 219 Augusta Avenue N/A 20. 225 Augusta Avenue N/A 26 DCH | FO :D 230 Augusta Avenue 230 AUGUSTA AVENUE",
+    "statement_of_contribution": "The properties at 219 and 225 Augusta Avenue each have value as a nineteenth-century House- form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as the outside two of a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including a cross-gabled roofline, brick cladding and fenestration. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 19. 219 Augusta Avenue N/A 20. 225 Augusta Avenue N/A 26 DCH | FO :D 230 Augusta Avenue 230 AUGUSTA AVENUE",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -99,12 +99,12 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "223 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "223 AUGUSTA AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
+      "timestamp": "2026-03-30T02:31:50",
       "old_total_height_m": 5.68,
       "new_total_height_m": 7.2,
       "floors": 3.0,
@@ -170,17 +170,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.816072+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.248825Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #8F3F23",
-        "roof": "#5A5A5A \u2192 #60574F",
-        "trim": "#3A2A20 \u2192 #39291F",
-        "accent": "#3A2A20 \u2192 #1A2928",
-        "mortar": "#B0A898 \u2192 #AD9C8D"
+        "facade": "#B85A3A → #8F3F23",
+        "roof": "#5A5A5A → #60574F",
+        "trim": "#3A2A20 → #39291F",
+        "accent": "#3A2A20 → #1A2928",
+        "mortar": "#B0A898 → #AD9C8D"
       }
     ]
   },

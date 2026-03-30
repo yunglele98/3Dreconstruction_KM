@@ -110,7 +110,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "264 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "264 AUGUSTA AVE"
     ],
@@ -164,7 +164,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.193220+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
@@ -183,7 +183,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.850249Z"
   },
   "photo_observations": {
     "facade_colour_observed": "weathered red brick with dark red trim and wood infill at the former bay opening",
@@ -388,7 +389,18 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",
@@ -468,5 +480,5 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "inferred_setback_m": 1.5
+  "inferred_setback_m": 0.0
 }

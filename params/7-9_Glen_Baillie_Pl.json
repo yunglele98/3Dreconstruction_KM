@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "duplicate \u2014 pair photo; observations in 7_ and 9_ individual files",
+  "reason": "duplicate — pair photo; observations in 7_ and 9_ individual files",
   "photo": "IMG_20260316_114305141_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -33,7 +33,7 @@
       "8 GLEN BAILLIE PL",
       "9 GLEN BAILLIE PL"
     ],
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "cleanup_fixes": [
       "roof_type -> gable",
       "building_name -> 7-9 Glen Baillie Pl"
@@ -115,15 +115,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.356269+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #494949",
-        "trim": "#E8E0D0 \u2192 #342B24",
-        "accent": "#2A3A2A \u2192 #563E2D",
-        "mortar": "#B0A898 \u2192 #B7A58C"
+        "roof": "#5A5A5A → #494949",
+        "trim": "#E8E0D0 → #342B24",
+        "accent": "#2A3A2A → #563E2D",
+        "mortar": "#B0A898 → #B7A58C"
       }
     ]
   },

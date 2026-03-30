@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
@@ -47,21 +47,21 @@
     "building_features": [
       "original_windows"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
     "building_type": "commercial",
     "general_use": "Mixed Use",
-    "land_use": "Residential \u2013 Detached House",
+    "land_use": "Residential – Detached House",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (511) | Commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 20,
-    "residential_floors": "All floors (1\u20133) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–3) – residential building on commercial land",
     "heritage_feature_count": 1
   },
   "_meta": {
@@ -99,7 +99,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "347 Bathurst St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "347 BATHURST ST"
     ],
@@ -152,16 +152,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.024446+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A7714E",
-        "roof": "#5A5A5A \u2192 #4A4A4A",
-        "trim": "#E8E0D0 \u2192 #463627",
-        "accent": "#1A1A2A \u2192 #404736",
-        "mortar": "#B0A898 \u2192 #B4AB9B"
+        "facade": "#B85A3A → #A7714E",
+        "roof": "#5A5A5A → #4A4A4A",
+        "trim": "#E8E0D0 → #463627",
+        "accent": "#1A1A2A → #404736",
+        "mortar": "#B0A898 → #B4AB9B"
       }
     ]
   },

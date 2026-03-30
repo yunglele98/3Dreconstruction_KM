@@ -1,7 +1,7 @@
 {
   "building_name": "295 College St (Royal Care Walk-in Clinic + others)",
   "floors": 2,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "dark gray modern panel facade with red Royal Care Medical Centre lettering and blue-lit entrance signs",
   "windows_per_floor": [
     0,
@@ -98,7 +98,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "295 College St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "295 COLLEGE ST"
     ],
@@ -150,16 +150,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.515769+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.306325Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #554D4D",
-        "trim": "#E8E0D0 \u2192 #313131",
-        "accent": "#2A3A2A \u2192 #2A3222",
-        "mortar": "#B0A898 \u2192 #BAAA90"
+        "roof": "#5A5A5A → #554D4D",
+        "trim": "#E8E0D0 → #313131",
+        "accent": "#2A3A2A → #2A3222",
+        "mortar": "#B0A898 → #BAAA90"
       }
     ]
   },
@@ -300,7 +300,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "295 College St (Royal Care Walk-in Clinic + others) is a commercial building with a street-level storefront. The street frontage spans roughly 6.1 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a dark gray modern panel facade with red royal care medical centre lettering and blue-lit entrance signs palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using fixed, and 1 principal entrance. Key storefront and facade features include cornice.",
+  "facade_description": "295 College St (Royal Care Walk-in Clinic + others) is a commercial building with a street-level storefront. The street frontage spans roughly 6.1 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a dark gray modern panel facade with red royal care medical centre lettering and blue-lit entrance signs palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using fixed, and 1 principal entrance. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

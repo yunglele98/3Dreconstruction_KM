@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "painted wood siding",
+  "facade_material": "Clapboard",
   "facade_colour": "painted (painted wood siding)",
   "windows_per_floor": [
     0,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "1914-1930",
-    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 44,
-    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated with the Imperial Bakery. Founded in the early 1920s by the Lottman family, the bakery was an important meeting place for the Jewish women of Kensington Market who would meet and use the large ovens to keep their cholent (slow cooked stew) warm overnight for Sabbath. In 1947, the bakery relocated across the street. The property has retained building features reflecting vernacular interpretations of early-twentieth-century architectural styles, including its brick cladding and segmentally arched window openings with brick voussoirs at the second storey. Contextually, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated with the Imperial Bakery. Founded in the early 1920s by the Lottman family, the bakery was an important meeting place for the Jewish women of Kensington Market who would meet and use the large ovens to keep their cholent (slow cooked stew) warm overnight for Sabbath. In 1947, the bakery relocated across the street. The property has retained building features reflecting vernacular interpretations of early-twentieth-century architectural styles, including its brick cladding and segmentally arched window openings with brick voussoirs at the second storey. Contextually, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -104,7 +104,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "172 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "172 BALDWIN ST"
     ],
@@ -202,13 +202,13 @@
       "timestamp": "2026-03-29T08:34:17.283600Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.089587Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "mortar": "#B0A898 \u2192 #CFC6B5"
+        "mortar": "#B0A898 → #CFC6B5"
       }
     ]
   },
@@ -445,7 +445,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "172 Baldwin St is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by painted wood siding, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "facade_description": "172 Baldwin St is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by clapboard in a painted (painted wood siding) palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
   "heritage_summary": "In 1947, the bakery relocated across the street. The property has value as an early-twentieth-century two-storey Commercial building.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {

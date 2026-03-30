@@ -22,7 +22,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "painted brick",
+  "facade_material": "Brick",
   "facade_colour": "#B85A3A",
   "windows_per_floor": [
     0,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
     "construction_date": "Pre-1889, 1914-1930",
-    "architectural_style": "Commercial (42 Kensington Avenue), Converted House-form (44 Kensington Avenue), Semi-detached, Bay-andGable (44 Kensington Avenue) (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889, 1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (42 Kensington Avenue), Converted House-form (44 Kensington Avenue), Semi-detached, Bay-andGable (44 Kensington Avenue) (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 208,
-    "statement_of_contribution": "The property at 42 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure. The property at 44 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the addition at 42 Kensington Avenue has retained building features including its decorative brick parapet and second storey window openings with stone lintels and sills. The property at 44 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property at 42 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure. The property at 44 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the addition at 42 Kensington Avenue has retained building features including its decorative brick parapet and second storey window openings with stone lintels and sills. The property at 44 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "bay_window"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -107,7 +107,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "42 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "42 KENSINGTON AVE"
     ],
@@ -200,15 +200,15 @@
       "timestamp": "2026-03-29T08:34:20.925671Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.192578Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A24C2A",
-        "roof": "#5A5A5A \u2192 #526161",
-        "mortar": "#B0A898 \u2192 #A99B83"
+        "facade": "#B85A3A → #A24C2A",
+        "roof": "#5A5A5A → #526161",
+        "mortar": "#B0A898 → #A99B83"
       }
     ]
   },
@@ -437,7 +437,7 @@
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "42 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial, converted house-form, semi-detached typology. The frontage is defined primarily by painted brick in a #b85a3a palette, laid in running bond (under paint) with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Key storefront and facade features include decorative brick, bay window, cornice, gable brackets.",
+  "facade_description": "42 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial, converted house-form, semi-detached typology. The frontage is defined primarily by brick in a #b85a3a palette, laid in running bond (under paint) with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Key storefront and facade features include decorative brick, bay window, cornice, gable brackets.",
   "heritage_summary": "Constructed between 1924 and 1930, the addition at 42 Kensington Avenue has retained building features including its decorative brick parapet and second storey window openings with stone lintels and sills. The property at 44 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {

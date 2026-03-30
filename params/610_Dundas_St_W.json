@@ -22,7 +22,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "altered two-storey commercial facade with mixed signage and a posted city variance notice",
   "windows_per_floor": [
     0,
@@ -38,14 +38,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -58,15 +58,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 2,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 40,
-    "signage": "Super Star Salon / \u5de8\u661f\u9aee\u5eca (Chinese and English signage); Convenience Food Mart partially visible",
+    "signage": "Super Star Salon / 巨星髮廊 (Chinese and English signage); Convenience Food Mart partially visible",
     "street_presence": "neglected"
   },
   "city_data": {
@@ -78,7 +78,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 9,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -100,7 +100,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "610 Dundas St W",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "610 DUNDAS ST W"
     ],
@@ -175,16 +175,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.951512+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.290907Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #584D4D",
-        "trim": "#E8E0D0 \u2192 #412C1D",
-        "accent": "#3A2A20 \u2192 #3A4332",
-        "mortar": "#B0A898 \u2192 #ACA496"
+        "roof": "#5A5A5A → #584D4D",
+        "trim": "#E8E0D0 → #412C1D",
+        "accent": "#3A2A20 → #3A4332",
+        "mortar": "#B0A898 → #ACA496"
       }
     ]
   },
@@ -349,7 +349,7 @@
     }
   },
   "street_setback_m": 0.5,
-  "facade_description": "610 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "610 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as mixed masonry in a altered two-storey commercial facade with mixed signage and a posted city variance notice palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "colour_palette": {

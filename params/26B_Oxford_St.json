@@ -38,12 +38,12 @@
     "typology": "House-form, Row, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 242,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear",
     "building_features": [
       "original_windows",
       "cornice"
@@ -54,15 +54,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -100,7 +100,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "26B Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "26B OXFORD ST"
     ],
@@ -157,16 +157,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.225787+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BE6242",
-        "roof": "#5A5A5A \u2192 #665E56",
-        "trim": "#3A2A20 \u2192 #2D221A",
-        "accent": "#3A2A20 \u2192 #4C3827",
-        "mortar": "#B0A898 \u2192 #978777"
+        "facade": "#B85A3A → #BE6242",
+        "roof": "#5A5A5A → #665E56",
+        "trim": "#3A2A20 → #2D221A",
+        "accent": "#3A2A20 → #4C3827",
+        "mortar": "#B0A898 → #978777"
       }
     ]
   },
@@ -205,7 +205,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, cornice.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
     "mortar_colour_hex": "#978777"
   },
   "roof_colour": "#5A5A5A",
@@ -283,7 +283,7 @@
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "26B Oxford St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include original windows, cornice.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "photo_observations": {

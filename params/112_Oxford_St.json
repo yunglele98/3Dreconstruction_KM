@@ -38,12 +38,12 @@
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 271,
-    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th",
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -58,8 +58,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "112 Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "112 OXFORD ST"
     ],
@@ -175,16 +175,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.309271+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A44B32",
-        "roof": "#5A5A5A \u2192 #414141",
-        "trim": "#3A2A20 \u2192 #34251C",
-        "accent": "#3A2A20 \u2192 #1C2F2D",
-        "mortar": "#B0A898 \u2192 #A89882"
+        "facade": "#B85A3A → #A44B32",
+        "roof": "#5A5A5A → #414141",
+        "trim": "#3A2A20 → #34251C",
+        "accent": "#3A2A20 → #1C2F2D",
+        "mortar": "#B0A898 → #A89882"
       }
     ],
     "qa_final_fixes": [
@@ -194,7 +194,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.630273Z"
   },
   "doors_detail": [
     {
@@ -223,7 +224,7 @@
     "trim_colour_hex": "#34251C",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th.",
+    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
     "mortar_colour_hex": "#A89882",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
   },
@@ -284,13 +285,20 @@
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "112 Oxford St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th.",
+  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage": {
+      "text": "Kensington Market House",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "source": "synthesized_from_params",

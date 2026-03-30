@@ -24,7 +24,7 @@
   "roof_features": [
     "front_gable"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "white and black storefront at grade with a pink mural-covered upper side wall and dark roof shingles",
   "windows_per_floor": [
     2,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 34,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property retains many original building features, including its chamfered corner, commercial storefronts along Augusta Avenue and Oxford Street, second storey window openings, and third-storey mansard roof with dormers. Anchoring the southeast corner of Augusta Avenue and Oxford Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Oxford Street.",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property retains many original building features, including its chamfered corner, commercial storefronts along Augusta Avenue and Oxford Street, second storey window openings, and third-storey mansard roof with dormers. Anchoring the southeast corner of Augusta Avenue and Oxford Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Oxford Street.",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "285 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "285 AUGUSTA AVE"
     ],
@@ -178,16 +178,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.421900+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.134867Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #3E3E3E",
-        "trim": "#3A2A20 \u2192 #473526",
-        "accent": "#3A2A20 \u2192 #292922",
-        "mortar": "#B0A898 \u2192 #A89882"
+        "roof": "#5A5A5A → #3E3E3E",
+        "trim": "#3A2A20 → #473526",
+        "accent": "#3A2A20 → #292922",
+        "mortar": "#B0A898 → #A89882"
       }
     ]
   },
@@ -274,7 +274,7 @@
     "roof_features": [
       "front_gable"
     ],
-    "signage_observed": "Medicinal Mushroom Dispensary signs adjacent to Taquer\u00eda El Pastorcito signage.",
+    "signage_observed": "Medicinal Mushroom Dispensary signs adjacent to Taquería El Pastorcito signage.",
     "photo": "IMG_20260318_145019269_HDR.jpg"
   },
   "window_arrangement": "asymmetric",
@@ -415,7 +415,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "285 Augusta Ave is a converted house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed in a white and black storefront at grade with a pink mural-covered upper side wall and dark roof shingles palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include bay window, original windows, cornice.",
+  "facade_description": "285 Augusta Ave is a converted house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed masonry in a white and black storefront at grade with a pink mural-covered upper side wall and dark roof shingles palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Oxford Street.",
   "roof_material": "Slate shingles",
   "volumes": [],

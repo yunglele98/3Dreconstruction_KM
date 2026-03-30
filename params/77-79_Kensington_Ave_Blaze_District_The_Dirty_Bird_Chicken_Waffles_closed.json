@@ -12,7 +12,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "painted stucco/render",
+  "facade_material": "Stucco",
   "facade_colour": "painted (painted stucco/render)",
   "windows_per_floor": [
     0,
@@ -97,7 +97,7 @@
       "78 KENSINGTON AVE",
       "79 KENSINGTON AVE"
     ],
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "facade_analysis_applied": [
       "kensington_ave_facades_2026-03-26T14:10:40"
     ],
@@ -143,14 +143,14 @@
       "timestamp": "2026-03-29T08:34:23.287763Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.849241Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#E8E0D0 \u2192 #422B1E",
-        "mortar": "#B0A898 \u2192 #AFA799"
+        "trim": "#E8E0D0 → #422B1E",
+        "mortar": "#B0A898 → #AFA799"
       }
     ]
   },
@@ -295,7 +295,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "77-79 Kensington Ave (Blaze District / Dirty Bird) is a commercial building with a street-level storefront. The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by painted stucco/render, laid in n/a with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using double hung, and 3 principal entrances. Key storefront and facade features include cornice.",
+  "facade_description": "77-79 Kensington Ave (Blaze District / Dirty Bird) is a commercial building with a street-level storefront. The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by stucco, laid in n/a with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using double hung, and 3 principal entrances. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

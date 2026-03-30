@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "painted brick",
+  "facade_material": "Brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "1914-1930",
-    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 42,
-    "statement_of_contribution": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. Contextually, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. The property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. Contextually, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "cornice",
       "decorative_brick"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -110,7 +110,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "168 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "168 BALDWIN ST"
     ],
@@ -198,14 +198,14 @@
       "timestamp": "2026-03-29T08:34:17.197175Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.987581Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "porch_enriched": "2026-03-29T08:38:21.738478Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "mortar": "#B0A898 \u2192 #C8BFAE"
+        "mortar": "#B0A898 → #C8BFAE"
       }
     ]
   },
@@ -418,7 +418,7 @@
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "168 Baldwin St is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by painted brick in a red brick palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 2 principal entrances. Key storefront and facade features include cornice, decorative brick, string courses.",
+  "facade_description": "168 Baldwin St is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 2 principal entrances. Key storefront and facade features include cornice, decorative brick, string courses.",
   "heritage_summary": "Constructed between 1924 and 1930, the property has retained its brick cladding, second storey window openings with cast stone sills and brick surrounds, cornice, and cast stone capped pediment with stone coat of arms. The property has value as an early-twentieth-century vernacular style two-storey commercial addition to a nineteenth-century residential structure.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {

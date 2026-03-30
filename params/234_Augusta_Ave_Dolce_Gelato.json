@@ -41,7 +41,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "234 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "234 AUGUSTA AVE"
     ],
@@ -96,17 +96,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.910635+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.381716Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AC3B30",
-        "roof": "#5A5A5A \u2192 #535353",
-        "trim": "#E8E0D0 \u2192 #513B2A",
-        "accent": "#2A3A2A \u2192 #2F3827",
-        "mortar": "#B0A898 \u2192 #BFB6A5"
+        "facade": "#B85A3A → #AC3B30",
+        "roof": "#5A5A5A → #535353",
+        "trim": "#E8E0D0 → #513B2A",
+        "accent": "#2A3A2A → #2F3827",
+        "mortar": "#B0A898 → #BFB6A5"
       }
     ]
   },

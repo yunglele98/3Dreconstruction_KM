@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 92,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties have retained many of their original building features including first-storey bay windows, brick cladding, and decorative brickwork. 80 Bellevue Avenue also retains a projecting bay and cross-gabled roofline. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties have retained many of their original building features including first-storey bay windows, brick cladding, and decorative brickwork. 80 Bellevue Avenue also retains a projecting bay and cross-gabled roofline. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "bay_window",
       "original_windows",
@@ -57,15 +57,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -113,7 +113,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "80 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "80 BELLEVUE AVE"
     ],
@@ -172,16 +172,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.676358+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B13C1D",
-        "roof": "#5A5A5A \u2192 #565555",
-        "trim": "#3A2A20 \u2192 #221913",
-        "accent": "#3A2A20 \u2192 #2A3123",
-        "mortar": "#B0A898 \u2192 #AA9880"
+        "facade": "#B85A3A → #B13C1D",
+        "roof": "#5A5A5A → #565555",
+        "trim": "#3A2A20 → #221913",
+        "accent": "#3A2A20 → #2A3123",
+        "mortar": "#B0A898 → #AA9880"
       }
     ]
   },

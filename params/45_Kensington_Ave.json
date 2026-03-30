@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "House-Form, Row",
     "construction_date": "1904-1913",
-    "architectural_style": "House-Form, Row (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-Form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1900,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 209,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows",
@@ -64,8 +64,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 7,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -103,7 +103,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "45 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "45 KENSINGTON AVE"
     ],
@@ -165,15 +165,18 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.194144+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A5563A",
-        "trim": "#2A2A2A \u2192 #191818",
-        "accent": "#3A2A20 \u2192 #453D2E",
-        "mortar": "#B0A898 \u2192 #A7A092"
+        "facade": "#B85A3A → #A5563A",
+        "trim": "#2A2A2A → #191818",
+        "accent": "#3A2A20 → #453D2E",
+        "mortar": "#B0A898 → #A7A092"
+      },
+      {
+        "roof": "#5A5A5A → #514848"
       }
     ],
     "qa_final_fixes": [
@@ -184,7 +187,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.090600Z"
   },
   "bay_window": {
     "present": true,
@@ -309,7 +313,18 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "db_context": {
@@ -338,7 +353,7 @@
     "mortar_hex": "#C8C0B0",
     "facade": "#A5563A",
     "trim": "#191818",
-    "roof": "#5A5A5A",
+    "roof": "#514848",
     "accent": "#453D2E"
   },
   "deep_facade_analysis": {

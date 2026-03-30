@@ -78,17 +78,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.180324+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.556891Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AC5A3D",
-        "roof": "#5A5A5A \u2192 #575757",
-        "trim": "#E8E0D0 \u2192 #30231C",
-        "accent": "#2A3A2A \u2192 #303828",
-        "mortar": "#B0A898 \u2192 #AC9B88"
+        "facade": "#B85A3A → #AC5A3D",
+        "roof": "#5A5A5A → #575757",
+        "trim": "#E8E0D0 → #30231C",
+        "accent": "#2A3A2A → #303828",
+        "mortar": "#B0A898 → #AC9B88"
       }
     ]
   },

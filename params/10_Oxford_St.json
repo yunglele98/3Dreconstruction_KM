@@ -2,10 +2,10 @@
   "building_name": "10 Oxford St",
   "floors": 2,
   "floor_heights_m": [
-    5.15,
-    5.15
+    4.8,
+    4.8
   ],
-  "total_height_m": 10.3,
+  "total_height_m": 9.6,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -38,12 +38,12 @@
     "typology": "House-form, Row",
     "construction_date": "1890-1903",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 235,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential developm",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential developm",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -97,13 +97,13 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "10 Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "10 OXFORD ST"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
-      "old_total_height_m": 11.97,
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 10.3,
       "new_total_height_m": 9.6,
       "floors": 2.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
@@ -169,16 +169,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.259060+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #965C44",
-        "roof": "#5A5A5A \u2192 #5E5555",
-        "trim": "#E8E0D0 \u2192 #35251C",
-        "accent": "#2A3A2A \u2192 #26262A",
-        "mortar": "#B0A898 \u2192 #A69789"
+        "facade": "#B85A3A → #965C44",
+        "roof": "#5A5A5A → #5E5555",
+        "trim": "#E8E0D0 → #35251C",
+        "accent": "#2A3A2A → #26262A",
+        "mortar": "#B0A898 → #A69789"
       }
     ]
   },
@@ -209,7 +209,7 @@
     "trim_colour_hex": "#35251C",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential developm.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential developm.",
     "mortar_colour_hex": "#A69789",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
   },
@@ -261,7 +261,7 @@
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "10 Oxford St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential developm.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential developm.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],
   "photo_observations": {

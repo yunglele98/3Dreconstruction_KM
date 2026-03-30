@@ -1,7 +1,7 @@
 {
   "building_name": "340 College St",
   "floors": 6,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "red brick mid-rise with beige accent bands, green-tinted glazing, and a pale metal-clad upper setback",
   "windows_per_floor": [
     3,
@@ -199,16 +199,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.973172+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:15.103669Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #4A4949",
-        "trim": "#E8E0D0 \u2192 #513E2B",
-        "accent": "#2A3A2A \u2192 #242429",
-        "mortar": "#B0A898 \u2192 #B8A890"
+        "roof": "#5A5A5A → #4A4949",
+        "trim": "#E8E0D0 → #513E2B",
+        "accent": "#2A3A2A → #242429",
+        "mortar": "#B0A898 → #B8A890"
       }
     ]
   },
@@ -451,7 +451,7 @@
     }
   ],
   "street_setback_m": 2.0,
-  "facade_description": "340 College St is a commercial building with a street-level storefront. The street frontage spans roughly 30 metres across 6 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a red brick mid-rise with beige accent bands, green-tinted glazing, and a pale metal-clad upper setback palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 3, 3, 3, 3, 6 window bays from lower to upper levels, using rectangular, and 6 principal entrances. Key storefront and facade features include string courses, cornice.",
+  "facade_description": "340 College St is a commercial building with a street-level storefront. The street frontage spans roughly 30 metres across 6 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a red brick mid-rise with beige accent bands, green-tinted glazing, and a pale metal-clad upper setback palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 3, 3, 3, 3, 6 window bays from lower to upper levels, using rectangular, and 6 principal entrances. Key storefront and facade features include string courses, cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

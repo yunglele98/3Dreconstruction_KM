@@ -1,7 +1,7 @@
 {
   "building_name": "406-414 Bathurst St",
   "floors": 4,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "red brick base with pale grey brick vertical panels and black aluminum window framing",
   "windows_per_floor": [
     3,
@@ -177,15 +177,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.602891+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #4F5353",
-        "trim": "#E8E0D0 \u2192 #272727",
-        "accent": "#2A3A2A \u2192 #2E3E2B",
-        "mortar": "#B0A898 \u2192 #B4A48F"
+        "roof": "#5A5A5A → #4F5353",
+        "trim": "#E8E0D0 → #272727",
+        "accent": "#2A3A2A → #2E3E2B",
+        "mortar": "#B0A898 → #B4A48F"
       }
     ]
   },
@@ -371,7 +371,7 @@
     }
   ],
   "street_setback_m": 2.0,
-  "facade_description": "406-414 Bathurst St is a commercial building with a street-level storefront. The street frontage spans roughly 25 metres across 4 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a red brick base with pale grey brick vertical panels and black aluminum window framing palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 4, 4, 4 window bays from lower to upper levels, using fixed/storefront, and 4 principal entrances. Key storefront and facade features include cornice.",
+  "facade_description": "406-414 Bathurst St is a commercial building with a street-level storefront. The street frontage spans roughly 25 metres across 4 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a red brick base with pale grey brick vertical panels and black aluminum window framing palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 4, 4, 4 window bays from lower to upper levels, using fixed/storefront, and 4 principal entrances. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

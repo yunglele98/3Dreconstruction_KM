@@ -39,8 +39,8 @@
   "hcd_data": {
     "typology": "Institutional",
     "construction_date": "1878",
-    "architectural_style": "Institutional (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1878 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Institutional (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1878 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1910,
     "sub_area": "",
     "contributing": "Yes",
@@ -57,15 +57,15 @@
   "context": {
     "building_type": "institutional",
     "general_use": "Institutional",
-    "land_use": "Institutional \u2013 Civic",
+    "land_use": "Institutional – Civic",
     "commercial_use": "Other Commercial",
     "business_name": "Toronto Fire Station 315",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 5,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": null,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -103,7 +103,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "132 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "132 BELLEVUE AVE"
     ],
@@ -161,17 +161,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.576799+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.392968Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #C75C45",
-        "roof": "#5A5A5A \u2192 #595858",
-        "trim": "#E8E0D0 \u2192 #472F20",
-        "accent": "#1A1A2A \u2192 #3D2B22",
-        "mortar": "#B0A898 \u2192 #A69585"
+        "facade": "#B85A3A → #C75C45",
+        "roof": "#5A5A5A → #595858",
+        "trim": "#E8E0D0 → #472F20",
+        "accent": "#1A1A2A → #3D2B22",
+        "mortar": "#B0A898 → #A69585"
       }
     ]
   },

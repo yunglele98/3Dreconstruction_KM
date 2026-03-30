@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "painted brick",
+  "facade_material": "Brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     2,
@@ -38,12 +38,12 @@
     "typology": "House-form, Detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 88,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "commercial",
     "general_use": "Mixed Use",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "NEW SEAWAY FISH MARKET",
     "business_category": "Vintage/Thrift",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 5,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -100,7 +100,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "195 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "195 BALDWIN ST"
     ],
@@ -175,14 +175,14 @@
       "timestamp": "2026-03-29T08:34:17.761823Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.666428Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#3A2A20 \u2192 #483322",
-        "mortar": "#B0A898 \u2192 #B09E8D"
+        "trim": "#3A2A20 → #483322",
+        "mortar": "#B0A898 → #B09E8D"
       }
     ]
   },
@@ -236,7 +236,7 @@
     "trim_colour_hex": "#483322",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
     "mortar_colour_hex": "#B09E8D",
     "heritage_expression": "Character-defining elements include ground-floor storefront."
   },
@@ -296,8 +296,8 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.9,
-  "facade_description": "195 Baldwin St is a house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached typology. The facade reads primarily as painted brick in a red brick palette, laid in running bond (painted over) with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+  "facade_description": "195 Baldwin St is a house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached typology. The facade reads primarily as brick, laid in running bond (painted over) with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

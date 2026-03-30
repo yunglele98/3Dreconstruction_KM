@@ -154,10 +154,10 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.550372+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.402455Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
     "colour_diversification_changes": [
       {
         "facade": "#B85A3A → #A25D4C",
@@ -165,6 +165,9 @@
         "trim": "#E8E0D0 → #3A2A20",
         "accent": "#2A3A2A → #403424",
         "mortar": "#B0A898 → #A49687"
+      },
+      {
+        "trim": "#3A2A20 → #432C1F"
       }
     ]
   },
@@ -237,7 +240,7 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2A20",
+    "trim_colour_hex": "#432C1F",
     "composition": "The street frontage spans roughly 8 metres across 2 storeys beneath a flat, consistent with its commercial typology.",
     "opening_rhythm": "The visible opening pattern is organized as 5, 2 window bays from lower to upper levels, using storefront, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include cornice.",
@@ -316,7 +319,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#A25D4C",
-    "trim": "#3A2A20",
+    "trim": "#432C1F",
     "roof": "#494949",
     "accent": "#403424"
   },

@@ -38,12 +38,12 @@
     "typology": "Parks/Open Space",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 358,
-    "statement_of_contribution": "Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A lifelong resident and shop owner who first set up her store in the 1930s, she was a well-loved figure in the community who is representative of the small business owners and residents who define Kensington Market. Contextually, the property is physically, functionally, and historically linked to its surroundings where it is important and defining, maintaining, and supporting the distinct built form of the District as a complete community. Sonya\u2019s Parkette also has social and community value as a green space with public amenities that are accessible to residents and visitors of the District. Summary: Reference Primary Address Entrance Address(es) Number 331. 63-65 Oxford Street N/A 177 DCH | FO :D FO YTIC 5202 64 & 66 Oxford Street (R-L) 64 & 66 OXFORD STREET",
+    "statement_of_contribution": "Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A lifelong resident and shop owner who first set up her store in the 1930s, she was a well-loved figure in the community who is representative of the small business owners and residents who define Kensington Market. Contextually, the property is physically, functionally, and historically linked to its surroundings where it is important and defining, maintaining, and supporting the distinct built form of the District as a complete community. Sonya’s Parkette also has social and community value as a green space with public amenities that are accessible to residents and visitors of the District. Summary: Reference Primary Address Entrance Address(es) Number 331. 63-65 Oxford Street N/A 177 DCH | FO :D FO YTIC 5202 64 & 66 Oxford Street (R-L) 64 & 66 OXFORD STREET",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -53,13 +53,13 @@
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
     "commercial_use": "Other Commercial",
-    "business_name": "Otto's Berlin D\u00f6ner",
+    "business_name": "Otto's Berlin Döner",
     "business_category": "Art/Culture",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "256C Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "256C AUGUSTA AVE"
     ],
@@ -167,17 +167,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.095314+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.633203Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B0593F",
-        "roof": "#5A5A5A \u2192 #5D5D5D",
-        "trim": "#E8E0D0 \u2192 #412B1C",
-        "accent": "#3A2A20 \u2192 #52382A",
-        "mortar": "#B0A898 \u2192 #AEA698"
+        "facade": "#B85A3A → #B0593F",
+        "roof": "#5A5A5A → #5D5D5D",
+        "trim": "#E8E0D0 → #412B1C",
+        "accent": "#3A2A20 → #52382A",
+        "mortar": "#B0A898 → #AEA698"
       }
     ]
   },
@@ -195,7 +195,7 @@
       "colour_hex": "#8A2A2A"
     },
     "signage": {
-      "text": "Otto's Berlin D\u00f6ner",
+      "text": "Otto's Berlin Döner",
       "type": "fascia",
       "width_m": 3.6399999999999997,
       "height_m": 0.6,

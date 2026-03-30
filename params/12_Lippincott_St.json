@@ -36,12 +36,12 @@
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 182,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -49,15 +49,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Semi-Detached",
+    "land_use": "Residential – Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Victorian semi-detached",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -76,7 +76,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -95,7 +95,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "12 Lippincott St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "12 LIPPINCOTT ST"
     ],
@@ -150,16 +150,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.552812+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AF5537",
-        "roof": "#5A5A5A \u2192 #484747",
-        "trim": "#3A2A20 \u2192 #2A2018",
-        "accent": "#3A2A20 \u2192 #3D2E23",
-        "mortar": "#B0A898 \u2192 #C0B199"
+        "facade": "#B85A3A → #AF5537",
+        "roof": "#5A5A5A → #484747",
+        "trim": "#3A2A20 → #2A2018",
+        "accent": "#3A2A20 → #3D2E23",
+        "mortar": "#B0A898 → #C0B199"
       }
     ]
   },
@@ -190,7 +190,7 @@
     "trim_colour_hex": "#2A2018",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s.",
     "mortar_colour_hex": "#C0B199",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
   },
@@ -236,7 +236,7 @@
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "12 Lippincott St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "photo_observations": {

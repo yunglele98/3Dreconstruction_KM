@@ -24,7 +24,7 @@
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "not clearly visible \u2014 night photo",
+  "facade_colour": "not clearly visible — night photo",
   "windows_per_floor": [
     0,
     2,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Converted House-form ; House-form, Row, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form (25 Kensington Ave); House-form (21-23 Kensington Ave), Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form (25 Kensington Ave); House-form (21-23 Kensington Ave), Row, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 189,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property at 25 Kensington Avenue also has value for the modifications made to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, brick cladding and flat-headed window openings above the first storey, and decorative wooden gable brackets and pediments. 21 and 23 Kensington have also retained the three-sided bay and window openings at the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The property at 25 Kensington Avenue also has value for the modifications made to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, brick cladding and flat-headed window openings above the first storey, and decorative wooden gable brackets and pediments. 21 and 23 Kensington have also retained the three-sided bay and window openings at the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows",
@@ -64,8 +64,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "23 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "23 KENSINGTON AVE"
     ],
@@ -158,17 +158,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.954440+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.440013Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #9E562E",
-        "roof": "#5A5A5A \u2192 #4C4C4C",
-        "trim": "#3A2A20 \u2192 #503929",
-        "accent": "#3A2A20 \u2192 #1A2C2A",
-        "mortar": "#B0A898 \u2192 #B09F8D"
+        "facade": "#B85A3A → #9E562E",
+        "roof": "#5A5A5A → #4C4C4C",
+        "trim": "#3A2A20 → #503929",
+        "accent": "#3A2A20 → #1A2C2A",
+        "mortar": "#B0A898 → #B09F8D"
       }
     ]
   },
@@ -228,8 +228,8 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.4,
-    "facade_colour_observed": "not clearly visible \u2014 night photo",
-    "facade_material_observed": "brick \u2014 typical for Kensington Ave",
+    "facade_colour_observed": "not clearly visible — night photo",
+    "facade_material_observed": "brick — typical for Kensington Ave",
     "condition_observed": "fair",
     "has_storefront_observed": true,
     "overall_style": "Victorian",
@@ -244,7 +244,7 @@
       "lot_depth_ft": 105,
       "HCD_TYPOLOGY": "Converted House-form (25 Kensington Ave); House-form (21-23 Kensington Ave), Row, Bay-and-Gable",
       "HCD_CONSTRUCTION_DATE": "Pre-1889",
-      "facade_colour_observed": "not clearly visible \u00e2\u20ac\u201d night photo",
+      "facade_colour_observed": "not clearly visible â€” night photo",
       "photo_condition": "fair",
       "ba_condition_rating": 3,
       "ba_storefront_status": "active"
@@ -350,7 +350,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "23 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form ; house-form, row, bay-and-gable typology. The facade reads primarily as brick in a not clearly visible \u2014 night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice, gable brackets.",
+  "facade_description": "23 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form ; house-form, row, bay-and-gable typology. The facade reads primarily as brick in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice, gable brackets.",
   "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, brick cladding and flat-headed window openings above the first storey, and decorative wooden gable brackets and pediments. 21 and 23 Kensington have also retained the three-sided bay and window openings at the first storey.",
   "roof_material": "Slate shingles",
   "volumes": [],

@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -51,22 +51,22 @@
   "context": {
     "building_type": "mixed_use",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Semi-Detached",
+    "land_use": "Residential – Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Other",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Victorian semi-detached",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 10,
-    "signage": "Royal Denture, Chao Chow Association of Ontario (\u5b89\u7701\u6f6e\u5dde\u6703\u9928)",
+    "signage": "Royal Denture, Chao Chow Association of Ontario (安省潮州會館)",
     "street_presence": "maintained"
   },
   "city_data": {
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "56 Lippincott St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "56 LIPPINCOTT ST"
     ],
@@ -160,16 +160,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.703830+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A7573A",
-        "roof": "#5A5A5A \u2192 #494949",
-        "trim": "#E8E0D0 \u2192 #3D322B",
-        "accent": "#3A2A20 \u2192 #2E3525",
-        "mortar": "#B0A898 \u2192 #BDB6A8"
+        "facade": "#B85A3A → #A7573A",
+        "roof": "#5A5A5A → #494949",
+        "trim": "#E8E0D0 → #3D322B",
+        "accent": "#3A2A20 → #2E3525",
+        "mortar": "#B0A898 → #BDB6A8"
       }
     ]
   },

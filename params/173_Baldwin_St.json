@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889, 1924-1930",
-    "architectural_style": "Converted House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889, 1924-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889, 1924-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 46,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed along with 175 Baldwin Street as part of a row, 171 and 173 Baldwin Street have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline and gables. Both properties have been modified to accommodate a one-storey commercial addition. 171 Baldwin Street has also retained its original second storey window openings and pointed arch opening in the gable. The property at 175 Baldwin Street has value for its early-twentieth-century vernacular style two-storey commercial addition. Constructed between 1924 and 1930, the addition has retained its brick cladding with parapet, pressed metal cornices at the first and second storeys, and second storey window openings with brick and stone voussoirs. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed along with 175 Baldwin Street as part of a row, 171 and 173 Baldwin Street have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline and gables. Both properties have been modified to accommodate a one-storey commercial addition. 171 Baldwin Street has also retained its original second storey window openings and pointed arch opening in the gable. The property at 175 Baldwin Street has value for its early-twentieth-century vernacular style two-storey commercial addition. Constructed between 1924 and 1930, the addition has retained its brick cladding with parapet, pressed metal cornices at the first and second storeys, and second storey window openings with brick and stone voussoirs. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "173 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "173 BALDWIN ST"
     ],
@@ -202,12 +202,12 @@
       "timestamp": "2026-03-29T08:34:17.308023Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "mortar": "#B0A898 \u2192 #B0A293"
+        "mortar": "#B0A898 → #B0A293"
       }
     ],
     "qa_final_fixes": [
@@ -217,7 +217,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.718913Z"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -354,7 +355,14 @@
       "colour": "black and white striped"
     },
     "security_grille": true,
-    "signage_text": "Vida NATURAL AND ORGANIC PRODUCTS"
+    "signage_text": "Vida NATURAL AND ORGANIC PRODUCTS",
+    "signage": {
+      "text": "Interesting Things",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260315_154911815_HDR.jpg",
@@ -493,5 +501,5 @@
     "photo": "IMG_20260315_154911815_HDR.jpg"
   },
   "wall_thickness_m": 0.3,
-  "inferred_setback_m": 1.5
+  "inferred_setback_m": 0.0
 }

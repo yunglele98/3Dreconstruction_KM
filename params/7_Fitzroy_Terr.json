@@ -129,15 +129,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.632429+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B96341",
-        "roof": "#5A5A5A \u2192 #5E5E5E",
-        "trim": "#E8E0D0 \u2192 #3F2C22",
-        "mortar": "#B0A898 \u2192 #BCAB8F"
+        "facade": "#B85A3A → #B96341",
+        "roof": "#5A5A5A → #5E5E5E",
+        "trim": "#E8E0D0 → #3F2C22",
+        "mortar": "#B0A898 → #BCAB8F"
       }
     ]
   },
@@ -150,7 +150,7 @@
     }
   },
   "facade_depth_m": 12.0,
-  "facade_colour": "not clearly visible \u2014 night photo",
+  "facade_colour": "not clearly visible — night photo",
   "facade_detail": {
     "brick_colour_hex": "#B96341",
     "bond_pattern": "running bond",
@@ -240,7 +240,7 @@
       }
     }
   ],
-  "facade_description": "7 Fitzroy Terrace is a row-house building. The street elevation spans roughly 5 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as brick in a not clearly visible \u2014 night photo palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include shared rooflines, off-set first storey bay windows.",
+  "facade_description": "7 Fitzroy Terrace is a row-house building. The street elevation spans roughly 5 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as brick in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include shared rooflines, off-set first storey bay windows.",
   "heritage_summary": "Workers' row housing with Victorian features.",
   "party_wall_left": true,
   "party_wall_right": true,
@@ -253,8 +253,8 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.35,
-    "facade_colour_observed": "not clearly visible \u2014 night photo",
-    "facade_material_observed": "brick \u2014 typical for Fitzroy Terrace row",
+    "facade_colour_observed": "not clearly visible — night photo",
+    "facade_material_observed": "brick — typical for Fitzroy Terrace row",
     "condition_observed": "unknown",
     "has_storefront_observed": false,
     "overall_style": "Victorian",

@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Semi-Detached",
+    "land_use": "Residential – Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Other",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Victorian semi-detached",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -99,7 +99,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "62 Lippincott St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "62 LIPPINCOTT ST"
     ],
@@ -159,16 +159,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.014891+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AD5334",
-        "roof": "#5A5A5A \u2192 #595353",
-        "trim": "#E8E0D0 \u2192 #463425",
-        "accent": "#3A2A20 \u2192 #343A2A",
-        "mortar": "#B0A898 \u2192 #ACA494"
+        "facade": "#B85A3A → #AD5334",
+        "roof": "#5A5A5A → #595353",
+        "trim": "#E8E0D0 → #463425",
+        "accent": "#3A2A20 → #343A2A",
+        "mortar": "#B0A898 → #ACA494"
       }
     ]
   },

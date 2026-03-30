@@ -23,7 +23,7 @@
   "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "unknown \u2014 only window detail visible",
+  "facade_colour": "unknown — only window detail visible",
   "windows_per_floor": [
     0,
     2
@@ -38,14 +38,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -58,8 +58,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 4,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -98,7 +98,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "580 Dundas St W",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "580 DUNDAS ST W"
     ],
@@ -151,17 +151,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.762660+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.135716Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A56444",
-        "roof": "#5A5A5A \u2192 #5D5454",
-        "trim": "#E8E0D0 \u2192 #49301F",
-        "accent": "#1A1A2A \u2192 #462C1E",
-        "mortar": "#B0A898 \u2192 #C0BAAB"
+        "facade": "#B85A3A → #A56444",
+        "roof": "#5A5A5A → #5D5454",
+        "trim": "#E8E0D0 → #49301F",
+        "accent": "#1A1A2A → #462C1E",
+        "mortar": "#B0A898 → #C0BAAB"
       }
     ]
   },
@@ -192,14 +192,14 @@
     "lighting": "night",
     "photo_notes": "Close-up of price menu only, no full facade view",
     "has_storefront_observed": true,
-    "storefront_description": "Heng Salon \u2014 hair salon with bilingual Chinese/English price list in window",
-    "signage_observed": "HENG SALON \u975c\u7f8e\u5eca, NADA DAY Canadian flag sticker, Robin Buxton Potts, UNISEX hair poster",
+    "storefront_description": "Heng Salon — hair salon with bilingual Chinese/English price list in window",
+    "signage_observed": "HENG SALON 靜美廊, NADA DAY Canadian flag sticker, Robin Buxton Potts, UNISEX hair poster",
     "confidence": 0.4,
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "photo": "IMG_20260320_011653265_HDR.jpg"
   },
-  "storefront_description": "Heng Salon \u2014 hair salon with bilingual Chinese/English price list in window",
+  "storefront_description": "Heng Salon — hair salon with bilingual Chinese/English price list in window",
   "confidence": 0.6500000000000001,
   "doors_detail": [
     {
@@ -262,7 +262,7 @@
     }
   },
   "street_setback_m": 0.5,
-  "facade_description": "580 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as brick in a unknown \u2014 only window detail visible palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "580 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as brick in a unknown — only window detail visible palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "colour_palette": {

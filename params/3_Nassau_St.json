@@ -1,11 +1,8 @@
 {
   "building_name": "3 Nassau St",
-  "floors": 4,
+  "floors": 1,
   "floor_heights_m": [
-    0.85,
-    0.85,
-    0.85,
-    0.85
+    3.38
   ],
   "total_height_m": 3.38,
   "facade_width_m": 5.2,
@@ -27,10 +24,7 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    2,
-    2,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -101,12 +95,12 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "3 Nassau St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "3 NASSAU ST"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-27T14:58:20",
+      "timestamp": "2026-03-30T02:31:50",
       "old_total_height_m": 3.38,
       "new_total_height_m": 9.6,
       "floors": 4.0,
@@ -170,7 +164,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.510197+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
@@ -188,6 +182,9 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "height_fixes": [
+      "qa_height_mismatch: 9.6m/4F -> 3.38m/1F (LiDAR avg: 3.38m)"
     ]
   },
   "storefront": {
@@ -217,8 +214,8 @@
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#4A4A4A",
-    "composition": "The principal elevation spans roughly 5.2 metres across 4 storeys and is capped by a gable, consistent with its institutional typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance.",
+    "composition": "The principal elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its institutional typology.",
+    "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 0 opening rhythm from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings.",
     "mortar_colour_hex": "#BDB5A3",
     "heritage_expression": "Key heritage elements on the principal elevation include string courses, cornice."
@@ -297,7 +294,7 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
-  "facade_description": "3 Nassau St is an institutional building. The principal elevation spans roughly 5.2 metres across 4 storeys and is capped by a gable, consistent with its institutional typology. The principal elevation is faced primarily in brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance. Key heritage elements on the principal elevation include string courses, cornice.",
+  "facade_description": "3 Nassau St is an institutional building. The principal elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its institutional typology. The principal elevation is faced primarily in brick, laid in running bond with light grey mortar joints. The elevation is ordered in broad vertical bays, with a 0 opening rhythm from lower to upper levels, using double hung, and 1 principal entrance. Key heritage elements on the principal elevation include string courses, cornice.",
   "heritage_summary": "Converted to residential lofts in 2000, its rare institutional built form yields information that contributes to the understanding of the evolution of Kensington Market. Constructed in 1925 as a public school, the property retains a high degree of integrity including its scale, form and massing, brick cladding with stone string courses and cornice, and tall flat headed window openings.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],

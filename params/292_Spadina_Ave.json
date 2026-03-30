@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
@@ -48,7 +48,7 @@
       "cornice",
       "decorative_brick"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
@@ -61,15 +61,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 30,
-    "signage": "Scotiabank / \u52a0\u62ff\u5927\u8c50\u696d\u9280\u884c; Dentist / \u7259\u91ab (upper floor); Chinese language signage",
+    "signage": "Scotiabank / 加拿大豐業銀行; Dentist / 牙醫 (upper floor); Chinese language signage",
     "street_presence": "maintained"
   },
   "city_data": {
@@ -81,7 +81,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -111,7 +111,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "292 Spadina Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "292 SPADINA AVE"
     ],
@@ -172,16 +172,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.493290+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.249316Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #655B5B",
-        "trim": "#E8E0D0 \u2192 #473727",
-        "accent": "#1A1A2A \u2192 #2C3324",
-        "mortar": "#B0A898 \u2192 #ABA394"
+        "roof": "#5A5A5A → #655B5B",
+        "trim": "#E8E0D0 → #473727",
+        "accent": "#1A1A2A → #2C3324",
+        "mortar": "#B0A898 → #ABA394"
       }
     ]
   },

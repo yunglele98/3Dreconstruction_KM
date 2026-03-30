@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
@@ -51,7 +51,7 @@
       "decorative_brick",
       "original_windows"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -64,8 +64,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -84,7 +84,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -103,7 +103,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "273 College St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "273 COLLEGE ST"
     ],
@@ -144,17 +144,20 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.285712+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.893366Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #C1572B",
-        "roof": "#5A5A5A \u2192 #5A5353",
-        "trim": "#E8E0D0 \u2192 #2A2A2A",
-        "accent": "#1A1A2A \u2192 #2B3A29",
-        "mortar": "#B0A898 \u2192 #B5A68F"
+        "facade": "#B85A3A → #C1572B",
+        "roof": "#5A5A5A → #5A5353",
+        "trim": "#E8E0D0 → #2A2A2A",
+        "accent": "#1A1A2A → #2B3A29",
+        "mortar": "#B0A898 → #B5A68F"
+      },
+      {
+        "trim": "#2A2A2A → #3C2B20"
       }
     ]
   },
@@ -221,7 +224,7 @@
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2A2A",
+    "trim_colour_hex": "#3C2B20",
     "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, decorative brick, original windows.",
@@ -366,7 +369,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#C1572B",
-    "trim": "#2A2A2A",
+    "trim": "#3C2B20",
     "roof": "#5A5353",
     "accent": "#2B3A29"
   },

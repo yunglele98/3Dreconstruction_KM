@@ -35,13 +35,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 318,
-    "statement_of_contribution": "The property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Originally constructed as a pair, the property retains its shared roofline with gables, first storey projecting bay windows, brick cladding, mix of flat and round arched openings, and decorative wooden bargeboards. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "The property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Originally constructed as a pair, the property retains its shared roofline with gables, first storey projecting bay windows, brick cladding, mix of flat and round arched openings, and decorative wooden bargeboards. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -49,15 +49,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -76,7 +76,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -95,7 +95,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "33 Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "33 OXFORD ST"
     ],
@@ -157,16 +157,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.960331+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A54032",
-        "roof": "#5A5A5A \u2192 #595858",
-        "trim": "#3A2A20 \u2192 #433224",
-        "accent": "#3A2A20 \u2192 #4E3120",
-        "mortar": "#B0A898 \u2192 #BFB09B"
+        "facade": "#B85A3A → #A54032",
+        "roof": "#5A5A5A → #595858",
+        "trim": "#3A2A20 → #433224",
+        "accent": "#3A2A20 → #4E3120",
+        "mortar": "#B0A898 → #BFB09B"
       }
     ]
   },

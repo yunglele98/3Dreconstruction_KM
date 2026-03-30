@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "Victorian Vernacular \u2013 Workers Cottage",
-    "construction_period": "c. 1870\u20131889",
+    "architectural_style": "Victorian Vernacular – Workers Cottage",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1870,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 147,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Laneway | Pedestrian-scale | Worker cottages | Historic character",
-    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
-    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
+    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850–1880)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "4 Fitzroy Ter",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "4 FITZROY TER"
     ],
@@ -151,15 +151,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.416701+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #363636",
-        "trim": "#3A2A20 \u2192 #3D2D22",
-        "accent": "#3A2A20 \u2192 #182725",
-        "mortar": "#B0A898 \u2192 #ADA090"
+        "roof": "#5A5A5A → #363636",
+        "trim": "#3A2A20 → #3D2D22",
+        "accent": "#3A2A20 → #182725",
+        "mortar": "#B0A898 → #ADA090"
       }
     ]
   },
@@ -190,7 +190,7 @@
     "trim_colour_hex": "#3D2D22",
     "composition": "The street elevation spans roughly 4 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in.",
     "mortar_colour_hex": "#ADA090",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
   },
@@ -251,7 +251,7 @@
   "street_setback_m": 0.5,
   "confidence": 0.8500000000000002,
   "facade_description": "4 Fitzroy Ter is a house-form, semi-detached building. The street elevation spans roughly 4 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as clapboard in a painted wood palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which in.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "photo_observations": {

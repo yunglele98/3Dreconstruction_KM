@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
@@ -50,21 +50,21 @@
       "decorative_brick",
       "original_windows"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Ramen Isshin",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 36,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "421 College St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "421 COLLEGE ST"
     ],
@@ -157,17 +157,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.747133+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.069290Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B67059",
-        "roof": "#5A5A5A \u2192 #4F5454",
-        "trim": "#E8E0D0 \u2192 #332A23",
-        "accent": "#1A1A2A \u2192 #2A2A31",
-        "mortar": "#B0A898 \u2192 #B4A58B"
+        "facade": "#B85A3A → #B67059",
+        "roof": "#5A5A5A → #4F5454",
+        "trim": "#E8E0D0 → #332A23",
+        "accent": "#1A1A2A → #2A2A31",
+        "mortar": "#B0A898 → #B4A58B"
       }
     ]
   },

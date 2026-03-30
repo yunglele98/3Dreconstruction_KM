@@ -42,7 +42,7 @@
       "87 NASSAU ST",
       "88 NASSAU ST"
     ],
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "qa_photo_fixes": [
       "residential heuristic: 6.0x11.0m"
     ],
@@ -96,16 +96,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.802388+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #CB6F5C",
-        "roof": "#5A5A5A \u2192 #525252",
-        "trim": "#E8E0D0 \u2192 #37281F",
-        "accent": "#2A3A2A \u2192 #2B3929",
-        "mortar": "#B0A898 \u2192 #B2A999"
+        "facade": "#B85A3A → #CB6F5C",
+        "roof": "#5A5A5A → #525252",
+        "trim": "#E8E0D0 → #37281F",
+        "accent": "#2A3A2A → #2B3929",
+        "mortar": "#B0A898 → #B2A999"
       }
     ]
   },

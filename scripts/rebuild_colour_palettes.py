@@ -466,7 +466,7 @@ def rebuild_colour_palettes(
 
         if is_complete:
             if verbose:
-                print(f"✓ {building_name}: palette already complete")
+                print(f"[OK] {building_name}: palette already complete")
             continue
 
         global_stats["incomplete_before"] += 1
@@ -528,7 +528,7 @@ def rebuild_colour_palettes(
             global_stats[key] += val
 
         if verbose:
-            print(f"✓ {building_name}:")
+            print(f"[OK] {building_name}:")
             print(f"    facade: {params['colour_palette']['facade']}")
             print(f"    trim:   {params['colour_palette']['trim']}")
             print(f"    roof:   {params['colour_palette']['roof']}")
@@ -578,7 +578,7 @@ def rebuild_colour_palettes(
     print(f"  - From trim default:         {global_stats['accent_from_trim_default']}")
     print()
     if apply:
-        print(f"✓ Changes WRITTEN to {global_stats['rebuilt_count']} files")
+        print(f"[OK] Changes WRITTEN to {global_stats['rebuilt_count']} files")
     else:
         print(f"(DRY-RUN: no files written. Use --apply to persist.)")
 

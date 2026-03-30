@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form, Detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 192,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property retains original building features that reflect vernacular interpretation of Victorian architectural styles, including a cross-gabled roofline, double-height bay window above the first storey, brick cladding, decorative wooden gable brackets and pediment, and fenestration pattern with flat headed openings. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property retains original building features that reflect vernacular interpretation of Victorian architectural styles, including a cross-gabled roofline, double-height bay window above the first storey, brick cladding, decorative wooden gable brackets and pediment, and fenestration pattern with flat headed openings. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "original_windows",
       "bay_window"
@@ -57,14 +57,14 @@
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "FIKA Cafe",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "28 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "28 KENSINGTON AVE"
     ],
@@ -155,16 +155,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.460427+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.209076Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #4D4D4D",
-        "trim": "#3A2A20 \u2192 #231A13",
-        "accent": "#3A2A20 \u2192 #3C4333",
-        "mortar": "#B0A898 \u2192 #A99880"
+        "roof": "#5A5A5A → #4D4D4D",
+        "trim": "#3A2A20 → #231A13",
+        "accent": "#3A2A20 → #3C4333",
+        "mortar": "#B0A898 → #A99880"
       }
     ]
   },

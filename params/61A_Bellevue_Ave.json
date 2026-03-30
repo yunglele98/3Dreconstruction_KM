@@ -2,9 +2,9 @@
   "building_name": "61A Bellevue Ave",
   "floors": 1,
   "floor_heights_m": [
-    8.83
+    4.8
   ],
-  "total_height_m": 8.83,
+  "total_height_m": 4.8,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -36,12 +36,12 @@
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 115,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -50,14 +50,14 @@
     "building_type": "vacant_lot",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Kos Restaurant",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -76,7 +76,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -95,13 +95,13 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "61A Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "61A BELLEVUE AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
-      "old_total_height_m": 13.55,
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 8.83,
       "new_total_height_m": 4.8,
       "floors": 1.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
@@ -171,16 +171,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.965555+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #8D3928",
-        "roof": "#5A5A5A \u2192 #5A5050",
-        "trim": "#3A2A20 \u2192 #37281E",
-        "accent": "#3A2A20 \u2192 #553B2D",
-        "mortar": "#B0A898 \u2192 #948677"
+        "facade": "#B85A3A → #8D3928",
+        "roof": "#5A5A5A → #5A5050",
+        "trim": "#3A2A20 → #37281E",
+        "accent": "#3A2A20 → #553B2D",
+        "mortar": "#B0A898 → #948677"
       }
     ],
     "qa_final_fixes": [
@@ -190,7 +190,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.201322Z"
   },
   "doors_detail": [
     {
@@ -219,7 +220,7 @@
     "trim_colour_hex": "#37281E",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
     "mortar_colour_hex": "#948677",
     "heritage_expression": "Character-defining elements include bay window."
   },
@@ -277,13 +278,20 @@
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "61A Bellevue Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage": {
+      "text": "Kos Restaurant",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "source": "synthesized_from_params",

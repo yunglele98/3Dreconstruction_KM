@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "painted brick",
+  "facade_material": "Brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Commercial",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 15,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -107,7 +107,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "146 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "146 BALDWIN ST"
     ],
@@ -190,13 +190,13 @@
       "timestamp": "2026-03-29T08:34:16.784552Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#E8E0D0 \u2192 #4D3B2A",
-        "mortar": "#B0A898 \u2192 #B8A68D"
+        "trim": "#E8E0D0 → #4D3B2A",
+        "mortar": "#B0A898 → #B8A68D"
       }
     ],
     "qa_final_fixes": [
@@ -206,7 +206,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.674349Z"
   },
   "photo_observations": {
     "facade_condition_notes": "Facade is occupied and readable from the street, with contemporary storefront alterations layered onto the historic building form.",
@@ -317,7 +318,18 @@
     "description": "Compact phone-shop storefront with bright paint and window posters.",
     "status": "inferred_from_fix",
     "status_source": "normalized_fix",
-    "signage_text": "Xwireless / Cell Phones, Sales, Repair, Unlocking / 647-352-9596"
+    "signage_text": "Xwireless / Cell Phones, Sales, Repair, Unlocking / 647-352-9596",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 4.680000000000001,
+      "projection_m": 1.2,
+      "colour_hex": "#E87020"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "building_type": "commercial",
   "party_wall_left": false,
@@ -387,7 +399,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "146 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable. The facade reads primarily as painted brick in a red brick palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "146 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -63,8 +63,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 5,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "12A Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "12A KENSINGTON AVE"
     ],
@@ -167,15 +167,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.514317+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #585858",
-        "trim": "#E8E0D0 \u2192 #4C3928",
-        "accent": "#3A2A20 \u2192 #333A2B",
-        "mortar": "#B0A898 \u2192 #C1B8A5"
+        "roof": "#5A5A5A → #585858",
+        "trim": "#E8E0D0 → #4C3928",
+        "accent": "#3A2A20 → #333A2B",
+        "mortar": "#B0A898 → #C1B8A5"
       }
     ],
     "qa_final_fixes": [
@@ -185,7 +185,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.651241Z"
   },
   "cornice": {
     "present": true,
@@ -298,7 +299,25 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "signage": {
+      "text": "Last Temptation",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "db_context": {
@@ -394,5 +413,5 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "inferred_setback_m": 1.5
+  "inferred_setback_m": 0.0
 }

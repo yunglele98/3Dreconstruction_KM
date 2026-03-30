@@ -37,7 +37,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "13 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "13 KENSINGTON AVE",
       "11 KENSINGTON AVE"
@@ -112,16 +112,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.659692+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A94B34",
-        "roof": "#5A5A5A \u2192 #585858",
-        "trim": "#E8E0D0 \u2192 #372820",
-        "accent": "#2A3A2A \u2192 #313829",
-        "mortar": "#B0A898 \u2192 #B8A790"
+        "facade": "#B85A3A → #A94B34",
+        "roof": "#5A5A5A → #585858",
+        "trim": "#E8E0D0 → #372820",
+        "accent": "#2A3A2A → #313829",
+        "mortar": "#B0A898 → #B8A790"
       }
     ],
     "qa_final_fixes": [
@@ -131,7 +131,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.663239Z"
   },
   "notes": "Houseform storefront segment with Causa Culture signage.",
   "doors_detail": [
@@ -169,7 +170,18 @@
     "recessed_entry": false,
     "description": null,
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "party_wall_left": false,
   "party_wall_right": false,

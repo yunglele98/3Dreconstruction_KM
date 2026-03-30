@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Multi-residential",
     "construction_date": "1914-1930",
-    "architectural_style": "Multi-residential (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Multi-residential (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 234,
-    "statement_of_contribution": "The property has value as a rare and early example of a walk-up apartment building in Kensington Market that reflects vernacular interpretations of Edwardian and early-twentieth-century architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property retains its scale, form, massing, and building features including brick cladding, stone quoining, flat headed window and door openings, and stone lintels and windowsills. Contextually, the property is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "The property has value as a rare and early example of a walk-up apartment building in Kensington Market that reflects vernacular interpretations of Edwardian and early-twentieth-century architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property retains its scale, form, massing, and building features including brick cladding, stone quoining, flat headed window and door openings, and stone lintels and windowsills. Contextually, the property is functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -58,8 +58,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Short residential | West edge of market",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "1A Leonard Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "1A LEONARD AVE"
     ],
@@ -163,13 +163,13 @@
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:44.543047+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #454545",
-        "mortar": "#B0A898 \u2192 #D2C8B6"
+        "roof": "#5A5A5A → #454545",
+        "mortar": "#B0A898 → #D2C8B6"
       }
     ],
     "qa_final_fixes": [
@@ -179,7 +179,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.779511Z"
   },
   "doors_detail": [
     {
@@ -275,7 +276,14 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage": {
+      "text": "Building (Chimney)",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "source": "synthesized_from_params",

@@ -38,12 +38,12 @@
     "typology": "Commercial",
     "construction_date": "1914-1930",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 23,
-    "statement_of_contribution": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion",
+    "statement_of_contribution": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -100,7 +100,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "199 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "199 AUGUSTA AVE"
     ],
@@ -163,15 +163,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.501025+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.767833Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #C1A58B",
-        "roof": "#5A5A5A \u2192 #595959",
-        "mortar": "#B0A898 \u2192 #BCB5A4"
+        "facade": "#B85A3A → #C1A58B",
+        "roof": "#5A5A5A → #595959",
+        "mortar": "#B0A898 → #BCB5A4"
       }
     ]
   },
@@ -238,7 +238,7 @@
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include bay window, original windows.",
-    "heritage_summary": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion.",
+    "heritage_summary": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion.",
     "mortar_colour_hex": "#BCB5A4"
   },
   "roof_colour": "#5A5A5A",
@@ -276,7 +276,7 @@
   "street_setback_m": 0.0,
   "confidence": 0.9,
   "facade_description": "199 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Key storefront and facade features include bay window, original windows.",
-  "heritage_summary": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion.",
+  "heritage_summary": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],
   "photo_observations": {

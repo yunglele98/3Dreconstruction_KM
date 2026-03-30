@@ -468,7 +468,7 @@ def main() -> None:
     if not args.apply:
         print(f"\n(DRY-RUN: no files written. Use --apply to persist.)")
     else:
-        print(f"\n✓ Changes WRITTEN to {changed} files")
+        print(f"\n[OK] Changes WRITTEN to {changed} files")
 
 
 if __name__ == "__main__":

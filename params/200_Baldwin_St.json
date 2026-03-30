@@ -41,12 +41,12 @@
     "typology": "Converted House-form, Detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 23,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its construction date and typology, the property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property is also associated with Joe Fremar, who operated Joe\u2019s Fruit Market from the property for more than forty years beginning in 1938. The property retains many of its original building features, including its chamfered corner, commercial storefront facing Augusta Avenue and Nassau Street, second storey window openings and gable ended roof supported by a pair of corner brackets. Anchoring the northwest corner of Augusta Avenue and Nassau Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. Summary: Reference Primary Address Entrance Address(es) Number 22. 234 Augusta Avenue 66 Nassau Street 66-1/2 Nassau Street 28 DCH | FO :D 235 Augusta Avenue 235 AUGUSTA AVENUE",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property is also associated with Joe Fremar, who operated Joe’s Fruit Market from the property for more than forty years beginning in 1938. The property retains many of its original building features, including its chamfered corner, commercial storefront facing Augusta Avenue and Nassau Street, second storey window openings and gable ended roof supported by a pair of corner brackets. Anchoring the northwest corner of Augusta Avenue and Nassau Street, the property supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street. Summary: Reference Primary Address Entrance Address(es) Number 22. 234 Augusta Avenue 66 Nassau Street 66-1/2 Nassau Street 28 DCH | FO :D 235 Augusta Avenue 235 AUGUSTA AVENUE",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -54,15 +54,15 @@
   "context": {
     "building_type": "",
     "general_use": "Mixed Use",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "MEXICAN DRY FOOD",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -108,7 +108,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "200 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "200 BALDWIN ST"
     ],
@@ -196,15 +196,15 @@
       "timestamp": "2026-03-29T08:34:17.980912Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.864158Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #525151",
-        "trim": "#3A2A20 \u2192 #533C2B",
-        "mortar": "#B0A898 \u2192 #AE9D8D"
+        "roof": "#5A5A5A → #525151",
+        "trim": "#3A2A20 → #533C2B",
+        "mortar": "#B0A898 → #AE9D8D"
       }
     ]
   },

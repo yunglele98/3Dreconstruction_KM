@@ -1,10 +1,8 @@
 {
   "building_name": "404 Spadina Ave",
-  "floors": 3,
+  "floors": 1,
   "floor_heights_m": [
-    1.48,
-    1.48,
-    1.48
+    4.43
   ],
   "total_height_m": 4.43,
   "facade_width_m": 6.1,
@@ -26,9 +24,7 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    2,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -102,13 +98,13 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "404 Spadina Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "404 SPADINA AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
-      "old_total_height_m": 6.77,
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 4.43,
       "new_total_height_m": 7.2,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
@@ -164,7 +160,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.595256+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:15.882032Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -184,6 +180,9 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "height_fixes": [
+      "qa_height_mismatch: 7.2m/3F -> 4.43m/1F (LiDAR avg: 4.43m)"
     ]
   },
   "decorative_elements": {
@@ -245,8 +244,8 @@
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#2F2F2F",
-    "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+    "composition": "The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat.",
+    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, decorative brick.",
     "mortar_colour_hex": "#B8A68D"
   },
@@ -289,7 +288,7 @@
   ],
   "street_setback_m": 0.5,
   "confidence": 0.8500000000000002,
-  "facade_description": "404 Spadina Ave is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include cornice, decorative brick.",
+  "facade_description": "404 Spadina Ave is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice, decorative brick.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "photo_observations": {

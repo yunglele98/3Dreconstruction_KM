@@ -38,35 +38,35 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Tap Phong Trading Company",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 4,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 10,
-    "signage": "Fap Phong Trading (\u96c6\u8c50\u4e94\u91d1\u884c) - large yellow banner; Chinese characters for hardware/housewares",
+    "signage": "Fap Phong Trading (集豐五金行) - large yellow banner; Chinese characters for hardware/housewares",
     "street_presence": "maintained"
   },
   "city_data": {
@@ -78,7 +78,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 30,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -107,7 +107,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "360 Spadina Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "360 SPADINA AVE"
     ],
@@ -152,16 +152,16 @@
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:46.186073+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:15.393852Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #564B4B",
-        "trim": "#E8E0D0 \u2192 #4B3221",
-        "accent": "#3A2A20 \u2192 #463D2D",
-        "mortar": "#B0A898 \u2192 #B4A58B"
+        "roof": "#5A5A5A → #564B4B",
+        "trim": "#E8E0D0 → #4B3221",
+        "accent": "#3A2A20 → #463D2D",
+        "mortar": "#B0A898 → #B4A58B"
       }
     ]
   },
@@ -229,8 +229,8 @@
     "roof_type_observed": "flat (assumed, not visible)",
     "roof_features": [],
     "has_storefront_observed": true,
-    "storefront_description": "Large commercial storefront with security grilles down. Massive illuminated yellow/red sign: Tap Phong Trading Co. / \u96c6\u8c50\u4e94\u91d1\u884c / WHOLESALE & RETAIL / HOUSEWARE, HARDWARE & GIFTS / RESTAURANT EQUIPMENT SUPPLIER",
-    "signage_observed": "Tap Phong Trading Co. / \u96c6\u8c50\u4e94\u91d1\u884c / WHOLESALE & RETAIL / HOUSEWARE, HARDWARE & GIFTS / RESTAURANT EQUIPMENT SUPPLIER. Adjacent: Wang Global Store signage in Chinese.",
+    "storefront_description": "Large commercial storefront with security grilles down. Massive illuminated yellow/red sign: Tap Phong Trading Co. / 集豐五金行 / WHOLESALE & RETAIL / HOUSEWARE, HARDWARE & GIFTS / RESTAURANT EQUIPMENT SUPPLIER",
+    "signage_observed": "Tap Phong Trading Co. / 集豐五金行 / WHOLESALE & RETAIL / HOUSEWARE, HARDWARE & GIFTS / RESTAURANT EQUIPMENT SUPPLIER. Adjacent: Wang Global Store signage in Chinese.",
     "overall_style": "Commercial",
     "alterations_visible": "Entire facade obscured by large commercial signage. Original architectural details not visible.",
     "matches_hcd_typology": false,
@@ -256,7 +256,7 @@
   "string_course": false,
   "decorative_lintels": false,
   "overall_style": "Commercial",
-  "storefront_description": "Large commercial storefront with security grilles down. Massive illuminated yellow/red sign: Tap Phong Trading Co. / \u96c6\u8c50\u4e94\u91d1\u884c / WHOLESALE & RETAIL / HOUSEWARE, HARDWARE & GIFTS / RESTAURANT EQUIPMENT SUPPLIER",
+  "storefront_description": "Large commercial storefront with security grilles down. Massive illuminated yellow/red sign: Tap Phong Trading Co. / 集豐五金行 / WHOLESALE & RETAIL / HOUSEWARE, HARDWARE & GIFTS / RESTAURANT EQUIPMENT SUPPLIER",
   "confidence": 0.7500000000000002,
   "notes": "Nighttime photo. Closed for night with security grilles. Facade entirely dominated by commercial signage making architectural assessment difficult.",
   "porch_present": false,

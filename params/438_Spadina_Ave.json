@@ -25,7 +25,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys",
   "windows_per_floor": [
     0,
@@ -42,14 +42,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 12,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -109,7 +109,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "438 Spadina Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "438 SPADINA AVE"
     ],
@@ -174,16 +174,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.030231+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.446841Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #544C4C",
-        "trim": "#E8E0D0 \u2192 #33251C",
-        "accent": "#3A2A20 \u2192 #493626",
-        "mortar": "#B0A898 \u2192 #B1A898"
+        "roof": "#5A5A5A → #544C4C",
+        "trim": "#E8E0D0 → #33251C",
+        "accent": "#3A2A20 → #493626",
+        "mortar": "#B0A898 → #B1A898"
       }
     ]
   },
@@ -228,7 +228,7 @@
     "door_type": "storefront",
     "door_width_m": 0.9,
     "door_height_m": 2.4,
-    "door_details": "Multiple commercial entries \u2014 Sahar International double-width entry, Yesrider entry with security gate, and likely a separate residential lobby",
+    "door_details": "Multiple commercial entries — Sahar International double-width entry, Yesrider entry with security gate, and likely a separate residential lobby",
     "ground_floor_arches": "none",
     "ground_floor_arch_count": 0,
     "cornice": "simple",
@@ -430,7 +430,7 @@
     }
   ],
   "street_setback_m": 0.5,
-  "facade_description": "438 Spadina Ave is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as mixed in a beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using mixed, and 3 principal entrances. Character-defining facade elements include string courses, cornice.",
+  "facade_description": "438 Spadina Ave is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as mixed masonry in a beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using mixed, and 3 principal entrances. Character-defining facade elements include string courses, cornice.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "colour_palette": {

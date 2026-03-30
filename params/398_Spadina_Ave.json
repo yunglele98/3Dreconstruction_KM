@@ -2,10 +2,10 @@
   "building_name": "398 Spadina Ave",
   "floors": 2,
   "floor_heights_m": [
-    1.69,
-    1.69
+    2.4,
+    2.4
   ],
-  "total_height_m": 3.38,
+  "total_height_m": 4.8,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -22,7 +22,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "wood_clapboard",
+  "facade_material": "Clapboard",
   "facade_colour": "charcoal-painted wood siding with black storefront fascia and vivid blue, pink, and purple mural panels across the side parking-lot elevation",
   "windows_per_floor": [
     1,
@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
@@ -48,21 +48,21 @@
       "bay_window",
       "original_windows"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Cosmo Cafe | Bar",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -81,7 +81,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -113,7 +113,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "398 Spadina Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "398 SPADINA AVE"
     ],
@@ -178,16 +178,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.440290+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:15.747232Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #615858",
-        "trim": "#E8E0D0 \u2192 #3C2B21",
-        "accent": "#1A1A2A \u2192 #342A1D",
-        "mortar": "#B0A898 \u2192 #BDB6A9"
+        "roof": "#5A5A5A → #615858",
+        "trim": "#E8E0D0 → #3C2B21",
+        "accent": "#1A1A2A → #342A1D",
+        "mortar": "#B0A898 → #BDB6A9"
       }
     ],
     "qa_final_fixes": [
@@ -197,7 +197,14 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 3.38,
+      "new_total_height_m": 4.8,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "bay_window": {
     "present": true,
@@ -401,7 +408,7 @@
     }
   },
   "street_setback_m": 0.5,
-  "facade_description": "398 Spadina Ave is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as wood clapboard in a charcoal-painted wood siding with black storefront fascia and vivid blue, pink, and purple mural panels across the side parking-lot elevation palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include bay window, original windows, cornice.",
+  "facade_description": "398 Spadina Ave is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as clapboard in a charcoal-painted wood siding with black storefront fascia and vivid blue, pink, and purple mural panels across the side parking-lot elevation palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include bay window, original windows, cornice.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "colour_palette": {

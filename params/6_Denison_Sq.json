@@ -40,12 +40,12 @@
     "typology": "House-form, Converted House-form",
     "construction_date": "1890-1903",
     "architectural_style": "Victorian Bay-and-Gable Semi-Detached",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 145,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. The properties at 7 and 9 Kensington Avenue and 560 Dundas Street also have value for the modifications made to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, each of these properties is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row of five buildings, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, projecting bays, scallop clad gables, and flat headed fenestration with stone lintels and sills. 560 Dundas Street West and 9 Kensington Avenue, which bookend the row, also retain their decorative gable brackets while 3 and 5 Kensington Avenue have retained the projecting bay with window at the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 167. 3 Kensington Avenue N/A 169. 5 Kensington Avenue N/A 171. 7 Kensington Avenue N/A 173. 9 Kensington Avenue N/A 144. 560 Dundas Street West 556, 558, 558A, 560A Dundas Street West 103 DCH | FO :D FO YTIC 5202 4 & 6 Kensington Avenue (L-R) 4 & 6 KENSINGTON AVENUE",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. The properties at 7 and 9 Kensington Avenue and 560 Dundas Street also have value for the modifications made to accommodate a commercial conversion through a one-storey commercial addition. With its visibly layered built form, each of these properties is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a row of five buildings, the properties have evolved over time while retaining original building features, including cross-gabled rooflines, projecting bays, scallop clad gables, and flat headed fenestration with stone lintels and sills. 560 Dundas Street West and 9 Kensington Avenue, which bookend the row, also retain their decorative gable brackets while 3 and 5 Kensington Avenue have retained the projecting bay with window at the first storey. Each property has contextual value because it supports and maintains the historic mixed use character of the area. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 167. 3 Kensington Avenue N/A 169. 5 Kensington Avenue N/A 171. 7 Kensington Avenue N/A 173. 9 Kensington Avenue N/A 144. 560 Dundas Street West 556, 558, 558A, 560A Dundas Street West 103 DCH | FO :D FO YTIC 5202 4 & 6 Kensington Avenue (L-R) 4 & 6 KENSINGTON AVENUE",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -53,7 +53,7 @@
   "context": {
     "building_type": "",
     "general_use": "Commercial",
-    "land_use": "Residential \u2013 Semi-Detached",
+    "land_use": "Residential – Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
@@ -61,7 +61,7 @@
     "is_vacant": false,
     "street_character": "Local | Institutional (synagogues) | Bellevue Park adjacent",
     "morphological_zone": "Institutional / Residential Node",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 8,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -103,7 +103,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "6 Denison Sq",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "6 DENISON SQ"
     ],
@@ -162,16 +162,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.300724+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #C2614A",
-        "roof": "#5A5A5A \u2192 #544A4A",
-        "trim": "#E8E0D0 \u2192 #282727",
-        "accent": "#2A3A2A \u2192 #31382B",
-        "mortar": "#B0A898 \u2192 #AB9A89"
+        "facade": "#B85A3A → #C2614A",
+        "roof": "#5A5A5A → #544A4A",
+        "trim": "#E8E0D0 → #282727",
+        "accent": "#2A3A2A → #31382B",
+        "mortar": "#B0A898 → #AB9A89"
       }
     ]
   },

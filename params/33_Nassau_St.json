@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "wood_clapboard",
+  "facade_material": "Clapboard",
   "facade_colour": "cream-white painted wood siding with brown trim, porch posts, and dark brown roof edges",
   "windows_per_floor": [
     2,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Row, Bay-and-Gable",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Row, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 273,
-    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines, double- height bay windows, brick cladding (at 31 and 33 Nassau Street), decorative wooden gable brackets and pediments, and fenestration pattern with flat headed openings featuring stone lintels and sills. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines, double- height bay windows, brick cladding (at 31 and 33 Nassau Street), decorative wooden gable brackets and pediments, and fenestration pattern with flat headed openings featuring stone lintels and sills. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "bay_window",
       "original_windows",
@@ -55,15 +55,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -113,7 +113,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "33 Nassau St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "33 NASSAU ST"
     ],
@@ -182,16 +182,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.950779+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "porch_enriched": "2026-03-29T08:38:23.160485Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #464C4B",
-        "trim": "#E8E0D0 \u2192 #37271F",
-        "accent": "#2A3A2A \u2192 #2B3225",
-        "mortar": "#B0A898 \u2192 #B9AA91"
+        "roof": "#5A5A5A → #464C4B",
+        "trim": "#E8E0D0 → #37271F",
+        "accent": "#2A3A2A → #2B3225",
+        "mortar": "#B0A898 → #B9AA91"
       }
     ],
     "qa_final_fixes": [
@@ -387,7 +387,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "33 Nassau St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as wood clapboard in a cream-white painted wood siding with brown trim, porch posts, and dark brown roof edges palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice, gable brackets.",
+  "facade_description": "33 Nassau St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as clapboard in a cream-white painted wood siding with brown trim, porch posts, and dark brown roof edges palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice, gable brackets.",
   "heritage_summary": "Constructed as a row, the properties retain most of their original building features including cross-gabled rooflines, double- height bay windows, brick cladding (at 31 and 33 Nassau Street), decorative wooden gable brackets and pediments, and fenestration pattern with flat headed openings featuring stone lintels and sills. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],

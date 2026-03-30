@@ -38,12 +38,12 @@
     "typology": "House-form, Semi-detached ; Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 295,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. The first storey at 72 Bellevue Avenue and attic gable at 90 Nassau feature rounded arch openings. The eastern half of the first storey at 90 Nassau Street has housed commercial uses since 1878 according to City Directories and features a commercial storefront facing Bellevue Avenue and Nassau Street. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 89. 70 Bellevue Avenue N/A 90. 72 Bellevue Avenue N/A 295. 90 Nassau Street N/A 68 DCH | FO :D 78 Bellevue Avenue 78 BELLEVUE AVENUE",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. The first storey at 72 Bellevue Avenue and attic gable at 90 Nassau feature rounded arch openings. The eastern half of the first storey at 90 Nassau Street has housed commercial uses since 1878 according to City Directories and features a commercial storefront facing Bellevue Avenue and Nassau Street. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 89. 70 Bellevue Avenue N/A 90. 72 Bellevue Avenue N/A 295. 90 Nassau Street N/A 68 DCH | FO :D 78 Bellevue Avenue 78 BELLEVUE AVENUE",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -106,7 +106,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "70 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "70 BELLEVUE AVE"
     ],
@@ -173,16 +173,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.364796+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#D4B896 \u2192 #B65C44",
-        "roof": "#5A5A5A \u2192 #675E56",
-        "trim": "#3A2A20 \u2192 #392920",
-        "accent": "#3A2A20 \u2192 #32382B",
-        "mortar": "#B0A898 \u2192 #AA9A82"
+        "facade": "#D4B896 → #B65C44",
+        "roof": "#5A5A5A → #675E56",
+        "trim": "#3A2A20 → #392920",
+        "accent": "#3A2A20 → #32382B",
+        "mortar": "#B0A898 → #AA9A82"
       }
     ]
   },

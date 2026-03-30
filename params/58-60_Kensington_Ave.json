@@ -12,7 +12,7 @@
   "roof_type": "gable",
   "roof_pitch_deg": 35,
   "roof_features": [],
-  "facade_material": "vinyl siding over original",
+  "facade_material": "Vinyl siding",
   "facade_colour": "right building: buff/yellow brick; left: vinyl/aluminum siding (beige/tan); right: brick (buff/yellow) with yellow paint at upper level",
   "windows_per_floor": [
     0,
@@ -96,7 +96,7 @@
       "59 KENSINGTON AVE",
       "60 KENSINGTON AVE"
     ],
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "facade_analysis_applied": [
       "kensington_ave_facades_2026-03-26T14:09:13",
       "kensington_ave_facades_2026-03-26T14:10:00",
@@ -178,14 +178,14 @@
       "timestamp": "2026-03-29T08:34:22.311338Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #524A4A",
-        "trim": "#E8E0D0 \u2192 #3C2B20",
-        "mortar": "#B0A898 \u2192 #C1BAAC"
+        "roof": "#5A5A5A → #524A4A",
+        "trim": "#E8E0D0 → #3C2B20",
+        "mortar": "#B0A898 → #C1BAAC"
       }
     ]
   },
@@ -316,7 +316,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "58-60 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 10 metres across 3 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by vinyl siding over original in a right building: buff/yellow brick; left: vinyl/aluminum siding (beige/tan); right: brick (buff/yellow) with yellow paint at upper level palette, laid in n/a (sided) with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays and 1 additional bay above, using mixed, and 2 principal entrances.",
+  "facade_description": "58-60 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 10 metres across 3 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by vinyl siding in a right building: buff/yellow brick; left: vinyl/aluminum siding (beige/tan); right: brick (buff/yellow) with yellow paint at upper level palette, laid in n/a (sided) with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays and 1 additional bay above, using mixed, and 2 principal entrances.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

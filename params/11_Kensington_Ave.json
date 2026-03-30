@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 177,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, scalloped cladding on the gables, and fenestration pattern with flat headed openings featuring stone sills and lintels. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including their cross-gabled roofline, scalloped cladding on the gables, and fenestration pattern with flat headed openings featuring stone sills and lintels. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "original_windows"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "11 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "11 KENSINGTON AVE"
     ],
@@ -169,16 +169,19 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.424363+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.284054Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B46954",
-        "trim": "#E8E0D0 \u2192 #392F26",
-        "accent": "#2A3A2A \u2192 #3B4131",
-        "mortar": "#B0A898 \u2192 #AFA696"
+        "facade": "#B85A3A → #B46954",
+        "trim": "#E8E0D0 → #392F26",
+        "accent": "#2A3A2A → #3B4131",
+        "mortar": "#B0A898 → #AFA696"
+      },
+      {
+        "roof": "#5A5A5A → #505050"
       }
     ]
   },
@@ -337,7 +340,7 @@
     "mortar_hex": "#C8C0B0",
     "facade": "#B46954",
     "trim": "#392F26",
-    "roof": "#5A5A5A",
+    "roof": "#505050",
     "accent": "#3B4131"
   },
   "deep_facade_analysis": {

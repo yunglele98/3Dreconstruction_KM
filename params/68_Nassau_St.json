@@ -82,7 +82,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "68 Nassau St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "68 NASSAU ST"
     ],
@@ -146,16 +146,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.246012+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #C9522E",
-        "roof": "#5A5A5A \u2192 #635959",
-        "trim": "#E8E0D0 \u2192 #3B2B1F",
-        "accent": "#2A3A2A \u2192 #4A2F1F",
-        "mortar": "#B0A898 \u2192 #A59788"
+        "facade": "#B85A3A → #C9522E",
+        "roof": "#5A5A5A → #635959",
+        "trim": "#E8E0D0 → #3B2B1F",
+        "accent": "#2A3A2A → #4A2F1F",
+        "mortar": "#B0A898 → #A59788"
       }
     ]
   },

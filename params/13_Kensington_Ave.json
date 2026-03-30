@@ -109,7 +109,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "13 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "13 KENSINGTON AVE"
     ],
@@ -168,7 +168,7 @@
       "timestamp": "2026-03-29T08:34:16.632883Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "porch_enriched": "2026-03-29T08:38:21.410514Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -187,7 +187,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.661211Z"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -414,7 +415,18 @@
       "type": "retractable fabric",
       "colour": "#D4A030"
     },
-    "width_pct": 60
+    "width_pct": 60,
+    "signage": {
+      "text": "Causa Culture",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260320_012043877_HDR.jpg",
@@ -555,7 +567,7 @@
   "eave_overhang_mm": 300,
   "foundation_height_m": 0.3,
   "wall_thickness_m": 0.3,
-  "inferred_setback_m": 1.5,
+  "inferred_setback_m": 0.0,
   "porch_width_m": 2.6,
   "porch_depth_m": 1.8,
   "porch_height_m": 3.8,

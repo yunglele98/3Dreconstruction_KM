@@ -24,8 +24,8 @@
   "roof_features": [
     "gable_peak"
   ],
-  "facade_material": "vinyl_siding",
-  "facade_colour": "painted wood",
+  "facade_material": "Vinyl siding",
+  "facade_colour": "light vinyl",
   "windows_per_floor": [
     2,
     2
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 161,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row organized into three adjoining pairs with mirrored facades, the properties each retain building features that reflect vernacular interpretations of Second Empire and other Victorian architectural styles, including their shared rooflines, fenestration pattern, dormer windows, and ground floor bay windows. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a row organized into three adjoining pairs with mirrored facades, the properties each retain building features that reflect vernacular interpretations of Second Empire and other Victorian architectural styles, including their shared rooflines, fenestration pattern, dormer windows, and ground floor bay windows. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Laneway | Pedestrian-scale | Worker cottages | Historic character",
-    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
-    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
+    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850–1880)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "10 Glen Baillie Pl",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "10 GLEN BAILLIE PL"
     ],
@@ -165,15 +165,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:43.215334+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #464A4A",
-        "trim": "#E8E0D0 \u2192 #3A2A21",
-        "accent": "#2A3A2A \u2192 #392A20",
-        "mortar": "#B0A898 \u2192 #AEA797"
+        "roof": "#5A5A5A → #464A4A",
+        "trim": "#E8E0D0 → #3A2A21",
+        "accent": "#2A3A2A → #392A20",
+        "mortar": "#B0A898 → #AEA797"
       }
     ]
   },
@@ -252,7 +252,7 @@
     "trim_colour_hex": "#3A2A21",
     "composition": "The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
-    "heritage_summary": "Constructed as a row organized into three adjoining pairs with mirrored facades, the properties each retain building features that reflect vernacular interpretations of Second Empire and other Victorian architectural styles, including their shared rooflines, fenestration pattern, dormer windows, and ground floor bay windows. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District.",
+    "heritage_summary": "Constructed as a row organized into three adjoining pairs with mirrored facades, the properties each retain building features that reflect vernacular interpretations of Second Empire and other Victorian architectural styles, including their shared rooflines, fenestration pattern, dormer windows, and ground floor bay windows. Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District.",
     "heritage_expression": "Character-defining facade elements include cornice.",
     "mortar_colour_hex": "#AEA797"
   },
@@ -318,8 +318,8 @@
     }
   },
   "street_setback_m": 0.5,
-  "facade_description": "10 Glen Baillie Pl is a row-house building. The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as vinyl siding in a painted wood palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice.",
-  "heritage_summary": "Constructed as a row organized into three adjoining pairs with mirrored facades, the properties each retain building features that reflect vernacular interpretations of Second Empire and other Victorian architectural styles, including their shared rooflines, fenestration pattern, dormer windows, and ground floor bay windows. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District.",
+  "facade_description": "10 Glen Baillie Pl is a row-house building. The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as vinyl siding in a light vinyl palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "heritage_summary": "Constructed as a row organized into three adjoining pairs with mirrored facades, the properties each retain building features that reflect vernacular interpretations of Second Empire and other Victorian architectural styles, including their shared rooflines, fenestration pattern, dormer windows, and ground floor bay windows. Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "colour_palette": {

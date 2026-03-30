@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "painted stucco/render",
+  "facade_material": "Stucco",
   "facade_colour": "painted (painted stucco/render (upper band), metal roller shutters (ground))",
   "windows_per_floor": [
     0,
@@ -40,12 +40,12 @@
     "typology": "Commercial",
     "construction_date": "1914-1930",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 43,
-    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated wi",
+    "statement_of_contribution": "The property has value as an early-twentieth-century two-storey Commercial building. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property is also associated wi",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -54,14 +54,14 @@
     "building_type": "commercial",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Augusta Coffee Bar",
     "business_category": "Retail/Shop",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -106,7 +106,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "229 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "229 AUGUSTA AVE"
     ],
@@ -171,13 +171,13 @@
       "timestamp": "2026-03-29T08:34:18.278271Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.303850Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "mortar": "#B0A898 \u2192 #C0B6A4"
+        "mortar": "#B0A898 → #C0B6A4"
       }
     ]
   },
@@ -372,7 +372,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "229 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by painted stucco/render, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using storefront, and 1 principal entrance. Key storefront and facade features include cornice.",
+  "facade_description": "229 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by stucco, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using storefront, and 1 principal entrance. Key storefront and facade features include cornice.",
   "heritage_summary": "The property is also associated wi. The property has value as an early-twentieth-century two-storey Commercial building.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {

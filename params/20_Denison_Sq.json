@@ -2,11 +2,11 @@
   "building_name": "20 Denison Sq",
   "floors": 3,
   "floor_heights_m": [
-    2.37,
-    2.37,
-    2.37
+    2.4,
+    2.4,
+    2.4
   ],
-  "total_height_m": 7.11,
+  "total_height_m": 7.2,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -42,13 +42,13 @@
   "hcd_data": {
     "typology": "House-form, Detached",
     "construction_date": "1904-1913",
-    "architectural_style": "House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 140,
-    "statement_of_contribution": "The property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property retains most of its original building features including its cross-gabled roofline, double-height projecting bay, gabled parapet, brick cladding, decorative brickwork and stonework, and fenestration pattern with flat headed and round arched openings. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "The property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property retains most of its original building features including its cross-gabled roofline, double-height projecting bay, gabled parapet, brick cladding, decorative brickwork and stonework, and fenestration pattern with flat headed and round arched openings. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "turret",
       "decorative_brick",
@@ -60,7 +60,7 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Semi-Detached",
+    "land_use": "Residential – Semi-Detached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
@@ -68,7 +68,7 @@
     "is_vacant": false,
     "street_character": "Local | Institutional (synagogues) | Bellevue Park adjacent",
     "morphological_zone": "Institutional / Residential Node",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -87,7 +87,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -106,7 +106,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "20 Denison Sq",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "20 DENISON SQ"
     ],
@@ -166,18 +166,25 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.670241+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BE7246",
-        "roof": "#5A5A5A \u2192 #575757",
-        "trim": "#2A2A2A \u2192 #373737",
-        "accent": "#3A2A20 \u2192 #4D3321",
-        "mortar": "#B0A898 \u2192 #C3BCAC"
+        "facade": "#B85A3A → #BE7246",
+        "roof": "#5A5A5A → #575757",
+        "trim": "#2A2A2A → #373737",
+        "accent": "#3A2A20 → #4D3321",
+        "mortar": "#B0A898 → #C3BCAC"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 7.11,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "decorative_elements": {
     "decorative_brickwork": {

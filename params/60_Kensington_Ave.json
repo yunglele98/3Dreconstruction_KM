@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "painted brick / vinyl siding",
+  "facade_material": "Brick",
   "facade_colour": "painted (painted brick / vinyl siding)",
   "windows_per_floor": [
     0,
@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -58,8 +58,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -101,7 +101,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "60 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "60 KENSINGTON AVE"
     ],
@@ -195,15 +195,15 @@
       "timestamp": "2026-03-29T08:34:22.559233Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.274224Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #4D5353",
-        "trim": "#E8E0D0 \u2192 #3B3028",
-        "mortar": "#B0A898 \u2192 #B7A78E"
+        "roof": "#5A5A5A → #4D5353",
+        "trim": "#E8E0D0 → #3B3028",
+        "mortar": "#B0A898 → #B7A78E"
       }
     ]
   },
@@ -360,7 +360,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "60 Kensington Ave is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable. The facade reads primarily as painted brick / vinyl siding, laid in concealed by paint/siding with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+  "facade_description": "60 Kensington Ave is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable. The facade reads primarily as brick, laid in concealed by paint/siding with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

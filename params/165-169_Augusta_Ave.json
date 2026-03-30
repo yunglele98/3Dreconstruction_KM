@@ -2,12 +2,12 @@
   "building_name": "165-169 Augusta Ave",
   "floors": 4,
   "floor_heights_m": [
-    1.75,
-    1.75,
-    1.75,
-    1.74
+    2.4,
+    2.4,
+    2.4,
+    2.4
   ],
-  "total_height_m": 6.99,
+  "total_height_m": 9.6,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -42,28 +42,28 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "commercial",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "San Cafe",
     "business_category": "Fashion/Clothing",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -101,7 +101,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "165-169 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "165-169 AUGUSTA AVE",
       "165 AUGUSTA AVE",
@@ -111,7 +111,7 @@
       "169 AUGUSTA AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
+      "timestamp": "2026-03-30T02:31:50",
       "old_total_height_m": 6.99,
       "new_total_height_m": 9.6,
       "floors": 4.0,
@@ -179,16 +179,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.091474+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.960554Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #454C4C",
-        "trim": "#E8E0D0 \u2192 #292929",
-        "accent": "#3A2A20 \u2192 #3E4433",
-        "mortar": "#B0A898 \u2192 #B3A48D"
+        "roof": "#5A5A5A → #454C4C",
+        "trim": "#E8E0D0 → #292929",
+        "accent": "#3A2A20 → #3E4433",
+        "mortar": "#B0A898 → #B3A48D"
       }
     ]
   },

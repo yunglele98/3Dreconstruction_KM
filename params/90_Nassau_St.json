@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "pink/salmon painted ground floor storefront, buff brick upper floors",
   "windows_per_floor": [
     0,
@@ -38,12 +38,12 @@
     "typology": "House-form, Semi-detached ; Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 295,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. The first storey at 72 Bellevue Avenue and attic gable at 90 Nassau feature rounded arch openings. The eastern half of the first storey at 90 Nassau Street has housed commercial uses since 1878 according to City Directories and features a commercial storefront facing Bellevue Avenue and Nassau Street. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 89. 70 Bellevue Avenue N/A 90. 72 Bellevue Avenue N/A 295. 90 Nassau Street N/A 68 DCH | FO :D 78 Bellevue Avenue 78 BELLEVUE AVENUE",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. The first storey at 72 Bellevue Avenue and attic gable at 90 Nassau feature rounded arch openings. The eastern half of the first storey at 90 Nassau Street has housed commercial uses since 1878 according to City Directories and features a commercial storefront facing Bellevue Avenue and Nassau Street. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 89. 70 Bellevue Avenue N/A 90. 72 Bellevue Avenue N/A 295. 90 Nassau Street N/A 68 DCH | FO :D 78 Bellevue Avenue 78 BELLEVUE AVENUE",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -58,8 +58,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -108,7 +108,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "90 Nassau St",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "90 NASSAU ST"
     ],
@@ -193,16 +193,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.907395+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:18.226767Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #3B3B3B",
-        "trim": "#3A2A20 \u2192 #39291F",
-        "accent": "#3A2A20 \u2192 #333C2A",
-        "mortar": "#B0A898 \u2192 #9B8B7A"
+        "roof": "#5A5A5A → #3B3B3B",
+        "trim": "#3A2A20 → #39291F",
+        "accent": "#3A2A20 → #333C2A",
+        "mortar": "#B0A898 → #9B8B7A"
       }
     ]
   },
@@ -369,7 +369,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "90 Nassau St is a house-form, semi-detached ; converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached ; converted house-form, semi-detached typology. The facade reads primarily as mixed in a pink/salmon painted ground floor storefront, buff brick upper floors palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include string courses, gable brackets.",
+  "facade_description": "90 Nassau St is a house-form, semi-detached ; converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached ; converted house-form, semi-detached typology. The facade reads primarily as mixed masonry in a pink/salmon painted ground floor storefront, buff brick upper floors palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include string courses, gable brackets.",
   "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. 70 Bellevue Avenue N/A 90.",
   "roof_material": "Slate shingles",
   "volumes": [],

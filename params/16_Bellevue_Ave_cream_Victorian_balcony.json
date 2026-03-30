@@ -11,7 +11,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "cream/beige painted exterior with white trim, decorative gables, iron balcony railing",
   "windows_per_floor": [
     4,
@@ -73,7 +73,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "16 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "16 BELLEVUE AVE"
     ],
@@ -134,16 +134,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.130788+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "porch_enriched": "2026-03-29T08:38:21.765005Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #554C4C",
-        "trim": "#E8E0D0 \u2192 #37271D",
-        "accent": "#2A3A2A \u2192 #2C2C31",
-        "mortar": "#B0A898 \u2192 #B3AA98"
+        "roof": "#5A5A5A → #554C4C",
+        "trim": "#E8E0D0 → #37271D",
+        "accent": "#2A3A2A → #2C2C31",
+        "mortar": "#B0A898 → #B3AA98"
       }
     ]
   },
@@ -287,7 +287,7 @@
     "bay_window_storeys": 2
   },
   "street_setback_m": 2.0,
-  "facade_description": "16 Bellevue Ave (cream Victorian, balcony) is a bay-and-gable house-form building. The street elevation spans roughly 10 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as mixed in a cream/beige painted exterior with white trim, decorative gables, iron balcony railing palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 4, 4 window bays from lower to upper levels, using double hung, and 2 principal entrances.",
+  "facade_description": "16 Bellevue Ave (cream Victorian, balcony) is a bay-and-gable house-form building. The street elevation spans roughly 10 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as mixed masonry in a cream/beige painted exterior with white trim, decorative gables, iron balcony railing palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 4, 4 window bays from lower to upper levels, using double hung, and 2 principal entrances.",
   "hcd_data": {
     "typology": "house-form, row, bay-and-gable",
     "construction_date": "1889-1903",

@@ -40,14 +40,14 @@
     "typology": "Commercial",
     "construction_date": "Pre-1889",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "Market",
     "contributing": "",
     "hcd_plan_index": null,
-    "statement_of_contribution": "The property has value as a rare and representative example of a purpose-built nineteenth-century commercial structure that reflects vernacular interpretations of Victorian architectural styles. Through its construction date, the property is directly associated with the early development of the District\u2019s from the 1850s to the early 1900s. The property also has associative value for its connection with original owner George Eakin Gibbard, who founded the Canadian Pharmaceutical Association and served as the President, Vice-President, and Registrar of the Ontario College of Pharmacy. Gibbard operated a drugstore out of 594 Dundas Street West and lived upstairs. He was known to have also run at least two other drugstores in the City. The property retains most of its original building features including brick cladding with decorative brickwork and stonework, flat-headed and segmental-arched window and door openings, leaded glass transoms, ornamented cornice, chamfered corner, and commercial storefront facing Augusta Avenue and Dundas Street West. Located on the northeast corner of Dundas Street and Augusta Avenue, the property anchors the entrance to Augusta Avenue, where it functions as a gateway into the market area. Contextually, the supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 145. 594 Dundas Street West N/A 96 DCH | FO :D 3 & 3A Fitzroy Terrace (R-L) 3 & 3A FITZROY TERRACE",
+    "statement_of_contribution": "The property has value as a rare and representative example of a purpose-built nineteenth-century commercial structure that reflects vernacular interpretations of Victorian architectural styles. Through its construction date, the property is directly associated with the early development of the District’s from the 1850s to the early 1900s. The property also has associative value for its connection with original owner George Eakin Gibbard, who founded the Canadian Pharmaceutical Association and served as the President, Vice-President, and Registrar of the Ontario College of Pharmacy. Gibbard operated a drugstore out of 594 Dundas Street West and lived upstairs. He was known to have also run at least two other drugstores in the City. The property retains most of its original building features including brick cladding with decorative brickwork and stonework, flat-headed and segmental-arched window and door openings, leaded glass transoms, ornamented cornice, chamfered corner, and commercial storefront facing Augusta Avenue and Dundas Street West. Located on the northeast corner of Dundas Street and Augusta Avenue, the property anchors the entrance to Augusta Avenue, where it functions as a gateway into the market area. Contextually, the supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 145. 594 Dundas Street West N/A 96 DCH | FO :D 3 & 3A Fitzroy Terrace (R-L) 3 & 3A FITZROY TERRACE",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -80,7 +80,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -99,7 +99,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "594 Dundas St W",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "594 DUNDAS ST W"
     ],
@@ -153,17 +153,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.814476+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.179764Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #984E31",
-        "roof": "#5A5A5A \u2192 #5B5B5B",
-        "trim": "#3A2A20 \u2192 #30241B",
-        "accent": "#1A1A2A \u2192 #27272D",
-        "mortar": "#B0A898 \u2192 #A2947C"
+        "facade": "#B85A3A → #984E31",
+        "roof": "#5A5A5A → #5B5B5B",
+        "trim": "#3A2A20 → #30241B",
+        "accent": "#1A1A2A → #27272D",
+        "mortar": "#B0A898 → #A2947C"
       }
     ],
     "qa_final_fixes": [

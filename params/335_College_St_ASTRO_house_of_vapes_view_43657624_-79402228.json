@@ -1,7 +1,7 @@
 {
   "building_name": "335 College St (ASTRO / House of Vapes view)",
   "floors": 3,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "dark charcoal-black upper facade with white House of Vapes signage and a lower weathered white side building beside a fenced lot",
   "windows_per_floor": [
     0,
@@ -101,7 +101,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "loose",
     "db_address_full": "335 College St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "335 COLLEGE ST"
     ],
@@ -154,16 +154,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.909156+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.975544Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #525252",
-        "trim": "#E8E0D0 \u2192 #3A291F",
-        "accent": "#2A3A2A \u2192 #26272D",
-        "mortar": "#B0A898 \u2192 #BAA991"
+        "roof": "#5A5A5A → #525252",
+        "trim": "#E8E0D0 → #3A291F",
+        "accent": "#2A3A2A → #26272D",
+        "mortar": "#B0A898 → #BAA991"
       }
     ]
   },
@@ -314,7 +314,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "335 College St (ASTRO / House of Vapes view) is a commercial building with a street-level storefront. The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a dark charcoal-black upper facade with white house of vapes signage and a lower weathered white side building beside a fenced lot palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "facade_description": "335 College St (ASTRO / House of Vapes view) is a commercial building with a street-level storefront. The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a dark charcoal-black upper facade with white house of vapes signage and a lower weathered white side building beside a fenced lot palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
   "hcd_data": {
     "typology": "commercial",
     "construction_date": "1889-1903",

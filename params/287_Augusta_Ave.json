@@ -40,12 +40,12 @@
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 69,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -101,7 +101,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "287 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "287 AUGUSTA AVE"
     ],
@@ -168,17 +168,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.433385+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.152769Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A64A26",
-        "roof": "#5A5A5A \u2192 #485959",
-        "trim": "#3A2A20 \u2192 #533A29",
-        "accent": "#3A2A20 \u2192 #4B4130",
-        "mortar": "#B0A898 \u2192 #A7967D"
+        "facade": "#B85A3A → #A64A26",
+        "roof": "#5A5A5A → #485959",
+        "trim": "#3A2A20 → #533A29",
+        "accent": "#3A2A20 → #4B4130",
+        "mortar": "#B0A898 → #A7967D"
       }
     ]
   },
@@ -219,7 +219,7 @@
     "door_count": 1,
     "door_type": "storefront",
     "has_storefront_observed": true,
-    "storefront_description": "Wanda's Pie in the Sky bakery \u2014 closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
+    "storefront_description": "Wanda's Pie in the Sky bakery — closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
     "signage_observed": "Cyan/turquoise neon sign 'Wanda's Pie in the Sky' in cursive script above shutters; 'WANDA' tag on right shutter; heavy black graffiti bubble letters on both shutters",
     "overall_style": "Commercial",
     "alterations_visible": "Security shutters with extensive graffiti, cyan neon sign addition, green awning",
@@ -235,7 +235,7 @@
   },
   "door_type": "storefront",
   "overall_style": "Commercial",
-  "storefront_description": "Wanda's Pie in the Sky bakery \u2014 closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
+  "storefront_description": "Wanda's Pie in the Sky bakery — closed, with two graffiti-covered security roll-down shutters (dark/green), green awning/canopy above, white lattice railing/fence on left side",
   "confidence": 0.9,
   "notes": "Nighttime photo (1:45am), bakery closed with shutters down. Batch_008 re-observation confirms previous analysis with additional detail on shutter graffiti and neon signage colour (cyan/turquoise, not teal).",
   "doors_detail": [
@@ -266,7 +266,7 @@
     "trim_colour_hex": "#533A29",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using storefront (behind shutters), and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
     "mortar_colour_hex": "#A7967D",
     "heritage_expression": "Character-defining elements include bay window, ground-floor storefront."
   },
@@ -314,7 +314,7 @@
   },
   "street_setback_m": 0.0,
   "facade_description": "287 Augusta Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using storefront (behind shutters), and 1 principal entrance.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "colour_palette": {

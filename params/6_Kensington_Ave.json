@@ -23,7 +23,7 @@
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "brick",
-  "facade_colour": "not clearly visible \u2014 night photo",
+  "facade_colour": "not clearly visible — night photo",
   "windows_per_floor": [
     0,
     2
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "Converted House-form, Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 170,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features that reflect vernacular interpretations of Victorian architectural styles, including their bay-and-gable form above the first storey with cross-gabled roofline. The property at 6 Kensington Avenue has also retained its original window openings with brick and stone voussoirs. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as a pair, the properties have evolved over time while retaining original building features that reflect vernacular interpretations of Victorian architectural styles, including their bay-and-gable form above the first storey with cross-gabled roofline. The property at 6 Kensington Avenue has also retained its original window openings with brick and stone voussoirs. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "bay_window"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "6 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "6 KENSINGTON AVE"
     ],
@@ -154,17 +154,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.327422+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.652462Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #9C4F34",
-        "roof": "#5A5A5A \u2192 #524A4A",
-        "trim": "#3A2A20 \u2192 #533B2A",
-        "accent": "#3A2A20 \u2192 #32241C",
-        "mortar": "#B0A898 \u2192 #B3A290"
+        "facade": "#B85A3A → #9C4F34",
+        "roof": "#5A5A5A → #524A4A",
+        "trim": "#3A2A20 → #533B2A",
+        "accent": "#3A2A20 → #32241C",
+        "mortar": "#B0A898 → #B3A290"
       }
     ]
   },
@@ -218,8 +218,8 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.4,
-    "facade_colour_observed": "not clearly visible \u2014 night photo",
-    "facade_material_observed": "brick \u2014 typical for Kensington Ave bay-and-gable",
+    "facade_colour_observed": "not clearly visible — night photo",
+    "facade_material_observed": "brick — typical for Kensington Ave bay-and-gable",
     "condition_observed": "fair",
     "has_storefront_observed": true,
     "signage_observed": "Tibetan Village Store",
@@ -235,7 +235,7 @@
       "lot_depth_ft": 105,
       "HCD_TYPOLOGY": "Converted House-form, Semi-detached, Bay-and-Gable",
       "HCD_CONSTRUCTION_DATE": "Pre-1889",
-      "facade_colour_observed": "not clearly visible \u00e2\u20ac\u201d night photo",
+      "facade_colour_observed": "not clearly visible â€” night photo",
       "photo_condition": "fair",
       "ba_condition_rating": 3,
       "ba_storefront_status": "active"
@@ -316,7 +316,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "6 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology. The facade reads primarily as brick in a not clearly visible \u2014 night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, bay window.",
+  "facade_description": "6 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology. The facade reads primarily as brick in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, bay window.",
   "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features that reflect vernacular interpretations of Victorian architectural styles, including their bay-and-gable form above the first storey with cross-gabled roofline. The property at 6 Kensington Avenue has also retained its original window openings with brick and stone voussoirs.",
   "roof_material": "Slate shingles",
   "volumes": [],

@@ -26,8 +26,8 @@
     "turret",
     "tower"
   ],
-  "facade_material": "metal siding",
-  "facade_colour": "off-white stucco",
+  "facade_material": "Metal",
+  "facade_colour": "neutral",
   "windows_per_floor": [
     0,
     2,
@@ -43,7 +43,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "",
@@ -53,21 +53,21 @@
       "turret",
       "bay_window"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Jimmy's Coffee",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -86,7 +86,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -109,7 +109,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "191 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "191 BALDWIN ST"
     ],
@@ -183,14 +183,14 @@
       "timestamp": "2026-03-29T08:34:17.702226Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.593577Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#E8E0D0 \u2192 #3F2D22",
-        "mortar": "#B0A898 \u2192 #ADA697"
+        "trim": "#E8E0D0 → #3F2D22",
+        "mortar": "#B0A898 → #ADA697"
       }
     ]
   },
@@ -312,7 +312,7 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.9,
-  "facade_description": "191 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable. The facade reads primarily as metal siding in a off-white stucco palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include turret, bay window.",
+  "facade_description": "191 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable. The facade reads primarily as metal in a neutral palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include turret, bay window.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#D8D0C0",

@@ -2,10 +2,10 @@
   "building_name": "161 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    6.4,
-    5.45
+    4.8,
+    4.8
   ],
-  "total_height_m": 11.85,
+  "total_height_m": 9.6,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "painted (mixed (brick, painted siding, board-and-batten))",
   "windows_per_floor": [
     0,
@@ -38,12 +38,12 @@
     "typology": "Converted House-form, House-form  Semi-detached",
     "construction_date": "1890-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 294,
-    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the ",
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the ",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -52,14 +52,14 @@
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Momo Corner | NFT Cafe | Millie Creperie | Dipped Donuts",
     "business_category": "Retail/Shop",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 79,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -100,7 +100,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "161 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "161 BALDWIN ST"
     ],
@@ -217,16 +217,23 @@
       "timestamp": "2026-03-29T08:34:17.161137Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.921111Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#E8E0D0 \u2192 #3F2E23",
-        "mortar": "#B0A898 \u2192 #C2BBAC"
+        "trim": "#E8E0D0 → #3F2E23",
+        "mortar": "#B0A898 → #C2BBAC"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 11.85,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -281,7 +288,7 @@
     "trim_colour_hex": "#3F2E23",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form  semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
-    "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the.",
+    "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the.",
     "secondary_material": "brick, painted siding, board-and-batten",
     "mortar_colour_hex": "#C2BBAC",
     "heritage_expression": "Character-defining elements include ground-floor storefront."
@@ -341,8 +348,8 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.9,
-  "facade_description": "161 Baldwin St is a converted house-form, house-form  semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form  semi-detached typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
-  "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the.",
+  "facade_description": "161 Baldwin St is a converted house-form, house-form  semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form  semi-detached typology. The facade reads primarily as mixed masonry in a painted (mixed (brick, painted siding, board-and-batten)) palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+  "heritage_summary": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the.",
   "roof_material": "Grey asphalt shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

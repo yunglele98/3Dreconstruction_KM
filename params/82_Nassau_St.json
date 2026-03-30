@@ -38,12 +38,12 @@
     "typology": "House-form, Detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1880\u20131920",
+    "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 219,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which incl",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which incl",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -58,8 +58,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -99,7 +99,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "82 Nassau St",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "82 NASSAU ST"
     ],
@@ -161,17 +161,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.716859+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:18.037560Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A34322",
-        "roof": "#5A5A5A \u2192 #615455",
-        "trim": "#3A2A20 \u2192 #453020",
-        "accent": "#3A2A20 \u2192 #37261E",
-        "mortar": "#B0A898 \u2192 #978778"
+        "facade": "#B85A3A → #A34322",
+        "roof": "#5A5A5A → #615455",
+        "trim": "#3A2A20 → #453020",
+        "accent": "#3A2A20 → #37261E",
+        "mortar": "#B0A898 → #978778"
       }
     ]
   },
@@ -237,7 +237,7 @@
     "trim_colour_hex": "#453020",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
-    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which incl.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which incl.",
     "mortar_colour_hex": "#978778",
     "heritage_expression": "Character-defining elements include ground-floor storefront."
   },
@@ -278,7 +278,7 @@
   },
   "street_setback_m": 0.0,
   "facade_description": "82 Nassau St is a house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
-  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which incl.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which incl.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "colour_palette": {

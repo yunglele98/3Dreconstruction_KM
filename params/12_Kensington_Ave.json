@@ -22,7 +22,7 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "painted wood/stucco",
+  "facade_material": "Stucco",
   "facade_colour": "painted (painted wood/stucco)",
   "windows_per_floor": [
     0,
@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889, 1914-1930",
-    "architectural_style": "Converted House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889, 1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Converted House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 178,
-    "statement_of_contribution": "The property at 12 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure that retains some legibility of its original form including south side wall with gabled roofline. The property at 14 Kensington Avenue has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The properties were erected as a semi-detached pair. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property at 12 Kensington Avenue has value as an early-twentieth-century vernacular style two- storey commercial addition to a nineteenth-century residential structure that retains some legibility of its original form including south side wall with gabled roofline. The property at 14 Kensington Avenue has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The properties were erected as a semi-detached pair. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs. The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "12 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "12 KENSINGTON AVE"
     ],
@@ -202,13 +202,13 @@
       "timestamp": "2026-03-29T08:34:16.482977Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #505050",
-        "mortar": "#B0A898 \u2192 #AE9F8D"
+        "roof": "#5A5A5A → #505050",
+        "mortar": "#B0A898 → #AE9F8D"
       }
     ],
     "qa_final_fixes": [
@@ -218,7 +218,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.646642Z"
   },
   "bay_window": {
     "present": true,
@@ -237,7 +238,7 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.45,
-    "facade_colour_observed": "not clearly visible \u2014 night photo",
+    "facade_colour_observed": "not clearly visible — night photo",
     "facade_material_observed": "left: wood panel/plywood over original; right: painted (pink/magenta tones with neon)",
     "condition_observed": "left: fair, heavily modified with wood paneling covering original facade; right: fair, commercial modifications with extensive lighting",
     "has_storefront_observed": false,
@@ -394,7 +395,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 0.0,
-  "facade_description": "12 Kensington Ave is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as painted wood/stucco, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
+  "facade_description": "12 Kensington Ave is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "The property at 14 Kensington Avenue has evolved over time while retaining original building features including its bay-and-gable form above the first storey with brick cladding, gable, and flat headed and round arched window openings. Constructed between 1910 and 1930, the addition at 12 Kensington Avenue has retained its brick facade with pressed metal cornice and second storey window openings with brick and stone voussoirs.",
   "roof_material": "Slate shingles",
   "colour_palette": {
@@ -420,7 +421,18 @@
       "type": null,
       "colour": null
     },
-    "width_pct": 90
+    "width_pct": 90,
+    "signage": {
+      "text": "Last Temptation",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260320_012227134_HDR.jpg",
@@ -537,5 +549,5 @@
   "eave_overhang_mm": 200,
   "foundation_height_m": 0.2,
   "wall_thickness_m": 0.3,
-  "inferred_setback_m": 1.5
+  "inferred_setback_m": 0.0
 }

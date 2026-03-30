@@ -5,7 +5,7 @@
     3.2,
     3.2
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "brown brick ground floor with blue corrugated metal cladding on upper storey",
   "windows_per_floor": [
     4,
@@ -162,15 +162,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.743657+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #655B5C",
-        "trim": "#E8E0D0 \u2192 #3D2D23",
-        "accent": "#2A3A2A \u2192 #39402E",
-        "mortar": "#B0A898 \u2192 #BDB6A9"
+        "roof": "#5A5A5A → #655B5C",
+        "trim": "#E8E0D0 → #3D2D23",
+        "accent": "#2A3A2A → #39402E",
+        "mortar": "#B0A898 → #BDB6A9"
       }
     ]
   },
@@ -286,7 +286,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "57 Kensington school building is a house-form building. The street elevation spans roughly 6 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form typology. The facade reads primarily as mixed in a brown brick ground floor with blue corrugated metal cladding on upper storey palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 3 window bays from lower to upper levels, using fixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "57 Kensington school building is a house-form building. The street elevation spans roughly 6 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form typology. The facade reads primarily as mixed masonry in a brown brick ground floor with blue corrugated metal cladding on upper storey palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4, 3 window bays from lower to upper levels, using fixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "hcd_data": {
     "typology": "house-form",
     "construction_date": "1889-1903",

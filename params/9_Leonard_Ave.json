@@ -38,12 +38,12 @@
     "typology": "Converted House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable",
-    "construction_period": "c. 1870\u20131900 (estimated)",
+    "construction_period": "c. 1870–1900 (estimated)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 167,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from t",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from t",
     "building_features": [
       "original_windows"
     ],
@@ -53,15 +53,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Detached House",
+    "land_use": "Residential – Detached House",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Short residential | West edge of market",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 5,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 1
   },
   "_meta": {
@@ -99,7 +99,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "9 Leonard Ave",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "9 LEONARD AVE"
     ],
@@ -144,16 +144,16 @@
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:49.029060+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BF603F",
-        "roof": "#5A5A5A \u2192 #444444",
-        "trim": "#3A2A20 \u2192 #4F3B2A",
-        "accent": "#3A2A20 \u2192 #363E2E",
-        "mortar": "#B0A898 \u2192 #BCAD95"
+        "facade": "#B85A3A → #BF603F",
+        "roof": "#5A5A5A → #444444",
+        "trim": "#3A2A20 → #4F3B2A",
+        "accent": "#3A2A20 → #363E2E",
+        "mortar": "#B0A898 → #BCAD95"
       }
     ],
     "qa_final_fixes": [
@@ -193,7 +193,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from t.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from t.",
     "mortar_colour_hex": "#BCAD95"
   },
   "roof_colour": "#5A5A5A",
@@ -265,7 +265,7 @@
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "9 Leonard Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include original windows.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District\u2019s early residential development from t.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, each property is associated with the District’s early residential development from t.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "photo_observations": {

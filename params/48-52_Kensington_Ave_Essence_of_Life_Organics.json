@@ -103,7 +103,7 @@
       "51 KENSINGTON AVE",
       "52 KENSINGTON AVE"
     ],
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "facade_analysis_applied": [
       "kensington_ave_facades_2026-03-26T14:10:40"
     ],
@@ -148,7 +148,7 @@
       "timestamp": "2026-03-29T08:34:21.677960Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.756791Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",

@@ -1,7 +1,7 @@
 {
   "building_name": "366 Bathurst St (Cardinal Funeral Home)",
   "floors": 2,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "red brick with light cream concrete trim, columns, and parapet bands",
   "windows_per_floor": [
     5,
@@ -139,16 +139,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.230430+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "porch_enriched": "2026-03-29T08:38:23.342092Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #525151",
-        "trim": "#E8E0D0 \u2192 #35251E",
-        "accent": "#2A3A2A \u2192 #2B3929",
-        "mortar": "#B0A898 \u2192 #B4A48E"
+        "roof": "#5A5A5A → #525151",
+        "trim": "#E8E0D0 → #35251E",
+        "accent": "#2A3A2A → #2B3929",
+        "mortar": "#B0A898 → #B4A48E"
       }
     ]
   },
@@ -283,7 +283,7 @@
     }
   ],
   "street_setback_m": 2.0,
-  "facade_description": "366 Bathurst St (Cardinal Funeral Home) is a house-form building. The street elevation spans roughly 8 metres across 2 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as mixed in a red brick with light cream concrete trim, columns, and parapet bands palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 5, 5 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include string courses, cornice.",
+  "facade_description": "366 Bathurst St (Cardinal Funeral Home) is a house-form building. The street elevation spans roughly 8 metres across 2 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as mixed masonry in a red brick with light cream concrete trim, columns, and parapet bands palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 5, 5 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include string courses, cornice.",
   "hcd_data": {
     "typology": "house-form",
     "construction_date": "1889-1903",

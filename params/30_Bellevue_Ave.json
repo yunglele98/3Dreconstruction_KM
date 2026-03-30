@@ -2,11 +2,11 @@
   "building_name": "30 Bellevue Ave",
   "floors": 3,
   "floor_heights_m": [
-    2.2,
-    2.01,
-    1.69
+    2.4,
+    2.4,
+    2.4
   ],
-  "total_height_m": 5.9,
+  "total_height_m": 7.2,
   "facade_width_m": 5.2,
   "facade_depth_m": 12.0,
   "site": {
@@ -116,7 +116,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "30 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "30 BELLEVUE AVE"
     ],
@@ -164,7 +164,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.705927+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "porch_enriched": "2026-03-29T08:38:22.889728Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -184,7 +184,14 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 5.9,
+      "new_total_height_m": 7.2,
+      "floors": 3.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "bay_window": {
     "present": true,

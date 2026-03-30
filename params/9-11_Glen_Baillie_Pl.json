@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "duplicate \u2014 pair photo; observations in individual files",
+  "reason": "duplicate — pair photo; observations in individual files",
   "photo": "IMG_20260316_114315264_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -31,7 +31,7 @@
       "10 GLEN BAILLIE PL",
       "11 GLEN BAILLIE PL"
     ],
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "cleanup_fixes": [
       "facade_material -> brick",
       "roof_type -> gable",
@@ -95,15 +95,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.893854+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B56945",
-        "roof": "#5A5A5A \u2192 #5E5D5D",
-        "trim": "#E8E0D0 \u2192 #362D25",
-        "mortar": "#B0A898 \u2192 #C3BCAD"
+        "facade": "#B85A3A → #B56945",
+        "roof": "#5A5A5A → #5E5D5D",
+        "trim": "#E8E0D0 → #362D25",
+        "mortar": "#B0A898 → #C3BCAD"
       }
     ]
   },
@@ -218,7 +218,7 @@
   "roof_pitch_deg": 40,
   "condition": "fair",
   "assessment": {
-    "condition_notes": "Inferred as fair \u2014 Kensington Market default, no photo or field assessment available"
+    "condition_notes": "Inferred as fair — Kensington Market default, no photo or field assessment available"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "duplicate \u2014 range; individual files have photo_observations",
+  "reason": "duplicate — range; individual files have photo_observations",
   "photo": "IMG_20260320_160713463_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -28,7 +28,7 @@
       "41 BELLEVUE AVE",
       "42 BELLEVUE AVE"
     ],
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "cleanup_fixes": [
       "facade_material -> brick",
       "roof_type -> gable",
@@ -97,15 +97,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.530619+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #9E5A49",
-        "roof": "#5A5A5A \u2192 #464D4D",
-        "trim": "#E8E0D0 \u2192 #38271F",
-        "mortar": "#B0A898 \u2192 #B8AA93"
+        "facade": "#B85A3A → #9E5A49",
+        "roof": "#5A5A5A → #464D4D",
+        "trim": "#E8E0D0 → #38271F",
+        "mortar": "#B0A898 → #B8AA93"
       }
     ]
   },
@@ -209,7 +209,7 @@
   "roof_pitch_deg": 40,
   "condition": "fair",
   "assessment": {
-    "condition_notes": "Inferred as fair \u2014 Kensington Market default, no photo or field assessment available"
+    "condition_notes": "Inferred as fair — Kensington Market default, no photo or field assessment available"
   },
   "photo_observations": {
     "source": "synthesized_from_params",

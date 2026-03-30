@@ -2,10 +2,10 @@
   "building_name": "5 Oxford St",
   "floors": 2,
   "floor_heights_m": [
-    1.92,
-    1.93
+    2.4,
+    2.4
   ],
-  "total_height_m": 3.85,
+  "total_height_m": 4.8,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "",
     "general_use": "Commercial",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "5 Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "5 OXFORD ST"
     ],
@@ -162,16 +162,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.874588+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AD5E3C",
-        "roof": "#5A5A5A \u2192 #484E4E",
-        "trim": "#E8E0D0 \u2192 #35271E",
-        "accent": "#3A2A20 \u2192 #4F4534",
-        "mortar": "#B0A898 \u2192 #BAAA92"
+        "facade": "#B85A3A → #AD5E3C",
+        "roof": "#5A5A5A → #484E4E",
+        "trim": "#E8E0D0 → #35271E",
+        "accent": "#3A2A20 → #4F4534",
+        "mortar": "#B0A898 → #BAAA92"
       }
     ],
     "qa_final_fixes": [
@@ -181,7 +181,14 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 3.85,
+      "new_total_height_m": 4.8,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "doors_detail": [
     {

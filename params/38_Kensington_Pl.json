@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-Form, Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
-    "architectural_style": "Victorian Vernacular \u2013 Workers Cottage",
-    "construction_period": "c. 1870\u20131889",
+    "architectural_style": "Victorian Vernacular – Workers Cottage",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1870,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 166,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Mixed Use",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Laneway | Pedestrian-scale | Worker cottages | Historic character",
-    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
-    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
+    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850–1880)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -78,7 +78,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 4,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "38 Kensington Pl",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "38 KENSINGTON PL"
     ],
@@ -164,16 +164,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.391361+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B15330",
-        "roof": "#5A5A5A \u2192 #594F4F",
-        "trim": "#3A2A20 \u2192 #4C3927",
-        "accent": "#3A2A20 \u2192 #37271D",
-        "mortar": "#B0A898 \u2192 #9C8A79"
+        "facade": "#B85A3A → #B15330",
+        "roof": "#5A5A5A → #594F4F",
+        "trim": "#3A2A20 → #4C3927",
+        "accent": "#3A2A20 → #37271D",
+        "mortar": "#B0A898 → #9C8A79"
       }
     ],
     "qa_final_fixes": [
@@ -183,7 +183,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.005888Z"
   },
   "doors_detail": [
     {
@@ -212,7 +213,7 @@
     "trim_colour_hex": "#4C3927",
     "composition": "The street elevation spans roughly 3.4 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
     "mortar_colour_hex": "#9C8A79",
     "heritage_expression": "Character-defining elements include bay window."
   },
@@ -285,13 +286,24 @@
   "street_setback_m": 0.5,
   "confidence": 0.8000000000000002,
   "facade_description": "38 Kensington Pl is a bay-and-gable house-form building. The street elevation spans roughly 3.4 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
-  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 2.72,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
   },
   "photo_observations": {
     "db_context": {

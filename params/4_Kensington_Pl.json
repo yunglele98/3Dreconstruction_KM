@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 233,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s, which included a large concentration of workers\u2019 housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "mixed_use",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Laneway | Pedestrian-scale | Worker cottages | Historic character",
-    "morphological_zone": "Laneway / Interior Passage \u2013 Worker Cottage",
-    "development_phase": "Phase 1: Denison Estate Subdivision (1850\u20131880)"
+    "morphological_zone": "Laneway / Interior Passage – Worker Cottage",
+    "development_phase": "Phase 1: Denison Estate Subdivision (1850–1880)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -78,7 +78,7 @@
     "lot_width_ft": 13.0,
     "lot_depth_ft": 60.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "4 Kensington Pl",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "4 KENSINGTON PL"
     ],
@@ -142,17 +142,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.432084+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.824010Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B34E34",
-        "roof": "#5A5A5A \u2192 #615952",
-        "trim": "#3A2A20 \u2192 #36281E",
-        "accent": "#3A2A20 \u2192 #4F3625",
-        "mortar": "#B0A898 \u2192 #C3B199"
+        "facade": "#B85A3A → #B34E34",
+        "roof": "#5A5A5A → #615952",
+        "trim": "#3A2A20 → #36281E",
+        "accent": "#3A2A20 → #4F3625",
+        "mortar": "#B0A898 → #C3B199"
       }
     ]
   },
@@ -201,7 +201,7 @@
     "trim_colour_hex": "#36281E",
     "composition": "The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
-    "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District.",
+    "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District.",
     "heritage_expression": "Character-defining facade elements include string courses, cornice.",
     "mortar_colour_hex": "#C3B199"
   },
@@ -260,7 +260,7 @@
   "street_setback_m": 0.5,
   "confidence": 0.8000000000000002,
   "facade_description": "4 Kensington Pl is a row-house building. The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include string courses, cornice.",
-  "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers\u2019 housing within the District.",
+  "heritage_summary": "Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "photo_observations": {

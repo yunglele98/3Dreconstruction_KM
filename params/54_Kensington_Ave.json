@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "1914-1930",
-    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 216,
-    "statement_of_contribution": "The property has value as an early-twentieth-century three-storey Commercial building. Through its construction date and typology, the property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. The property has retained building features reflecting vernacular interpretations of Edwardian and other early-twentieth-century architectural styles, including its brick principal elevation with parapet and window openings with stone sills and segmentally arched voussoirs at the second and third storeys. The property has contextual value because it supports and maintains the historic mixed use character of the area. With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "The property has value as an early-twentieth-century three-storey Commercial building. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. The property has retained building features reflecting vernacular interpretations of Edwardian and other early-twentieth-century architectural styles, including its brick principal elevation with parapet and window openings with stone sills and segmentally arched voussoirs at the second and third storeys. The property has contextual value because it supports and maintains the historic mixed use character of the area. With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "decorative_brick",
       "cornice"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -103,7 +103,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "54 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "54 KENSINGTON AVE"
     ],
@@ -157,16 +157,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.601200+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.997011Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #C7B8A1",
-        "roof": "#5A5A5A \u2192 #4F4E4E",
-        "accent": "#1A1A2A \u2192 #2F3C2C",
-        "mortar": "#B0A898 \u2192 #D3CBBC"
+        "facade": "#B85A3A → #C7B8A1",
+        "roof": "#5A5A5A → #4F4E4E",
+        "accent": "#1A1A2A → #2F3C2C",
+        "mortar": "#B0A898 → #D3CBBC"
       }
     ]
   },

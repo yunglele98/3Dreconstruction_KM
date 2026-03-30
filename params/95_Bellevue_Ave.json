@@ -42,13 +42,13 @@
   "hcd_data": {
     "typology": "House-form, Detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 101,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles, particularly Queen Anne Revival. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property is also associated with its former owner, Dr. Henry Machell, a prominent Toronto physician who was one of the early supporters of the Hospital for Sick Children. Frist adapted to a nursery and day care centre in 1917, the property is also associated with the development of the District as a complete community that included residential, institutional, civic, and commercial uses. The property retains many of its original building features, including its cross-gable roofline with dormer windows, two-storey projecting bay, fenestration pattern with segmental, round, and jack arched openings, decorative woodwork including window surrounds, bargeboards, brackets, and panels, and brick cladding with decorative brickwork and terracotta panel insets. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles, particularly Queen Anne Revival. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property is also associated with its former owner, Dr. Henry Machell, a prominent Toronto physician who was one of the early supporters of the Hospital for Sick Children. Frist adapted to a nursery and day care centre in 1917, the property is also associated with the development of the District as a complete community that included residential, institutional, civic, and commercial uses. The property retains many of its original building features, including its cross-gable roofline with dormer windows, two-storey projecting bay, fenestration pattern with segmental, round, and jack arched openings, decorative woodwork including window surrounds, bargeboards, brackets, and panels, and brick cladding with decorative brickwork and terracotta panel insets. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "decorative_brick",
       "original_windows",
@@ -67,8 +67,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -87,7 +87,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 7,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -110,7 +110,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "95 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "95 BELLEVUE AVE"
     ],
@@ -172,16 +172,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.965809+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AC4225",
-        "roof": "#5A5A5A \u2192 #504F4F",
-        "trim": "#3A2A20 \u2192 #473627",
-        "accent": "#3A2A20 \u2192 #162422",
-        "mortar": "#B0A898 \u2192 #BFB19A"
+        "facade": "#B85A3A → #AC4225",
+        "roof": "#5A5A5A → #504F4F",
+        "trim": "#3A2A20 → #473627",
+        "accent": "#3A2A20 → #162422",
+        "mortar": "#B0A898 → #BFB19A"
       }
     ],
     "qa_final_fixes": [
@@ -191,7 +191,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.369874Z"
   },
   "bay_window": {
     "present": true,
@@ -426,7 +427,14 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage": {
+      "text": "Westside Montessori School",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

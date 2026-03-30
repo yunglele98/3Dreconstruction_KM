@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Row (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Row (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 237,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain many of their original building features, including shared rooflines with prominent cross-gables, round arch openings at ground level, recessed entrances, and brick cladding. 3 Leonard Avenue additionally retains decorative woodwork features on its gable and bay window, portions of which also remain intact on 5 Leonard Avenue. Contextually, each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties retain many of their original building features, including shared rooflines with prominent cross-gables, round arch openings at ground level, recessed entrances, and brick cladding. 3 Leonard Avenue additionally retains decorative woodwork features on its gable and bay window, portions of which also remain intact on 5 Leonard Avenue. Contextually, each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "original_windows",
       "decorative_brick"
@@ -61,8 +61,8 @@
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Short residential | West edge of market",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -81,7 +81,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -100,7 +100,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "7 Leonard Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "7 LEONARD AVE"
     ],
@@ -158,16 +158,16 @@
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:48.651890+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BB7D56",
-        "roof": "#5A5A5A \u2192 #434242",
-        "trim": "#E8E0D0 \u2192 #282828",
-        "accent": "#2A3A2A \u2192 #273225",
-        "mortar": "#B0A898 \u2192 #ACA492"
+        "facade": "#B85A3A → #BB7D56",
+        "roof": "#5A5A5A → #434242",
+        "trim": "#E8E0D0 → #282828",
+        "accent": "#2A3A2A → #273225",
+        "mortar": "#B0A898 → #ACA492"
       }
     ],
     "qa_final_fixes": [
@@ -177,7 +177,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.332185Z"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -261,7 +262,14 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage": {
+      "text": "Migrator Immigration Services",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "source": "synthesized_from_params",

@@ -2,12 +2,12 @@
   "building_name": "75A Wales Ave",
   "floors": 4,
   "floor_heights_m": [
-    2.12,
-    2.0,
-    2.0,
-    1.7
+    2.4,
+    2.4,
+    2.4,
+    2.4
   ],
-  "total_height_m": 7.82,
+  "total_height_m": 9.6,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -42,12 +42,12 @@
     "typology": "House-form, Detached",
     "construction_date": "1904-1913",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
     "sub_area": "Residential",
     "contributing": "Yes",
     "hcd_plan_index": null,
-    "statement_of_contribution": "The property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. The property retains most of its original building features including brick cladding, flat headed openings, projecting two-storey bay, second storey oriel window and hipped attic dormer.",
+    "statement_of_contribution": "The property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. The property retains most of its original building features including brick cladding, flat headed openings, projecting two-storey bay, second storey oriel window and hipped attic dormer.",
     "building_features": [],
     "heritage_register": "Part V HCD Likely Contributing",
     "protection_level": 3
@@ -55,15 +55,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Active laneway housing development",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -101,7 +101,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "75A Wales Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "75A WALES AVE"
     ],
@@ -169,18 +169,25 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.495427+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #D58A4D",
-        "roof": "#5A5A5A \u2192 #564E4E",
-        "trim": "#2A2A2A \u2192 #3D3C3C",
-        "accent": "#3A2A20 \u2192 #303037",
-        "mortar": "#B0A898 \u2192 #A8A091"
+        "facade": "#B85A3A → #D58A4D",
+        "roof": "#5A5A5A → #564E4E",
+        "trim": "#2A2A2A → #3D3C3C",
+        "accent": "#3A2A20 → #303037",
+        "mortar": "#B0A898 → #A8A091"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 7.82,
+      "new_total_height_m": 9.6,
+      "floors": 4.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "doors_detail": [
     {

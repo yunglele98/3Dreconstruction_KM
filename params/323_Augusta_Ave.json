@@ -26,7 +26,7 @@
     "projecting_balconies",
     "deck"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "white-painted glazed storefront with multicolour mural surround beneath a beige block-clad upper facade",
   "windows_per_floor": [
     1,
@@ -42,13 +42,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 39,
-    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, they retain most of their original building features including shared cross-gabled roofline, fenestration pattern, second storey oriel window, and brick cladding with stone banding. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, they retain most of their original building features including shared cross-gabled roofline, fenestration pattern, second storey oriel window, and brick cladding with stone banding. Each property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "bay_window",
       "decorative_brick",
@@ -67,8 +67,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -87,7 +87,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -110,7 +110,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "323 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "323 AUGUSTA AVE"
     ],
@@ -176,16 +176,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.808941+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.847628Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #474747",
-        "trim": "#E8E0D0 \u2192 #3A291F",
-        "accent": "#2A3A2A \u2192 #3A4231",
-        "mortar": "#B0A898 \u2192 #BBB3A4"
+        "roof": "#5A5A5A → #474747",
+        "trim": "#E8E0D0 → #3A291F",
+        "accent": "#2A3A2A → #3A4231",
+        "mortar": "#B0A898 → #BBB3A4"
       }
     ]
   },
@@ -409,7 +409,7 @@
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "323 Augusta Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed in a white-painted glazed storefront with multicolour mural surround beneath a beige block-clad upper facade palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, cornice.",
+  "facade_description": "323 Augusta Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed masonry in a white-painted glazed storefront with multicolour mural surround beneath a beige block-clad upper facade palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, cornice.",
   "heritage_summary": "Constructed as a semi-detached pair, they retain most of their original building features including shared cross-gabled roofline, fenestration pattern, second storey oriel window, and brick cladding with stone banding. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],

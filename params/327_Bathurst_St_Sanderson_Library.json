@@ -1,7 +1,7 @@
 {
   "building_name": "327 Bathurst St (Sanderson Library)",
   "floors": 1,
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "red-brown brick walls with light gray concrete fascia and full-height dark-framed glazing",
   "windows_per_floor": [
     3
@@ -138,15 +138,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.824315+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #424949",
-        "trim": "#E8E0D0 \u2192 #2C2C2C",
-        "accent": "#2A3A2A \u2192 #4C3224",
-        "mortar": "#B0A898 \u2192 #B1A999"
+        "roof": "#5A5A5A → #424949",
+        "trim": "#E8E0D0 → #2C2C2C",
+        "accent": "#2A3A2A → #4C3224",
+        "mortar": "#B0A898 → #B1A999"
       }
     ]
   },
@@ -254,7 +254,7 @@
     }
   },
   "street_setback_m": 2.0,
-  "facade_description": "327 Bathurst St (Sanderson Library) is a house-form building. The street elevation spans roughly 8 metres across 1 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as mixed in a red-brown brick walls with light gray concrete fascia and full-height dark-framed glazing palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3 window bays from lower to upper levels, using fixed, and 2 principal entrances. Character-defining facade elements include cornice.",
+  "facade_description": "327 Bathurst St (Sanderson Library) is a house-form building. The street elevation spans roughly 8 metres across 1 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as mixed masonry in a red-brown brick walls with light gray concrete fascia and full-height dark-framed glazing palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3 window bays from lower to upper levels, using fixed, and 2 principal entrances. Character-defining facade elements include cornice.",
   "hcd_data": {
     "typology": "house-form",
     "construction_date": "1889-1903",

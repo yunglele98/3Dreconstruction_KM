@@ -25,7 +25,7 @@
   "roof_features": [
     "chimney"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "Mixed: ground floor various cladding; upper floors original red brick and painted surfaces",
   "windows_per_floor": [
     2,
@@ -41,13 +41,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
-    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1904-1913 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1904-1913 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 98,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "bay_window",
       "original_windows"
@@ -58,15 +58,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -85,7 +85,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 4,
-    "residential_floors": "All floors (1\u20133)",
+    "residential_floors": "All floors (1–3)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -118,7 +118,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "90 Bellevue Ave",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "90 BELLEVUE AVE"
     ],
@@ -179,16 +179,16 @@
     ],
     "generation_defaults_applied": true,
     "colour_palette_rebuilt": "2026-03-29T08:35:48.901801+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "porch_enriched": "2026-03-29T08:38:25.170050Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #5A5050",
-        "trim": "#2A2A2A \u2192 #25252A",
-        "accent": "#3A2A20 \u2192 #4F3626",
-        "mortar": "#B0A898 \u2192 #A49B8A"
+        "roof": "#5A5A5A → #5A5050",
+        "trim": "#2A2A2A → #25252A",
+        "accent": "#3A2A20 → #4F3626",
+        "mortar": "#B0A898 → #A49B8A"
       }
     ]
   },
@@ -396,7 +396,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "90 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
+  "facade_description": "90 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed masonry in a mixed: ground floor various cladding; upper floors original red brick and painted surfaces palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "Constructed as a semi-detached pair, the properties retain many original building features including their mirrored facades and shared roofline, stepped brick gable parapets, dormer windows, second-storey bay windows, and segmentally arched openings on the first storey. 92 Bellevue Avenue additionally retains its brick cladding.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],

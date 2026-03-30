@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
     "construction_date": "1890-1903",
-    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1890-1903 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 297,
-    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair, they retain most of their original building features including cross-gabled rooflines, mirrored facades, double-height bay windows, brick cladding with decorative brickwork and stonework, decorative wooden gable pediments and brackets, and fenestration pattern with flat arch openings, stone sills, and recessed front entrances behind rounded archway. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair, they retain most of their original building features including cross-gabled rooflines, mirrored facades, double-height bay windows, brick cladding with decorative brickwork and stonework, decorative wooden gable pediments and brackets, and fenestration pattern with flat arch openings, stone sills, and recessed front entrances behind rounded archway. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "original_windows",
       "bay_window"
@@ -56,15 +56,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "94 Nassau St",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "94 NASSAU ST"
     ],
@@ -158,15 +158,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.955197+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #605F5F",
-        "trim": "#E8E0D0 \u2192 #313131",
-        "accent": "#2A3A2A \u2192 #142221",
-        "mortar": "#B0A898 \u2192 #BEB5A3"
+        "roof": "#5A5A5A → #605F5F",
+        "trim": "#E8E0D0 → #313131",
+        "accent": "#2A3A2A → #142221",
+        "mortar": "#B0A898 → #BEB5A3"
       }
     ]
   },

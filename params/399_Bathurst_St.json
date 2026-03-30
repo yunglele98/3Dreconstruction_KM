@@ -2,14 +2,14 @@
   "building_name": "399 Bathurst St",
   "floors": 6,
   "floor_heights_m": [
-    6.71,
-    6.1,
-    6.1,
-    6.1,
-    6.1,
-    5.09
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8,
+    4.8
   ],
-  "total_height_m": 36.2,
+  "total_height_m": 28.8,
   "facade_width_m": 5.5,
   "facade_depth_m": 10.0,
   "site": {
@@ -46,28 +46,28 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Modernist Institutional",
-    "construction_period": "1913\u2013present (multiple phases)",
+    "construction_period": "1913–present (multiple phases)",
     "construction_decade": 1910,
     "sub_area": "",
     "contributing": "No",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
     "building_type": "institutional",
     "general_use": "Institutional",
-    "land_use": "Institutional \u2013 Healthcare",
+    "land_use": "Institutional – Healthcare",
     "commercial_use": "Other Commercial",
     "business_name": "Toronto Western Hospital",
     "business_category": "Other",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (511) | Commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 4: Institutional Growth (1910\u20131950)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 4: Institutional Growth (1910–1950)"
   },
   "assessment": {
     "condition_rating": 5,
@@ -86,7 +86,7 @@
     "lot_width_ft": null,
     "lot_depth_ft": null,
     "dwelling_units": null,
-    "residential_floors": "Floors 2\u20136 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–6 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -105,7 +105,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "399 Bathurst St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "399 BATHURST ST"
     ],
@@ -180,15 +180,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.445666+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #535252",
-        "trim": "#E8E0D0 \u2192 #34251D",
-        "accent": "#3A2A20 \u2192 #482D1E",
-        "mortar": "#B0A898 \u2192 #B3AB9C"
+        "roof": "#5A5A5A → #535252",
+        "trim": "#E8E0D0 → #34251D",
+        "accent": "#3A2A20 → #482D1E",
+        "mortar": "#B0A898 → #B3AB9C"
       }
     ],
     "qa_final_fixes": [
@@ -198,7 +198,15 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 36.2,
+      "new_total_height_m": 28.8,
+      "floors": 6.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "storefront_enriched": "2026-03-30T06:33:21.011274Z"
   },
   "doors_detail": [
     {
@@ -344,7 +352,14 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "signage": {
+      "text": "Toronto Western Hospital",
+      "type": "fascia",
+      "width_m": 3.8499999999999996,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "source": "synthesized_from_params",

@@ -24,7 +24,7 @@
   "roof_features": [
     "false_front"
   ],
-  "facade_material": "painted brick",
+  "facade_material": "Brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     4,
@@ -40,7 +40,7 @@
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -106,7 +106,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "184 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "184 BALDWIN ST"
     ],
@@ -188,14 +188,14 @@
       "timestamp": "2026-03-29T08:34:17.516483Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.371900Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#3A2A20 \u2192 #443425",
-        "mortar": "#B0A898 \u2192 #988A7B"
+        "trim": "#3A2A20 → #443425",
+        "mortar": "#B0A898 → #988A7B"
       }
     ]
   },
@@ -408,7 +408,7 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "184 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as painted brick in a red brick palette, laid in running bond (painted white) with light grey mortar joints. The facade keeps a domestic opening rhythm of 4, 0 window bays from lower to upper levels, using storefront, and 2 principal entrances. Character-defining facade elements include cornice.",
+  "facade_description": "184 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond (painted white) with light grey mortar joints. The facade keeps a domestic opening rhythm of 4, 0 window bays from lower to upper levels, using storefront, and 2 principal entrances. Character-defining facade elements include cornice.",
   "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor altera. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
   "roof_material": "Slate shingles",
   "colour_palette": {

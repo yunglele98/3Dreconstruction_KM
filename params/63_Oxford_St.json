@@ -21,7 +21,7 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
   "windows_per_floor": [
     0
@@ -35,15 +35,15 @@
   "hcd_data": {
     "typology": "Parks/Open Space",
     "construction_date": "",
-    "architectural_style": "Parks/Open Space (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "n/a (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Parks/Open Space (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "n/a (confirmed – HCD Plan Vol. 2)",
     "construction_decade": null,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
-    "statement_of_contribution": "Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A ",
+    "statement_of_contribution": "Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place. The property has cultural heritage value for its association with Sonya Lunansky, whom the park is named after. A ",
     "building_features": [],
-    "heritage_register": "N/A \u2013 Open Space",
+    "heritage_register": "N/A – Open Space",
     "protection_level": 0
   },
   "context": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "63 Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "63 OXFORD ST"
     ],
@@ -167,14 +167,14 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.054709+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #4C5252",
-        "trim": "#E8E0D0 \u2192 #38291F",
-        "mortar": "#B0A898 \u2192 #C1B9AB"
+        "roof": "#5A5A5A → #4C5252",
+        "trim": "#E8E0D0 → #38291F",
+        "mortar": "#B0A898 → #C1B9AB"
       }
     ]
   },
@@ -274,7 +274,7 @@
     "trim_colour_hex": "#38291F",
     "composition": "The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology.",
     "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
-    "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+    "heritage_summary": "A. Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
     "heritage_expression": "Character-defining facade elements include cornice.",
     "secondary_material": "mixed (previously mixed)",
     "mortar_colour_hex": "#C1B9AB"
@@ -333,8 +333,8 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "63 Oxford St is a parks/open space building. The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology. The facade reads primarily as mixed in a open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
-  "heritage_summary": "A. Sonya\u2019s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
+  "facade_description": "63 Oxford St is a parks/open space building. The street elevation spans roughly 5.5 metres across 1 storeys and is capped by a gable, consistent with its parks/open space typology. The facade reads primarily as mixed masonry in a open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "heritage_summary": "A. Sonya’s Parkette has value as a small park that was created to provide the neighbourhood with greater green space for family-oriented activities, leisure, and a community meeting place.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "colour_palette": {

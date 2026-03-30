@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
@@ -48,7 +48,7 @@
       "original_windows",
       "bay_window"
     ],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -61,8 +61,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -81,7 +81,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 6,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -102,7 +102,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "568 Dundas St W",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "568 DUNDAS ST W"
     ],
@@ -160,16 +160,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.685497+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AA7854",
-        "roof": "#5A5A5A \u2192 #5F5353",
-        "trim": "#E8E0D0 \u2192 #423224",
-        "accent": "#3A2A20 \u2192 #2F3727",
-        "mortar": "#B0A898 \u2192 #BCAC94"
+        "facade": "#B85A3A → #AA7854",
+        "roof": "#5A5A5A → #5F5353",
+        "trim": "#E8E0D0 → #423224",
+        "accent": "#3A2A20 → #2F3727",
+        "mortar": "#B0A898 → #BCAC94"
       }
     ],
     "qa_final_fixes": [
@@ -179,7 +179,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.152463Z"
   },
   "bay_window": {
     "present": true,
@@ -203,8 +204,8 @@
     "door_count": 1,
     "door_type": "single",
     "has_storefront_observed": false,
-    "storefront_description": "Not a commercial storefront \u2014 community association hall",
-    "signage_observed": "\u5b89\u7701\u6f6e\u5dde\u6703\u9928 CHAO CHOW ASSOCIATION OF ONTARIO CANADA, TEL (416) 340-0839, 568 DUNDAS ST. W.",
+    "storefront_description": "Not a commercial storefront — community association hall",
+    "signage_observed": "安省潮州會館 CHAO CHOW ASSOCIATION OF ONTARIO CANADA, TEL (416) 340-0839, 568 DUNDAS ST. W.",
     "overall_style": "Institutional",
     "confidence": 0.72,
     "agent": "claude-opus-4-6",
@@ -213,7 +214,7 @@
   },
   "door_type": "single",
   "overall_style": "Institutional",
-  "storefront_description": "Not a commercial storefront \u2014 community association hall",
+  "storefront_description": "Not a commercial storefront — community association hall",
   "confidence": 0.9,
   "doors_detail": [
     {
@@ -293,7 +294,14 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 5.49,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    }
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

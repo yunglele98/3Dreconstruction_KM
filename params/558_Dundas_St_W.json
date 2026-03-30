@@ -38,12 +38,12 @@
     "typology": "House-form, Row",
     "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 143,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a row of three, the properties retain original building features including shared roofline with prominent cross- gable, second storey bay windows, segmentally arched openings, and brick cladding. 22 and 24 Denison Square additionally retain decorative woodwork around the second storey bay window, wood brackets, and shingles in the gable above. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 141. 22 Denison Square N/A 142. 24 Denison Square N/A 143. 26 Denison Square N/A 95 DCH | FO :D FO YTIC 5202 594 Dundas Street West 594 DUNDAS STREET WEST",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Queen Anne Revival and other Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row of three, the properties retain original building features including shared roofline with prominent cross- gable, second storey bay windows, segmentally arched openings, and brick cladding. 22 and 24 Denison Square additionally retain decorative woodwork around the second storey bay window, wood brackets, and shingles in the gable above. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 141. 22 Denison Square N/A 142. 24 Denison Square N/A 143. 26 Denison Square N/A 95 DCH | FO :D FO YTIC 5202 594 Dundas Street West 594 DUNDAS STREET WEST",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -58,15 +58,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 20,
-    "signage": "People Hair Salon (\u5927\u773e\u9aee\u5eca)",
+    "signage": "People Hair Salon (大眾髮廊)",
     "street_presence": "neutral"
   },
   "city_data": {
@@ -78,7 +78,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "558 Dundas St W",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "558 DUNDAS ST W"
     ],
@@ -149,17 +149,17 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.626492+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.022645Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BE9263",
-        "roof": "#5A5A5A \u2192 #535353",
-        "trim": "#2A2A2A \u2192 #282828",
-        "accent": "#3A2A20 \u2192 #4E3829",
-        "mortar": "#B0A898 \u2192 #C3BCAD"
+        "facade": "#B85A3A → #BE9263",
+        "roof": "#5A5A5A → #535353",
+        "trim": "#2A2A2A → #282828",
+        "accent": "#3A2A20 → #4E3829",
+        "mortar": "#B0A898 → #C3BCAD"
       }
     ]
   },

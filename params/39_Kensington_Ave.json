@@ -1,12 +1,11 @@
 {
   "building_name": "39 Kensington Ave",
-  "floors": 3,
+  "floors": 2,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4
+    3.79,
+    3.1
   ],
-  "total_height_m": 7.2,
+  "total_height_m": 6.89,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -23,12 +22,11 @@
   "roof_type": "gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "left: painted/stucco (white/cream with green); right: painted (white/grey)",
   "windows_per_floor": [
     0,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -105,7 +103,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "39 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "39 KENSINGTON AVE"
     ],
@@ -205,7 +203,7 @@
       "timestamp": "2026-03-29T08:34:20.420584Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
@@ -222,6 +220,10 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.013204Z",
+    "height_fixes": [
+      "qa_height_mismatch: 7.2m/3F -> 6.89m/2F (LiDAR avg: 6.89m)"
     ]
   },
   "bay_window": {
@@ -276,8 +278,8 @@
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#3B3A3A",
-    "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, row typology.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick.",
     "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window.",
     "secondary_material": "mixed (previously mixed)",
@@ -345,7 +347,7 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
-  "facade_description": "39 Kensington Ave is a row-house building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as mixed in a left: painted/stucco (white/cream with green); right: painted (white/grey) palette, laid in not visible (painted/clad) with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick.",
+  "facade_description": "39 Kensington Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as mixed masonry in a left: painted/stucco (white/cream with green); right: painted (white/grey) palette, laid in not visible (painted/clad) with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick.",
   "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window.",
   "roof_material": "Built-up tar and gravel",
   "colour_palette": {
@@ -370,7 +372,14 @@
       "present": false
     },
     "security_grille": true,
-    "width_pct": 70
+    "width_pct": 70,
+    "signage": {
+      "text": "CUTLASS",
+      "type": "fascia",
+      "width_m": 3.6399999999999997,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "facade_analysis_agent": "claude-opus-4-6-facade-analysis",

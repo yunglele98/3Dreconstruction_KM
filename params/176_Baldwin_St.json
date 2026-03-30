@@ -25,7 +25,7 @@
   "roof_features": [
     "awning"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "grey tile-clad upper facade over weathered wood signboards and a burgundy awning",
   "windows_per_floor": [
     3,
@@ -42,12 +42,12 @@
     "typology": "House-form, Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 82,
-    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early",
+    "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 7,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -108,7 +108,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "176 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "176 BALDWIN ST"
     ],
@@ -201,14 +201,14 @@
       "timestamp": "2026-03-29T08:34:17.336403Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:12.163896Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#3A2A20 \u2192 #453525",
-        "mortar": "#B0A898 \u2192 #C2B197"
+        "trim": "#3A2A20 → #453525",
+        "mortar": "#B0A898 → #C2B197"
       }
     ]
   },
@@ -280,7 +280,7 @@
     ],
     "has_storefront_observed": true,
     "storefront_description": "Full-width butcher shop frontage with burgundy awning, central door, and broad display windows.",
-    "signage_observed": "Sanagan\u2019s Meat Locker signboard on weathered wood cladding.",
+    "signage_observed": "Sanagan’s Meat Locker signboard on weathered wood cladding.",
     "overall_style": "Commercial",
     "alterations_visible": "Upper facade fully reclad and storefront modernized.",
     "matches_hcd_typology": false,
@@ -343,7 +343,7 @@
     "trim_colour_hex": "#453525",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 1, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
-    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+    "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
     "heritage_expression": "Character-defining facade elements include cornice.",
     "secondary_material": "mixed (previously mixed)",
     "mortar_colour_hex": "#C2B197"
@@ -417,8 +417,8 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "176 Baldwin St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as mixed in a grey tile-clad upper facade over weathered wood signboards and a burgundy awning palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 1, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
-  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District\u2019s early residential development from the 1850s to the early.",
+  "facade_description": "176 Baldwin St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as mixed masonry in a grey tile-clad upper facade over weathered wood signboards and a burgundy awning palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 1, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#8A8A8A",

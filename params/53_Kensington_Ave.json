@@ -1,9 +1,8 @@
 {
   "building_name": "53 Kensington Ave",
-  "floors": 2,
+  "floors": 1,
   "floor_heights_m": [
-    1.57,
-    1.57
+    3.15
   ],
   "total_height_m": 3.15,
   "facade_width_m": 5.2,
@@ -25,8 +24,7 @@
   "facade_material": "stucco",
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
-    0,
-    2
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -97,12 +95,12 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "53 Kensington Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "53 KENSINGTON AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
+      "timestamp": "2026-03-30T02:31:50",
       "old_total_height_m": 3.15,
       "new_total_height_m": 4.8,
       "floors": 2.0,
@@ -160,7 +158,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.555748+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.928617Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -179,6 +177,9 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "height_fixes": [
+      "qa_height_mismatch: 4.8m/2F -> 3.15m/1F (LiDAR avg: 3.15m)"
     ]
   },
   "storefront": {
@@ -231,8 +232,8 @@
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
     "trim_colour_hex": "#4C3323",
-    "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable.",
-    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+    "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable.",
+    "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "mortar_colour_hex": "#B5A68E",
     "heritage_expression": "Character-defining elements include ground-floor storefront.",
     "heritage_summary": "This building dates to the  period. Character-defining elements include ground-floor storefront."
@@ -269,7 +270,7 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
-  "facade_description": "53 Kensington Ave is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
+  "facade_description": "53 Kensington Ave is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 0 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "photo_observations": {

@@ -75,7 +75,7 @@
       "17 KENSINGTON AVE",
       "18 KENSINGTON AVE"
     ],
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "qa_photo_fixes": [
       "commercial heuristic: 8.0x12.0m"
     ],
@@ -141,15 +141,15 @@
       "timestamp": "2026-03-29T08:34:17.134757Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B15E43",
-        "roof": "#5A5A5A \u2192 #484848",
-        "trim": "#E8E0D0 \u2192 #33251E",
-        "mortar": "#B0A898 \u2192 #BBB3A0"
+        "facade": "#B85A3A → #B15E43",
+        "roof": "#5A5A5A → #484848",
+        "trim": "#E8E0D0 → #33251E",
+        "mortar": "#B0A898 → #BBB3A0"
       }
     ]
   },

@@ -42,7 +42,7 @@
       "82 OXFORD ST",
       "83 OXFORD ST"
     ],
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "qa_photo_fixes": [
       "residential heuristic: 6.0x11.0m"
     ],
@@ -88,15 +88,18 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.688969+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #B16540",
-        "trim": "#E8E0D0 \u2192 #473121",
-        "accent": "#2A3A2A \u2192 #27261E",
-        "mortar": "#B0A898 \u2192 #B7A990"
+        "facade": "#B85A3A → #B16540",
+        "trim": "#E8E0D0 → #473121",
+        "accent": "#2A3A2A → #27261E",
+        "mortar": "#B0A898 → #B7A990"
+      },
+      {
+        "roof": "#5A5A5A → #454B4B"
       }
     ]
   },
@@ -234,7 +237,7 @@
     "mortar_hex": "#C8C0B0",
     "facade": "#B16540",
     "trim": "#473121",
-    "roof": "#5A5A5A",
+    "roof": "#454B4B",
     "accent": "#27261E"
   },
   "deep_facade_analysis": {

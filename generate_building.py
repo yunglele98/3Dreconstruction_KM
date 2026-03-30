@@ -8786,4 +8786,981 @@ def generate_st_stephens_custom(params, offset=(0, 0, 0)):
     )
     all_objs.append(nave_rear_gable)
 
-    # F
+
+
+
+def generate_building(params, offset=(0, 0, 0), rotation=0.0):
+    """Generate a complete 3D building from JSON parameters."""
+    ok, validation_errors = _validate_params(params)
+    for err in validation_errors:
+        print(f"[VALIDATION] {err}")
+    if not ok:
+        print(f"[VALIDATION] SKIPPING {params.get('building_name')} - critical errors")
+        return []
+
+    params = apply_hcd_guide_defaults(params)
+
+    # Dedicated custom profile for St. Stephen church accuracy work
+    meta = params.get("_meta", {})
+    if isinstance(meta, dict) and meta.get("custom_model") == "st_stephens_custom":
+        return generate_st_stephens_custom(params, offset)
+
+    # Check for multi-volume buildings
+    volumes = params.get("volumes", [])
+    if len(volumes) >= 2:
+        return generate_multi_volume(params, offset)
+
+    address = "unknown"
+    meta = params.get("_meta", {})
+    if isinstance(meta, dict):
+        address = meta.get("address", "unknown")
+
+    bldg_id = address.replace(" ", "_").replace(",", "").replace(".", "")
+    print(f"[GENERATE] {address}")
+
+    # HCD-derived defaults (used as fallbacks when params don't specify)
+    era_defaults = get_era_defaults(params)
+    typology_hints = get_typology_hints(params)
+
+    depth = params.get("facade_depth_m", DEFAULT_DEPTH)
+
+    # 1. Create walls
+    wall_obj, wall_h, width, depth = create_walls(params, depth)
+    print(f"  Walls: {width:.1f}m x {depth:.1f}m x {wall_h:.1f}m")
+
+    # 2. Cut window openings
+    windows = cut_windows(wall_obj, params, wall_h, width, bldg_id)
+    print(f"  Windows: {len(windows)} elements")
+
+    # 3. Cut door openings
+    doors = cut_doors(wall_obj, params, width)
+    if doors:
+        print(f"  Doors: {len(doors)} elements")
+
+    # 4. Create roof
+    roof_type = str(params.get("roof_type", "gable")).lower()
+    ridge_height = 0
+    gable_objs = []
+
+    if "flat" in roof_type:
+        roof_obj, parapet_h = create_flat_roof(params, wall_h, width, depth)
+        print(f"  Roof: flat with {parapet_h:.1f}m parapet")
+    elif "hip" in roof_type:
+        roof_obj, ridge_height = create_hip_roof(params, wall_h, width, depth)
+        print(f"  Roof: hip, peak +{ridge_height:.1f}m")
+    elif "cross" in roof_type or "bay-and-gable" in roof_type or "bay_and_gable" in roof_type:
+        roof_obj, ridge_height = create_cross_gable_roof(params, wall_h, width, depth)
+        gable_objs = create_gable_walls(params, wall_h, width, depth, bldg_id)
+        print(f"  Roof: cross-gable, ridge +{ridge_height:.1f}m, +{len(gable_objs)} gable walls")
+    elif "gable" in roof_type:
+        roof_obj, ridge_height = create_gable_roof(params, wall_h, width, depth)
+        gable_objs = create_gable_walls(params, wall_h, width, depth, bldg_id)
+        print(f"  Roof: gable, ridge +{ridge_height:.1f}m, +{len(gable_objs)} gable walls")
+    else:
+        roof_obj, ridge_height = create_gable_roof(params, wall_h, width, depth)
+        gable_objs = create_gable_walls(params, wall_h, width, depth, bldg_id)
+
+    # 5. Porch
+    porch_objs = create_porch(params, width)
+    if porch_objs:
+        print(f"  Porch: {len(porch_objs)} elements")
+
+    # 6. Bay windows
+    bay_objs = create_bay_window(params, wall_h, width)
+    if bay_objs:
+        print(f"  Bay window: {len(bay_objs)} elements")
+
+    # 7. Chimneys
+    chimney_objs = create_chimney(params, wall_h, ridge_height, width)
+    if chimney_objs:
+        print(f"  Chimneys: {len(chimney_objs)}")
+
+    # 8. Storefront
+    sf_objs = create_storefront(params, wall_obj, width)
+    if sf_objs:
+        print(f"  Storefront: {len(sf_objs)} elements")
+
+    # 9. String courses
+    sc_objs = create_string_courses(params, wall_h, width, depth, bldg_id)
+    if sc_objs:
+        print(f"  String courses: {len(sc_objs)}")
+
+    # 10. Quoins
+    quoin_objs = create_quoins(params, wall_h, width, depth, bldg_id)
+    if quoin_objs:
+        print(f"  Quoins: {len(quoin_objs)}")
+
+    # 11. Tower (for fire station etc)
+    tower_objs = create_tower(params, bldg_id)
+    if tower_objs:
+        print(f"  Tower: {len(tower_objs)} elements")
+
+    # 12. Bargeboard (decorative rake boards on gable)
+    bb_objs = []
+    if "gable" in roof_type:
+        bb_objs = create_bargeboard(params, wall_h, width, depth, bldg_id)
+        if bb_objs:
+            print(f"  Bargeboard: {len(bb_objs)} elements")
+
+    # 13. Cornice band
+    cornice_objs = create_cornice_band(params, wall_h, width, depth, bldg_id)
+    if cornice_objs:
+        print(f"  Cornice: {len(cornice_objs)} elements")
+
+    # 13b. Corbel table / stepped brickwork
+    corbel_objs = create_corbelling(params, wall_h, width, depth, bldg_id)
+    if corbel_objs:
+        print(f"  Corbelling: {len(corbel_objs)} elements")
+
+    # 14. Window lintels and sills
+    lintel_objs = create_window_lintels(params, wall_h, width, bldg_id)
+    if lintel_objs:
+        print(f"  Lintels/sills: {len(lintel_objs)} elements")
+
+    # 14b. Stained-glass transoms
+    transom_objs = create_stained_glass_transoms(params, width, bldg_id)
+    if transom_objs:
+        print(f"  Transoms: {len(transom_objs)} elements")
+
+    # 15. Brackets (gable and porch)
+    bracket_objs = create_brackets(params, wall_h, width, depth, bldg_id)
+    if bracket_objs:
+        print(f"  Brackets: {len(bracket_objs)} elements")
+
+    # 16. Ridge finial
+    finial_objs = []
+    if "gable" in roof_type:
+        finial_objs = create_ridge_finial(params, wall_h, width, depth, bldg_id)
+        if finial_objs:
+            print(f"  Finial: {len(finial_objs)} elements")
+
+    # 17. Voussoirs (arch stones)
+    voussoir_objs = create_voussoirs(params, wall_h, width, bldg_id)
+    if voussoir_objs:
+        print(f"  Voussoirs: {len(voussoir_objs)} elements")
+
+    # 18. Gable fish-scale shingles
+    shingle_objs = []
+    if "gable" in roof_type:
+        shingle_objs = create_gable_shingles(params, wall_h, width, depth, bldg_id)
+        if shingle_objs:
+            print(f"  Gable shingles: {len(shingle_objs)} elements")
+
+    # 19. Dormer
+    dormer_objs = create_dormer(params, wall_h, width, depth, bldg_id)
+    if dormer_objs:
+        print(f"  Dormer: {len(dormer_objs)} elements")
+
+    # 20. Fascia and soffit boards
+    fascia_objs = create_fascia_boards(params, wall_h, width, depth, bldg_id)
+    if fascia_objs:
+        print(f"  Fascia/soffit: {len(fascia_objs)} elements")
+
+    # 21. Parapet coping (flat roofs)
+    parapet_objs = create_parapet_coping(params, wall_h, width, depth, bldg_id)
+    if parapet_objs:
+        print(f"  Parapet/coping: {len(parapet_objs)} elements")
+
+    # 21a. Small rooftop hip element / penthouse cap
+    hip_rooflet_objs = create_hip_rooflet(params, wall_h, width, depth, bldg_id)
+    if hip_rooflet_objs:
+        print(f"  Hip rooflet: {len(hip_rooflet_objs)} elements")
+
+    # 21b. Gabled parapet
+    gp_objs = create_gabled_parapet(params, wall_h, width, depth, bldg_id)
+    if gp_objs:
+        print(f"  Gabled parapet: {len(gp_objs)} elements")
+
+    # 22. Turned porch posts (replace cylinders with Victorian turned posts)
+    porch_objs = create_turned_posts(porch_objs, params, width)
+
+    # 23. Storefront awning and signage
+    awning_objs = create_storefront_awning(params, width, bldg_id)
+    if awning_objs:
+        print(f"  Awning/sign: {len(awning_objs)} elements")
+
+    # 24. Foundation/water table
+    found_objs = create_foundation(params, width, depth, bldg_id)
+    if found_objs:
+        print(f"  Foundation: {len(found_objs)} elements")
+
+    # 25. Gutters and downspouts
+    gutter_objs = create_gutters(params, wall_h, width, depth, bldg_id)
+    if gutter_objs:
+        print(f"  Gutters: {len(gutter_objs)} elements")
+
+    # 26. Chimney caps
+    chimney_cap_objs = create_chimney_caps(params, wall_h, ridge_height, width, bldg_id)
+    if chimney_cap_objs:
+        print(f"  Chimney caps: {len(chimney_cap_objs)} elements")
+
+    # 27. Porch lattice skirt
+    lattice_objs = create_porch_lattice(params, width, bldg_id)
+    if lattice_objs:
+        print(f"  Lattice skirt: {len(lattice_objs)} elements")
+
+    # 28. Step handrails
+    handrail_objs = create_step_handrails(params, width, bldg_id)
+    if handrail_objs:
+        print(f"  Handrails: {len(handrail_objs)} elements")
+
+    # Collect all objects
+    all_objs = [wall_obj, roof_obj] + gable_objs + windows + doors + porch_objs + bay_objs + \
+               chimney_objs + sf_objs + sc_objs + quoin_objs + tower_objs + corbel_objs + \
+               bb_objs + cornice_objs + lintel_objs + transom_objs + bracket_objs + finial_objs + \
+               voussoir_objs + shingle_objs + dormer_objs + fascia_objs + parapet_objs + \
+               hip_rooflet_objs + awning_objs + found_objs + gutter_objs + chimney_cap_objs + \
+               lattice_objs + handrail_objs + gp_objs
+
+    # Join small objects by type to reduce clutter
+    def _obj_valid(o):
+        try:
+            return o is not None and o.name is not None
+        except ReferenceError:
+            return False
+
+    def join_by_prefix(prefix, objs_list):
+        """Join all objects whose name starts with prefix into a single mesh."""
+        targets = []
+        for o in objs_list:
+            try:
+                if o and o.name.startswith(prefix):
+                    targets.append(o)
+            except ReferenceError:
+                continue
+        if len(targets) < 2:
+            return objs_list
+        bpy.ops.object.select_all(action='DESELECT')
+        for o in targets:
+            o.select_set(True)
+        bpy.context.view_layer.objects.active = targets[0]
+        bpy.ops.object.join()
+        joined = bpy.context.active_object
+        joined.name = f"{prefix}{bldg_id}"
+        # Replace in list: keep joined, remove others
+        new_list = [o for o in objs_list if _obj_valid(o) and o not in targets]
+        new_list.append(joined)
+        return new_list
+
+    all_objs = [o for o in all_objs if _obj_valid(o)]
+    pre_join_count = len(all_objs)
+
+    all_objs = join_by_prefix("frame_", all_objs)
+    all_objs = join_by_prefix("muntin_", all_objs)
+    all_objs = join_by_prefix("glass_", all_objs)
+    all_objs = join_by_prefix("baluster_", all_objs)
+    all_objs = join_by_prefix("bay_glass_", all_objs)
+    all_objs = join_by_prefix("step_", all_objs)
+    all_objs = join_by_prefix("lintel_", all_objs)
+    all_objs = join_by_prefix("sill_", all_objs)
+    all_objs = join_by_prefix("bracket_", all_objs)
+    all_objs = join_by_prefix("porch_bracket_", all_objs)
+    all_objs = join_by_prefix("bargeboard_", all_objs)
+    all_objs = join_by_prefix("voussoir_", all_objs)
+    all_objs = join_by_prefix("shingle_", all_objs)
+    all_objs = join_by_prefix("dormer_frame_", all_objs)
+    all_objs = join_by_prefix("dormer_cheek_", all_objs)
+    all_objs = join_by_prefix("fascia_", all_objs)
+    all_objs = join_by_prefix("soffit_", all_objs)
+    all_objs = join_by_prefix("parapet_", all_objs)
+    all_objs = join_by_prefix("coping_", all_objs)
+    all_objs = join_by_prefix("turned_seg_", all_objs)
+    all_objs = join_by_prefix("lattice_", all_objs)
+    all_objs = join_by_prefix("foundation_", all_objs)
+    all_objs = join_by_prefix("gutter_", all_objs)
+    all_objs = join_by_prefix("downspout_", all_objs)
+    all_objs = join_by_prefix("chimcap_", all_objs)
+    all_objs = join_by_prefix("handrail_", all_objs)
+    all_objs = join_by_prefix("rail_post_", all_objs)
+    all_objs = join_by_prefix("hall_frame_", all_objs)
+    all_objs = join_by_prefix("hall_glass_", all_objs)
+    all_objs = join_by_prefix("curtain_glass_", all_objs)
+    all_objs = join_by_prefix("mullion_", all_objs)
+    all_objs = join_by_prefix("tower_glass_", all_objs)
+    all_objs = join_by_prefix("tower_corner_", all_objs)
+    all_objs = join_by_prefix("tower_veg_", all_objs)
+    all_objs = join_by_prefix("tower_corbel_", all_objs)
+    all_objs = join_by_prefix("engine_voussoir_", all_objs)
+    all_objs = join_by_prefix("transom_", all_objs)
+    all_objs = join_by_prefix("quoin_", all_objs)
+    all_objs = join_by_prefix("string_course_", all_objs)
+    all_objs = join_by_prefix("cornice_", all_objs)
+
+    post_join_count = len(all_objs)
+    if post_join_count < pre_join_count:
+        print(f"  Joined objects: {pre_join_count} -> {post_join_count}")
+
+    # Move to building collection and apply offset directly (no parent empty = no clutter)
+    col = bpy.data.collections.new(f"building_{bldg_id}")
+    bpy.context.scene.collection.children.link(col)
+
+    ox, oy, oz = offset
+    for obj in all_objs:
+        if _obj_valid(obj):
+            # Apply rotation around origin (Z-axis) before offset
+            if rotation != 0.0:
+                cos_r = math.cos(rotation)
+                sin_r = math.sin(rotation)
+                x, y = obj.location.x, obj.location.y
+                obj.location.x = x * cos_r - y * sin_r
+                obj.location.y = x * sin_r + y * cos_r
+                obj.rotation_euler.z += rotation
+            obj.location.x += ox
+            obj.location.y += oy
+            obj.location.z += oz
+            # Move to building collection
+            for c in obj.users_collection:
+                c.objects.unlink(obj)
+            col.objects.link(obj)
+
+    # Store HCD metadata as custom properties on the collection
+    if 'hcd_data' in params:
+        hcd = params.get('hcd_data', {})
+        col['hcd_reference'] = hcd.get('hcd_reference_number', 0)
+        col['hcd_typology'] = hcd.get('typology', '')
+        col['hcd_construction_date'] = hcd.get('construction_date', '')
+        col['hcd_character_sub_area'] = hcd.get('character_sub_area', '')
+        col['hcd_statement'] = hcd.get('statement_of_contribution', '')
+
+    print(f"  [OK] Total objects: {len([o for o in all_objs if o])}")
+    return col
+
+
+# ---------------------------------------------------------------------------
+# Multi-building loader
+# ---------------------------------------------------------------------------
+
+
+# ---------------------------------------------------------------------------
+# Multi-building loader
+# ---------------------------------------------------------------------------
+
+def load_and_generate(params_path, spacing=15.0, match=None, limit=None):
+    """Load one or more JSON param files and generate buildings."""
+    clear_scene()
+
+    path = Path(params_path)
+
+    # Load site coordinates from GIS export (SRID 2952, local metres)
+    site_coords_path = Path(__file__).parent / "params" / "_site_coordinates.json"
+    site_coords = None
+    if site_coords_path.exists():
+        with open(site_coords_path, encoding="utf-8") as gf:
+            site_coords = json.load(gf)
+        print(f"Loaded site coordinates: {len(site_coords)} buildings (from PostGIS)")
+
+    # Legacy geocode fallback
+    geocode_path = Path(__file__).parent / "archive" / "geocode.json"
+    geocode = None
+    if geocode_path.exists():
+        with open(geocode_path) as gf:
+            geocode = json.load(gf)
+        print(f"Loaded geocode.json: {len(geocode)} entries (legacy fallback)")
+
+    if path.is_file():
+        files = [path]
+    elif path.is_dir():
+        files = sorted(path.glob("*.json"))
+        files = [f for f in files if not f.name.startswith("_")]
+        if match:
+            needle = str(match).lower()
+            files = [f for f in files if needle in f.stem.lower()]
+        if isinstance(limit, int) and limit > 0:
+            files = files[:limit]
+    else:
+        print(f"[ERROR] Path not found: {params_path}")
+        return
+
+    print(f"=== Parametric Building Generator ===")
+    print(f"Files: {len(files)}")
+
+    buildings = []
+    manifest_buildings = []
+    for i, f in enumerate(files):
+        print(f"\n--- [{i+1}/{len(files)}] {f.name} ---")
+        with open(f) as fp:
+            params = json.load(fp)
+
+        if 'hcd_data' in params:
+            hcd = params.get('hcd_data', {})
+            print(f"  HCD #{hcd.get('hcd_reference_number', '?')}: {hcd.get('typology', 'Unknown')}, {hcd.get('construction_date', 'Unknown')}")
+            if hcd.get('discrepancies'):
+                print(f"  Discrepancies: {'; '.join(hcd['discrepancies'])}")
+
+        # Determine building position:
+        # 1. Site coordinates from PostGIS GIS export (preferred)
+        # 2. Legacy geocode.json fallback
+        # 3. Linear spacing as last resort
+        address = params.get("building_name") or params.get("_meta", {}).get("address", "")
+        geo_key = f.stem
+
+        if site_coords and address and address in site_coords:
+            sc = site_coords[address]
+            rotation = math.radians(sc.get("rotation_deg", 0))
+            offset = (sc["x"], sc["y"], 0)
+        elif site_coords:
+            # Try matching by filename stem (address with underscores)
+            stem_addr = geo_key.replace("_", " ")
+            if stem_addr in site_coords:
+                sc = site_coords[stem_addr]
+                offset = (sc["x"], sc["y"], 0)
+                rotation = math.radians(sc.get("rotation_deg", 0))
+            elif geocode and geo_key in geocode:
+                gc = geocode[geo_key]
+                offset = (gc["blender_x"], gc["blender_y"], 0)
+                rotation = math.radians(gc.get("rotation_deg", 0))
+            else:
+                offset = (i * spacing, 0, 0)
+                rotation = 0.0
+        elif geocode and geo_key in geocode:
+            gc = geocode[geo_key]
+            offset = (gc["blender_x"], gc["blender_y"], 0)
+            rotation = math.radians(gc.get("rotation_deg", 0))
+        else:
+            offset = (i * spacing, 0, 0)
+            rotation = 0.0
+        bldg = generate_building(params, offset=offset, rotation=rotation)
+        buildings.append(bldg)
+        hcd = params.get("hcd_data", {}) if isinstance(params.get("hcd_data"), dict) else {}
+        manifest_buildings.append({
+            "param_file": str(f.resolve()),
+            "building_name": params.get("building_name") or params.get("_meta", {}).get("address", f.stem),
+            "collection_name": bldg.name if bldg else None,
+            "hcd_reference_number": hcd.get("hcd_reference_number"),
+            "typology": hcd.get("typology"),
+            "construction_date": hcd.get("construction_date"),
+        })
+
+    # Setup camera and lighting
+    setup_scene(buildings, spacing)
+
+    print(f"\n=== Done: {len(buildings)} buildings generated ===")
+    return {
+        "collections": buildings,
+        "files": files,
+        "buildings": manifest_buildings,
+    }
+
+
+def setup_scene(buildings, spacing):
+    """Set up camera, sun, and render settings."""
+    # Compute scene bounds from all building collections
+    all_xs, all_ys = [], []
+    for col in buildings:
+        if col:
+            for obj in col.objects:
+                if obj.type == 'MESH':
+                    all_xs.append(obj.location.x)
+                    all_ys.append(obj.location.y)
+
+    if all_xs:
+        center_x = (min(all_xs) + max(all_xs)) / 2
+        center_y = (min(all_ys) + max(all_ys)) / 2
+        spread = max(max(all_xs) - min(all_xs), max(all_ys) - min(all_ys))
+        # For neighbourhood-scale (many buildings), keep a wide view
+        # For single/few buildings, frame tightly around the building(s)
+        if spread > 50:
+            extent = spread
+        else:
+            extent = max(spread, 30)
+    else:
+        n = len(buildings)
+        center_x = (n - 1) * spacing / 2
+        center_y = 0
+        extent = n * spacing
+
+    # Sun light
+    bpy.ops.object.light_add(type='SUN', location=(center_x, center_y + 50, 50))
+    sun = bpy.context.active_object
+    sun.name = "Sun"
+    sun.data.energy = 4.0
+    sun.rotation_euler = (math.radians(55), math.radians(10), math.radians(200))
+
+    # Camera — angled perspective view
+    n_buildings = len([c for c in buildings if c])
+    if n_buildings <= 3:
+        # Close-up: eye-level 3/4 view for single/few buildings
+        cam_dist = max(extent * 0.6, 20)
+        cam_height = cam_dist * 0.5
+        cam_x = center_x + cam_dist * 0.4
+        cam_y = center_y - cam_dist * 0.5
+        cam_pitch = math.degrees(math.atan2(cam_height, cam_dist * 0.5))
+        bpy.ops.object.camera_add(location=(cam_x, cam_y, cam_height))
+        cam = bpy.context.active_object
+        cam.name = "Camera"
+        cam.rotation_euler = (math.radians(cam_pitch), 0, math.radians(155))
+    else:
+        # Wide neighbourhood view
+        cam_height = extent * 0.8
+        bpy.ops.object.camera_add(location=(center_x, center_y - extent * 0.4, cam_height))
+        cam = bpy.context.active_object
+        cam.name = "Camera"
+        cam.rotation_euler = (math.radians(60), 0, math.radians(180))
+    bpy.context.scene.camera = cam
+
+    # Render settings
+    scene = bpy.context.scene
+    try:
+        scene.render.engine = 'BLENDER_EEVEE'
+    except:
+        try:
+            scene.render.engine = 'BLENDER_EEVEE_NEXT'
+        except:
+            pass
+
+    scene.render.resolution_x = 1920
+    scene.render.resolution_y = 1080
+
+    # Ground plane
+    ground_size = max(extent * 2, 200)
+    bpy.ops.mesh.primitive_plane_add(size=ground_size, location=(center_x, center_y, 0))
+    ground = bpy.context.active_object
+    ground.name = "ground"
+    ground_mat = get_or_create_material("mat_ground", colour_hex="#505050", roughness=0.95)
+    assign_material(ground, ground_mat)
+
+
+def default_output_paths(params_path, output_blend=None, output_dir=None, render_path=None):
+    """Compute default .blend and optional render output paths."""
+    path = Path(params_path)
+    if output_dir:
+        out_dir = Path(output_dir)
+    elif path.is_file():
+        out_dir = path.parent.parent / "outputs"
+    else:
+        out_dir = path.parent / "outputs"
+
+    if path.is_file():
+        stem = path.stem
+        blend_default = out_dir / f"{stem}.blend"
+        render_default = out_dir / f"{stem}.png"
+    else:
+        blend_default = out_dir / "kensington_pilot.blend"
+        render_default = out_dir / "kensington_pilot.png"
+
+    blend_path = Path(output_blend) if output_blend else blend_default
+    render_out = Path(render_path) if render_path else None
+    return blend_path.resolve(), (render_out.resolve() if render_out else render_default.resolve())
+
+
+def default_manifest_path(blend_path):
+    """Place the run manifest next to the output .blend file."""
+    return blend_path.with_suffix(".manifest.json")
+
+
+def write_manifest(manifest_path, params_path, blend_path, render_path, do_render, run_data):
+    """Write a machine-readable summary of the generation run."""
+    run_data = run_data or {}
+    payload = {
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "params_path": str(Path(params_path).resolve()),
+        "blend_path": str(blend_path),
+        "render_path": str(render_path) if do_render else None,
+        "building_count": len(run_data.get("buildings", [])),
+        "buildings": run_data.get("buildings", []),
+    }
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+        f.write("\n")
+    print(f"Manifest: {manifest_path}")
+
+
+def purge_orphans_safe():
+    """Purge Blender orphan data with operator fallback for headless/context issues."""
+    try:
+        bpy.ops.outliner.orphans_purge(do_local_ids=True, do_linked_ids=True, do_recursive=True)
+    except Exception:
+        # Fallback: manually purge orphan meshes and materials
+        for block in list(bpy.data.meshes):
+            if block.users == 0:
+                bpy.data.meshes.remove(block)
+        for block in list(bpy.data.materials):
+            if block.users == 0:
+                bpy.data.materials.remove(block)
+
+
+def resolve_batch_files(params_dir, output_dir=None, do_render=False,
+                        skip_existing=False, match=None, limit=None):
+    """Resolve which batch files would be processed and where outputs would go."""
+    params_dir = Path(params_dir)
+    files = sorted(f for f in params_dir.glob("*.json") if not f.name.startswith("_"))
+    if match:
+        needle = match.lower()
+        files = [f for f in files if needle in f.stem.lower()]
+    if isinstance(limit, int) and limit > 0:
+        files = files[:limit]
+
+    out_dir = Path(output_dir) if output_dir else params_dir.parent / "outputs"
+    plans = []
+    for f in files:
+        # Skip param files marked as skipped (non-buildings, duplicates)
+        try:
+            with open(f, encoding="utf-8") as fh:
+                pdata = json.load(fh)
+            if pdata.get("skipped"):
+                continue
+        except Exception:
+            pass
+        blend_path, render_path = default_output_paths(str(f), output_dir=str(out_dir))
+        manifest_path = default_manifest_path(blend_path)
+        skipped = bool(skip_existing and blend_path.exists())
+        plans.append({
+            "param_file": str(f.resolve()),
+            "blend_path": str(blend_path),
+            "render_path": str(render_path) if do_render else None,
+            "manifest_path": str(manifest_path),
+            "skipped": skipped,
+        })
+    return plans
+
+
+def generate_batch_individual(params_dir, output_dir=None, do_render=False,
+                              skip_existing=False, match=None, limit=None):
+    """Generate one .blend per param file plus a batch manifest."""
+    params_dir = Path(params_dir)
+    plans = resolve_batch_files(
+        params_dir,
+        output_dir=output_dir,
+        do_render=do_render,
+        skip_existing=skip_existing,
+        match=match,
+        limit=limit,
+    )
+    if not plans:
+        print(f"[ERROR] No param files found in: {params_dir}")
+        return None
+
+    out_dir = Path(output_dir) if output_dir else params_dir.parent / "outputs"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    batch_manifest = {
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "params_path": str(params_dir.resolve()),
+        "mode": "batch_individual",
+        "building_count": len(plans),
+        "filters": {
+            "match": match,
+            "limit": limit,
+            "skip_existing": skip_existing,
+        },
+        "counts": {
+            "completed": 0,
+            "skipped": 0,
+            "failed": 0,
+        },
+        "buildings": [],
+    }
+
+    print(f"=== Parametric Building Generator ===")
+    print(f"Files: {len(plans)}")
+    print("Mode: batch individual")
+
+    for i, plan in enumerate(plans, start=1):
+        f = Path(plan["param_file"])
+        blend_path = Path(plan["blend_path"])
+        render_path = Path(plan["render_path"]) if plan["render_path"] else None
+        manifest_path = Path(plan["manifest_path"])
+        print(f"\n--- [{i}/{len(plans)}] {f.name} ---")
+
+        if plan["skipped"]:
+            print(f"  [SKIP] Existing output: {blend_path.name}")
+            batch_manifest["counts"]["skipped"] += 1
+            batch_manifest["buildings"].append({
+                "param_file": str(f.resolve()),
+                "blend_path": str(blend_path),
+                "render_path": str(render_path) if do_render and render_path and render_path.exists() else None,
+                "manifest_path": str(manifest_path) if manifest_path.exists() else None,
+                "skipped": True,
+                "status": "skipped",
+            })
+            continue
+
+        try:
+            run_data = load_and_generate(str(f), spacing=15.0)
+
+            purge_orphans_safe()
+            bpy.ops.wm.save_as_mainfile(filepath=str(blend_path))
+            print(f"Saved: {blend_path}")
+
+            rendered = None
+            if do_render:
+                bpy.context.scene.render.filepath = str(render_path)
+                bpy.ops.render.render(write_still=True)
+                rendered = str(render_path)
+                print(f"Rendered: {render_path}")
+
+            write_manifest(manifest_path, str(f), blend_path, render_path, do_render, run_data)
+            batch_manifest["counts"]["completed"] += 1
+            batch_manifest["buildings"].append({
+                "param_file": str(f.resolve()),
+                "blend_path": str(blend_path),
+                "render_path": rendered,
+                "manifest_path": str(manifest_path),
+                "summary": run_data.get("buildings", [{}])[0] if run_data else {},
+                "skipped": False,
+                "status": "completed",
+            })
+        except Exception as e:
+            print(f"  [FAIL] {f.name}: {e}")
+            batch_manifest["counts"]["failed"] += 1
+            batch_manifest["buildings"].append({
+                "param_file": str(f.resolve()),
+                "blend_path": str(blend_path),
+                "render_path": None,
+                "manifest_path": None,
+                "skipped": False,
+                "status": "failed",
+                "error": str(e),
+            })
+
+    batch_manifest_path = out_dir / "batch.manifest.json"
+    with open(batch_manifest_path, "w") as f:
+        json.dump(batch_manifest, f, indent=2)
+        f.write("\n")
+    print(f"\nBatch manifest: {batch_manifest_path}")
+    return batch_manifest
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+def _validate_params(params):
+    """Pre-generation validation. Returns (ok, errors) tuple."""
+    errors = []
+    name = params.get("building_name", "unknown")
+
+    if not params.get("facade_width_m") or params["facade_width_m"] <= 0:
+        errors.append(f"{name}: facade_width_m is missing or <= 0")
+    if not params.get("total_height_m") or params["total_height_m"] <= 0:
+        errors.append(f"{name}: total_height_m is missing or <= 0")
+    if not params.get("floors") or params["floors"] <= 0:
+        errors.append(f"{name}: floors is missing or <= 0")
+
+    if not params.get("floor_heights_m"):
+        errors.append(f"{name}: WARNING - floor_heights_m missing, will use defaults")
+    if not params.get("roof_type"):
+        errors.append(f"{name}: WARNING - roof_type missing, will default to flat")
+    if not params.get("facade_material"):
+        errors.append(f"{name}: WARNING - facade_material missing, will default to brick")
+
+    critical = [e for e in errors if "WARNING" not in e]
+    return len(critical) == 0, errors
+
+if __name__ == "__main__":
+    import argparse
+
+    argv = sys.argv
+    cli_args = argv[argv.index("--") + 1:] if "--" in argv else argv[1:]
+
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("--validate", action="store_true", help="Validate params without generating")
+    parser.add_argument("--params-dir", default="params", help="Params directory")
+    parser.add_argument("--match", help="Only process buildings matching this string")
+    parsed, _ = parser.parse_known_args(cli_args)
+
+    if parsed.validate:
+        params_dir = Path(parsed.params_dir)
+        ok = 0
+        fail = 0
+        errors = []
+        for f in sorted(params_dir.glob("*.json")):
+            try:
+                p = json.loads(f.read_text(encoding="utf-8"))
+                if p.get("skipped"):
+                    continue
+                if parsed.match and parsed.match.lower() not in f.stem.lower():
+                    continue
+                valid, errs = _validate_params(p)
+                if valid:
+                    ok += 1
+                else:
+                    fail += 1
+                    errors.extend(errs)
+            except Exception as e:
+                fail += 1
+                errors.append(f"{f.name}: {e}")
+        print(f"Validated: {ok} OK, {fail} FAIL")
+        for err in errors:
+            print(f"  {err}")
+        sys.exit(0 if fail == 0 else 1)
+
+    params_path = str(PARAMS_DIR)
+    output_blend = None
+    output_dir = None
+    render_output = None
+    manifest_output = None
+    do_render = False
+    batch_individual = False
+    skip_existing = False
+    match_filter = None
+    limit = None
+    dry_run = False
+
+    if cli_args:
+        args = cli_args
+
+        def _get_value(idx):
+            nxt = idx + 1
+            if nxt >= len(args):
+                return None
+            value = args[nxt]
+            if isinstance(value, str) and value.startswith("--"):
+                return None
+            return value
+
+        i = 0
+        while i < len(args):
+            arg = args[i]
+            if arg in ("--params", "--single"):
+                value = _get_value(i)
+                if value is None:
+                    print(f"[WARN] Missing value for {arg}; keeping default params path")
+                else:
+                    params_path = value
+                    i += 1
+            elif arg == "--output-blend":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --output-blend; ignoring")
+                else:
+                    output_blend = value
+                    i += 1
+            elif arg == "--output-dir":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --output-dir; ignoring")
+                else:
+                    output_dir = value
+                    i += 1
+            elif arg == "--render":
+                do_render = True
+            elif arg == "--batch-individual":
+                batch_individual = True
+            elif arg == "--skip-existing":
+                skip_existing = True
+            elif arg == "--dry-run":
+                dry_run = True
+            elif arg == "--match":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --match; ignoring")
+                else:
+                    match_filter = value
+                    i += 1
+            elif arg == "--limit":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --limit; ignoring")
+                else:
+                    try:
+                        limit = int(value)
+                    except ValueError:
+                        print(f"[WARN] Invalid --limit '{value}'; ignoring")
+                        limit = None
+                    i += 1
+            elif arg == "--render-output":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --render-output; ignoring")
+                else:
+                    render_output = value
+                    i += 1
+            elif arg == "--manifest-output":
+                value = _get_value(i)
+                if value is None:
+                    print("[WARN] Missing value for --manifest-output; ignoring")
+                else:
+                    manifest_output = value
+                    i += 1
+            elif isinstance(arg, str) and arg.startswith("--"):
+                print(f"[WARN] Unknown option: {arg}")
+            i += 1
+
+    if dry_run:
+        path = Path(params_path)
+        if path.is_dir() and batch_individual:
+            plans = resolve_batch_files(
+                path,
+                output_dir=output_dir,
+                do_render=do_render,
+                skip_existing=skip_existing,
+                match=match_filter,
+                limit=limit,
+            )
+            print("=== Dry Run ===")
+            print(f"Mode: batch individual")
+            print(f"Files: {len(plans)}")
+            for plan in plans:
+                status = "SKIP" if plan["skipped"] else "RUN"
+                print(f"[{status}] {Path(plan['param_file']).name} -> {Path(plan['blend_path']).name}")
+                if plan["render_path"]:
+                    print(f"       render: {Path(plan['render_path']).name}")
+                print(f"       manifest: {Path(plan['manifest_path']).name}")
+        else:
+            blend_path, render_path = default_output_paths(
+                params_path,
+                output_blend=output_blend,
+                output_dir=output_dir,
+                render_path=render_output,
+            )
+            manifest_path = Path(manifest_output).resolve() if manifest_output else default_manifest_path(blend_path)
+            print("=== Dry Run ===")
+            print(f"Params: {Path(params_path).resolve()}")
+            print(f"Blend: {blend_path}")
+            if do_render:
+                print(f"Render: {render_path}")
+            print(f"Manifest: {manifest_path}")
+        sys.exit(0)
+
+    if Path(params_path).is_dir() and batch_individual:
+        try:
+            generate_batch_individual(
+                params_path,
+                output_dir=output_dir,
+                do_render=do_render,
+                skip_existing=skip_existing,
+                match=match_filter,
+                limit=limit,
+            )
+        except Exception as e:
+            print(f"Batch generation failed: {e}")
+        sys.exit(0)
+
+    # Generate buildings
+    run_data = load_and_generate(params_path, match=match_filter, limit=limit)
+    if run_data is None:
+        print("[ERROR] Generation aborted due to invalid input path.")
+        sys.exit(1)
+
+    blend_path, render_path = default_output_paths(
+        params_path,
+        output_blend=output_blend,
+        output_dir=output_dir,
+        render_path=render_output,
+    )
+    manifest_path = Path(manifest_output).resolve() if manifest_output else default_manifest_path(blend_path)
+    blend_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Purge orphan data to reduce file size
+    purge_orphans_safe()
+    try:
+        bpy.ops.wm.save_as_mainfile(filepath=str(blend_path))
+        print(f"Saved: {blend_path}")
+    except Exception as e:
+        print(f"Could not save .blend file: {e}")
+
+    if do_render:
+        render_path.parent.mkdir(parents=True, exist_ok=True)
+        bpy.context.scene.render.filepath = str(render_path)
+        try:
+            bpy.ops.render.render(write_still=True)
+            print(f"Rendered: {render_path}")
+        except Exception as e:
+            print(f"Could not render snapshot: {e}")
+
+    try:
+        write_manifest(manifest_path, params_path, blend_path, render_path, do_render, run_data)
+    except Exception as e:
+        print(f"Could not write manifest: {e}")

@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Multi-residential ; House-form, Detached",
     "construction_date": "Pre-1889 (96 Bellevue Avenue), 1904-1913 (86-90 Oxford Street)",
-    "architectural_style": "Multi-residential (86-90 Oxford Street); House-form, Detached (96 Bellevue Avenue), (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (96 Bellevue Avenue), 1904-1913 (86-90 Oxford Street) (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Multi-residential (86-90 Oxford Street); House-form, Detached (96 Bellevue Avenue), (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (96 Bellevue Avenue), 1904-1913 (86-90 Oxford Street) (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 347,
-    "statement_of_contribution": "The property has value as a rare and early example of a purpose-built walk-up apartment building incorporating a pre-1884 House-form building. Through its construction dates and typologies, the property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. With its combination of house and multi-residential built forms, the property yields information that contributes to the understanding of the evolution of Kensington Market. The house form building, with the street address of 96 Bellevue Avenue, retains its scale form and massing and building features including buff brick cladding and voussoirs, cross gables and dormers with decorative woodwork, flat headed and segmentally arched window and door openings, two-storey projecting bays, and two-storey verandah with Tuscan columns. Constructed onto to the rear of 96 Bellevue Avenue between 1909 and 1910, the walk-up apartment building, with street addresses of 86 and 90 Oxford Street retains its scale, form and massing and original building features including buff brick cladding with decorative red brickwork and stonework, segmentally arched window openings, three-sided flat headed bay windows, wide eaves, and recessed entrances. Contextually, the property shares a consistent setback and scale with the other contributing properties on Bellevue Avenue, and consistent scale with the other contributing properties on Oxford Street, maintaining and supporting the residential character of both streetscapes.",
+    "statement_of_contribution": "The property has value as a rare and early example of a purpose-built walk-up apartment building incorporating a pre-1884 House-form building. Through its construction dates and typologies, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. With its combination of house and multi-residential built forms, the property yields information that contributes to the understanding of the evolution of Kensington Market. The house form building, with the street address of 96 Bellevue Avenue, retains its scale form and massing and building features including buff brick cladding and voussoirs, cross gables and dormers with decorative woodwork, flat headed and segmentally arched window and door openings, two-storey projecting bays, and two-storey verandah with Tuscan columns. Constructed onto to the rear of 96 Bellevue Avenue between 1909 and 1910, the walk-up apartment building, with street addresses of 86 and 90 Oxford Street retains its scale, form and massing and original building features including buff brick cladding with decorative red brickwork and stonework, segmentally arched window openings, three-sided flat headed bay windows, wide eaves, and recessed entrances. Contextually, the property shares a consistent setback and scale with the other contributing properties on Bellevue Avenue, and consistent scale with the other contributing properties on Oxford Street, maintaining and supporting the residential character of both streetscapes.",
     "building_features": [
       "cornice",
       "original_windows",
@@ -55,15 +55,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "All floors (1\u20134)",
+    "residential_floors": "All floors (1–4)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -101,7 +101,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "88 Oxford St",
-    "db_revision_ts": "2026-03-26T20:02:10",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "88 OXFORD ST"
     ],
@@ -155,15 +155,15 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.815964+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #5D5151",
-        "trim": "#3A2A20 \u2192 #261D16",
-        "accent": "#3A2A20 \u2192 #2C2C24",
-        "mortar": "#B0A898 \u2192 #B3A291"
+        "roof": "#5A5A5A → #5D5151",
+        "trim": "#3A2A20 → #261D16",
+        "accent": "#3A2A20 → #2C2C24",
+        "mortar": "#B0A898 → #B3A291"
       }
     ]
   },

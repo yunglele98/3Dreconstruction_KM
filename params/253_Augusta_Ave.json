@@ -25,7 +25,7 @@
   "roof_features": [
     "vent_stack"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "black storefront framing with bright pink commercial signage and a dark upper gable behind",
   "windows_per_floor": [
     2,
@@ -42,12 +42,12 @@
     "typology": "Commercial, Row",
     "construction_date": "1914-1930",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 56,
-    "statement_of_contribution": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in ",
+    "statement_of_contribution": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District’s pattern of commercial adaptation and expansion that began in ",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -62,8 +62,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -107,7 +107,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "253 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "253 AUGUSTA AVE"
     ],
@@ -181,14 +181,14 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.077555+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.597819Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #4B4B4B",
-        "mortar": "#B0A898 \u2192 #B8B0A1"
+        "roof": "#5A5A5A → #4B4B4B",
+        "mortar": "#B0A898 → #B8B0A1"
       }
     ]
   },
@@ -338,7 +338,7 @@
     "trim_colour_hex": "#4A4A4A",
     "composition": "The street frontage spans roughly 5.2 metres across 3 storeys beneath a cross-gable, consistent with its commercial, row typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 0, 1 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
-    "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in.",
+    "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District’s pattern of commercial adaptation and expansion that began in.",
     "heritage_expression": "Key storefront and facade features include cornice.",
     "secondary_material": "mixed (previously mixed)",
     "mortar_colour_hex": "#B8B0A1"
@@ -411,8 +411,8 @@
     }
   },
   "street_setback_m": 0.0,
-  "facade_description": "253 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 3 storeys beneath a cross-gable, consistent with its commercial, row typology. The frontage is defined primarily by mixed in a black storefront framing with bright pink commercial signage and a dark upper gable behind palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 0, 1 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
-  "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in.",
+  "facade_description": "253 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 3 storeys beneath a cross-gable, consistent with its commercial, row typology. The frontage is defined primarily by mixed masonry in a black storefront framing with bright pink commercial signage and a dark upper gable behind palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 0, 1 window bays from lower to upper levels, using mixed, and 2 principal entrances. Key storefront and facade features include cornice.",
+  "heritage_summary": "Each property has value as a two-storey Commercial building that reflects vernacular interpretations early-twentieth-century architectural styles. Through its construction date and typology, each property is associated with the District’s pattern of commercial adaptation and expansion that began in.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],
   "colour_palette": {

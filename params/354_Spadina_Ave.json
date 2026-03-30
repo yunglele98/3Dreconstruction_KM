@@ -40,7 +40,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 3,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -112,7 +112,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "354 Spadina Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "354 SPADINA AVE"
     ],
@@ -158,17 +158,17 @@
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:46.115460+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:15.312459Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #9D443A",
-        "roof": "#5A5A5A \u2192 #525252",
-        "trim": "#E8E0D0 \u2192 #4C3320",
-        "accent": "#3A2A20 \u2192 #4C3624",
-        "mortar": "#B0A898 \u2192 #B2A189"
+        "facade": "#B85A3A → #9D443A",
+        "roof": "#5A5A5A → #525252",
+        "trim": "#E8E0D0 → #4C3320",
+        "accent": "#3A2A20 → #4C3624",
+        "mortar": "#B0A898 → #B2A189"
       }
     ]
   },
@@ -249,8 +249,8 @@
     "roof_type_observed": "flat (not visible from street)",
     "roof_features": [],
     "has_storefront_observed": true,
-    "storefront_description": "Active restaurant with large illuminated white sign with red bull/ox logo. Chinese characters \u798f\u725b\u987a\u6f6e\u6c55\u725b\u8089\u706b\u9505 and CHAOSHAN BEEF HOTPOT. Large glazed storefront.",
-    "signage_observed": "Forsure Chaoshan Beef Hotpot / \u798f\u725b\u987a\u6f6e\u6c55\u725b\u8089\u706b\u9505 / illuminated white sign with red bull/ox logo",
+    "storefront_description": "Active restaurant with large illuminated white sign with red bull/ox logo. Chinese characters 福牛顺潮汕牛肉火锅 and CHAOSHAN BEEF HOTPOT. Large glazed storefront.",
+    "signage_observed": "Forsure Chaoshan Beef Hotpot / 福牛顺潮汕牛肉火锅 / illuminated white sign with red bull/ox logo",
     "overall_style": "Commercial",
     "alterations_visible": "Ground floor fully renovated for restaurant use. Upper storeys retain original brick.",
     "matches_hcd_typology": true,
@@ -276,7 +276,7 @@
   "string_course": false,
   "decorative_lintels": false,
   "overall_style": "Commercial",
-  "storefront_description": "Active restaurant with large illuminated white sign with red bull/ox logo. Chinese characters \u798f\u725b\u987a\u6f6e\u6c55\u725b\u8089\u706b\u9505 and CHAOSHAN BEEF HOTPOT. Large glazed storefront.",
+  "storefront_description": "Active restaurant with large illuminated white sign with red bull/ox logo. Chinese characters 福牛顺潮汕牛肉火锅 and CHAOSHAN BEEF HOTPOT. Large glazed storefront.",
   "confidence": 0.9,
   "notes": "Nighttime photo. Restaurant was active/illuminated. Upper storey details partially obscured by darkness. 3rd floor barely visible.",
   "porch_present": false,

@@ -25,7 +25,7 @@
   "roof_features": [
     "shutter_mural"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "black storefront frame with white Wok Theory fascia, pink mural shutter, and pale stone base panels",
   "windows_per_floor": [
     0,
@@ -42,14 +42,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -62,15 +62,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 20,
-    "signage": "Wok Theory (\u65b0\u5929\u8679), KL Kitchen Seafood Cuisine (\u805a\u9bae\u6a13)",
+    "signage": "Wok Theory (新天虹), KL Kitchen Seafood Cuisine (聚鮮樓)",
     "street_presence": "neutral"
   },
   "city_data": {
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 8,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -104,7 +104,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "530 Dundas St W",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "530 DUNDAS ST W"
     ],
@@ -173,16 +173,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.533348+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:16.895098Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #655E5E",
-        "trim": "#E8E0D0 \u2192 #4F3423",
-        "accent": "#3A2A20 \u2192 #34261C",
-        "mortar": "#B0A898 \u2192 #AFA89A"
+        "roof": "#5A5A5A → #655E5E",
+        "trim": "#E8E0D0 → #4F3423",
+        "accent": "#3A2A20 → #34261C",
+        "mortar": "#B0A898 → #AFA89A"
       }
     ],
     "qa_final_fixes": [
@@ -373,7 +373,7 @@
     }
   },
   "street_setback_m": 0.5,
-  "facade_description": "530 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as mixed in a black storefront frame with white wok theory fascia, pink mural shutter, and pale stone base panels palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "530 Dundas St W is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat. The facade reads primarily as mixed masonry in a black storefront frame with white wok theory fascia, pink mural shutter, and pale stone base panels palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
   "colour_palette": {

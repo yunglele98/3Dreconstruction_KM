@@ -37,13 +37,13 @@
   "hcd_data": {
     "typology": "Multi-residential",
     "construction_date": "1904-1913",
-    "architectural_style": "Victorian Vernacular \u2013 Ontario Cottage",
-    "construction_period": "c. 1870\u20131889",
+    "architectural_style": "Victorian Vernacular – Ontario Cottage",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 165,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century multi-residential building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Constructed as a pair they retain most of their original building features including their mirrored facades, shared roofline, projecting double-height bay windows, brick cladding with stonework, and stone masonry, flat-headed window openings, and segmentally arched double entrances with brick voussoirs. Contextually, the property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 164. 2 Hickory Street 4 Hickory Street 165. 6 Hickory Street 8 Hickory Street 101 DCH | FO :D FO YTIC 5202 2 Kensington Avenue 2 KENSINGTON AVENUE",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century multi-residential building that reflects vernacular interpretations of Victorian and early-twentieth-century architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a pair they retain most of their original building features including their mirrored facades, shared roofline, projecting double-height bay windows, brick cladding with stonework, and stone masonry, flat-headed window openings, and segmentally arched double entrances with brick voussoirs. Contextually, the property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District. Summary: Reference Primary Address Entrance Address(es) Number 164. 2 Hickory Street 4 Hickory Street 165. 6 Hickory Street 8 Hickory Street 101 DCH | FO :D FO YTIC 5202 2 Kensington Avenue 2 KENSINGTON AVENUE",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "Local | Short residential",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -97,7 +97,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "4 Hickory St",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:22",
     "db_address_candidates": [
       "4 HICKORY ST"
     ],
@@ -173,16 +173,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.425734+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BE755A",
-        "roof": "#5A5A5A \u2192 #4D4D4D",
-        "trim": "#2A2A2A \u2192 #3B3B3B",
-        "accent": "#3A2A20 \u2192 #3B4433",
-        "mortar": "#B0A898 \u2192 #B8B1A1"
+        "facade": "#B85A3A → #BE755A",
+        "roof": "#5A5A5A → #4D4D4D",
+        "trim": "#2A2A2A → #3B3B3B",
+        "accent": "#3A2A20 → #3B4433",
+        "mortar": "#B0A898 → #B8B1A1"
       }
     ]
   },

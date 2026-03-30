@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "black-painted storefront beneath dark red-brown brick upper facade",
   "windows_per_floor": [
     1,
@@ -39,13 +39,13 @@
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "Pre-1889, 1914-1930",
-    "architectural_style": "Commercial (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889, 1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Market",
     "contributing": "Yes",
     "hcd_plan_index": 17,
-    "statement_of_contribution": "Each property has value as an early-twentieth-century, two-storey commercial addition to a nineteenth-century residential structure which is not visible from the public realm. Through its construction date and typology, each property is associated with the District\u2019s pattern of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1914 and 1930, the additions have retained building features reflecting early-twentieth-century vernacular architectural styles, including their brick facades and second storey window openings with segmentally arched brick voussoirs. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
+    "statement_of_contribution": "Each property has value as an early-twentieth-century, two-storey commercial addition to a nineteenth-century residential structure which is not visible from the public realm. Through its construction date and typology, each property is associated with the District’s pattern of commercial adaptation and expansion that began in the early twentieth century. Constructed between 1914 and 1930, the additions have retained building features reflecting early-twentieth-century vernacular architectural styles, including their brick facades and second storey window openings with segmentally arched brick voussoirs. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [
       "cornice",
       "decorative_brick"
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -83,7 +83,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 44,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -112,7 +112,7 @@
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "db_match_mode": "raw",
     "db_address_full": "206 Augusta Ave",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "206 AUGUSTA AVE"
     ],
@@ -176,16 +176,16 @@
     ],
     "generation_defaults_applied": true,
     "colour_palette_rebuilt": "2026-03-29T08:35:44.634019+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.016698Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #5F574F",
-        "trim": "#3A2A20 \u2192 #36271E",
-        "accent": "#3A2A20 \u2192 #27281F",
-        "mortar": "#B0A898 \u2192 #C3B298"
+        "roof": "#5A5A5A → #5F574F",
+        "trim": "#3A2A20 → #36271E",
+        "accent": "#3A2A20 → #27281F",
+        "mortar": "#B0A898 → #C3B298"
       }
     ]
   },
@@ -379,7 +379,7 @@
     }
   ],
   "street_setback_m": 0.0,
-  "facade_description": "206 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed in a black-painted storefront beneath dark red-brown brick upper facade palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance. Key storefront and facade features include cornice, decorative brick.",
+  "facade_description": "206 Augusta Ave is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a black-painted storefront beneath dark red-brown brick upper facade palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 1, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance. Key storefront and facade features include cornice, decorative brick.",
   "heritage_summary": "Constructed between 1914 and 1930, the additions have retained building features reflecting early-twentieth-century vernacular architectural styles, including their brick facades and second storey window openings with segmentally arched brick voussoirs. Each property has value as an early-twentieth-century, two-storey commercial addition to a nineteenth-century residential structure which is not visible from the public realm.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],

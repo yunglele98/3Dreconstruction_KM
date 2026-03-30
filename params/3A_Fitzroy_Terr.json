@@ -117,16 +117,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.469318+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A65236",
-        "roof": "#5A5A5A \u2192 #474747",
-        "trim": "#3A2A20 \u2192 #463526",
-        "accent": "#3A2A20 \u2192 #3E2D21",
-        "mortar": "#B0A898 \u2192 #C3B49A"
+        "facade": "#B85A3A → #A65236",
+        "roof": "#5A5A5A → #474747",
+        "trim": "#3A2A20 → #463526",
+        "accent": "#3A2A20 → #3E2D21",
+        "mortar": "#B0A898 → #C3B49A"
       }
     ]
   },
@@ -137,7 +137,7 @@
     }
   },
   "facade_depth_m": 10.0,
-  "facade_colour": "not clearly visible \u2014 night photo",
+  "facade_colour": "not clearly visible — night photo",
   "facade_detail": {
     "brick_colour_hex": "#A65236",
     "bond_pattern": "running bond",
@@ -236,7 +236,7 @@
     "material": "brick",
     "colour_hex": "#B85A3A"
   },
-  "facade_description": "3A Fitzroy Terrace is a house-form, semi-detached building. The street elevation spans roughly 5.5 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick in a not clearly visible \u2014 night photo palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include shared roofline with centred gable.",
+  "facade_description": "3A Fitzroy Terrace is a house-form, semi-detached building. The street elevation spans roughly 5.5 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include shared roofline with centred gable.",
   "heritage_summary": "Workers' housing reflecting early development of the District.",
   "party_wall_left": true,
   "party_wall_right": false,
@@ -249,8 +249,8 @@
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-24T23:30:00-04:00",
     "confidence": 0.35,
-    "facade_colour_observed": "not clearly visible \u2014 night photo",
-    "facade_material_observed": "brick \u2014 assumed from semi-detached pair with 3 Fitzroy",
+    "facade_colour_observed": "not clearly visible — night photo",
+    "facade_material_observed": "brick — assumed from semi-detached pair with 3 Fitzroy",
     "condition_observed": "unknown",
     "has_storefront_observed": false,
     "overall_style": "Victorian",

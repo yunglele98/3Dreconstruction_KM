@@ -2,12 +2,12 @@
   "building_name": "138 Baldwin St",
   "floors": 4,
   "floor_heights_m": [
-    2.43,
-    1.92,
-    1.92,
-    1.6
+    2.4,
+    2.4,
+    2.4,
+    2.4
   ],
-  "total_height_m": 7.87,
+  "total_height_m": 9.6,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -24,7 +24,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 35,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "Mixed masonry",
   "facade_colour": "painted (mixed (painted brick, stone veneer))",
   "windows_per_floor": [
     0,
@@ -42,7 +42,7 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -55,15 +55,15 @@
   "context": {
     "building_type": "mixed_use",
     "general_use": "Commercial",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Retail/Shop",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way WB | 30 km/h | Sub-standard sidewalks & roadway | E-W commercial connector",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -82,7 +82,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": null,
-    "residential_floors": "All floors (1\u20132) \u2013 residential building on commercial land",
+    "residential_floors": "All floors (1–2) – residential building on commercial land",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -104,7 +104,7 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "138 Baldwin St",
-    "db_revision_ts": "2026-03-26T20:02:08",
+    "db_revision_ts": "2026-03-30T02:24:20",
     "db_address_candidates": [
       "138 BALDWIN ST"
     ],
@@ -221,14 +221,14 @@
       "timestamp": "2026-03-29T08:34:16.601190Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.438490Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "trim": "#E8E0D0 \u2192 #32241D",
-        "mortar": "#B0A898 \u2192 #B5A58F"
+        "trim": "#E8E0D0 → #32241D",
+        "mortar": "#B0A898 → #B5A58F"
       }
     ],
     "qa_final_fixes": [
@@ -238,7 +238,14 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 7.87,
+      "new_total_height_m": 9.6,
+      "floors": 4.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    }
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -362,7 +369,7 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.9,
-  "facade_description": "138 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a cross-gable. The facade reads primarily as mixed, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "facade_description": "138 Baldwin St is a commercial building with a street-level storefront. The street elevation spans roughly 5.2 metres across 4 storeys and is capped by a cross-gable. The facade reads primarily as mixed masonry in a painted (mixed (painted brick, stone veneer)) palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Slate shingles",
   "colour_palette": {
     "facade_hex": "#B85A3A",

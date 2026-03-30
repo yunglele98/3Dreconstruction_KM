@@ -1,6 +1,6 @@
 {
   "skip": true,
-  "reason": "generic street \u2014 no discrete building",
+  "reason": "generic street — no discrete building",
   "photo": "IMG_20260316_215635681_HDR.jpg",
   "_meta": {
     "agent": "claude-opus-4-6",
@@ -105,14 +105,14 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:49.057375+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #555555",
-        "trim": "#E8E0D0 \u2192 #3B3028",
-        "mortar": "#B0A898 \u2192 #B4AD9E"
+        "roof": "#5A5A5A → #555555",
+        "trim": "#E8E0D0 → #3B3028",
+        "mortar": "#B0A898 → #B4AD9E"
       }
     ],
     "qa_final_fixes": [
@@ -122,7 +122,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:21.382021Z"
   },
   "party_wall_left": false,
   "party_wall_right": false,
@@ -296,7 +297,14 @@
     }
   },
   "storefront": {
-    "signage_text": "GREELZ (across street)"
+    "signage_text": "GREELZ (across street)",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 5.4,
+      "projection_m": 1.2,
+      "colour_hex": "#D4B040"
+    }
   },
   "site": {
     "lon": -79.401821,
@@ -305,7 +313,7 @@
   "roof_pitch_deg": 40,
   "condition": "fair",
   "assessment": {
-    "condition_notes": "Inferred as fair \u2014 Kensington Market default, no photo or field assessment available"
+    "condition_notes": "Inferred as fair — Kensington Market default, no photo or field assessment available"
   },
   "photo_observations": {
     "source": "synthesized_from_params",

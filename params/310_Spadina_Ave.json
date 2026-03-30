@@ -2,9 +2,9 @@
   "building_name": "310 Spadina Ave",
   "floors": 1,
   "floor_heights_m": [
-    20.56
+    4.8
   ],
-  "total_height_m": 20.56,
+  "total_height_m": 4.8,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -36,14 +36,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
@@ -56,8 +56,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -76,7 +76,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 31,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -95,13 +95,13 @@
     ],
     "db_match_mode": "raw",
     "db_address_full": "310 Spadina Ave",
-    "db_revision_ts": "2026-03-26T20:02:09",
+    "db_revision_ts": "2026-03-30T02:24:21",
     "db_address_candidates": [
       "310 SPADINA AVE"
     ],
     "qa_autofix_height": {
-      "timestamp": "2026-03-25T14:41:01",
-      "old_total_height_m": 28.2,
+      "timestamp": "2026-03-30T02:31:50",
+      "old_total_height_m": 20.6,
       "new_total_height_m": 4.8,
       "floors": 1.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
@@ -162,16 +162,16 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.744488+00:00",
-    "setback_inferred": "2026-03-29T04:38:05.876828",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AE7055",
-        "roof": "#5A5A5A \u2192 #4A4949",
-        "trim": "#E8E0D0 \u2192 #493020",
-        "accent": "#3A2A20 \u2192 #4E4535",
-        "mortar": "#B0A898 \u2192 #B0A99B"
+        "facade": "#B85A3A → #AE7055",
+        "roof": "#5A5A5A → #4A4949",
+        "trim": "#E8E0D0 → #493020",
+        "accent": "#3A2A20 → #4E4535",
+        "mortar": "#B0A898 → #B0A99B"
       }
     ],
     "qa_final_fixes": [
@@ -181,7 +181,8 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
-    ]
+    ],
+    "storefront_enriched": "2026-03-30T06:33:20.934547Z"
   },
   "doors_detail": [
     {
@@ -251,7 +252,21 @@
   "storefront": {
     "type": "Commercial ground floor",
     "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 5.49,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    },
+    "signage": {
+      "text": "G Architects",
+      "type": "fascia",
+      "width_m": 4.0,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
   },
   "photo_observations": {
     "source": "synthesized_from_params",

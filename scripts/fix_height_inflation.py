@@ -93,6 +93,11 @@ def fix_height_inflation():
                 param_total_height = params.get('total_height_m')
 
                 if db_avg_height is not None and param_total_height is not None:
+                    try:
+                        db_avg_height = float(db_avg_height)
+                        param_total_height = float(param_total_height)
+                    except (TypeError, ValueError):
+                        continue
                     if db_avg_height > 0: # Avoid division by zero
                         ratio = param_total_height / db_avg_height
                         
