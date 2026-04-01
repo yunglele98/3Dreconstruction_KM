@@ -2,12 +2,12 @@
   "building_name": "71 Wales Ave",
   "floors": 4,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4,
-    2.4
+    1.96,
+    1.96,
+    1.96,
+    1.94
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 7.82,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -153,6 +153,21 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:38.960164+00:00"
+      },
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 9.6,
+        "new_value": 7.82,
+        "timestamp": "2026-03-31T01:09:58.371897+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.907088+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -187,7 +202,10 @@
       "new_total_height_m": 9.6,
       "floors": 4.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "sparse_field_promotions": [
+      "door_count_promoted"
+    ]
   },
   "doors_detail": [
     {
@@ -387,35 +405,8 @@
             "glazing": "2-over-2"
           }
         ]
-      },
-      {
-        "floor": "Attic / gable",
-        "windows": [
-          {
-            "count": 1,
-            "type": "fixed",
-            "width_m": 0.7,
-            "height_m": 0.9,
-            "sill_height_m": 1.0,
-            "frame_colour": "#2A2A2A",
-            "glazing": "fixed"
-          }
-        ]
       }
-    ],
-    "roof_type_observed": "cross-gable",
-    "roof_pitch_deg": 45,
-    "decorative_elements_observed": [],
-    "colour_palette_observed": {},
-    "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    ]
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

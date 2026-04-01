@@ -141,6 +141,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:12.324469+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.332263+00:00"
       }
     ],
     "photo_matched": {
@@ -161,6 +168,10 @@
         "accent": "#2A3A2A → #192725",
         "mortar": "#B0A898 → #AFA89A"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "notes": "Narrow 2-storey commercial on Kensington Ave pedestrian strip. Typical converted Victorian house-form with full ground-floor retail storefront. Night photo, party walls both sides.",
@@ -309,13 +320,9 @@
     "condition_observed": "fair",
     "depth_notes": {
       "setback_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "step_count": 1,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "foundation_height_m_est": 0.15
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.15,
-  "inferred_setback_m": 0.0
+  "window_arrangement": "symmetric",
+  "wall_thickness_m": 0.3
 }

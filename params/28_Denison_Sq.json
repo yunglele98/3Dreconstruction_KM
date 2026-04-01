@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Byzantine Revival",
     "construction_period": "c. 1910–1920",
     "construction_decade": 1910,
@@ -155,6 +155,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:23.436778+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.999674+00:00"
       }
     ],
     "photo_matched": {
@@ -174,6 +181,12 @@
         "accent": "#3A2A20 → #1E2F2E",
         "mortar": "#B0A898 → #C4BDAE"
       }
+    ],
+    "backfills": [
+      "construction_era:kensington_default"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "doors_detail": [
@@ -325,14 +338,7 @@
     "decorative_elements_observed": [],
     "colour_palette_observed": {},
     "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "depth_notes": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

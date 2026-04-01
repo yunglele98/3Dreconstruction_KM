@@ -57,7 +57,7 @@ def module():
     if "scripts.generate_collision_mesh" in sys_module.modules:
         del sys_module.modules["scripts.generate_collision_mesh"]
     sys_module.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import generate_collision_mesh
+    import generate_collision_mesh
     return generate_collision_mesh
 
 

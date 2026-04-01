@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.infer_setbacks import (
+from infer_setbacks import (
     infer_setback,
     infer_step_count,
     is_market_street,

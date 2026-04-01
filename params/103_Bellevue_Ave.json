@@ -161,6 +161,13 @@
           "foundation_height_m: 0.45"
         ],
         "timestamp": "2026-03-29T08:05:07.217118+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.301282+00:00"
       }
     ],
     "photo_matched": {
@@ -177,6 +184,10 @@
         "roof": "#5A5A5A → #575757",
         "mortar": "#B0A898 → #B0A99B"
       }
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "porch_detail"
     ]
   },
   "decorative_elements": {
@@ -718,21 +729,12 @@
     "trim_hex": "#E8E0D0",
     "roof_hex": "#5A5A5A",
     "accent_hex": "#E8E0D0",
-    "door_hex": "#E8E0D0",
-    "mortar_hex": "#C8C0B0",
-    "facade": "#8F4F34",
-    "trim": "#C5B89F",
-    "roof": "#575757",
-    "accent": "#7B2132"
+    "door_hex": "#E8E0D0"
   },
-  "dormer": {
+  "chimney_count": 1,
+  "porch_detail": {
     "present": true,
-    "type": "Gable dormer",
-    "count": 1,
-    "width_m": 1.0,
-    "height_m": 1.2,
-    "has_window": true
+    "type": "pointed_entry_porchlet"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.45
+  "wall_thickness_m": 0.3
 }

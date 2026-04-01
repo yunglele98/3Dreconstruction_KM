@@ -36,14 +36,14 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); c. 1900\u20131950 (commercial conversion)",
+    "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 74,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear",
     "building_features": [
       "original_windows"
     ],
@@ -60,8 +60,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way NB | 30 km/h | Sub-standard sidewalks | Primary commercial spine | Pedestrian Sunday route",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 1
   },
   "_meta": {
@@ -181,10 +181,10 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #5E5252",
-        "trim": "#E8E0D0 \u2192 #332B24",
-        "accent": "#2A3A2A \u2192 #483D2D",
-        "mortar": "#B0A898 \u2192 #BDAB93"
+        "roof": "#5A5A5A → #5E5252",
+        "trim": "#E8E0D0 → #332B24",
+        "accent": "#2A3A2A → #483D2D",
+        "mortar": "#B0A898 → #BDAB93"
       }
     ],
     "qa_final_fixes": [
@@ -197,6 +197,13 @@
     ],
     "height_fixes": [
       "qa_height_mismatch: 7.2m/3F -> 3.21m/1F (LiDAR avg: 3.21m)"
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -332,7 +339,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, cornice.",
-    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+    "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
     "secondary_material": "mixed (previously mixed)",
     "mortar_colour_hex": "#BDAB93"
   },
@@ -405,7 +412,7 @@
   },
   "street_setback_m": 0.0,
   "facade_description": "305 Augusta Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed masonry in a charcoal and tan modernized facade with a black storefront base palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice.",
-  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the ear.",
+  "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
   "roof_material": "Grey asphalt shingles",
   "volumes": [],
   "colour_palette": {

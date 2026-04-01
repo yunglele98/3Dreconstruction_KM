@@ -2,11 +2,11 @@
   "building_name": "532 Dundas St W",
   "floors": 3,
   "floor_heights_m": [
-    2.87,
-    2.36,
-    2.04
+    3.35,
+    3.35,
+    3.35
   ],
-  "total_height_m": 7.27,
+  "total_height_m": 10.06,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
@@ -138,6 +138,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:44.034252+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.651085+00:00"
       }
     ],
     "photo_matched": {
@@ -166,6 +173,9 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
     ]
   },
   "storefront": {
@@ -333,14 +343,9 @@
     ],
     "colour_palette_observed": {},
     "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 0.5,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "depth_notes": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "handoff_fixes_applied": true,
+  "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",
+  "wall_thickness_m": 0.3
 }

@@ -38,7 +38,7 @@
   "condition": "poor",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
@@ -183,6 +183,13 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "decorative_elements": {

@@ -172,6 +172,13 @@
         "accent": "#2A3A2A → #39402E",
         "mortar": "#B0A898 → #BDB6A9"
       }
+    ],
+    "backfills": [
+      "site_street_manual_landmark"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "window_arrangement": "irregular",
@@ -298,7 +305,9 @@
   "total_height_m": 6.4,
   "site": {
     "lon": -79.400786,
-    "lat": 43.654246
+    "lat": 43.654246,
+    "street": "Kensington Ave",
+    "street_number": "57"
   },
   "colour_palette": {
     "facade_hex": "#7A5C44",

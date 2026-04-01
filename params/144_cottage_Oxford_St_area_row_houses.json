@@ -103,6 +103,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
+      "Photo: 2.5fl brick row houses with gambrel ~12m",
       "Photo: 2.5fl brick row houses with gambrel ~12m"
     ],
     "deep_facade_backfill": [
@@ -165,6 +181,13 @@
         "accent": "#3A2A20 → #3D2C21",
         "mortar": "#B0A898 → #C9C0AF"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "window_arrangement": "symmetric",
@@ -322,7 +345,9 @@
   },
   "site": {
     "lon": -79.406424,
-    "lat": 43.654583
+    "lat": 43.654583,
+    "street": "Oxford St",
+    "street_number": "144"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

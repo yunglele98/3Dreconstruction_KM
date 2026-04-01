@@ -102,6 +102,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
+      "Photo: 4fl brick+glass commercial ~20m with arch feature",
       "Photo: 4fl brick+glass commercial ~20m with arch feature"
     ],
     "deep_facade_backfill": [
@@ -170,6 +186,12 @@
         "accent": "#2A3A2A → #3F2C21",
         "mortar": "#B0A898 → #AFA89B"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "symmetric",
@@ -399,7 +421,9 @@
   ],
   "site": {
     "lon": -79.399263,
-    "lat": 43.654689
+    "lat": 43.654689,
+    "street": "College St",
+    "street_number": "360"
   },
   "colour_palette": {
     "facade_hex": "#7A5C44",

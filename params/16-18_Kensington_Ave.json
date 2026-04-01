@@ -134,6 +134,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:16.467787+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.537713+00:00"
       }
     ],
     "photo_matched": {
@@ -427,19 +434,7 @@
       "roof": "#5A5A5A",
       "accent": "#D8C8A0"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Standard Kensington Market bay-and-gable row house pair. Red brick facade visible on upper floors. Ground floor modified for commercial. Cream/tan painted ground floor base. Second floor and gable retain original brick. Metal security mesh on ground floor windows/doors. Partially obscured by parked VW van with Ontario plate.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 250,
-      "step_count": 1,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 250,
-  "foundation_height_m": 0.3,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

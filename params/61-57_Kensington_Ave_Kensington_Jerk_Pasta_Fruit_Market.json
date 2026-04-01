@@ -141,6 +141,13 @@
           "door.colour_hex: #1A1A2A (black frame)"
         ],
         "timestamp": "2026-03-29T08:05:46.434762+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.774433+00:00"
       }
     ],
     "photo_matched": {
@@ -414,19 +421,7 @@
       "roof": "#4A4A4A",
       "accent": "#C83030"
     },
-    "condition_observed": "poor",
-    "condition_notes": "Upper facade entirely covered with painted plywood panels, colourful street art mural (left) and large white graffiti tags (right). Original brick mostly concealed. Security grilles on all storefronts. Heavily modified from original form. Utility pole partially obstructs view.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.1,
-      "eave_overhang_mm_est": 100,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "poor"
   },
-  "eave_overhang_mm": 100,
-  "foundation_height_m": 0.1,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

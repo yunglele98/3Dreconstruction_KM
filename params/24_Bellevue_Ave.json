@@ -191,7 +191,13 @@
       "new_total_height_m": 7.2,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "porch_detail",
+      "balcony_detail",
+      "door_count_promoted"
+    ]
   },
   "bay_window": {
     "present": true,
@@ -453,5 +459,14 @@
     }
   },
   "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "window_arrangement": "symmetric",
+  "porch_detail": {
+    "present": true,
+    "type": "open"
+  },
+  "balcony_detail": {
+    "present": true,
+    "type": "projecting"
+  }
 }

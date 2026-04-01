@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Row",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Converted)",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -141,6 +141,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:36.899053+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.800297+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -169,6 +176,9 @@
         "accent": "#3A2A20 → #452D1F",
         "mortar": "#B0A898 → #A7987F"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
     ]
   },
   "doors_detail": [
@@ -370,16 +380,7 @@
     "decorative_elements_observed": [
       "stone_voussoirs"
     ],
-    "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "colour_palette_observed": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

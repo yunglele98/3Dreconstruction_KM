@@ -160,6 +160,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:38.604426+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.888291+00:00"
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:48.351070+00:00",
@@ -345,15 +352,7 @@
     "decorative_elements_observed": [],
     "colour_palette_observed": {},
     "condition_observed": "poor",
-    "depth_notes": {
-      "setback_m_est": 0.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "depth_notes": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 3.0
+  "wall_thickness_m": 0.3
 }

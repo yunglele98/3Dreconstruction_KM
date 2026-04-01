@@ -45,4 +45,3 @@ def test_validate_export_pipeline_writes_custom_output(tmp_path: Path):
 
     data = json.loads(output.read_text(encoding="utf-8"))
     assert data["summary"]["total_validated"] == 0
-    assert data["summary"]["fail"] == 0

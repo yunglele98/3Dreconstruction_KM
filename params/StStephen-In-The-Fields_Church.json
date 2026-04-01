@@ -151,6 +151,13 @@
         "accent": "#2A3A2A → #3A4431",
         "mortar": "#B0A898 → #BDB4A3"
       }
+    ],
+    "backfills": [
+      "site_street_manual_landmark"
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",
@@ -309,7 +316,9 @@
   },
   "site": {
     "lon": -79.40398,
-    "lat": 43.656959
+    "lat": 43.656959,
+    "street": "Bellevue Ave",
+    "street_number": "103"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

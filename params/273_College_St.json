@@ -2,11 +2,11 @@
   "building_name": "273 College St",
   "floors": 3,
   "floor_heights_m": [
-    3.9,
-    3.0,
-    2.5
+    3.43,
+    3.43,
+    3.43
   ],
-  "total_height_m": 9.0,
+  "total_height_m": 10.3,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -38,7 +38,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
@@ -136,6 +136,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:22.168693+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.943192+00:00"
       }
     ],
     "photo_matched": {
@@ -159,6 +166,9 @@
       {
         "trim": "#2A2A2A → #3C2B20"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
     ]
   },
   "decorative_elements": {
@@ -364,15 +374,9 @@
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
-    "roof_hex": "#3A3A3A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0",
-    "facade": "#C1572B",
-    "trim": "#3C2B20",
-    "roof": "#5A5353",
-    "accent": "#2B3A29"
+    "roof_hex": "#3A3A3A"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "handoff_fixes_applied": true,
+  "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",
+  "wall_thickness_m": 0.3
 }

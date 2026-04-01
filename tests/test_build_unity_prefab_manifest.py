@@ -20,7 +20,7 @@ def module():
     if "scripts.build_unity_prefab_manifest" in sys_module.modules:
         del sys_module.modules["scripts.build_unity_prefab_manifest"]
     sys_module.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import build_unity_prefab_manifest
+    import build_unity_prefab_manifest
     return build_unity_prefab_manifest
 
 

@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Row",
-    "construction_date": "Pre-1889, 1924-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Converted House-form, Row (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1924-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -148,6 +148,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:14.530926+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.596616+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -184,7 +191,13 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.725948Z"
+    "storefront_enriched": "2026-03-30T06:33:20.725948Z",
+    "backfills": [
+      "era_normalized:Pre-1889, 1924-1930->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -400,16 +413,7 @@
       "stone_voussoirs",
       "cornice"
     ],
-    "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "colour_palette_observed": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

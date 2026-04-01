@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.enrich_porch_dimensions import (
+from enrich_porch_dimensions import (
     get_porch_width_m,
     get_porch_columns,
     infer_step_count,

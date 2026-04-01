@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Commercial (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -187,6 +187,13 @@
         "accent": "#3A2A20 → #27281F",
         "mortar": "#B0A898 → #C3B298"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "decorative_elements": {

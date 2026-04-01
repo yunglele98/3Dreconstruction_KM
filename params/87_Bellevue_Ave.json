@@ -41,7 +41,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Detached",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "House-form, Detached (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -179,6 +179,14 @@
         "accent": "#2A3A2A → #2A2B32",
         "mortar": "#B0A898 → #B6A791"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "bay_window": {

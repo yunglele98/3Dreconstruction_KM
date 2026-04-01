@@ -1,4 +1,4 @@
-"""
+﻿"""
 Shared texture baking utilities for FBX export pipelines.
 
 Extracted from export_building_fbx.py and batch_export_unreal.py to eliminate
@@ -17,6 +17,21 @@ from pathlib import Path
 from typing import Any
 
 import bpy
+def _enable_gpu():
+    """Force enable NVIDIA GPU for Cycles baking."""
+    try:
+        prefs = bpy.context.preferences
+        cprefs = prefs.addons["cycles"].preferences
+        cprefs.compute_device_type = "OPTIX"
+        cprefs.get_devices()
+        for device in cprefs.devices:
+            if "RTX" in device.name:
+                device.use = True
+            else:
+                device.use = False
+    except Exception as e:
+        print(f"Warning: Could not enable GPU: {e}")
+
 
 
 def _atomic_write_json(filepath, data, ensure_ascii=False):
@@ -87,6 +102,48 @@ def join_meshes_by_material() -> None:
         bpy.ops.object.select_all(action="DESELECT")
 
 
+def cleanup_meshes_for_export(close_holes: bool = False) -> dict[str, int]:
+    """Run conservative mesh cleanup ops before export.
+
+    This is intended to reduce degenerate/loose geometry without aggressively
+    reshaping authored assets.
+    """
+    stats = {
+        "mesh_objects": 0,
+        "edited": 0,
+        "errors": 0,
+    }
+    for obj in bpy.data.objects:
+        if obj.type != "MESH":
+            continue
+        stats["mesh_objects"] += 1
+        try:
+            bpy.ops.object.select_all(action="DESELECT")
+            obj.select_set(True)
+            bpy.context.view_layer.objects.active = obj
+            bpy.ops.object.mode_set(mode="EDIT")
+            bpy.ops.mesh.select_all(action="SELECT")
+            bpy.ops.mesh.remove_doubles(threshold=0.0001)
+            bpy.ops.mesh.dissolve_degenerate(threshold=1e-6)
+            bpy.ops.mesh.delete_loose(use_verts=True, use_edges=True, use_faces=False)
+            if close_holes:
+                bpy.ops.mesh.fill_holes(sides=0)
+            bpy.ops.mesh.normals_make_consistent(inside=False)
+            bpy.ops.object.mode_set(mode="OBJECT")
+            obj.data.validate(clean_customdata=False)
+            obj.data.update()
+            stats["edited"] += 1
+        except RuntimeError:
+            stats["errors"] += 1
+            try:
+                bpy.ops.object.mode_set(mode="OBJECT")
+            except RuntimeError:
+                pass
+            continue
+    bpy.ops.object.select_all(action="DESELECT")
+    return stats
+
+
 def get_unique_materials() -> list[bpy.types.Material]:
     """Get all unique materials used by mesh objects."""
     materials = set()
@@ -127,7 +184,7 @@ def bake_material_textures(
 
     # Ensure Cycles is active (required for baking)
     bpy.context.scene.render.engine = "CYCLES"
-    bpy.context.scene.cycles.device = "GPU"
+    _enable_gpu()
     bpy.context.scene.cycles.samples = 4  # low samples for fast bake
 
     texture_dir = export_dir / "textures"
@@ -499,3 +556,5 @@ def write_material_sidecar(export_dir: Path) -> Path:
     _atomic_write_json(sidecar_path, materials_data)
 
     return sidecar_path
+
+

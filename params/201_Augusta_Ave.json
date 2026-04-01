@@ -169,6 +169,10 @@
         "roof": "#5A5A5A → #525252",
         "mortar": "#B0A898 → #BEB5A4"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "decorative_elements": {

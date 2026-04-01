@@ -95,6 +95,14 @@
         "accent": "#2A3A2A → #363F2B",
         "mortar": "#B0A898 → #AA9B8D"
       }
+    ],
+    "backfills": [
+      "site_street_manual_landmark"
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {
@@ -310,7 +318,8 @@
   "roof_pitch_deg": 45,
   "site": {
     "lon": -79.403324,
-    "lat": 43.654773
+    "lat": 43.654773,
+    "street": "Bellevue Ave"
   },
   "colour_palette": {
     "facade_hex": "#7A5C44",

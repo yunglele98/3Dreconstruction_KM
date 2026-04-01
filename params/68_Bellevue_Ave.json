@@ -176,6 +176,11 @@
         "accent": "#3A2A20 → #2B3729",
         "mortar": "#B0A898 → #AFA091"
       }
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "bay_window": {

@@ -191,6 +191,13 @@
         "accent": "#3A2A20 → #394132",
         "mortar": "#B0A898 → #AFA797"
       }
+    ],
+    "backfills": [
+      "site_street_manual_landmark"
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",
@@ -500,7 +507,9 @@
   ],
   "site": {
     "lon": -79.405688,
-    "lat": 43.653095
+    "lat": 43.653095,
+    "street": "Bathurst St",
+    "street_number": "399"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

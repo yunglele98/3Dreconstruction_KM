@@ -1,7 +1,7 @@
 {
   "building_name": "385-387 Spadina Ave (Jo's Cha / Soul Made Cafe row segment)",
   "floors": 3,
-  "facade_material": "painted",
+  "facade_material": "Painted",
   "facade_colour": "yellow painted storefront",
   "windows_per_floor": [
     2,
@@ -107,6 +107,22 @@
     ],
     "db_revision_ts": "2026-03-30T02:24:21",
     "qa_photo_fixes": [
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
+      "Photo: yellow painted storefront ~10m",
       "Photo: yellow painted storefront ~10m"
     ],
     "site_backfill_interp": "exact_or_duplicate_num:386",
@@ -163,6 +179,12 @@
         "accent": "#2A3A2A → #27272E",
         "mortar": "#B0A898 → #ABA291"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",
@@ -329,7 +351,9 @@
   ],
   "site": {
     "lon": -79.399387,
-    "lat": 43.655274
+    "lat": 43.655274,
+    "street": "Spadina Ave",
+    "street_number": "387"
   },
   "colour_palette": {
     "facade_hex": "#C8B060",

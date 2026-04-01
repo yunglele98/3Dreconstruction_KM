@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.build_adjacency_graph import (
+from build_adjacency_graph import (
     extract_street_number,
     find_neighbours,
     create_blocks,

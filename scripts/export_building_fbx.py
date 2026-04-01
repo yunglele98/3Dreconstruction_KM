@@ -22,6 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from bake_utils import (
     apply_all_modifiers,
     bake_all_materials,
+    cleanup_meshes_for_export,
     export_fbx,
     export_glb,
     extract_address_from_blend,
@@ -49,6 +50,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--blend", help="Path to .blend file (if not loaded via Blender CLI)")
     parser.add_argument("--texture-size", type=int, default=2048, help="Texture resolution (default: 2048)")
     parser.add_argument("--skip-glb", action="store_true", help="Skip GLB sidecar export")
+    parser.add_argument("--close-holes", action="store_true", help="Enable hole-fill during mesh cleanup")
     return parser.parse_args(argv)
 
 
@@ -88,6 +90,14 @@ def main():
     # Step 2: Join meshes by material
     print("Step 2: Joining meshes by material...")
     join_meshes_by_material()
+
+    # Step 2b: Cleanup mesh topology (degenerate/loose geometry, normals)
+    print("Step 2b: Cleaning meshes for export...")
+    cleanup_stats = cleanup_meshes_for_export(close_holes=args.close_holes)
+    print(
+        f"  Cleanup: edited {cleanup_stats['edited']}/{cleanup_stats['mesh_objects']} "
+        f"mesh objects (errors: {cleanup_stats['errors']}, close_holes={args.close_holes})"
+    )
 
     # Step 3: Bake procedural materials to textures
     print("Step 3: Baking procedural materials to textures...")

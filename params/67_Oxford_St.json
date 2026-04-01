@@ -40,7 +40,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
     "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
@@ -178,6 +178,13 @@
         "accent": "#2A3A2A → #24241C",
         "mortar": "#B0A898 → #C2BAA7"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {

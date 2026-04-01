@@ -140,6 +140,9 @@
         "accent": "#2A3A2A → #28282D",
         "mortar": "#B0A898 → #A39485"
       }
+    ],
+    "sparse_field_promotions": [
+      "porch_detail"
     ]
   },
   "balconies": 1,
@@ -362,18 +365,8 @@
   "inferred_setback_m": 2.0,
   "porch_width_m": 2.75,
   "porch_depth_m": 1.8,
-  "porch_height_m": 3.9,
   "porch_detail": {
-    "columns": {
-      "count": 2,
-      "type": "turned",
-      "material": "wood"
-    },
-    "railing": {
-      "present": true,
-      "height_m": 0.9,
-      "type": "baluster"
-    },
-    "step_count": 2
+    "present": true,
+    "type": "open"
   }
 }

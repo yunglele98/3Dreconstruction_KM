@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from scripts.ssim_single import compute_ssim
+from ssim_single import compute_ssim
 
 
 def _write_image(path: Path, arr: np.ndarray) -> None:

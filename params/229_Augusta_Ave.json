@@ -163,6 +163,13 @@
           "foundation_height_m: 0.15"
         ],
         "timestamp": "2026-03-29T08:05:18.870504+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.822939+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -179,6 +186,10 @@
       {
         "mortar": "#B0A898 → #C0B6A4"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -473,18 +484,7 @@
       "roof": "#3A3A3A",
       "accent": "#4A9A4A"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Nighttime view. Building is a simple single-storey commercial structure. White upper facade band is clean. Roller shutters functional. Graffiti murals appear to be sanctioned street art (high quality). Blue graffiti tag on upper parapet is likely unsanctioned. Bike rings along sidewalk. Building reads as a low-rise market-type unit.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.15,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

@@ -42,7 +42,7 @@ def module():
         if "export_building_fbx" in mod_name or "bake_utils" in mod_name:
             del sys_module.modules[mod_name]
     sys_module.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import export_building_fbx
+    import export_building_fbx
     return export_building_fbx
 
 
@@ -51,7 +51,7 @@ def bake_utils_module():
     """Import bake_utils after mocking bpy."""
     import sys as sys_module
     sys_module.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import bake_utils
+    import bake_utils
     return bake_utils
 
 

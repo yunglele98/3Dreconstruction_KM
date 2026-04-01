@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import pytest
 import statistics
-from scripts.analyze_streetscape_rhythm import (
+from analyze_streetscape_rhythm import (
     extract_street_number,
     safe_get,
     compute_longest_material_run,

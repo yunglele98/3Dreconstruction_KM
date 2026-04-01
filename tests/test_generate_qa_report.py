@@ -7,7 +7,7 @@ import pytest
 from pathlib import Path
 from typing import Any
 
-from scripts.generate_qa_report import (
+from generate_qa_report import (
     QAIssue,
     _extract_street_from_name,
     _check_building,

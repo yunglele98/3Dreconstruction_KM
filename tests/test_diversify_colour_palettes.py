@@ -4,7 +4,7 @@ import random
 
 import pytest
 
-from scripts.diversify_colour_palettes import (
+from diversify_colour_palettes import (
     ERA_BRICK_RANGES,
     ROOF_VARIANTS,
     STREET_TEMP,

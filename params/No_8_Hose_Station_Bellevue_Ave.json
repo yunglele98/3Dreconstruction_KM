@@ -162,6 +162,12 @@
         "accent": "#2A3A2A → #403422",
         "mortar": "#B0A898 → #BAA990"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "symmetric",
@@ -360,7 +366,8 @@
   },
   "site": {
     "lon": -79.404782,
-    "lat": 43.656825
+    "lat": 43.656825,
+    "street": "Bellevue Ave"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

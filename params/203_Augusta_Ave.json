@@ -203,7 +203,11 @@
       "new_total_height_m": 7.2,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "storefront": {
     "type": "Commercial ground floor",

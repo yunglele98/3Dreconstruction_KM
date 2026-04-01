@@ -191,6 +191,10 @@
         "accent": "#3A2A20 → #4C321F",
         "mortar": "#B0A898 → #968879"
       }
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement"
     ]
   },
   "cornice": {

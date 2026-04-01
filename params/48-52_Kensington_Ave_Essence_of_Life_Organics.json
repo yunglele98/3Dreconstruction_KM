@@ -141,6 +141,13 @@
           "door.colour_hex: #1A1A2A (black frame)"
         ],
         "timestamp": "2026-03-29T08:05:42.712952+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.595099+00:00"
       }
     ],
     "photo_matched": {
@@ -426,20 +433,7 @@
       "roof": "#5A5A5A",
       "accent": "#2A2A2A"
     },
-    "condition_observed": "good",
-    "condition_notes": "Best-maintained building in this stretch. Red brick is clean and joints appear intact at upper level. White cornice band well-preserved. Awning in good condition. Sidewalk has temporary painted barrier/hoarding. Overall a solid, well-kept commercial building.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
-      "eave_overhang_mm_est": 100,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "eave_overhang_mm": 100,
-  "foundation_height_m": 0.2,
-  "parapet_height_m": 0.6,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

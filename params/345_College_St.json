@@ -39,7 +39,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial row building",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900-1930",
     "construction_decade": 1900,
@@ -178,6 +178,13 @@
         "accent": "#3A2A20 → #36261E",
         "mortar": "#B0A898 → #A59688"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {

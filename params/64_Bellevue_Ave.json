@@ -193,7 +193,11 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:21.224780Z"
+    "storefront_enriched": "2026-03-30T06:33:21.224780Z",
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {

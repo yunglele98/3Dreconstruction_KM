@@ -151,6 +151,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:22.528124+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.938458+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -179,6 +186,9 @@
         "accent": "#3A2A20 → #2B3424",
         "mortar": "#B0A898 → #BCAB92"
       }
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -330,14 +340,8 @@
     "colour_palette_observed": {},
     "condition_observed": "good",
     "depth_notes": {
-      "setback_m_est": 0.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "setback_m_est": 0.0
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

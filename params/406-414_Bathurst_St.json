@@ -1,7 +1,7 @@
 {
   "building_name": "406-414 Bathurst St",
   "floors": 4,
-  "facade_material": "Mixed masonry",
+  "facade_material": "brick",
   "facade_colour": "red brick base with pale grey brick vertical panels and black aluminum window framing",
   "windows_per_floor": [
     3,
@@ -103,6 +103,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
       "Photo: 4fl modern brick+glass ~25m (Western Dental)"
     ],
     "handoff_fixes_applied": [
@@ -187,6 +203,12 @@
         "accent": "#2A3A2A → #2E3E2B",
         "mortar": "#B0A898 → #B4A48F"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "symmetric",
@@ -416,7 +438,9 @@
   ],
   "site": {
     "lon": -79.399694,
-    "lat": 43.656066
+    "lat": 43.656066,
+    "street": "Bathurst St",
+    "street_number": "406-414"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

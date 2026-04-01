@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Row",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
@@ -176,6 +176,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:39.216749+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.920055+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -193,6 +200,9 @@
         "trim": "#E8E0D0 → #33251D",
         "mortar": "#B0A898 → #BCB4A5"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
     ]
   },
   "storefront": {
@@ -435,19 +445,7 @@
       "roof": "#4A4A4A",
       "accent": "#E8C820"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Facade painted cream/beige. Storefront surround painted bright yellow with distinctive green zigzag trim. Display windows clean. Upper windows appear functional. No grilles. Some wear on painted surfaces.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "eave_overhang_mm_est": 150,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 150,
-  "foundation_height_m": 0.15,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

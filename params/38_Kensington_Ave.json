@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Commercial (38 Kensington Avenue), Converted House-form (40 Kensington Avenue), Semi-detached, Bay-andGable (40 Kensington Avenue) (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -171,6 +171,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:37.435380+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.289729+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -188,6 +195,9 @@
         "roof": "#5A5A5A → #565555",
         "mortar": "#B0A898 → #B1A192"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
     ]
   },
   "bay_window": {
@@ -505,19 +515,7 @@
       "roof": "#5A5A5A",
       "accent": "#E8A020"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Upper facade dark brown/chocolate brick or paint. Gable with simple bargeboard intact. Storefront well-maintained with distinctive diamond lattice metalwork. White tile bulkhead in good condition. Multiple signage elements.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
-      "eave_overhang_mm_est": 250,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 250,
-  "foundation_height_m": 0.2,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

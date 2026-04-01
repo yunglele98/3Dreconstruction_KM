@@ -152,6 +152,12 @@
         "accent": "#1A1A2A → #34271D",
         "mortar": "#B0A898 → #A69686"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "symmetric",
@@ -295,7 +301,8 @@
   ],
   "site": {
     "lon": -79.403531,
-    "lat": 43.651871
+    "lat": 43.651871,
+    "street": "Dundas St W"
   },
   "colour_palette": {
     "facade_hex": "#D8D0C0",

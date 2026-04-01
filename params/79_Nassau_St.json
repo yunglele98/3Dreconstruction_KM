@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1880–1920",
     "construction_decade": 1880,
@@ -167,6 +167,13 @@
       {
         "roof": "#5A5A5A → #455555"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {

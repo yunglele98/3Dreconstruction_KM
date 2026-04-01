@@ -172,6 +172,10 @@
         "accent": "#3A2A20 → #37271E",
         "mortar": "#B0A898 → #AD9C8C"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "decorative_elements": {

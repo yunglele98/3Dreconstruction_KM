@@ -2,11 +2,11 @@
   "building_name": "138 Augusta Ave",
   "floors": 3,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4
+    2.35,
+    2.35,
+    2.35
   ],
-  "total_height_m": 7.2,
+  "total_height_m": 7.05,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
@@ -144,6 +144,21 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:10.731726+00:00"
+      },
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 7.2,
+        "new_value": 7.05,
+        "timestamp": "2026-03-31T01:09:57.556894+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.426825+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -172,7 +187,10 @@
       "new_total_height_m": 7.2,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "backfills": [
+      "construction_era:style_keyword:victorian"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -381,26 +399,7 @@
       2,
       1
     ],
-    "window_type": "Double-hung sash",
-    "door_count": 1,
-    "chimneys": 0,
-    "porch_present": false,
-    "has_storefront": true,
-    "photo": "IMG_20260315_154114750_HDR.jpg"
+    "window_type": "Double-hung sash"
   },
-  "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#3A2A20",
-    "roof_hex": "#4A5A5A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0",
-    "facade": "#9D4F40",
-    "trim": "#4D3321",
-    "roof": "#585858",
-    "accent": "#442E1E"
-  },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

@@ -180,6 +180,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:15.414321+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.644057+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -197,6 +204,9 @@
         "trim": "#3A2A20 → #443425",
         "mortar": "#B0A898 → #988A7B"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "storefront": {
@@ -520,22 +530,8 @@
     "colour_palette_observed": {
       "facade": "#F0F0F0",
       "trim": "#2AAA7A",
-      "roof": "#5A5050",
-      "accent": "#2AAA7A"
-    },
-    "condition_observed": "good",
-    "condition_notes": "Duplicate angle of 184 Baldwin. Confirms clean white-painted brick and teal storefront in good condition.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.1,
-      "eave_overhang_mm_est": 150,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
+      "roof": "#5A5050"
     }
   },
-  "eave_overhang_mm": 150,
-  "foundation_height_m": 0.1,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

@@ -97,6 +97,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
+      "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)",
       "Photo: 3fl brown brick commercial ~30m (Tim Hortons/MedWest)"
     ],
     "site_backfill_final_method": "web_geocode_nominatim:750_Dundas_St_W",
@@ -165,6 +181,12 @@
         "accent": "#1A1A2A → #373C2D",
         "mortar": "#B0A898 → #C2B9A8"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "symmetric",
@@ -352,7 +374,9 @@
   ],
   "site": {
     "lon": -79.405486,
-    "lat": 43.652397
+    "lat": 43.652397,
+    "street": "Bathurst St",
+    "street_number": "750"
   },
   "colour_palette": {
     "facade_hex": "#D8D0C0",

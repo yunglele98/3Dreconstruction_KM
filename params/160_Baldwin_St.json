@@ -191,6 +191,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:13.480415+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.551148+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -214,6 +221,10 @@
         "fix": "height_mismatch_correction",
         "timestamp": "2026-03-29T18:59:47Z"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {
@@ -539,23 +550,8 @@
     "party_wall_left": false,
     "party_wall_right": true,
     "colour_palette_observed": {
-      "facade": "#C4A87A",
-      "trim": "#404040",
-      "roof": "#505050",
-      "accent": "#C02020"
-    },
-    "condition_observed": "good",
-    "condition_notes": "Excellent condition. New construction. Multiple commercial tenants at ground level all well-presented.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
+      "facade": "#C4A87A"
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 import pytest
-from scripts.infer_setbacks import (
+from infer_setbacks import (
     extract_street,
     get_typology_type,
     is_residential_street,

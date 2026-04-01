@@ -152,6 +152,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:17.951853+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.770814+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -179,6 +186,9 @@
         "accent": "#3A2A20 → #382D1D",
         "mortar": "#B0A898 → #99897B"
       }
+    ],
+    "sparse_field_promotions": [
+      "porch_detail"
     ]
   },
   "bay_window": {
@@ -413,6 +423,8 @@
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "porch_detail": {
+    "present": true
+  },
+  "wall_thickness_m": 0.3
 }

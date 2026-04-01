@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Row, Bay-and-Gable",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
     "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
@@ -146,6 +146,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:08.788350+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.363689+00:00"
       }
     ],
     "photo_matched": {
@@ -165,6 +172,12 @@
         "accent": "#2A3A2A → #382920",
         "mortar": "#B0A898 → #AFA99A"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -363,15 +376,7 @@
       "decorative_brickwork"
     ],
     "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

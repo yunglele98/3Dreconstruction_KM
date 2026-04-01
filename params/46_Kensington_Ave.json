@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Commercial, Row",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -161,6 +161,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:42.243215+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.571202+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -178,6 +185,9 @@
         "roof": "#5A5A5A → #5D5D5D",
         "mortar": "#B0A898 → #B09E8D"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
     ]
   },
   "decorative_elements": {
@@ -440,18 +450,7 @@
       "roof": "#5A5A5A",
       "accent": "#D0A030"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Two-storey flat-roof commercial building. Brick appears weathered/dark. Large street-art mural at ground level. Yellow signage band. Upper windows dark-framed, small. Typical Kensington Market commercial conversion.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "foundation_height_m": 0.2,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

@@ -106,6 +106,22 @@
     ],
     "db_revision_ts": "2026-03-30T02:24:20",
     "qa_photo_fixes": [
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
+      "Semi-detached pair ~10m",
       "Semi-detached pair ~10m"
     ],
     "deep_facade_backfill": [
@@ -162,6 +178,9 @@
         "accent": "#2A3A2A → #32241B",
         "mortar": "#B0A898 → #B3A690"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "regular",

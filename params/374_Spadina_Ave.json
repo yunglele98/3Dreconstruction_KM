@@ -34,16 +34,16 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "No",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Non-Contributing",
+    "heritage_register": "Within HCD Boundary – Non-Contributing",
     "protection_level": 1
   },
   "context": {
@@ -56,8 +56,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4+ lanes | Streetcar (510) | 48m ROW | Large-scale commercial",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -76,7 +76,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -141,6 +141,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:36.858533+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.267944+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -163,15 +170,21 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #AC6846",
-        "roof": "#5A5A5A \u2192 #5E5D5D",
-        "trim": "#E8E0D0 \u2192 #493727",
-        "accent": "#1A1A2A \u2192 #392A1F",
-        "mortar": "#B0A898 \u2192 #B1A795"
+        "facade": "#B85A3A → #AC6846",
+        "roof": "#5A5A5A → #5E5D5D",
+        "trim": "#E8E0D0 → #493727",
+        "accent": "#1A1A2A → #392A1F",
+        "mortar": "#B0A898 → #B1A795"
       }
     ],
     "height_fixes": [
       "qa_height_mismatch: 7.2m/3F -> 3.88m/1F (LiDAR avg: 3.88m)"
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -345,15 +358,7 @@
       "cornice"
     ],
     "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 0.5,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

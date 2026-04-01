@@ -204,7 +204,11 @@
       "new_total_height_m": 4.8,
       "floors": 2.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "bay_window": {
     "present": true,

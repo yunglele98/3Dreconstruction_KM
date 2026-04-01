@@ -181,6 +181,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:15.081760+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.626281+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -200,6 +207,10 @@
         "trim": "#3A2A20 → #422E1E",
         "mortar": "#B0A898 → #A4957D"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "decorative_elements": {
@@ -568,19 +579,7 @@
       "roof": "#5A5A5A",
       "accent": "#2A2A2A"
     },
-    "condition_observed": "good",
-    "condition_notes": "White/light grey siding on upper floors in good condition. Black-painted storefront fascia is clean and well-maintained. The arched window hood on the second floor is an attractive heritage detail. Circular oculus in gable matches the neighbouring 182. Victorian gable form well-preserved. Arabic script visible on green sign above storefront (possibly a secondary business or upper-floor tenant).",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "eave_overhang_mm_est": 150,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "eave_overhang_mm": 150,
-  "foundation_height_m": 0.15,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

@@ -165,6 +165,13 @@
         "accent": "#1A1A2A → #2E3B2B",
         "mortar": "#B0A898 → #A69584"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "window_arrangement": "regular",
@@ -305,7 +312,9 @@
   ],
   "site": {
     "lon": -79.399367,
-    "lat": 43.65527
+    "lat": 43.65527,
+    "street": "Spadina Ave",
+    "street_number": "377"
   },
   "colour_palette": {
     "facade_hex": "#E8D8B0",

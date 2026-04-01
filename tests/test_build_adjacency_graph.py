@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 import pytest
-from scripts.build_adjacency_graph import (
+from build_adjacency_graph import (
     extract_street_number,
     safe_get,
     group_by_street,

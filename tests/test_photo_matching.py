@@ -16,7 +16,7 @@ from pathlib import Path
 import pytest
 
 # Import the functions to test
-from scripts.match_photos_to_params import (
+from match_photos_to_params import (
     find_photo,
     load_photo_index,
     normalize_address,

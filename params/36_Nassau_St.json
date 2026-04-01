@@ -147,6 +147,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:36.662699+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.256390+00:00"
       }
     ],
     "photo_matched": {
@@ -164,6 +171,9 @@
         "roof": "#5A5A5A → #434343",
         "mortar": "#B0A898 → #BCB3A2"
       }
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -371,15 +381,7 @@
       "decorative_brickwork"
     ],
     "colour_palette_observed": {},
-    "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

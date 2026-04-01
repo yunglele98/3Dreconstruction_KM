@@ -39,7 +39,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Row",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
     "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
@@ -153,6 +153,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:48.389107+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.861876+00:00"
       }
     ],
     "photo_matched": {
@@ -172,6 +179,12 @@
         "accent": "#2A3A2A → #392F1F",
         "mortar": "#B0A898 → #BEB7A8"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "decorative_elements": {
@@ -327,14 +340,7 @@
     ],
     "colour_palette_observed": {},
     "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "depth_notes": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

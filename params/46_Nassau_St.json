@@ -36,7 +36,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -150,6 +150,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:42.300053+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.575204+00:00"
       }
     ],
     "photo_matched": {
@@ -172,6 +179,12 @@
       {
         "mortar": "#B0A898 → #B5A48B"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -341,14 +354,7 @@
     ],
     "colour_palette_observed": {},
     "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "depth_notes": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

@@ -44,7 +44,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
@@ -149,6 +149,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:32.673110+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.089214+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -176,6 +183,12 @@
         "accent": "#1A1A2A → #2D3C2B",
         "mortar": "#B0A898 → #AC9988"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -437,17 +450,7 @@
     "roof_pitch_deg": 0,
     "decorative_elements_observed": [
       "cornice"
-    ],
-    "colour_palette_observed": {},
-    "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 0.5,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    ]
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

@@ -1,4 +1,4 @@
-from scripts import writeback_to_db
+import writeback_to_db
 
 
 def test_parse_number_street_returns_text_number():

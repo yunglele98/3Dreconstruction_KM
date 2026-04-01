@@ -36,7 +36,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -146,6 +146,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:12.243409+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.504121+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -173,6 +180,12 @@
         "accent": "#2A3A2A → #533C2A",
         "mortar": "#B0A898 → #AC9A8A"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -347,14 +360,7 @@
     ],
     "colour_palette_observed": {},
     "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "depth_notes": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

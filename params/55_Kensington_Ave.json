@@ -34,7 +34,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Row",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
@@ -162,6 +162,13 @@
           "door.colour_hex: #1A1A2A (black frame)"
         ],
         "timestamp": "2026-03-29T08:05:44.638198+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.683579+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -180,6 +187,13 @@
         "trim": "#E8E0D0 → #242424",
         "mortar": "#B0A898 → #BCB3A1"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -522,18 +536,7 @@
       "roof": "#5A5A5A",
       "accent": "#C03020"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Corner building entirely wrapped in mural art at ground level. Upper facade cream/beige, appears painted. Parapet has graffiti tags. Structure appears sound. Multiple storefronts along the L-shaped footprint. Important streetscape anchor at the south entry to Kensington Ave.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.1,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "foundation_height_m": 0.1,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

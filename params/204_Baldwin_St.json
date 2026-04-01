@@ -170,6 +170,13 @@
           "door.colour_hex: #4A3A2A (medium brown)"
         ],
         "timestamp": "2026-03-29T08:05:17.702715+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.758485+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -186,6 +193,9 @@
       {
         "mortar": "#B0A898 → #CAC3B2"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "photo_observations": {
@@ -522,18 +532,7 @@
       "roof": "#4A4A4A",
       "accent": "#2A2A2A"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Upper brick in fair condition with some discolouration and staining. Rustic wood plank awning sign weathered. Black painted bulkhead. Storefront windows covered with tattoo flash. Multiple signs and banners. LED signs in upper portion above second floor (purple illuminated advertising).",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0.3,
-      "foundation_height_m_est": 0.15,
-      "eave_overhang_mm_est": 80,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 80,
-  "foundation_height_m": 0.15,
   "wall_thickness_m": 0.3
 }

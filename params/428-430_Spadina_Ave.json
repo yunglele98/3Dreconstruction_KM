@@ -2,12 +2,12 @@
   "building_name": "428-430 Spadina Ave",
   "floors": 4,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4,
-    2.4
+    2.11,
+    2.11,
+    2.11,
+    2.1
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 8.43,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -40,7 +40,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
@@ -148,6 +148,21 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:39.607953+00:00"
+      },
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 9.6,
+        "new_value": 8.43,
+        "timestamp": "2026-03-31T01:09:58.116797+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.414372+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -183,7 +198,13 @@
       "new_total_height_m": 9.6,
       "floors": 4.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -374,38 +395,8 @@
             "glazing": "1-over-1"
           }
         ]
-      },
-      {
-        "floor": "Attic / gable",
-        "windows": [
-          {
-            "count": 1,
-            "type": "fixed",
-            "width_m": 0.7,
-            "height_m": 0.9,
-            "sill_height_m": 1.0,
-            "frame_colour": "#E8E0D0",
-            "glazing": "fixed"
-          }
-        ]
       }
-    ],
-    "roof_type_observed": "flat",
-    "roof_pitch_deg": 0,
-    "decorative_elements_observed": [
-      "decorative_brickwork",
-      "cornice"
-    ],
-    "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 0.5,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    ]
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

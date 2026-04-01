@@ -173,6 +173,9 @@
         "accent": "#3A2A20 → #323A28",
         "mortar": "#B0A898 → #998979"
       }
+    ],
+    "sparse_field_promotions": [
+      "porch_detail"
     ]
   },
   "bay_window": {
@@ -387,5 +390,7 @@
     }
   },
   "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "porch_detail": {
+    "present": true
+  }
 }

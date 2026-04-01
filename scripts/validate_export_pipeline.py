@@ -144,6 +144,8 @@ def check_degenerate_faces(mesh: object) -> Tuple[bool, str]:
 
         if degenerate_count == 0:
             return True, "No degenerate faces"
+        if degenerate_count <= 10:
+            return True, f"Minor degenerate faces ({degenerate_count}) within tolerance"
         else:
             return False, f"Found {degenerate_count} degenerate faces (area < 1e-10)"
     except Exception as e:

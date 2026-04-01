@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Converted House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -195,6 +195,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:12.122543+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.498102+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -219,7 +226,13 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.681597Z"
+    "storefront_enriched": "2026-03-30T06:33:20.681597Z",
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
+    ]
   },
   "bay_window": {
     "present": true,
@@ -502,20 +515,7 @@
       "roof": "#4A4A4A",
       "accent": "#E8C040"
     },
-    "condition_observed": "good",
-    "condition_notes": "Clean painted facade in blue-grey. Projecting box structure at second floor level wraps the upper facade, creating a modern commercial appearance over the original building form. Decorative security grille with bird silhouettes is distinctive. Adjacent to a buff/yellow brick building on the right. Fairy-lit tree at left corner. Well-maintained storefront.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 100,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "eave_overhang_mm": 100,
-  "parapet_height_m": 0.6,
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

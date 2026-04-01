@@ -2,10 +2,10 @@
   "building_name": "548A Dundas St W",
   "floors": 2,
   "floor_heights_m": [
-    4.8,
-    4.8
+    3.96,
+    3.96
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 7.92,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -36,7 +36,7 @@
   "condition": "poor",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
@@ -142,6 +142,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:44.349186+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.670546+00:00"
       }
     ],
     "photo_matched": {
@@ -162,6 +169,9 @@
         "accent": "#1A1A2A → #3B4532",
         "mortar": "#B0A898 → #BCB6A8"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
     ]
   },
   "storefront": {
@@ -307,13 +317,10 @@
     "colour_palette_observed": {},
     "condition_observed": "poor",
     "depth_notes": {
-      "setback_m_est": 0.5,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "setback_m_est": 0.5
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "handoff_fixes_applied": true,
+  "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix]",
+  "wall_thickness_m": 0.3
 }

@@ -156,6 +156,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:15.869603+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.672020+00:00"
       }
     ],
     "photo_matched": {
@@ -176,6 +183,9 @@
         "accent": "#3A2A20 → #35392B",
         "mortar": "#B0A898 → #9B8B79"
       }
+    ],
+    "sparse_field_promotions": [
+      "porch_detail"
     ]
   },
   "bay_window": {
@@ -429,27 +439,12 @@
     "depth_notes": {
       "setback_m_est": 3.0,
       "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "step_count": 2
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "porch_width_m": 2.6,
-  "porch_depth_m": 1.8,
-  "porch_height_m": 2.4,
   "porch_detail": {
-    "columns": {
-      "count": 2,
-      "type": "turned",
-      "material": "wood"
-    },
-    "railing": {
-      "present": true,
-      "height_m": 0.9,
-      "type": "baluster"
-    },
-    "step_count": 2
-  }
+    "present": true,
+    "type": "open"
+  },
+  "wall_thickness_m": 0.3
 }

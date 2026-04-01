@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 import pytest
-from scripts.consolidate_depth_notes import (
+from consolidate_depth_notes import (
     infer_step_count,
     consolidate_depth_notes,
     process_params,

@@ -32,7 +32,7 @@ def module():
     if "scripts.batch_export_unreal" in sys_module.modules:
         del sys_module.modules["scripts.batch_export_unreal"]
     sys_module.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import batch_export_unreal
+    import batch_export_unreal
     return batch_export_unreal
 
 
@@ -328,7 +328,7 @@ class TestMetadataDict:
         fbx_path = export_dir / "test.fbx"
 
         # Patch in bake_utils where the functions now live
-        from scripts import bake_utils
+        import bake_utils
         with patch.object(bake_utils, "get_mesh_stats") as mock_stats, \
              patch.object(bake_utils, "get_unique_materials") as mock_mats:
             mock_stats.return_value = {

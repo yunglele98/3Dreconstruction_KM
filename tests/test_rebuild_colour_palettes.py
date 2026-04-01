@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 import pytest
 
-from scripts.rebuild_colour_palettes import (
+from rebuild_colour_palettes import (
     BRICK_COLOURS,
     ROOF_COLOURS,
     TRIM_COLOURS_BY_ERA,

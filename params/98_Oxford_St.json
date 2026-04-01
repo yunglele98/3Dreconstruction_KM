@@ -208,7 +208,11 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:21.374817Z"
+    "storefront_enriched": "2026-03-30T06:33:21.374817Z",
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "photo_observations": {
     "facade_colour_observed": "light gray stone-look cladding with white smooth panels and dark gray metal-framed glazing",

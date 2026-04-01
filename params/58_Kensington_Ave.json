@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Converted)",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -147,6 +147,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:35.413110+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.727660+00:00"
       }
     ],
     "photo_matched": {
@@ -167,6 +174,9 @@
         "accent": "#3A2A20 → #25252B",
         "mortar": "#B0A898 → #BEB6A6"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:victorian"
     ]
   },
   "photo_observations": {
@@ -350,15 +360,7 @@
     "roof_pitch_deg": 45,
     "decorative_elements_observed": [],
     "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

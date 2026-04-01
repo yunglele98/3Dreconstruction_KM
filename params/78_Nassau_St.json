@@ -36,7 +36,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "Converted House-form, House-form  Semi-detached",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Converted House-form (78 Nassau Street), House-form (80 Nassau Street) Semi-detached (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -147,6 +147,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:50.488787+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.963310+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -183,7 +190,10 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:21.309877Z"
+    "storefront_enriched": "2026-03-30T06:33:21.309877Z",
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -376,16 +386,7 @@
       "cornice"
     ],
     "colour_palette_observed": {},
-    "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 0.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

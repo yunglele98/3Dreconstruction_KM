@@ -2,7 +2,7 @@
 
 import json
 import pytest
-from scripts.audit_generator_contracts import (
+from audit_generator_contracts import (
     extract_param_accesses,
     check_compatibility,
 )

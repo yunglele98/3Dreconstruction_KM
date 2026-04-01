@@ -162,6 +162,12 @@
       {
         "roof": "#5A5A5A → #606060"
       }
+    ],
+    "backfills": [
+      "site_street_manual_landmark"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "symmetric",
@@ -348,7 +354,9 @@
   ],
   "site": {
     "lon": -79.403017,
-    "lat": 43.653846
+    "lat": 43.653846,
+    "street": "Denison Sq",
+    "street_number": "25"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

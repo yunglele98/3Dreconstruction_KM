@@ -190,6 +190,9 @@
         "roof": "#5A5A5A → #4B4B4B",
         "mortar": "#B0A898 → #B8B0A1"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "storefront": {

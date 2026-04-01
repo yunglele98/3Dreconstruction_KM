@@ -169,6 +169,12 @@
         "accent": "#3A2A20 → #27272B",
         "mortar": "#B0A898 → #C3B49C"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "porch_detail",
+      "balcony_detail",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {
@@ -381,5 +387,14 @@
     }
   },
   "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "window_arrangement": "symmetric",
+  "porch_detail": {
+    "present": true,
+    "type": "stoop"
+  },
+  "balcony_detail": {
+    "present": true,
+    "type": "projecting"
+  }
 }

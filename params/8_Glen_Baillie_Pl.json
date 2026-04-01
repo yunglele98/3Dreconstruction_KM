@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Row",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "House-form, Row (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -176,6 +176,13 @@
         "accent": "#2A3A2A → #263324",
         "mortar": "#B0A898 → #AEA696"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "porch_detail",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {
@@ -404,20 +411,8 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "porch_width_m": 2.4,
-  "porch_depth_m": 1.8,
-  "porch_height_m": 3.0,
   "porch_detail": {
-    "columns": {
-      "count": 2,
-      "type": "turned",
-      "material": "wood"
-    },
-    "railing": {
-      "present": true,
-      "height_m": 0.9,
-      "type": "baluster"
-    },
-    "step_count": 2
+    "present": true,
+    "type": "enclosed"
   }
 }

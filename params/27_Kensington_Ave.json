@@ -180,6 +180,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:22.638483+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.957749+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -516,18 +523,7 @@
       "roof": "#5A5A5A",
       "accent": "#D4A040"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Two bay-and-gable houses merged into one commercial unit. Left unit: buff/brown brick. Right unit: grey roughcast stucco over original brick. Ground floor heavily modified: colourful painted panels (pink, green, yellow), wide shared storefront entrance. Concrete steps with colourfully painted risers. White porch railing on left side leading to upper residential entrance. Gable shingles visible. Large tree in front partially obscures right unit.",
-    "depth_notes": {
-      "setback_m_est": 1.5,
-      "porch_depth_m_est": 2.0,
-      "foundation_height_m_est": 0.5,
-      "eave_overhang_mm_est": 300,
-      "step_count": 4,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 300,
-  "foundation_height_m": 0.5,
   "wall_thickness_m": 0.3
 }

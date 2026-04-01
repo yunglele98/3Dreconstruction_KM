@@ -36,7 +36,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
     "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
@@ -148,6 +148,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:11.661369+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.301282+00:00"
       }
     ],
     "photo_matched": {
@@ -167,6 +174,12 @@
         "accent": "#3A2A20 → #452D1E",
         "mortar": "#B0A898 → #A59585"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:victorian"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "doors_detail": [
@@ -337,14 +350,7 @@
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
-    "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20",
-    "mortar_hex": "#C8C0B0",
-    "facade": "#B45835",
-    "trim": "#472F1F",
-    "roof": "#4A4A4A",
-    "accent": "#452D1E"
+    "accent_hex": "#3A2A20"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

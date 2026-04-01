@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Parks/Open Space",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
@@ -151,6 +151,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:21.701079+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.884024+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -179,6 +186,12 @@
         "accent": "#3A2A20 → #52382A",
         "mortar": "#B0A898 → #AEA698"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:victorian"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -328,14 +341,8 @@
     "colour_palette_observed": {},
     "condition_observed": "fair",
     "depth_notes": {
-      "setback_m_est": 0.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "setback_m_est": 0.0
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

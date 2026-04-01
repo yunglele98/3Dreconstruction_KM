@@ -38,7 +38,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
@@ -179,6 +179,13 @@
         "accent": "#2A3A2A → #1A2A29",
         "mortar": "#B0A898 → #B2A998"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {

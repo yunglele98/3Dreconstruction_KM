@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
     "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
@@ -167,6 +167,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:36.909336+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.270368+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -192,7 +199,14 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.995514Z"
+    "storefront_enriched": "2026-03-30T06:33:20.995514Z",
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "bay_window": {
     "present": true,
@@ -552,18 +566,7 @@
       "roof": "#4A4A4A",
       "accent": "#C0B8A0"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Wider view confirms this is a substantial 3-storey corner commercial building. Satellite dish on facade. Multiple ground floor tenants. Brick is aged but structurally sound. Some staining and graffiti. Pizza shop unit on corner has bright signage. Adjacent concrete block wall of neighbouring building visible.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 100,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 100,
-  "foundation_height_m": 0.3,
   "wall_thickness_m": 0.3
 }

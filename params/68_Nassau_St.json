@@ -3,7 +3,7 @@
   "floors": 3,
   "facade_material": "brick",
   "facade_colour": "warm red-brown brick with dark trim and decorative brick detailing",
-  "door_count": 1,
+  "door_count": 2,
   "door_type": "residential",
   "has_storefront": false,
   "condition": "good",
@@ -157,6 +157,11 @@
         "accent": "#2A3A2A → #4A2F1F",
         "mortar": "#B0A898 → #A59788"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "porch_detail",
+      "door_count_promoted"
     ]
   },
   "notes": "Striking 2.5-storey Victorian semi-detached pair. Red-brown brick with prominent rounded arches at ground floor. Rich decorative brickwork. Twin steep gables.",
@@ -369,5 +374,10 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "inferred_setback_m": 1.5
+  "inferred_setback_m": 1.5,
+  "window_arrangement": "symmetric",
+  "porch_detail": {
+    "present": true,
+    "type": "stoop"
+  }
 }

@@ -2,12 +2,12 @@
   "building_name": "138 Baldwin St",
   "floors": 4,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4,
-    2.4
+    3.18,
+    3.18,
+    3.18,
+    3.16
   ],
-  "total_height_m": 9.6,
+  "total_height_m": 12.7,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -40,7 +40,7 @@
   "condition": "poor",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -213,6 +213,21 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:10.760377+00:00"
+      },
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 9.6,
+        "new_value": 12.7,
+        "timestamp": "2026-03-31T01:09:57.559238+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.426825+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -245,7 +260,10 @@
       "new_total_height_m": 9.6,
       "floors": 4.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "backfills": [
+      "construction_era:style_keyword:victorian"
+    ]
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -501,35 +519,7 @@
       "accent": "#E8D020"
     },
     "condition_observed": "fair",
-    "condition_notes": "Left building: stone veneer in good shape, painted brick above is adequate. Right building (Jerk Spot): brown brick intact, commercial fitout maintained. Dormers/roof visible behind both buildings. Tree partially obscures left building.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
-      "eave_overhang_mm_est": 150,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
-  },
-  "eave_overhang_mm": 150,
-  "foundation_height_m": 0.2,
-  "photo_observations": {
-    "source": "synthesized_from_params",
-    "facade_material_observed": "brick",
-    "facade_colour_observed": "painted (mixed (painted brick, stone veneer))",
-    "condition": "poor",
-    "windows_per_floor": [
-      0,
-      2,
-      2,
-      1
-    ],
-    "window_type": "Double-hung sash",
-    "door_count": 1,
-    "chimneys": 0,
-    "porch_present": false,
-    "has_storefront": true,
-    "photo": "PXL_20260318_224055927.jpg"
+    "condition_notes": "Left building: stone veneer in good shape, painted brick above is adequate. Right building (Jerk Spot): brown brick intact, commercial fitout maintained. Dormers/roof visible behind both buildings. Tree partially obscures left building."
   },
   "wall_thickness_m": 0.3
 }

@@ -146,6 +146,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:41.063192+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.505290+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -173,6 +180,9 @@
         "accent": "#3A2A20 → #3B301F",
         "mortar": "#B0A898 → #9C8B7A"
       }
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "decorative_elements": {
@@ -371,15 +381,7 @@
       "cornice"
     ],
     "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

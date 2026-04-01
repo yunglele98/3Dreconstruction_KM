@@ -100,6 +100,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
+      "Large Spadina commercial ~35m",
       "Large Spadina commercial ~35m"
     ],
     "deep_facade_backfill": [
@@ -173,6 +189,9 @@
         "accent": "#1A1A2A → #33392B",
         "mortar": "#B0A898 → #B7A78F"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",

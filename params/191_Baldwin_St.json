@@ -41,7 +41,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
@@ -175,6 +175,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:16.202629+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.684627+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -192,6 +199,9 @@
         "trim": "#E8E0D0 → #3F2D22",
         "mortar": "#B0A898 → #ADA697"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:victorian"
     ]
   },
   "bay_window": {
@@ -429,23 +439,7 @@
     }
   },
   "photo_observations": {
-    "source": "synthesized_from_params",
-    "facade_material_observed": "stucco",
-    "facade_colour_observed": "off-white stucco",
-    "condition": "fair",
-    "windows_per_floor": [
-      0,
-      2,
-      1
-    ],
-    "window_type": "Double-hung sash",
-    "door_count": 1,
-    "chimneys": 0,
-    "porch_present": false,
-    "has_storefront": true,
-    "photo": "PXL_20260318_222255252.jpg"
+    "source": "synthesized_from_params"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Converted House-form",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Commercial Conversion)",
     "construction_period": "c. 1870–1889 (structure); c. 1900–1950 (commercial conversion)",
     "construction_decade": 1880,
@@ -172,6 +172,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:50.811062+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.975154+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -195,6 +202,9 @@
       {
         "facade": "#B85A3A → #AE6E53"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
     ]
   },
   "photo_observations": {
@@ -446,25 +456,8 @@
     "depth_notes": {
       "setback_m_est": null,
       "porch_depth_m_est": null,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": null,
-      "step_count": null,
-      "wall_thickness_m": 0.3
+      "foundation_height_m_est": 0.3
     }
   },
-  "colour_palette": {
-    "facade_hex": "#B85A3A",
-    "trim_hex": "#E8E0D0",
-    "roof_hex": "#5A5A5A",
-    "accent_hex": "#E8E0D0",
-    "door_hex": "#E8E0D0",
-    "mortar_hex": "#C8C0B0",
-    "facade": "#AE6E53",
-    "trim": "#392922",
-    "roof": "#5E5555",
-    "accent": "#343C2C"
-  },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

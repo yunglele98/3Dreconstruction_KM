@@ -2,7 +2,7 @@
 
 import pytest
 
-from scripts.enrich_storefronts_advanced import (
+from enrich_storefronts_advanced import (
     MAJOR_COMMERCIAL_STREETS,
     MARKET_STREETS,
     enrich_storefront,

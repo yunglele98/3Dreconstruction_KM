@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.enrich_storefronts_advanced import (
+from enrich_storefronts_advanced import (
     infer_awning,
     infer_signage,
     infer_security_grille,

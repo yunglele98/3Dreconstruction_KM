@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts import validate_export_pipeline as vp
+import validate_export_pipeline as vp
 
 pytestmark = pytest.mark.skipif(not vp.HAS_TRIMESH, reason="trimesh not installed")
 

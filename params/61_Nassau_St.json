@@ -38,7 +38,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -187,6 +187,13 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "bay_window": {

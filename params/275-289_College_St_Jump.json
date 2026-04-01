@@ -99,6 +99,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
+      "Photo: large dark commercial ~25m",
       "Photo: large dark commercial ~25m"
     ],
     "deep_facade_analysis_applied": true,
@@ -165,6 +181,9 @@
         "accent": "#1A1A2A → #543B2A",
         "mortar": "#B0A898 → #A6978A"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",

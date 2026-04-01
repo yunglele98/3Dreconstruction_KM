@@ -150,6 +150,13 @@
         "accent": "#2A3A2A → #3C2C21",
         "mortar": "#B0A898 → #AC9B89"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "window_arrangement": "symmetric",
@@ -274,7 +281,8 @@
   },
   "site": {
     "lon": -79.40398,
-    "lat": 43.656959
+    "lat": 43.656959,
+    "street": "Oxford St"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

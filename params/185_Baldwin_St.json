@@ -167,6 +167,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:17.981765+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.647672+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -414,21 +421,5 @@
   },
   "eave_overhang_mm": 50,
   "foundation_height_m": 0.1,
-  "photo_observations": {
-    "source": "synthesized_from_params",
-    "facade_material_observed": "brick",
-    "facade_colour_observed": "red brick",
-    "condition": "fair",
-    "windows_per_floor": [
-      0,
-      2
-    ],
-    "window_type": "Double-hung sash",
-    "door_count": 1,
-    "chimneys": 0,
-    "porch_present": false,
-    "has_storefront": true,
-    "photo": "PXL_20260318_222737568.jpg"
-  },
   "wall_thickness_m": 0.3
 }

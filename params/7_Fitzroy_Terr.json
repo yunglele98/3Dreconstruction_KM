@@ -46,7 +46,7 @@
     "hcd_page": 98,
     "character_sub_area": "n/a",
     "typology": "House-form, Row",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "statement_of_contribution": "Workers' row housing with Victorian features.",
     "building_features": [
       "shared rooflines",
@@ -121,6 +121,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:50.749414+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.975154+00:00"
       }
     ],
     "photo_matched": {
@@ -139,6 +146,9 @@
         "trim": "#E8E0D0 → #3F2C22",
         "mortar": "#B0A898 → #BCAB8F"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
     ]
   },
   "decorative_elements": {
@@ -331,14 +341,8 @@
     "colour_palette_observed": {},
     "condition_observed": "fair",
     "depth_notes": {
-      "setback_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "setback_m_est": 0
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 1.5
+  "wall_thickness_m": 0.3
 }

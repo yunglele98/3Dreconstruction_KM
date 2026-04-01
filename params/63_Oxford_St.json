@@ -34,7 +34,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Parks/Open Space",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Parks/Open Space (confirmed – HCD Plan Vol. 2)",
     "construction_period": "n/a (confirmed – HCD Plan Vol. 2)",
     "construction_decade": null,
@@ -176,6 +176,12 @@
         "trim": "#E8E0D0 → #38291F",
         "mortar": "#B0A898 → #C1B9AB"
       }
+    ],
+    "backfills": [
+      "construction_era:kensington_default"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "photo_observations": {

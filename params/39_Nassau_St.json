@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -170,6 +170,13 @@
         "accent": "#3A2A20 → #192A27",
         "mortar": "#B0A898 → #A9967D"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {

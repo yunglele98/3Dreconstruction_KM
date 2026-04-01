@@ -104,6 +104,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
+      "Photo: wide commercial strip ~45m with 6+ storefronts",
       "Photo: wide commercial strip ~45m with 6+ storefronts"
     ],
     "deep_facade_backfill": [
@@ -175,7 +191,13 @@
       "method": "number_variant",
       "timestamp": "2026-03-29T19:04:41.503789Z",
       "script": "match_photos_to_params.py"
-    }
+    },
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
+    ]
   },
   "window_arrangement": "irregular",
   "door_width_m": 1.2,
@@ -458,7 +480,9 @@
   ],
   "site": {
     "lon": -79.399245,
-    "lat": 43.654984
+    "lat": 43.654984,
+    "street": "College St",
+    "street_number": "374"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

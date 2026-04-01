@@ -15,7 +15,7 @@ from pathlib import Path
 import pytest
 
 # Import the functions to test
-from scripts.rebuild_colour_palettes import (
+from rebuild_colour_palettes import (
     BRICK_COLOURS,
     ROOF_COLOURS,
     TRIM_COLOURS_BY_ERA,

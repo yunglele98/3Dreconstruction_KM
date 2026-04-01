@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Row",
-    "construction_date": "Pre-1889, 1924-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Converted House-form, Row (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1924-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -194,6 +194,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:14.416636+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.584608+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -218,7 +225,10 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.718913Z"
+    "storefront_enriched": "2026-03-30T06:33:20.718913Z",
+    "backfills": [
+      "era_normalized:Pre-1889, 1924-1930->Pre-1889"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -482,24 +492,5 @@
     }
   },
   "eave_overhang_mm": 50,
-  "foundation_height_m": 0.1,
-  "photo_observations": {
-    "source": "synthesized_from_params",
-    "facade_material_observed": "brick",
-    "facade_colour_observed": "red brick",
-    "condition": "fair",
-    "windows_per_floor": [
-      0,
-      2,
-      1
-    ],
-    "window_type": "Double-hung sash",
-    "door_count": 1,
-    "chimneys": 0,
-    "porch_present": false,
-    "has_storefront": false,
-    "photo": "IMG_20260315_154911815_HDR.jpg"
-  },
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

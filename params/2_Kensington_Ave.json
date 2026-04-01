@@ -187,6 +187,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:31.137438+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.064567+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -207,6 +214,11 @@
         "trim": "#3A2A20 → #39291E",
         "mortar": "#B0A898 → #A7967D"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "porch_detail",
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -591,33 +603,11 @@
       "accent": "#E8E0D0"
     },
     "condition_observed": "good",
-    "condition_notes": "Entire facade painted blue-grey with cream/white trim highlights. Paint in good condition. Decorative bargeboards well preserved. Gable shingles visible under paint. Gothic pointed-arch gable window is distinctive. Well maintained steps and railings. Small front yard with low hedge.",
-    "depth_notes": {
-      "setback_m_est": 2.0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.6,
-      "eave_overhang_mm_est": 300,
-      "step_count": 4,
-      "wall_thickness_m": 0.3
-    }
+    "condition_notes": "Entire facade painted blue-grey with cream/white trim highlights. Paint in good condition. Decorative bargeboards well preserved. Gable shingles visible under paint. Gothic pointed-arch gable window is distinctive. Well maintained steps and railings. Small front yard with low hedge."
   },
-  "eave_overhang_mm": 300,
-  "foundation_height_m": 0.6,
-  "wall_thickness_m": 0.3,
-  "porch_width_m": 2.6,
-  "porch_depth_m": 1.8,
-  "porch_height_m": 3.4,
   "porch_detail": {
-    "columns": {
-      "count": 2,
-      "type": "turned",
-      "material": "wood"
-    },
-    "railing": {
-      "present": true,
-      "height_m": 0.9,
-      "type": "baluster"
-    },
-    "step_count": 4
-  }
+    "present": true,
+    "type": "stoop"
+  },
+  "wall_thickness_m": 0.3
 }

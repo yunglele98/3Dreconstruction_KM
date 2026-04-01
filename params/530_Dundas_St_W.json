@@ -2,11 +2,11 @@
   "building_name": "530 Dundas St W",
   "floors": 3,
   "floor_heights_m": [
-    2.87,
-    2.36,
-    2.04
+    3.35,
+    3.35,
+    3.35
   ],
-  "total_height_m": 7.27,
+  "total_height_m": 10.06,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -40,16 +40,16 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900–1930",
+    "construction_period": "c. 1900\u20131930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -62,15 +62,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
   },
   "assessment": {
     "condition_rating": 3,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 20,
-    "signage": "Wok Theory (新天虹), KL Kitchen Seafood Cuisine (聚鮮樓)",
+    "signage": "Wok Theory (\u65b0\u5929\u8679), KL Kitchen Seafood Cuisine (\u805a\u9bae\u6a13)",
     "street_presence": "neutral"
   },
   "city_data": {
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 8,
-    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -179,10 +179,10 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A → #655E5E",
-        "trim": "#E8E0D0 → #4F3423",
-        "accent": "#3A2A20 → #34261C",
-        "mortar": "#B0A898 → #AFA89A"
+        "roof": "#5A5A5A \u2192 #655E5E",
+        "trim": "#E8E0D0 \u2192 #4F3423",
+        "accent": "#3A2A20 \u2192 #34261C",
+        "mortar": "#B0A898 \u2192 #AFA89A"
       }
     ],
     "qa_final_fixes": [
@@ -192,6 +192,9 @@
         ],
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
     ]
   },
   "storefront": {
@@ -288,7 +291,7 @@
   "overall_style": "Commercial",
   "storefront_description": "restaurant storefront with large mural-painted roll-down shutter and side door",
   "confidence": 0.9,
-  "notes": "Best read came from the close night view centered on number 530.",
+  "notes": "Best read came from the close night view centered on number 530. [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",
   "porch_present": false,
   "porch_type": "none",
   "chimney_count": 0,
@@ -439,5 +442,6 @@
     }
   },
   "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "handoff_fixes_applied": true
 }

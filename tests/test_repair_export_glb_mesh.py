@@ -4,7 +4,7 @@ from pathlib import Path
 
 import trimesh
 
-from scripts.repair_export_glb_mesh import repair_glb
+from repair_export_glb_mesh import repair_glb
 
 
 def test_repair_glb_removes_degenerate_faces(tmp_path: Path):

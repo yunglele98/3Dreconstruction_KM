@@ -63,6 +63,22 @@
     ],
     "db_revision_ts": "2026-03-30T02:24:21",
     "qa_photo_fixes": [
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
+      "Commercial strip ~25m",
       "Commercial strip ~25m"
     ],
     "deep_facade_backfill": [
@@ -111,6 +127,13 @@
           "foundation_height_m: 0.15"
         ],
         "timestamp": "2026-03-29T08:05:38.600404+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.348562+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -421,18 +444,7 @@
       "cornice",
       "string_courses",
       "decorative_brickwork"
-    ],
-    "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "step_count": 1,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    ]
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.15,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

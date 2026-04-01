@@ -50,6 +50,22 @@
     "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
     "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
     "qa_photo_fixes": [
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
+      "Photo: bay-and-gable commercial row ~35m",
       "Photo: bay-and-gable commercial row ~35m"
     ],
     "deep_facade_backfill": [
@@ -105,6 +121,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:28.558965+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.302812+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -395,17 +418,7 @@
     "roof_type_observed": "gable",
     "roof_pitch_deg": 35,
     "decorative_elements_observed": [],
-    "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "step_count": 1,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "colour_palette_observed": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.15,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

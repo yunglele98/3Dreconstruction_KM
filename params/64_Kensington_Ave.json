@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Row",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Converted)",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -164,6 +164,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:37.018172+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.800297+00:00"
       }
     ],
     "photo_matched": {
@@ -180,6 +187,9 @@
         "trim": "#E8E0D0 → #3F2F23",
         "mortar": "#B0A898 → #AFA694"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
     ]
   },
   "storefront": {
@@ -417,18 +427,7 @@
       "roof": "#4A4A4A",
       "accent": "#F0F0F0"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Upper brick appears in reasonable condition, buff/cream colour. Storefront modernized with illuminated box sign. Graffiti tags visible on adjacent surfaces. Security grilles present. Some surface grime on brick.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "eave_overhang_mm_est": 150,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 150,
-  "foundation_height_m": 0.15,
   "wall_thickness_m": 0.3
 }

@@ -4,7 +4,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from scripts.backfill_pbr_utility_maps import run_backfill
+from backfill_pbr_utility_maps import run_backfill
 
 
 def _make_export_dir(root: Path, safe: str) -> Path:

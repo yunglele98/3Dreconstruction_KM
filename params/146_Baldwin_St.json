@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -182,6 +182,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:11.623429+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.474263+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -207,7 +214,14 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.674349Z"
+    "storefront_enriched": "2026-03-30T06:33:20.674349Z",
+    "backfills": [
+      "construction_era:style_keyword:victorian"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "photo_observations": {
     "facade_condition_notes": "Facade is occupied and readable from the street, with contemporary storefront alterations layered onto the historic building form.",
@@ -514,18 +528,7 @@
       "trim": "#505050",
       "roof": "#505050",
       "accent": "#E87020"
-    },
-    "condition_observed": "poor",
-    "condition_notes": "Significant paint deterioration on upper facade. Graffiti on brick. General neglect of upper storey. Storefront level maintained for business but basic. Structural appears sound but cosmetically poor.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

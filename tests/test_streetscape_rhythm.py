@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.analyze_streetscape_rhythm import (
+from analyze_streetscape_rhythm import (
     compute_era_coherence,
     compute_longest_material_run,
     compute_storefront_density,

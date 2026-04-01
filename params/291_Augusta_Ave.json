@@ -39,7 +39,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Converted House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -202,7 +202,14 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.899632Z"
+    "storefront_enriched": "2026-03-30T06:33:20.899632Z",
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "photo_observations": {
     "facade_colour_observed": "pale green storefront with black entry surround and white balcony/railing above",

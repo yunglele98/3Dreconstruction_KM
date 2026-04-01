@@ -132,6 +132,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:19.351692+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.742913+00:00"
       }
     ],
     "photo_matched": {
@@ -421,19 +428,7 @@
       "roof": "#4A4A4A",
       "accent": "#40C8C8"
     },
-    "condition_observed": "good",
-    "condition_notes": "Entire facade painted white/cream. Clean appearance. Two mirror-image gable units merged into one commercial space. Dark-framed windows contrast with white facade. Storefront features cyan/turquoise accent lighting. Adjacent building on right has large checkerboard-painted party wall (cream and brown/ochre). Mural or artwork visible on upper right portion. Overall well-maintained commercial conversion.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
-      "eave_overhang_mm_est": 250,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "eave_overhang_mm": 250,
-  "foundation_height_m": 0.2,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

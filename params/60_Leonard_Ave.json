@@ -36,7 +36,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable",
     "construction_period": "c. 1870–1900 (estimated)",
     "construction_decade": 1880,
@@ -150,6 +150,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:36.177131+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.770418+00:00"
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:47.930719+00:00",
@@ -163,6 +170,12 @@
         "trim": "#E8E0D0 → #3E342C",
         "mortar": "#B0A898 → #BBB1A0"
       }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:victorian"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "party_wall_left": true,
@@ -313,13 +326,8 @@
     "colour_palette_observed": {},
     "condition_observed": "good",
     "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "setback_m_est": 3.0
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

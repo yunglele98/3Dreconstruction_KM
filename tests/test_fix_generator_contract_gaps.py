@@ -7,7 +7,7 @@ import pytest
 from pathlib import Path
 from typing import Any
 
-from scripts.fix_generator_contract_gaps import (
+from fix_generator_contract_gaps import (
     set_nested_value,
     get_nested_value,
     compute_storefront_width,

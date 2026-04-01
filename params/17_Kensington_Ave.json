@@ -162,6 +162,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:14.838175+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.613501+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -495,18 +502,7 @@
       "roof": "#5A5A5A",
       "accent": "#5A3A2A"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Distant night view across street. Bay-and-gable row houses typical of Kensington Ave. Details partially obscured by street lamp glare, utility pole, tree branches, and parked cars. Brick appears in standard condition for the area.",
-    "depth_notes": {
-      "setback_m_est": 0.5,
-      "porch_depth_m_est": 1.0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 300,
-      "step_count": 2,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3,
   "wall_thickness_m": 0.3
 }

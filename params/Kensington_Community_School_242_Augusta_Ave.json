@@ -150,6 +150,12 @@
         "accent": "#2A3A2A → #394231",
         "mortar": "#B0A898 → #B8A990"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",
@@ -290,7 +296,8 @@
   "total_height_m": 6.4,
   "site": {
     "lon": -79.402918,
-    "lat": 43.655397
+    "lat": 43.655397,
+    "street": "Augusta Ave"
   },
   "colour_palette": {
     "facade_hex": "#7A5C44",

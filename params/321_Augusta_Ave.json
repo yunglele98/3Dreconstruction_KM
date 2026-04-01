@@ -41,7 +41,7 @@
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -187,6 +187,13 @@
         "accent": "#2A3A2A → #32281C",
         "mortar": "#B0A898 → #BCB4A4"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "bay_window": {

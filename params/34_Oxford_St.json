@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Edwardian Commercial",
     "construction_period": "1979 (confirmed – Apt Bldg Registration)",
     "construction_decade": 1970,
@@ -154,6 +154,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:26.942388+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.212429+00:00"
       }
     ],
     "photo_matched": {
@@ -174,6 +181,12 @@
         "accent": "#2A3A2A → #28282D",
         "mortar": "#B0A898 → #ABA292"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "photo_observations": {
@@ -369,16 +382,7 @@
     "roof_type_observed": "cross-gable",
     "roof_pitch_deg": 45,
     "decorative_elements_observed": [],
-    "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "colour_palette_observed": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

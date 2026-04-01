@@ -2,7 +2,7 @@
 
 import pytest
 
-from scripts.match_photos_to_params import (
+from match_photos_to_params import (
     find_photo,
     normalize_address,
 )

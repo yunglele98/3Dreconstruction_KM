@@ -2,10 +2,10 @@
   "building_name": "658 Dundas St W",
   "floors": 2,
   "floor_heights_m": [
-    2.4,
-    2.4
+    2.77,
+    2.77
   ],
-  "total_height_m": 4.8,
+  "total_height_m": 5.55,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -38,14 +38,14 @@
     "typology": "",
     "construction_date": "",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900–1930",
+    "construction_period": "c. 1900\u20131930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -58,8 +58,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
+    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -78,7 +78,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
+    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -197,5 +197,7 @@
     "status_source": "normalized_fix"
   },
   "skipped": true,
-  "skip_reason": "Duplicate photo-variant of 658_Dundas_St (auto-detected by cleanup_before_batch.py)"
+  "skip_reason": "Duplicate photo-variant of 658_Dundas_St (auto-detected by cleanup_before_batch.py)",
+  "handoff_fixes_applied": true,
+  "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix]"
 }

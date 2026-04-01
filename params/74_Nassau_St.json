@@ -130,6 +130,11 @@
         "accent": "#2A3A2A → #3F4733",
         "mortar": "#B0A898 → #B1A896"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "porch_detail",
+      "door_count_promoted"
     ]
   },
   "notes": "2-storey residential, dark red-brown brick. Heavily obscured by evergreen tree, limited visibility.",
@@ -282,5 +287,10 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "inferred_setback_m": 1.5
+  "inferred_setback_m": 1.5,
+  "window_arrangement": "symmetric",
+  "porch_detail": {
+    "present": true,
+    "type": "stoop"
+  }
 }

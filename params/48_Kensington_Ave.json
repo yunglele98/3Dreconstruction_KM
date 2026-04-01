@@ -36,7 +36,7 @@
   "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Commercial, Row",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Converted House-form (46 Kensington Avenue), Commercial (48-52 Kensington Avenue), Row (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -141,6 +141,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:42.844470+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.603408+00:00"
       }
     ],
     "photo_matched": {
@@ -161,6 +168,9 @@
         "accent": "#3A2A20 → #36261D",
         "mortar": "#B0A898 → #AA9880"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
     ]
   },
   "decorative_elements": {
@@ -335,15 +345,7 @@
     ],
     "colour_palette_observed": {},
     "condition_observed": "poor",
-    "depth_notes": {
-      "setback_m_est": 0.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "depth_notes": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

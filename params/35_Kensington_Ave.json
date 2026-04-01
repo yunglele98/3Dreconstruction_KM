@@ -201,6 +201,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:36.052559+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.232325+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -213,6 +220,10 @@
         "trim": "#3A2A20 → #39291E",
         "mortar": "#B0A898 → #AC9B8B"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -558,25 +569,7 @@
     },
     "party_wall_left": true,
     "party_wall_right": true,
-    "colour_palette_observed": {
-      "facade": "#3A3A3A",
-      "trim": "#E8DCC8",
-      "roof": "#4A4A4A",
-      "accent": "#4ABFCF"
-    },
-    "condition_observed": "fair",
-    "condition_notes": "Close-up detail view. Storefront glass in good condition. Under renovation, signs posted in every pane.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.1,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "colour_palette_observed": {}
   },
-  "foundation_height_m": 0.1,
-  "parapet_height_m": 0.6,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

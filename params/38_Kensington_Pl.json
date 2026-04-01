@@ -156,6 +156,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:28.449027+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.289729+00:00"
       }
     ],
     "photo_matched": {
@@ -373,16 +380,7 @@
     "roof_type_observed": "cross-gable",
     "roof_pitch_deg": 45,
     "decorative_elements_observed": [],
-    "colour_palette_observed": {},
-    "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 0.5,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "colour_palette_observed": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

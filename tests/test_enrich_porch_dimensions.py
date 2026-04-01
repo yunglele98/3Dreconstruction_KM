@@ -2,7 +2,7 @@
 
 import pytest
 
-from scripts.enrich_porch_dimensions import (
+from enrich_porch_dimensions import (
     enrich_porch,
     get_porch_columns,
     get_porch_width_m,

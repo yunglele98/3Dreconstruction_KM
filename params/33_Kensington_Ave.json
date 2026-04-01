@@ -160,6 +160,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:34.880706+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.182530+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -488,18 +495,7 @@
       "roof": "#5A5A5A",
       "accent": "#D4A040"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Orange-toned brick typical of Kensington Market. Standard bay-and-gable form. Ground floor fully converted to commercial storefront. Adjacent buildings visible: left neighbour has similar gable form but darker brick/paint; right side has large mural (rose/floral design in warm tones) on side wall. Yellow fire hydrant visible at sidewalk. Background shows row of gabled houses further up the street.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 250,
-      "step_count": 1,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 250,
-  "foundation_height_m": 0.3,
   "wall_thickness_m": 0.3
 }

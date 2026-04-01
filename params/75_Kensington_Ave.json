@@ -169,6 +169,13 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:49.973385+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.934686+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -181,6 +188,10 @@
         "trim": "#2A2A2A → #1E1E1E",
         "mortar": "#B0A898 → #BFB9AB"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -501,19 +512,7 @@
       "roof": "#4A4A4A",
       "accent": "#1A1A1A"
     },
-    "condition_observed": "poor",
-    "condition_notes": "Ground floor entirely covered in graffiti/street art - black painted surface with large silver/white tag. Original facade material completely concealed at ground level. Upper floor painted cream/beige shows scored pattern suggesting stucco over masonry. Red cone visible at base. Adjacent to TribalEye (#73) with yellow trim partially visible.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "eave_overhang_mm_est": 100,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "poor"
   },
-  "eave_overhang_mm": 100,
-  "foundation_height_m": 0.15,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

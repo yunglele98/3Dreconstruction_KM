@@ -109,6 +109,22 @@
       ]
     },
     "qa_photo_fixes": [
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
+      "Residential row ~10m",
       "Residential row ~10m"
     ],
     "deep_facade_backfill": [
@@ -166,6 +182,10 @@
         "accent": "#2A3A2A → #473E2D",
         "mortar": "#B0A898 → #B9A991"
       }
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement"
     ]
   },
   "window_arrangement": "symmetric",

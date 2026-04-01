@@ -159,6 +159,10 @@
         "roof": "#5A5A5A → #434343",
         "mortar": "#B0A898 → #D4CCBD"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {

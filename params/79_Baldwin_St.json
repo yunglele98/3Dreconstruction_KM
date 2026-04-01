@@ -35,7 +35,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial storefront",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Modern commercial infill",
     "construction_period": "",
     "construction_decade": null,
@@ -151,6 +151,13 @@
           "foundation_height_m: 0.15"
         ],
         "timestamp": "2026-03-29T08:05:50.528069+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.967968+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -168,6 +175,13 @@
         "trim": "#E8E0D0 → #33251D",
         "mortar": "#B0A898 → #B7A68F"
       }
+    ],
+    "backfills": [
+      "construction_era:kensington_default"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -433,19 +447,8 @@
       "roof": "#3A3A3A",
       "accent": "#FFFFFF"
     },
-    "condition_observed": "good",
-    "condition_notes": "Modern renovation with clean dark metal/composite cladding over original facade. Storefront in good condition. Dusk lighting. Business appears closed/terminated based on bailiff notice in other photos.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.15,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "wall_thickness_m": 0.3,
-  "roof_pitch_deg": 35,
-  "foundation_height_m": 0.15,
-  "inferred_setback_m": 0.0
+  "roof_pitch_deg": 0,
+  "wall_thickness_m": 0.3
 }

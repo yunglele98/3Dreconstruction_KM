@@ -192,7 +192,12 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:21.369874Z"
+    "storefront_enriched": "2026-03-30T06:33:21.369874Z",
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "bay_window": {
     "present": true,

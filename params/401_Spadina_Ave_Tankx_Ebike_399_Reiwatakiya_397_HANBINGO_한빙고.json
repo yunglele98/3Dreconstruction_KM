@@ -109,6 +109,22 @@
     ],
     "db_revision_ts": "2026-03-30T02:24:21",
     "qa_photo_fixes": [
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
+      "Commercial strip ~18m on Spadina",
       "Commercial strip ~18m on Spadina"
     ],
     "deep_facade_backfill": [
@@ -174,6 +190,12 @@
         "accent": "#2A3A2A → #352B1D",
         "mortar": "#B0A898 → #BEB6A4"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",
@@ -376,7 +398,9 @@
   ],
   "site": {
     "lon": -79.405732,
-    "lat": 43.656398
+    "lat": 43.656398,
+    "street": "Spadina Ave",
+    "street_number": "401"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

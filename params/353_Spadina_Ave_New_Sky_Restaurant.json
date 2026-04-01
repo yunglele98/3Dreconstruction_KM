@@ -112,6 +112,22 @@
       }
     },
     "qa_photo_fixes": [
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
+      "Single commercial unit ~8m",
       "Single commercial unit ~8m"
     ],
     "deep_facade_backfill": [
@@ -167,6 +183,13 @@
         "accent": "#2A3A2A → #3F3523",
         "mortar": "#B0A898 → #B2AA9B"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "window_arrangement": "asymmetric",
@@ -323,7 +346,9 @@
   ],
   "site": {
     "lon": -79.403462,
-    "lat": 43.657076
+    "lat": 43.657076,
+    "street": "Spadina Ave",
+    "street_number": "353"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

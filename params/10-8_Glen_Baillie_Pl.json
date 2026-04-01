@@ -82,6 +82,14 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:11.372359+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "window_type"
+        ],
+        "timestamp": "2026-03-31T07:46:03.301282+00:00"
       }
     ],
     "photo_matched": {
@@ -262,11 +270,5 @@
     }
   },
   "wall_thickness_m": 0.3,
-  "window_type": "double_hung",
-  "windows_per_floor": [
-    1,
-    1
-  ],
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 2.5
+  "window_type": "double_hung"
 }

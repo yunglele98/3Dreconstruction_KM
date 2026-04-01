@@ -58,7 +58,7 @@ def module():
     if "scripts.generate_lods" in sys_module.modules:
         del sys_module.modules["scripts.generate_lods"]
     sys_module.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import generate_lods
+    import generate_lods
     return generate_lods
 
 

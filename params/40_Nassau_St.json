@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -141,6 +141,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:38.923248+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.375246+00:00"
       }
     ],
     "photo_matched": {
@@ -161,6 +168,13 @@
         "accent": "#3A2A20 → #4F3726",
         "mortar": "#B0A898 → #AC9C8D"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "porch_detail",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {
@@ -351,22 +365,9 @@
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "porch_width_m": 2.6,
-  "porch_depth_m": 1.8,
-  "porch_height_m": 3.9,
   "porch_detail": {
-    "columns": {
-      "count": 2,
-      "type": "turned",
-      "material": "wood"
-    },
-    "railing": {
-      "present": true,
-      "height_m": 0.9,
-      "type": "baluster"
-    },
-    "step_count": 2
-  }
+    "present": true,
+    "type": "stoop"
+  },
+  "wall_thickness_m": 0.3
 }

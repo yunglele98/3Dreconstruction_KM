@@ -20,7 +20,7 @@ def module():
     if "scripts.build_unreal_datasmith" in sys_module.modules:
         del sys_module.modules["scripts.build_unreal_datasmith"]
     sys_module.path.insert(0, str(Path(__file__).parent.parent))
-    from scripts import build_unreal_datasmith
+    import build_unreal_datasmith
     return build_unreal_datasmith
 
 

@@ -101,6 +101,10 @@
         "trim": "#E8E0D0 → #262626",
         "mortar": "#B0A898 → #BFB7A5"
       }
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted",
+      "window_type_promoted"
     ]
   },
   "party_wall_left": false,
@@ -267,12 +271,7 @@
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3,
-  "window_type": "double_hung",
-  "windows_per_floor": [
-    1,
-    1
-  ],
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 2.0
+  "wall_thickness_m": 0,
+  "door_count": 1,
+  "window_type": "1-over-1"
 }

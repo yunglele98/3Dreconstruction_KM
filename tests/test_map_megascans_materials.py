@@ -7,7 +7,7 @@ import pytest
 from pathlib import Path
 from typing import Dict
 
-from scripts.map_megascans_materials import (
+from map_megascans_materials import (
     hex_to_lab,
     colour_distance,
     find_closest_megascans_brick,

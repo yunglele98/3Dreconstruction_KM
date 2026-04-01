@@ -91,6 +91,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:21.799878+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.884024+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -117,6 +124,10 @@
         "trim": "#E8E0D0 → #473728",
         "mortar": "#B0A898 → #A59485"
       }
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted",
+      "window_type_promoted"
     ]
   },
   "party_wall_left": false,
@@ -304,13 +315,10 @@
     "depth_notes": {
       "setback_m_est": 0,
       "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
+      "step_count": 2
     }
   },
-  "wall_thickness_m": 0.3,
-  "window_type": "double_hung",
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 1.5
+  "door_count": 1,
+  "window_type": "1-over-1",
+  "wall_thickness_m": 0.3
 }

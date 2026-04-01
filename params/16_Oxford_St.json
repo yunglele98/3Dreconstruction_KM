@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Row",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable Rowhouse",
     "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
@@ -220,6 +220,13 @@
         "accent": "#2A3A2A → #4B3727",
         "mortar": "#B0A898 → #A79687"
       }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "window_arrangement": "symmetric",

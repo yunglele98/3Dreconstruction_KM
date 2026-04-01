@@ -55,6 +55,22 @@
     ],
     "db_revision_ts": "2026-03-30T02:24:20",
     "qa_photo_fixes": [
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
+      "Photo: 2fl red brick semi pair ~8m, flat roof",
       "Photo: 2fl red brick semi pair ~8m, flat roof"
     ],
     "deep_facade_backfill": [
@@ -101,6 +117,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:13.304888+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.381652+00:00"
       }
     ],
     "photo_matched": {
@@ -369,16 +392,7 @@
     "roof_pitch_deg": 40,
     "decorative_elements_observed": [],
     "colour_palette_observed": {},
-    "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "good"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 2.5
+  "wall_thickness_m": 0.3
 }

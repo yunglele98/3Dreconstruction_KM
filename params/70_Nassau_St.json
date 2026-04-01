@@ -157,6 +157,11 @@
         "accent": "#2A3A2A → #3C3223",
         "mortar": "#B0A898 → #BDAB92"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "porch_detail",
+      "door_count_promoted"
     ]
   },
   "notes": "2.5-storey Victorian bay-and-gable. Red-brown brick, dark trim. Rounded arch at ground floor. Steep front gable.",
@@ -369,5 +374,10 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "inferred_setback_m": 1.5
+  "inferred_setback_m": 1.5,
+  "window_arrangement": "symmetric",
+  "porch_detail": {
+    "present": true,
+    "type": "stoop"
+  }
 }

@@ -89,6 +89,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:29.236227+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.330385+00:00"
       }
     ],
     "photo_matched": {
@@ -107,6 +114,10 @@
         "trim": "#E8E0D0 → #38271F",
         "mortar": "#B0A898 → #B8AA93"
       }
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted",
+      "window_type_promoted"
     ]
   },
   "party_wall_left": false,
@@ -273,12 +284,7 @@
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3,
-  "window_type": "double_hung",
-  "windows_per_floor": [
-    1,
-    1
-  ],
-  "foundation_height_m": 0.3,
-  "inferred_setback_m": 2.0
+  "door_count": 1,
+  "window_type": "1-over-1",
+  "wall_thickness_m": 0.3
 }

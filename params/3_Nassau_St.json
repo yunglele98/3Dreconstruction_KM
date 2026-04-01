@@ -35,8 +35,8 @@
   "hcd_data": {
     "typology": "Institutional",
     "construction_date": "1914-1930",
-    "architectural_style": "Institutional (confirmed \u2013 HCD Plan Vol. 2)",
-    "construction_period": "1914-1930 (confirmed \u2013 HCD Plan Vol. 2)",
+    "architectural_style": "Institutional (confirmed – HCD Plan Vol. 2)",
+    "construction_period": "1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1920,
     "sub_area": "",
     "contributing": "Yes",
@@ -49,15 +49,15 @@
   "context": {
     "building_type": "institutional",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Rowhouse / Attached",
+    "land_use": "Residential – Rowhouse / Attached",
     "commercial_use": "",
     "business_name": "",
     "business_category": "Art/Culture",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 5,
@@ -76,7 +76,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -148,6 +148,13 @@
           "heritage_expression filled"
         ],
         "timestamp": "2026-03-29T08:07:29.132104+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.330385+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -169,10 +176,10 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #D2A787",
-        "roof": "#5A5A5A \u2192 #565656",
-        "accent": "#1A1A2A \u2192 #363F2F",
-        "mortar": "#B0A898 \u2192 #BDB5A3"
+        "facade": "#B85A3A → #D2A787",
+        "roof": "#5A5A5A → #565656",
+        "accent": "#1A1A2A → #363F2F",
+        "mortar": "#B0A898 → #BDB5A3"
       }
     ],
     "qa_final_fixes": [
@@ -185,6 +192,9 @@
     ],
     "height_fixes": [
       "qa_height_mismatch: 9.6m/4F -> 3.38m/1F (LiDAR avg: 3.38m)"
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
     ]
   },
   "storefront": {
@@ -383,16 +393,7 @@
       "string_courses",
       "cornice"
     ],
-    "colour_palette_observed": {},
-    "condition_observed": "good",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.45,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "colour_palette_observed": {}
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.45
+  "wall_thickness_m": 0.3
 }

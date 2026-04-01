@@ -192,7 +192,11 @@
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
-    "storefront_enriched": "2026-03-30T06:33:21.358903Z"
+    "storefront_enriched": "2026-03-30T06:33:21.358903Z",
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {

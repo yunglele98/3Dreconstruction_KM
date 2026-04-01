@@ -164,6 +164,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:50.980269+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.991185+00:00"
       }
     ],
     "photo_matched": {
@@ -183,6 +190,11 @@
         "accent": "#3A2A20 → #2A3123",
         "mortar": "#B0A898 → #AA9880"
       }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "porch_detail",
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -444,6 +456,10 @@
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "window_arrangement": "symmetric",
+  "porch_detail": {
+    "present": true,
+    "type": "stoop"
+  },
+  "wall_thickness_m": 0.3
 }

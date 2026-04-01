@@ -210,6 +210,12 @@
         "accent": "#2A3A2A → #242429",
         "mortar": "#B0A898 → #B8A890"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "regular",
@@ -500,7 +506,9 @@
   ],
   "site": {
     "lon": -79.398882,
-    "lat": 43.654046
+    "lat": 43.654046,
+    "street": "College St",
+    "street_number": "340"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",

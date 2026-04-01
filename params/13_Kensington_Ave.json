@@ -38,7 +38,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
-    "construction_date": "1890-1903",
+    "construction_date": "1889-1903",
     "architectural_style": "House-form, Semi-detached, Bay-and-Gable (confirmed – HCD Plan Vol. 2)",
     "construction_period": "1890-1903 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1890,
@@ -161,6 +161,13 @@
           "door.colour_hex: #2A3A2A (dark green)"
         ],
         "timestamp": "2026-03-29T08:05:10.937686+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.442487+00:00"
       }
     ],
     "photo_matched": {
@@ -188,7 +195,13 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.661211Z"
+    "storefront_enriched": "2026-03-30T06:33:20.661211Z",
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "sparse_field_promotions": [
+      "porch_detail"
+    ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -557,31 +570,12 @@
     "condition_notes": "Row of Victorian bay-and-gable houses. Brick generally intact. Ground floors modified for commercial use. Yellow awning on right unit. Some weathering on trim and bargeboards. Utility wires cross facade. A/C unit visible on one window.",
     "depth_notes": {
       "setback_m_est": 0,
-      "porch_depth_m_est": 1.0,
-      "foundation_height_m_est": 0.3,
-      "eave_overhang_mm_est": 300,
-      "step_count": 2,
-      "wall_thickness_m": 0.3
+      "porch_depth_m_est": 1.0
     }
   },
-  "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0,
-  "porch_width_m": 2.6,
-  "porch_depth_m": 1.8,
-  "porch_height_m": 3.8,
   "porch_detail": {
-    "columns": {
-      "count": 2,
-      "type": "turned",
-      "material": "wood"
-    },
-    "railing": {
-      "present": true,
-      "height_m": 0.9,
-      "type": "baluster"
-    },
-    "step_count": 2
-  }
+    "present": true,
+    "type": "open"
+  },
+  "wall_thickness_m": 0.3
 }

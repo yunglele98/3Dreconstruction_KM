@@ -36,7 +36,7 @@
   "condition": "poor",
   "hcd_data": {
     "typology": "House-form, Row, Ontario Cottage",
-    "construction_date": "pre-1889",
+    "construction_date": "Pre-1889",
     "architectural_style": "House-form, Row, Ontario Cottage (confirmed – HCD Plan Vol. 2)",
     "construction_period": "pre-1889 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -173,6 +173,14 @@
         "accent": "#3A2A20 → #3D4534",
         "mortar": "#B0A898 → #948474"
       }
+    ],
+    "backfills": [
+      "era_normalized:pre-1889->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "chimney_count",
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "photo_observations": {

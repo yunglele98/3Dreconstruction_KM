@@ -2,11 +2,11 @@
   "building_name": "187 Baldwin St",
   "floors": 3,
   "floor_heights_m": [
-    2.4,
-    2.4,
-    2.4
+    2.17,
+    2.17,
+    2.16
   ],
-  "total_height_m": 7.2,
+  "total_height_m": 6.5,
   "facade_width_m": 5.2,
   "facade_depth_m": 22.4,
   "site": {
@@ -185,6 +185,21 @@
           "door.colour_hex: #3A2A20 (dark brown)"
         ],
         "timestamp": "2026-03-29T08:05:15.651423+00:00"
+      },
+      {
+        "fix": "fix_height_from_handoff",
+        "task_id": "TASK-20260327-017",
+        "field": "total_height_m",
+        "old_value": 7.2,
+        "new_value": 6.5,
+        "timestamp": "2026-03-31T01:09:57.701946+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.657792+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -501,36 +516,7 @@
       "roof": "#5A4A3A",
       "accent": "#CC2222"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Bay-and-gable form with prominent front gable preserved. Entire lower facade clad in commercial signage obscuring original fabric. Gable has ornamental detail surviving (bargeboard, possible shingle decoration). Blue paint on bulkhead is bright but commercial. Balcony railing at gable base. Adjacent building has green pixel-art mural.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.1,
-      "eave_overhang_mm_est": 300,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 300,
-  "foundation_height_m": 0.1,
-  "photo_observations": {
-    "source": "synthesized_from_params",
-    "facade_material_observed": "stucco",
-    "facade_colour_observed": "off-white stucco",
-    "condition": "fair",
-    "windows_per_floor": [
-      0,
-      0,
-      1
-    ],
-    "window_type": "Double-hung sash",
-    "door_count": 1,
-    "chimneys": 0,
-    "porch_present": false,
-    "has_storefront": true,
-    "photo": "PXL_20260318_222909365.jpg"
-  },
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

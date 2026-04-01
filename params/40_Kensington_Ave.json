@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Commercial (38 Kensington Avenue), Converted House-form (40 Kensington Avenue), Semi-detached, Bay-andGable (40 Kensington Avenue) (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -169,6 +169,13 @@
           "door.colour_hex: #1A1A2A (black frame)"
         ],
         "timestamp": "2026-03-29T08:05:38.860678+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.371231+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -186,6 +193,13 @@
         "roof": "#5A5A5A → #504F4F",
         "mortar": "#B0A898 → #948576"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
     ]
   },
   "bay_window": {
@@ -523,18 +537,7 @@
       "roof": "#5A5A5A",
       "accent": "#C8A040"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Two-storey flat-roof commercial building. Facade appears painted or rendered. Single upper window. Ground floor well-finished as a bar with gold signage. Security grilles in place at night. White tile bulkhead base.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
-      "eave_overhang_mm_est": 0,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "foundation_height_m": 0.2,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

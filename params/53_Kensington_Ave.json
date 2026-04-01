@@ -34,9 +34,9 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "",
-    "construction_date": "",
+    "construction_date": "1889-1903",
     "architectural_style": "Victorian Bay-and-Gable (Converted)",
-    "construction_period": "c. 1870\u20131889",
+    "construction_period": "c. 1870–1889",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -56,8 +56,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "One-way SB | 30 km/h | Meets minimum standards | Secondary commercial spine",
-    "morphological_zone": "Core Market Spine \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Core Market Spine – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -76,7 +76,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 2,
-    "residential_floors": "Floors 2\u20132.5 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–2.5 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -150,6 +150,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:34.160538+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.656926+00:00"
       }
     ],
     "photo_matched": {
@@ -164,10 +171,10 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #444A4A",
-        "trim": "#E8E0D0 \u2192 #4C3323",
-        "accent": "#3A2A20 \u2192 #313829",
-        "mortar": "#B0A898 \u2192 #B5A68E"
+        "roof": "#5A5A5A → #444A4A",
+        "trim": "#E8E0D0 → #4C3323",
+        "accent": "#3A2A20 → #313829",
+        "mortar": "#B0A898 → #B5A68E"
       }
     ],
     "qa_final_fixes": [
@@ -180,6 +187,9 @@
     ],
     "height_fixes": [
       "qa_height_mismatch: 4.8m/2F -> 3.15m/1F (LiDAR avg: 3.15m)"
+    ],
+    "backfills": [
+      "construction_era:style_keyword:victorian"
     ]
   },
   "storefront": {
@@ -326,15 +336,7 @@
     "roof_pitch_deg": 45,
     "decorative_elements_observed": [],
     "colour_palette_observed": {},
-    "condition_observed": "fair",
-    "depth_notes": {
-      "setback_m_est": 3.0,
-      "foundation_height_m_est": 0.3,
-      "step_count": 2,
-      "eave_overhang_mm_est": 300,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "wall_thickness_m": 0.3
 }

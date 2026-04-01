@@ -36,7 +36,7 @@
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
-    "construction_date": "Pre-1889, 1914-1930",
+    "construction_date": "Pre-1889",
     "architectural_style": "Commercial (42 Kensington Avenue), Converted House-form (44 Kensington Avenue), Semi-detached, Bay-andGable (44 Kensington Avenue) (confirmed – HCD Plan Vol. 2)",
     "construction_period": "Pre-1889, 1914-1930 (confirmed – HCD Plan Vol. 2)",
     "construction_decade": 1880,
@@ -204,6 +204,13 @@
           "gable_window: present=true (from HCD/DFA)"
         ],
         "timestamp": "2026-03-29T08:07:32.065258+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.527253+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -221,6 +228,9 @@
         "roof": "#5A5A5A → #3D3D3D",
         "mortar": "#B0A898 → #A3947C"
       }
+    ],
+    "backfills": [
+      "era_normalized:Pre-1889, 1914-1930->Pre-1889"
     ]
   },
   "bay_window": {
@@ -524,19 +534,7 @@
       "roof": "#5A5A5A",
       "accent": "#4040D0"
     },
-    "condition_observed": "fair",
-    "condition_notes": "Upper facade painted light cream/beige. Gable form preserved. Ground floor heavily modified for commercial use with LED lighting and security grille. Paint appears somewhat worn on upper storey.",
-    "depth_notes": {
-      "setback_m_est": 0,
-      "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
-      "eave_overhang_mm_est": 250,
-      "step_count": 0,
-      "wall_thickness_m": 0.3
-    }
+    "condition_observed": "fair"
   },
-  "eave_overhang_mm": 250,
-  "foundation_height_m": 0.2,
-  "wall_thickness_m": 0.3,
-  "inferred_setback_m": 0.0
+  "wall_thickness_m": 0.3
 }

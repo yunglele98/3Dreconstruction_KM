@@ -148,6 +148,12 @@
         "accent": "#2A3A2A → #4C3224",
         "mortar": "#B0A898 → #B1A999"
       }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
     ]
   },
   "window_arrangement": "irregular",
@@ -269,7 +275,9 @@
   ],
   "site": {
     "lon": -79.405463,
-    "lat": 43.652101
+    "lat": 43.652101,
+    "street": "Bathurst St",
+    "street_number": "327"
   },
   "colour_palette": {
     "facade_hex": "#B85A3A",
