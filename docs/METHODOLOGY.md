@@ -32,7 +32,7 @@ Each building is generated procedurally from a JSON parameter file containing:
 - Architectural features (from HCD plan + photo analysis)
 - Material specifications (brick colour, trim, roof from observation)
 
-The generator (`generate_building.py`, ~9,800 lines) executes 28 sequential `create_*` functions within Blender's Python environment, producing walls, windows, doors, roofs, decorative elements, and storefronts.
+The generator (`generate_building.py`, ~2,900-line orchestrator + 10 extracted modules totalling ~7,400 lines) executes 28 sequential `create_*` functions within Blender's Python environment, producing walls, windows, doors, roofs, decorative elements, and storefronts. Modules: materials, geometry, walls, windows, doors, roofs, decorative, storefront, structure, colours.
 
 ### 4.2 Photogrammetric Reconstruction (When Available)
 Buildings with 3+ field photos from different angles undergo COLMAP sparse+dense reconstruction. The resulting mesh is retopologized (Instant Meshes), then combined with parametric details for unseen faces.
@@ -102,11 +102,14 @@ Each scenario includes density analysis, heritage impact assessment, and shadow 
 | Format | Use Case | Coverage |
 |--------|----------|----------|
 | Blender `.blend` | Source models | 1,241 buildings |
-| FBX | Unreal Engine import | 1,224 buildings |
-| CityGML LOD2 | Heritage archives, GIS | 1,241 buildings |
-| 3D Tiles | Web viewer (CesiumJS) | 1,241 buildings |
+| FBX | Unreal Engine import | 1,223 buildings + LODs + collision |
+| CityGML LOD2 | Heritage archives, GIS | 1,050 buildings |
+| 3D Tiles | Web viewer (CesiumJS) | 1,050 buildings |
 | GeoJSON | Web platform (MapLibre) | 1,231 footprints |
-| Web platform | Public engagement | Vercel deployment |
+| Datasmith XML | Unreal scene assembly | 1,223 actors + LOD groups |
+| Unity manifest | Unity import | 1,223 buildings |
+| Heritage scores | Per-building significance | 374 HCD buildings scored |
+| Scenario overlays | 5 planning scenarios | density/heritage/shadow analysis |
 
 ## 10. Limitations
 

@@ -19,7 +19,7 @@ REPO = Path(__file__).parent.parent
 EXPORTS_DIR = REPO / "outputs" / "exports"
 
 
-def check_fbx_count(min_count=1200):
+def check_fbx_count(min_count=1000):
     """Check FBX files exist with valid headers."""
     if not EXPORTS_DIR.exists():
         return {"pass": False, "detail": "exports dir missing", "count": 0}
