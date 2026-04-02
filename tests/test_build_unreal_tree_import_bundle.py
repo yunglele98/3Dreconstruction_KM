@@ -75,11 +75,23 @@ class TestResolveAssetPath:
         finally:
             module.MASTERS_DIR = old_masters
 
-    def test_resolve_evergreen_fallback(self):
-        # Spruce should fall into evergreen fallback
-        asset_path, fbx_name, status = resolve_asset_path("picea_unknown")
-        assert status == "alias_genus"
-        assert "spruce" in asset_path.lower()
+    def test_resolve_evergreen_fallback(self, tmp_path):
+        # Spruce should resolve via genus to white_spruce master
+        masters_dir = tmp_path / "masters"
+        masters_dir.mkdir()
+        test_fbx = masters_dir / "SM_white_spruce_A_mature.fbx"
+        test_fbx.write_text("dummy")
+
+        import build_unreal_tree_import_bundle as module
+        old_masters = module.MASTERS_DIR
+        module.MASTERS_DIR = masters_dir
+
+        try:
+            asset_path, fbx_name, status = resolve_asset_path("picea_unknown")
+            assert status == "alias_genus"
+            assert "spruce" in asset_path.lower()
+        finally:
+            module.MASTERS_DIR = old_masters
 
     def test_resolve_deciduous_fallback(self):
         # Maple should fall into deciduous fallback
@@ -87,10 +99,22 @@ class TestResolveAssetPath:
         assert status == "fallback_deciduous"
         assert "acer" in asset_path.lower()
 
-    def test_resolve_pine_fallback_evergreen(self):
-        # Pine should be evergreen fallback (via genus matching)
-        asset_path, fbx_name, status = resolve_asset_path("pinus_unknown")
-        assert status == "alias_genus"
+    def test_resolve_pine_fallback_evergreen(self, tmp_path):
+        # Pine should resolve via genus to eastern_white_pine master
+        masters_dir = tmp_path / "masters"
+        masters_dir.mkdir()
+        test_fbx = masters_dir / "SM_eastern_white_pine_A_mature.fbx"
+        test_fbx.write_text("dummy")
+
+        import build_unreal_tree_import_bundle as module
+        old_masters = module.MASTERS_DIR
+        module.MASTERS_DIR = masters_dir
+
+        try:
+            asset_path, fbx_name, status = resolve_asset_path("pinus_unknown")
+            assert status == "alias_genus"
+        finally:
+            module.MASTERS_DIR = old_masters
 
     def test_resolve_cedar_fallback_evergreen(self):
         # Cedar matches fallback evergreen path directly
