@@ -167,6 +167,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:04.888291+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:37.130822+00:00"
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:48.351070+00:00",
@@ -352,7 +359,10 @@
     "decorative_elements_observed": [],
     "colour_palette_observed": {},
     "condition_observed": "poor",
-    "depth_notes": {}
+    "depth_notes": {
+      "foundation_height_m_est": 0.3
+    }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

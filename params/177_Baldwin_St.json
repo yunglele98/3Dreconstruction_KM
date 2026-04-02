@@ -183,6 +183,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:03.602378+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:36.691517+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -462,11 +469,12 @@
     "depth_notes": {
       "setback_m_est": 0,
       "porch_depth_m_est": 0,
-      "foundation_height_m_est": 0.2,
+      "foundation_height_m_est": 0.3,
       "eave_overhang_mm_est": 0,
       "step_count": 0,
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

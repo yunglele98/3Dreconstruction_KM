@@ -95,6 +95,13 @@
           "window_type"
         ],
         "timestamp": "2026-03-31T07:46:04.991185+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:37.171512+00:00"
       }
     ],
     "photo_matched": {
@@ -275,5 +282,6 @@
     }
   },
   "wall_thickness_m": 0.3,
-  "window_type": "double_hung"
+  "window_type": "double_hung",
+  "foundation_height_m": 0.3
 }

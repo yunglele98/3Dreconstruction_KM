@@ -168,6 +168,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:03.442487+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:36.630201+00:00"
       }
     ],
     "photo_matched": {
@@ -570,12 +577,14 @@
     "condition_notes": "Row of Victorian bay-and-gable houses. Brick generally intact. Ground floors modified for commercial use. Yellow awning on right unit. Some weathering on trim and bargeboards. Utility wires cross facade. A/C unit visible on one window.",
     "depth_notes": {
       "setback_m_est": 0,
-      "porch_depth_m_est": 1.0
+      "porch_depth_m_est": 1.0,
+      "foundation_height_m_est": 0.3
     }
   },
   "porch_detail": {
     "present": true,
     "type": "open"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

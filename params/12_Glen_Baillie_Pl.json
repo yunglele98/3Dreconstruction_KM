@@ -150,6 +150,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:09.987940+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:36.617559+00:00"
       }
     ],
     "deep_facade_backfill": [
@@ -431,5 +438,6 @@
   "porch_detail": {
     "present": true,
     "type": "open"
-  }
+  },
+  "foundation_height_m": 0.3
 }

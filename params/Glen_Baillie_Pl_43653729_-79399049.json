@@ -80,6 +80,13 @@
           "heritage_summary filled"
         ],
         "timestamp": "2026-03-29T08:07:43.020459+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:37.220334+00:00"
       }
     ],
     "photo_matched": {
@@ -270,5 +277,6 @@
   },
   "wall_thickness_m": 0.3,
   "door_count": 1,
-  "window_type": "1-over-1"
+  "window_type": "1-over-1",
+  "foundation_height_m": 0.3
 }

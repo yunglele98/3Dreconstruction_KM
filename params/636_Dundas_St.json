@@ -78,6 +78,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:04.784415+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-04-02T04:01:37.097746+00:00"
       }
     ],
     "photo_matched": {
@@ -264,5 +271,6 @@
       "step_count": 1
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15
 }

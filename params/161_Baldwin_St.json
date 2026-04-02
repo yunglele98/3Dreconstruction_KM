@@ -224,6 +224,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:03.553155+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:36.673604+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -488,8 +495,10 @@
     "condition_observed": "fair",
     "condition_notes": "Center building is a colourful painted renovation, reasonable condition. Flanking Victorian buildings show their age. Overall streetscape character is bohemian/eclectic Kensington Market style.",
     "depth_notes": {
-      "setback_m_est": 0
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.3
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

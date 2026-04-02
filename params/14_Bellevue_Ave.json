@@ -154,6 +154,13 @@
           "foundation_height_m: 0.3"
         ],
         "timestamp": "2026-03-29T08:05:12.030612+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:36.650750+00:00"
       }
     ],
     "photo_matched": {
@@ -392,5 +399,6 @@
   "wall_thickness_m": 0.3,
   "porch_detail": {
     "present": true
-  }
+  },
+  "foundation_height_m": 0.3
 }

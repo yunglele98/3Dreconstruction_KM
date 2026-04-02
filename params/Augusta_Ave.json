@@ -103,6 +103,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:05.104277+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:37.215174+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -134,6 +141,9 @@
     "sparse_field_promotions": [
       "door_count_promoted",
       "window_type_promoted"
+    ],
+    "structural_fixes": [
+      "storefront_conflict: set has_storefront=true (storefront object exists)"
     ]
   },
   "party_wall_left": false,
@@ -350,5 +360,7 @@
   },
   "door_count": 1,
   "window_type": "1-over-1",
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "has_storefront": true,
+  "foundation_height_m": 0.3
 }

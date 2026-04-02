@@ -189,6 +189,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:03.474263+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:36.643523+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -530,5 +537,6 @@
       "accent": "#E87020"
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }

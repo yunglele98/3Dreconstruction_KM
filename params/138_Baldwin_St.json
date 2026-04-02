@@ -228,6 +228,13 @@
           "wall_thickness_m"
         ],
         "timestamp": "2026-03-31T07:46:03.426825+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-04-02T04:01:36.627012+00:00"
       }
     ],
     "generation_defaults_applied": true,
@@ -521,5 +528,6 @@
     "condition_observed": "fair",
     "condition_notes": "Left building: stone veneer in good shape, painted brick above is adequate. Right building (Jerk Spot): brown brick intact, commercial fitout maintained. Dormers/roof visible behind both buildings. Tree partially obscures left building."
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3
 }
