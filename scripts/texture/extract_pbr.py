@@ -27,9 +27,18 @@ PHOTO_DIR = REPO_ROOT / "PHOTOS KENSINGTON sorted"
 OUTPUT_DIR = REPO_ROOT / "textures" / "pbr"
 
 
+def _resize_for_processing(img, max_side=2048):
+    """Resize image if larger than max_side."""
+    w, h = img.size
+    if max(w, h) > max_side:
+        scale = max_side / max(w, h)
+        img = img.resize((int(w * scale), int(h * scale)), Image.LANCZOS)
+    return img
+
+
 def extract_normal_from_photo(image_path, output_dir):
     """Generate a normal map from a photo using Sobel edge detection."""
-    img = Image.open(image_path).convert("L")
+    img = _resize_for_processing(Image.open(image_path).convert("L"))
     arr = np.array(img, dtype=np.float32) / 255.0
 
     # Sobel gradients
@@ -60,7 +69,7 @@ def extract_normal_from_photo(image_path, output_dir):
 
 def extract_ao_from_photo(image_path, output_dir):
     """Generate ambient occlusion map from photo luminance."""
-    img = Image.open(image_path).convert("L")
+    img = _resize_for_processing(Image.open(image_path).convert("L"))
 
     # AO approximation: blur + invert dark areas
     blurred = img.filter(ImageFilter.GaussianBlur(radius=15))
@@ -78,7 +87,7 @@ def extract_ao_from_photo(image_path, output_dir):
 
 def extract_roughness_from_photo(image_path, output_dir):
     """Generate roughness map from photo texture frequency."""
-    img = Image.open(image_path).convert("L")
+    img = _resize_for_processing(Image.open(image_path).convert("L"))
 
     # High-frequency content = rough surface
     blurred = img.filter(ImageFilter.GaussianBlur(radius=5))

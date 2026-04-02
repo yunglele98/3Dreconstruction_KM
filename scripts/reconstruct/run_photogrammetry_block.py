@@ -132,22 +132,23 @@ def run_colmap_sparse(image_dir, workspace, colmap_bin, gpu_index=0):
             "--database_path", str(db_path),
             "--image_path", str(image_dir),
             "--ImageReader.single_camera", "0",
-            "--SiftExtraction.use_gpu", str(int(gpu_index >= 0)),
-            "--SiftExtraction.gpu_index", str(max(gpu_index, 0)),
+            "--FeatureExtraction.use_gpu", str(int(gpu_index >= 0)),
+            "--FeatureExtraction.gpu_index", str(max(gpu_index, 0)),
             "--SiftExtraction.max_num_features", "8192",
-        ], 600),
+            "--FeatureExtraction.max_image_size", "2048",
+        ], 3600),
         ("Exhaustive matching", [
             colmap_bin, "exhaustive_matcher",
             "--database_path", str(db_path),
-            "--SiftMatching.use_gpu", str(int(gpu_index >= 0)),
-            "--SiftMatching.gpu_index", str(max(gpu_index, 0)),
-        ], 1200),
+            "--FeatureMatching.use_gpu", str(int(gpu_index >= 0)),
+            "--FeatureMatching.gpu_index", str(max(gpu_index, 0)),
+        ], 3600),
         ("Mapping", [
             colmap_bin, "mapper",
             "--database_path", str(db_path),
             "--image_path", str(image_dir),
             "--output_path", str(sparse_dir),
-        ], 1800),
+        ], 3600),
     ]
 
     for name, cmd, timeout in steps:
