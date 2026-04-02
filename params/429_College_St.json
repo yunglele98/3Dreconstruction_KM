@@ -1,10 +1,11 @@
 {
   "building_name": "429 College St",
-  "floors": 1,
+  "floors": 2,
   "floor_heights_m": [
-    8.5
+    3.22,
+    2.63
   ],
-  "total_height_m": 8.5,
+  "total_height_m": 5.85,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -24,6 +25,7 @@
   "facade_material": "concrete",
   "facade_colour": "grey concrete",
   "windows_per_floor": [
+    0,
     0
   ],
   "window_type": "double_hung",
@@ -186,6 +188,9 @@
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
+    ],
+    "structural_fixes": [
+      "suspicious_dimensions: 1F/[8.5] -> 2F/[3.22, 2.63] (ref_h=5.85m)"
     ]
   },
   "storefront": {

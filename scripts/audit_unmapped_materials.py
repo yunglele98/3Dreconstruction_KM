@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 from collections import Counter
 
-ROOT = Path("C:/Users/liam1/blender_buildings")
+ROOT = Path(__file__).resolve().parent.parent
 PARAMS_DIR = ROOT / "params"
 
 def find_unmapped_materials():
