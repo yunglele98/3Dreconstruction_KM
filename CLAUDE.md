@@ -78,7 +78,7 @@ python scripts/build_adjacency_graph.py       # neighbour detection, 287 blocks
 python scripts/analyze_streetscape_rhythm.py  # heritage quality scoring per street
 
 # === Generator Contract Audit ===
-python scripts/audit_generator_contracts.py   # parse 36 create_* functions, validate params
+python scripts/audit_generator_contracts.py   # parse 66 create_* functions, validate params
 python scripts/fix_generator_contract_gaps.py # safe defaults for missing fields
 
 # === Asset Export Pipeline (requires Blender) ===
@@ -94,7 +94,9 @@ python scripts/map_megascans_materials.py                                 # LAB 
 python scripts/validate_export_pipeline.py                                # trimesh per-asset checks
 
 # === Deliverable Export ===
-python scripts/export_deliverables.py         # CSV + GeoJSON + street profiles
+python scripts/export_building_summary_csv.py # CSV summary of all buildings
+python scripts/export_geojson.py              # GeoJSON export
+python scripts/export_street_profile_json.py  # street profiles JSON
 python scripts/generate_qa_report.py          # HTML dashboard + JSON report
 
 # === Utility ===
@@ -110,7 +112,7 @@ python scripts/build_regen_batches.py         # priority-ordered batch files for
 ```
 PostGIS (building_assessment + opendata.*)
   → scripts/export_db_params.py → params/*.json (skeletons with real measurements)
-  → scripts/prepare_batches.py → batches/*.json (1,867 photos, 38 batches of 50)
+  → scripts/prepare_batches.py → batches/*.json (8 batches of 50)
     → AI agents (Claude/Codex/Gemini) → merge visual details into params/*.json
   → enrichment pipeline (6 scripts in order) → params/*.json (final)
   → scripts/export_gis_scene.py → gis_scene.py + gis_scene.json (site model)
@@ -119,7 +121,7 @@ PostGIS (building_assessment + opendata.*)
 
 ### Working data directories
 
-- `params/` — 2,064 JSON files (~1,241 active building params + ~820 skipped + 3 metadata files prefixed with `_`: `_site_coordinates.json`, `_analysis_summary.json`). Skipped entries have `"skipped": true` with `skip_reason`.
+- `params/` — 2,064 JSON files (~1,241 active building params + ~820 skipped + 3 metadata files prefixed with `_`: `_site_coordinates.json`, `_analysis_summary.json`, `_address_aliases.auto.json`). Skipped entries have `"skipped": true` with `skip_reason`.
 - `batches/` — 8 photo analysis batch JSONs (50 buildings each) for Gemini/Codex agents.
 - `scripts/` — 291 Python scripts. Each uses `_atomic_write_json()` (temp file + `os.replace`) to prevent corruption on concurrent writes. Major categories:
   - **Unreal urban elements** (~118 scripts): `export_unreal_*.py` (20) → extract GIS/field data per element type; `build_unreal_*.py` (28) → Unreal import bundles, material instances, decal placements; `create_*_masters_free.py` (19) → free Megascans/Quixel master meshes; `create_*_hero_variants.py` (11) → hero variant meshes; `build_*_lods_billboards.py` (11) → LOD chains + billboard impostors; `build_*_material_presets.py` (12) → material preset JSON; `refine_*_instances.py` (11) → instance placement refinement; `build_*_photo_references.py` (6) → photo reference sheets. Element types: trees, signs, poles, street furniture, alleys, alley garages, bike racks, ground, intersections, parking, fences/gates, transit stops, waste, vertical hardscape, utilities, accessibility, service backlots, park furniture, graffiti, printables, roadmarks.
@@ -137,8 +139,8 @@ PostGIS (building_assessment + opendata.*)
 - `generator_modules/` — extracted modules from `generate_building.py` (see below).
 - `agent_ops/` — multi-agent coordination system for 5-10 parallel agents (Claude/Codex/Gemini/Ollama). Kanban-style workflow: `00_intake/` → `10_backlog/` → `20_active/<agent>/` → `30_handoffs/` → `40_reviews/` → `60_releases/` → `90_archive/`. File-based locking in `coordination/locks/`. See `agent_ops/README.md` for full workflow.
 - `tests/` — 62 test files + `conftest.py` (see Testing section).
-- `archive/` — retired data and scripts: `legacy_analysis/`, `legacy_batches/`, `reference_photos/`, `params_pilot/`, `params_demo/`, `params_block_demo/`, `params_batch_test/`, `params_batch_mixed/`, `skip_originals/`, `tmp_scripts/` (34 retired dev scripts), `geocode.json`, `pilot_buildings.json`, test output runs, legacy vision scripts.
-- `missing_list.txt` / `regen_list.txt` — address lists for batch re-generation workflows (one address per line, `_`-separated).
+- `AGENTS.md` — Codex-oriented variant of CLAUDE.md (stale, lower counts). Kept for Codex agent compatibility.
+- `run_fbx_batch.ps1` — PowerShell batch FBX export launcher.
 
 ### `generate_building.py` (~9,800 lines)
 
@@ -152,7 +154,7 @@ Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args
 
 **`load_and_generate()`** clears the scene, loads site coordinates from `params/_site_coordinates.json`, then for each param file resolves position (priority: site coords → legacy `geocode.json` → linear spacing fallback) and calls `generate_building()`.
 
-**`generate_building()`** applies defaults then calls ~30 `create_*` functions in sequence:
+**`generate_building()`** applies defaults then calls 28 `create_*` functions in sequence (66 total `create_*` defs exist — 20 newer ones like `create_window_shutters`, `create_balconies`, `create_pilasters`, `create_sign_band`, `create_ground_floor_arches`, etc. are defined but not yet wired into the main call chain):
 
 1. `apply_hcd_guide_defaults()` — scans `hcd_data.building_features` and `statement_of_contribution` for keywords (string course, quoin, voussoir, bargeboard, bracket, shingle, cornice, bay window, storefront, dormer, chimney, turret) and injects structured `decorative_elements` dicts if not already present. Also injects `bay_window` (width computed as `facade_width_m * 0.42`, clamped 1.8-2.6m), `has_storefront`, `storefront`, and `roof_features` entries.
 2. `get_era_defaults()` — brick colour, mortar, trim style, window arch type based on `hcd_data.construction_date`:
@@ -163,9 +165,9 @@ Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args
 
 Then the creation sequence:
 
-`create_walls` (hollow box, 0.3m wall thickness, material assigned by `facade_material`: brick→`create_brick_material`, paint/stucco/clapboard→`create_painted_material`) → `cut_windows` (reads `windows_detail` per-floor specs, skips ground floor if storefront, supports bay-based layouts and gable/attic windows, avoids door overlap) → `cut_doors` (`_resolve_doors` collects from 4 sources: `doors_detail`, `ground_floor_arches`, `windows_detail[].entrance`, `storefront.entrance`) → roof (`create_flat_roof` / `create_gable_roof` / `create_cross_gable_roof` / `create_hip_roof`, plus `create_gable_walls` for triangular infill) → `create_porch` → `create_bay_window` (canted 3-sided or box, supports double-height via `floors_spanned`, position: left/center/right) → `create_chimney` → `create_storefront` → `create_string_courses` → `create_quoins` → `create_tower` → `create_bargeboard` (gable roofs only) → `create_cornice_band` → `create_corbelling` → `create_window_lintels` → `create_stained_glass_transoms` → `create_brackets` → `create_ridge_finial` (gable only) → `create_voussoirs` → `create_gable_shingles` (gable only) → `create_dormer` → `create_fascia_boards` → `create_parapet_coping` → `create_hip_rooflet` → `create_gabled_parapet` → `create_turned_posts` → `create_storefront_awning` → `create_foundation` → `create_gutters` → `create_chimney_caps` → `create_porch_lattice` → `create_step_handrails`
+`create_walls` (1, hollow box, 0.3m wall thickness) → `cut_windows` (2) → `cut_doors` (3) → roof (4: `create_flat_roof`/`create_gable_roof`/`create_cross_gable_roof`/`create_hip_roof` + `create_gable_walls`) → `create_porch` (5) → `create_bay_window` (6) → `create_chimney` (7) → `create_storefront` (8) → `create_string_courses` (9) → `create_quoins` (10) → `create_tower` (11) → `create_bargeboard` (12, gable only) → `create_cornice_band` (13) → `create_corbelling` (13b) → `create_window_lintels` (14) → `create_stained_glass_transoms` (14b) → `create_brackets` (15) → `create_ridge_finial` (16, gable only) → `create_voussoirs` (17) → `create_gable_shingles` (18, gable only) → `create_dormer` (19) → `create_fascia_boards` (20) → `create_parapet_coping` (21) → `create_hip_rooflet` (21a) → `create_gabled_parapet` (21b) → `create_turned_posts` (22) → `create_storefront_awning` (23) → `create_foundation` (24) → `create_gutters` (25) → `create_chimney_caps` (26) → `create_porch_lattice` (27) → `create_step_handrails` (28)
 
-Each `create_*` returns a list of Blender objects. After creation, objects with matching name prefixes (`frame_`, `glass_`, `lintel_`) are joined via `join_by_prefix()`, then collected into a per-building collection.
+Each `create_*` returns a list of Blender objects. After creation, objects are joined by name prefix via `join_by_prefix()` (~37 prefixes: `frame_`, `glass_`, `muntin_`, `baluster_`, `lintel_`, `sill_`, `bracket_`, `voussoir_`, `shingle_`, `fascia_`, `soffit_`, `parapet_`, `coping_`, `gutter_`, `downspout_`, `quoin_`, `string_course_`, `cornice_`, `transom_`, etc.), then collected into a per-building collection.
 
 **Multi-volume buildings** (`"volumes": [...]`) take a separate path via `generate_multi_volume()`. Volumes are placed side by side (x_cursor tracks position). Each volume can have its own facade material, floors, roof type. Example: 132 Bellevue Ave fire station (main hall + tower + residential wing).
 
@@ -189,7 +191,7 @@ Each script reads `params/*.json`, modifies in place, and writes back. The `_met
    - `BRICK_COLOURS`: red→`#B85A3A`, buff→`#D4B896`, brown→`#7A5C44`, cream→`#E8D8B0`, orange→`#C87040`, grey→`#8A8A8A`
    - `TRIM_COLOURS_BY_ERA`: pre-1889→`#3A2A20` (dark brown), 1904-1913→`#2A2A2A` (near-black), 1931+→`#F0EDE8` (cream)
    - `ROOF_COLOURS`: grey→`#5A5A5A`, slate→`#4A5A5A`, brown→`#6A5040`, red→`#8A3A2A`
-   - Skips files where `source != "hcd_plan_only"`.
+   - Only processes files where `source` is `"hcd_plan_only"` or `"hcd_plan_skeleton"` — skips all others.
 
 3. **`enrich_facade_descriptions.py`** — generates prose `facade_detail.composition`, `opening_rhythm`, `heritage_expression`, `heritage_summary` from structured params.
 
@@ -218,7 +220,7 @@ ORIGIN_X = 312672.94,  ORIGIN_Y = 4834994.86
 
 ### PostGIS database
 
-`localhost:5432`, database `kensington`, user `postgres`, password `test123`.
+Configured in `scripts/db_config.py` via env vars with fallbacks: `PGHOST` (localhost), `PGPORT` (5432), `PGDATABASE` (kensington), `PGUSER` (postgres), `PGPASSWORD` (test123).
 
 - `building_assessment` — 1,075 buildings with `ADDRESS_FULL`, `ba_street`, `ba_street_number`, `ba_building_type`, `ba_stories`, `ba_facade_material`, LiDAR heights (`height_max_m`, `height_avg_m`), lot dims (`lot_width_ft`, `lot_depth_ft`), HCD typology (`hcd_typology`, `hcd_construction_date`, `hcd_contributing`), + 38 photo analysis columns (added by `writeback_to_db.py --migrate`: `photo_analyzed`, `photo_date`, `photo_agent`, observed colours/materials/condition)
 - `opendata.*` — `building_footprints` (addresses + 2D polygons), `massing_3d` (3D polygons with `AVG_HEIGHT`), `road_centerlines`, `sidewalks`
@@ -227,7 +229,7 @@ ORIGIN_X = 312672.94,  ORIGIN_Y = 4834994.86
 
 ### GIS scene
 
-`gis_scene.py` + `gis_scene.json`: 753 footprints, 464 3D massing shapes, 162 road centerlines, 41 alleys, 530 field survey features. All in local metres from centroid. Variants: `smoke_gis_scene.py` (quick validation), `strict_gis_scene.py` (strict error handling).
+`gis_scene.py` + `gis_scene.json`: 753 footprints, 464 3D massing shapes, 162 road centerlines, 41 alleys, 530 field survey features. All in local metres from centroid. Variant: `smoke_gis_scene.py` (quick validation).
 
 ### Agent coordination scripts
 
@@ -270,7 +272,7 @@ Each building is a JSON file in `params/` (filename: `22_Lippincott_St.json`, sp
 
 ## Photo Analysis Rules (docs/AGENT_PROMPT.md)
 
-AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,867 photos). 8 batches of 50 buildings each in `batches/batch_NNN.json`, dispatched to parallel Gemini/Codex agents.
+AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,928 photos). 8 batches of 50 buildings each in `batches/batch_NNN.json`, dispatched to parallel Gemini/Codex agents.
 
 - **NEVER overwrite:** `total_height_m`, `facade_width_m`, `facade_depth_m`, `site.*`, `city_data.*`, `hcd_data.*`
 - **ALWAYS update:** `facade_colour`, `windows_per_floor`, `window_type`, `window_arrangement`, `door_count`, `door_type`, `condition`, `roof_features`, `chimneys`, `porch_present`, `porch_type`, `balconies`, `balcony_type`, `cornice`, `bay_windows`, `ground_floor_arches`
@@ -279,7 +281,7 @@ AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and
 - Multiple photos per address: use the best facade photo, produce one update per unique address
 - Non-building photos (murals, lanes, signs) → `"skipped": true` with `skip_reason`
 
-**Field photos** (`PHOTOS KENSINGTON/`) contain 1,867 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
+**Field photos** (`PHOTOS KENSINGTON/`) contain 1,928 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
 
 ## Testing
 
@@ -306,8 +308,10 @@ For visual/integration validation:
 
 - **Blender 3.x+** (`bpy`, `bmesh`, `mathutils`) — generate_building.py and gis_scene.py run inside Blender
 - **Python 3.10+**
-- **psycopg2-binary** — all PostGIS access scripts
+- **psycopg2-binary** — all PostGIS access scripts (via `scripts/db_config.py`)
 - **PostgreSQL 18** with PostGIS
+- **pytest** — test runner
+- **Optional:** `pymeshlab` (mesh optimization), `trimesh` (export validation), `Pillow` (texture atlas, PBR maps, decal extraction), `numpy` (facade textures, photogrammetry comparison, decals)
 
 ## Style
 
