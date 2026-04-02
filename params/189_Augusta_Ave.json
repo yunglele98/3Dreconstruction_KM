@@ -185,7 +185,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "bay_window": {
@@ -419,5 +420,14 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "OPEN'",
+    "confidence": 0.566,
+    "all_texts": [
+      "OPEN'"
+    ],
+    "matches_existing": false,
+    "text_count": 15
   }
 }

@@ -168,7 +168,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -437,5 +438,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "MamAcITAS",
+    "confidence": 0.522,
+    "all_texts": [
+      "MamAcITAS",
+      "CLOSED",
+      "ENTRY",
+      "HERE",
+      "210"
+    ],
+    "matches_existing": false,
+    "text_count": 11
   }
 }

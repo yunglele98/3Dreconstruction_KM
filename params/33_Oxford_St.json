@@ -44,7 +44,12 @@
     "statement_of_contribution": "The property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Originally constructed as a pair, the property retains its shared roofline with gables, first storey projecting bay windows, brick cladding, mix of flat and round arched openings, and decorative wooden bargeboards. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 60,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "residential",

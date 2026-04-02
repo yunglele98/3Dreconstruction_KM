@@ -227,7 +227,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -527,5 +528,18 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "BICYCLE LANE",
+    "confidence": 0.998,
+    "all_texts": [
+      "BICYCLE LANE",
+      "50 LDEM",
+      "Bi NZ",
+      "0 QEK",
+      "9PLM"
+    ],
+    "matches_existing": false,
+    "text_count": 29
   }
 }

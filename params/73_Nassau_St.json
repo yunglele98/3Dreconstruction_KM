@@ -48,7 +48,12 @@
     "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has contextual value because it supports and maintain the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 67,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "mixed_use",

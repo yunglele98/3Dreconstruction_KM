@@ -46,7 +46,13 @@
     "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as two of seven identical rowhouses, the properties have evolved over time while retaining original building features including their shared roofline and turreted attic dormers. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 70,
+    "significance": "medium",
+    "extracted_features": [
+      "storefront",
+      "commercial_conversion"
+    ]
   },
   "context": {
     "building_type": "mixed_use",
@@ -152,11 +158,11 @@
       "timestamp": "2026-03-29T08:34:16.757407Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:43.770753+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:37.720611+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.546480Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "facade": "#B85A3A → #9E3725",
@@ -164,6 +170,10 @@
         "trim": "#3A2A20 → #463424",
         "accent": "#3A2A20 → #493E30",
         "mortar": "#B0A898 → #B0A18F"
+      },
+      {
+        "roof": "#5A5A5A → #4E4D4D",
+        "accent": "#3A2A20 → #1C2D2A"
       }
     ],
     "sparse_field_promotions": [
@@ -357,7 +367,11 @@
     "trim_hex": "#3A2A20",
     "roof_hex": "#3A3A3A",
     "accent_hex": "#3A2A20",
-    "door_hex": "#3A2A20"
+    "door_hex": "#3A2A20",
+    "facade": "#9E3725",
+    "trim": "#463424",
+    "roof": "#4E4D4D",
+    "accent": "#1C2D2A"
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

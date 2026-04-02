@@ -178,7 +178,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "decorative_elements": {
@@ -355,5 +356,15 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "Sned",
+    "confidence": 0.999,
+    "all_texts": [
+      "Sned",
+      "313"
+    ],
+    "matches_existing": false,
+    "text_count": 7
   }
 }

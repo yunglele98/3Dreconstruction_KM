@@ -211,7 +211,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "photo_observations": {
@@ -505,5 +506,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "discretion: No further warnings are",
+    "confidence": 0.711,
+    "all_texts": [
+      "discretion: No further warnings are",
+      "Tolerance On;",
+      "Impairment >",
+      "CONSTRUGTIOH",
+      "Violations"
+    ],
+    "matches_existing": false,
+    "text_count": 56
   }
 }

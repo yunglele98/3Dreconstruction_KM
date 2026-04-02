@@ -253,7 +253,8 @@
       "era_normalized:1890-1903->1889-1903"
     ],
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -507,5 +508,18 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "437 849-2044 FUNGUYZ.CC",
+    "confidence": 0.63,
+    "all_texts": [
+      "437 849-2044 FUNGUYZ.CC",
+      "CLASSIC CHURROS",
+      "MAGIC MUSHROOM",
+      "IinlageDepob",
+      "OPEN7 DAYS"
+    ],
+    "matches_existing": false,
+    "text_count": 40
   }
 }

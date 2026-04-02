@@ -193,7 +193,8 @@
       }
     ],
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -444,5 +445,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 2
+  },
+  "signage_analysis": {
+    "detected_business_name": "FLANINGO",
+    "confidence": 0.697,
+    "all_texts": [
+      "FLANINGO",
+      "VINTACE",
+      "14505",
+      "OFEN",
+      "ONLY"
+    ],
+    "matches_existing": false,
+    "text_count": 30
   }
 }

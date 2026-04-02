@@ -210,7 +210,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -588,5 +589,14 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "E:%",
+    "confidence": 0.768,
+    "all_texts": [
+      "E:%"
+    ],
+    "matches_existing": false,
+    "text_count": 32
   }
 }

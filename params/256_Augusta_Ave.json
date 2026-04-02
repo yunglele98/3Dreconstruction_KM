@@ -54,7 +54,13 @@
       "original_windows"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 70,
+    "significance": "medium",
+    "extracted_features": [
+      "storefront",
+      "commercial_conversion"
+    ]
   },
   "context": {
     "building_type": "mixed_use",
@@ -209,7 +215,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "bay_window": {
@@ -538,5 +545,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "BY PERMIT",
+    "confidence": 0.702,
+    "all_texts": [
+      "BY PERMIT",
+      "Municipal",
+      "City of",
+      "WARNING",
+      "DUMPING"
+    ],
+    "matches_existing": false,
+    "text_count": 27
   }
 }

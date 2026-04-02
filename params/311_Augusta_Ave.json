@@ -204,7 +204,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -444,5 +445,18 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "BOULEVARD PARKINIG",
+    "confidence": 0.533,
+    "all_texts": [
+      "BOULEVARD PARKINIG ",
+      "CITY WORKS SERVICES",
+      "OPEN 7 DAYS a WEEK",
+      "COMMSSIONBR",
+      "LICENSEE"
+    ],
+    "matches_existing": false,
+    "text_count": 38
   }
 }

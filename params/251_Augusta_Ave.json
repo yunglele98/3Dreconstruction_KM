@@ -194,7 +194,8 @@
       "door_count_promoted"
     ],
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -356,5 +357,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "Italys #1 Beer",
+    "confidence": 0.713,
+    "all_texts": [
+      "Italys #1 Beer",
+      "416.892.8222",
+      "416.441.2888",
+      "Philip Pick",
+      "FOR LEASE"
+    ],
+    "matches_existing": false,
+    "text_count": 36
   }
 }

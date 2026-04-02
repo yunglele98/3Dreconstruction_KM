@@ -51,7 +51,16 @@
       "original_windows"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 77,
+    "significance": "medium",
+    "extracted_features": [
+      "bay_window",
+      "gable",
+      "victorian_style",
+      "heritage_fabric",
+      "row_housing"
+    ]
   },
   "context": {
     "building_type": "mixed_use",

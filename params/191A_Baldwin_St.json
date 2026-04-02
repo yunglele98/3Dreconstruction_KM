@@ -219,7 +219,8 @@
       "door_count_promoted"
     ],
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "bay_window": {
@@ -432,5 +433,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "ITAGE",
+    "confidence": 0.716,
+    "all_texts": [
+      "ITAGE",
+      "IKEN:",
+      "STDPL",
+      "SING",
+      "BKQD"
+    ],
+    "matches_existing": false,
+    "text_count": 18
   }
 }

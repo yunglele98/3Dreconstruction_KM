@@ -49,7 +49,13 @@
     "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Constructed as one of a pair of semi-detached residences, the property has retained building features reflecting vernacular interpretations of Victorian architectural styles, including its cross-gabled roofline, brick cladding with brick detailing, and window openings above the first storey. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 73,
+    "significance": "medium",
+    "extracted_features": [
+      "storefront",
+      "commercial_conversion"
+    ]
   },
   "context": {
     "building_type": "mixed_use",

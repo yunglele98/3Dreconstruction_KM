@@ -55,7 +55,7 @@
     "general_use": "Mixed Use",
     "land_use": "Residential with Commercial Potential",
     "commercial_use": "",
-    "business_name": "",
+    "business_name": "163",
     "business_category": "Restaurant/Food",
     "zoning": "CR",
     "is_vacant": false,
@@ -185,7 +185,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -499,5 +500,14 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "163",
+    "confidence": 1.0,
+    "all_texts": [
+      "163"
+    ],
+    "matches_existing": null,
+    "text_count": 3
   }
 }

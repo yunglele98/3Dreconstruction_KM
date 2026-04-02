@@ -49,7 +49,12 @@
       "cornice"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 70,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "mixed_use",

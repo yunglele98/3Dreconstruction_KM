@@ -150,11 +150,11 @@
       "timestamp": "2026-03-29T08:34:18.857194Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:45.339042+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:37.889105+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:14.014407Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "facade": "#B85A3A → #AF3A34",
@@ -162,6 +162,10 @@
         "trim": "#E8E0D0 → #35261F",
         "accent": "#1A1A2A → #2D3326",
         "mortar": "#B0A898 → #B2A99A"
+      },
+      {
+        "roof": "#5A5A5A → #5F5354",
+        "accent": "#1A1A2A → #283526"
       }
     ],
     "backfills": [
@@ -375,7 +379,11 @@
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
-    "roof_hex": "#3A3A3A"
+    "roof_hex": "#3A3A3A",
+    "facade": "#AF3A34",
+    "trim": "#35261F",
+    "roof": "#5F5354",
+    "accent": "#283526"
   },
   "handoff_fixes_applied": true,
   "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",

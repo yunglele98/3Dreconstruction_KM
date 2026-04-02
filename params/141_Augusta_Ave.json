@@ -52,7 +52,12 @@
       "cornice"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 67,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "mixed_use",
@@ -167,11 +172,11 @@
       "timestamp": "2026-03-29T08:34:16.674411Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:43.696702+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:37.711249+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:11.474494Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "facade": "#B85A3A → #954937",
@@ -179,6 +184,10 @@
         "trim": "#3A2A20 → #291E17",
         "accent": "#3A2A20 → #1A2926",
         "mortar": "#B0A898 → #B1A293"
+      },
+      {
+        "roof": "#5A5A5A → #4E4E4E",
+        "accent": "#3A2A20 → #2A3223"
       }
     ],
     "sparse_field_promotions": [
@@ -407,7 +416,11 @@
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
-    "roof_hex": "#3A3A3A"
+    "roof_hex": "#3A3A3A",
+    "facade": "#954937",
+    "trim": "#291E17",
+    "roof": "#4E4E4E",
+    "accent": "#2A3223"
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

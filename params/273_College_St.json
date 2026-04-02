@@ -150,11 +150,11 @@
       "timestamp": "2026-03-29T08:34:18.785504Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:45.285712+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:37.879472+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.893366Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "facade": "#B85A3A → #C1572B",
@@ -165,6 +165,10 @@
       },
       {
         "trim": "#2A2A2A → #3C2B20"
+      },
+      {
+        "roof": "#5A5A5A → #5C5B5B",
+        "accent": "#1A1A2A → #162422"
       }
     ],
     "backfills": [
@@ -378,7 +382,11 @@
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
-    "roof_hex": "#3A3A3A"
+    "roof_hex": "#3A3A3A",
+    "facade": "#C1572B",
+    "trim": "#3C2B20",
+    "roof": "#5C5B5B",
+    "accent": "#162422"
   },
   "handoff_fixes_applied": true,
   "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",

@@ -239,7 +239,8 @@
     ],
     "storefront_enriched": "2026-03-30T06:33:20.741498Z",
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "doors_detail": [
@@ -499,5 +500,14 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "JJAMAICAM BAKERY",
+    "confidence": 0.69,
+    "all_texts": [
+      "JJAMAICAM BAKERY"
+    ],
+    "matches_existing": false,
+    "text_count": 36
   }
 }

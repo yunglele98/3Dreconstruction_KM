@@ -197,7 +197,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -429,5 +430,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "PEROLASLFEFMARKET",
+    "confidence": 0.718,
+    "all_texts": [
+      "PEROLASLFEFMARKET",
+      "JUMBO EMPANADAS",
+      "SUPERMARKET",
+      "PUERTO RICO",
+      "EL SALVADOR"
+    ],
+    "matches_existing": false,
+    "text_count": 51
   }
 }

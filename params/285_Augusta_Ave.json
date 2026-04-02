@@ -51,7 +51,12 @@
       "original_windows"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 66,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "mixed_use",
@@ -195,7 +200,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "bay_window": {
@@ -517,5 +523,14 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "18615797",
+    "confidence": 0.797,
+    "all_texts": [
+      "18615797"
+    ],
+    "matches_existing": false,
+    "text_count": 11
   }
 }

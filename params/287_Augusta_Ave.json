@@ -193,7 +193,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -397,5 +398,14 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "BTL",
+    "confidence": 0.999,
+    "all_texts": [
+      "BTL"
+    ],
+    "matches_existing": false,
+    "text_count": 12
   }
 }

@@ -187,11 +187,11 @@
       "timestamp": "2026-03-29T08:34:23.416811Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:48.644916+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:38.214230+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:17.970848Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-30T06:33:19.238475+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "roof": "#5A5A5A → #5E5555",
@@ -201,6 +201,10 @@
       },
       {
         "facade": "#B85A3A → #AE6E53"
+      },
+      {
+        "roof": "#5A5A5A → #5E5555",
+        "accent": "#2A3A2A → #3C4133"
       }
     ],
     "backfills": [
@@ -490,5 +494,11 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "colour_palette": {
+    "facade": "#AE6E53",
+    "trim": "#392922",
+    "roof": "#5E5555",
+    "accent": "#3C4133"
   }
 }

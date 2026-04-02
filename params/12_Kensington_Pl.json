@@ -46,7 +46,12 @@
     "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. Constructed as a row, each property retains original building features including a narrow frontage, shared roofline, and paired front entrance with an adjacent property. Contextually, each property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 57,
+    "significance": "low",
+    "extracted_features": [
+      "row_housing"
+    ]
   },
   "context": {
     "building_type": "mixed_use",

@@ -159,10 +159,10 @@
       "timestamp": "2026-03-29T08:34:16.188393Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:43.303764+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:37.655413+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "facade": "#B85A3A → #A96142",
@@ -170,6 +170,10 @@
         "trim": "#E8E0D0 → #4D3A28",
         "accent": "#3A2A20 → #4C2F21",
         "mortar": "#B0A898 → #BCB3A1"
+      },
+      {
+        "roof": "#5A5A5A → #555555",
+        "accent": "#3A2A20 → #553E2C"
       }
     ],
     "backfills": [
@@ -380,7 +384,11 @@
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",
-    "roof_hex": "#4A5A5A"
+    "roof_hex": "#4A5A5A",
+    "facade": "#A96142",
+    "trim": "#4D3A28",
+    "roof": "#555555",
+    "accent": "#553E2C"
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

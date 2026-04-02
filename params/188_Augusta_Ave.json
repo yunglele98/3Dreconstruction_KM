@@ -182,7 +182,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -439,5 +440,18 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "Out Spociol",
+    "confidence": 0.619,
+    "all_texts": [
+      "Out Spociol",
+      "PIZZERIA",
+      "MERCANTI",
+      "MERCANTL",
+      "PIzERLA"
+    ],
+    "matches_existing": false,
+    "text_count": 36
   }
 }

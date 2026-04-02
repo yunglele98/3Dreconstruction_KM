@@ -48,7 +48,12 @@
     "statement_of_contribution": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. The property retains many of its original building features including its cross-gable roofline, fenestration pattern, and double- height projecting bay window. The property has contextual value because it supports and maintains the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 66,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "residential",

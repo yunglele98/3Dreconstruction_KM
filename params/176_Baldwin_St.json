@@ -224,7 +224,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -570,5 +571,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 2
+  },
+  "signage_analysis": {
+    "detected_business_name": "SANAGANS MEAT LOCKER",
+    "confidence": 0.778,
+    "all_texts": [
+      "SANAGANS MEAT LOCKER",
+      "ONTARIO FAMILY FARMS",
+      "TY MEATS?POULTRY",
+      "PREPARED FOODS",
+      "CHARCUTERIE"
+    ],
+    "matches_existing": false,
+    "text_count": 48
   }
 }

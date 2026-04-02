@@ -193,7 +193,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -517,5 +518,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "[AUGUSTA",
+    "confidence": 0.568,
+    "all_texts": [
+      "[AUGUSTA",
+      "COFFEE",
+      "Limit",
+      "IDLE",
+      "MIN"
+    ],
+    "matches_existing": false,
+    "text_count": 25
   }
 }

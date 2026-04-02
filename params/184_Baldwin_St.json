@@ -210,7 +210,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -563,5 +564,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "SmALL BUSInESSES",
+    "confidence": 0.618,
+    "all_texts": [
+      "SmALL BUSInESSES",
+      "LOCAL MAKERC",
+      "6x8 Market",
+      "ARTISTS &",
+      "OVERNIGHT"
+    ],
+    "matches_existing": false,
+    "text_count": 40
   }
 }

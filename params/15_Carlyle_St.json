@@ -180,7 +180,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -349,5 +350,16 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "AUTOMOTIVE",
+    "confidence": 0.996,
+    "all_texts": [
+      "AUTOMOTIVE",
+      "416-603-27",
+      "OPEN"
+    ],
+    "matches_existing": true,
+    "text_count": 17
   }
 }

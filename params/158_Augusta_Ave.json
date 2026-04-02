@@ -191,7 +191,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -422,5 +423,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "Bousta",
+    "confidence": 0.998,
+    "all_texts": [
+      "Bousta",
+      "THINGS",
+      "NOSRAT",
+      "SAMIN",
+      "GOOD"
+    ],
+    "matches_existing": false,
+    "text_count": 11
   }
 }

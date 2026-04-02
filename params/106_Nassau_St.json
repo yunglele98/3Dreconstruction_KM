@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "1889-1903",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
-    "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
+    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "",
     "general_use": "Residential",
-    "land_use": "Residential – Multi-Unit",
+    "land_use": "Residential \u2013 Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street – Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": null,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 5,
-    "residential_floors": "All floors (1–2)",
+    "residential_floors": "All floors (1\u20132)",
     "heritage_feature_count": null
   },
   "_meta": {
@@ -155,17 +155,21 @@
       "timestamp": "2026-03-29T08:34:16.028344Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:43.147364+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:37.634380+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A → #CE6C47",
-        "roof": "#5A5A5A → #5F5F5F",
-        "trim": "#E8E0D0 → #242424",
-        "accent": "#3A2A20 → #3F4736",
-        "mortar": "#B0A898 → #AEA698"
+        "facade": "#B85A3A \u2192 #CE6C47",
+        "roof": "#5A5A5A \u2192 #5F5F5F",
+        "trim": "#E8E0D0 \u2192 #242424",
+        "accent": "#3A2A20 \u2192 #3F4736",
+        "mortar": "#B0A898 \u2192 #AEA698"
+      },
+      {
+        "roof": "#5A5A5A \u2192 #5C5B5B",
+        "accent": "#3A2A20 \u2192 #4F3222"
       }
     ],
     "backfills": [
@@ -302,7 +306,7 @@
   },
   "street_setback_m": 0.0,
   "confidence": 0.9,
-  "facade_description": "106 Nassau St is a building with a street-facing facade. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+  "facade_description": "106 Nassau St is a building with a street-facing facade. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable. The facade reads primarily as mixed in a red brick palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
   "roof_material": "Slate shingles",
   "volumes": [],
   "deep_facade_analysis": {
@@ -393,8 +397,10 @@
     "trim_hex": "#3A2A20",
     "roof_hex": "#4A5A5A",
     "accent_hex": "#3A2A20",
-    "facade": "#944432",
-    "accent": "#808080"
+    "facade": "#CE6C47",
+    "accent": "#4F3222",
+    "trim": "#242424",
+    "roof": "#5C5B5B"
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

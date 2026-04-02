@@ -197,7 +197,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -457,5 +458,15 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "Chorizo",
+    "confidence": 0.983,
+    "all_texts": [
+      "Chorizo",
+      "Spansh]"
+    ],
+    "matches_existing": false,
+    "text_count": 27
   }
 }

@@ -176,7 +176,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -364,5 +365,18 @@
       "vehicles": 1
     },
     "total_facade_detections": 2
+  },
+  "signage_analysis": {
+    "detected_business_name": "UJAPE",
+    "confidence": 0.597,
+    "all_texts": [
+      "UJAPE",
+      "WASTE",
+      "1o /",
+      "@PEN",
+      "169"
+    ],
+    "matches_existing": false,
+    "text_count": 12
   }
 }

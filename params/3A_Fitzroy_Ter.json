@@ -46,7 +46,12 @@
     "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 57,
+    "significance": "low",
+    "extracted_features": [
+      "row_housing"
+    ]
   },
   "context": {
     "building_type": "",

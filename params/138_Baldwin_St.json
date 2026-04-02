@@ -266,7 +266,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -552,5 +553,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "REOPEAS VEGETABL",
+    "confidence": 0.637,
+    "all_texts": [
+      "REOPEAS VEGETABL",
+      "JERK SpOT",
+      "CATERING",
+      "DELIVERY",
+      "No Entry"
+    ],
+    "matches_existing": null,
+    "text_count": 39
   }
 }

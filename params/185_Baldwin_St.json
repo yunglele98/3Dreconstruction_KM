@@ -193,7 +193,8 @@
       }
     ],
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -434,5 +435,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "Latin America",
+    "confidence": 0.877,
+    "all_texts": [
+      "Latin America",
+      "Dry Frui",
+      "JIMMYS",
+      "COFFEE",
+      "Vida"
+    ],
+    "matches_existing": false,
+    "text_count": 14
   }
 }

@@ -46,7 +46,12 @@
     "statement_of_contribution": "The property has value as a nineteenth-century Ontario Cottage House-form building that reflects early workers’ housing within the District. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which included a large concentration of workers’ housing. The property retains the original composition of a central gable and door flanked by a window to either side. Contextually, the property shares a consistent setback, scale, and property supports and maintains is important in maintaining and supporting the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 56,
+    "significance": "low",
+    "extracted_features": [
+      "row_housing"
+    ]
   },
   "context": {
     "building_type": "residential",

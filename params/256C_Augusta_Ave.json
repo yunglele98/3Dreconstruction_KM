@@ -195,7 +195,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -375,5 +376,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "BY PERMIT",
+    "confidence": 0.702,
+    "all_texts": [
+      "BY PERMIT",
+      "Municipal",
+      "City of",
+      "WARNING",
+      "DUMPING"
+    ],
+    "matches_existing": false,
+    "text_count": 27
   }
 }

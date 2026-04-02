@@ -151,11 +151,11 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A → #A44E2E",
-        "roof": "#5A5A5A → #474545",
-        "trim": "#E8E0D0 → #322923",
-        "accent": "#2A3A2A → #3C3223",
-        "mortar": "#B0A898 → #BDAB92"
+        "facade": "#B85A3A \u2192 #A44E2E",
+        "roof": "#5A5A5A \u2192 #474545",
+        "trim": "#E8E0D0 \u2192 #322923",
+        "accent": "#2A3A2A \u2192 #3C3223",
+        "mortar": "#B0A898 \u2192 #BDAB92"
       }
     ],
     "sparse_field_promotions": [
@@ -199,7 +199,7 @@
     "opening_rhythm": "The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "mortar_colour_hex": "#BDAB92",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
-    "heritage_summary": "This house-form dates to the 1889-1903 period. Character-defining elements include its original massing and streetscape presence."
+    "heritage_summary": "Through its construction date and typology, each property is directly as. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles."
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -269,7 +269,14 @@
   "hcd_data": {
     "typology": "house-form",
     "construction_date": "1889-1903",
-    "source": "inferred_from_photo_analysis"
+    "source": "inferred_from_photo_analysis",
+    "statement_of_contribution": "Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly as",
+    "sub_area": "Market",
+    "heritage_score": 64,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "roof_material": "Slate shingles",
   "volumes": [],
@@ -410,5 +417,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "heritage_summary": "Through its construction date and typology, each property is directly as. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles."
 }

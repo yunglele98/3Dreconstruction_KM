@@ -173,7 +173,8 @@
       "door_count_promoted"
     ],
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "decorative_elements": {
@@ -364,5 +365,18 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "Latin American Varietv",
+    "confidence": 0.58,
+    "all_texts": [
+      "Latin American Varietv",
+      "Salamanca",
+      "Bulk Food",
+      "FLAMINGE",
+      "Fruits"
+    ],
+    "matches_existing": false,
+    "text_count": 22
   }
 }

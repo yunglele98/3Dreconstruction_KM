@@ -185,7 +185,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -441,5 +442,15 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "Splke",
+    "confidence": 0.948,
+    "all_texts": [
+      "Splke",
+      "RIMz"
+    ],
+    "matches_existing": false,
+    "text_count": 23
   }
 }

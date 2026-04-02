@@ -191,7 +191,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "photo_observations": {
@@ -517,5 +518,18 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "'TNGcommunityTO.c",
+    "confidence": 0.671,
+    "all_texts": [
+      "'TNGcommunityTO.c",
+      "Neichbourhood",
+      "416.9252103",
+      "Community =",
+      "@tngcs org"
+    ],
+    "matches_existing": false,
+    "text_count": 22
   }
 }

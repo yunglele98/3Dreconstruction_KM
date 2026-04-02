@@ -192,7 +192,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -463,5 +464,15 @@
       "vehicles": 1
     },
     "total_facade_detections": 2
+  },
+  "signage_analysis": {
+    "detected_business_name": "DENTIST",
+    "confidence": 0.988,
+    "all_texts": [
+      "DENTIST",
+      "Litter"
+    ],
+    "matches_existing": false,
+    "text_count": 7
   }
 }

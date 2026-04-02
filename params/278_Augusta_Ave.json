@@ -175,7 +175,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -532,5 +533,14 @@
       "vehicles": 0
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "GFL",
+    "confidence": 0.823,
+    "all_texts": [
+      "GFL"
+    ],
+    "matches_existing": false,
+    "text_count": 5
   }
 }

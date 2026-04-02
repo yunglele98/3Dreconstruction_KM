@@ -181,7 +181,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "decorative_elements": {
@@ -503,5 +504,17 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "416-301-7877",
+    "confidence": 0.704,
+    "all_texts": [
+      "416-301-7877",
+      "CALL",
+      "TEXT",
+      "FOR"
+    ],
+    "matches_existing": null,
+    "text_count": 13
   }
 }

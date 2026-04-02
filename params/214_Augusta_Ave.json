@@ -47,7 +47,13 @@
     "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. The property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled ended roof with finial and decorative bargeboard, lancet arch attic window, and two segmentally arched windows at the second storey. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 69,
+    "significance": "medium",
+    "extracted_features": [
+      "storefront",
+      "commercial_conversion"
+    ]
   },
   "context": {
     "building_type": "commercial",
@@ -194,7 +200,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -383,5 +390,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "CATERING AVAILABLE",
+    "confidence": 0.789,
+    "all_texts": [
+      "CATERING AVAILABLE",
+      "PROTEIN CHOICES",
+      "667-28602",
+      "BURRITOS",
+      "CEVICHES"
+    ],
+    "matches_existing": false,
+    "text_count": 56
   }
 }

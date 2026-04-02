@@ -197,7 +197,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -454,5 +455,17 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "SINcE",
+    "confidence": 0.72,
+    "all_texts": [
+      "SINcE",
+      "1957",
+      "DAI",
+      "220"
+    ],
+    "matches_existing": false,
+    "text_count": 75
   }
 }

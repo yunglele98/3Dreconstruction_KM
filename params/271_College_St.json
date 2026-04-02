@@ -151,17 +151,21 @@
       "timestamp": "2026-03-29T08:34:18.766325Z",
       "script": "match_photos_to_params.py"
     },
-    "colour_palette_rebuilt": "2026-03-29T08:35:45.271572+00:00",
+    "colour_palette_rebuilt": "2026-04-02T19:16:37.872560+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "storefront_enriched": "2026-03-29T08:38:13.865877Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "roof": "#5A5A5A → #494949",
         "trim": "#E8E0D0 → #292929",
         "accent": "#1A1A2A → #543C2A",
         "mortar": "#B0A898 → #C1B9A7"
+      },
+      {
+        "roof": "#5A5A5A → #514A4A",
+        "accent": "#1A1A2A → #2A3728"
       }
     ],
     "backfills": [
@@ -320,7 +324,12 @@
     "has_storefront": true,
     "photo": "IMG_20260316_002130853_HDR.jpg"
   },
-  "colour_palette": {},
+  "colour_palette": {
+    "facade": "#7A7A7A",
+    "trim": "#292929",
+    "roof": "#514A4A",
+    "accent": "#2A3728"
+  },
   "handoff_fixes_applied": true,
   "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",
   "wall_thickness_m": 0.3,

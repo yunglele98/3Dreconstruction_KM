@@ -37,33 +37,38 @@
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
-    "architectural_style": "House-form, Semi-detached (confirmed – HCD Plan Vol. 2)",
-    "construction_period": "Pre-1889 (confirmed – HCD Plan Vol. 2)",
+    "architectural_style": "House-form, Semi-detached (confirmed \u2013 HCD Plan Vol. 2)",
+    "construction_period": "Pre-1889 (confirmed \u2013 HCD Plan Vol. 2)",
     "construction_decade": 1880,
     "sub_area": "Residential",
     "contributing": "Yes",
     "hcd_plan_index": 103,
-    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s. Each property retains most of its original building features including a cross-gable roofline, double-height bay window, segmentally arched openings, and brick cladding. 98 Bellevue Avenue also retains its decorative bargeboards. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to the early 1900s. Each property retains most of its original building features including a cross-gable roofline, double-height bay window, segmentally arched openings, and brick cladding. 98 Bellevue Avenue also retains its decorative bargeboards. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street. Each property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
     "building_features": [
       "decorative_brick",
       "original_windows",
       "bay_window"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 57,
+    "significance": "low",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential – Multi-Unit",
+    "land_use": "Residential \u2013 Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential street | Tree-lined | Heritage character",
-    "morphological_zone": "Residential Interior – Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
+    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -82,7 +87,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 4,
-    "residential_floors": "All floors (1–3)",
+    "residential_floors": "All floors (1\u20133)",
     "heritage_feature_count": 3
   },
   "_meta": {
@@ -165,11 +170,11 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A → #A1492C",
-        "roof": "#5A5A5A → #605353",
-        "trim": "#3A2A20 → #3E2C21",
-        "accent": "#3A2A20 → #3B2B22",
-        "mortar": "#B0A898 → #AC9B81"
+        "facade": "#B85A3A \u2192 #A1492C",
+        "roof": "#5A5A5A \u2192 #605353",
+        "trim": "#3A2A20 \u2192 #3E2C21",
+        "accent": "#3A2A20 \u2192 #3B2B22",
+        "mortar": "#B0A898 \u2192 #AC9B81"
       }
     ],
     "sparse_field_promotions": [
@@ -213,6 +218,10 @@
         "category": "colour_palette",
         "applied_at": "2026-04-02T03:56:41.775729+00:00"
       }
+    ],
+    "normalized": true,
+    "normalizations_applied": [
+      "stone_lintels_bool_to_dict"
     ]
   },
   "bay_window": {
@@ -242,7 +251,10 @@
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
     },
-    "stone_lintels": true,
+    "stone_lintels": {
+      "present": true,
+      "colour_hex": "#D4C9A8"
+    },
     "gable_pattern": "decorative_brick"
   },
   "photo_observations": {
@@ -352,7 +364,7 @@
     "trim_colour_hex": "#3E2C21",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
-    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
+    "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window, cornice, stone lintels.",
     "heritage_summary": "98 Bellevue Avenue also retains its decorative bargeboards. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
     "mortar_colour_hex": "#AC9B81"
   },
@@ -410,7 +422,7 @@
     "colour_hex": "#B85A3A"
   },
   "street_setback_m": 3.0,
-  "facade_description": "100 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
+  "facade_description": "100 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window, cornice, stone lintels.",
   "heritage_summary": "98 Bellevue Avenue also retains its decorative bargeboards. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
   "roof_material": "Slate shingles",
   "volumes": [],

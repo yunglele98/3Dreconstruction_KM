@@ -46,7 +46,13 @@
     "statement_of_contribution": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, the property is associated with the District’s early residential development from the 1850s to the early 1900s. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century. Appearing in the City Directories as early as 1875, and housing commercial uses at the ground floor since 1889, the property retains the legibility of its original form above the first storey through its gable-ended roof. Contextually, the property is important in maintaining and supporting the historic mixed use character of the area and is physically, functionally, visually, and historically linked to the surrounding market area. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Nassau Street.",
     "building_features": [],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 69,
+    "significance": "medium",
+    "extracted_features": [
+      "storefront",
+      "commercial_conversion"
+    ]
   },
   "context": {
     "building_type": "mixed_use",
@@ -185,7 +191,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -441,5 +448,16 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "SIGNATURE",
+    "confidence": 0.932,
+    "all_texts": [
+      "SIGNATURE",
+      "SMOKING",
+      "230"
+    ],
+    "matches_existing": false,
+    "text_count": 19
   }
 }

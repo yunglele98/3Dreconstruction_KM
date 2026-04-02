@@ -51,7 +51,12 @@
       "original_windows"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 56,
+    "significance": "low",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "institutional",
@@ -199,7 +204,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "decorative_elements": {
@@ -523,5 +529,14 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "DCEM 2i3|",
+    "confidence": 0.641,
+    "all_texts": [
+      "DCEM 2i3|"
+    ],
+    "matches_existing": false,
+    "text_count": 2
   }
 }

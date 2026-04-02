@@ -192,7 +192,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -446,5 +447,16 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "SIRHISS",
+    "confidence": 0.969,
+    "all_texts": [
+      "SIRHISS",
+      "HEST",
+      "224"
+    ],
+    "matches_existing": false,
+    "text_count": 23
   }
 }

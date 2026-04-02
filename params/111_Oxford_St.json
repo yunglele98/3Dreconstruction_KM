@@ -48,7 +48,17 @@
       "original_windows"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 68,
+    "significance": "medium",
+    "extracted_features": [
+      "storefront",
+      "victorian_style",
+      "commercial_conversion",
+      "heritage_fabric",
+      "row_housing",
+      "semi_detached"
+    ]
   },
   "context": {
     "building_type": "residential",

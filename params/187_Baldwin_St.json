@@ -226,7 +226,8 @@
       "rule": "total_height_m in [2.4, 4.8] * floors"
     },
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "bay_window": {
@@ -531,5 +532,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "416 593 9949",
+    "confidence": 0.803,
+    "all_texts": [
+      "416 593 9949",
+      "RinGs",
+      "KINGS",
+      "FISH",
+      "SEA"
+    ],
+    "matches_existing": false,
+    "text_count": 9
   }
 }

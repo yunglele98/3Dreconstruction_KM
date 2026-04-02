@@ -24,5 +24,15 @@
     "lighting": "daytime",
     "agent": "claude-opus-4-6",
     "timestamp": "2026-03-25T01:00:00-04:00"
+  },
+  "hcd_data": {
+    "statement_of_contribution": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential dev",
+    "sub_area": "Market",
+    "typology": "Converted House-form, Row",
+    "heritage_score": 67,
+    "significance": "medium",
+    "extracted_features": [
+      "victorian_style"
+    ]
   }
 }

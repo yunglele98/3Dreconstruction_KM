@@ -167,7 +167,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -443,5 +444,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "KENSINGTON",
+    "confidence": 0.909,
+    "all_texts": [
+      "KENSINGTON",
+      "KING oF",
+      "@pen",
+      "217",
+      "219"
+    ],
+    "matches_existing": true,
+    "text_count": 29
   }
 }

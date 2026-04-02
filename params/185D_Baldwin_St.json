@@ -53,7 +53,7 @@
     "general_use": "Commercial",
     "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
-    "business_name": "",
+    "business_name": "Latin America",
     "business_category": "Art/Culture",
     "zoning": "CR",
     "is_vacant": false,
@@ -195,7 +195,8 @@
       "door_count_promoted"
     ],
     "fusion_applied": [
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -350,5 +351,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "Latin America",
+    "confidence": 0.877,
+    "all_texts": [
+      "Latin America",
+      "Dry Frui",
+      "JIMMYS",
+      "COFFEE",
+      "Vida"
+    ],
+    "matches_existing": null,
+    "text_count": 14
   }
 }

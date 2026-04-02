@@ -55,7 +55,12 @@
       "bay_window"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 56,
+    "significance": "low",
+    "extracted_features": [
+      "victorian_style"
+    ]
   },
   "context": {
     "building_type": "residential",
@@ -200,7 +205,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "bay_window": {
@@ -550,5 +556,14 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
+  },
+  "signage_analysis": {
+    "detected_business_name": "care",
+    "confidence": 0.995,
+    "all_texts": [
+      "care"
+    ],
+    "matches_existing": false,
+    "text_count": 4
   }
 }

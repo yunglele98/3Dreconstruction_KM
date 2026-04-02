@@ -49,7 +49,9 @@
       "original_windows"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 48,
+    "significance": "low"
   },
   "context": {
     "building_type": "residential",
@@ -166,7 +168,7 @@
     "colour_palette_rebuilt": "2026-03-29T08:35:43.129751+00:00",
     "setback_inferred": "2026-03-30T02:33:23.485405",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
-    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
         "facade": "#B85A3A → #BE8969",
@@ -174,6 +176,9 @@
         "trim": "#2A2A2A → #313030",
         "accent": "#3A2A20 → #2A3123",
         "mortar": "#B0A898 → #C5BEB0"
+      },
+      {
+        "facade": "#B85A3A → #BE8969"
       }
     ],
     "sparse_field_promotions": [
@@ -328,7 +333,7 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
+    "facade": "#BE8969",
     "trim": "#FFFFFF",
     "roof": "#5C5252",
     "accent": "#2A3123"

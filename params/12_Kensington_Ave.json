@@ -49,7 +49,14 @@
       "original_windows"
     ],
     "heritage_register": "Part V HCD Contributing",
-    "protection_level": 4
+    "protection_level": 4,
+    "heritage_score": 70,
+    "significance": "medium",
+    "extracted_features": [
+      "gable",
+      "storefront",
+      "commercial_conversion"
+    ]
   },
   "context": {
     "building_type": "residential",

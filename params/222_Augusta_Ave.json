@@ -188,7 +188,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "storefront": {
@@ -443,5 +444,18 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "SIRHISS",
+    "confidence": 0.92,
+    "all_texts": [
+      "SIRHISS",
+      "ALWAS",
+      "ZARA",
+      "Mill",
+      "224"
+    ],
+    "matches_existing": false,
+    "text_count": 31
   }
 }
