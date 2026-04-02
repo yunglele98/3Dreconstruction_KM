@@ -100,7 +100,7 @@ python scripts/export_street_profile_json.py  # street profiles JSON
 python scripts/generate_qa_report.py          # HTML dashboard + JSON report
 
 # === Utility ===
-python scripts/geocode_from_gis.py            # legacy: geocode from QGIS GeoJSON exports → archive/geocode.json
+python scripts/geocode_from_gis.py            # legacy: geocode from QGIS GeoJSON exports → geocode.json
 python scripts/fingerprint_params.py          # MD5 change detection for regen batches
 python scripts/build_regen_batches.py         # priority-ordered batch files for Blender regen
 ```
@@ -123,14 +123,14 @@ PostGIS (building_assessment + opendata.*)
 
 - `params/` — 2,064 JSON files (~1,241 active building params + ~820 skipped + 3 metadata files prefixed with `_`: `_site_coordinates.json`, `_analysis_summary.json`, `_address_aliases.auto.json`). Skipped entries have `"skipped": true` with `skip_reason`.
 - `batches/` — 8 photo analysis batch JSONs (50 buildings each) for Gemini/Codex agents.
-- `scripts/` — 291 Python scripts. Each uses `_atomic_write_json()` (temp file + `os.replace`) to prevent corruption on concurrent writes. Major categories:
+- `scripts/` — 291 Python scripts. Some enrichment scripts define `_atomic_write_json()` (temp file + `os.replace`) to prevent corruption on concurrent writes; most write JSON directly via `json.dump()`. Major categories:
   - **Unreal urban elements** (~118 scripts): `export_unreal_*.py` (20) → extract GIS/field data per element type; `build_unreal_*.py` (28) → Unreal import bundles, material instances, decal placements; `create_*_masters_free.py` (19) → free Megascans/Quixel master meshes; `create_*_hero_variants.py` (11) → hero variant meshes; `build_*_lods_billboards.py` (11) → LOD chains + billboard impostors; `build_*_material_presets.py` (12) → material preset JSON; `refine_*_instances.py` (11) → instance placement refinement; `build_*_photo_references.py` (6) → photo reference sheets. Element types: trees, signs, poles, street furniture, alleys, alley garages, bike racks, ground, intersections, parking, fences/gates, transit stops, waste, vertical hardscape, utilities, accessibility, service backlots, park furniture, graffiti, printables, roadmarks.
   - **Enrichment** (8): `enrich_skeletons.py`, `enrich_facade_descriptions.py`, `enrich_storefronts_advanced.py`, `enrich_porch_dimensions.py`, `enrich_window_details.py`, `enrich_doors_and_foundations.py`, `enrich_roof_and_heritage.py`, `enrich_dundas_sector.py`
   - **QA/audit** (16): `audit_*.py` (10) — params quality, structural consistency, storefront conflicts, generator contracts, decorative completeness, deep facade coverage, photo analysis depth, render manifest coverage, address normalization, unmapped materials; `qa_*.py` (6) — params gate, autofix height, autofix medium-low, photo fixes/verify, fix default dims
   - **Fixes** (12): `fix_*.py` — height inflation, structural consistency, params quality, generator contract gaps, bay windows, concrete colors, window/roof placements, handoff findings, etc.
   - **Export** (9 non-Unreal): `export_db_params.py`, `export_gis_scene.py`, `export_building_fbx.py`, `export_gltf.py`, `export_building_summary_csv.py`, `export_geojson.py`, `export_street_profile_json.py`, `export_full_scene.py`, `export_tree_photo_targets.py`
   - **Agent coordination** (5 + 2 runners): `agent_control_plane.py`, `agent_delegate_router.py`, `agent_heartbeat_watchdog.py`, `agent_dashboard_server.py`, `agent_ops_state.py`, `ollama_task_runner.py`, `gemini_task_runner.py`
-  - **Deep facade** (6): `deep_facade_pipeline.py` (unified CLI), `batch_deep_facade_*.py` (3 street batches), `merge_deep_facade_details.py`, `promote_deep_to_generator.py`
+  - **Deep facade** (7): `deep_facade_pipeline.py` (unified CLI), `batch_deep_facade_*.py` (4: analysis, augusta, backfill, oxford), `merge_deep_facade_details.py`, `promote_deep_to_generator.py`
   - **Colour/material** (7): `rebuild_colour_palettes.py`, `diversify_colour_palettes.py`, `map_megascans_materials.py`, `build_texture_atlas.py`, `backfill_material_sidecars.py`, `backfill_pbr_utility_maps.py`, `extract_facade_textures.py`
   - **Remaining** (~30): spatial analysis (`build_adjacency_graph.py`, `analyze_streetscape_rhythm.py`, `infer_setbacks.py`), DB access (`writeback_to_db.py`, `import_field_survey.py`, `db_config.py`, `check_db_health.py`), batch generation (`build_regen_batches.py`, `fingerprint_params.py`), Blender utilities (`batch_export_unreal.py`, `generate_lods.py`, `generate_collision_mesh.py`, `optimize_meshes.py`, `render_turntable.py`), schema transforms (`translate_agent_params.py`, `normalize_params_schema.py`, `patch_params_from_hcd.py`, `infer_missing_params.py`, `consolidate_depth_notes.py`), validation (`validate_export_pipeline.py`, `validate_all_params.py`, `validate_string_courses.py`), comparison (`compare_renders.py`, `ssim_compare.py`), demos, geocoding, and one-off fixes
 - `docs/` — 53 files: agent prompts (`AGENT_PROMPT.md`, launcher prompts per agent), workflow guides, batch prompts, factory audit docs, and deployment notes.
