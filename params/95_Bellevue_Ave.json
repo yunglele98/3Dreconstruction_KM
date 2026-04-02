@@ -197,6 +197,10 @@
       "chimney_count",
       "window_arrangement",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "bay_window": {
@@ -520,5 +524,31 @@
     }
   },
   "wall_thickness_m": 0.3,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.105,
+    "facade_depth_std": 0.0569,
+    "foundation_offset": 0.3145,
+    "roof_offset": -0.0285,
+    "bay_left_offset": -0.0317,
+    "bay_right_offset": 0.0139,
+    "facade_planarity": 0.715,
+    "bay_window_detected": false,
+    "setback_relative": -0.0616
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 148.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 1
+    },
+    "total_facade_detections": 1
+  }
 }

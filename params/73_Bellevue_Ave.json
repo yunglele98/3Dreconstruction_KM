@@ -178,6 +178,9 @@
     ],
     "sparse_field_promotions": [
       "porch_detail"
+    ],
+    "fusion_applied": [
+      "segmentation"
     ]
   },
   "decorative_elements": {
@@ -440,5 +443,15 @@
     "present": true,
     "type": "open"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

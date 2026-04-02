@@ -187,6 +187,10 @@
       "chimney_count",
       "window_arrangement",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "bay_window": {
@@ -523,5 +527,32 @@
       "type": "baluster"
     },
     "step_count": 2
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.2887,
+    "facade_depth_std": 0.1954,
+    "foundation_offset": 0.5393,
+    "roof_offset": -0.1452,
+    "bay_left_offset": 0.1758,
+    "bay_right_offset": 0.0012,
+    "facade_planarity": 0.023,
+    "bay_window_detected": true,
+    "setback_relative": -0.1183
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 755.0,
+    "bay_window_projection_m_est": 0.91
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
   }
 }

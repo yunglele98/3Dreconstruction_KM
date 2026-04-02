@@ -180,6 +180,10 @@
         "accent": "#3A2A20 → #182825",
         "mortar": "#B0A898 → #BEAF99"
       }
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -353,5 +357,31 @@
     "colour_palette_observed": {},
     "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2679,
+    "facade_depth_std": 0.0981,
+    "foundation_offset": 0.5029,
+    "roof_offset": -0.213,
+    "bay_left_offset": -0.0061,
+    "bay_right_offset": 0.0459,
+    "facade_planarity": 0.51,
+    "bay_window_detected": false,
+    "setback_relative": -0.0527
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

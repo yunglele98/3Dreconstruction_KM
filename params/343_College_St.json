@@ -43,14 +43,14 @@
     "typology": "",
     "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -63,8 +63,8 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -83,7 +83,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 5,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -156,15 +156,19 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #D46F53",
-        "roof": "#5A5A5A \u2192 #4D4C4C",
-        "trim": "#E8E0D0 \u2192 #432D1E",
-        "accent": "#3A2A20 \u2192 #2F3D2B",
-        "mortar": "#B0A898 \u2192 #BCAB93"
+        "facade": "#B85A3A → #D46F53",
+        "roof": "#5A5A5A → #4D4C4C",
+        "trim": "#E8E0D0 → #432D1E",
+        "accent": "#3A2A20 → #2F3D2B",
+        "mortar": "#B0A898 → #BCAB93"
       }
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -445,5 +449,32 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "handoff_fixes_applied": true
+  "handoff_fixes_applied": true,
+  "depth_analysis": {
+    "facade_depth_mean": 0.5245,
+    "facade_depth_std": 0.0454,
+    "foundation_offset": 0.314,
+    "roof_offset": -0.0063,
+    "bay_left_offset": -0.3328,
+    "bay_right_offset": 0.0013,
+    "facade_planarity": 0.773,
+    "bay_window_detected": true,
+    "setback_relative": 0.0003
+  },
+  "depth_notes": {
+    "setback_m_est": 0.0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 100,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 1,
+      "vehicles": 1
+    },
+    "total_facade_detections": 2
+  }
 }

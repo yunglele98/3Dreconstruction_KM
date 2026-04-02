@@ -40,28 +40,28 @@
     "typology": "",
     "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "mixed_use",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Honour Snack Bar",
     "business_category": "Bar/Nightlife",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -80,7 +80,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": null,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -162,15 +162,19 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #945142",
-        "roof": "#5A5A5A \u2192 #595858",
-        "trim": "#E8E0D0 \u2192 #252525",
-        "accent": "#1A1A2A \u2192 #4E4432",
-        "mortar": "#B0A898 \u2192 #BBAA90"
+        "facade": "#B85A3A → #945142",
+        "roof": "#5A5A5A → #595858",
+        "trim": "#E8E0D0 → #252525",
+        "accent": "#1A1A2A → #4E4432",
+        "mortar": "#B0A898 → #BBAA90"
       }
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -432,5 +436,32 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "handoff_fixes_applied": true
+  "handoff_fixes_applied": true,
+  "depth_analysis": {
+    "facade_depth_mean": 0.5024,
+    "facade_depth_std": 0.1179,
+    "foundation_offset": 0.1732,
+    "roof_offset": -0.2315,
+    "bay_left_offset": -0.1286,
+    "bay_right_offset": -0.1087,
+    "facade_planarity": 0.411,
+    "bay_window_detected": true,
+    "setback_relative": 0.0534
+  },
+  "depth_notes": {
+    "setback_m_est": 0.65,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.78
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

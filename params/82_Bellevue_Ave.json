@@ -194,6 +194,10 @@
       "window_arrangement",
       "porch_detail",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "bay_window": {
@@ -456,5 +460,32 @@
     "present": true,
     "type": "stoop"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3684,
+    "facade_depth_std": 0.1461,
+    "foundation_offset": 0.4909,
+    "roof_offset": -0.1964,
+    "bay_left_offset": -0.0728,
+    "bay_right_offset": -0.1303,
+    "facade_planarity": 0.269,
+    "bay_window_detected": true,
+    "setback_relative": -0.0228
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.68
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

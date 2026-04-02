@@ -4,149 +4,261 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Script-first Blender pipeline that generates parametric 3D models of ~1,241 historic Kensington Market buildings (Toronto). Converts heritage building data (PostGIS measurements + HCD typology + AI vision photo analysis) into JSON parameter files, then generates detailed Blender geometry with procedural materials.
+Hybrid pipeline for 3D reconstruction of ~1,064 historic Kensington Market buildings (Toronto): parametric generation (foundation) + photogrammetry (ground truth) + neural reconstruction (gap filling) + ML segmentation (automation) + urban analysis (context). Delivers to game engines, web planning platform, and heritage archives.
+
+**Dual purpose:**
+1. **Heritage reconstruction** — accurate 3D model of Kensington Market as it exists today
+2. **Urban planning platform** — baseline for testing 10-year city planning scenarios (infill, adaptive reuse, streetscape changes, densification, heritage preservation)
 
 Study area: Dundas St W (north) / Bathurst St (east) / College St (south) / Spadina Ave (west). Only the market-facing side of perimeter streets is in scope.
+
+**Key design docs:** `docs/PIPELINE_REDESIGN_V7.md` (full architecture), `docs/SPRINT_3_WEEK_PARALLEL.md` (execution plan), `docs/FACTORY_ALWAYS_ON.md` (always-on autonomous system), `docs/PHASE_0_VISUAL_AUDIT.md` (render vs photo comparison).
+
+**Sprint:** Day 1 = April 2, 2026. 3-week sprint, 14-agent fleet (5x Claude Code + 4 Gemini/Codex + 4 Ollama), ~$7 cloud GPU total.
+
+**Phase 0 (precedes all pipeline phases):** Visual audit comparing `outputs/buildings_renders_v1/` (parametric renders) against `PHOTOS KENSINGTON sorted/` (field photos). Produces ranked priority queue driving which buildings get photogrammetry, segmentation, or colour fixes.
+
+## V7 Pipeline Stages
+
+```
+ 0. ACQUIRE        Raw data ingestion (photos, PostGIS, iPad LiDAR, street view, open data)
+ 1. SENSE          Depth (Depth Anything v2), segmentation (YOLOv11+SAM2), normals, OCR, features
+ 2. RECONSTRUCT    COLMAP/OpenMVS photogrammetry, DUSt3R single-view, element extraction, splats
+ 3. ENRICH         Existing 6-script pipeline + 5 new fusion scripts (depth, seg, LiDAR, photog, signage)
+ 4. GENERATE       Hybrid selector: photogrammetric mesh (3+ photos) OR parametric (fallback)
+ 5. TEXTURE        Procedural materials + PBR extraction + AI texture projection + upscaling
+ 6. OPTIMIZE       LOD generation, collision mesh, mesh repair, validation
+ 7. ASSEMBLE       Buildings + 20 urban element categories + terrain + vegetation + roads
+ 8. EXPORT         UE Datasmith, Unity, CityGML LOD2+3, 3D Tiles, Potree, Gaussian splats, web platform
+ 9. VERIFY         pytest, param QA gate, visual regression (SSIM), mesh validation, segmentation validation
+10. MONITOR        Sentry, n8n heartbeat, batch job health, agent dashboard
+11. SCENARIOS      5 urban planning scenarios as JSON overlays + impact analysis (shadow, density, heritage)
+```
+
+**Generator fallback chain** (every `create_*` function): scanned element → external asset library → procedural.
 
 ## Commands
 
 ```bash
-# === Step 1: Export building params from PostGIS ===
+# === Phase 0: Visual Audit (render vs photo comparison) ===
+python scripts/visual_audit/run_full_audit.py                    # full audit (~35 min)
+python scripts/visual_audit/run_full_audit.py --limit 20         # quick test
+
+# === Batch Render (Blender 5.1) ===
+blender --background --python generate_building.py -- --params params/ --output-dir outputs/buildings_renders_v1/ --batch-individual --render
+blender --background --python generate_building.py -- --params params/ --output-dir outputs/buildings_renders_v1/ --batch-individual --render --skip-existing
+blender --background --python generate_building.py -- --params params/22_Lippincott_St.json --output-dir outputs/camera_test/ --batch-individual --render
+blender --background --python generate_building.py -- --params params/ --batch-individual --render --cycles  # GPU Cycles (slower, higher quality)
+
+# === Tests ===
+python -m pytest tests/ -q
+python -m pytest tests/test_enrich_skeletons.py -q   # single file
+python -m pytest tests/test_edge_cases.py::test_name  # single test
+
+# === Orchestration / status ===
+python scripts/run_blender_buildings_workflows.py route
+python scripts/run_blender_buildings_workflows.py control-plane
+python scripts/run_blender_buildings_workflows.py watchdog --mode once
+python scripts/run_blender_buildings_workflows.py dashboard --once-json
+
+# === Stage 0: ACQUIRE ===
 python scripts/export_db_params.py [--overwrite] [--street "Augusta Ave"]
 python scripts/export_db_params.py --address "22 Lippincott St"
+python scripts/acquire_ipad_scans.py --input scans/montreal/ --output data/ipad_scans/
+python scripts/acquire_extract_elements.py --input data/ipad_scans/ --output assets/scanned_elements/
+python scripts/acquire_streetview.py --source mapillary --bbox kensington
+python scripts/acquire_open_data.py --sources overture,toronto-trees,toronto-massing
 
-# === Step 2: Photo analysis (AI agents analyze field photos) ===
-python scripts/prepare_batches.py [--batch-size 50]
-# Then run agents:  claude 'Follow docs/AGENT_PROMPT.md to process batches/batch_001.json'
+# === Stage 1: SENSE ===
+python scripts/sense/extract_depth.py --model depth-anything-v2 --input "PHOTOS KENSINGTON/" --output depth_maps/
+python scripts/sense/segment_facades.py --input "PHOTOS KENSINGTON/" --output segmentation/ --model yolov11+sam2
+python scripts/sense/extract_normals.py --model dsine --input "PHOTOS KENSINGTON/"
+python scripts/sense/extract_signage.py --model paddleocr --input "PHOTOS KENSINGTON/" --output signage/
+python scripts/sense/extract_features.py --model lightglue+superpoint --input "PHOTOS KENSINGTON/" --output features/
 
-# === Step 2b: Deep facade analysis (3D-reconstruction-grade detail) ===
-# AI agents read each photo and extract per-floor windows, roof pitch, brick hex,
-# decorative elements, depth measurements, etc. Output: docs/<street>_deep_batch<N>.json
-# Then merge + promote into param files:
-python scripts/deep_facade_pipeline.py merge-street baldwin --promote
-python scripts/deep_facade_pipeline.py merge-street kensington --promote
-python scripts/deep_facade_pipeline.py audit                    # coverage by street
-python scripts/deep_facade_pipeline.py report baldwin           # per-building detail
+# === Stage 2: RECONSTRUCT ===
+python scripts/reconstruct/select_candidates.py --params params/ --photos "PHOTOS KENSINGTON/" --min-views 3
+python scripts/reconstruct/run_photogrammetry.py --candidates reconstruction_candidates.json --output point_clouds/colmap/
+python scripts/reconstruct/run_photogrammetry_block.py --block-graph outputs/spatial/adjacency_graph.json
+python scripts/reconstruct/run_dust3r.py --input "PHOTOS KENSINGTON/" --params params/ --max-views 2
+python scripts/reconstruct/clip_block_mesh.py --block-mesh meshes/blocks/<block>.obj --footprints postgis
+python scripts/reconstruct/extract_elements.py --meshes meshes/per_building/ --segmentation segmentation/
+python scripts/reconstruct/retopologize.py --input meshes/raw/ --output meshes/retopo/ --method instant-meshes
+python scripts/reconstruct/calibrate_defaults.py --elements assets/elements/metadata/element_catalog.json
+python scripts/reconstruct/train_splats.py --input point_clouds/colmap/ --output splats/
 
-# === Step 3: Enrichment pipeline (run in order, each is idempotent) ===
-python scripts/translate_agent_params.py      # flat agent output → structured dicts
-python scripts/enrich_skeletons.py            # typology/era-driven defaults
-python scripts/enrich_facade_descriptions.py  # prose facade descriptions
-python scripts/normalize_params_schema.py     # boolean→dict cleanup
-python scripts/patch_params_from_hcd.py       # HCD decorative feature merge
-python scripts/infer_missing_params.py        # fill remaining gaps (colour, roof, volumes)
+# === Stage 3: ENRICH (existing pipeline, run in order, each idempotent) ===
+python scripts/translate_agent_params.py
+python scripts/enrich_skeletons.py
+python scripts/enrich_facade_descriptions.py
+python scripts/normalize_params_schema.py
+python scripts/patch_params_from_hcd.py
+python scripts/infer_missing_params.py
+# New fusion scripts:
+python scripts/enrich/fuse_depth.py --depth-maps depth_maps/ --params params/
+python scripts/enrich/fuse_segmentation.py --segmentation segmentation/ --params params/
+python scripts/enrich/fuse_lidar.py --lidar lidar/building/ --params params/
+python scripts/enrich/fuse_photogrammetry.py --meshes meshes/retopo/ --params params/
+python scripts/enrich/fuse_signage.py --signage signage/ --params params/
+# Post-enrichment:
+python scripts/rebuild_colour_palettes.py
+python scripts/diversify_colour_palettes.py
+python scripts/match_photos_to_params.py
+python scripts/enrich_storefronts_advanced.py
+python scripts/enrich_porch_dimensions.py
+python scripts/infer_setbacks.py
+python scripts/consolidate_depth_notes.py
+python scripts/build_adjacency_graph.py
+python scripts/analyze_streetscape_rhythm.py
 
-# === Step 4: GIS site model ===
-python scripts/export_gis_scene.py            # full (with 3D massing)
-python scripts/export_gis_scene.py --no-massing
-
-# === Step 5: Blender generation ===
-blender --python gis_scene.py                                              # load site model
+# === Stage 4: GENERATE (Blender) ===
 blender --background --python generate_building.py -- --params params/22_Lippincott_St.json
-blender --background --python generate_building.py -- --params params/     # all buildings
-blender --background --python generate_building.py -- --params params/ --batch-individual --render --output-dir outputs/
+blender --background --python generate_building.py -- --params params/ --batch-individual --dry-run
 blender --background --python generate_building.py -- --params params/ --batch-individual --skip-existing
 blender --background --python generate_building.py -- --params params/ --batch-individual --match "Augusta" --limit 10
-blender --background --python generate_building.py -- --params params/ --batch-individual --dry-run
 
-# === DB writeback & field survey ===
-python scripts/writeback_to_db.py --migrate   # first time: adds columns
-python scripts/writeback_to_db.py             # writes all analyzed params
-python scripts/import_field_survey.py
-python scripts/link_attachments.py
+# === Stage 5-6: TEXTURE + OPTIMIZE ===
+python scripts/texture/extract_pbr.py --model intrinsic-anything --input "PHOTOS KENSINGTON/" --output textures/pbr/
+python scripts/texture/upscale_textures.py --model realesrgan --input textures/ --scale 4
+blender --background --python scripts/generate_lods.py -- --source-dir outputs/full/ --skip-existing
+blender --background --python scripts/generate_collision_mesh.py -- --source-dir outputs/full/
+python scripts/optimize_meshes.py --source-dir outputs/exports/
+python scripts/validate_export_pipeline.py --source-dir outputs/exports/
 
-# === QA & Audit ===
-python scripts/qa_params_gate.py              # pre-generation quality gate (checks required fields)
-python scripts/audit_params_quality.py        # comprehensive param quality report
-python scripts/audit_structural_consistency.py # check floor/height/volume consistency
-python scripts/audit_storefront_conflicts.py  # detect storefront vs window conflicts
-python scripts/fix_params_quality.py          # auto-fix common param issues
-python scripts/fix_structural_consistency.py  # auto-fix height/floor mismatches
-python scripts/fix_height_inflation.py        # correct inflated height values
-python scripts/qa_autofix_height.py           # targeted height fixes
-python scripts/qa_autofix_medium_low.py       # fix medium-low severity issues
+# === Stage 7-8: ASSEMBLE + EXPORT ===
+python scripts/export_gis_scene.py
+blender --background --python scripts/export_building_fbx.py -- --address "22 Lippincott St"
+blender --background --python scripts/batch_export_unreal.py -- --source-dir outputs/full/
+python scripts/build_unreal_datasmith.py
+python scripts/build_unity_prefab_manifest.py
+python scripts/export/export_citygml.py --lod 3 --output citygml/kensington_lod3.gml
+python scripts/export/export_3dtiles.py --input outputs/exports/ --output tiles_3d/
+python scripts/export/export_potree.py --input point_clouds/ --output web/potree/
+python scripts/export/build_web_data.py --params params/ --scenarios scenarios/ --output web/public/data/
+python scripts/export_deliverables.py
+python scripts/generate_qa_report.py
 
-# === Data Enrichment (post-agent, run in order) ===
-python scripts/rebuild_colour_palettes.py     # priority-chain colour resolution (1,241 palettes)
-python scripts/diversify_colour_palettes.py   # era/condition/street HSV jitter (949 unique hexes)
-python scripts/match_photos_to_params.py      # 9-strategy photo matching (98.6% coverage)
-python scripts/enrich_storefronts_advanced.py  # awning/signage/grille inference (537 enriched)
-python scripts/enrich_porch_dimensions.py     # era-based columns/railing/steps (87 enriched)
-python scripts/infer_setbacks.py              # street-type setback rules (441 inferred)
-python scripts/consolidate_depth_notes.py     # 5-field depth assembly (1,241 complete)
-python scripts/build_adjacency_graph.py       # neighbour detection, 287 blocks
-python scripts/analyze_streetscape_rhythm.py  # heritage quality scoring per street
+# === Stage 9: VERIFY ===
+python scripts/qa_params_gate.py --ci
+python scripts/audit_params_quality.py
+python scripts/audit_structural_consistency.py
+python scripts/audit_generator_contracts.py
+python scripts/verify/visual_regression.py --renders outputs/full/ --references outputs/qa_visual_check/
 
-# === Generator Contract Audit ===
-python scripts/audit_generator_contracts.py   # parse 66 create_* functions, validate params
-python scripts/fix_generator_contract_gaps.py # safe defaults for missing fields
+# === Stage 11: SCENARIOS ===
+python scripts/planning/apply_scenario.py --baseline params/ --scenario scenarios/10yr_gentle_density/
+python scripts/planning/analyze_density.py --scenario scenarios/10yr_gentle_density/
+python scripts/planning/shadow_impact.py --baseline params/ --scenario scenarios/10yr_gentle_density/
+python scripts/planning/heritage_impact.py --scenario scenarios/10yr_gentle_density/
+python scripts/planning/compare_scenarios.py --baseline outputs/full/ --scenario outputs/scenarios/gentle_density/
 
-# === Asset Export Pipeline (requires Blender) ===
-blender --background <blend> --python scripts/export_building_fbx.py -- --address "22 Lippincott St"
-blender --background --python scripts/batch_export_unreal.py -- --source-dir outputs/full/ [--limit 10]
-blender --background <blend> --python scripts/generate_lods.py -- --address "22 Lippincott St"
-blender --background <blend> --python scripts/generate_collision_mesh.py -- --address "22 Lippincott St"
-python scripts/optimize_meshes.py --source-dir outputs/exports/          # pymeshlab, no Blender
-python scripts/build_unreal_datasmith.py                                  # Datasmith XML scene
-python scripts/build_unity_prefab_manifest.py                             # Unity JSON manifest
-python scripts/build_texture_atlas.py                                     # 4K atlas from param materials
-python scripts/map_megascans_materials.py                                 # LAB colour → Megascans match
-python scripts/validate_export_pipeline.py                                # trimesh per-asset checks
-
-# === Deliverable Export ===
-python scripts/export_building_summary_csv.py # CSV summary of all buildings
-python scripts/export_geojson.py              # GeoJSON export
-python scripts/export_street_profile_json.py  # street profiles JSON
-python scripts/generate_qa_report.py          # HTML dashboard + JSON report
+# === DB writeback ===
+python scripts/writeback_to_db.py --migrate
+python scripts/writeback_to_db.py
 
 # === Utility ===
-python scripts/geocode_from_gis.py            # legacy: geocode from QGIS GeoJSON exports → geocode.json
-python scripts/fingerprint_params.py          # MD5 change detection for regen batches
-python scripts/build_regen_batches.py         # priority-ordered batch files for Blender regen
+python scripts/fingerprint_params.py
+python scripts/build_regen_batches.py
+python scripts/generate_coverage_matrix.py
 ```
 
 ## Architecture
 
-### Data flow
+### Data flow (V7)
 
 ```
-PostGIS (building_assessment + opendata.*)
-  → scripts/export_db_params.py → params/*.json (skeletons with real measurements)
-  → scripts/prepare_batches.py → batches/*.json (8 batches of 50)
-    → AI agents (Claude/Codex/Gemini) → merge visual details into params/*.json
-  → enrichment pipeline (6 scripts in order) → params/*.json (final)
-  → scripts/export_gis_scene.py → gis_scene.py + gis_scene.json (site model)
-  → generate_building.py (inside Blender) → .blend + .png + .manifest.json
+Raw Data Sources:
+  PostGIS (building_assessment + opendata.*) ─────┐
+  PHOTOS KENSINGTON/ (1,867 field photos) ────────┤
+  iPad LiDAR scans (Montreal proxy) ──────────────┤
+  Mapillary street view ──────────────────────────┤
+  Overture Maps / Toronto Open Data ──────────────┘
+                    │
+  Stage 0: ACQUIRE  │  → data/, params/*.json
+                    ▼
+  Stage 1: SENSE    → depth_maps/, segmentation/, normals/, signage/, features/
+                    ▼
+  Stage 2: RECONSTRUCT → point_clouds/, meshes/, splats/, assets/elements/
+                    ▼
+  Stage 3: ENRICH   → params/*.json (enriched + fused)
+                    ▼
+  Stage 4: GENERATE → outputs/full/ (.blend + .png + .manifest.json)
+                    ▼
+  Stage 5-6: TEXTURE + OPTIMIZE → textures/, LODs, collision meshes
+                    ▼
+  Stage 7-8: ASSEMBLE + EXPORT → Datasmith, CityGML, 3D Tiles, web/
+                    ▼
+  Stage 9-10: VERIFY + MONITOR → QA reports, Sentry, CI
+                    ▼
+  Stage 11: SCENARIOS → scenarios/*/ (JSON overlays + impact analysis)
+                    ▼
+  Web Planning Platform (CesiumJS + Potree + splats) → Vercel
 ```
 
-### Working data directories
+### Directory structure
 
-- `params/` — 2,064 JSON files (~1,241 active building params + ~820 skipped + 3 metadata files prefixed with `_`: `_site_coordinates.json`, `_analysis_summary.json`, `_address_aliases.auto.json`). Skipped entries have `"skipped": true` with `skip_reason`.
-- `batches/` — 8 photo analysis batch JSONs (50 buildings each) for Gemini/Codex agents.
-- `scripts/` — 291 Python scripts. Some enrichment scripts define `_atomic_write_json()` (temp file + `os.replace`) to prevent corruption on concurrent writes; most write JSON directly via `json.dump()`. Major categories:
-  - **Unreal urban elements** (~118 scripts): `export_unreal_*.py` (20) → extract GIS/field data per element type; `build_unreal_*.py` (28) → Unreal import bundles, material instances, decal placements; `create_*_masters_free.py` (19) → free Megascans/Quixel master meshes; `create_*_hero_variants.py` (11) → hero variant meshes; `build_*_lods_billboards.py` (11) → LOD chains + billboard impostors; `build_*_material_presets.py` (12) → material preset JSON; `refine_*_instances.py` (11) → instance placement refinement; `build_*_photo_references.py` (6) → photo reference sheets. Element types: trees, signs, poles, street furniture, alleys, alley garages, bike racks, ground, intersections, parking, fences/gates, transit stops, waste, vertical hardscape, utilities, accessibility, service backlots, park furniture, graffiti, printables, roadmarks.
-  - **Enrichment** (8): `enrich_skeletons.py`, `enrich_facade_descriptions.py`, `enrich_storefronts_advanced.py`, `enrich_porch_dimensions.py`, `enrich_window_details.py`, `enrich_doors_and_foundations.py`, `enrich_roof_and_heritage.py`, `enrich_dundas_sector.py`
-  - **QA/audit** (16): `audit_*.py` (10) — params quality, structural consistency, storefront conflicts, generator contracts, decorative completeness, deep facade coverage, photo analysis depth, render manifest coverage, address normalization, unmapped materials; `qa_*.py` (6) — params gate, autofix height, autofix medium-low, photo fixes/verify, fix default dims
-  - **Fixes** (12): `fix_*.py` — height inflation, structural consistency, params quality, generator contract gaps, bay windows, concrete colors, window/roof placements, handoff findings, etc.
-  - **Export** (9 non-Unreal): `export_db_params.py`, `export_gis_scene.py`, `export_building_fbx.py`, `export_gltf.py`, `export_building_summary_csv.py`, `export_geojson.py`, `export_street_profile_json.py`, `export_full_scene.py`, `export_tree_photo_targets.py`
-  - **Agent coordination** (5 + 2 runners): `agent_control_plane.py`, `agent_delegate_router.py`, `agent_heartbeat_watchdog.py`, `agent_dashboard_server.py`, `agent_ops_state.py`, `ollama_task_runner.py`, `gemini_task_runner.py`
-  - **Deep facade** (7): `deep_facade_pipeline.py` (unified CLI), `batch_deep_facade_*.py` (4: analysis, augusta, backfill, oxford), `merge_deep_facade_details.py`, `promote_deep_to_generator.py`
-  - **Colour/material** (7): `rebuild_colour_palettes.py`, `diversify_colour_palettes.py`, `map_megascans_materials.py`, `build_texture_atlas.py`, `backfill_material_sidecars.py`, `backfill_pbr_utility_maps.py`, `extract_facade_textures.py`
-  - **Remaining** (~30): spatial analysis (`build_adjacency_graph.py`, `analyze_streetscape_rhythm.py`, `infer_setbacks.py`), DB access (`writeback_to_db.py`, `import_field_survey.py`, `db_config.py`, `check_db_health.py`), batch generation (`build_regen_batches.py`, `fingerprint_params.py`), Blender utilities (`batch_export_unreal.py`, `generate_lods.py`, `generate_collision_mesh.py`, `optimize_meshes.py`, `render_turntable.py`), schema transforms (`translate_agent_params.py`, `normalize_params_schema.py`, `patch_params_from_hcd.py`, `infer_missing_params.py`, `consolidate_depth_notes.py`), validation (`validate_export_pipeline.py`, `validate_all_params.py`, `validate_string_courses.py`), comparison (`compare_renders.py`, `ssim_compare.py`), demos, geocoding, and one-off fixes
-- `docs/` — 53 files: agent prompts (`AGENT_PROMPT.md`, launcher prompts per agent), workflow guides, batch prompts, factory audit docs, and deployment notes.
-- `outputs/` — rendered Blender files and QA artifacts: `demos/` (pilot + block scenes), `gis_scene.json` (GIS site data), plus various QA autofix/revision JSON logs.
-- `PHOTOS KENSINGTON/` — 1,928 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index (columns: `filename`, `address_or_location`, `source`). Has its own `CLAUDE.md` describing photo review workflows.
-- `generator_modules/` — extracted modules from `generate_building.py` (see below).
-- `agent_ops/` — multi-agent coordination system for 5-10 parallel agents (Claude/Codex/Gemini/Ollama). Kanban-style workflow: `00_intake/` → `10_backlog/` → `20_active/<agent>/` → `30_handoffs/` → `40_reviews/` → `60_releases/` → `90_archive/`. File-based locking in `coordination/locks/`. See `agent_ops/README.md` for full workflow.
-- `tests/` — 62 test files + `conftest.py` (see Testing section).
-- `AGENTS.md` — Codex-oriented variant of CLAUDE.md (stale, lower counts). Kept for Codex agent compatibility.
-- `run_fbx_batch.ps1` — PowerShell batch FBX export launcher.
+**Existing:**
+- `params/` — ~2,060 JSON files (1,064 active + ~820 skipped). `_` prefix = metadata, `"skipped": true` = non-building.
+- `scripts/` — 300+ Python scripts. New V7 scripts go in subdirs: `scripts/sense/`, `scripts/reconstruct/`, `scripts/enrich/`, `scripts/texture/`, `scripts/analyze/`, `scripts/planning/`, `scripts/export/`, `scripts/verify/`, `scripts/monitor/`, `scripts/acquire/`.
+- `generator_modules/` — shared helpers factored out of the generator. Planned decomposition: `colours.py` (existing), `materials.py`, `geometry.py`, `walls.py`, `windows.py`, `doors.py`, `roofs.py`, `decorative.py`, `storefront.py`, `structure.py`, `batch.py`, `photogrammetric.py`.
+- `tests/` — 62 pytest test files.
+- `outputs/` — rendered `.blend` files: `full/`, `exports/`, `demos/`, `single/`.
+- `PHOTOS KENSINGTON/` — 1,867 geotagged field photos + `csv/photo_address_index.csv`.
+- `agent_ops/` — kanban: `00_intake/` → `10_backlog/` → `20_active/` → `30_handoffs/` → `40_reviews/` → `60_releases/` → `90_archive/`.
+- `docs/` — `PIPELINE_REDESIGN_V7.md`, `SPRINT_3_WEEK_PARALLEL.md`, `FACTORY_ALWAYS_ON.md`, agent prompts, runbooks.
 
-### `generate_building.py` (~9,800 lines)
+**New (V7):**
+- `data/` — `lidar/` (raw/classified/building .laz), `street_view/`, `open_data/` (*.geojson), `terrain/` (DEM .tif), `heritage/`, `training/` (COCO annotations), `ipad_scans/`.
+- `depth_maps/` — .npy + viz .png per photo (Depth Anything v2).
+- `segmentation/` — masks + elements JSON per photo (YOLOv11+SAM2).
+- `normals/` — .npy per photo (DSINE).
+- `signage/` — OCR results per photo (PaddleOCR).
+- `features/` — LightGlue+SuperPoint keypoints .h5 per photo.
+- `point_clouds/` — `colmap/` (multi-view .ply), `dust3r/` (single-view .ply), `lidar/` (per-building .laz clips).
+- `meshes/` — `raw/` (photogrammetric .obj), `retopo/` (quad remeshed .obj).
+- `splats/` — Gaussian splat .splat files.
+- `textures/` — `pbr/` (extracted), `projected/`, `upscaled/`.
+- `assets/` — `elements/by_era/`, `elements/by_type/`, `elements/textures/`, `elements/metadata/`, `external/` (megascans, polyhaven, ambientcg, kenney, etc.).
+- `citygml/` — LOD2 + LOD3 .gml exports.
+- `tiles_3d/` — 3D Tiles for CesiumJS.
+- `web/` — planning platform (CesiumJS + Potree + splats, Svelte/Vanilla TS, Vercel).
+- `scenarios/` — `baseline/`, `10yr_heritage_first/`, `10yr_gentle_density/`, `10yr_mixed_use/`, `10yr_green_infra/`, `10yr_mobility/`, `custom/`. Each has `interventions.json` overlay.
+
+### Always-On Factory (n8n)
+
+The system runs autonomously via n8n (Docker) + Cloudflare tunnel. See `docs/FACTORY_ALWAYS_ON.md`.
+
+**15 workflows:** WF-01 Heartbeat (10min), WF-02 Overnight Pipeline (10PM), WF-03 COLMAP Block, WF-04 Photo Ingestion, WF-05 Scenario Computation, WF-06 Web Deploy, WF-07 Error Recovery, WF-08 Morning Report (7AM), WF-09 Cloud GPU Session, WF-10 Asset Library Update, WF-11 Nightly Backup, WF-12 Weekly Audit, WF-13 Design Decision Ingest, WF-14 Montreal Scan Ingest, WF-15 Sprint Progress Tracker.
+
+**GPU lock:** Single-GPU machine (RTX 2080S). `.gpu_lock` file ensures one GPU job at a time. WF-02 and WF-03 check before starting.
+
+**Slack command centre:** `/status`, `/queue`, `/coverage`, `/building <addr>`, `/colmap <block>`, `/scenario <name>`, `/deploy`, `/cloud <type>`, `/sprint`, `/run <script>` (whitelisted).
+
+### Agent fleet (14 agents)
+
+- **Tier 1 (Claude Code, Opus 4.6 1M, Max 5x):** architect, reviewer, writer-1, writer-2, ops + claude-research (Claude.ai chat for design track)
+- **Tier 2 (Gemini API + Codex CLI):** gemini-batch-1/2 (Flash, n8n-automated), gemini-vision (Pro), codex-cli (manual)
+- **Tier 3 (Ollama, local):** qwen2.5-coder:7b (code), qwen2.5-coder:3b (validate), llava:7b (vision), mistral:7b (summarize)
+
+Task routing: architectural decisions → Claude; volume data processing → Gemini API; boilerplate scripts → Codex; lint/validate/format → Ollama.
+
+### Hybrid generation (V7)
+
+```python
+def select_method(params, address):
+    mesh = RETOPO_DIR / f"{sanitize(address)}.obj"
+    photos = len(params.get("matched_photos", []))
+    contributing = params.get("hcd_data", {}).get("contributing") == "Yes"
+    if mesh.exists() and photos >= 3 and contributing:
+        return "photogrammetric"    # import mesh + apply procedural materials + add parametric details
+    return "parametric"             # full procedural generation
+```
+
+Photogrammetric path: import retopologized mesh → apply procedural materials → add parametric details for unseen sides (party walls, rear, foundation, gutters). Procedural path: existing `generate_building()` with 30+ `create_*` functions.
+
+### `generate_building.py` (~6,200 lines)
 
 Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args are parsed after the `--` separator.
-
-**`generator_modules/`** — beginning of a decomposition of the monolith. Currently contains `colours.py` (pure Python: `hex_to_rgb`, `COLOUR_NAME_MAP`, era defaults). Planned modules: `materials.py` (bpy-dependent), `roofs.py`, `walls.py`, `decorative.py`, `porch.py`, `storefront.py`. Import via `from generator_modules.colours import *`.
 
 **Entry paths:**
 - Directory + `--batch-individual` → `generate_batch_individual()` — one `.blend` per building + manifest JSON
@@ -154,7 +266,7 @@ Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args
 
 **`load_and_generate()`** clears the scene, loads site coordinates from `params/_site_coordinates.json`, then for each param file resolves position (priority: site coords → legacy `geocode.json` → linear spacing fallback) and calls `generate_building()`.
 
-**`generate_building()`** applies defaults then calls 28 `create_*` functions in sequence (66 total `create_*` defs exist — 20 newer ones like `create_window_shutters`, `create_balconies`, `create_pilasters`, `create_sign_band`, `create_ground_floor_arches`, etc. are defined but not yet wired into the main call chain):
+**`generate_building()`** applies defaults then calls ~30 `create_*` functions in sequence:
 
 1. `apply_hcd_guide_defaults()` — scans `hcd_data.building_features` and `statement_of_contribution` for keywords (string course, quoin, voussoir, bargeboard, bracket, shingle, cornice, bay window, storefront, dormer, chimney, turret) and injects structured `decorative_elements` dicts if not already present. Also injects `bay_window` (width computed as `facade_width_m * 0.42`, clamped 1.8-2.6m), `has_storefront`, `storefront`, and `roof_features` entries.
 2. `get_era_defaults()` — brick colour, mortar, trim style, window arch type based on `hcd_data.construction_date`:
@@ -165,9 +277,9 @@ Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args
 
 Then the creation sequence:
 
-`create_walls` (1, hollow box, 0.3m wall thickness) → `cut_windows` (2) → `cut_doors` (3) → roof (4: `create_flat_roof`/`create_gable_roof`/`create_cross_gable_roof`/`create_hip_roof` + `create_gable_walls`) → `create_porch` (5) → `create_bay_window` (6) → `create_chimney` (7) → `create_storefront` (8) → `create_string_courses` (9) → `create_quoins` (10) → `create_tower` (11) → `create_bargeboard` (12, gable only) → `create_cornice_band` (13) → `create_corbelling` (13b) → `create_window_lintels` (14) → `create_stained_glass_transoms` (14b) → `create_brackets` (15) → `create_ridge_finial` (16, gable only) → `create_voussoirs` (17) → `create_gable_shingles` (18, gable only) → `create_dormer` (19) → `create_fascia_boards` (20) → `create_parapet_coping` (21) → `create_hip_rooflet` (21a) → `create_gabled_parapet` (21b) → `create_turned_posts` (22) → `create_storefront_awning` (23) → `create_foundation` (24) → `create_gutters` (25) → `create_chimney_caps` (26) → `create_porch_lattice` (27) → `create_step_handrails` (28)
+`create_walls` (hollow box, 0.3m wall thickness, material assigned by `facade_material`: brick→`create_brick_material`, paint/stucco/clapboard→`create_painted_material`) → `cut_windows` (reads `windows_detail` per-floor specs, skips ground floor if storefront, supports bay-based layouts and gable/attic windows, avoids door overlap) → `cut_doors` (`_resolve_doors` collects from 4 sources: `doors_detail`, `ground_floor_arches`, `windows_detail[].entrance`, `storefront.entrance`) → roof (`create_flat_roof` / `create_gable_roof` / `create_cross_gable_roof` / `create_hip_roof`, plus `create_gable_walls` for triangular infill) → `create_porch` → `create_bay_window` (canted 3-sided or box, supports double-height via `floors_spanned`, position: left/center/right) → `create_chimney` → `create_storefront` → `create_string_courses` → `create_quoins` → `create_tower` → `create_bargeboard` (gable roofs only) → `create_cornice_band` → `create_corbelling` → `create_window_lintels` → `create_stained_glass_transoms` → `create_brackets` → `create_ridge_finial` (gable only) → `create_voussoirs` → `create_gable_shingles` (gable only) → `create_dormer` → `create_fascia_boards` → `create_parapet_coping` → `create_hip_rooflet` → `create_gabled_parapet` → `create_turned_posts` → `create_storefront_awning` → `create_foundation` → `create_gutters` → `create_chimney_caps` → `create_porch_lattice` → `create_step_handrails`
 
-Each `create_*` returns a list of Blender objects. After creation, objects are joined by name prefix via `join_by_prefix()` (~37 prefixes: `frame_`, `glass_`, `muntin_`, `baluster_`, `lintel_`, `sill_`, `bracket_`, `voussoir_`, `shingle_`, `fascia_`, `soffit_`, `parapet_`, `coping_`, `gutter_`, `downspout_`, `quoin_`, `string_course_`, `cornice_`, `transom_`, etc.), then collected into a per-building collection.
+Each `create_*` returns a list of Blender objects. After creation, objects with matching name prefixes (`frame_`, `glass_`, `lintel_`) are joined via `join_by_prefix()`, then collected into a per-building collection.
 
 **Multi-volume buildings** (`"volumes": [...]`) take a separate path via `generate_multi_volume()`. Volumes are placed side by side (x_cursor tracks position). Each volume can have its own facade material, floors, roof type. Example: 132 Bellevue Ave fire station (main hall + tower + residential wing).
 
@@ -191,7 +303,7 @@ Each script reads `params/*.json`, modifies in place, and writes back. The `_met
    - `BRICK_COLOURS`: red→`#B85A3A`, buff→`#D4B896`, brown→`#7A5C44`, cream→`#E8D8B0`, orange→`#C87040`, grey→`#8A8A8A`
    - `TRIM_COLOURS_BY_ERA`: pre-1889→`#3A2A20` (dark brown), 1904-1913→`#2A2A2A` (near-black), 1931+→`#F0EDE8` (cream)
    - `ROOF_COLOURS`: grey→`#5A5A5A`, slate→`#4A5A5A`, brown→`#6A5040`, red→`#8A3A2A`
-   - Only processes files where `source` is `"hcd_plan_only"` or `"hcd_plan_skeleton"` — skips all others.
+   - Skips files where `source != "hcd_plan_only"`.
 
 3. **`enrich_facade_descriptions.py`** — generates prose `facade_detail.composition`, `opening_rhythm`, `heritage_expression`, `heritage_summary` from structured params.
 
@@ -220,7 +332,7 @@ ORIGIN_X = 312672.94,  ORIGIN_Y = 4834994.86
 
 ### PostGIS database
 
-Configured in `scripts/db_config.py` via env vars with fallbacks: `PGHOST` (localhost), `PGPORT` (5432), `PGDATABASE` (kensington), `PGUSER` (postgres), `PGPASSWORD` (test123).
+`localhost:5432`, database `kensington`, user `postgres`, password `test123`.
 
 - `building_assessment` — 1,075 buildings with `ADDRESS_FULL`, `ba_street`, `ba_street_number`, `ba_building_type`, `ba_stories`, `ba_facade_material`, LiDAR heights (`height_max_m`, `height_avg_m`), lot dims (`lot_width_ft`, `lot_depth_ft`), HCD typology (`hcd_typology`, `hcd_construction_date`, `hcd_contributing`), + 38 photo analysis columns (added by `writeback_to_db.py --migrate`: `photo_analyzed`, `photo_date`, `photo_agent`, observed colours/materials/condition)
 - `opendata.*` — `building_footprints` (addresses + 2D polygons), `massing_3d` (3D polygons with `AVG_HEIGHT`), `road_centerlines`, `sidewalks`
@@ -229,7 +341,7 @@ Configured in `scripts/db_config.py` via env vars with fallbacks: `PGHOST` (loca
 
 ### GIS scene
 
-`gis_scene.py` + `gis_scene.json`: 753 footprints, 464 3D massing shapes, 162 road centerlines, 41 alleys, 530 field survey features. All in local metres from centroid. Variant: `smoke_gis_scene.py` (quick validation).
+`gis_scene.py` + `gis_scene.json`: 753 footprints, 464 3D massing shapes, 162 road centerlines, 41 alleys, 530 field survey features. All in local metres from centroid. Variants: `smoke_gis_scene.py` (quick validation), `strict_gis_scene.py` (strict error handling).
 
 ### Agent coordination scripts
 
@@ -244,6 +356,26 @@ Configured in `scripts/db_config.py` via env vars with fallbacks: `PGHOST` (loca
 .\scripts\start_agent_ops.ps1 -StartControlLoop -StartOllamaRunner -StartGeminiRunner -OllamaAutoComplete
 ```
 
+### Scenario framework
+
+Each scenario is a JSON overlay on baseline params in `scenarios/<name>/interventions.json`:
+```json
+{"scenario_id": "gentle_density", "interventions": [
+  {"address": "22 Lippincott St", "type": "add_floor", "params_override": {"floors": 3}},
+  {"address": "LANEWAY_BEHIND_22_Lippincott", "type": "new_build", "params": {...}}
+]}
+```
+Intervention types: `add_floor`, `new_build`, `convert_ground`, `facade_renovation`, `demolish`, `green_roof`, `add_patio`, `bike_infra`, `tree_planting`, `pedestrianize`, `heritage_restore`, `signage_update`.
+
+### Web planning platform
+
+CesiumJS + Potree + Gaussian splats, hosted on Vercel. Features: building inspector (click → param card + photo), scenario A/B comparison (split slider), shadow analysis (time slider + season), heritage overlay (era/typology filters), timeline scrubber (1858–2036), urban metrics dashboard (density, FSI, canopy, walkability), intervention proposer, street-level view. Stack: CesiumJS, Potree, SuperSplat/gsplat.js, Svelte or Vanilla TS, D3.js, Vercel.
+
+```bash
+cd web && npm run build
+# Deploy via Vercel MCP or: vercel --prod
+```
+
 ## Parameter JSON Schema
 
 Each building is a JSON file in `params/` (filename: `22_Lippincott_St.json`, spaces → `_`). Files starting with `_` are metadata, not building params. Files with `"skipped": true` are non-building photos.
@@ -256,7 +388,7 @@ Each building is a JSON file in `params/` (filename: `22_Lippincott_St.json`, sp
 - `context` — `building_type`, `general_use`, `land_use`, `commercial_use`, `business_name`, `business_category`, `zoning`, `is_vacant`, `street_character`, `morphological_zone`, `development_phase`
 - `assessment` — `condition_rating` (1-5), `condition_issues`, `structural_concern`, `risk_score`, `signage`, `street_presence`
 - `city_data` — `height_max_m`, `height_avg_m`, `footprint_sqm`, `gfa_sqm`, `fsi`, `lot_width_ft`, `lot_depth_ft`, `dwelling_units`, `residential_floors`, `heritage_feature_count`
-- `_meta` — `address`, `source` ("postgis_export"), `translated` (bool), `translations_applied` (array), `enriched` (bool), `enrichment_source`, `gaps_filled` (bool), `inferences_applied` (array: roof_material, colour_palette, volumes, roof_detail)
+- `_meta` — `address`, `source` ("postgis_export"), `translated` (bool), `translations_applied` (array), `enriched` (bool), `enrichment_source`, `gaps_filled` (bool), `inferences_applied` (array), `fusion_applied` (array: "depth", "segmentation", "signage"), `has_photogrammetric_mesh` (bool), `photogrammetric_mesh_path`, `generation_method` ("parametric"/"photogrammetric"), `element_sources` (dict: {"cornice": "scan", "windows": "library", "walls": "procedural"})
 - `decorative_elements` — `decorative_brickwork` (`{present}`), `bargeboard` (`{colour_hex, style, width_mm}`), `bay_window_shape` (canted/box/oriel), `bay_window_storeys`, `string_courses` (`{present, width_mm, projection_mm, colour_hex}`), `quoins` (`{present, strip_width_mm, projection_mm, colour_hex}`), `stone_voussoirs` (`{present, colour_hex}`), `stone_lintels` (`{present, colour_hex}`), `cornice` (`{present, projection_mm, height_mm, colour_hex}`), `ornamental_shingles` (`{present, colour_hex, exposure_mm}`), `gable_brackets` (`{type, count, projection_mm, height_mm, colour_hex}`)
 - `doors_detail` — array of `{id, type, position (left/center/right), width_m, height_m, transom: {present, height_m, type (glazed)}, colour, colour_hex, material, is_glass, awning}`
 - `facade_detail` — `brick_colour_hex`, `bond_pattern` (running bond), `mortar_colour`, `mortar_joint_width_mm`, `trim_colour_hex`, `composition` (prose), `opening_rhythm` (prose), `heritage_expression`, `heritage_summary`
@@ -272,7 +404,7 @@ Each building is a JSON file in `params/` (filename: `22_Lippincott_St.json`, sp
 
 ## Photo Analysis Rules (docs/AGENT_PROMPT.md)
 
-AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,928 photos). 8 batches of 50 buildings each in `batches/batch_NNN.json`, dispatched to parallel Gemini/Codex agents.
+AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,867 photos). 8 batches of 50 buildings each in `batches/batch_NNN.json`, dispatched to parallel Gemini/Codex agents.
 
 - **NEVER overwrite:** `total_height_m`, `facade_width_m`, `facade_depth_m`, `site.*`, `city_data.*`, `hcd_data.*`
 - **ALWAYS update:** `facade_colour`, `windows_per_floor`, `window_type`, `window_arrangement`, `door_count`, `door_type`, `condition`, `roof_features`, `chimneys`, `porch_present`, `porch_type`, `balconies`, `balcony_type`, `cornice`, `bay_windows`, `ground_floor_arches`
@@ -281,7 +413,7 @@ AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and
 - Multiple photos per address: use the best facade photo, produce one update per unique address
 - Non-building photos (murals, lanes, signs) → `"skipped": true` with `skip_reason`
 
-**Field photos** (`PHOTOS KENSINGTON/`) contain 1,928 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
+**Field photos** (`PHOTOS KENSINGTON/`) contain 1,867 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
 
 ## Testing
 
@@ -290,13 +422,9 @@ Unit tests for enrichment pipeline scripts live in `tests/` and run with pytest:
 ```bash
 python -m pytest tests/                          # all tests
 python -m pytest tests/test_enrich_skeletons.py  # single module
-python -m pytest tests/test_enrich_skeletons.py -k "test_brick_colour"  # single test
-python -m pytest tests/ -x                       # stop on first failure
 ```
 
-~63 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, QA report, Megascans mapping, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8 Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
-
-**`conftest.py` workaround:** A ghost `scripts/__init__.py` (mount-sync artifact) makes Python treat `scripts/` as a package, breaking bare imports. The conftest pre-registers every `scripts/*.py` as a top-level module in `sys.modules`. Scripts that need `bpy` will fail to import and are silently skipped — their import errors surface at test time instead.
+62 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, QA report, Megascans mapping, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8 Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
 
 For visual/integration validation:
 1. Run scripts on a narrow sample first (`--address "22 Lippincott St"`)
@@ -306,12 +434,12 @@ For visual/integration validation:
 
 ## Dependencies
 
-- **Blender 3.x+** (`bpy`, `bmesh`, `mathutils`) — generate_building.py and gis_scene.py run inside Blender
-- **Python 3.10+**
-- **psycopg2-binary** — all PostGIS access scripts (via `scripts/db_config.py`)
+- **Blender 5.0 CLI** at `C:\Program Files\Blender Foundation\Blender 5.0\blender.exe` (Blender 3.x+ APIs are the baseline for `bpy`, `bmesh`, `mathutils`)
+- **Python 3.10+**, **pytest**
+- **psycopg2-binary** — all PostGIS access scripts
 - **PostgreSQL 18** with PostGIS
-- **pytest** — test runner
-- **Optional:** `pymeshlab` (mesh optimization), `trimesh` (export validation), `Pillow` (texture atlas, PBR maps, decal extraction), `numpy` (facade textures, photogrammetry comparison, decals)
+- **V7 additions:** Depth Anything v2, SAM2, YOLOv11, DSINE, PaddleOCR, LightGlue+SuperPoint (Stage 1); COLMAP, OpenMVS, DUSt3R/MASt3R, Instant Meshes, gsplat (Stage 2); RealESRGAN, Intrinsic Anything (Stage 5); py3dtiles, PotreeConverter, cjio (Stage 8); sentry-sdk (Stage 10)
+- **Infrastructure:** Docker (n8n + Cloudflare tunnel), Jarvislabs CLI (`jl`) for cloud GPU ($1.49/hr A100), Vercel (free tier)
 
 ## Style
 

@@ -1,0 +1,483 @@
+{
+  "building_name": "77-79 Kensington Ave (Blaze District / Dirty Bird)",
+  "floors": 3,
+  "floor_heights_m": [
+    3.89,
+    3.31,
+    3.31
+  ],
+  "total_height_m": 10.5,
+  "facade_width_m": 10.0,
+  "facade_depth_m": 20.0,
+  "roof_type": "flat",
+  "roof_pitch_deg": 0,
+  "roof_features": [],
+  "facade_material": "Stucco",
+  "facade_colour": "painted (painted stucco/render)",
+  "windows_per_floor": [
+    0,
+    4,
+    4
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.7,
+  "window_height_m": 1.2,
+  "door_count": 3,
+  "has_storefront": true,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "white/cream clapboard upper floors, dark commercial ground with colourful signage",
+    "facade_material_observed": "painted stucco/render (white/cream)",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      4,
+      4
+    ],
+    "has_storefront_observed": true,
+    "signage_observed": "'UNREGULATED - CHICKEN + WAFFLES'; 'PREMIUM CANNABIS 437-580-7418'; cannabis product list (VAPES, HASH, FLOWERS, EDIBLES, CHOCOLATES, INFUSED PREROLLS); 'Phoenix' brand",
+    "overall_style": "Vernacular",
+    "confidence": 0.7,
+    "notes": "nighttime; three-storey white clapboard; multiple commercial tenants",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_013528716_HDR.jpg",
+    "facade_analysis_address": "77-79 Kensington Ave (Blaze District / The Dirty Bird Chicken + Waffles (closed))",
+    "storeys_observed": 2,
+    "condition_observed": "fair; upper facade clean but plain; ground floor commercial modifications; cannabis shop and restaurant",
+    "windows_observed": {
+      "upper_floors": "multiple windows visible on 2nd and possibly 3rd floors; rectangular with dark frames; multi-pane (6-over-6 or similar traditional pattern)",
+      "ground_floor": "large commercial storefronts"
+    },
+    "doors_observed": "commercial entrances",
+    "roof_type_observed": "flat with parapet",
+    "decorative_elements_observed": "minimal; painted smooth facade; fire escape structure visible on upper floors",
+    "storefront_description": "right unit: 'Unregulated - CHICKEN + WAFFLES' restaurant; dark signage; lit menu displays; left unit: 'PREMIUM CANNABIS' shop with phone number 437-580-7418; colourful graphic signage; 'Phoenix' brand products; fire-themed graphics",
+    "party_walls_observed": "party wall visible at right (concrete/stucco)",
+    "colour_palette_observed": {
+      "primary": "white/cream (upper painted)",
+      "accent": "dark/black (signage), fire orange/red (cannabis shop graphics)"
+    },
+    "photo_quality": "night, rotated 90 degrees",
+    "photo": "IMG_20260320_013528716_HDR.jpg"
+  },
+  "_meta": {
+    "address": "77-79 Kensington Ave",
+    "photo": "IMG_20260320_013528716_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "window_type_diversity"
+    ],
+    "reference_photos": [
+      "IMG_20260320_013528716_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "candidate_range_anchor",
+    "db_address_full": "77 Kensington Ave",
+    "db_address_candidates": [
+      "77-79 KENSINGTON AVE",
+      "77 KENSINGTON AVE",
+      "78 KENSINGTON AVE",
+      "79 KENSINGTON AVE"
+    ],
+    "db_revision_ts": "2026-03-30T02:24:22",
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "eave_overhang_mm: 200",
+      "floor_heights_m: [4.5, 3.0, 3.0] -> [3.89, 3.31, 3.31]",
+      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
+      "facade_detail.bond_pattern: 'n/a'",
+      "colour_palette enriched from observations",
+      "facade_colour updated: painted observation",
+      "foundation_height_m: 0.2"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:51:14.591101+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)",
+          "door.material: glass_and_aluminum",
+          "door.colour_hex: #1A1A2A (black frame)"
+        ],
+        "timestamp": "2026-03-29T08:05:50.165930+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.949764+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:23.287763Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "storefront_enriched": "2026-03-29T08:38:17.849241Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "trim": "#E8E0D0 → #422B1E",
+        "mortar": "#B0A898 → #AFA799"
+      }
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "overall_style": "Vernacular",
+  "confidence": 0.9,
+  "notes": "nighttime; three-storey white clapboard; multiple commercial tenants",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "Single-leaf panelled door",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
+    },
+    {
+      "id": "door_1",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
+    },
+    {
+      "id": "door_2",
+      "type": "Single-leaf panelled door",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      },
+      "material": "glass_and_aluminum",
+      "colour_hex": "#1A1A2A",
+      "colour": "black frame"
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 8.5,
+    "height_m": 3.4,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 5,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix",
+    "signage_text": "DIRTY BIRD - CHICKEN + WAFFLES (right); BLAZE DISTRICT CANNABIS (left, with phone 437-580-7418)",
+    "awning": {
+      "present": true,
+      "type": "fixed box",
+      "colour": "black"
+    },
+    "width_pct": 90,
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
+  },
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#B85A3A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#422B1E",
+    "composition": "The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using double hung, and 3 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "mortar_colour_hex": "#AFA799"
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 200
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "6-over-6",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 1.2,
+          "height_m": 1.5,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "6-over-6",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 1.2,
+          "height_m": 1.5,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "projection_mm": 100,
+      "height_mm": 200,
+      "colour_hex": "#E8E0D0",
+      "note": "simple projecting cornice at roofline"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "77-79 Kensington Ave (Blaze District / Dirty Bird) is a commercial building with a street-level storefront. The street frontage spans roughly 10 metres across 3 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by stucco, laid in n/a with light grey mortar joints. The facade is organized as a storefront base with 4 upper-window bays and 4 additional bays above, using double hung, and 3 principal entrances. Key storefront and facade features include cornice.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "colour_palette": {
+    "facade_hex": "#E8D8B0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B85A3A",
+    "trim": "#422B1E",
+    "roof": "#4A4A4A",
+    "accent": "#2A2A2A"
+  },
+  "volumes": [],
+  "site": {
+    "lon": -79.4005168,
+    "lat": 43.65468985,
+    "street": "Kensington Ave",
+    "street_number": 77
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_013528716_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 3,
+    "has_half_storey_gable": false,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.85
+    ],
+    "facade_material_observed": "painted stucco/render",
+    "brick_colour_hex": null,
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "n/a",
+    "polychromatic_brick": null,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 0,
+        "note": "two commercial storefronts - Blaze District Cannabis and Dirty Bird Chicken & Waffles"
+      },
+      {
+        "floor": "second",
+        "count": 4,
+        "type": "6-over-6",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.12,
+        "height_m_est": 1.5
+      },
+      {
+        "floor": "third",
+        "count": 4,
+        "type": "6-over-6",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.12,
+        "height_m_est": 1.5
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour": "black",
+        "note": "Blaze District entrance"
+      },
+      {
+        "position": "center",
+        "type": "residential access",
+        "width_m_est": 0.8,
+        "transom": false,
+        "steps": 0,
+        "colour": "dark"
+      },
+      {
+        "position": "right",
+        "type": "commercial glass",
+        "width_m_est": 0.9,
+        "transom": false,
+        "steps": 0,
+        "colour": "black",
+        "note": "Dirty Bird entrance"
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "roof_material": "built-up membrane",
+    "roof_colour_hex": "#4A4A4A",
+    "bargeboard": {
+      "present": false
+    },
+    "gable_window": {
+      "present": false
+    },
+    "bay_window_observed": {
+      "present": false
+    },
+    "storefront_observed": {
+      "width_pct": 90,
+      "signage_text": "DIRTY BIRD - CHICKEN + WAFFLES (right); BLAZE DISTRICT CANNABIS (left, with phone 437-580-7418)",
+      "awning": {
+        "present": true,
+        "type": "fixed box",
+        "colour": "black"
+      },
+      "entrance_position": "distributed",
+      "security_grille": false,
+      "notes": "Large 3-storey building with two ground-floor commercial units. Dirty Bird occupies right side with illuminated signs and menu boards. Blaze District Cannabis on left with colourful cannabis-themed signage and backlit display. Upper two floors have matching 6-over-6 sash windows, 4 per floor, painted white frames on cream/white stucco facade. Building wider than typical Kensington row houses."
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": true,
+        "projection_mm": 100,
+        "height_mm": 200,
+        "colour_hex": "#E8E0D0",
+        "note": "simple projecting cornice at roofline"
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#E8E0D0",
+      "trim": "#F0F0F0",
+      "roof": "#4A4A4A",
+      "accent": "#2A2A2A"
+    },
+    "condition_observed": "fair"
+  },
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.4637,
+    "facade_depth_std": 0.058,
+    "foundation_offset": 0.2349,
+    "roof_offset": -0.3545,
+    "bay_left_offset": -0.0089,
+    "bay_right_offset": -0.0028,
+    "facade_planarity": 0.71,
+    "bay_window_detected": false,
+    "setback_relative": 0.0227
+  },
+  "depth_notes": {
+    "setback_m_est": 0.45,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
+}

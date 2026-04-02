@@ -203,6 +203,10 @@
     ],
     "backfills": [
       "era_normalized:1890-1903->1889-1903"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -447,5 +451,32 @@
     },
     "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.5137,
+    "facade_depth_std": 0.0428,
+    "foundation_offset": 0.2419,
+    "roof_offset": -0.2455,
+    "bay_left_offset": 0.0503,
+    "bay_right_offset": -0.034,
+    "facade_planarity": 0.786,
+    "bay_window_detected": true,
+    "setback_relative": -0.0086
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.26
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

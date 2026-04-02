@@ -251,6 +251,9 @@
     },
     "backfills": [
       "era_normalized:1890-1903->1889-1903"
+    ],
+    "fusion_applied": [
+      "segmentation"
     ]
   },
   "storefront": {
@@ -491,5 +494,18 @@
       "setback_m_est": 0
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 4,
+      "vehicles": 3
+    },
+    "total_facade_detections": 7
+  },
+  "_audit": {
+    "photo_heavily_occluded": true
+  }
 }

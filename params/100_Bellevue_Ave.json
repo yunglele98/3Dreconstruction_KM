@@ -33,7 +33,7 @@
   "window_height_m": 1.2,
   "door_count": 1,
   "has_storefront": false,
-  "condition": "fair",
+  "condition": "weathered",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
@@ -175,6 +175,44 @@
     "sparse_field_promotions": [
       "window_arrangement",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ],
+    "audit_fixes_applied": [
+      {
+        "path": "facade_detail.brick_colour_hex",
+        "old_value": "#A1492C",
+        "new_value": "#8B4513",
+        "confidence": 0.9,
+        "category": "facade_material",
+        "applied_at": "2026-04-02T03:56:41.775660+00:00"
+      },
+      {
+        "path": "decorative_elements.stone_lintels",
+        "old_value": null,
+        "new_value": true,
+        "confidence": 0.8,
+        "category": "decorative",
+        "applied_at": "2026-04-02T03:56:41.775686+00:00"
+      },
+      {
+        "path": "decorative_elements.gable_pattern",
+        "old_value": null,
+        "new_value": "decorative_brick",
+        "confidence": 0.8,
+        "category": "decorative",
+        "applied_at": "2026-04-02T03:56:41.775716+00:00"
+      },
+      {
+        "path": "condition",
+        "old_value": "fair",
+        "new_value": "weathered",
+        "confidence": 0.8,
+        "category": "colour_palette",
+        "applied_at": "2026-04-02T03:56:41.775729+00:00"
+      }
     ]
   },
   "bay_window": {
@@ -203,7 +241,9 @@
       "height_mm": 250,
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
-    }
+    },
+    "stone_lintels": true,
+    "gable_pattern": "decorative_brick"
   },
   "photo_observations": {
     "facade_colour_observed": "warm red-brown brick, partially obscured by overgrown vegetation and white picket fence",
@@ -305,7 +345,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#A1492C",
+    "brick_colour_hex": "#8B4513",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -482,5 +522,32 @@
       "type": "baluster"
     },
     "step_count": 2
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.1905,
+    "facade_depth_std": 0.2255,
+    "foundation_offset": 0.3825,
+    "roof_offset": -0.1316,
+    "bay_left_offset": 0.1347,
+    "bay_right_offset": 0.0622,
+    "facade_planarity": 0.0,
+    "bay_window_detected": true,
+    "setback_relative": -0.074
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 684.0,
+    "bay_window_projection_m_est": 0.7
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
   }
 }

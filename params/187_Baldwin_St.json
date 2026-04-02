@@ -224,7 +224,10 @@
       "new_total_height_m": 7.2,
       "floors": 3.0,
       "rule": "total_height_m in [2.4, 4.8] * floors"
-    }
+    },
+    "fusion_applied": [
+      "segmentation"
+    ]
   },
   "bay_window": {
     "present": true,
@@ -518,5 +521,15 @@
     },
     "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

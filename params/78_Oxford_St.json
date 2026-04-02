@@ -209,6 +209,10 @@
     ],
     "sparse_field_promotions": [
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "doors_detail": [
@@ -343,5 +347,32 @@
       }
     ]
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3791,
+    "facade_depth_std": 0.1367,
+    "foundation_offset": 0.3398,
+    "roof_offset": -0.3007,
+    "bay_left_offset": -0.2319,
+    "bay_right_offset": -0.0919,
+    "facade_planarity": 0.317,
+    "bay_window_detected": true,
+    "setback_relative": 0.033
+  },
+  "depth_notes": {
+    "setback_m_est": 0.34,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

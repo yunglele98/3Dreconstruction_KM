@@ -1,12 +1,10 @@
 {
   "building_name": "353 College St",
-  "floors": 3,
+  "floors": 1,
   "floor_heights_m": [
-    2.85,
-    2.65,
-    2.65
+    9.8
   ],
-  "total_height_m": 8.15,
+  "total_height_m": 9.8,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -26,8 +24,6 @@
   "facade_material": "Brick",
   "facade_colour": "N/A - vacant lot",
   "windows_per_floor": [
-    0,
-    0,
     0
   ],
   "window_type": "double_hung",
@@ -198,8 +194,9 @@
     "backfills": [
       "construction_era:style_keyword:edwardian"
     ],
-    "structural_fixes": [
-      "suspicious_dimensions: 1F/[9.8] -> 3F/[2.85, 2.65, 2.65] (ref_h=8.14m)"
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -349,5 +346,32 @@
     "depth_notes": {}
   },
   "handoff_fixes_applied": true,
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3327,
+    "facade_depth_std": 0.1827,
+    "foundation_offset": 0.4503,
+    "roof_offset": -0.2062,
+    "bay_left_offset": 0.1852,
+    "bay_right_offset": 0.1372,
+    "facade_planarity": 0.087,
+    "bay_window_detected": true,
+    "setback_relative": -0.1034
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

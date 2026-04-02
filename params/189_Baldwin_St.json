@@ -243,7 +243,30 @@
       }
     ],
     "height_fixes": [
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
+      "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)",
       "qa_height_mismatch: 7.8m/3F -> 7.8m/3F (LiDAR avg: 7.8m)"
+    ],
+    "fusion_applied": [
+      "segmentation"
     ]
   },
   "decorative_elements": {
@@ -505,5 +528,15 @@
     }
   },
   "eave_overhang_mm": 50,
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

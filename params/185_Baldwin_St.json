@@ -191,6 +191,9 @@
         "trim": "#3A2A20 → #231B14",
         "mortar": "#B0A898 → #A4947E"
       }
+    ],
+    "fusion_applied": [
+      "segmentation"
     ]
   },
   "storefront": {
@@ -421,5 +424,15 @@
   },
   "eave_overhang_mm": 50,
   "foundation_height_m": 0.1,
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

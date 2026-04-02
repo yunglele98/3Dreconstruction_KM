@@ -1,11 +1,10 @@
 {
   "building_name": "429 College St",
-  "floors": 2,
+  "floors": 1,
   "floor_heights_m": [
-    3.22,
-    2.63
+    8.5
   ],
-  "total_height_m": 5.85,
+  "total_height_m": 8.5,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -25,7 +24,6 @@
   "facade_material": "concrete",
   "facade_colour": "grey concrete",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "double_hung",
@@ -189,8 +187,9 @@
     "backfills": [
       "construction_era:style_keyword:edwardian"
     ],
-    "structural_fixes": [
-      "suspicious_dimensions: 1F/[8.5] -> 2F/[3.22, 2.63] (ref_h=5.85m)"
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -328,5 +327,31 @@
   },
   "handoff_fixes_applied": true,
   "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3831,
+    "facade_depth_std": 0.0449,
+    "foundation_offset": 0.1726,
+    "roof_offset": -0.228,
+    "bay_left_offset": 0.0034,
+    "bay_right_offset": 0.0461,
+    "facade_planarity": 0.776,
+    "bay_window_detected": false,
+    "setback_relative": -0.0065
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 2,
+      "vehicles": 0
+    },
+    "total_facade_detections": 2
+  }
 }

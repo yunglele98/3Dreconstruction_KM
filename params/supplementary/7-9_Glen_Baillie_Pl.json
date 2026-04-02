@@ -1,0 +1,418 @@
+{
+  "skip": true,
+  "reason": "duplicate — pair photo; observations in 7_ and 9_ individual files",
+  "photo": "IMG_20260316_114305141_HDR.jpg",
+  "_meta": {
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T23:00:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette",
+      "roof_detail"
+    ],
+    "photo": "IMG_20260316_114305141_HDR.jpg",
+    "reference_photos": [
+      "IMG_20260316_114305141_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "candidate_range_anchor",
+    "db_address_full": "7 Glen Baillie Pl",
+    "db_address_candidates": [
+      "7-9 GLEN BAILLIE PL",
+      "7 GLEN BAILLIE PL",
+      "8 GLEN BAILLIE PL",
+      "9 GLEN BAILLIE PL"
+    ],
+    "db_revision_ts": "2026-03-30T02:24:22",
+    "cleanup_fixes": [
+      "roof_type -> gable",
+      "building_name -> 7-9 Glen Baillie Pl"
+    ],
+    "qa_photo_fixes": [
+      "residential heuristic: 5.0x12.0m"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 0.75,
+        "timestamp": "2026-03-29T07:31:01.966284+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "painted brick",
+        "new_value": "painted brick",
+        "confidence": 0.75,
+        "timestamp": "2026-03-29T07:44:27.571036+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:13.332467+00:00"
+      },
+      {
+        "fix": "validate_all_params",
+        "fixes": [
+          "truncated windows_per_floor: 3 -> 2"
+        ],
+        "timestamp": "2026-03-29T08:00:02.709380+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:59.222636+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:49.149800+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:38.631310+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.888291+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Glen Baillie Pl",
+        "timestamp": "2026-03-29T07:48:51.291271+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:23.078794Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:48.356269+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A → #494949",
+        "trim": "#E8E0D0 → #342B24",
+        "accent": "#2A3A2A → #563E2D",
+        "mortar": "#B0A898 → #B7A58C"
+      }
+    ],
+    "sparse_field_promotions": [
+      "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "photo_observations": {
+    "facade_colour_observed": "grey/blue painted brick (#7), salmon/peach painted brick (#9)",
+    "facade_material_observed": "painted brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      1,
+      2,
+      1
+    ],
+    "window_type": "white-framed, arched at ground level (#7)",
+    "door_count": 1,
+    "has_storefront_observed": false,
+    "storefront_description": "Chinese restaurant sign visible at ground level",
+    "overall_style": "Victorian semi-detached worker's houses",
+    "alterations_visible": "Painted brick over original masonry, Chinese restaurant signage at ground level",
+    "confidence": 0.75,
+    "notes": "Daytime photo (11:43am). Row of small 2.5-storey semi-detached pairs. LEFT unit (#7): grey/blue painted brick with darker grey lower storey, arched window at ground level. RIGHT unit (#9): salmon/peach/tan painted brick. Both have peaked gables. Street-parked cars obstruct lower floors partially.",
+    "_meta": {
+      "batch": "batch_008",
+      "agent": "claude-opus-4-6",
+      "timestamp": "2026-03-24T23:00:00-04:00"
+    },
+    "photo": "IMG_20260316_114305141_HDR.jpg"
+  },
+  "facade_colour": "grey/blue painted brick (#7), salmon/peach painted brick (#9)",
+  "windows_per_floor": [
+    1,
+    2
+  ],
+  "window_type": "white-framed, arched at ground level (#7)",
+  "door_count": 1,
+  "overall_style": "Victorian semi-detached worker's houses",
+  "has_storefront": false,
+  "storefront_description": "Chinese restaurant sign visible at ground level",
+  "confidence": 0.9,
+  "notes": "Daytime photo (11:43am). Row of small 2.5-storey semi-detached pairs. LEFT unit (#7): grey/blue painted brick with darker grey lower storey, arched window at ground level. RIGHT unit (#9): salmon/peach/tan painted brick. Both have peaked gables. Street-parked cars obstruct lower floors partially.",
+  "condition": "fair",
+  "facade_material": "painted brick",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "panelled wood",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": true,
+  "party_wall_right": false,
+  "facade_depth_m": 12.0,
+  "facade_detail": {
+    "brick_colour_hex": "#D8D0C0",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#342B24",
+    "composition": "The street elevation spans roughly 5 metres across 2 storeys and is capped by a gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using white-framed, arched at ground level (#7), and 1 principal entrance.",
+    "mortar_colour_hex": "#B7A58C",
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
+    "heritage_summary": "This house-form, row dates to the 1889-1903 period. Character-defining elements include its original massing and streetscape presence."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "white-framed, arched at ground level (#7)",
+          "width_m": 0.9,
+          "height_m": 1.54,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "white-framed, arched at ground level (#7)",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "2-over-2",
+          "arch_type": "flat"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "white-framed, arched at ground level (#7)",
+          "width_m": 0.5,
+          "height_m": 0.6,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "2-over-2",
+          "arch_type": "flat"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#3A2A20",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "7-9 Glen Baillie Pl is a row-house building. The street elevation spans roughly 5 metres across 2 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as painted brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using white-framed, arched at ground level (#7), and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "house-form, row",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "round",
+    "count": 1,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 6.4,
+  "floor_heights_m": [
+    3.2,
+    3.2
+  ],
+  "floors": 2,
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#D8D0C0"
+  },
+  "roof_type": "gable",
+  "building_name": "7-9 Glen Baillie Pl",
+  "site": {
+    "lon": -79.399123,
+    "lat": 43.653607
+  },
+  "roof_pitch_deg": 40,
+  "colour_palette": {
+    "facade_hex": "#8A8A8A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#D8D0C0",
+    "trim": "#342B24",
+    "roof": "#494949",
+    "accent": "#563E2D"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260316_114305141_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "painted brick",
+    "brick_colour_hex": "#D8D0C0",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "white-framed, arched at ground level (#7)",
+            "width_m": 0.9,
+            "height_m": 1.54,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "white-framed, arched at ground level (#7)",
+            "width_m": 0.9,
+            "height_m": 1.3,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "white-framed, arched at ground level (#7)",
+            "width_m": 0.5,
+            "height_m": 0.6,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair"
+  },
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3234,
+    "facade_depth_std": 0.082,
+    "foundation_offset": 0.356,
+    "roof_offset": -0.1956,
+    "bay_left_offset": 0.0701,
+    "bay_right_offset": -0.0267,
+    "facade_planarity": 0.59,
+    "bay_window_detected": true,
+    "setback_relative": -0.0668
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.35
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 2
+    },
+    "total_facade_detections": 2
+  },
+  "_audit": {
+    "photo_heavily_occluded": true
+  }
+}

@@ -42,14 +42,14 @@
     "typology": "",
     "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
@@ -62,15 +62,15 @@
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (505) | Chinatown overlap",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 3,
     "condition_issues": "",
     "structural_concern": false,
     "risk_score": 20,
-    "signage": "Wok Theory (\u65b0\u5929\u8679), KL Kitchen Seafood Cuisine (\u805a\u9bae\u6a13)",
+    "signage": "Wok Theory (新天虹), KL Kitchen Seafood Cuisine (聚鮮樓)",
     "street_presence": "neutral"
   },
   "city_data": {
@@ -82,7 +82,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 8,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -179,10 +179,10 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #655E5E",
-        "trim": "#E8E0D0 \u2192 #4F3423",
-        "accent": "#3A2A20 \u2192 #34261C",
-        "mortar": "#B0A898 \u2192 #AFA89A"
+        "roof": "#5A5A5A → #655E5E",
+        "trim": "#E8E0D0 → #4F3423",
+        "accent": "#3A2A20 → #34261C",
+        "mortar": "#B0A898 → #AFA89A"
       }
     ],
     "qa_final_fixes": [
@@ -195,6 +195,10 @@
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -443,5 +447,32 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "handoff_fixes_applied": true
+  "handoff_fixes_applied": true,
+  "depth_analysis": {
+    "facade_depth_mean": 0.216,
+    "facade_depth_std": 0.0399,
+    "foundation_offset": 0.2979,
+    "roof_offset": -0.0317,
+    "bay_left_offset": 0.0283,
+    "bay_right_offset": -0.0642,
+    "facade_planarity": 0.801,
+    "bay_window_detected": true,
+    "setback_relative": -0.04
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 193.0,
+    "bay_window_projection_m_est": 0.39
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

@@ -178,13 +178,36 @@
       }
     ],
     "height_fixes": [
-      "qa_height_mismatch: 7.2m/3F -> 3.88m/1F (LiDAR avg: 3.88m)"
+      "qa_height_mismatch: 7.2m/3F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)",
+      "qa_height_mismatch: 3.88m/1F -> 3.88m/1F (LiDAR avg: 3.88m)"
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
     ],
     "sparse_field_promotions": [
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -360,5 +383,32 @@
     "colour_palette_observed": {},
     "condition_observed": "fair"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2994,
+    "facade_depth_std": 0.085,
+    "foundation_offset": 0.1618,
+    "roof_offset": -0.0602,
+    "bay_left_offset": -0.0435,
+    "bay_right_offset": 0.1695,
+    "facade_planarity": 0.575,
+    "bay_window_detected": true,
+    "setback_relative": -0.0359
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 0.63,
+    "eave_overhang_mm_est": 367.0,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 1
+    },
+    "total_facade_detections": 1
+  }
 }

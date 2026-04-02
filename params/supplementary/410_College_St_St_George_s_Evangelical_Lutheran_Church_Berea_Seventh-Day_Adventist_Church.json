@@ -1,0 +1,321 @@
+{
+  "building_name": "410 College St (St. George's Evangelical Lutheran Church / Berea Seventh-Day Adventist Church)",
+  "floors": 1,
+  "facade_material": "brick",
+  "facade_colour": "dark brown brick with yellow-painted doors and cream trim at Gothic-arched openings",
+  "windows_per_floor": [
+    5
+  ],
+  "window_type": "pointed_arched",
+  "door_count": 2,
+  "door_type": "arched",
+  "has_storefront": false,
+  "condition": "fair",
+  "roof_type": "gable",
+  "roof_features": [
+    "steeple",
+    "cross_gable"
+  ],
+  "photo_observations": {
+    "overall_style": "Gothic Revival",
+    "signage_observed": "Church signage for St. George's Evangelical Lutheran Church and Berea Seventh-Day Adventist Church.",
+    "notes": "Small brick church set back slightly from the sidewalk with front stairs and a modest steeple.",
+    "photo": "IMG_20260320_174247857_HDR.jpg"
+  },
+  "_meta": {
+    "address": "410 College St (St. George's Evangelical Lutheran Church / Berea Seventh-Day Adventist Church)",
+    "photo": "IMG_20260320_174247857_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T16:50:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "reference_photos": [
+      "IMG_20260320_174247857_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_neighbor_backfill": {
+      "source_address": "409 College St",
+      "source_street": "COLLEGE ST",
+      "house_number_gap": 1,
+      "confidence": "medium",
+      "timestamp": "2026-03-25T14:51:54",
+      "proxy_defaults": {
+        "facade_width_m": 6.1,
+        "facade_depth_m": 36.58,
+        "floors": 3,
+        "total_height_m": 11.8,
+        "has_storefront": true
+      }
+    },
+    "qa_photo_fixes": [
+      "commercial heuristic: 35.0x18.0m"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "College St",
+        "timestamp": "2026-03-29T07:48:44.672462+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:05.506858+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:38.954259+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:29.800387+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.377253+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:20.749733Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.661232+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #83412B",
+        "roof": "#5A5A5A → #424949",
+        "trim": "#E8E0D0 → #493020",
+        "accent": "#2A3A2A → #1A2B28",
+        "mortar": "#B0A898 → #B9AA91"
+      }
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "overall_style": "Gothic Revival",
+  "notes": "Small brick church set back slightly from the sidewalk with front stairs and a modest steeple.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "panelled wood",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    },
+    {
+      "id": "door_1",
+      "type": "panelled wood",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 18.0,
+  "facade_detail": {
+    "brick_colour_hex": "#83412B",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#493020",
+    "composition": "The street elevation spans roughly 35 metres across 1 storeys and is capped by a gable, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 5 window bays from lower to upper levels, using pointed arched, and 2 principal entrances.",
+    "mortar_colour_hex": "#B9AA91",
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
+    "heritage_summary": "This house-form dates to the 1889-1903 period. Character-defining elements include its original massing and streetscape presence."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 5,
+          "type": "pointed_arched",
+          "width_m": 0.8,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "arch_type": "pointed"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "410 College St (St. George's Evangelical Lutheran Church / Berea Seventh-Day Adventist Church) is a house-form building. The street elevation spans roughly 35 metres across 1 storeys and is capped by a gable, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 5 window bays from lower to upper levels, using pointed arched, and 2 principal entrances.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "ground_floor_arches": {
+    "present": true,
+    "arch_type": "pointed",
+    "count": 5,
+    "spring_height_ratio": 0.7
+  },
+  "volumes": [],
+  "facade_width_m": 35.0,
+  "total_height_m": 3.2,
+  "floor_heights_m": [
+    3.2
+  ],
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "roof_pitch_deg": 40,
+  "site": {
+    "lon": -79.399713,
+    "lat": 43.656111
+  },
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#83412B",
+    "trim": "#493020",
+    "roof": "#424949",
+    "accent": "#1A2B28"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_174247857_HDR.jpg",
+    "storeys_observed": 1,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 5,
+            "type": "pointed_arched",
+            "width_m": 0.8,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "single pane",
+            "arch_type": "pointed"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.1906,
+    "facade_depth_std": 0.1047,
+    "foundation_offset": 0.5969,
+    "roof_offset": -0.0925,
+    "bay_left_offset": -0.0603,
+    "bay_right_offset": 0.0187,
+    "facade_planarity": 0.477,
+    "bay_window_detected": true,
+    "setback_relative": -0.0898
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 3
+    },
+    "total_facade_detections": 3
+  },
+  "_audit": {
+    "photo_heavily_occluded": true
+  }
+}

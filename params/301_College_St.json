@@ -1,22 +1,15 @@
 {
   "building_name": "301 College St",
-  "floors": 13,
+  "floors": 6,
   "floor_heights_m": [
-    4.5,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98,
-    2.98
+    5.1,
+    10.8,
+    10.8,
+    10.8,
+    10.8,
+    9.2
   ],
-  "total_height_m": 40.26,
+  "total_height_m": 57.3,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -41,14 +34,7 @@
     2,
     2,
     2,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -193,8 +179,9 @@
     "backfills": [
       "construction_era:style_keyword:edwardian"
     ],
-    "structural_fixes": [
-      "suspicious_dimensions: 6F/[5.1, 10.8, 10.8, 10.8, 10.8, 9.2] -> 13F/[4.5, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98, 2.98] (ref_h=40.2m)"
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -460,5 +447,32 @@
   },
   "handoff_fixes_applied": true,
   "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3668,
+    "facade_depth_std": 0.0971,
+    "foundation_offset": -0.0001,
+    "roof_offset": 0.1347,
+    "bay_left_offset": -0.1884,
+    "bay_right_offset": 0.2149,
+    "facade_planarity": 0.514,
+    "bay_window_detected": true,
+    "setback_relative": -0.026
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 0.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

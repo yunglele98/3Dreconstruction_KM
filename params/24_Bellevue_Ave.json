@@ -197,6 +197,10 @@
       "porch_detail",
       "balcony_detail",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "bay_window": {
@@ -468,5 +472,31 @@
   "balcony_detail": {
     "present": true,
     "type": "projecting"
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.2258,
+    "facade_depth_std": 0.0539,
+    "foundation_offset": 0.2443,
+    "roof_offset": -0.1497,
+    "bay_left_offset": -0.0216,
+    "bay_right_offset": 0.0049,
+    "facade_planarity": 0.731,
+    "bay_window_detected": false,
+    "setback_relative": -0.0118
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 778.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
   }
 }

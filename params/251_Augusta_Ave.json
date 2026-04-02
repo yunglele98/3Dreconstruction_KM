@@ -192,6 +192,9 @@
     ],
     "sparse_field_promotions": [
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "segmentation"
     ]
   },
   "storefront": {
@@ -343,5 +346,15 @@
       "setback_m_est": 0.0
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 1,
+      "vehicles": 0
+    },
+    "total_facade_detections": 1
+  }
 }

@@ -1,0 +1,369 @@
+{
+  "building_name": "Red brick church, near Oxford St",
+  "floors": 1,
+  "floor_heights_m": [
+    3.5
+  ],
+  "facade_material": "brick",
+  "facade_colour": "dark red brick, aged and weathered",
+  "windows_per_floor": [
+    2
+  ],
+  "window_type": "casement",
+  "window_width_m": 1.0,
+  "window_height_m": 1.8,
+  "door_count": 1,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "fair",
+  "roof_type": "gable",
+  "roof_pitch_deg": 35,
+  "roof_features": [
+    "steeple"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "dark red brick, aged and weathered",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Side/rear elevation visible. Brick shows significant weathering and cracking. Vertical crack visible running down the facade. Some repointing evident. White steeple/spire visible above roofline.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2
+    ],
+    "window_type": "casement",
+    "window_width_m": 1.0,
+    "window_height_m": 1.8,
+    "window_arrangement": "symmetric",
+    "window_details": "White-framed multi-pane windows with stone or concrete sills and lintels. Windows appear to be replacements in original openings.",
+    "door_count": 1,
+    "door_type": "single",
+    "door_width_m": 0.9,
+    "door_height_m": 2.1,
+    "door_details": "Side entrance visible on this elevation",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple eave, painted white trim",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "none visible from this angle",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "White steeple/spire rising from roof. Small white plaque or cornerstone on wall. 'NO PARKING' sign on wall.",
+    "roof_type_observed": "Gable with white steeple/spire",
+    "roof_features": [
+      "steeple"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "No storefront; this is a small church building with a side entrance rather than a commercial frontage.",
+    "signage_observed": "'NO PARKING' sign. Small white plaque on wall (text not legible).",
+    "overall_style": "Victorian",
+    "alterations_visible": "Replacement windows. Some brick repair/repointing. Paved parking area at side.",
+    "matches_hcd_typology": true,
+    "confidence": 0.7,
+    "notes": "Side/rear elevation of a small red brick church. Only this oblique view available - front facade not captured. White steeple visible. Vertical crack in brickwork suggests some structural movement.",
+    "photo": "IMG_20260315_152000297_HDR.jpg"
+  },
+  "_meta": {
+    "address": "Red brick church, near Oxford St",
+    "photo": "IMG_20260315_152000297_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T00:00:00Z",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "dimensions_source": "default",
+    "reference_photos": [
+      "IMG_20260315_152000297_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "residential heuristic: 5.0x12.0m"
+    ],
+    "site_backfill_final_method": "alias_of:103_Bellevue_Ave.json",
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_oxford.py",
+        "street": "Oxford St",
+        "timestamp": "2026-03-29T07:47:09.754204+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:17.423378+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:04:03.150026+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:54.141544+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:24.302333Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:49.359350+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #BD7154",
+        "roof": "#5A5A5A → #585050",
+        "trim": "#E8E0D0 → #4D392A",
+        "accent": "#2A3A2A → #3C2C21",
+        "mortar": "#B0A898 → #AC9B89"
+      }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "window_arrangement": "symmetric",
+  "door_width_m": 0.9,
+  "door_height_m": 2.1,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Victorian",
+  "storefront_description": "No storefront; this is a small church building with a side entrance rather than a commercial frontage.",
+  "confidence": 0.9,
+  "notes": "Side/rear elevation of a small red brick church. Only this oblique view available - front facade not captured. White steeple visible. Vertical crack in brickwork suggests some structural movement.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "panelled wood",
+      "position": "center",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      },
+      "material": "wood",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 12.0,
+  "facade_detail": {
+    "brick_colour_hex": "#BD7154",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#4D392A",
+    "composition": "The street elevation spans roughly 5 metres across 1 storeys and is capped by a gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#AC9B89"
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "casement",
+          "width_m": 0.9,
+          "height_m": 2.7,
+          "sill_height_m": 1.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "arch_type": "segmental"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "Red brick church, near Oxford St is a row-house building. The street elevation spans roughly 5 metres across 1 storeys and is capped by a gable, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form, row",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "volumes": [],
+  "facade_width_m": 5.0,
+  "total_height_m": 3.5,
+  "chimneys": {
+    "count": 1,
+    "position": "right_rear",
+    "width_m": 0.6,
+    "depth_m": 0.4,
+    "height_above_ridge_m": 0.8,
+    "material": "brick",
+    "colour_hex": "#B85A3A"
+  },
+  "site": {
+    "lon": -79.40398,
+    "lat": 43.656959,
+    "street": "Oxford St"
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#BD7154",
+    "trim": "#4D392A",
+    "roof": "#585050",
+    "accent": "#3C2C21"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260315_152000297_HDR.jpg",
+    "storeys_observed": 1,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "casement",
+            "width_m": 0.9,
+            "height_m": 2.7,
+            "sill_height_m": 1.8,
+            "frame_colour": "#E8E0D0",
+            "glazing": "single pane"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 35,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 2.0,
+  "depth_analysis": {
+    "facade_depth_mean": 0.4293,
+    "facade_depth_std": 0.0989,
+    "foundation_offset": 0.3649,
+    "roof_offset": -0.2535,
+    "bay_left_offset": -0.2383,
+    "bay_right_offset": 0.1897,
+    "facade_planarity": 0.506,
+    "bay_window_detected": true,
+    "setback_relative": -0.021
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
+}

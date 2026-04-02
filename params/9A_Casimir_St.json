@@ -184,6 +184,10 @@
     ],
     "backfills": [
       "construction_era:style_keyword:victorian"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "decorative_elements": {
@@ -334,5 +338,32 @@
     "condition_observed": "good",
     "depth_notes": {}
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2712,
+    "facade_depth_std": 0.1483,
+    "foundation_offset": 0.4973,
+    "roof_offset": -0.0868,
+    "bay_left_offset": 0.1144,
+    "bay_right_offset": 0.1225,
+    "facade_planarity": 0.259,
+    "bay_window_detected": true,
+    "setback_relative": -0.1245
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 451.0,
+    "bay_window_projection_m_est": 0.64
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

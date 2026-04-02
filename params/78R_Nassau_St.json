@@ -188,6 +188,10 @@
     "storefront_enriched": "2026-03-30T06:33:21.317515Z",
     "sparse_field_promotions": [
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "doors_detail": [
@@ -356,5 +360,32 @@
       "setback_m_est": 0.0
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3162,
+    "facade_depth_std": 0.1153,
+    "foundation_offset": 0.521,
+    "roof_offset": -0.1508,
+    "bay_left_offset": 0.0058,
+    "bay_right_offset": -0.1026,
+    "facade_planarity": 0.424,
+    "bay_window_detected": true,
+    "setback_relative": -0.0559
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 784.0,
+    "bay_window_projection_m_est": 0.53
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 1,
+      "vehicles": 0
+    },
+    "total_facade_detections": 1
+  }
 }

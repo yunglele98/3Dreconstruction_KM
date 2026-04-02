@@ -178,6 +178,20 @@
     ],
     "sparse_field_promotions": [
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ],
+    "audit_fixes_applied": [
+      {
+        "path": "colour_palette.accent",
+        "old_value": "#203130",
+        "new_value": "#D4C9A8",
+        "confidence": 0.85,
+        "category": "colour_palette",
+        "applied_at": "2026-04-02T03:56:41.813702+00:00"
+      }
     ]
   },
   "decorative_elements": {
@@ -312,7 +326,7 @@
     "facade": "#942A1E",
     "trim": "#3D2B21",
     "roof": "#5D544B",
-    "accent": "#203130"
+    "accent": "#D4C9A8"
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260315_151041839_HDR.jpg",
@@ -358,5 +372,32 @@
     "condition_observed": "fair",
     "depth_notes": {}
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.0907,
+    "facade_depth_std": 0.0895,
+    "foundation_offset": 0.3342,
+    "roof_offset": 0.4184,
+    "bay_left_offset": 0.0727,
+    "bay_right_offset": 0.0458,
+    "facade_planarity": 0.553,
+    "bay_window_detected": true,
+    "setback_relative": -0.185
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.38
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

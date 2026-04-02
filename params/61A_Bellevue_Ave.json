@@ -1,10 +1,8 @@
 {
   "building_name": "61A Bellevue Ave",
-  "floors": 3,
+  "floors": 1,
   "floor_heights_m": [
-    3.09,
-    2.87,
-    2.87
+    8.8
   ],
   "total_height_m": 8.83,
   "facade_width_m": 5.2,
@@ -26,8 +24,6 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    2,
-    2,
     2
   ],
   "window_type": "double_hung",
@@ -214,8 +210,9 @@
     "sparse_field_promotions": [
       "door_count_promoted"
     ],
-    "structural_fixes": [
-      "suspicious_dimensions: 1F/[8.8] -> 3F/[3.09, 2.87, 2.87]"
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "doors_detail": [
@@ -352,5 +349,32 @@
     "brick_colour_hex": "#B85A3A",
     "windows_detail": []
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2801,
+    "facade_depth_std": 0.1699,
+    "foundation_offset": 0.488,
+    "roof_offset": -0.1376,
+    "bay_left_offset": 0.0039,
+    "bay_right_offset": -0.0983,
+    "facade_planarity": 0.15,
+    "bay_window_detected": true,
+    "setback_relative": -0.0461
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 716.0,
+    "bay_window_projection_m_est": 0.51
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

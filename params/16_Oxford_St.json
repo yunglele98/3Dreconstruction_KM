@@ -227,6 +227,10 @@
     "sparse_field_promotions": [
       "window_arrangement",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "window_arrangement": "symmetric",
@@ -400,5 +404,32 @@
       "type": "baluster"
     },
     "step_count": 2
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.1577,
+    "facade_depth_std": 0.0781,
+    "foundation_offset": 0.1706,
+    "roof_offset": -0.0788,
+    "bay_left_offset": 0.2485,
+    "bay_right_offset": -0.0703,
+    "facade_planarity": 0.61,
+    "bay_window_detected": true,
+    "setback_relative": -0.0526
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 0.82,
+    "eave_overhang_mm_est": 410.0,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 1,
+      "vehicles": 1
+    },
+    "total_facade_detections": 2
   }
 }

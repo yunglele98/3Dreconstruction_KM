@@ -69,9 +69,16 @@ def extract_param_accesses(func_body: str) -> tuple[set[str], set[str]]:
 
 
 def parse_generate_building() -> dict[str, dict[str, Any]]:
-    """Parse generate_building.py and extract create_* function contracts."""
+    """Parse generate_building.py and generator_modules/ for create_* function contracts."""
     with open(GENERATE_BUILDING_PATH, encoding="utf-8") as f:
         content = f.read()
+    # Also include extracted module files
+    modules_dir = GENERATE_BUILDING_PATH.parent / "generator_modules"
+    if modules_dir.is_dir():
+        for mod_file in sorted(modules_dir.glob("*.py")):
+            if mod_file.name.startswith("_"):
+                continue
+            content += "\n" + mod_file.read_text(encoding="utf-8")
 
     contract_map = {}
 

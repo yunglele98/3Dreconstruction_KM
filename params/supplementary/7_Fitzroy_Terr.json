@@ -1,0 +1,379 @@
+{
+  "building_name": "7 Fitzroy Terrace",
+  "year_built_approx": "1890-1903",
+  "overall_style": "Victorian",
+  "building_type": "Residential (House-form, Row)",
+  "condition": "fair",
+  "confidence": 0.6,
+  "source": "hcd_plan_only",
+  "site": {
+    "total_facade_width_m": 5.0,
+    "street_setback_m": 2.0,
+    "orientation": "Facade faces street",
+    "context": "Kensington Market HCD, Character Sub-Area: n/a",
+    "lon": -79.400814,
+    "lat": 43.653396
+  },
+  "floors": 2,
+  "floor_heights_m": [
+    4.0,
+    5.5
+  ],
+  "total_height_m": 9.5,
+  "roof_type": "cross-gable",
+  "roof_pitch_deg": 40,
+  "roof_material": "Grey asphalt shingles",
+  "facade_width_m": 5.0,
+  "facade_material": "brick",
+  "windows_per_floor": [
+    2,
+    2
+  ],
+  "window_type": "double_hung",
+  "door_count": 1,
+  "has_storefront": false,
+  "bay_window": {
+    "present": true,
+    "type": "Projecting bay",
+    "floors": [
+      0
+    ],
+    "width_m": 2.0,
+    "projection_m": 0.6
+  },
+  "hcd_data": {
+    "hcd_reference_number": 150,
+    "hcd_page": 98,
+    "character_sub_area": "n/a",
+    "typology": "House-form, Row",
+    "construction_date": "1889-1903",
+    "statement_of_contribution": "Workers' row housing with Victorian features.",
+    "building_features": [
+      "shared rooflines",
+      "off-set first storey bay windows"
+    ],
+    "discrepancies": []
+  },
+  "_meta": {
+    "address": "7 Fitzroy Terrace, Toronto, ON",
+    "neighbourhood": "Kensington Market",
+    "heritage_designation": "Within Kensington Market Heritage Conservation District",
+    "hcd_reference": "HCD #150",
+    "hcd_typology": "House-form, Row",
+    "hcd_construction_date": "1890-1903",
+    "hcd_page": 98,
+    "model": "hcd_plan_skeleton",
+    "timestamp": "2026-03-12T23:19:59",
+    "notes": "Skeleton params generated from HCD Plan Vol.2 Appendix D. No photo analysis. confidence=0.40.",
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "translated": true,
+    "translations_applied": [
+      "photo_obs"
+    ],
+    "qa_photo_fixes": [
+      "residential heuristic: 5.0x12.0m"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Fitzroy Terrace",
+        "timestamp": "2026-03-29T07:48:53.374548+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:14.925950+00:00"
+      },
+      {
+        "fix": "validate_all_params",
+        "fixes": [
+          "coerced floors: 2.5 -> 2"
+        ],
+        "timestamp": "2026-03-29T08:00:02.992372+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)",
+          "win.type: 'Double-hung sash' -> 'double_hung'",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:04:00.351522+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:50.749414+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.975154+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "fuzzy",
+      "timestamp": "2026-03-29T08:34:23.404474Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:48.632429+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #B96341",
+        "roof": "#5A5A5A → #5E5E5E",
+        "trim": "#E8E0D0 → #3F2C22",
+        "mortar": "#B0A898 → #BCAB8F"
+      }
+    ],
+    "backfills": [
+      "era_normalized:1890-1903->1889-1903"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "decorative_elements": {
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 1,
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "facade_depth_m": 12.0,
+  "facade_colour": "not clearly visible — night photo",
+  "facade_detail": {
+    "brick_colour_hex": "#B96341",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#3F2C22",
+    "composition": "The street elevation spans roughly 5 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
+    "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
+    "heritage_expression": "Character-defining facade elements include shared rooflines, off-set first storey bay windows.",
+    "heritage_summary": "Workers' row housing with Victorian features.",
+    "mortar_colour_hex": "#BCAB8F"
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#E8E0D0"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.54,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "2-over-2",
+          "arch_type": "flat"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 1,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.0,
+          "sill_height_m": 0.8,
+          "frame_colour": "#E8E0D0",
+          "glazing": "2-over-2",
+          "arch_type": "flat"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "panelled wood",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.0999999999999996,
+      "colour_hex": "#E8E0D0",
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      }
+    }
+  ],
+  "facade_description": "7 Fitzroy Terrace is a row-house building. The street elevation spans roughly 5 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as brick in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include shared rooflines, off-set first storey bay windows.",
+  "heritage_summary": "Workers' row housing with Victorian features.",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "street_setback_m": 2.0,
+  "volumes": [],
+  "photo_observations": {
+    "source_photo": null,
+    "photo_type": "none_in_batch",
+    "lighting": "night",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T23:30:00-04:00",
+    "confidence": 0.35,
+    "facade_colour_observed": "not clearly visible — night photo",
+    "facade_material_observed": "brick — typical for Fitzroy Terrace row",
+    "condition_observed": "unknown",
+    "has_storefront_observed": false,
+    "overall_style": "Victorian",
+    "notes": "Dark night photos with limited visibility. Fitzroy Terrace houses are Victorian-era residential, but details obscured by darkness and tree cover. No dedicated photo for this address.",
+    "low_confidence_only": true,
+    "low_confidence_note": "No better photo found in any batch. Relying on DB/HCD data.",
+    "photo": "IMG_20260320_012359603_HDR.jpg"
+  },
+  "notes": "Dark night photos with limited visibility. Fitzroy Terrace houses are Victorian-era residential, but details obscured by darkness and tree cover. No dedicated photo for this address.",
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#E8E0D0",
+    "roof_hex": "#5A5A5A",
+    "accent_hex": "#E8E0D0",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B96341",
+    "trim": "#3F2C22",
+    "roof": "#5E5E5E",
+    "accent": "#E8E0D0"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012359603_HDR.jpg",
+    "storeys_observed": 2.5,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.54,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.3,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 1,
+            "type": "Double-hung sash",
+            "width_m": 0.9,
+            "height_m": 1.0,
+            "sill_height_m": 0.8,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.5341,
+    "facade_depth_std": 0.1487,
+    "foundation_offset": 0.111,
+    "roof_offset": -0.1175,
+    "bay_left_offset": -0.3583,
+    "bay_right_offset": 0.3253,
+    "facade_planarity": 0.257,
+    "bay_window_detected": true,
+    "setback_relative": -0.0091
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.05,
+    "eave_overhang_mm_est": 587.0,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
+}

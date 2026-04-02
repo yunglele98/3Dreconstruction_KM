@@ -1,0 +1,372 @@
+{
+  "building_name": "33 Kensington Ave (Uncle Vintage)",
+  "floors": 3,
+  "floor_heights_m": [
+    4.0,
+    3.0,
+    3.0
+  ],
+  "total_height_m": 10.0,
+  "facade_width_m": 6.0,
+  "facade_depth_m": 20.0,
+  "roof_type": "cross-gable",
+  "roof_pitch_deg": 45,
+  "roof_features": [],
+  "facade_material": "brick",
+  "facade_colour": "warm yellow-brown brick on upper floors, dark painted commercial ground floor with illuminated Uncle Vintage Co sign",
+  "windows_per_floor": [
+    0,
+    2,
+    1
+  ],
+  "window_type": "double_hung",
+  "window_width_m": 0.8,
+  "window_height_m": 1.2,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "photo_observations": {
+    "facade_colour_observed": "warm yellow-brown brick on upper floors, dark painted commercial ground floor with illuminated Uncle Vintage Co sign",
+    "facade_material_observed": "brick",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_arrangement": "symmetric",
+    "door_count": 1,
+    "door_type": "storefront",
+    "has_storefront_observed": true,
+    "signage_observed": "UNCLE VINTAGE CO Quality Garment",
+    "overall_style": "Victorian",
+    "confidence": 0.7,
+    "notes": "nighttime photo; Victorian house-form with cross-gable",
+    "photo": "IMG_20260320_012656551_HDR.jpg"
+  },
+  "_meta": {
+    "address": "33 Kensington Ave",
+    "photo": "IMG_20260320_012656551_HDR.jpg",
+    "agent": "claude-opus-4-6",
+    "timestamp": "2026-03-24T17:26:24.324968",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "reference_photos": [
+      "IMG_20260320_012656551_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "33 Kensington Ave",
+    "db_revision_ts": "2026-03-30T02:24:21",
+    "db_address_candidates": [
+      "33 KENSINGTON AVE"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Kensington Ave",
+        "timestamp": "2026-03-29T07:48:40.703535+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:02.008858+00:00"
+      },
+      {
+        "fix": "validate_all_params",
+        "fixes": [
+          "extended windows_per_floor: 3 -> 3"
+        ],
+        "timestamp": "2026-03-29T08:00:00.264684+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:49.486428+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:34.910465+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:26.464480+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:19.798549Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:45.947095+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "storefront_enriched": "2026-03-29T08:38:15.090285Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #AB4F42",
+        "roof": "#5A5A5A → #505050",
+        "trim": "#E8E0D0 → #37271D",
+        "accent": "#2A3A2A → #3B2A21",
+        "mortar": "#B0A898 → #A99A8C"
+      }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "overall_style": "Victorian",
+  "confidence": 0.9,
+  "notes": "nighttime photo; Victorian house-form with cross-gable",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "recessed glass entrance",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      },
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 5.1,
+    "height_m": 3.0,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 3,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.800000000000001,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    },
+    "security_grille": {
+      "present": true,
+      "type": "rolling"
+    }
+  },
+  "building_type": "residential",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_detail": {
+    "brick_colour_hex": "#AB4F42",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#37271D",
+    "composition": "The street frontage spans roughly 6 metres across 3 storeys beneath a cross-gable, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+    "mortar_colour_hex": "#A99A8C",
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "heritage_summary": "This commercial dates to the 1889-1903 period. Character-defining elements include ground-floor storefront."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    },
+    "bargeboard": {
+      "present": true,
+      "style": "decorative",
+      "colour_hex": "#3A2A20"
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 0,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "plate",
+          "arch_type": "segmental"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "double_hung",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "2-over-2",
+          "arch_type": "flat"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "33 Kensington Ave (Uncle Vintage) is a commercial building with a street-level storefront. The street frontage spans roughly 6 metres across 3 storeys beneath a cross-gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "volumes": [],
+  "site": {
+    "lon": -79.39989584,
+    "lat": 43.65348617,
+    "street": "Kensington Ave",
+    "street_number": 27
+  },
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#AB4F42",
+    "trim": "#37271D",
+    "roof": "#505050",
+    "accent": "#3B2A21"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012656551_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 0,
+            "type": "storefront",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "double_hung",
+            "width_m": 0.9,
+            "height_m": 1.4,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "cross-gable",
+    "roof_pitch_deg": 45,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0,
+  "depth_analysis": {
+    "facade_depth_mean": 0.23,
+    "facade_depth_std": 0.102,
+    "foundation_offset": 0.5456,
+    "roof_offset": -0.1908,
+    "bay_left_offset": 0.0308,
+    "bay_right_offset": 0.0097,
+    "facade_planarity": 0.49,
+    "bay_window_detected": false,
+    "setback_relative": -0.0632
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
+}

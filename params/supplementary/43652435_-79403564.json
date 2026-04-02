@@ -1,0 +1,296 @@
+{
+  "building_name": "43.652435, -79.403564",
+  "floors": 1,
+  "facade_material": "brick",
+  "facade_colour": "dark red-brown brick with a bright yellow garage door",
+  "windows_per_floor": [
+    4
+  ],
+  "window_type": "rectangular",
+  "door_count": 2,
+  "door_type": "garage",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "flat",
+  "roof_features": [
+    "service_bay"
+  ],
+  "photo_observations": {
+    "overall_style": "Commercial",
+    "notes": "Low service garage block with a prominent repair-bay opening.",
+    "photo": "IMG_20260320_162615887_HDR.jpg"
+  },
+  "_meta": {
+    "address": "43.652435, -79.403564",
+    "photo": "IMG_20260320_162615887_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:15:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "reference_photos": [
+      "IMG_20260320_162615887_HDR.jpg",
+      "IMG_20260320_162618438_HDR.jpg",
+      "IMG_20260320_162633301_HDR.jpg",
+      "IMG_20260320_162644005_HDR.jpg",
+      "IMG_20260320_162647403_HDR.jpg"
+    ],
+    "reference_photo_count": 5,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "residential heuristic: 6.0x11.0m, capped windows to 4/floor"
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Unknown",
+        "timestamp": "2026-03-29T07:48:45.658135+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:07.040935+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:53.780337+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:40.399848+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:04.466411+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:21.124183Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.934116+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #A44E42",
+        "roof": "#5A5A5A → #545454",
+        "trim": "#E8E0D0 → #37281D",
+        "accent": "#2A3A2A → #392F1F",
+        "mortar": "#B0A898 → #C2BAAB"
+      }
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "overall_style": "Commercial",
+  "notes": "Low service garage block with a prominent repair-bay opening.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "panelled wood",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    },
+    {
+      "id": "door_1",
+      "type": "panelled wood",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 11.0,
+  "facade_detail": {
+    "brick_colour_hex": "#A44E42",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#37281D",
+    "composition": "The street elevation spans roughly 6 metres across 1 storeys and is capped by a flat, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 4 window bays from lower to upper levels, using rectangular, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#C2BAAB"
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 6,
+          "type": "rectangular",
+          "width_m": 0.7,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "arch_type": "segmental"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "projection_mm": 200,
+      "height_mm": 250,
+      "colour_hex": "#3A2A20"
+    },
+    "decorative_brickwork": {
+      "present": true
+    }
+  },
+  "street_setback_m": 2.0,
+  "confidence": 0.8500000000000002,
+  "facade_description": "43.652435, -79.403564 is a house-form building. The street elevation spans roughly 6 metres across 1 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 4 window bays from lower to upper levels, using rectangular, and 2 principal entrances. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "volumes": [],
+  "facade_width_m": 6.0,
+  "total_height_m": 3.2,
+  "floor_heights_m": [
+    3.2
+  ],
+  "roof_pitch_deg": 0,
+  "site": {
+    "lon": -79.403564,
+    "lat": 43.652435
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#A44E42",
+    "trim": "#37281D",
+    "roof": "#545454",
+    "accent": "#392F1F"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_162615887_HDR.jpg",
+    "storeys_observed": 1,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 6,
+            "type": "rectangular",
+            "width_m": 0.7,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "single pane"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "cornice",
+      "decorative_brickwork"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.1168,
+    "facade_depth_std": 0.0592,
+    "foundation_offset": 0.1416,
+    "roof_offset": 0.0016,
+    "bay_left_offset": 0.4081,
+    "bay_right_offset": 0.1064,
+    "facade_planarity": 0.704,
+    "bay_window_detected": true,
+    "setback_relative": -0.1236
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 0.45,
+    "eave_overhang_mm_est": 100,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
+}

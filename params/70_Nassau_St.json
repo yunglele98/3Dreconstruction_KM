@@ -162,6 +162,10 @@
       "window_arrangement",
       "porch_detail",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "notes": "2.5-storey Victorian bay-and-gable. Red-brown brick, dark trim. Rounded arch at ground floor. Steep front gable.",
@@ -379,5 +383,32 @@
   "porch_detail": {
     "present": true,
     "type": "stoop"
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.4474,
+    "facade_depth_std": 0.1099,
+    "foundation_offset": 0.195,
+    "roof_offset": -0.2213,
+    "bay_left_offset": -0.2136,
+    "bay_right_offset": -0.0402,
+    "facade_planarity": 0.451,
+    "bay_window_detected": true,
+    "setback_relative": 0.0422
+  },
+  "depth_notes": {
+    "setback_m_est": 0.44,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
   }
 }

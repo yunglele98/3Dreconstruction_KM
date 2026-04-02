@@ -1,0 +1,373 @@
+{
+  "building_name": "327 Bathurst St (Sanderson Library)",
+  "floors": 1,
+  "facade_material": "Mixed masonry",
+  "facade_colour": "red-brown brick walls with light gray concrete fascia and full-height dark-framed glazing",
+  "windows_per_floor": [
+    3
+  ],
+  "window_type": "fixed",
+  "window_width_m": 1.3,
+  "window_height_m": 2.4,
+  "door_count": 2,
+  "door_type": "single",
+  "has_storefront": false,
+  "condition": "good",
+  "roof_type": "flat",
+  "roof_pitch_deg": 3,
+  "roof_features": [
+    "clerestory_pavilion"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "red-brown brick walls with light gray concrete fascia and full-height dark-framed glazing",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Single-storey civic building appears maintained, with clean paved forecourt and intact glazing.",
+    "condition": "good",
+    "windows_per_floor": [
+      8
+    ],
+    "window_type": "fixed",
+    "window_width_m": 1.3,
+    "window_height_m": 2.4,
+    "window_arrangement": "irregular",
+    "window_details": "Long curtain-wall sections wrap the visible corner while solid brick walls punctuate the volume.",
+    "door_count": 2,
+    "door_type": "single",
+    "door_width_m": 1.0,
+    "door_height_m": 2.3,
+    "door_details": "Entry doors are recessed within the glazed frontage.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "none",
+    "cornice_details": "Minimal civic roof edge with no ornamental cornice.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "No porch; broad forecourt apron fronts the building.",
+    "chimneys": 0,
+    "chimney_details": "No chimney visible.",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "The LIBRARY lettering in the glass and the low clerestory roof form are the main visual features.",
+    "roof_type_observed": "Flat low-slope civic roof",
+    "roof_features": [
+      "clerestory_pavilion"
+    ],
+    "has_storefront_observed": false,
+    "storefront_description": "",
+    "signage_observed": "LIBRARY lettering and Toronto Public Library identification are visible.",
+    "overall_style": "Institutional",
+    "alterations_visible": "No major alterations obvious from these views.",
+    "matches_hcd_typology": false,
+    "confidence": 0.79,
+    "notes": "Best represented by IMG_20260320_171856154_HDR.jpg and IMG_20260320_172015275_HDR.jpg.",
+    "photo": "IMG_20260320_171856154_HDR.jpg"
+  },
+  "_meta": {
+    "address": "327 Bathurst St (Sanderson Library)",
+    "photo": "IMG_20260320_171856154_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:18:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "reference_photos": [
+      "IMG_20260320_171856154_HDR.jpg",
+      "IMG_20260320_171926117_HDR.jpg",
+      "IMG_20260320_171929303_HDR.jpg"
+    ],
+    "reference_photo_count": 3,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "commercial heuristic: 8.0x12.0m"
+    ],
+    "site_backfill_final_method": "web_geocode_nominatim:327_Bathurst_St",
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Bathurst St",
+        "timestamp": "2026-03-29T07:48:40.262649+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:01.423582+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:49.071408+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.3"
+        ],
+        "timestamp": "2026-03-29T08:05:34.099508+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:19.629481Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:45.824315+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A → #424949",
+        "trim": "#E8E0D0 → #2C2C2C",
+        "accent": "#2A3A2A → #4C3224",
+        "mortar": "#B0A898 → #B1A999"
+      }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation",
+      "signage"
+    ]
+  },
+  "window_arrangement": "irregular",
+  "door_width_m": 1.0,
+  "door_height_m": 2.3,
+  "cornice": {
+    "present": true,
+    "type": "none",
+    "height_mm": 250,
+    "projection_mm": 150,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Institutional",
+  "storefront_description": "",
+  "confidence": 0.9,
+  "notes": "Best represented by IMG_20260320_171856154_HDR.jpg and IMG_20260320_172015275_HDR.jpg.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "panelled wood",
+      "position": "left",
+      "width_m": 1.0,
+      "height_m": 2.3,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    },
+    {
+      "id": "door_1",
+      "type": "panelled wood",
+      "position": "right",
+      "width_m": 1.0,
+      "height_m": 2.3,
+      "material": "wood",
+      "transom": {
+        "present": true,
+        "type": "glazed",
+        "height_m": 0.4
+      },
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 12.0,
+  "facade_detail": {
+    "brick_colour_hex": "#8A8A8A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#2C2C2C",
+    "composition": "The street elevation spans roughly 8 metres across 1 storeys and is capped by a flat, consistent with its house-form typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 3 window bays from lower to upper levels, using fixed, and 2 principal entrances.",
+    "heritage_expression": "Character-defining facade elements include cornice.",
+    "mortar_colour_hex": "#B1A999"
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 8,
+          "type": "fixed",
+          "width_m": 0.5,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "single pane",
+          "arch_type": "segmental"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "none",
+      "height_mm": 250,
+      "projection_mm": 150,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 2.0,
+  "facade_description": "327 Bathurst St (Sanderson Library) is a house-form building. The street elevation spans roughly 8 metres across 1 storeys and is capped by a flat, consistent with its house-form typology. The facade reads primarily as mixed masonry in a red-brown brick walls with light gray concrete fascia and full-height dark-framed glazing palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3 window bays from lower to upper levels, using fixed, and 2 principal entrances. Character-defining facade elements include cornice.",
+  "hcd_data": {
+    "typology": "house-form",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "volumes": [],
+  "facade_width_m": 8.0,
+  "total_height_m": 3.2,
+  "floor_heights_m": [
+    3.2
+  ],
+  "site": {
+    "lon": -79.405463,
+    "lat": 43.652101,
+    "street": "Bathurst St",
+    "street_number": "327"
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A8A8A",
+    "trim": "#2C2C2C",
+    "roof": "#424949",
+    "accent": "#4C3224"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_171856154_HDR.jpg",
+    "storeys_observed": 1,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#8A8A8A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 8,
+            "type": "fixed",
+            "width_m": 0.5,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "single pane"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 3,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.3,
+  "inferred_setback_m": 0.5,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2375,
+    "facade_depth_std": 0.1509,
+    "foundation_offset": 0.585,
+    "roof_offset": -0.1901,
+    "bay_left_offset": 0.0334,
+    "bay_right_offset": -0.0193,
+    "facade_planarity": 0.245,
+    "bay_window_detected": false,
+    "setback_relative": -0.0765
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "Sanderson",
+    "confidence": 0.577,
+    "all_texts": [
+      "Sanderson "
+    ],
+    "matches_existing": null,
+    "text_count": 4
+  }
+}

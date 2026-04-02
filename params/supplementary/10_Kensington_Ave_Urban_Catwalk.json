@@ -1,0 +1,359 @@
+{
+  "building_name": "10 Kensington Ave (Urban Catwalk)",
+  "floors": 2,
+  "facade_material": "brick",
+  "facade_colour": "warm red-brown brick upper, dark-painted storefront ground floor",
+  "windows_per_floor": [
+    0,
+    1
+  ],
+  "window_type": "double_hung",
+  "door_count": 1,
+  "door_type": "storefront",
+  "has_storefront": true,
+  "condition": "fair",
+  "roof_type": "gable",
+  "photo_observations": {
+    "facade_colour_observed": "warm red-brown brick upper storey, dark-painted ground floor storefront with black metal framing",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Upper brick in fair condition with some weathering; storefront glazing intact; signage well-maintained",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "window_type": "double_hung",
+    "window_width_m": 0.7,
+    "window_height_m": 1.1,
+    "window_arrangement": "symmetric",
+    "window_details": "Two narrow double-hung sash windows on second floor, dark frames, flanking the gable peak area",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.9,
+    "door_height_m": 2.3,
+    "door_details": "Glass storefront entry door, right side of ground floor, dark metal frame",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Simple brick cornice at roofline, no elaborate moulding visible",
+    "bay_windows": 0,
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "chimneys": 0,
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Large yellow-on-green painted signage reading 'URBAN CATWALK WHOLESALE & RETAIL' across storefront fascia; secondary A-frame sidewalk sign",
+    "roof_type_observed": "gable",
+    "roof_features": [],
+    "has_storefront_observed": true,
+    "storefront_description": "A full-width Urban Catwalk storefront fills the ground floor with large display glazing, dark metal framing, visible merchandise, and a security grille layered over the shopfront after hours.",
+    "signage_observed": "URBAN CATWALK - yellow lettering on green background, mounted on fascia above storefront; secondary ground-level A-frame sign with same branding",
+    "overall_style": "Commercial",
+    "alterations_visible": "Ground floor fully converted to commercial storefront; original residential fenestration likely removed at ground level; security grille added",
+    "matches_hcd_typology": true,
+    "confidence": 0.75,
+    "notes": "Night photo. Narrow 2-storey commercial on Kensington Ave pedestrian strip. Typical converted Victorian house-form with ground-floor retail. Adjacent to similar row of converted houses. Party wall visible on right side (shared with neighbour).",
+    "photo": "IMG_20260320_012216600_HDR.jpg"
+  },
+  "_meta": {
+    "address": "10 Kensington Ave (Urban Catwalk)",
+    "photo": "IMG_20260320_012216600_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:20:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "reference_photos": [
+      "IMG_20260320_012216600_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "loose",
+    "db_address_full": "10 Kensington Ave",
+    "db_revision_ts": "2026-03-30T02:24:20",
+    "db_address_candidates": [
+      "10 KENSINGTON AVE"
+    ],
+    "qa_autofix_height": {
+      "timestamp": "2026-03-25T14:41:01",
+      "old_total_height_m": 10.49,
+      "new_total_height_m": 9.6,
+      "floors": 2.0,
+      "rule": "total_height_m in [2.4, 4.8] * floors"
+    },
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Kensington Ave",
+        "timestamp": "2026-03-29T07:48:17.851840+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:50:44.263863+00:00"
+      },
+      {
+        "fix": "validate_all_params",
+        "fixes": [
+          "extended windows_per_floor: 2 -> 2"
+        ],
+        "timestamp": "2026-03-29T07:59:56.353885+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:41.033517+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:08.144036+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:12.324469+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.332263+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:16.128483Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:43.232174+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "storefront_enriched": "2026-03-29T08:38:11.193553Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #B36737",
+        "roof": "#5A5A5A → #4C5353",
+        "trim": "#E8E0D0 → #503D2D",
+        "accent": "#2A3A2A → #192725",
+        "mortar": "#B0A898 → #AFA89A"
+      }
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "notes": "Narrow 2-storey commercial on Kensington Ave pedestrian strip. Typical converted Victorian house-form with full ground-floor retail storefront. Night photo, party walls both sides.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "recessed glass entrance",
+      "position": "center",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 5.1,
+    "height_m": 2.6,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 2,
+      "frame_colour_hex": "#1A1A1A"
+    },
+    "recessed_entry": false,
+    "security_grille": true,
+    "description": "A full-width Urban Catwalk storefront spans the grade level with large display glazing, dark metal framing, visible merchandise, and a bold yellow-on-green fascia sign above.",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "retractable",
+      "width_m": 4.16,
+      "projection_m": 1.0,
+      "colour_hex": "#8A2A2A"
+    }
+  },
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_depth_m": 10.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B36737",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#503D2D",
+    "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance.",
+    "mortar_colour_hex": "#AFA89A",
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "heritage_summary": "This commercial dates to the 1889-1903 period. Character-defining elements include ground-floor storefront."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300,
+    "gable_window": {
+      "present": false
+    }
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 0,
+          "type": "storefront glazing",
+          "width_m": 0.9,
+          "height_m": 1.4,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1",
+          "arch_type": "segmental"
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    }
+  },
+  "street_setback_m": 0.0,
+  "confidence": 0.9,
+  "facade_description": "10 Kensington Ave (Urban Catwalk) is a commercial building with a street-level storefront. The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "volumes": [],
+  "total_height_m": 9.6,
+  "facade_width_m": 5.2,
+  "floor_heights_m": [
+    4.8,
+    4.8
+  ],
+  "roof_pitch_deg": 40,
+  "site": {
+    "lon": -79.40031363,
+    "lat": 43.65309175,
+    "street": "Kensington Ave",
+    "street_number": 8
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B36737",
+    "trim": "#503D2D",
+    "roof": "#4C5353",
+    "accent": "#192725"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012216600_HDR.jpg",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 0,
+            "type": "storefront glazing",
+            "width_m": 0.9,
+            "height_m": 1.4,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 40,
+    "decorative_elements_observed": [],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.15
+    }
+  },
+  "window_arrangement": "symmetric",
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2906,
+    "facade_depth_std": 0.1059,
+    "foundation_offset": 0.492,
+    "roof_offset": -0.2004,
+    "bay_left_offset": 0.253,
+    "bay_right_offset": -0.0083,
+    "facade_planarity": 0.47,
+    "bay_window_detected": true,
+    "setback_relative": -0.0739
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
+}

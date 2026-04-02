@@ -39,28 +39,28 @@
     "typology": "",
     "construction_date": "1904-1913",
     "architectural_style": "Edwardian / Early 20th-Century Commercial",
-    "construction_period": "c. 1900\u20131930",
+    "construction_period": "c. 1900–1930",
     "construction_decade": 1900,
     "sub_area": "",
     "contributing": "",
     "hcd_plan_index": null,
     "statement_of_contribution": "",
     "building_features": [],
-    "heritage_register": "Within HCD Boundary \u2013 Status Unconfirmed",
+    "heritage_register": "Within HCD Boundary – Status Unconfirmed",
     "protection_level": 1
   },
   "context": {
     "building_type": "commercial",
     "general_use": "Mixed Use",
     "land_use": "Commercial / Mixed-Use (Active)",
-    "commercial_use": "Restaurant / Bar / Caf\u00e9",
+    "commercial_use": "Restaurant / Bar / Café",
     "business_name": "Sam's Food Stores | Pet Valu | Nora Shawarma and Kebab",
     "business_category": "Other",
     "zoning": "CR",
     "is_vacant": false,
     "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
-    "morphological_zone": "Perimeter Arterial \u2013 Commercial Corridor",
-    "development_phase": "Phase 3: Commercial Intensification (1900\u20131930)"
+    "morphological_zone": "Perimeter Arterial – Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900–1930)"
   },
   "assessment": {
     "condition_rating": 2,
@@ -79,7 +79,7 @@
     "lot_width_ft": 20.0,
     "lot_depth_ft": 120.0,
     "dwelling_units": 1,
-    "residential_floors": "Floors 2\u20133 (above ground-floor commercial)",
+    "residential_floors": "Floors 2–3 (above ground-floor commercial)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -168,15 +168,19 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #BB6548",
-        "roof": "#5A5A5A \u2192 #4D4C4C",
-        "trim": "#E8E0D0 \u2192 #222222",
-        "accent": "#3A2A20 \u2192 #29292F",
-        "mortar": "#B0A898 \u2192 #B3AA9A"
+        "facade": "#B85A3A → #BB6548",
+        "roof": "#5A5A5A → #4D4C4C",
+        "trim": "#E8E0D0 → #222222",
+        "accent": "#3A2A20 → #29292F",
+        "mortar": "#B0A898 → #B3AA9A"
       }
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -425,5 +429,35 @@
   },
   "wall_thickness_m": 0.3,
   "foundation_height_m": 0.3,
-  "handoff_fixes_applied": true
+  "handoff_fixes_applied": true,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2218,
+    "facade_depth_std": 0.201,
+    "foundation_offset": 0.549,
+    "roof_offset": -0.1714,
+    "bay_left_offset": -0.0018,
+    "bay_right_offset": 0.0847,
+    "facade_planarity": 0.0,
+    "bay_window_detected": true,
+    "setback_relative": -0.0934
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.52
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 1,
+      "vehicles": 12
+    },
+    "total_facade_detections": 13
+  },
+  "_audit": {
+    "photo_heavily_occluded": true
+  }
 }

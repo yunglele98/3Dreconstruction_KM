@@ -188,6 +188,20 @@
     ],
     "sparse_field_promotions": [
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ],
+    "audit_fixes_applied": [
+      {
+        "path": "facade_detail.brick_colour_hex",
+        "old_value": "#B85A3A",
+        "new_value": "#5D2906",
+        "confidence": 0.9,
+        "category": "facade_material",
+        "applied_at": "2026-04-02T03:56:41.808241+00:00"
+      }
     ]
   },
   "photo_observations": {
@@ -258,7 +272,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#5D2906",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -403,5 +417,32 @@
     ],
     "colour_palette_observed": {}
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.1781,
+    "facade_depth_std": 0.0954,
+    "foundation_offset": 0.2485,
+    "roof_offset": -0.0106,
+    "bay_left_offset": 0.0676,
+    "bay_right_offset": -0.1303,
+    "facade_planarity": 0.523,
+    "bay_window_detected": true,
+    "setback_relative": -0.0328
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 100,
+    "bay_window_projection_m_est": 0.52
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

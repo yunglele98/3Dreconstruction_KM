@@ -165,6 +165,10 @@
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "storefront": {
@@ -315,5 +319,32 @@
   },
   "handoff_fixes_applied": true,
   "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.5902,
+    "facade_depth_std": 0.1529,
+    "foundation_offset": 0.2511,
+    "roof_offset": -0.4566,
+    "bay_left_offset": -0.2426,
+    "bay_right_offset": -0.1693,
+    "facade_planarity": 0.236,
+    "bay_window_detected": true,
+    "setback_relative": 0.1003
+  },
+  "depth_notes": {
+    "setback_m_est": 1.22,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

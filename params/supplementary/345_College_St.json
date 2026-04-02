@@ -1,0 +1,470 @@
+{
+  "building_name": "345 College St",
+  "floors": 3,
+  "floor_heights_m": [
+    4.5,
+    4.0,
+    3.5
+  ],
+  "total_height_m": 12.0,
+  "facade_width_m": 6.1,
+  "facade_depth_m": 36.6,
+  "site": {
+    "lon": -79.403292,
+    "lat": 43.657024,
+    "street": "College St",
+    "street_number": 345,
+    "setback_m": 0.5,
+    "lot_area_sqm": null,
+    "footprint_sqm": null,
+    "lot_coverage_pct": null,
+    "lots_sharing_footprint": null
+  },
+  "roof_type": "flat",
+  "roof_features": [
+    "sign_band"
+  ],
+  "facade_material": "brick",
+  "facade_colour": "black sign band and dark storefront frame over a brown brick ground floor",
+  "windows_per_floor": [
+    0,
+    2,
+    1
+  ],
+  "window_type": "mixed",
+  "window_width_m": 1.0,
+  "window_height_m": 1.45,
+  "door_count": 1,
+  "has_storefront": true,
+  "condition": "fair",
+  "hcd_data": {
+    "typology": "Commercial row building",
+    "construction_date": "1904-1913",
+    "architectural_style": "Edwardian / Early 20th-Century Commercial",
+    "construction_period": "c. 1900-1930",
+    "construction_decade": 1900,
+    "sub_area": "",
+    "contributing": "Unknown",
+    "hcd_plan_index": null,
+    "statement_of_contribution": "",
+    "building_features": [],
+    "heritage_register": "Unknown",
+    "protection_level": 1
+  },
+  "context": {
+    "building_type": "commercial",
+    "general_use": "Mixed Use",
+    "land_use": "Commercial / Mixed-Use (Active)",
+    "commercial_use": "Restaurant / Food Service",
+    "business_name": "Flava Ceen Express",
+    "business_category": "Restaurant/Food",
+    "zoning": "CR",
+    "is_vacant": false,
+    "street_character": "Major arterial | 4 lanes | Streetcar (506) | Commercial strip",
+    "morphological_zone": "Perimeter Arterial - Commercial Corridor",
+    "development_phase": "Phase 3: Commercial Intensification (1900-1930)"
+  },
+  "assessment": {
+    "condition_rating": 3,
+    "condition_issues": "papered_display",
+    "structural_concern": false,
+    "risk_score": 25,
+    "signage": "Flava Ceen Express",
+    "street_presence": "neutral"
+  },
+  "city_data": {
+    "height_max_m": 12.0,
+    "height_avg_m": 8.0,
+    "footprint_sqm": null,
+    "gfa_sqm": null,
+    "fsi": null,
+    "lot_width_ft": 20.0,
+    "lot_depth_ft": 120.0,
+    "dwelling_units": 0,
+    "residential_floors": "Floors 2-3 above commercial",
+    "heritage_feature_count": 0
+  },
+  "_meta": {
+    "address": "345 College St",
+    "source": "photo_interpretation",
+    "db": "kensington",
+    "agent": "Codex",
+    "timestamp": "2026-03-24T13:20:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "db_neighbor_backfill": {
+      "source_address": "343 College St",
+      "source_street": "COLLEGE ST",
+      "house_number_gap": 2,
+      "confidence": "medium",
+      "timestamp": "2026-03-25T14:51:53",
+      "proxy_defaults": {
+        "facade_width_m": 6.1,
+        "facade_depth_m": 36.58,
+        "floors": 3,
+        "total_height_m": 10.78,
+        "has_storefront": true
+      }
+    },
+    "site_backfill_interp": "between:343:347",
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "College St",
+        "timestamp": "2026-03-29T07:48:40.847411+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "roof_pitch_deg",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:02.269478+00:00"
+      },
+      {
+        "fix": "validate_all_params",
+        "fixes": [
+          "extended windows_per_floor: 3 -> 3"
+        ],
+        "timestamp": "2026-03-29T08:00:00.298528+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (unknown)",
+          "arch_type filled (unknown)"
+        ],
+        "timestamp": "2026-03-29T08:03:49.621279+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #3A2A20 (dark brown)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:35.180991+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "number_variant",
+      "timestamp": "2026-03-29T08:34:19.860769Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.005856+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "storefront_enriched": "2026-03-29T08:38:15.159936Z",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #BC6252",
+        "roof": "#5A5A5A → #5C5C5C",
+        "trim": "#E8E0D0 → #433224",
+        "accent": "#3A2A20 → #36261E",
+        "mortar": "#B0A898 → #A59688"
+      }
+    ],
+    "backfills": [
+      "construction_era:style_keyword:edwardian"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement",
+      "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "status": "active",
+    "width_m": 5.2,
+    "height_m": 4.5,
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "width_m": 5.49,
+      "projection_m": 1.2,
+      "colour_hex": "#2A4A2A"
+    },
+    "signage": {
+      "text": "Flava Ceen Express",
+      "type": "projecting",
+      "width_m": 4.0,
+      "height_m": 0.6,
+      "colour_hex": "#F0EDE8"
+    }
+  },
+  "photo_observations": {
+    "facade_colour_observed": "black sign band and dark storefront frame over a brown brick ground floor",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "storefront is active but one opening is papered over and the glazing appears partially vacant or being refitted",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2,
+      2
+    ],
+    "window_type": "mixed",
+    "window_width_m": 1.0,
+    "window_height_m": 1.45,
+    "window_arrangement": "symmetric",
+    "window_details": "upper floors have paired dark-framed windows; lower left display is clear glazed while centre opening is papered",
+    "door_count": 1,
+    "door_type": "storefront",
+    "door_width_m": 0.95,
+    "door_height_m": 2.2,
+    "door_details": "single glazed commercial door set toward the centre-right",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "plain sign fascia without historic cornice expression",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "no porch",
+    "chimneys": 0,
+    "chimney_details": "not visible",
+    "quoins": false,
+    "pilasters": false,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "large Flava Ceen sign dominates the storefront",
+    "roof_type_observed": "flat roof",
+    "roof_features": [
+      "sign_band"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "restaurant storefront with broad glazing and one papered display panel",
+    "signage_observed": "Flava Ceen Express; Jamaican & International Flava",
+    "overall_style": "Commercial",
+    "alterations_visible": "modern storefront infill and tenant signage",
+    "matches_hcd_typology": false,
+    "confidence": 0.5,
+    "photo_date": "2026-03-18",
+    "photo_time": "~14:17",
+    "weather": "light snow",
+    "notes": "Batch 009 daytime photo partially visible. Flava Ceen Express commercial storefront. Part of College St commercial row.",
+    "photo": "IMG_20260318_141715399_HDR.jpg"
+  },
+  "window_arrangement": "symmetric",
+  "door_type": "storefront",
+  "door_width_m": 0.95,
+  "door_height_m": 2.2,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": false,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "restaurant storefront with broad glazing and one papered display panel",
+  "confidence": 0.7500000000000002,
+  "notes": "Batch 009 daytime photo partially visible. Flava Ceen Express commercial storefront. Part of College St commercial row.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "recessed glass entrance",
+      "position": "center",
+      "width_m": 0.95,
+      "height_m": 2.2,
+      "transom": {
+        "present": true,
+        "height_m": 0.4,
+        "type": "glazed"
+      },
+      "material": "glass/metal",
+      "colour_hex": "#3A2A20",
+      "colour": "dark brown"
+    }
+  ],
+  "building_type": "commercial",
+  "party_wall_left": true,
+  "party_wall_right": true,
+  "facade_detail": {
+    "brick_colour_hex": "#BC6252",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#433224",
+    "composition": "The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat, consistent with its commercial row building typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance.",
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "mortar_colour_hex": "#A59688"
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 0,
+          "type": "storefront",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 1.4,
+          "frame_colour": "#E8E0D0",
+          "glazing": "plate",
+          "arch_type": "flat"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "mixed",
+          "width_m": 0.9,
+          "height_m": 1.6,
+          "sill_height_m": 1.2,
+          "frame_colour": "#E8E0D0",
+          "glazing": "1-over-1",
+          "arch_type": "flat"
+        }
+      ]
+    }
+  ],
+  "decorative_elements": {
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "street_setback_m": 0.5,
+  "facade_description": "345 College St is a commercial building with a street-level storefront. The street frontage spans roughly 6.1 metres across 3 storeys beneath a flat, consistent with its commercial row building typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance. Key storefront and facade features include cornice.",
+  "roof_material": "Built-up tar and gravel",
+  "volumes": [],
+  "colour_palette": {
+    "facade_hex": "#7A5C44",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#BC6252",
+    "trim": "#433224",
+    "roof": "#5C5C5C",
+    "accent": "#36261E"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260318_141715399_HDR.jpg",
+    "storeys_observed": 3,
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "windows_detail": [
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 0,
+            "type": "storefront",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 1.4,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 2,
+            "type": "mixed",
+            "width_m": 0.9,
+            "height_m": 1.6,
+            "sill_height_m": 1.2,
+            "frame_colour": "#E8E0D0",
+            "glazing": "1-over-1"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 0,
+    "decorative_elements_observed": [
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "roof_pitch_deg": 35,
+  "foundation_height_m": 0.15,
+  "depth_analysis": {
+    "facade_depth_mean": 0.194,
+    "facade_depth_std": 0.1341,
+    "foundation_offset": 0.3144,
+    "roof_offset": 0.1037,
+    "bay_left_offset": 0.181,
+    "bay_right_offset": -0.1368,
+    "facade_planarity": 0.33,
+    "bay_window_detected": true,
+    "setback_relative": -0.0857
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 633.0,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
+}

@@ -189,6 +189,10 @@
     ],
     "sparse_field_promotions": [
       "porch_detail"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "bay_window": {
@@ -426,5 +430,32 @@
   "porch_detail": {
     "present": true
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.3643,
+    "facade_depth_std": 0.0865,
+    "foundation_offset": 0.3879,
+    "roof_offset": -0.2236,
+    "bay_left_offset": -0.0503,
+    "bay_right_offset": -0.0004,
+    "facade_planarity": 0.567,
+    "bay_window_detected": true,
+    "setback_relative": -0.0244
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.26
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
+  }
 }

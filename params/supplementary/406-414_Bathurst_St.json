@@ -1,0 +1,605 @@
+{
+  "building_name": "406-414 Bathurst St",
+  "floors": 4,
+  "facade_material": "brick",
+  "facade_colour": "red brick base with pale grey brick vertical panels and black aluminum window framing",
+  "windows_per_floor": [
+    3,
+    4,
+    4,
+    4
+  ],
+  "window_type": "fixed/storefront",
+  "window_width_m": 2.6,
+  "window_height_m": 3.0,
+  "door_count": 4,
+  "door_type": "storefront",
+  "has_storefront": true,
+  "condition": "good",
+  "roof_type": "flat",
+  "roof_pitch_deg": 2,
+  "roof_features": [
+    "parapet",
+    "setback_glazing"
+  ],
+  "photo_observations": {
+    "facade_colour_observed": "red brick base with pale grey brick vertical panels and black aluminum window framing",
+    "facade_material_observed": "mixed",
+    "facade_condition_notes": "Modern commercial/institutional facade appears recently built and well maintained, with clean glazing and intact masonry.",
+    "condition": "good",
+    "windows_per_floor": [
+      3,
+      4,
+      4,
+      4
+    ],
+    "window_type": "fixed/storefront",
+    "window_width_m": 2.6,
+    "window_height_m": 3.0,
+    "window_arrangement": "symmetric",
+    "window_details": "Large floor-to-ceiling glazed bays are organized in a regular grid between brick piers, with clerestory-like glazing at the top level.",
+    "door_count": 4,
+    "door_type": "storefront",
+    "door_width_m": 1.6,
+    "door_height_m": 2.6,
+    "door_details": "Multiple recessed commercial entrances serve the street-level tenants and central institutional entry.",
+    "ground_floor_arches": "none",
+    "ground_floor_arch_count": 0,
+    "cornice": "simple",
+    "cornice_details": "Flat modern parapet with slight step-backs and dark metal coping.",
+    "bay_windows": 0,
+    "bay_window_details": "none",
+    "balconies": 0,
+    "balcony_type": "none",
+    "porch_present": false,
+    "porch_type": "none",
+    "porch_details": "none",
+    "chimneys": 0,
+    "chimney_details": "None visible.",
+    "quoins": false,
+    "pilasters": true,
+    "string_course": false,
+    "decorative_lintels": false,
+    "decorative_details": "Facade relies on modern brick piers, dark mullions, and continuous glazing rather than historic ornament.",
+    "roof_type_observed": "Flat roof concealed behind a parapet",
+    "roof_features": [
+      "parapet",
+      "setback_glazing"
+    ],
+    "has_storefront_observed": true,
+    "storefront_description": "Ground floor contains large glazed commercial units with bright contemporary signage for Western Dental and Sixty Wings.",
+    "signage_observed": "Western Dental, Sixty Wings, FreshCo, Scotiabank, Bathurst College Centre, and UHN signage are visible across the facade.",
+    "overall_style": "Commercial",
+    "alterations_visible": "Appears to be a contemporary infill/redevelopment rather than a heavily altered heritage facade.",
+    "matches_hcd_typology": false,
+    "confidence": 0.83,
+    "notes": "Street-facing elevation is clearly visible in daylight from across Bathurst Street.",
+    "photo": "IMG_20260320_172809679_HDR.jpg"
+  },
+  "_meta": {
+    "address": "406-414 Bathurst St",
+    "photo": "IMG_20260320_172809679_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T15:50:45-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "cornice",
+      "doors_detail",
+      "decorative",
+      "storefront",
+      "style_hints"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "colour_palette"
+    ],
+    "reference_photos": [
+      "IMG_20260320_172809679_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "qa_photo_fixes": [
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)",
+      "Photo: 4fl modern brick+glass ~25m (Western Dental)"
+    ],
+    "handoff_fixes_applied": [
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.83,
+        "timestamp": "2026-03-29T07:31:01.542021+00:00"
+      },
+      {
+        "fix": "fix_material_from_handoff",
+        "task_id": "TASK-20260327-013",
+        "field": "facade_material",
+        "old_value": "mixed",
+        "new_value": "mixed",
+        "confidence": 0.83,
+        "timestamp": "2026-03-29T07:44:25.696376+00:00"
+      },
+      {
+        "fix": "expand_multi_volume",
+        "volumes_created": 2,
+        "volume_ids": [
+          "commercial_ground",
+          "residential_upper"
+        ],
+        "timestamp": "2026-03-29T07:50:42.709324+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex"
+        ],
+        "timestamp": "2026-03-29T07:51:05.177481+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)",
+          "arch_type filled (1889-1903)"
+        ],
+        "timestamp": "2026-03-29T08:03:51.734074+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)",
+          "foundation_height_m: 0.15"
+        ],
+        "timestamp": "2026-03-29T08:05:38.677061+00:00"
+      }
+    ],
+    "deep_facade_backfill": [
+      {
+        "source": "batch_deep_facade_backfill.py",
+        "street": "Bathurst St",
+        "timestamp": "2026-03-29T07:48:44.490948+00:00"
+      }
+    ],
+    "generation_defaults_applied": true,
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:20.685088Z",
+      "script": "match_photos_to_params.py"
+    },
+    "colour_palette_rebuilt": "2026-03-29T08:35:46.602891+00:00",
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "roof": "#5A5A5A → #4F5353",
+        "trim": "#E8E0D0 → #272727",
+        "accent": "#2A3A2A → #2E3E2B",
+        "mortar": "#B0A898 → #B4A48F"
+      }
+    ],
+    "backfills": [
+      "site_street_from_filename"
+    ],
+    "sparse_field_promotions": [
+      "window_arrangement"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation",
+      "signage"
+    ]
+  },
+  "window_arrangement": "symmetric",
+  "door_width_m": 1.6,
+  "door_height_m": 2.6,
+  "cornice": {
+    "present": true,
+    "type": "simple",
+    "height_mm": 200,
+    "projection_mm": 100,
+    "colour_hex": "#D4C9A8"
+  },
+  "bay_windows": 0,
+  "balconies": 0,
+  "balcony_type": "none",
+  "quoins": false,
+  "pilasters": true,
+  "string_course": false,
+  "decorative_lintels": false,
+  "overall_style": "Commercial",
+  "storefront_description": "Ground floor contains large glazed commercial units with bright contemporary signage for Western Dental and Sixty Wings.",
+  "confidence": 0.9,
+  "notes": "Street-facing elevation is clearly visible in daylight from across Bathurst Street.",
+  "porch_present": false,
+  "porch_type": "none",
+  "chimney_count": 0,
+  "ground_floor_arch_type": "none",
+  "ground_floor_arch_count": 0,
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "recessed glass entrance",
+      "position": "left",
+      "width_m": 1.6,
+      "height_m": 2.6,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    },
+    {
+      "id": "door_1",
+      "type": "recessed glass entrance",
+      "position": "right",
+      "width_m": 1.6,
+      "height_m": 2.6,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    },
+    {
+      "id": "door_2",
+      "type": "recessed glass entrance",
+      "position": "right",
+      "width_m": 1.6,
+      "height_m": 2.6,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    },
+    {
+      "id": "door_3",
+      "type": "recessed glass entrance",
+      "position": "right",
+      "width_m": 1.6,
+      "height_m": 2.6,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "decorative_elements": {
+    "pilasters": {
+      "present": true,
+      "width_mm": 180,
+      "projection_mm": 40,
+      "colour_hex": "#D4C9A8"
+    },
+    "cornice": {
+      "present": true,
+      "type": "simple",
+      "height_mm": 200,
+      "projection_mm": 100,
+      "colour_hex": "#D4C9A8"
+    }
+  },
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 5.1,
+    "height_m": 2.6,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 3,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": "Ground floor contains large glazed commercial units with bright contemporary signage for Western Dental and Sixty Wings.",
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix"
+  },
+  "building_type": "commercial",
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 20.0,
+  "facade_detail": {
+    "brick_colour_hex": "#8A8A8A",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#272727",
+    "composition": "The street frontage spans roughly 25 metres across 4 storeys beneath a flat, consistent with its commercial typology.",
+    "opening_rhythm": "The visible opening pattern is organized as 3, 4, 4, 4 window bays from lower to upper levels, using fixed/storefront, and 4 principal entrances.",
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "secondary_material": "mixed (previously mixed)",
+    "mortar_colour_hex": "#B4A48F"
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 300
+  },
+  "parapet_height_m": 0.6,
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [
+        {
+          "count": 3,
+          "type": "storefront glazing",
+          "width_m": 0.9,
+          "height_m": 2.0,
+          "sill_height_m": 0.9,
+          "frame_colour": "#E8E0D0",
+          "glazing": "plate",
+          "arch_type": "segmental"
+        }
+      ]
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed/storefront",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "2-over-2",
+          "arch_type": "flat"
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed/storefront",
+          "width_m": 0.9,
+          "height_m": 1.3,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "2-over-2",
+          "arch_type": "flat"
+        }
+      ]
+    },
+    {
+      "floor": "Attic / gable",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed",
+          "width_m": 0.7,
+          "height_m": 0.9,
+          "sill_height_m": 1.0,
+          "frame_colour": "#E8E0D0",
+          "glazing": "fixed",
+          "arch_type": "flat"
+        }
+      ]
+    }
+  ],
+  "street_setback_m": 2.0,
+  "facade_description": "406-414 Bathurst St is a commercial building with a street-level storefront. The street frontage spans roughly 25 metres across 4 storeys beneath a flat, consistent with its commercial typology. The frontage is defined primarily by mixed masonry in a red brick base with pale grey brick vertical panels and black aluminum window framing palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 3, 4, 4, 4 window bays from lower to upper levels, using fixed/storefront, and 4 principal entrances. Key storefront and facade features include cornice.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Built-up tar and gravel",
+  "volumes": [
+    {
+      "id": "commercial_ground",
+      "width_m": 25.0,
+      "depth_m": 20.0,
+      "floor_heights_m": [
+        3.2
+      ],
+      "total_height_m": 3.2,
+      "facade_colour": "red brick base with pale grey brick vertical panels and black aluminum window framing",
+      "facade_material": "mixed",
+      "roof_type": "flat"
+    },
+    {
+      "id": "residential_upper",
+      "width_m": 25.0,
+      "depth_m": 20.0,
+      "floor_heights_m": [
+        3.2,
+        3.2,
+        3.2
+      ],
+      "total_height_m": 9.6,
+      "facade_colour": "red brick base with pale grey brick vertical panels and black aluminum window framing",
+      "facade_material": "mixed",
+      "roof_type": "flat"
+    }
+  ],
+  "facade_width_m": 25.0,
+  "total_height_m": 12.8,
+  "floor_heights_m": [
+    3.2,
+    3.2,
+    3.2,
+    3.2
+  ],
+  "site": {
+    "lon": -79.399694,
+    "lat": 43.656066,
+    "street": "Bathurst St",
+    "street_number": "406-414"
+  },
+  "colour_palette": {
+    "facade_hex": "#B85A3A",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#3A3A3A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#8A8A8A",
+    "trim": "#272727",
+    "roof": "#4F5353",
+    "accent": "#2E3E2B"
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_172809679_HDR.jpg",
+    "storeys_observed": 4,
+    "facade_material_observed": "mixed",
+    "brick_colour_hex": "#8A8A8A",
+    "windows_detail": [
+      {
+        "floor": "Ground floor",
+        "windows": [
+          {
+            "count": 3,
+            "type": "storefront glazing",
+            "width_m": 0.9,
+            "height_m": 2.0,
+            "sill_height_m": 0.9,
+            "frame_colour": "#E8E0D0",
+            "glazing": "plate"
+          }
+        ]
+      },
+      {
+        "floor": "Second floor",
+        "windows": [
+          {
+            "count": 4,
+            "type": "fixed/storefront",
+            "width_m": 0.9,
+            "height_m": 1.3,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Third floor",
+        "windows": [
+          {
+            "count": 4,
+            "type": "fixed/storefront",
+            "width_m": 0.9,
+            "height_m": 1.3,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "2-over-2"
+          }
+        ]
+      },
+      {
+        "floor": "Attic / gable",
+        "windows": [
+          {
+            "count": 4,
+            "type": "fixed",
+            "width_m": 0.7,
+            "height_m": 0.9,
+            "sill_height_m": 1.0,
+            "frame_colour": "#E8E0D0",
+            "glazing": "fixed"
+          }
+        ]
+      }
+    ],
+    "roof_type_observed": "flat",
+    "roof_pitch_deg": 2,
+    "decorative_elements_observed": [
+      "pilasters",
+      "cornice"
+    ],
+    "colour_palette_observed": {},
+    "condition_observed": "good",
+    "depth_notes": {
+      "setback_m_est": 0,
+      "foundation_height_m_est": 0.15,
+      "step_count": 1,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
+  },
+  "wall_thickness_m": 0.3,
+  "foundation_height_m": 0.15,
+  "inferred_setback_m": 0.0,
+  "depth_analysis": {
+    "facade_depth_mean": 0.2317,
+    "facade_depth_std": 0.0834,
+    "foundation_offset": 0.3659,
+    "roof_offset": -0.1053,
+    "bay_left_offset": -0.1281,
+    "bay_right_offset": 0.0856,
+    "facade_planarity": 0.583,
+    "bay_window_detected": true,
+    "setback_relative": -0.0587
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 3
+    },
+    "total_facade_detections": 3
+  },
+  "_audit": {
+    "photo_heavily_occluded": true
+  },
+  "signage_analysis": {
+    "detected_business_name": "6XJY WINGS",
+    "confidence": 0.731,
+    "all_texts": [
+      "6XJY WINGS",
+      "JESTERN",
+      "DENTAL.",
+      "STOP",
+      "HERE"
+    ],
+    "matches_existing": null,
+    "text_count": 28
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "building_name": "16-18 Kensington Ave",
+  "floors": 2,
+  "facade_material": "brick",
+  "facade_colour": "red-brown brick on upper storey; brick (upper), painted/stucco (lower commercial)",
+  "door_count": 2,
+  "door_type": "storefront",
+  "has_storefront": true,
+  "condition": "fair",
+  "roof_type": "gable",
+  "photo_observations": {
+    "notes": "Attached pair in the Kensington retail strip.",
+    "facade_analysis_agent": "claude-opus-4-6-facade-analysis",
+    "facade_analysis_timestamp": "2026-03-26T14:10:40",
+    "facade_analysis_photo": "IMG_20260320_012318650_HDR.jpg",
+    "facade_analysis_address": "16-18 Kensington Ave",
+    "storeys_observed": 2,
+    "facade_material_observed": "brick (upper), painted/stucco (lower commercial)",
+    "brick_colour_observed": "red-brown brick on upper storey",
+    "brick_colour_hex_observed": "#B85A3A",
+    "condition_observed": "fair; upper brick in reasonable condition; ground floor modified",
+    "windows_observed": {
+      "gable": "1 small window in gable peak",
+      "upper_floor": "1 large window with white frame; 1 smaller window",
+      "ground_floor": "commercial storefront"
+    },
+    "doors_observed": "commercial entrance; residential side door visible",
+    "roof_type_observed": "gable; front-facing steep gable",
+    "decorative_elements_observed": "gable peak with white trim; bay window form; metal chain-link security visible",
+    "storefront_description": "ground floor commercial; painted cream/beige with dark commercial unit; VW van parked in front partially obscuring view",
+    "signage_observed": "not clearly legible",
+    "party_walls_observed": "party walls both sides",
+    "colour_palette_observed": {
+      "primary": "red-brown brick (upper), cream/beige (lower)",
+      "trim": "white"
+    },
+    "bond_pattern_observed": "running bond",
+    "photo_quality": "night, rotated 90 degrees",
+    "photo": "IMG_20260320_012318650_HDR.jpg"
+  },
+  "_meta": {
+    "address": "16-18 Kensington Ave",
+    "photo": "IMG_20260320_012318650_HDR.jpg",
+    "agent": "codex-gpt-5",
+    "timestamp": "2026-03-24T17:20:00-04:00",
+    "translated": true,
+    "translations_applied": [
+      "photo_obs",
+      "doors_detail",
+      "storefront"
+    ],
+    "enriched": true,
+    "enrichment_source": "enrich_skeletons.py (typology-driven defaults)",
+    "gaps_filled": true,
+    "inferences_applied": [
+      "hcd_data_stub",
+      "roof_material",
+      "colour_palette",
+      "volumes",
+      "roof_detail",
+      "dimensions_backfill",
+      "window_type_diversity"
+    ],
+    "reference_photos": [
+      "IMG_20260320_012318650_HDR.jpg"
+    ],
+    "reference_photo_count": 1,
+    "photo_index_source": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON/csv/photo_address_index.csv",
+    "photo_directory": "/mnt/c/Users/liam1/blender_buildings/PHOTOS KENSINGTON",
+    "db_match_mode": "candidate_range_anchor",
+    "db_address_full": "16 Kensington Ave",
+    "db_address_candidates": [
+      "16-18 KENSINGTON AVE",
+      "16 KENSINGTON AVE",
+      "17 KENSINGTON AVE",
+      "18 KENSINGTON AVE"
+    ],
+    "db_revision_ts": "2026-03-30T02:24:20",
+    "qa_photo_fixes": [
+      "commercial heuristic: 8.0x12.0m"
+    ],
+    "facade_analysis_applied": [
+      "kensington_ave_facades_2026-03-26T14:09:13",
+      "kensington_ave_facades_2026-03-26T14:10:00",
+      "kensington_ave_facades_2026-03-26T14:10:40"
+    ],
+    "deep_facade_analysis_applied": true,
+    "deep_facade_analysis_ts": "2026-03-26",
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-03-26",
+    "geometry_changes": [
+      "roof_pitch_deg: 40 -> 48",
+      "roof_detail.bargeboard added",
+      "roof_detail.gable_window added",
+      "eave_overhang_mm: 250",
+      "floor_heights_m: [3.2, 3.2] -> [3.46, 2.94]",
+      "windows_detail: 1 floors -> 3 floors (from deep analysis)",
+      "windows_per_floor: [0, 2] -> [0, 2, 1]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "colour_palette enriched from observations",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1"
+    ],
+    "generation_defaults_applied": true,
+    "handoff_fixes_applied": [
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m",
+          "facade_detail.mortar_colour_hex",
+          "windows_detail[].sill_height_m"
+        ],
+        "timestamp": "2026-03-29T07:50:47.630086+00:00"
+      },
+      {
+        "fix": "enrich_window_details",
+        "changes": [
+          "window_type: 'Double-hung sash' -> 'double_hung'"
+        ],
+        "timestamp": "2026-03-29T08:03:43.333924+00:00"
+      },
+      {
+        "fix": "enrich_doors_and_foundations",
+        "changes": [
+          "door.colour_hex: #2A3A2A (dark green)",
+          "door.colour_hex: #2A3A2A (dark green)"
+        ],
+        "timestamp": "2026-03-29T08:05:13.402848+00:00"
+      },
+      {
+        "fix": "enrich_roof_and_heritage",
+        "changes": [
+          "heritage_expression filled",
+          "heritage_summary filled"
+        ],
+        "timestamp": "2026-03-29T08:07:16.467787+00:00"
+      },
+      {
+        "fix": "apply_generation_defaults",
+        "fields_filled": [
+          "wall_thickness_m"
+        ],
+        "timestamp": "2026-03-31T07:46:03.537713+00:00"
+      }
+    ],
+    "photo_matched": {
+      "method": "exact",
+      "timestamp": "2026-03-29T08:34:17.134757Z",
+      "script": "match_photos_to_params.py"
+    },
+    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
+    "colour_diversification_changes": [
+      {
+        "facade": "#B85A3A → #B15E43",
+        "roof": "#5A5A5A → #484848",
+        "trim": "#E8E0D0 → #33251E",
+        "mortar": "#B0A898 → #BBB3A0"
+      }
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
+    ]
+  },
+  "notes": "Attached pair in the Kensington retail strip.",
+  "doors_detail": [
+    {
+      "id": "door_0",
+      "type": "recessed glass entrance",
+      "position": "left",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "steps": 1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    },
+    {
+      "id": "door_1",
+      "type": "recessed glass entrance",
+      "position": "right",
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "steps": 1,
+      "material": "glass/metal",
+      "colour_hex": "#2A3A2A",
+      "colour": "dark green"
+    }
+  ],
+  "storefront": {
+    "type": "Commercial ground floor",
+    "width_m": 5.1,
+    "height_m": 2.6,
+    "bulkhead_height_m": 0.4,
+    "glazing": {
+      "type": "Plate glass",
+      "panel_count": 3,
+      "frame_colour_hex": "#2A2A2A"
+    },
+    "recessed_entry": false,
+    "description": null,
+    "status": "inferred_from_fix",
+    "status_source": "normalized_fix",
+    "awning": {
+      "present": true,
+      "type": "fixed",
+      "colour": "#5A5A5A"
+    },
+    "security_grille": true,
+    "width_pct": 70
+  },
+  "party_wall_left": false,
+  "party_wall_right": false,
+  "facade_depth_m": 12.0,
+  "facade_detail": {
+    "brick_colour_hex": "#B15E43",
+    "bond_pattern": "running bond",
+    "mortar_colour": "Light grey",
+    "mortar_joint_width_mm": 10,
+    "trim_colour_hex": "#33251E",
+    "composition": "The street frontage spans roughly 8 metres across 2 storeys beneath a gable, consistent with its commercial typology.",
+    "opening_rhythm": "The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 2 principal entrances.",
+    "mortar_colour_hex": "#BBB3A0",
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "heritage_summary": "This commercial dates to the 1889-1903 period. Character-defining elements include ground-floor storefront."
+  },
+  "roof_colour": "#5A5A5A",
+  "roof_detail": {
+    "eave_overhang_mm": 250,
+    "gable_window": {
+      "present": true,
+      "type": "pointed-arch",
+      "width_m": 0.6,
+      "height_m": 0.8,
+      "arch_type": "pointed-arch"
+    },
+    "bargeboard_style": "simple",
+    "bargeboard_colour_hex": "#E8D8C0"
+  },
+  "windows_detail": [
+    {
+      "floor": "Ground floor",
+      "windows": [],
+      "is_storefront": true
+    },
+    {
+      "floor": "Second floor",
+      "windows": [
+        {
+          "count": 2,
+          "type": "1-over-1",
+          "frame_colour": "white",
+          "arch_type": "flat",
+          "width_m": 1.2,
+          "height_m": 1.3,
+          "glazing": "2-over-2",
+          "sill_height_m": 0.8
+        }
+      ]
+    },
+    {
+      "floor": "Gable",
+      "windows": [
+        {
+          "count": 1,
+          "type": "fixed",
+          "frame_colour": "white",
+          "arch_type": "pointed",
+          "width_m": 0.7,
+          "height_m": 0.8,
+          "glazing": "fixed",
+          "sill_height_m": 0.8
+        }
+      ]
+    }
+  ],
+  "window_width_m": 0.85,
+  "window_height_m": 1.3,
+  "decorative_elements": {
+    "bargeboard": {
+      "colour_hex": "#E8E0D0",
+      "style": "simple"
+    },
+    "bay_window_shape": "canted",
+    "bay_window_storeys": 1
+  },
+  "street_setback_m": 2.0,
+  "confidence": 0.9,
+  "facade_description": "16-18 Kensington Ave is a commercial building with a street-level storefront. The street frontage spans roughly 8 metres across 2 storeys beneath a gable, consistent with its commercial typology. The frontage is defined primarily by brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 3 upper-window bays, using double hung, and 2 principal entrances.",
+  "hcd_data": {
+    "typology": "commercial",
+    "construction_date": "1889-1903",
+    "source": "inferred_from_photo_analysis"
+  },
+  "roof_material": "Slate shingles",
+  "colour_palette": {
+    "facade_hex": "#D8D0C0",
+    "trim_hex": "#3A2A20",
+    "roof_hex": "#4A5A5A",
+    "accent_hex": "#3A2A20",
+    "door_hex": "#3A2A20",
+    "mortar_hex": "#C8C0B0",
+    "facade": "#B15E43",
+    "trim": "#33251E",
+    "roof": "#484848",
+    "accent": "#D8C8A0"
+  },
+  "volumes": [],
+  "facade_width_m": 8.0,
+  "total_height_m": 6.4,
+  "floor_heights_m": [
+    3.46,
+    2.94
+  ],
+  "roof_pitch_deg": 48,
+  "windows_per_floor": [
+    0,
+    3
+  ],
+  "window_type": "double_hung",
+  "site": {
+    "lon": -79.40037483,
+    "lat": 43.65322894,
+    "street": "Kensington Ave",
+    "street_number": 16
+  },
+  "deep_facade_analysis": {
+    "source_photo": "IMG_20260320_012318650_HDR.jpg",
+    "analysis_pass": "deep_v2",
+    "timestamp": "2026-03-26",
+    "storeys_observed": 2.5,
+    "has_half_storey_gable": true,
+    "floor_height_ratios": [
+      1.0,
+      0.85,
+      0.5
+    ],
+    "facade_material_observed": "brick",
+    "brick_colour_hex": "#B85A3A",
+    "brick_bond_observed": "running bond",
+    "mortar_colour": "grey",
+    "polychromatic_brick": null,
+    "windows_detail": [
+      {
+        "floor": "ground",
+        "count": 2,
+        "note": "Commercial storefront(s) at ground level with display windows; partially obscured by parked VW van"
+      },
+      {
+        "floor": "second",
+        "count": 2,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "flat",
+        "width_ratio": 0.15,
+        "height_m_est": 1.3,
+        "note": "One window per unit visible, white frames"
+      },
+      {
+        "floor": "gable",
+        "count": 1,
+        "type": "1-over-1",
+        "frame_colour": "white",
+        "arch": "pointed",
+        "width_ratio": 0.1,
+        "height_m_est": 0.8
+      }
+    ],
+    "doors_observed": [
+      {
+        "position": "left",
+        "type": "commercial",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 1,
+        "colour_hex": "#5A5A5A"
+      },
+      {
+        "position": "right",
+        "type": "commercial",
+        "width_m_est": 0.85,
+        "transom": false,
+        "steps": 1,
+        "colour_hex": "#5A5A5A"
+      }
+    ],
+    "roof_type_observed": "gable",
+    "roof_pitch_deg": 48,
+    "roof_material": "asphalt shingle",
+    "roof_colour_hex": "#5A5A5A",
+    "bargeboard": {
+      "present": true,
+      "style": "simple",
+      "colour_hex": "#E8D8C0"
+    },
+    "gable_window": {
+      "present": true,
+      "type": "pointed-arch"
+    },
+    "bay_window_observed": {
+      "present": false,
+      "type": null,
+      "floors_spanned": [],
+      "width_m_est": null,
+      "projection_m_est": null
+    },
+    "storefront_observed": {
+      "width_pct": 70,
+      "signage_text": null,
+      "awning": {
+        "present": true,
+        "type": "fixed",
+        "colour": "#5A5A5A"
+      },
+      "entrance_position": "sides",
+      "security_grille": true
+    },
+    "decorative_elements_observed": {
+      "string_courses": [],
+      "cornice": {
+        "present": false
+      },
+      "quoins": false,
+      "voussoirs": {
+        "present": false
+      },
+      "ornamental_shingles_in_gable": false,
+      "brackets": false,
+      "dentil_course": false
+    },
+    "party_wall_left": true,
+    "party_wall_right": true,
+    "colour_palette_observed": {
+      "facade": "#B85A3A",
+      "trim": "#E8D8C0",
+      "roof": "#5A5A5A",
+      "accent": "#D8C8A0"
+    },
+    "condition_observed": "fair"
+  },
+  "wall_thickness_m": 0.3,
+  "depth_analysis": {
+    "facade_depth_mean": 0.302,
+    "facade_depth_std": 0.2288,
+    "foundation_offset": 0.4444,
+    "roof_offset": -0.2551,
+    "bay_left_offset": 0.116,
+    "bay_right_offset": -0.0744,
+    "facade_planarity": 0.0,
+    "bay_window_detected": true,
+    "setback_relative": -0.0472
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 0.93
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 1
+    },
+    "total_facade_detections": 1
+  }
+}

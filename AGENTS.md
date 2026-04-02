@@ -4,13 +4,23 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## Project Overview
 
-Script-first Blender pipeline that generates parametric 3D models of ~1,241 historic Kensington Market buildings (Toronto). Converts heritage building data (PostGIS measurements + HCD typology + AI vision photo analysis) into JSON parameter files, then generates detailed Blender geometry with procedural materials.
+Script-first Blender pipeline that generates parametric 3D models of ~1,064 historic Kensington Market buildings (Toronto). Converts heritage building data (PostGIS measurements + HCD typology + AI vision photo analysis) into JSON parameter files, then generates detailed Blender geometry with procedural materials.
 
 Study area: Dundas St W (north) / Bathurst St (east) / College St (south) / Spadina Ave (west). Only the market-facing side of perimeter streets is in scope.
 
 ## Commands
 
 ```bash
+# === Current orchestration / status ===
+python scripts/run_blender_buildings_workflows.py route
+python scripts/run_blender_buildings_workflows.py control-plane
+python scripts/run_blender_buildings_workflows.py watchdog --mode once
+python scripts/run_blender_buildings_workflows.py dashboard --once-json
+
+# === DB revision / QA pipeline ===
+pwsh -File scripts/run_full_db_revision_pipeline.ps1
+pwsh -File scripts/run_full_db_revision_pipeline.ps1 -DryRun -SkipVisual
+
 # === Step 1: Export building params from PostGIS ===
 python scripts/export_db_params.py [--overwrite] [--street "Augusta Ave"]
 python scripts/export_db_params.py --address "22 Lippincott St"
@@ -52,7 +62,10 @@ python scripts/deep_facade_pipeline.py audit
 python scripts/deep_facade_pipeline.py report baldwin
 
 # === Utility ===
-python scripts/geocode_from_gis.py            # legacy: geocode from QGIS GeoJSON exports → geocode.json
+python scripts/geocode_from_gis.py            # legacy: geocode from QGIS GeoJSON exports → archive/geocode.json
+python scripts/check_positions.py             # verify placement/alignment in Blender outputs
+python scripts/check_materials.py             # inspect generated material assignments
+python -m pytest tests/ -q
 ```
 
 ## Architecture
@@ -62,8 +75,8 @@ python scripts/geocode_from_gis.py            # legacy: geocode from QGIS GeoJSO
 ```
 PostGIS (building_assessment + opendata.*)
   → scripts/export_db_params.py → params/*.json (skeletons with real measurements)
-  → scripts/prepare_batches.py → batches/*.json (8 batches of 50)
-    → AI agents (Claude/Codex/Gemini) → merge visual details into params/*.json
+  → scripts/prepare_batches.py → batches/*.json (1,867 photos, 38 batches of 50)
+    → AI agents (Codex/Codex/Gemini) → merge visual details into params/*.json
   → enrichment pipeline (6 scripts in order) → params/*.json (final)
   → scripts/export_gis_scene.py → gis_scene.py + gis_scene.json (site model)
   → generate_building.py (inside Blender) → .blend + .png + .manifest.json
@@ -71,17 +84,25 @@ PostGIS (building_assessment + opendata.*)
 
 ### Working data directories
 
-- `params/` — 2,064 JSON files (~1,241 active building params + ~820 skipped + 3 metadata files prefixed with `_`). Skipped entries have `"skipped": true` with `skip_reason`.
-- `batches/` — 8 photo analysis batch JSONs (50 buildings each) for Gemini/Codex agents.
-- `scripts/` — 291 Python pipeline scripts. See CLAUDE.md for full categorized breakdown.
-- `docs/` — 53 files: agent prompts, launcher prompts, workflow guides, batch prompts, factory audit docs.
-- `outputs/` — rendered Blender files, QA artifacts, `gis_scene.json` (GIS site data), `deliverables/` (CSV, GeoJSON, street profiles).
-- `PHOTOS KENSINGTON/` — 1,928 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index. Has its own `CLAUDE.md` describing photo review workflows.
-- `generator_modules/` — extracted modules from `generate_building.py` (currently `colours.py`).
-- `agent_ops/` — multi-agent coordination system. See `agent_ops/README.md`.
-- `tests/` — 62 test files + `conftest.py`. Run with `python -m pytest tests/`.
+- `params/` — 2,048 JSON files (1,064 building params from DB export + agent-created + metadata + skipped). Files prefixed with `_` are metadata (`_site_coordinates.json`, `_analysis_summary.json`). Skipped non-building entries have `"skipped": true`.
+- `batches/` — 38 batch JSONs + 38 result JSONs. All batches processed (complete).
+- `scripts/` — 300+ Python scripts spanning the original param/generation pipeline plus QA, deep-facade, agent-ops, and Unreal/Unity export tooling.
+- `tests/` — formal pytest suite with 62 test files covering enrichment, generator helpers, QA, export pipelines, deep facade tooling, and several pure-Python Blender-adjacent utilities.
+- `generator_modules/` — shared helper modules factored out of the monolithic generator (currently includes colour utilities).
+- `agent_ops/` — multi-agent backlog, active task cards, ownership locks, handoffs, and review artifacts used by the workflow runner.
+- `docs/` — agent prompts, runbooks, workflow docs, and design notes (`docs/AGENT_PROMPT.md`, `docs/AGENT_WORKFLOW_GUIDE.md`, `docs/PIPELINE_RUNBOOK.md`, `AGENTS.md`, `agent_prompts_description_cleanup.md`).
+- `outputs/` — rendered Blender files: `full/` (929 buildings), `batch_50/`, `batch_pilot/`, `demos/` (pilot + block scenes), `single/` (one-off renders). Also `gis_scene.json` (GIS site data).
+- `PHOTOS KENSINGTON/` — 1,867 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index (columns: `filename`, `address_or_location`, `source`). Has its own `AGENTS.md` describing photo review workflows.
+- `archive/` — retired data and scripts: `legacy_analysis/`, `legacy_batches/`, `reference_photos/`, `params_pilot/`, `params_demo/`, `params_block_demo/`, `params_batch_test/`, `params_batch_mixed/`, `skip_originals/`, `geocode.json`, `pilot_buildings.json`, test output runs, legacy vision scripts.
 
-### `generate_building.py` (~9,800 lines)
+### Active operating modes
+
+- Core historic-building pipeline: DB export → photo analysis → enrichment → GIS export → Blender generation.
+- DB revision / QA pipeline: `scripts/run_full_db_revision_pipeline.ps1` orchestrates address normalization, neighbor backfill, QA reports, autofix passes, and optional visual validation. See `docs/PIPELINE_RUNBOOK.md`.
+- Multi-agent operations: `scripts/run_blender_buildings_workflows.py` fronts task routing, control-plane dispatch, watchdog heartbeats, and dashboard state for `agent_ops/`. See `docs/AGENT_WORKFLOW_GUIDE.md`.
+- Export / downstream packaging: the repo also contains asset-export and downstream scene-packaging pipelines for FBX, Unreal, Unity, decals, trees, and street furniture. Treat these as first-class maintained workflows, not archive material.
+
+### `generate_building.py` (~6,200 lines)
 
 Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args are parsed after the `--` separator.
 
@@ -91,7 +112,7 @@ Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args
 
 **`load_and_generate()`** clears the scene, loads site coordinates from `params/_site_coordinates.json`, then for each param file resolves position (priority: site coords → legacy `geocode.json` → linear spacing fallback) and calls `generate_building()`.
 
-**`generate_building()`** applies defaults then calls 28 `create_*` functions in sequence (66 total defs, 20 not yet wired):
+**`generate_building()`** applies defaults then calls ~30 `create_*` functions in sequence:
 
 1. `apply_hcd_guide_defaults()` — scans `hcd_data.building_features` and `statement_of_contribution` for keywords (string course, quoin, voussoir, bargeboard, bracket, shingle, cornice, bay window, storefront, dormer, chimney, turret) and injects structured `decorative_elements` dicts if not already present. Also injects `bay_window` (width computed as `facade_width_m * 0.42`, clamped 1.8-2.6m), `has_storefront`, `storefront`, and `roof_features` entries.
 2. `get_era_defaults()` — brick colour, mortar, trim style, window arch type based on `hcd_data.construction_date`:
@@ -128,7 +149,7 @@ Each script reads `params/*.json`, modifies in place, and writes back. The `_met
    - `BRICK_COLOURS`: red→`#B85A3A`, buff→`#D4B896`, brown→`#7A5C44`, cream→`#E8D8B0`, orange→`#C87040`, grey→`#8A8A8A`
    - `TRIM_COLOURS_BY_ERA`: pre-1889→`#3A2A20` (dark brown), 1904-1913→`#2A2A2A` (near-black), 1931+→`#F0EDE8` (cream)
    - `ROOF_COLOURS`: grey→`#5A5A5A`, slate→`#4A5A5A`, brown→`#6A5040`, red→`#8A3A2A`
-   - Only processes files where `source` is `"hcd_plan_only"` or `"hcd_plan_skeleton"` — skips all others.
+   - Skips files where `source != "hcd_plan_only"`.
 
 3. **`enrich_facade_descriptions.py`** — generates prose `facade_detail.composition`, `opening_rhythm`, `heritage_expression`, `heritage_summary` from structured params.
 
@@ -148,7 +169,7 @@ ORIGIN_X = 312672.94,  ORIGIN_Y = 4834994.86
 
 ### PostGIS database
 
-Configured in `scripts/db_config.py` via env vars with fallbacks: `PGHOST` (localhost), `PGPORT` (5432), `PGDATABASE` (kensington), `PGUSER` (postgres), `PGPASSWORD` (test123).
+`localhost:5432`, database `kensington`, user `postgres`, password `test123`.
 
 - `building_assessment` — 1,075 buildings with `ADDRESS_FULL`, `ba_street`, `ba_street_number`, `ba_building_type`, `ba_stories`, `ba_facade_material`, LiDAR heights (`height_max_m`, `height_avg_m`), lot dims (`lot_width_ft`, `lot_depth_ft`), HCD typology (`hcd_typology`, `hcd_construction_date`, `hcd_contributing`), + 38 photo analysis columns (added by `writeback_to_db.py --migrate`: `photo_analyzed`, `photo_date`, `photo_agent`, observed colours/materials/condition)
 - `opendata.*` — `building_footprints` (addresses + 2D polygons), `massing_3d` (3D polygons with `AVG_HEIGHT`), `road_centerlines`, `sidewalks`
@@ -158,6 +179,16 @@ Configured in `scripts/db_config.py` via env vars with fallbacks: `PGHOST` (loca
 ### GIS scene
 
 `gis_scene.py` + `gis_scene.json`: 753 footprints, 464 3D massing shapes, 162 road centerlines, 41 alleys, 530 field survey features. All in local metres from centroid.
+
+### Agent ops workflow
+
+When working inside the shared multi-agent system:
+
+1. Route backlog tasks with `python scripts/run_blender_buildings_workflows.py route`.
+2. Use `control-plane` for manager → worker dispatch (optionally `--execute-ollama` or `--execute-gemini` where appropriate).
+3. Keep heartbeats current via `watchdog --mode ping` if you are working a long-running task.
+4. Review `agent_ops/coordination/ownership/` and lock files before broad edits.
+5. Leave findings-first review artifacts in `agent_ops/40_reviews/` when doing review work.
 
 ## Parameter JSON Schema
 
@@ -186,7 +217,7 @@ Each building is a JSON file in `params/` (filename: `22_Lippincott_St.json`, sp
 
 ## Photo Analysis Rules (docs/AGENT_PROMPT.md)
 
-AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,928 photos). 8 batches of 50 buildings each in `batches/batch_NNN.json`.
+AI agents (Codex / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,867 photos). All 38 batches have been processed (results in `batches/batch_NNN_results.json`).
 
 - **NEVER overwrite:** `total_height_m`, `facade_width_m`, `facade_depth_m`, `site.*`, `city_data.*`, `hcd_data.*`
 - **ALWAYS update:** `facade_colour`, `windows_per_floor`, `window_type`, `window_arrangement`, `door_count`, `door_type`, `condition`, `roof_features`, `chimneys`, `porch_present`, `porch_type`, `balconies`, `balcony_type`, `cornice`, `bay_windows`, `ground_floor_arches`
@@ -195,31 +226,26 @@ AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and
 - Multiple photos per address: use the best facade photo, produce one update per unique address
 - Non-building photos (murals, lanes, signs) → `"skipped": true` with `skip_reason`
 
-**Field photos** (`PHOTOS KENSINGTON/`) contain 1,928 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
+**Field photos** (`PHOTOS KENSINGTON/`) contain 1,867 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
 
 ## Testing
 
-```bash
-python -m pytest tests/                          # all tests (1671 pass)
-python -m pytest tests/test_enrich_skeletons.py  # single module
-python -m pytest tests/ -x                       # stop on first failure
-```
+The repo now has a formal pytest suite in `tests/` in addition to Blender/manual validation.
 
-62 test files cover enrichment pipeline, colour palettes, photo matching, generator contracts, QA, Blender asset export, and Unreal urban elements.
-
-For visual/integration validation:
-1. Run scripts on a narrow sample first (`--address "22 Lippincott St"`)
-2. Regenerate a known address and compare against field photos in `PHOTOS KENSINGTON/`
-3. `--dry-run` flag shows planned batch operations without executing
+Validate by:
+1. Running targeted pytest first for touched areas, then `python -m pytest tests/ -q`
+2. Running scripts on a narrow sample first (`--address "22 Lippincott St"` or a small `--limit`)
+3. Regenerating a known address and comparing against field photos in `PHOTOS KENSINGTON/`
+4. Using validation utilities such as `scripts/check_positions.py`, `scripts/check_materials.py`, `scripts/verify_alignment.py`, and export/QA audit scripts where relevant
+5. Using `--dry-run` flags or PowerShell `-DryRun` pipeline entrypoints before large write operations
 
 ## Dependencies
 
-- **Blender 3.x+** (`bpy`, `bmesh`, `mathutils`) — generate_building.py and gis_scene.py run inside Blender
+- **Blender 5.0 CLI** at `C:\Program Files\Blender Foundation\Blender 5.0\blender.exe` is used by current runbooks, though Blender 3.x+ APIs are the baseline for `bpy`, `bmesh`, `mathutils`
 - **Python 3.10+**
-- **psycopg2-binary** — all PostGIS access scripts (via `scripts/db_config.py`)
+- **pytest** — formal automated test suite in `tests/`
+- **psycopg2-binary** — all PostGIS access scripts
 - **PostgreSQL 18** with PostGIS
-- **pytest** — test runner
-- **Optional:** `pymeshlab` (mesh optimization), `trimesh` (export validation), `Pillow` (texture atlas, PBR maps), `numpy` (facade textures, comparison)
 
 ## Style
 

@@ -202,6 +202,9 @@
     ],
     "backfills": [
       "construction_era:style_keyword:victorian"
+    ],
+    "fusion_applied": [
+      "segmentation"
     ]
   },
   "bay_window": {
@@ -441,5 +444,15 @@
   "photo_observations": {
     "source": "synthesized_from_params"
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 1,
+      "vehicles": 0
+    },
+    "total_facade_detections": 1
+  }
 }

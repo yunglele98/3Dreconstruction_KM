@@ -169,6 +169,10 @@
       "porch_detail",
       "balcony_detail",
       "door_count_promoted"
+    ],
+    "fusion_applied": [
+      "depth",
+      "segmentation"
     ]
   },
   "overall_style": "Victorian",
@@ -410,5 +414,32 @@
   "balcony_detail": {
     "present": true,
     "type": "projecting"
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.3823,
+    "facade_depth_std": 0.1806,
+    "foundation_offset": 0.4034,
+    "roof_offset": -0.2548,
+    "bay_left_offset": -0.2232,
+    "bay_right_offset": -0.0693,
+    "facade_planarity": 0.097,
+    "bay_window_detected": true,
+    "setback_relative": 0.0096
+  },
+  "depth_notes": {
+    "setback_m_est": 0.1,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 800,
+    "bay_window_projection_m_est": 1.0
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 0,
+      "vehicles": 0
+    },
+    "total_facade_detections": 0
   }
 }

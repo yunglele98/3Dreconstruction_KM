@@ -208,7 +208,10 @@
         "timestamp": "2026-03-29T17:48:42.323235+00:00"
       }
     ],
-    "storefront_enriched": "2026-03-30T06:33:20.730614Z"
+    "storefront_enriched": "2026-03-30T06:33:20.730614Z",
+    "fusion_applied": [
+      "segmentation"
+    ]
   },
   "doors_detail": [
     {
@@ -468,5 +471,15 @@
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {
+      "persons": 2,
+      "vehicles": 1
+    },
+    "total_facade_detections": 3
+  }
 }
