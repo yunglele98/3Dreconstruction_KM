@@ -121,7 +121,7 @@ PostGIS (building_assessment + opendata.*)
 
 - `params/` — ~2,060 JSON files (1,241 active building params + ~820 skipped). Files prefixed with `_` are metadata (`_site_coordinates.json`, `_analysis_summary.json`). Skipped entries include non-building photos, backup/variant files, and area shots — all have `"skipped": true` with `skip_reason`.
 - `batches/` — 8 photo analysis batch JSONs (50 buildings each, 384 total) for Gemini/Codex agents.
-- `scripts/` — 270 Python pipeline scripts (export, enrich, geocode, writeback, deep facade pipeline, asset export, Unreal/Unity bundles, QA, spatial analysis, agent coordination, utilities).
+- `scripts/` — ~300 Python pipeline scripts (export, enrich, geocode, writeback, deep facade pipeline, asset export, Unreal/Unity bundles, QA, spatial analysis, agent coordination, utilities). Each script uses `_atomic_write_json()` (temp file + `os.replace`) to prevent corruption on concurrent writes.
 - `docs/` — agent prompts and workflow documentation (`docs/AGENT_PROMPT.md`, `AGENTS.md`, `agent_prompts_description_cleanup.md`).
 - `outputs/` — rendered Blender files: `full/` (1,253 buildings), `batch_50/`, `batch_pilot/`, `demos/` (pilot + block scenes), `single/` (one-off renders). Also `gis_scene.json` (GIS site data).
 - `PHOTOS KENSINGTON/` — 1,867 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index (columns: `filename`, `address_or_location`, `source`). Has its own `CLAUDE.md` describing photo review workflows.
@@ -129,9 +129,11 @@ PostGIS (building_assessment + opendata.*)
 - `archive/` — retired data and scripts: `legacy_analysis/`, `legacy_batches/`, `reference_photos/`, `params_pilot/`, `params_demo/`, `params_block_demo/`, `params_batch_test/`, `params_batch_mixed/`, `skip_originals/`, `tmp_scripts/` (34 retired dev scripts), `geocode.json`, `pilot_buildings.json`, test output runs, legacy vision scripts.
 - `missing_list.txt` / `regen_list.txt` — address lists for batch re-generation workflows (one address per line, `_`-separated).
 
-### `generate_building.py` (~6,200 lines)
+### `generate_building.py` (~9,800 lines)
 
 Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args are parsed after the `--` separator.
+
+**`generator_modules/`** — beginning of a decomposition of the monolith. Currently contains `colours.py` (pure Python: `hex_to_rgb`, `COLOUR_NAME_MAP`, era defaults). Planned modules: `materials.py` (bpy-dependent), `roofs.py`, `walls.py`, `decorative.py`, `porch.py`, `storefront.py`. Import via `from generator_modules.colours import *`.
 
 **Entry paths:**
 - Directory + `--batch-individual` → `generate_batch_individual()` — one `.blend` per building + manifest JSON
@@ -275,9 +277,13 @@ Unit tests for enrichment pipeline scripts live in `tests/` and run with pytest:
 ```bash
 python -m pytest tests/                          # all tests
 python -m pytest tests/test_enrich_skeletons.py  # single module
+python -m pytest tests/test_enrich_skeletons.py -k "test_brick_colour"  # single test
+python -m pytest tests/ -x                       # stop on first failure
 ```
 
-56 test files (1,627 tests) cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, QA report, Megascans mapping, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8 Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
+~63 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, QA report, Megascans mapping, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8 Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
+
+**`conftest.py` workaround:** A ghost `scripts/__init__.py` (mount-sync artifact) makes Python treat `scripts/` as a package, breaking bare imports. The conftest pre-registers every `scripts/*.py` as a top-level module in `sys.modules`. Scripts that need `bpy` will fail to import and are silently skipped — their import errors surface at test time instead.
 
 For visual/integration validation:
 1. Run scripts on a narrow sample first (`--address "22 Lippincott St"`)
