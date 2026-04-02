@@ -119,13 +119,15 @@ PostGIS (building_assessment + opendata.*)
 
 ### Working data directories
 
-- `params/` — ~2,060 JSON files (1,241 active building params + ~820 skipped). Files prefixed with `_` are metadata (`_site_coordinates.json`, `_analysis_summary.json`). Skipped entries include non-building photos, backup/variant files, and area shots — all have `"skipped": true` with `skip_reason`.
-- `batches/` — 8 photo analysis batch JSONs (50 buildings each, 384 total) for Gemini/Codex agents.
-- `scripts/` — ~300 Python pipeline scripts (export, enrich, geocode, writeback, deep facade pipeline, asset export, Unreal/Unity bundles, QA, spatial analysis, agent coordination, utilities). Each script uses `_atomic_write_json()` (temp file + `os.replace`) to prevent corruption on concurrent writes.
-- `docs/` — agent prompts and workflow documentation (`docs/AGENT_PROMPT.md`, `AGENTS.md`, `agent_prompts_description_cleanup.md`).
-- `outputs/` — rendered Blender files: `full/` (1,253 buildings), `batch_50/`, `batch_pilot/`, `demos/` (pilot + block scenes), `single/` (one-off renders). Also `gis_scene.json` (GIS site data).
-- `PHOTOS KENSINGTON/` — 1,867 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index (columns: `filename`, `address_or_location`, `source`). Has its own `CLAUDE.md` describing photo review workflows.
+- `params/` — 2,064 JSON files (~1,241 active building params + ~820 skipped + 3 metadata files prefixed with `_`: `_site_coordinates.json`, `_analysis_summary.json`). Skipped entries have `"skipped": true` with `skip_reason`.
+- `batches/` — 8 photo analysis batch JSONs (50 buildings each) for Gemini/Codex agents.
+- `scripts/` — 291 Python pipeline scripts (export, enrich, geocode, writeback, deep facade pipeline, asset export, Unreal/Unity bundles, QA, spatial analysis, agent coordination, utilities). Each script uses `_atomic_write_json()` (temp file + `os.replace`) to prevent corruption on concurrent writes.
+- `docs/` — 53 files: agent prompts (`AGENT_PROMPT.md`, launcher prompts per agent), workflow guides, batch prompts, factory audit docs, and deployment notes.
+- `outputs/` — rendered Blender files and QA artifacts: `demos/` (pilot + block scenes), `gis_scene.json` (GIS site data), plus various QA autofix/revision JSON logs.
+- `PHOTOS KENSINGTON/` — 1,928 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index (columns: `filename`, `address_or_location`, `source`). Has its own `CLAUDE.md` describing photo review workflows.
+- `generator_modules/` — extracted modules from `generate_building.py` (see below).
 - `agent_ops/` — multi-agent coordination system for 5-10 parallel agents (Claude/Codex/Gemini/Ollama). Kanban-style workflow: `00_intake/` → `10_backlog/` → `20_active/<agent>/` → `30_handoffs/` → `40_reviews/` → `60_releases/` → `90_archive/`. File-based locking in `coordination/locks/`. See `agent_ops/README.md` for full workflow.
+- `tests/` — 62 test files + `conftest.py` (see Testing section).
 - `archive/` — retired data and scripts: `legacy_analysis/`, `legacy_batches/`, `reference_photos/`, `params_pilot/`, `params_demo/`, `params_block_demo/`, `params_batch_test/`, `params_batch_mixed/`, `skip_originals/`, `tmp_scripts/` (34 retired dev scripts), `geocode.json`, `pilot_buildings.json`, test output runs, legacy vision scripts.
 - `missing_list.txt` / `regen_list.txt` — address lists for batch re-generation workflows (one address per line, `_`-separated).
 
