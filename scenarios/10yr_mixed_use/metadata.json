@@ -1,0 +1,20 @@
+{
+  "scenario_id": "mixed_use",
+  "name": "Mixed Use Intensification (2036)",
+  "description": "Ground-floor commercial conversion on residential side streets, modest density on perimeter arterials, market signage refresh.",
+  "created": "2026-04-02",
+  "author": "planning-agent",
+  "total_interventions": 24,
+  "intervention_types": {
+    "convert_ground": 6,
+    "add_floor": 10,
+    "signage_update": 8
+  },
+  "principles": [
+    "Extend commercial frontage to side streets near market core",
+    "Add density only on perimeter arterials, not heritage core",
+    "Preserve market character while improving economic activity",
+    "Support small-scale retail and maker spaces",
+    "Maintain residential upper floors"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "WF-01 Heartbeat (10min)",
+  "nodes": [
+    {
+      "name": "Cron Trigger",
+      "type": "n8n-nodes-base.cron",
+      "parameters": {"triggerTimes": {"item": [{"mode": "everyX", "value": 10, "unit": "minutes"}]}}
+    },
+    {
+      "name": "Check GPU Lock",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {"command": "if [ -f .gpu_lock ]; then echo 'GPU_BUSY'; else echo 'GPU_FREE'; fi"}
+    },
+    {
+      "name": "Check Disk Space",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {"command": "df -h / | tail -1 | awk '{print $5}' | tr -d '%'"}
+    },
+    {
+      "name": "Check Running Processes",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {"command": "ps aux | grep -E '(blender|python.*generate|colmap)' | grep -v grep | wc -l"}
+    },
+    {
+      "name": "Write Heartbeat",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {"command": "echo '{\"timestamp\": \"'$(date -Iseconds)'\", \"gpu\": \"'$GPU_STATUS'\", \"disk_pct\": '$DISK_PCT', \"active_processes\": '$PROCS'}' > .heartbeat.json"}
+    }
+  ],
+  "connections": {
+    "Cron Trigger": {"main": [["Check GPU Lock"]]},
+    "Check GPU Lock": {"main": [["Check Disk Space"]]},
+    "Check Disk Space": {"main": [["Check Running Processes"]]},
+    "Check Running Processes": {"main": [["Write Heartbeat"]]}
+  }
+}

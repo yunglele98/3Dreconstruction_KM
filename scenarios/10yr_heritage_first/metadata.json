@@ -1,0 +1,19 @@
+{
+  "scenario_id": "heritage_first",
+  "name": "Heritage First (2036)",
+  "description": "Maximum heritage preservation: restore 25 contributing buildings in poor condition, renovate 15 fair-condition facades on key commercial streets.",
+  "created": "2026-04-02",
+  "author": "planning-agent",
+  "total_interventions": 40,
+  "intervention_types": {
+    "heritage_restore": 25,
+    "facade_renovation": 15
+  },
+  "principles": [
+    "Prioritize contributing buildings in poor condition",
+    "Restore original brick, trim, and decorative elements",
+    "No height additions to heritage buildings",
+    "Focus investment on market-facing streets",
+    "Use HCD guidelines for all material choices"
+  ]
+}

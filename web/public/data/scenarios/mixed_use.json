@@ -1,0 +1,172 @@
+{
+  "scenario_id": "mixed_use",
+  "name": "Mixed Use Intensification (2036)",
+  "description": "Ground-floor commercial conversion on residential side streets, modest density on perimeter arterials, market signage refresh.",
+  "principles": [
+    "Extend commercial frontage to side streets near market core",
+    "Add density only on perimeter arterials, not heritage core",
+    "Preserve market character while improving economic activity",
+    "Support small-scale retail and maker spaces",
+    "Maintain residential upper floors"
+  ],
+  "interventions": [
+    {
+      "address": "63 Oxford St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "66 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "68 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "70 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "74 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "80 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "271 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "277 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "285 1 2 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "287 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "289 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "289A College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "292 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "294-296 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "294 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "295 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "10 Kensington Ave",
+      "type": "signage_update",
+      "params_override": {}
+    },
+    {
+      "address": "10A Kensington Ave",
+      "type": "signage_update",
+      "params_override": {}
+    },
+    {
+      "address": "11 Kensington Ave",
+      "type": "signage_update",
+      "params_override": {}
+    },
+    {
+      "address": "12 Kensington Ave",
+      "type": "signage_update",
+      "params_override": {}
+    },
+    {
+      "address": "12A Kensington Ave",
+      "type": "signage_update",
+      "params_override": {}
+    },
+    {
+      "address": "138 Augusta Ave",
+      "type": "signage_update",
+      "params_override": {}
+    },
+    {
+      "address": "13 Kensington Ave",
+      "type": "signage_update",
+      "params_override": {}
+    },
+    {
+      "address": "141 Augusta Ave",
+      "type": "signage_update",
+      "params_override": {}
+    }
+  ],
+  "impact": {
+    "commercial_conversions": 6,
+    "height_changes": 10,
+    "dwelling_units_added": 20,
+    "fsi_change": "+0.08"
+  }
+}

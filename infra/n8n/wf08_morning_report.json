@@ -1,0 +1,29 @@
+{
+  "name": "WF-08 Morning Report (7AM)",
+  "nodes": [
+    {
+      "name": "Cron 7AM",
+      "type": "n8n-nodes-base.cron",
+      "parameters": {"triggerTimes": {"item": [{"mode": "everyDay", "hour": 7, "minute": 0}]}}
+    },
+    {
+      "name": "Generate Report",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {
+        "command": "cd /c/users/liam1/blender_buildings && python scripts/monitor/morning_report.py --format slack"
+      }
+    },
+    {
+      "name": "Post to Slack",
+      "type": "n8n-nodes-base.slack",
+      "parameters": {
+        "channel": "#kensington-pipeline",
+        "text": "={{ $json.report }}"
+      }
+    }
+  ],
+  "connections": {
+    "Cron 7AM": {"main": [["Generate Report"]]},
+    "Generate Report": {"main": [["Post to Slack"]]}
+  }
+}

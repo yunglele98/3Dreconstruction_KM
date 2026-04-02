@@ -1,0 +1,161 @@
+{
+  "scenario_id": "mobility",
+  "name": "Sustainable Mobility (2036)",
+  "description": "Pedestrianize Augusta Ave market section and Kensington Ave core, add protected bike lanes on 4 streets, install bike parking, and seasonal patios.",
+  "principles": [
+    "Prioritize pedestrians in market core",
+    "Connected bike network through neighbourhood",
+    "Maintain vehicle access for deliveries (time-restricted)",
+    "Add seating and gathering spaces on pedestrianized streets",
+    "Support seasonal patios for market businesses"
+  ],
+  "interventions": [
+    {
+      "address": "STREET_Augusta_Ave_Market",
+      "type": "pedestrianize",
+      "lon": -79.4025,
+      "lat": 43.6548,
+      "params_override": {
+        "street": "Augusta Ave",
+        "segment": "Nassau St to Baldwin St",
+        "treatment": "full pedestrianization",
+        "description": "Close to vehicles, widen sidewalks, add market stalls and seating"
+      }
+    },
+    {
+      "address": "STREET_Kensington_Ave_Core",
+      "type": "pedestrianize",
+      "lon": -79.4005,
+      "lat": 43.6542,
+      "params_override": {
+        "street": "Kensington Ave",
+        "segment": "Dundas St W to St Andrew St",
+        "treatment": "shared street (woonerf)",
+        "description": "Reduce speed to walking pace, remove curbs, add bollards"
+      }
+    },
+    {
+      "address": "STREET_Baldwin_St",
+      "type": "bike_infra",
+      "lon": -79.4015,
+      "lat": 43.6545,
+      "params_override": {
+        "street": "Baldwin St",
+        "segment": "Spadina to Augusta",
+        "treatment": "protected bike lane"
+      }
+    },
+    {
+      "address": "STREET_Nassau_St",
+      "type": "bike_infra",
+      "lon": -79.401,
+      "lat": 43.6558,
+      "params_override": {
+        "street": "Nassau St",
+        "segment": "Spadina to Bathurst",
+        "treatment": "contraflow bike lane"
+      }
+    },
+    {
+      "address": "STREET_Oxford_St",
+      "type": "bike_infra",
+      "lon": -79.4015,
+      "lat": 43.6535,
+      "params_override": {
+        "street": "Oxford St",
+        "segment": "Augusta to Spadina",
+        "treatment": "bike boulevard (sharrow)"
+      }
+    },
+    {
+      "address": "STREET_Bellevue_Ave",
+      "type": "bike_infra",
+      "lon": -79.4035,
+      "lat": 43.6545,
+      "params_override": {
+        "street": "Bellevue Ave",
+        "segment": "Dundas to College",
+        "treatment": "protected bike lane"
+      }
+    },
+    {
+      "address": "BIKE_PARKING_Augusta_Baldwin",
+      "type": "bike_infra",
+      "lon": -79.4025,
+      "lat": 43.6545,
+      "params_override": {
+        "type": "bike_parking",
+        "location": "Augusta Ave & Baldwin St",
+        "capacity": 24
+      }
+    },
+    {
+      "address": "BIKE_PARKING_Kensington_StAndrew",
+      "type": "bike_infra",
+      "lon": -79.4005,
+      "lat": 43.6537,
+      "params_override": {
+        "type": "bike_parking",
+        "location": "Kensington Ave & St Andrew St",
+        "capacity": 16
+      }
+    },
+    {
+      "address": "138 Augusta Ave",
+      "type": "add_patio",
+      "params_override": {
+        "patio_depth_m": 2.5,
+        "patio_type": "seasonal"
+      }
+    },
+    {
+      "address": "141 Augusta Ave",
+      "type": "add_patio",
+      "params_override": {
+        "patio_depth_m": 2.5,
+        "patio_type": "seasonal"
+      }
+    },
+    {
+      "address": "143 Augusta Ave",
+      "type": "add_patio",
+      "params_override": {
+        "patio_depth_m": 2.5,
+        "patio_type": "seasonal"
+      }
+    },
+    {
+      "address": "144-148 Augusta Ave",
+      "type": "add_patio",
+      "params_override": {
+        "patio_depth_m": 2.5,
+        "patio_type": "seasonal"
+      }
+    },
+    {
+      "address": "144 Augusta Ave",
+      "type": "add_patio",
+      "params_override": {
+        "patio_depth_m": 2.5,
+        "patio_type": "seasonal"
+      }
+    },
+    {
+      "address": "145 Augusta Ave",
+      "type": "add_patio",
+      "params_override": {
+        "patio_depth_m": 2.5,
+        "patio_type": "seasonal"
+      }
+    }
+  ],
+  "impact": {
+    "pedestrianized_streets": 2,
+    "bike_lanes_km": 3.2,
+    "bike_parking_spaces": 40,
+    "patios_added": 6,
+    "dwelling_units_added": 0,
+    "fsi_change": "0",
+    "height_changes": 0
+  }
+}

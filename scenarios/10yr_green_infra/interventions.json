@@ -1,0 +1,303 @@
+{
+  "scenario_id": "green_infra",
+  "name": "Green Infrastructure (2036)",
+  "description": "Extensive green roofs on 30 flat-roof buildings, 62 new street trees across 6 corridors. Focus on stormwater management and urban heat reduction.",
+  "principles": [
+    "Extensive green roofs on flat-roof buildings (lower weight load)",
+    "Intensive green roofs only on structurally-suitable 3+ floor buildings",
+    "Native species for street trees (climate-resilient)",
+    "Prioritize streets with lowest existing canopy",
+    "Integrate rain gardens at key intersections"
+  ],
+  "interventions": [
+    {
+      "address": "10 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "11 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "12 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "135 Nassau St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "13 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "13 Wales Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "145 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "147 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "14 Kensington Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "14A Hickory St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "15 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "15 Wales Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "168 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "171 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "173 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "175 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "17 Wales Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "183 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "187 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "188 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "188 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "189 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "18 Nassau St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "191A Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "193 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "193 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "195 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "197 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "198 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "intensive"
+      }
+    },
+    {
+      "address": "19 Wales Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "STREET_Kensington_Ave",
+      "type": "tree_planting",
+      "lon": -79.4005,
+      "lat": 43.654,
+      "params_override": {
+        "street": "Kensington Ave",
+        "segment": "Dundas to Baldwin",
+        "trees_added": 12,
+        "species": "mixed native"
+      }
+    },
+    {
+      "address": "STREET_Augusta_Ave",
+      "type": "tree_planting",
+      "lon": -79.4025,
+      "lat": 43.655,
+      "params_override": {
+        "street": "Augusta Ave",
+        "segment": "Dundas to College",
+        "trees_added": 18,
+        "species": "mixed native"
+      }
+    },
+    {
+      "address": "STREET_Nassau_St",
+      "type": "tree_planting",
+      "lon": -79.401,
+      "lat": 43.6558,
+      "params_override": {
+        "street": "Nassau St",
+        "segment": "Augusta to Bellevue",
+        "trees_added": 8,
+        "species": "mixed native"
+      }
+    },
+    {
+      "address": "STREET_Oxford_St",
+      "type": "tree_planting",
+      "lon": -79.4015,
+      "lat": 43.6535,
+      "params_override": {
+        "street": "Oxford St",
+        "segment": "Augusta to Bellevue",
+        "trees_added": 10,
+        "species": "mixed native"
+      }
+    },
+    {
+      "address": "STREET_Baldwin_St",
+      "type": "tree_planting",
+      "lon": -79.4015,
+      "lat": 43.6545,
+      "params_override": {
+        "street": "Baldwin St",
+        "segment": "Kensington to Augusta",
+        "trees_added": 6,
+        "species": "mixed native"
+      }
+    },
+    {
+      "address": "STREET_Wales_Ave",
+      "type": "tree_planting",
+      "lon": -79.3995,
+      "lat": 43.6548,
+      "params_override": {
+        "street": "Wales Ave",
+        "segment": "full length",
+        "trees_added": 8,
+        "species": "mixed native"
+      }
+    }
+  ],
+  "impact": {
+    "green_roofs": 30,
+    "trees_planted": 62,
+    "dwelling_units_added": 0,
+    "fsi_change": "0",
+    "height_changes": 0
+  }
+}

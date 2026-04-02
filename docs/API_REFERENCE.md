@@ -1,0 +1,153 @@
+# API Reference — Kensington Market 3D Pipeline
+
+All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
+
+## Stage 0: ACQUIRE
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `export_db_params.py` | Export building params from PostGIS | `--overwrite`, `--street`, `--address` |
+| `acquire/acquire_streetview.py` | Download Mapillary street view | `--source`, `--bbox` |
+
+## Stage 1: SENSE
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `sense/extract_depth.py` | Depth maps via Depth Anything v2 | `--input`, `--output`, `--model` |
+| `sense/segment_facades.py` | Facade segmentation (YOLO+SAM2) | `--input`, `--output`, `--model` |
+| `sense/extract_features.py` | LightGlue+SuperPoint keypoints | `--input-dir`, `--output-dir`, `--limit` |
+| `sense/extract_normals.py` | Surface normals (DSINE) | `--input`, `--output` |
+| `sense/extract_signage.py` | OCR signage extraction | `--input`, `--output` |
+
+## Stage 2: RECONSTRUCT
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `reconstruct/select_candidates.py` | Find buildings with 3+ photos | `--min-views`, `--street` |
+| `reconstruct/run_photogrammetry.py` | Per-building COLMAP | `--address`, `--street`, `--dense` |
+| `reconstruct/run_photogrammetry_block.py` | Per-street block COLMAP | `--street`, `--dense`, `--list-blocks` |
+| `reconstruct/run_dust3r.py` | DUSt3R single-view 3D | `--input`, `--output` |
+| `reconstruct/train_splats.py` | Gaussian splatting training | `--input`, `--batch`, `--prepare-cloud` |
+| `reconstruct/clip_block_mesh.py` | Clip block mesh per building | `--block-mesh`, `--footprints` |
+| `reconstruct/retopologize.py` | Instant Meshes quad remesh | `--input`, `--target-faces` |
+
+## Stage 3: ENRICH
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `translate_agent_params.py` | Convert agent flat output to structured | — |
+| `enrich_skeletons.py` | Fill missing params from typology/era | — |
+| `enrich_facade_descriptions.py` | Generate prose facade descriptions | — |
+| `normalize_params_schema.py` | Normalize boolean/string fields | — |
+| `patch_params_from_hcd.py` | Merge HCD decorative features | — |
+| `infer_missing_params.py` | Final gap-fill (run LAST) | — |
+| `enrich/fuse_depth.py` | Fuse depth map data into params | `--depth-maps`, `--params` |
+| `enrich/fuse_segmentation.py` | Fuse segmentation results | `--segmentation`, `--params` |
+| `rebuild_colour_palettes.py` | Rebuild colour palettes | — |
+| `diversify_colour_palettes.py` | Diversify similar palettes | — |
+| `match_photos_to_params.py` | Match field photos to buildings | — |
+| `build_adjacency_graph.py` | Build spatial adjacency graph | — |
+| `analyze_streetscape_rhythm.py` | Analyze streetscape patterns | — |
+
+## Stage 4: GENERATE (Blender)
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `generate_building.py` | Main parametric generator | `--params`, `--batch-individual`, `--render` |
+
+## Stage 5: TEXTURE
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `texture/match_textures.py` | Match facade colour to PBR textures | `--params`, `--assets` |
+| `texture/extract_pbr.py` | Extract normal/AO/roughness from photos | `--input`, `--method`, `--prepare-cloud` |
+| `texture/upscale_textures.py` | RealESRGAN 4x upscale | `--input`, `--output`, `--scale` |
+| `texture/project_textures.py` | Project photo onto mesh | `--mesh`, `--photo` |
+
+## Stage 6: OPTIMIZE (Blender)
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `generate_lods.py` | LOD generation | `--source-dir`, `--skip-existing` |
+
+## Stage 7-8: ASSEMBLE + EXPORT
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `export_gis_scene.py` | Export GIS scene JSON | — |
+| `export_building_fbx.py` | Single FBX export (Blender) | `--address` |
+| `batch_export_unreal.py` | Batch FBX for Unreal | `--source-dir` |
+| `export_deliverables.py` | Generate all deliverables | — |
+| `export/export_citygml.py` | CityGML LOD2/3 export | `--lod`, `--output` |
+| `export/export_3dtiles.py` | 3D Tiles tileset | `--input`, `--output` |
+| `export/export_potree.py` | Potree point cloud conversion | `--input`, `--output` |
+| `export/package_splats.py` | Package splats for web viewer | `--input`, `--output` |
+| `export/build_web_data.py` | Slim params JSON for web | `--output` |
+| `export/build_web_app_data.py` | Full web app data package | — |
+| `export/build_web_geojson.py` | Building footprints GeoJSON | — |
+
+## Stage 9: VERIFY
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `qa_params_gate.py` | QA parameter gate | `--ci` |
+| `audit_params_quality.py` | Audit parameter quality | — |
+| `audit_structural_consistency.py` | Structural consistency check | — |
+| `audit_generator_contracts.py` | Generator contract verification | — |
+| `generate_qa_report.py` | Generate QA report | — |
+| `verify/visual_regression.py` | Visual regression testing | — |
+
+## Stage 10: MONITOR
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `monitor/morning_report.py` | Overnight results summary | `--format` |
+| `monitor/error_recovery.py` | Auto-fix common errors | — |
+| `monitor/batch_health.py` | Batch job health check | — |
+| `monitor/sprint_progress.py` | Sprint progress tracker | `--format` |
+| `sentry_init.py` | Sentry error tracking setup | — |
+
+## Stage 11: SCENARIOS
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `planning/apply_scenario.py` | Apply scenario overlay | `--scenario`, `--dry-run` |
+| `planning/analyze_density.py` | Density metrics comparison | `--baseline`, `--scenario` |
+| `planning/heritage_impact.py` | Heritage impact assessment | `--scenario` |
+| `planning/shadow_impact.py` | Shadow impact estimation | `--scenario`, `--season` |
+| `planning/compare_scenarios.py` | Cross-scenario comparison | `--scenarios` |
+| `planning/generate_scenarios.py` | Generate scenario data | — |
+
+## Urban Analysis
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `analyze/network_analysis.py` | Street network metrics (OSMnx) | `--output` |
+| `analyze/morphology.py` | Urban morphology (momepy) | `--output` |
+| `analyze/accessibility.py` | Walkability scoring | `--output` |
+| `analyze/shadow_analysis.py` | Annual sun hours estimation | `--output` |
+| `analyze/viewshed.py` | Visibility from streets | `--output` |
+
+## Heritage
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `heritage/extract_hcd_features.py` | Extract features from HCD text | `--dry-run`, `--address` |
+| `heritage/heritage_score.py` | Heritage significance scoring | `--output` |
+| `heritage/generate_heritage_report.py` | Per-street heritage reports | `--street`, `--output` |
+
+## ML Training
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `train/prepare_training_data.py` | Select best photos for annotation | `--limit`, `--dry-run` |
+| `train/export_coco.py` | Label Studio -> COCO format | `--input`, `--split` |
+| `train/train_yolo_facade.py` | Fine-tune YOLOv11 | `--data`, `--epochs`, `--model` |
+| `train/adapt_facades.py` | CMP Facade domain adaptation | `--cmp-dir`, `--method` |
+| `train/evaluate_model.py` | FiftyOne model evaluation | `--model`, `--launch` |
+
+## Cloud GPU
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `cloud/prepare_session.py` | Package data for cloud GPU | `--type`, `--limit`, `--list` |

@@ -1,0 +1,31 @@
+{
+  "commands": {
+    "/status": {
+      "description": "Show pipeline status",
+      "script": "python scripts/run_blender_buildings_workflows.py dashboard --once-json"
+    },
+    "/coverage": {
+      "description": "Show coverage matrix",
+      "script": "python scripts/generate_coverage_matrix.py --format slack"
+    },
+    "/building": {
+      "description": "Look up a building by address",
+      "script": "python scripts/lookup_building.py --address \"$1\" --format slack",
+      "usage": "/building 22 Lippincott St"
+    },
+    "/colmap": {
+      "description": "COLMAP status for a block",
+      "script": "python scripts/reconstruct/run_photogrammetry_block.py --list-blocks",
+      "usage": "/colmap Augusta Ave"
+    },
+    "/scenario": {
+      "description": "Scenario summary",
+      "script": "python scripts/planning/heritage_impact.py --scenario scenarios/10yr_$1/",
+      "usage": "/scenario gentle_density"
+    },
+    "/sprint": {
+      "description": "Sprint progress",
+      "script": "python scripts/monitor/sprint_progress.py --format slack"
+    }
+  }
+}

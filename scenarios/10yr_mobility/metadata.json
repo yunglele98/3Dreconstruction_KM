@@ -1,0 +1,20 @@
+{
+  "scenario_id": "mobility",
+  "name": "Sustainable Mobility (2036)",
+  "description": "Pedestrianize Augusta Ave market section and Kensington Ave core, add protected bike lanes on 4 streets, install bike parking, and seasonal patios.",
+  "created": "2026-04-02",
+  "author": "planning-agent",
+  "total_interventions": 14,
+  "intervention_types": {
+    "pedestrianize": 2,
+    "bike_infra": 6,
+    "add_patio": 6
+  },
+  "principles": [
+    "Prioritize pedestrians in market core",
+    "Connected bike network through neighbourhood",
+    "Maintain vehicle access for deliveries (time-restricted)",
+    "Add seating and gathering spaces on pedestrianized streets",
+    "Support seasonal patios for market businesses"
+  ]
+}

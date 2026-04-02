@@ -1,0 +1,56 @@
+{
+  "name": "WF-02 Overnight Pipeline (10PM)",
+  "nodes": [
+    {
+      "name": "Cron 10PM",
+      "type": "n8n-nodes-base.cron",
+      "parameters": {"triggerTimes": {"item": [{"mode": "everyDay", "hour": 22, "minute": 0}]}}
+    },
+    {
+      "name": "Check GPU Free",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {"command": "if [ -f .gpu_lock ]; then echo 'ABORT'; exit 1; fi && touch .gpu_lock"}
+    },
+    {
+      "name": "Run Batch Render",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {
+        "command": "cd /c/users/liam1/blender_buildings && blender --background --python generate_building.py -- --params params/ --output-dir outputs/buildings_renders_v1/ --batch-individual --render --skip-existing 2>&1 | tail -20"
+      }
+    },
+    {
+      "name": "Run LOD Generation",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {
+        "command": "cd /c/users/liam1/blender_buildings && blender --background --python scripts/generate_lods.py -- --source-dir outputs/full/ --skip-existing 2>&1 | tail -10"
+      }
+    },
+    {
+      "name": "Run FBX Export",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {
+        "command": "cd /c/users/liam1/blender_buildings && blender --background --python scripts/batch_export_unreal.py -- --source-dir outputs/full/ 2>&1 | tail -10"
+      }
+    },
+    {
+      "name": "Release GPU",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {"command": "rm -f .gpu_lock"}
+    },
+    {
+      "name": "Generate Report",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {
+        "command": "cd /c/users/liam1/blender_buildings && python scripts/monitor/morning_report.py --format json"
+      }
+    }
+  ],
+  "connections": {
+    "Cron 10PM": {"main": [["Check GPU Free"]]},
+    "Check GPU Free": {"main": [["Run Batch Render"]]},
+    "Run Batch Render": {"main": [["Run LOD Generation"]]},
+    "Run LOD Generation": {"main": [["Run FBX Export"]]},
+    "Run FBX Export": {"main": [["Release GPU"]]},
+    "Release GPU": {"main": [["Generate Report"]]}
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "scenario_id": "green_infra",
+  "name": "Green Infrastructure (2036)",
+  "description": "Extensive green roofs on 30 flat-roof buildings, 62 new street trees across 6 corridors. Focus on stormwater management and urban heat reduction.",
+  "created": "2026-04-02",
+  "author": "planning-agent",
+  "total_interventions": 36,
+  "intervention_types": {
+    "green_roof": 30,
+    "tree_planting": 6
+  },
+  "principles": [
+    "Extensive green roofs on flat-roof buildings (lower weight load)",
+    "Intensive green roofs only on structurally-suitable 3+ floor buildings",
+    "Native species for street trees (climate-resilient)",
+    "Prioritize streets with lowest existing canopy",
+    "Integrate rain gardens at key intersections"
+  ]
+}
