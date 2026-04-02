@@ -11,8 +11,8 @@ import json
 import re
 from pathlib import Path
 
-PARAMS_DIR = Path("C:/Users/liam1/blender_buildings/params")
-DOCS_DIR = Path("C:/Users/liam1/blender_buildings/docs")
+PARAMS_DIR = Path(__file__).resolve().parent.parent / "params"
+DOCS_DIR = Path(__file__).resolve().parent.parent / "docs"
 
 def normalize_address(addr):
     """Normalize address for matching."""

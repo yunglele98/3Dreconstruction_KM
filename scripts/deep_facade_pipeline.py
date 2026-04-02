@@ -31,8 +31,8 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-PARAMS_DIR = Path("C:/Users/liam1/blender_buildings/params")
-DOCS_DIR = Path("C:/Users/liam1/blender_buildings/docs")
+PARAMS_DIR = Path(__file__).resolve().parent.parent / "params"
+DOCS_DIR = Path(__file__).resolve().parent.parent / "docs"
 
 # ── Address normalization and param file lookup ──────────────────────────
 

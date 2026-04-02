@@ -2,7 +2,7 @@ import bpy
 from mathutils import Vector
 from pathlib import Path
 
-OUT=Path(r"C:\Users\liam1\blender_buildings\outputs")
+OUT = Path(__file__).resolve().parent.parent / "outputs"
 bpy.ops.wm.open_mainfile(filepath=str((OUT/"103_Bellevue_Ave_custom_v12.blend").resolve()))
 
 def look_at(cam, tgt):

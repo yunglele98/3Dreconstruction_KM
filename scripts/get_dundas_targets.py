@@ -1,7 +1,7 @@
 ﻿import sys
 from pathlib import Path
 
-ROOT = Path("C:/Users/liam1/blender_buildings")
+ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT / "scripts"))
 
 try:

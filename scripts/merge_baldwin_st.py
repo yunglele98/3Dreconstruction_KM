@@ -16,8 +16,8 @@ from promote_deep_to_generator import (
     promote_depth, promote_doors, load_db_geometry
 )
 
-PARAMS_DIR = Path("C:/Users/liam1/blender_buildings/params")
-DOCS_DIR = Path("C:/Users/liam1/blender_buildings/docs")
+PARAMS_DIR = Path(__file__).resolve().parent.parent / "params"
+DOCS_DIR = Path(__file__).resolve().parent.parent / "docs"
 
 
 def normalize_address(addr):

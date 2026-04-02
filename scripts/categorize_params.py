@@ -5,7 +5,7 @@ import shutil
 from pathlib import Path
 
 # Setup paths
-ROOT = Path("C:/Users/liam1/blender_buildings")
+ROOT = Path(__file__).resolve().parent.parent
 PARAMS_DIR = ROOT / "params"
 sys.path.append(str(ROOT / "scripts" / "db"))
 

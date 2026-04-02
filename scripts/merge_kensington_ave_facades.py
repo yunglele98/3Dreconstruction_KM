@@ -20,9 +20,9 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-PARAMS_DIR = Path(r"C:\Users\liam1\blender_buildings\params")
-DOCS_DIR = Path(r"C:\Users\liam1\blender_buildings\docs")
-PHOTO_INDEX = Path(r"C:\Users\liam1\blender_buildings\PHOTOS KENSINGTON\csv\photo_address_index.csv")
+PARAMS_DIR = Path(__file__).resolve().parent.parent / "params"
+DOCS_DIR = Path(__file__).resolve().parent.parent / "docs"
+PHOTO_INDEX = Path(__file__).resolve().parent.parent / "PHOTOS KENSINGTON" / "csv" / "photo_address_index.csv"
 FACADE_ANALYSIS = DOCS_DIR / "kensington_ave_facade_analysis.json"
 DB_DATA = DOCS_DIR / "kensington_ave_db_data.json"
 
