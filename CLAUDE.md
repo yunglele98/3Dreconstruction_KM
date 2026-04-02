@@ -200,8 +200,8 @@ Raw Data Sources:
 **Existing:**
 - `params/` — ~2,060 JSON files (1,064 active + ~820 skipped). `_` prefix = metadata, `"skipped": true` = non-building.
 - `scripts/` — 300+ Python scripts. New V7 scripts go in subdirs: `scripts/sense/`, `scripts/reconstruct/`, `scripts/enrich/`, `scripts/texture/`, `scripts/analyze/`, `scripts/planning/`, `scripts/export/`, `scripts/verify/`, `scripts/monitor/`, `scripts/acquire/`.
-- `generator_modules/` — shared helpers factored out of the generator. Planned decomposition: `colours.py` (existing), `materials.py`, `geometry.py`, `walls.py`, `windows.py`, `doors.py`, `roofs.py`, `decorative.py`, `storefront.py`, `structure.py`, `batch.py`, `photogrammetric.py`.
-- `tests/` — 62 pytest test files.
+- `generator_modules/` — decomposed from `generate_building.py` (9,935 → 2,931 lines). 10 modules: `colours.py`, `materials.py`, `geometry.py`, `walls.py`, `windows.py`, `doors.py`, `roofs.py`, `decorative.py`, `storefront.py`, `structure.py`.
+- `tests/` — 93 pytest test files, 1,961 tests.
 - `outputs/` — rendered `.blend` files: `full/`, `exports/`, `demos/`, `single/`.
 - `PHOTOS KENSINGTON/` — 1,867 geotagged field photos + `csv/photo_address_index.csv`.
 - `agent_ops/` — kanban: `00_intake/` → `10_backlog/` → `20_active/` → `30_handoffs/` → `40_reviews/` → `60_releases/` → `90_archive/`.
