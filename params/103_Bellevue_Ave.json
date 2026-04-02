@@ -6,7 +6,7 @@
     4.8
   ],
   "total_height_m": 9.6,
-  "facade_width_m": 7.0,
+  "facade_width_m": 5.0,
   "facade_depth_m": 13.2,
   "site": {
     "lon": -79.40398014999998,
@@ -188,6 +188,9 @@
     "sparse_field_promotions": [
       "chimney_count",
       "porch_detail"
+    ],
+    "structural_fixes": [
+      "suspicious_dimensions: width 7.0m -> 5.0m (was 7.0m but lot is 17ft/5.18m)"
     ]
   },
   "decorative_elements": {

@@ -1,10 +1,13 @@
 {
   "building_name": "474 Spadina Ave",
-  "floors": 1,
+  "floors": 4,
   "floor_heights_m": [
-    10.3
+    4.5,
+    2.87,
+    2.87,
+    2.87
   ],
-  "total_height_m": 10.3,
+  "total_height_m": 13.11,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -24,6 +27,9 @@
   "facade_material": "concrete",
   "facade_colour": "grey concrete",
   "windows_per_floor": [
+    0,
+    0,
+    0,
     0
   ],
   "window_type": "double_hung",
@@ -189,6 +195,9 @@
     ],
     "sparse_field_promotions": [
       "door_count_promoted"
+    ],
+    "structural_fixes": [
+      "suspicious_dimensions: 1F/[10.3] -> 4F/[4.5, 2.87, 2.87, 2.87]"
     ]
   },
   "storefront": {

@@ -1,10 +1,12 @@
 {
   "building_name": "353 College St",
-  "floors": 1,
+  "floors": 3,
   "floor_heights_m": [
-    9.8
+    2.85,
+    2.65,
+    2.65
   ],
-  "total_height_m": 9.8,
+  "total_height_m": 8.15,
   "facade_width_m": 6.1,
   "facade_depth_m": 36.6,
   "site": {
@@ -24,6 +26,8 @@
   "facade_material": "Brick",
   "facade_colour": "N/A - vacant lot",
   "windows_per_floor": [
+    0,
+    0,
     0
   ],
   "window_type": "double_hung",
@@ -193,6 +197,9 @@
     ],
     "backfills": [
       "construction_era:style_keyword:edwardian"
+    ],
+    "structural_fixes": [
+      "suspicious_dimensions: 1F/[9.8] -> 3F/[2.85, 2.65, 2.65] (ref_h=8.14m)"
     ]
   },
   "storefront": {

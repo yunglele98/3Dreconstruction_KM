@@ -50,10 +50,13 @@ def _register_script_modules():
                 # the module to be importable, so we exec it now.
                 try:
                     spec.loader.exec_module(sys.modules[mod_name])
-                except Exception:
-                    # If a script fails to import (e.g. needs bpy), remove it
-                    # so the normal import error surfaces at test time
-                    del sys.modules[mod_name]
+                except BaseException:
+                    # If a script fails to import (e.g. needs bpy, or calls
+                    # sys.exit when a dependency is missing), remove it so
+                    # the normal import error surfaces at test time.
+                    # Must catch BaseException since SystemExit doesn't
+                    # inherit from Exception.
+                    sys.modules.pop(mod_name, None)
         except Exception:
             pass
 
