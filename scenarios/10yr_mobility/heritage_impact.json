@@ -1,0 +1,136 @@
+{
+  "scenario_id": "mobility",
+  "total_interventions": 14,
+  "scores": {
+    "safe": 0,
+    "review": 5,
+    "incompatible": 0,
+    "non_contributing": 1,
+    "new_build": 0
+  },
+  "heritage_preservation_score": 7.1,
+  "findings": [
+    {
+      "address": "STREET_Augusta_Ave_Market",
+      "type": "pedestrianize",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Kensington_Ave_Core",
+      "type": "pedestrianize",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Baldwin_St",
+      "type": "bike_infra",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Nassau_St",
+      "type": "bike_infra",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Oxford_St",
+      "type": "bike_infra",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Bellevue_Ave",
+      "type": "bike_infra",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "BIKE_PARKING_Augusta_Baldwin",
+      "type": "bike_infra",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "BIKE_PARKING_Kensington_StAndrew",
+      "type": "bike_infra",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "138 Augusta Ave",
+      "type": "add_patio",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "141 Augusta Ave",
+      "type": "add_patio",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "unknown",
+      "severity": "warning",
+      "note": "Unknown intervention type on contributing building"
+    },
+    {
+      "address": "143 Augusta Ave",
+      "type": "add_patio",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "unknown",
+      "severity": "warning",
+      "note": "Unknown intervention type on contributing building"
+    },
+    {
+      "address": "144-148 Augusta Ave",
+      "type": "add_patio",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "unknown",
+      "severity": "warning",
+      "note": "Unknown intervention type on contributing building"
+    },
+    {
+      "address": "144 Augusta Ave",
+      "type": "add_patio",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "unknown",
+      "severity": "warning",
+      "note": "Unknown intervention type on contributing building"
+    },
+    {
+      "address": "145 Augusta Ave",
+      "type": "add_patio",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "unknown",
+      "severity": "warning",
+      "note": "Unknown intervention type on contributing building"
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "baseline": {
+    "building_count": 1050,
+    "total_floors": 2401,
+    "avg_floors": 2.29,
+    "avg_height_m": 8.34,
+    "total_gfa_sqm": 326355.3,
+    "total_footprint_sqm": 140605.6,
+    "fsi": 2.321,
+    "total_dwellings": 4205,
+    "storefront_count": 560,
+    "by_street": {
+      "Augusta Ave": {
+        "count": 154,
+        "avg_floors": 2.2,
+        "avg_height_m": 7.8,
+        "dwellings": 648
+      },
+      "Baldwin St": {
+        "count": 49,
+        "avg_floors": 2.3,
+        "avg_height_m": 7.8,
+        "dwellings": 292
+      },
+      "Bathurst St": {
+        "count": 31,
+        "avg_floors": 2.7,
+        "avg_height_m": 8.8,
+        "dwellings": 91
+      },
+      "Bellevue Ave": {
+        "count": 92,
+        "avg_floors": 2.3,
+        "avg_height_m": 8.0,
+        "dwellings": 393
+      },
+      "Carlyle St": {
+        "count": 2,
+        "avg_floors": 1.5,
+        "avg_height_m": 7.1,
+        "dwellings": 5
+      },
+      "Casimir St": {
+        "count": 26,
+        "avg_floors": 2.6,
+        "avg_height_m": 8.3,
+        "dwellings": 46
+      },
+      "College St": {
+        "count": 48,
+        "avg_floors": 2.4,
+        "avg_height_m": 11.0,
+        "dwellings": 274
+      },
+      "Denison Ave": {
+        "count": 25,
+        "avg_floors": 1.8,
+        "avg_height_m": 7.5,
+        "dwellings": 44
+      },
+      "Denison Sq": {
+        "count": 10,
+        "avg_floors": 2.4,
+        "avg_height_m": 8.2,
+        "dwellings": 22
+      },
+      "Dundas St W": {
+        "count": 47,
+        "avg_floors": 2.2,
+        "avg_height_m": 8.3,
+        "dwellings": 196
+      },
+      "Fitzroy Terrace": {
+        "count": 8,
+        "avg_floors": 2.0,
+        "avg_height_m": 6.2,
+        "dwellings": 10
+      },
+      "Glen Baillie Pl": {
+        "count": 12,
+        "avg_floors": 2.4,
+        "avg_height_m": 6.4,
+        "dwellings": 12
+      },
+      "Hickory St": {
+        "count": 8,
+        "avg_floors": 1.9,
+        "avg_height_m": 7.0,
+        "dwellings": 10
+      },
+      "Kensington Ave": {
+        "count": 80,
+        "avg_floors": 2.2,
+        "avg_height_m": 8.1,
+        "dwellings": 225
+      },
+      "Kensington Pl": {
+        "count": 16,
+        "avg_floors": 2.0,
+        "avg_height_m": 7.5,
+        "dwellings": 47
+      },
+      "Leonard Ave": {
+        "count": 12,
+        "avg_floors": 2.4,
+        "avg_height_m": 8.8,
+        "dwellings": 212
+      },
+      "Leonard Pl": {
+        "count": 3,
+        "avg_floors": 2.0,
+        "avg_height_m": 8.8,
+        "dwellings": 4
+      },
+      "Lippincott St": {
+        "count": 49,
+        "avg_floors": 2.2,
+        "avg_height_m": 7.7,
+        "dwellings": 75
+      },
+      "Littlehayes Lane": {
+        "count": 1,
+        "avg_floors": 2.0,
+        "avg_height_m": 9.1,
+        "dwellings": 7
+      },
+      "Nassau St": {
+        "count": 100,
+        "avg_floors": 2.1,
+        "avg_height_m": 8.3,
+        "dwellings": 355
+      },
+      "Oxford St": {
+        "count": 116,
+        "avg_floors": 2.3,
+        "avg_height_m": 9.0,
+        "dwellings": 372
+      },
+      "Spadina Ave": {
+        "count": 82,
+        "avg_floors": 2.7,
+        "avg_height_m": 9.6,
+        "dwellings": 576
+      },
+      "St Andrew St": {
+        "count": 17,
+        "avg_floors": 2.1,
+        "avg_height_m": 7.9,
+        "dwellings": 115
+      },
+      "Wales Ave": {
+        "count": 62,
+        "avg_floors": 2.4,
+        "avg_height_m": 7.9,
+        "dwellings": 174
+      }
+    }
+  },
+  "scenario": {
+    "building_count": 1050,
+    "total_floors": 2410,
+    "avg_floors": 2.3,
+    "avg_height_m": 8.38,
+    "total_gfa_sqm": 328364.6,
+    "total_footprint_sqm": 140605.6,
+    "fsi": 2.335,
+    "total_dwellings": 4205,
+    "storefront_count": 566,
+    "by_street": {
+      "Augusta Ave": {
+        "count": 154,
+        "avg_floors": 2.2,
+        "avg_height_m": 7.8,
+        "dwellings": 648
+      },
+      "Baldwin St": {
+        "count": 49,
+        "avg_floors": 2.3,
+        "avg_height_m": 7.8,
+        "dwellings": 292
+      },
+      "Bathurst St": {
+        "count": 31,
+        "avg_floors": 2.7,
+        "avg_height_m": 8.8,
+        "dwellings": 91
+      },
+      "Bellevue Ave": {
+        "count": 92,
+        "avg_floors": 2.3,
+        "avg_height_m": 8.0,
+        "dwellings": 393
+      },
+      "Carlyle St": {
+        "count": 2,
+        "avg_floors": 1.5,
+        "avg_height_m": 7.1,
+        "dwellings": 5
+      },
+      "Casimir St": {
+        "count": 26,
+        "avg_floors": 2.6,
+        "avg_height_m": 8.3,
+        "dwellings": 46
+      },
+      "College St": {
+        "count": 48,
+        "avg_floors": 2.5,
+        "avg_height_m": 11.6,
+        "dwellings": 274
+      },
+      "Denison Ave": {
+        "count": 25,
+        "avg_floors": 1.8,
+        "avg_height_m": 7.5,
+        "dwellings": 44
+      },
+      "Denison Sq": {
+        "count": 10,
+        "avg_floors": 2.4,
+        "avg_height_m": 8.2,
+        "dwellings": 22
+      },
+      "Dundas St W": {
+        "count": 47,
+        "avg_floors": 2.2,
+        "avg_height_m": 8.3,
+        "dwellings": 196
+      },
+      "Fitzroy Terrace": {
+        "count": 8,
+        "avg_floors": 2.0,
+        "avg_height_m": 6.2,
+        "dwellings": 10
+      },
+      "Glen Baillie Pl": {
+        "count": 12,
+        "avg_floors": 2.4,
+        "avg_height_m": 6.4,
+        "dwellings": 12
+      },
+      "Hickory St": {
+        "count": 8,
+        "avg_floors": 1.9,
+        "avg_height_m": 7.0,
+        "dwellings": 10
+      },
+      "Kensington Ave": {
+        "count": 80,
+        "avg_floors": 2.2,
+        "avg_height_m": 8.1,
+        "dwellings": 225
+      },
+      "Kensington Pl": {
+        "count": 16,
+        "avg_floors": 2.0,
+        "avg_height_m": 7.5,
+        "dwellings": 47
+      },
+      "Leonard Ave": {
+        "count": 12,
+        "avg_floors": 2.4,
+        "avg_height_m": 8.8,
+        "dwellings": 212
+      },
+      "Leonard Pl": {
+        "count": 3,
+        "avg_floors": 2.0,
+        "avg_height_m": 8.8,
+        "dwellings": 4
+      },
+      "Lippincott St": {
+        "count": 49,
+        "avg_floors": 2.2,
+        "avg_height_m": 7.7,
+        "dwellings": 75
+      },
+      "Littlehayes Lane": {
+        "count": 1,
+        "avg_floors": 2.0,
+        "avg_height_m": 9.1,
+        "dwellings": 7
+      },
+      "Nassau St": {
+        "count": 100,
+        "avg_floors": 2.1,
+        "avg_height_m": 8.3,
+        "dwellings": 355
+      },
+      "Oxford St": {
+        "count": 116,
+        "avg_floors": 2.3,
+        "avg_height_m": 9.0,
+        "dwellings": 372
+      },
+      "Spadina Ave": {
+        "count": 82,
+        "avg_floors": 2.7,
+        "avg_height_m": 9.8,
+        "dwellings": 576
+      },
+      "St Andrew St": {
+        "count": 17,
+        "avg_floors": 2.1,
+        "avg_height_m": 7.9,
+        "dwellings": 115
+      },
+      "Wales Ave": {
+        "count": 62,
+        "avg_floors": 2.4,
+        "avg_height_m": 7.9,
+        "dwellings": 174
+      }
+    }
+  },
+  "deltas": {
+    "building_count": {
+      "baseline": 1050,
+      "scenario": 1050,
+      "delta": 0,
+      "pct_change": 0.0
+    },
+    "total_floors": {
+      "baseline": 2401,
+      "scenario": 2410,
+      "delta": 9,
+      "pct_change": 0.4
+    },
+    "avg_floors": {
+      "baseline": 2.29,
+      "scenario": 2.3,
+      "delta": 0.01,
+      "pct_change": 0.4
+    },
+    "avg_height_m": {
+      "baseline": 8.34,
+      "scenario": 8.38,
+      "delta": 0.04,
+      "pct_change": 0.5
+    },
+    "total_gfa_sqm": {
+      "baseline": 326355.3,
+      "scenario": 328364.6,
+      "delta": 2009.3,
+      "pct_change": 0.6
+    },
+    "fsi": {
+      "baseline": 2.321,
+      "scenario": 2.335,
+      "delta": 0.01,
+      "pct_change": 0.6
+    },
+    "total_dwellings": {
+      "baseline": 4205,
+      "scenario": 4205,
+      "delta": 0,
+      "pct_change": 0.0
+    },
+    "storefront_count": {
+      "baseline": 560,
+      "scenario": 566,
+      "delta": 6,
+      "pct_change": 1.1
+    }
+  }
+}

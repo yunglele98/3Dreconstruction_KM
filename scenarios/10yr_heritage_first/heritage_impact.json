@@ -1,0 +1,414 @@
+{
+  "scenario_id": "heritage_first",
+  "total_interventions": 40,
+  "scores": {
+    "safe": 40,
+    "review": 0,
+    "incompatible": 0,
+    "non_contributing": 0,
+    "new_build": 0
+  },
+  "heritage_preservation_score": 100.0,
+  "findings": [
+    {
+      "address": "100 Bellevue Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached"
+    },
+    {
+      "address": "10 Kensington Pl",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "10R Bellevue Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "111 Oxford St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "113 Oxford St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "11 Lippincott St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row, Bay-and-Gable"
+    },
+    {
+      "address": "12 Casimir St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "12 Kensington Pl",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "12 Oxford St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "136 Denison Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row, Ontario Cottage",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row, Ontario Cottage"
+    },
+    {
+      "address": "138 Baldwin St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "141 Augusta Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "142R Denison Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "1904-1913",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1904-1913 House-form, Row"
+    },
+    {
+      "address": "148 Augusta Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "14 Kensington Pl",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "14 Oxford St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "150 Augusta Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached"
+    },
+    {
+      "address": "16 Kensington Pl",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "173 Augusta Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "175 Augusta Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "177 Augusta Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "179 Augusta Ave",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "181 Baldwin St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "185D Baldwin St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "186 Baldwin St",
+      "type": "heritage_restore",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "106 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "10 Kensington Ave",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "10 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Semi-detached"
+    },
+    {
+      "address": "10A Kensington Ave",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "112 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "114 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "11 Kensington Ave",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "122R Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "124 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Detached, Ontario Cottage",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Detached, Ontario Cottage"
+    },
+    {
+      "address": "12 Kensington Ave",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Semi-detached"
+    },
+    {
+      "address": "132 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "136 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached"
+    },
+    {
+      "address": "138 Nassau St",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached"
+    },
+    {
+      "address": "13 Kensington Ave",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "143 Augusta Ave",
+      "type": "facade_renovation",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    }
+  ]
+}

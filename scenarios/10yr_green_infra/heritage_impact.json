@@ -1,0 +1,362 @@
+{
+  "scenario_id": "green_infra",
+  "total_interventions": 36,
+  "scores": {
+    "safe": 30,
+    "review": 0,
+    "incompatible": 0,
+    "non_contributing": 0,
+    "new_build": 0
+  },
+  "heritage_preservation_score": 83.3,
+  "findings": [
+    {
+      "address": "10 Glen Baillie Pl",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "11 Glen Baillie Pl",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "12 Glen Baillie Pl",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "135 Nassau St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "13 Glen Baillie Pl",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "13 Wales Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "145 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "147 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "14 Kensington Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Semi-detached"
+    },
+    {
+      "address": "14A Hickory St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "15 Glen Baillie Pl",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "15 Wales Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "168 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1914-1930",
+      "typology": "Commercial",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1914-1930 Commercial"
+    },
+    {
+      "address": "171 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "173 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "175 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "17 Wales Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "183 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "187 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "188 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Semi-detached"
+    },
+    {
+      "address": "188 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Row"
+    },
+    {
+      "address": "189 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Semi-detached"
+    },
+    {
+      "address": "18 Nassau St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Row"
+    },
+    {
+      "address": "191A Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1914-1930",
+      "typology": "Commercial, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1914-1930 Commercial, Row"
+    },
+    {
+      "address": "193 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "193 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "1914-1930",
+      "typology": "Commercial, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1914-1930 Commercial, Row"
+    },
+    {
+      "address": "195 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "197 Augusta Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "198 Baldwin St",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Semi-detached"
+    },
+    {
+      "address": "19 Wales Ave",
+      "type": "green_roof",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    },
+    {
+      "address": "STREET_Kensington_Ave",
+      "type": "tree_planting",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Augusta_Ave",
+      "type": "tree_planting",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Nassau_St",
+      "type": "tree_planting",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Oxford_St",
+      "type": "tree_planting",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Baldwin_St",
+      "type": "tree_planting",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "STREET_Wales_Ave",
+      "type": "tree_planting",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    }
+  ]
+}

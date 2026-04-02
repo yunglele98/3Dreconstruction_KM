@@ -1,0 +1,220 @@
+{
+  "scenario_id": "mixed_use",
+  "total_interventions": 24,
+  "scores": {
+    "safe": 7,
+    "review": 0,
+    "incompatible": 0,
+    "non_contributing": 16,
+    "new_build": 0
+  },
+  "heritage_preservation_score": 95.8,
+  "findings": [
+    {
+      "address": "63 Oxford St",
+      "type": "convert_ground",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "66 Nassau St",
+      "type": "convert_ground",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "68 Nassau St",
+      "type": "convert_ground",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "70 Nassau St",
+      "type": "convert_ground",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "74 Nassau St",
+      "type": "convert_ground",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "80 Nassau St",
+      "type": "convert_ground",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "271 College St",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "277 College St",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "285 1 2 College St",
+      "type": "add_floor",
+      "heritage_status": "unknown",
+      "impact": "address_not_found",
+      "severity": "warning",
+      "note": "Address not found in baseline params"
+    },
+    {
+      "address": "287 College St",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "289 College St",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "289A College St",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "292 Spadina Ave",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "294-296 Spadina Ave",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "294 Spadina Ave",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "295 College St",
+      "type": "add_floor",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "10 Kensington Ave",
+      "type": "signage_update",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "10A Kensington Ave",
+      "type": "signage_update",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "11 Kensington Ave",
+      "type": "signage_update",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "12 Kensington Ave",
+      "type": "signage_update",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "Converted House-form, Semi-detached",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 Converted House-form, Semi-detached"
+    },
+    {
+      "address": "12A Kensington Ave",
+      "type": "signage_update",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 "
+    },
+    {
+      "address": "138 Augusta Ave",
+      "type": "signage_update",
+      "heritage_status": "non-contributing",
+      "impact": "acceptable",
+      "severity": "info",
+      "note": "Non-contributing building -- intervention is acceptable"
+    },
+    {
+      "address": "13 Kensington Ave",
+      "type": "signage_update",
+      "heritage_status": "contributing",
+      "era": "1889-1903",
+      "typology": "House-form, Semi-detached, Bay-and-Gable",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on 1889-1903 House-form, Semi-detached, Bay-and-Gable"
+    },
+    {
+      "address": "141 Augusta Ave",
+      "type": "signage_update",
+      "heritage_status": "contributing",
+      "era": "Pre-1889",
+      "typology": "House-form, Row",
+      "impact": "safe",
+      "severity": "ok",
+      "note": "Heritage-compatible intervention on Pre-1889 House-form, Row"
+    }
+  ]
+}
