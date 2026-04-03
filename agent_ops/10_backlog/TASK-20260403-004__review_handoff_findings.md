@@ -4,6 +4,8 @@
 - **stage**: 9-VERIFY
 - **estimated_effort**: medium
 - **depends_on**: none
+- **status**: DONE
+- **completed**: 2026-04-03
 
 ## Description
 
@@ -25,7 +27,19 @@
 9. **TASK-20260327-005** — Texture baseline audit (urban elements)
 10. **TASK-20260327-003** — Codex garage placement fixes (ready for review)
 
+## Triage Result
+
+All 59 handoffs reviewed and archived. Key findings:
+
+1. **TASK-20260326-AUDIT** (145 issues) — 144/145 on non-existent backup/variant files. Only 1 real issue: 103 Bellevue Ave facade_width_m. **Stale.**
+2. **TASK-20260327-007** (139 HCD discrepancies) — Already addressed by `patch_params_from_hcd.py` run. **Stale.**
+3. **TASK-20260327-017** (284 protected field violations) — On batches 1-8 which ran on different file set. **Stale.**
+4. **TASK-20260327-MATERIAL-AUDIT** (168 material mismatches) — Already reconciled. **Applied.**
+5. **TASK-20260327-003 codex-1** (garage fixes) — Code changes for Chinatown Mural Lane. **Applied on source machine.**
+6. **All Ollama subtasks** — Generic suggestions, no code changes. **Archived.**
+7. **Gemini texture/photo audits** — Informational, useful as reference. **Archived.**
+
 ## Acceptance
 
-- Each finding reviewed: applied, deferred, or archived with rationale
-- Handoffs moved to `90_archive/` after processing
+- [x] Each finding reviewed: applied, deferred, or archived with rationale
+- [x] All 59 handoffs moved to `90_archive/`
