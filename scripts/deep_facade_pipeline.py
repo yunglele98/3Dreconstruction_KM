@@ -26,13 +26,20 @@ Usage:
 
 import argparse
 import json
+import os
 import re
 import sys
+import tempfile
+import traceback
 from pathlib import Path
 from datetime import datetime
 
-PARAMS_DIR = Path("C:/Users/liam1/blender_buildings/params")
-DOCS_DIR = Path("C:/Users/liam1/blender_buildings/docs")
+_ROOT = Path(__file__).resolve().parent.parent
+PARAMS_DIR = Path(os.environ.get("PARAMS_DIR", _ROOT / "params"))
+DOCS_DIR = Path(os.environ.get("DOCS_DIR", _ROOT / "docs"))
+
+VALID_ROOF_TYPES = {"flat", "gable", "cross-gable", "hip", "mansard"}
+HEX_PATTERN = re.compile(r"^#[0-9A-Fa-f]{6}$")
 
 # ── Address normalization and param file lookup ──────────────────────────
 
@@ -48,6 +55,24 @@ def normalize_address(addr):
     if addr.startswith("~"):
         addr = addr[1:].strip()
     return addr.strip()
+
+
+def _is_valid_hex(val):
+    """Validate a hex colour string like #B85A3A."""
+    return isinstance(val, str) and bool(HEX_PATTERN.match(val))
+
+
+def _atomic_write_json(filepath, data):
+    """Write JSON atomically via temp file + rename to prevent corruption."""
+    filepath = Path(filepath)
+    with tempfile.NamedTemporaryFile(
+        mode="w", dir=filepath.parent, delete=False,
+        suffix=".tmp", encoding="utf-8",
+    ) as tmp:
+        json.dump(data, tmp, indent=2, ensure_ascii=False)
+        tmp.write("\n")
+        tmp_path = Path(tmp.name)
+    tmp_path.replace(filepath)
 
 
 SKIP_KEYWORDS = [
@@ -117,7 +142,20 @@ def find_param_file(address):
 # ── Deep analysis merge ──────────────────────────────────────────────────
 
 def merge_deep_into_param(param_data, deep_entry):
-    """Add deep_facade_analysis section to a param file."""
+    """Add deep_facade_analysis section to a param file.
+
+    Returns (param_data, is_new) — is_new is False when an existing
+    deep_facade_analysis section was overwritten.
+    """
+    is_new = "deep_facade_analysis" not in param_data
+
+    brick_hex = deep_entry.get("brick_colour_hex")
+    if brick_hex and not _is_valid_hex(brick_hex):
+        brick_hex = None
+    roof_hex = deep_entry.get("roof_colour_hex")
+    if roof_hex and not _is_valid_hex(roof_hex):
+        roof_hex = None
+
     param_data["deep_facade_analysis"] = {
         "source_photo": deep_entry.get("filename"),
         "analysis_pass": "deep_v2",
@@ -126,7 +164,7 @@ def merge_deep_into_param(param_data, deep_entry):
         "has_half_storey_gable": deep_entry.get("has_half_storey_gable"),
         "floor_height_ratios": deep_entry.get("floor_height_ratios"),
         "facade_material_observed": deep_entry.get("facade_material"),
-        "brick_colour_hex": deep_entry.get("brick_colour_hex"),
+        "brick_colour_hex": brick_hex,
         "brick_bond_observed": deep_entry.get("brick_bond"),
         "mortar_colour": deep_entry.get("mortar_colour"),
         "polychromatic_brick": deep_entry.get("polychromatic_brick"),
@@ -135,10 +173,12 @@ def merge_deep_into_param(param_data, deep_entry):
         "roof_type_observed": deep_entry.get("roof_type"),
         "roof_pitch_deg": deep_entry.get("roof_pitch_deg"),
         "roof_material": deep_entry.get("roof_material"),
-        "roof_colour_hex": deep_entry.get("roof_colour_hex"),
+        "roof_colour_hex": roof_hex,
         "bargeboard": deep_entry.get("bargeboard"),
         "gable_window": deep_entry.get("gable_window"),
         "bay_window_observed": deep_entry.get("bay_window"),
+        "chimney_observed": deep_entry.get("chimney"),
+        "porch_observed": deep_entry.get("porch"),
         "storefront_observed": deep_entry.get("storefront"),
         "decorative_elements_observed": deep_entry.get("decorative_elements"),
         "party_wall_left": deep_entry.get("party_wall_left"),
@@ -148,36 +188,71 @@ def merge_deep_into_param(param_data, deep_entry):
         "condition_notes": deep_entry.get("condition_notes"),
         "depth_notes": deep_entry.get("depth_notes"),
     }
-    return param_data
+
+    meta = param_data.get("_meta", {})
+    fusions = meta.get("fusion_applied", [])
+    if "deep_facade" not in fusions:
+        fusions.append("deep_facade")
+    meta["fusion_applied"] = fusions
+    meta["deep_facade_merge_ts"] = datetime.now().strftime("%Y-%m-%d")
+    param_data["_meta"] = meta
+
+    return param_data, is_new
 
 
 # ── Generator field promotion ────────────────────────────────────────────
+
+def _normalize_roof_type(observed):
+    """Map an observed roof type string to a canonical generator value."""
+    obs = (observed or "").lower().strip()
+    if "cross" in obs and "gable" in obs:
+        return "Cross-Gable"
+    if "hip" in obs:
+        return "Hip"
+    if "mansard" in obs:
+        return "Mansard"
+    if "gable" in obs:
+        return "Gable"
+    if "flat" in obs:
+        return "Flat"
+    return None
+
 
 def promote_roof(params, deep):
     changes = []
     observed_type = deep.get("roof_type_observed")
     if observed_type:
+        canonical = _normalize_roof_type(observed_type)
         current = (params.get("roof_type") or "").lower()
-        obs_lower = observed_type.lower()
-        if current in ("", "flat") and "gable" in obs_lower:
-            params["roof_type"] = "Gable"
-            changes.append(f"roof_type: '{current}' -> 'Gable'")
-        elif current in ("", "gable") and "flat" in obs_lower:
-            params["roof_type"] = "Flat"
-            changes.append(f"roof_type: '{current}' -> 'Flat'")
+        if canonical and canonical.lower() != current:
+            params["roof_type"] = canonical
+            changes.append(f"roof_type: '{current}' -> '{canonical}'")
 
     observed_pitch = deep.get("roof_pitch_deg")
-    if observed_pitch and isinstance(observed_pitch, (int, float)) and observed_pitch > 0:
+    if observed_pitch and isinstance(observed_pitch, (int, float)) and 5 <= observed_pitch <= 75:
         current_pitch = params.get("roof_pitch_deg", 35)
         if abs(current_pitch - observed_pitch) > 5:
             params["roof_pitch_deg"] = observed_pitch
             changes.append(f"roof_pitch_deg: {current_pitch} -> {observed_pitch}")
 
+    roof_mat = deep.get("roof_material")
+    if roof_mat and not params.get("roof_material"):
+        params["roof_material"] = roof_mat
+        changes.append(f"roof_material: '{roof_mat}'")
+
+    roof_hex = deep.get("roof_colour_hex")
+    if roof_hex and _is_valid_hex(roof_hex) and not params.get("roof_colour"):
+        params["roof_colour"] = roof_hex
+        changes.append(f"roof_colour: '{roof_hex}'")
+
     rd = params.get("roof_detail", {})
     bargeboard = deep.get("bargeboard")
     if bargeboard and isinstance(bargeboard, dict) and bargeboard.get("present"):
+        colour_hex = bargeboard.get("colour_hex")
+        if colour_hex and not _is_valid_hex(colour_hex):
+            colour_hex = None
         rd["bargeboard_style"] = bargeboard.get("style", "decorative")
-        rd["bargeboard_colour_hex"] = bargeboard.get("colour_hex")
+        rd["bargeboard_colour_hex"] = colour_hex
         changes.append("roof_detail.bargeboard added")
 
     gw = deep.get("gable_window")
@@ -190,8 +265,8 @@ def promote_roof(params, deep):
             rd["gable_window"]["arch_type"] = gw["type"]
         changes.append("roof_detail.gable_window added")
 
-    eave = deep.get("depth_notes", {}).get("eave_overhang_mm_est")
-    if eave and isinstance(eave, (int, float)):
+    eave = (deep.get("depth_notes") or {}).get("eave_overhang_mm_est")
+    if eave and isinstance(eave, (int, float)) and 50 <= eave <= 1200:
         rd["eave_overhang_mm"] = eave
         params["eave_overhang_mm"] = eave
         changes.append(f"eave_overhang_mm: {eave}")
@@ -276,7 +351,7 @@ def promote_windows(params, deep):
 def promote_facade(params, deep):
     changes = []
     brick_hex = deep.get("brick_colour_hex")
-    if brick_hex:
+    if brick_hex and _is_valid_hex(brick_hex):
         fd = params.get("facade_detail", {})
         old_hex = fd.get("brick_colour_hex")
         if not old_hex or old_hex in ("#B85A3A", "#D4B896"):
@@ -301,11 +376,15 @@ def promote_facade(params, deep):
     cp_obs = deep.get("colour_palette_observed")
     if cp_obs and isinstance(cp_obs, dict):
         cp = params.get("colour_palette", {})
+        enriched_keys = []
         for key in ("facade", "trim", "roof", "accent"):
-            if cp_obs.get(key) and not cp.get(key):
-                cp[key] = cp_obs[key]
-        params["colour_palette"] = cp
-        changes.append("colour_palette enriched")
+            val = cp_obs.get(key)
+            if val and _is_valid_hex(val) and not cp.get(key):
+                cp[key] = val
+                enriched_keys.append(key)
+        if enriched_keys:
+            params["colour_palette"] = cp
+            changes.append(f"colour_palette enriched ({', '.join(enriched_keys)})")
     mat_obs = deep.get("facade_material_observed")
     if mat_obs:
         current = (params.get("facade_material") or "").lower()
@@ -338,9 +417,19 @@ def promote_decorative(params, deep):
             de[param_key] = make_fn()
             changes.append(f"decorative_elements.{param_key} added")
     sc = de_obs.get("string_courses")
-    if sc and isinstance(sc, list) and len(sc) > 0 and "string_courses" not in de:
-        de["string_courses"] = {"present": True, "count": len(sc)}
-        changes.append(f"decorative_elements.string_courses: {len(sc)}")
+    if sc and "string_courses" not in de:
+        if isinstance(sc, list) and len(sc) > 0:
+            de["string_courses"] = {"present": True, "count": len(sc)}
+            changes.append(f"decorative_elements.string_courses: {len(sc)}")
+        elif isinstance(sc, dict) and sc.get("present"):
+            de["string_courses"] = {
+                "present": True,
+                "width_mm": sc.get("width_mm", 80),
+                "projection_mm": sc.get("projection_mm", 30),
+            }
+            if sc.get("colour_hex") and _is_valid_hex(sc["colour_hex"]):
+                de["string_courses"]["colour_hex"] = sc["colour_hex"]
+            changes.append("decorative_elements.string_courses added")
     if de_obs.get("diamond_brick_patterns"):
         de["polychromatic_brick"] = True
         changes.append("polychromatic_brick flagged")
@@ -414,14 +503,99 @@ def promote_doors(params, deep):
     return changes
 
 
+def promote_party_walls(params, deep):
+    changes = []
+    for side in ("party_wall_left", "party_wall_right"):
+        obs = deep.get(side)
+        if obs is not None and params.get(side) is None:
+            params[side] = bool(obs)
+            changes.append(f"{side}: {obs}")
+    return changes
+
+
+def promote_bay_window(params, deep):
+    changes = []
+    bw_obs = deep.get("bay_window_observed")
+    if not bw_obs or not isinstance(bw_obs, dict):
+        return changes
+    bw = params.get("bay_window", {})
+    if bw.get("present"):
+        return changes
+    if bw_obs.get("present") or bw_obs.get("type"):
+        bw_type = bw_obs.get("type", "canted")
+        bw["present"] = True
+        bw["type"] = bw_type
+        if bw_obs.get("width_m_est"):
+            bw["width_m"] = bw_obs["width_m_est"]
+        if bw_obs.get("projection_m_est"):
+            bw["projection_m"] = bw_obs["projection_m_est"]
+        if bw_obs.get("floors_spanned"):
+            bw["floors_spanned"] = bw_obs["floors_spanned"]
+        elif bw_obs.get("floors"):
+            bw["floors"] = bw_obs["floors"]
+        params["bay_window"] = bw
+        changes.append(f"bay_window: type={bw_type}")
+    return changes
+
+
+def promote_chimney(params, deep):
+    changes = []
+    ch_obs = deep.get("chimney_observed")
+    if not ch_obs:
+        return changes
+    if isinstance(ch_obs, bool) and ch_obs:
+        if not params.get("chimneys"):
+            params["chimneys"] = {"count": 1, "position": "side"}
+            rf = params.get("roof_features", [])
+            if "chimney" not in rf:
+                rf.append("chimney")
+                params["roof_features"] = rf
+            changes.append("chimneys: 1 (observed)")
+    elif isinstance(ch_obs, dict) and ch_obs.get("present"):
+        if not params.get("chimneys"):
+            params["chimneys"] = {
+                "count": ch_obs.get("count", 1),
+                "position": ch_obs.get("position", "side"),
+            }
+            rf = params.get("roof_features", [])
+            if "chimney" not in rf:
+                rf.append("chimney")
+                params["roof_features"] = rf
+            changes.append(f"chimneys: {ch_obs.get('count', 1)} (observed)")
+    return changes
+
+
+def promote_porch(params, deep):
+    changes = []
+    p_obs = deep.get("porch_observed")
+    if not p_obs or not isinstance(p_obs, dict):
+        return changes
+    porch = params.get("porch", {})
+    if porch.get("present"):
+        return changes
+    if p_obs.get("present") or p_obs.get("type"):
+        porch["present"] = True
+        porch["type"] = p_obs.get("type", "open")
+        if p_obs.get("width_m_est"):
+            porch["width_m"] = p_obs["width_m_est"]
+        if p_obs.get("depth_m_est"):
+            porch["depth_m"] = p_obs["depth_m_est"]
+        params["porch"] = porch
+        params["porch_present"] = True
+        params["porch_type"] = porch["type"]
+        changes.append(f"porch: type={porch['type']}")
+    return changes
+
+
 ALL_PROMOTERS = [promote_roof, promote_floor_heights, promote_windows,
                  promote_facade, promote_decorative, promote_storefront,
-                 promote_depth, promote_doors]
+                 promote_depth, promote_doors, promote_party_walls,
+                 promote_bay_window, promote_chimney, promote_porch]
 
 
 # ── Pipeline commands ────────────────────────────────────────────────────
 
-def cmd_merge(batch_files, do_promote=False):
+def cmd_merge(batch_files, do_promote=False, dry_run=False):
     """Merge one or more batch JSON files into param files."""
     all_entries = []
     for bf in batch_files:
@@ -431,7 +605,7 @@ def cmd_merge(batch_files, do_promote=False):
         if not path.exists():
             print(f"[WARN] Batch file not found: {bf}")
             continue
-        with open(path) as f:
+        with open(path, encoding="utf-8") as f:
             data = json.load(f)
         if isinstance(data, list):
             all_entries.extend(data)
@@ -441,10 +615,14 @@ def cmd_merge(batch_files, do_promote=False):
                     all_entries.extend(v)
                     break
     print(f"Loaded {len(all_entries)} entries from {len(batch_files)} batch file(s)")
+    if dry_run:
+        print("[DRY RUN] No files will be modified.")
 
     merged = 0
+    updated = 0
     promoted = 0
     skipped = 0
+    errors = 0
     not_found = []
     total_changes = 0
 
@@ -468,8 +646,11 @@ def cmd_merge(batch_files, do_promote=False):
                 skipped += 1
                 continue
 
-            param_data = merge_deep_into_param(param_data, entry)
-            merged += 1
+            param_data, is_new = merge_deep_into_param(param_data, entry)
+            if is_new:
+                merged += 1
+            else:
+                updated += 1
 
             if do_promote:
                 deep = param_data["deep_facade_analysis"]
@@ -486,34 +667,42 @@ def cmd_merge(batch_files, do_promote=False):
                     promoted += 1
                     total_changes += len(changes)
 
-            with open(param_file, "w", encoding="utf-8") as f:
-                json.dump(param_data, f, indent=2, ensure_ascii=False)
+            if not dry_run:
+                _atomic_write_json(param_file, param_data)
 
             n_ch = len(param_data.get("_meta", {}).get("geometry_changes", []))
-            print(f"  + {addr} <- {entry.get('filename', '?')} ({n_ch} changes)")
+            tag = "NEW" if is_new else "UPD"
+            print(f"  + [{tag}] {addr} <- {entry.get('filename', '?')} ({n_ch} changes)")
 
+        except (json.JSONDecodeError, KeyError, TypeError) as e:
+            errors += 1
+            print(f"  X {addr}: {type(e).__name__}: {e}")
         except Exception as e:
+            errors += 1
             print(f"  X {addr}: {e}")
+            traceback.print_exc()
 
     print(f"\n{'='*60}")
-    print(f"MERGE {'+ PROMOTE ' if do_promote else ''}COMPLETE")
-    print(f"  Merged: {merged}")
+    prefix = "[DRY RUN] " if dry_run else ""
+    print(f"{prefix}MERGE {'+ PROMOTE ' if do_promote else ''}COMPLETE")
+    print(f"  New merges: {merged}")
+    print(f"  Updated: {updated}")
     if do_promote:
         print(f"  Promoted: {promoted}  ({total_changes} field changes)")
     print(f"  Skipped: {skipped}")
+    print(f"  Errors: {errors}")
     print(f"  Not found: {len(not_found)}")
     if not_found:
         for a in sorted(set(not_found)):
             print(f"    - {a}")
-    return merged
+    return merged + updated
 
 
-def cmd_merge_street(street_key, do_promote=False):
+def cmd_merge_street(street_key, do_promote=False, dry_run=False):
     """Find and merge all batch files for a street."""
     pattern = f"*{street_key}*deep_batch*.json"
     batch_files = sorted(DOCS_DIR.glob(pattern))
     if not batch_files:
-        # Try alternative patterns
         for alt in [f"*{street_key}*batch*.json", f"*{street_key.replace(' ', '_')}*batch*.json"]:
             batch_files = sorted(DOCS_DIR.glob(alt))
             if batch_files:
@@ -524,15 +713,20 @@ def cmd_merge_street(street_key, do_promote=False):
     print(f"Found {len(batch_files)} batch files for '{street_key}':")
     for bf in batch_files:
         print(f"  {bf.name}")
-    return cmd_merge([str(bf) for bf in batch_files], do_promote=do_promote)
+    return cmd_merge([str(bf) for bf in batch_files], do_promote=do_promote, dry_run=dry_run)
 
 
-def cmd_promote():
+def cmd_promote(dry_run=False, force=False):
     """Promote all deep_facade_analysis sections to generator fields."""
     files = sorted(PARAMS_DIR.glob("*.json"))
     promoted = 0
+    already = 0
     total_changes = 0
+    if dry_run:
+        print("[DRY RUN] No files will be modified.")
     for fpath in files:
+        if fpath.name.startswith("_"):
+            continue
         with open(fpath, encoding="utf-8") as f:
             params = json.load(f)
         if params.get("skipped"):
@@ -540,8 +734,9 @@ def cmd_promote():
         deep = params.get("deep_facade_analysis")
         if not deep:
             continue
-        if params.get("_meta", {}).get("geometry_revised"):
-            continue  # already promoted
+        if params.get("_meta", {}).get("geometry_revised") and not force:
+            already += 1
+            continue
         changes = []
         for promoter in ALL_PROMOTERS:
             changes.extend(promoter(params, deep))
@@ -552,11 +747,14 @@ def cmd_promote():
             meta["geometry_revision_ts"] = datetime.now().strftime("%Y-%m-%d")
             meta["geometry_changes"] = changes
             params["_meta"] = meta
-            with open(fpath, "w", encoding="utf-8") as f:
-                json.dump(params, f, indent=2, ensure_ascii=False)
+            if not dry_run:
+                _atomic_write_json(fpath, params)
             promoted += 1
             total_changes += len(changes)
-    print(f"Promoted: {promoted} buildings, {total_changes} field changes")
+            print(f"  + {fpath.name}: {len(changes)} changes")
+    print(f"\nPromoted: {promoted} buildings, {total_changes} field changes")
+    if already:
+        print(f"Already promoted: {already} (use --force to re-promote)")
 
 
 def cmd_audit():
@@ -641,12 +839,16 @@ def main():
     p_merge = sub.add_parser("merge", help="Merge batch JSON files into params")
     p_merge.add_argument("files", nargs="+", help="Batch JSON file paths")
     p_merge.add_argument("--promote", action="store_true", help="Also promote to generator fields")
+    p_merge.add_argument("--dry-run", action="store_true", help="Show changes without writing")
 
     p_street = sub.add_parser("merge-street", help="Merge all batches for a street")
     p_street.add_argument("street", help="Street name key (e.g. 'baldwin', 'augusta')")
     p_street.add_argument("--promote", action="store_true", help="Also promote to generator fields")
+    p_street.add_argument("--dry-run", action="store_true", help="Show changes without writing")
 
     p_promote = sub.add_parser("promote", help="Promote all deep analysis to generator fields")
+    p_promote.add_argument("--dry-run", action="store_true", help="Show changes without writing")
+    p_promote.add_argument("--force", action="store_true", help="Re-promote already-promoted buildings")
 
     p_audit = sub.add_parser("audit", help="Show coverage by street")
 
@@ -656,11 +858,11 @@ def main():
     args = parser.parse_args()
 
     if args.command == "merge":
-        cmd_merge(args.files, do_promote=args.promote)
+        cmd_merge(args.files, do_promote=args.promote, dry_run=args.dry_run)
     elif args.command == "merge-street":
-        cmd_merge_street(args.street, do_promote=args.promote)
+        cmd_merge_street(args.street, do_promote=args.promote, dry_run=args.dry_run)
     elif args.command == "promote":
-        cmd_promote()
+        cmd_promote(dry_run=args.dry_run, force=args.force)
     elif args.command == "audit":
         cmd_audit()
     elif args.command == "report":
