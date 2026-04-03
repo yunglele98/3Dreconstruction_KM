@@ -9,6 +9,7 @@ Usage:
 """
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -20,7 +21,7 @@ except ImportError:
 
 from db_config import DB_CONFIG, get_connection
 
-ATTACHMENTS_DIR = Path("C:/Users/liam1/DOWNLOADS/MASTERLIST/DATA/attachments")
+ATTACHMENTS_DIR = Path(os.environ.get("FIELD_SURVEY_ATTACHMENTS_DIR", "data/field_survey/attachments"))
 
 # Attachment subfolder → DB table + the GeoJSON OBJECTID field name
 LAYER_MAP = {

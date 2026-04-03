@@ -575,6 +575,20 @@
     "text_count": 39
   },
   "photo_observations": {
-    "photo": "PXL_20260318_224055927.jpg"
+    "photo": "PXL_20260318_224055927.jpg",
+    "facade_colour_observed": "mixed (painted brick, stone veneer)",
+    "facade_material_observed": "mixed (painted brick, stone veneer)",
+    "facade_condition_notes": "Left building: stone veneer in good shape, painted brick above is adequate. Right building (Jerk Spot): brown brick intact, commercial fitout maintained. Dormers/roof visible behind both buildings. Tree partially obscures left building.",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      3,
+      0
+    ],
+    "storeys_observed": 2.5,
+    "door_count": 2,
+    "roof_type_observed": "gable (hidden behind parapet/flat front)",
+    "has_storefront": true,
+    "chimneys": 0
   }
 }

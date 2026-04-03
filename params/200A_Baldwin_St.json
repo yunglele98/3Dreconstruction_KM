@@ -412,7 +412,20 @@
   "eave_overhang_mm": 100,
   "foundation_height_m": 0.15,
   "photo_observations": {
-    "photo": "IMG_20260318_182118426_HDR.jpg"
+    "photo": "IMG_20260318_182118426_HDR.jpg",
+    "facade_colour_observed": "brick",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Ground floor recently clad in modern grey panels. Upper brick in good condition, original. Satellite dish on facade. Corner building in active commercial use. Some graffiti on adjacent walls but the building itself is well-maintained.",
+    "condition": "good",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "storeys_observed": 2,
+    "door_count": 1,
+    "roof_type_observed": "flat",
+    "has_storefront": true,
+    "chimneys": 0
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

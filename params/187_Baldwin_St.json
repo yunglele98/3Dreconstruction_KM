@@ -572,7 +572,21 @@
     "bay_window_projection_m_est": 0.42
   },
   "photo_observations": {
-    "photo": "PXL_20260318_222909365.jpg"
+    "photo": "PXL_20260318_222909365.jpg",
+    "facade_colour_observed": "mixed (stucco upper, cladding storefront)",
+    "facade_material_observed": "mixed (stucco upper, cladding storefront)",
+    "facade_condition_notes": null,
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      0,
+      1
+    ],
+    "storeys_observed": 2.5,
+    "door_count": 1,
+    "roof_type_observed": "gable (front-facing)",
+    "has_storefront": true,
+    "chimneys": 0
   },
   "inferred_setback_m": 0.0
 }

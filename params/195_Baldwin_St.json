@@ -477,6 +477,19 @@
     "eave_overhang_mm_est": 800
   },
   "photo_observations": {
-    "photo": "PXL_20260318_222309452.jpg"
+    "photo": "PXL_20260318_222309452.jpg",
+    "facade_colour_observed": "painted brick",
+    "facade_material_observed": "painted brick",
+    "facade_condition_notes": "Side angle confirms heavy sticker/graffiti coverage. Upper painted brick is peeling in places. Flat roof edge visible with minor deterioration. Neighbouring black-clad Rumble building visible to right.",
+    "condition": "fair",
+    "windows_per_floor": [
+      2,
+      2
+    ],
+    "storeys_observed": 2,
+    "door_count": 1,
+    "roof_type_observed": "flat",
+    "has_storefront": true,
+    "chimneys": 0
   }
 }

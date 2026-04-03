@@ -545,7 +545,21 @@
     "bay_window_projection_m_est": 1.0
   },
   "photo_observations": {
-    "photo": "PXL_20260318_223413574.jpg"
+    "photo": "PXL_20260318_223413574.jpg",
+    "facade_colour_observed": "mixed (brick, painted siding, board-and-batten)",
+    "facade_material_observed": "mixed (brick, painted siding, board-and-batten)",
+    "facade_condition_notes": "Center building is a colourful painted renovation, reasonable condition. Flanking Victorian buildings show their age. Overall streetscape character is bohemian/eclectic Kensington Market style.",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      1,
+      0
+    ],
+    "storeys_observed": 2.5,
+    "door_count": 1,
+    "roof_type_observed": "gable",
+    "has_storefront": true,
+    "chimneys": 0
   },
   "inferred_setback_m": 0.0
 }

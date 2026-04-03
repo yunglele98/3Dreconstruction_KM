@@ -467,6 +467,19 @@
     "eave_overhang_mm_est": 800
   },
   "photo_observations": {
-    "photo": "PXL_20260318_222737568.jpg"
+    "photo": "PXL_20260318_222737568.jpg",
+    "facade_colour_observed": "brick",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Upper brick facade in solid condition. Green railing/balcony at roof level with vegetation. Mural on party wall well-executed. Grille suggests nighttime security concern. Bicycle parked out front. Overall well-maintained.",
+    "condition": "good",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "storeys_observed": 2,
+    "door_count": 1,
+    "roof_type_observed": "flat",
+    "has_storefront": true,
+    "chimneys": 0
   }
 }

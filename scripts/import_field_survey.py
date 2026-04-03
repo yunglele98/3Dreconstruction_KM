@@ -11,6 +11,7 @@ Usage:
 
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -24,7 +25,7 @@ except ImportError:
 
 from db_config import DB_CONFIG, get_connection
 
-DATA_DIR = Path("C:/Users/liam1/DOWNLOADS/MASTERLIST/DATA")
+DATA_DIR = Path(os.environ.get("FIELD_SURVEY_DATA_DIR", "data/field_survey"))
 
 # Field survey layers to import (filename → table name)
 LAYERS = {
@@ -125,11 +126,12 @@ def import_layer(conn, geojson_path: Path, table_name: str, dry_run: bool = Fals
         renamed_columns.append(c)
     columns = renamed_columns
 
+    nl = '\n'
     create_sql = f"""
 DROP TABLE IF EXISTS {table_name} CASCADE;
 CREATE TABLE {table_name} (
     id serial PRIMARY KEY,
-{',\n'.join(columns)},
+{f',{nl}'.join(columns)},
     geom geometry({geom_type}, 4326)
 );
 CREATE INDEX idx_{table_name}_geom ON {table_name} USING gist (geom);
@@ -176,7 +178,12 @@ CREATE INDEX idx_{table_name}_geom ON {table_name} USING gist (geom);
 def main():
     parser = argparse.ArgumentParser(description="Import field survey GeoJSON to PostGIS")
     parser.add_argument("--dry-run", action="store_true", help="Preview without importing")
+    parser.add_argument("--data-dir", type=Path, default=None, help="Path to field survey GeoJSON data directory")
     args = parser.parse_args()
+
+    global DATA_DIR
+    if args.data_dir:
+        DATA_DIR = args.data_dir
 
     conn = get_connection()
 

@@ -528,6 +528,18 @@
     "eave_overhang_mm_est": 800
   },
   "photo_observations": {
-    "photo": "PXL_20260318_223043101.jpg"
+    "photo": "PXL_20260318_223043101.jpg",
+    "facade_colour_observed": "metal/wood (garage doors)",
+    "facade_material_observed": "metal/wood (garage doors)",
+    "facade_condition_notes": "Simple single-storey garage structure. Metal doors in functional condition. Extensive graffiti murals (artistic quality, appears intentional/sanctioned). Blue-green painted header beam showing some wear. Ice/icicles visible on header suggesting water drainage issue.",
+    "condition": "fair",
+    "windows_per_floor": [
+      0
+    ],
+    "storeys_observed": 1,
+    "door_count": 2,
+    "roof_type_observed": "flat",
+    "has_storefront": true,
+    "chimneys": 0
   }
 }

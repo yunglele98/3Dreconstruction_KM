@@ -564,6 +564,19 @@
     "eave_overhang_mm_est": 800
   },
   "photo_observations": {
-    "photo": "PXL_20260318_222801073.jpg"
+    "photo": "PXL_20260318_222801073.jpg",
+    "facade_colour_observed": "stucco over brick",
+    "facade_material_observed": "stucco over brick",
+    "facade_condition_notes": "Upper stucco somewhat weathered. Green tile cladding intact but dated. Art Deco moulding detail survives. Roof railing with plants. Murals on flanking panels in reasonable condition. Security grille fully closed.",
+    "condition": "fair",
+    "windows_per_floor": [
+      0,
+      2
+    ],
+    "storeys_observed": 2,
+    "door_count": 1,
+    "roof_type_observed": "flat with low parapet",
+    "has_storefront": true,
+    "chimneys": 0
   }
 }

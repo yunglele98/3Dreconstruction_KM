@@ -530,7 +530,20 @@
     "total_facade_detections": 0
   },
   "photo_observations": {
-    "photo": "IMG_20260315_154911815_HDR.jpg"
+    "photo": "IMG_20260315_154911815_HDR.jpg",
+    "facade_colour_observed": "brick",
+    "facade_material_observed": "brick",
+    "facade_condition_notes": "Upper brick in good condition, original mortar intact. Ground floor recently fitted out with black cladding and striped awning. Clean and well-maintained commercial unit. Fire hydrant at sidewalk.",
+    "condition": "good",
+    "windows_per_floor": [
+      1,
+      2
+    ],
+    "storeys_observed": 2,
+    "door_count": 1,
+    "roof_type_observed": "flat",
+    "has_storefront": true,
+    "chimneys": 0
   },
   "inferred_setback_m": 0.0
 }
