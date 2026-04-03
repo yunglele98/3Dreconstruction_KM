@@ -24,6 +24,9 @@ COLMAP_DIR = REPO_ROOT / "point_clouds" / "colmap"
 OUTPUT_DIR = REPO_ROOT / "splats"
 
 
+DEPTH_DIR = REPO_ROOT / "depth_maps"
+
+
 def check_gsplat():
     """Check if gsplat is available."""
     try:
@@ -33,7 +36,52 @@ def check_gsplat():
         return False
 
 
-def train_single(workspace, output_dir, iterations=7000):
+def find_depth_priors(workspace: Path) -> list[Path]:
+    """Find Depth Anything v2 depth maps for this building's images."""
+    images_dir = workspace / "images"
+    if not images_dir.exists():
+        return []
+
+    priors = []
+    for img in images_dir.iterdir():
+        if img.suffix.lower() in (".jpg", ".jpeg", ".png"):
+            depth_npy = DEPTH_DIR / f"{img.stem}_depth.npy"
+            if depth_npy.exists():
+                priors.append(depth_npy)
+    return priors
+
+
+def validate_splat_output(output_dir: Path) -> dict:
+    """Validate a trained Gaussian splat output.
+
+    Checks for expected output files and basic quality metrics.
+    """
+    result = {"valid": False, "files": []}
+
+    # Check for common output patterns from gsplat / nerfstudio
+    for pattern in ["*.ply", "*.splat", "point_cloud.ply", "splat.ply",
+                    "config.yml", "transforms.json"]:
+        found = list(output_dir.rglob(pattern))
+        result["files"].extend([str(f.relative_to(output_dir)) for f in found])
+
+    if result["files"]:
+        result["valid"] = True
+
+    # Check PLY file size as quality proxy
+    plys = list(output_dir.rglob("*.ply"))
+    if plys:
+        largest = max(plys, key=lambda p: p.stat().st_size)
+        size_mb = largest.stat().st_size / 1024 / 1024
+        result["largest_ply_mb"] = round(size_mb, 2)
+        # Very small PLY = probably failed
+        if size_mb < 0.1:
+            result["quality_warning"] = "PLY file suspiciously small"
+            result["valid"] = False
+
+    return result
+
+
+def train_single(workspace, output_dir, iterations=7000, use_depth_priors=True):
     """Train Gaussian splats for a single building."""
     sparse_dir = workspace / "sparse"
     if not sparse_dir.exists():
@@ -55,38 +103,53 @@ def train_single(workspace, output_dir, iterations=7000):
     output_dir.mkdir(parents=True, exist_ok=True)
     slug = workspace.name
 
+    # Check for depth priors
+    depth_priors = find_depth_priors(workspace) if use_depth_priors else []
+    has_depth = len(depth_priors) > 0
+
     # Try gsplat Python API
     if check_gsplat():
         try:
-            # gsplat training uses COLMAP format directly
             cmd = [
                 sys.executable, "-m", "gsplat", "train",
                 "--data_dir", str(workspace),
                 "--result_dir", str(output_dir / slug),
                 "--iterations", str(iterations),
             ]
+            # Add depth supervision if available
+            if has_depth:
+                depth_dir = workspace / "depth_priors"
+                depth_dir.mkdir(exist_ok=True)
+                for dp in depth_priors:
+                    shutil.copy2(dp, depth_dir / dp.name)
+                cmd.extend(["--depth_loss", "True"])
+
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
             if result.returncode == 0:
+                # Validate output
+                validation = validate_splat_output(output_dir / slug)
                 return True, str(output_dir / slug)
-        except Exception as e:
+        except Exception:
             pass
 
     # Fallback: write a training script for manual execution
     script = output_dir / slug / "train.py"
     script.parent.mkdir(parents=True, exist_ok=True)
+    depth_flag = '\n    "--depth_loss", "True",' if has_depth else ""
     script.write_text(f"""#!/usr/bin/env python3
 # Auto-generated Gaussian splatting training script
 # Run on GPU: python {script.name}
+# Depth priors: {'yes' if has_depth else 'no'} ({len(depth_priors)} maps)
 import subprocess, sys
 subprocess.run([
     sys.executable, "-m", "gsplat", "train",
     "--data_dir", "{workspace}",
     "--result_dir", "{output_dir / slug}",
-    "--iterations", "{iterations}",
+    "--iterations", "{iterations}",{depth_flag}
 ], check=True)
 """, encoding="utf-8")
 
-    return True, f"Training script written: {script}"
+    return True, f"Training script written: {script} (depth_priors={has_depth})"
 
 
 def prepare_cloud_session(colmap_dir, output_dir, limit=20):
