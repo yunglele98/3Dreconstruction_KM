@@ -240,7 +240,8 @@
     "storefront_enriched": "2026-03-30T06:33:20.741498Z",
     "fusion_applied": [
       "segmentation",
-      "signage"
+      "signage",
+      "depth"
     ]
   },
   "doors_detail": [
@@ -509,5 +510,21 @@
     ],
     "matches_existing": false,
     "text_count": 36
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.662,
+    "facade_depth_std": 0.0618,
+    "foundation_offset": 0.0792,
+    "roof_offset": -0.2032,
+    "bay_left_offset": 0.0123,
+    "bay_right_offset": 0.0224,
+    "facade_planarity": 0.691,
+    "bay_window_detected": false,
+    "setback_relative": 0.0022
+  },
+  "depth_notes": {
+    "setback_m_est": 0.02,
+    "foundation_height_m_est": 0.67,
+    "eave_overhang_mm_est": 800
   }
 }

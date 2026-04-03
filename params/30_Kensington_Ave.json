@@ -428,10 +428,7 @@
     "window_count": 0,
     "door_count": 0,
     "element_counts": {},
-    "occlusion": {
-      "persons": 0,
-      "vehicles": 0
-    },
+    "occlusion": {},
     "total_facade_detections": 0
   }
 }

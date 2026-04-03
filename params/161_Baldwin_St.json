@@ -254,7 +254,8 @@
     ],
     "fusion_applied": [
       "segmentation",
-      "signage"
+      "signage",
+      "depth"
     ]
   },
   "storefront": {
@@ -521,5 +522,22 @@
     ],
     "matches_existing": false,
     "text_count": 40
+  },
+  "depth_analysis": {
+    "facade_depth_mean": 0.3965,
+    "facade_depth_std": 0.1345,
+    "foundation_offset": 0.3364,
+    "roof_offset": -0.0464,
+    "bay_left_offset": 0.1365,
+    "bay_right_offset": -0.2202,
+    "facade_planarity": 0.327,
+    "bay_window_detected": true,
+    "setback_relative": -0.0328
+  },
+  "depth_notes": {
+    "setback_m_est": 0,
+    "foundation_height_m_est": 1.2,
+    "eave_overhang_mm_est": 241.0,
+    "bay_window_projection_m_est": 1.0
   }
 }

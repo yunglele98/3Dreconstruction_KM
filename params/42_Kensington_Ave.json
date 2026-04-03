@@ -225,7 +225,8 @@
       "door_count_promoted"
     ],
     "fusion_applied": [
-      "depth"
+      "depth",
+      "segmentation"
     ]
   },
   "bay_window": {
@@ -598,5 +599,12 @@
     "foundation_height_m_est": 1.2,
     "eave_overhang_mm_est": 800,
     "bay_window_projection_m_est": 0.39
+  },
+  "segmentation_analysis": {
+    "window_count": 0,
+    "door_count": 0,
+    "element_counts": {},
+    "occlusion": {},
+    "total_facade_detections": 0
   }
 }

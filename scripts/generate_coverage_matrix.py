@@ -1,190 +1,77 @@
 #!/usr/bin/env python3
-"""Generate per-building feature coverage matrix for active params files."""
+"""Generate pipeline coverage matrix — which buildings have which outputs.
 
-from __future__ import annotations
+Scans params, depth_maps, segmentation, signage, exports, renders, blends
+and produces a per-building coverage JSON + summary stats.
 
-import argparse
-import csv
-import json
+Usage:
+    python scripts/generate_coverage_matrix.py
+    python scripts/generate_coverage_matrix.py --output outputs/coverage_matrix.json
+"""
+import json, argparse, logging
 from datetime import datetime
 from pathlib import Path
-from typing import Any
 
+logger = logging.getLogger(__name__)
+REPO = Path(__file__).parent.parent
 
-ROOT = Path(__file__).resolve().parent.parent
-PARAMS_DIR = ROOT / "params"
-DEFAULT_CSV = ROOT / "outputs" / "coverage_matrix.csv"
-DEFAULT_SUMMARY_JSON = ROOT / "outputs" / "coverage_matrix_summary.json"
-DEFAULT_SUMMARY_MD = ROOT / "docs" / "reports" / "coverage_matrix_2026-03-28.md"
+def main():
+    parser = argparse.ArgumentParser(description="Generate coverage matrix")
+    parser.add_argument("--output", type=Path, default=REPO/"outputs"/"coverage_matrix.json")
+    args = parser.parse_args()
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-FIELDS = [
-    "floors",
-    "total_height_m",
-    "facade_width_m",
-    "facade_depth_m",
-    "facade_material",
-    "roof_type",
-    "roof_pitch_deg",
-    "floor_heights_m",
-    "windows_per_floor",
-    "windows_detail",
-    "doors_detail",
-    "door_count",
-    "has_storefront",
-    "storefront",
-    "porch",
-    "colour_palette",
-    "facade_detail",
-    "decorative_elements",
-    "deep_facade_analysis",
-    "photo_observations",
-    "hcd_data",
-    "site.lon",
-    "site.lat",
-    "volumes",
-    "condition",
-]
+    depth_dir = REPO/"depth_maps"; seg_dir = REPO/"segmentation"; sig_dir = REPO/"signage"
+    exports_dir = REPO/"outputs"/"exports"; renders_dir = REPO/"outputs"/"buildings_renders_v1"
+    full_dir = REPO/"outputs"/"full"
 
+    depth_stems = {f.stem for f in depth_dir.glob("*.npy")} if depth_dir.exists() else set()
+    seg_stems = {f.stem.replace("_elements","") for f in seg_dir.glob("*_elements.json")} if seg_dir.exists() else set()
+    sig_stems = {f.stem.replace("_text","") for f in sig_dir.glob("*_text.json")} if sig_dir.exists() else set()
 
-def is_present(value: Any) -> bool:
-    if value is None:
-        return False
-    if isinstance(value, str):
-        return value.strip() != ""
-    if isinstance(value, (list, tuple, set, dict)):
-        return len(value) > 0
-    return True
+    buildings = []
+    totals = {"active":0,"has_photo":0,"depth_map":0,"depth_fused":0,"seg_map":0,"seg_fused":0,
+              "signage":0,"sig_fused":0,"exported":0,"rendered":0,"blended":0}
 
+    for f in sorted((REPO/"params").glob("*.json")):
+        if f.name.startswith("_"): continue
+        d = json.load(open(f, encoding="utf-8"))
+        if d.get("skipped"): continue
+        totals["active"] += 1
+        addr = f.stem
+        meta = d.get("_meta",{})
+        fa = meta.get("fusion_applied",[])
+        photo = (d.get("deep_facade_analysis") or {}).get("source_photo") or (d.get("photo_observations") or {}).get("photo")
+        photo_stem = Path(photo).stem if photo else None
 
-def get_nested(params: dict[str, Any], key: str) -> Any:
-    if "." not in key:
-        return params.get(key)
-    current: Any = params
-    for part in key.split("."):
-        if not isinstance(current, dict):
-            return None
-        current = current.get(part)
-    return current
+        row = {"address": addr}
+        row["has_photo"] = bool(photo); totals["has_photo"] += row["has_photo"]
+        row["depth_map"] = photo_stem in depth_stems if photo_stem else False; totals["depth_map"] += row["depth_map"]
+        row["depth_fused"] = bool(d.get("depth_analysis")); totals["depth_fused"] += row["depth_fused"]
+        row["seg_map"] = photo_stem in seg_stems if photo_stem else False; totals["seg_map"] += row["seg_map"]
+        row["seg_fused"] = "segmentation" in fa; totals["seg_fused"] += row["seg_fused"]
+        row["signage"] = photo_stem in sig_stems if photo_stem else False; totals["signage"] += row["signage"]
+        row["sig_fused"] = "signage" in fa; totals["sig_fused"] += row["sig_fused"]
+        row["exported"] = (exports_dir/addr).is_dir(); totals["exported"] += row["exported"]
+        row["rendered"] = (renders_dir/f"{addr}.png").exists(); totals["rendered"] += row["rendered"]
+        row["blended"] = (full_dir/f"{addr}.blend").exists(); totals["blended"] += row["blended"]
+        buildings.append(row)
 
+    total = totals["active"]
+    output = {"generated_at": datetime.now().isoformat(), "total_active": total,
+              "summary": {k: {"count":v, "pct": round(v/total*100,1) if total else 0} for k,v in totals.items()},
+              "buildings": buildings}
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate params feature coverage matrix.")
-    parser.add_argument("--params-dir", default=str(PARAMS_DIR))
-    parser.add_argument("--output-csv", default=str(DEFAULT_CSV))
-    parser.add_argument("--output-summary", default=str(DEFAULT_SUMMARY_JSON))
-    parser.add_argument("--output-md", default=str(DEFAULT_SUMMARY_MD))
-    return parser.parse_args()
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(output, indent=2), encoding="utf-8")
 
-
-def main() -> int:
-    args = parse_args()
-    params_dir = Path(args.params_dir).resolve()
-    output_csv = Path(args.output_csv).resolve()
-    output_summary = Path(args.output_summary).resolve()
-    output_md = Path(args.output_md).resolve()
-
-    output_csv.parent.mkdir(parents=True, exist_ok=True)
-    output_summary.parent.mkdir(parents=True, exist_ok=True)
-    output_md.parent.mkdir(parents=True, exist_ok=True)
-
-    rows: list[dict[str, Any]] = []
-    for path in sorted(params_dir.glob("*.json")):
-        if path.name.startswith("_"):
-            continue
-        try:
-            data = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            continue
-        if data.get("skipped"):
-            continue
-
-        row: dict[str, Any] = {
-            "file": path.name,
-            "building_name": data.get("building_name") or path.stem,
-        }
-        present_count = 0
-        for field in FIELDS:
-            present = is_present(get_nested(data, field))
-            row[field] = 1 if present else 0
-            if present:
-                present_count += 1
-        row["present_count"] = present_count
-        row["coverage_pct"] = round((present_count / len(FIELDS)) * 100, 2)
-        rows.append(row)
-
-    with output_csv.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["file", "building_name", *FIELDS, "present_count", "coverage_pct"])
-        writer.writeheader()
-        writer.writerows(rows)
-
-    field_totals = {field: 0 for field in FIELDS}
-    for row in rows:
-        for field in FIELDS:
-            field_totals[field] += int(row[field])
-
-    total_buildings = len(rows)
-    field_coverage_pct = {
-        field: round((field_totals[field] / total_buildings) * 100, 2) if total_buildings else 0.0
-        for field in FIELDS
-    }
-    avg_coverage = round(sum(row["coverage_pct"] for row in rows) / total_buildings, 2) if total_buildings else 0.0
-
-    summary = {
-        "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "params_dir": str(params_dir),
-        "total_buildings": total_buildings,
-        "fields": FIELDS,
-        "average_building_coverage_pct": avg_coverage,
-        "field_presence_count": field_totals,
-        "field_coverage_pct": field_coverage_pct,
-        "outputs": {"csv": str(output_csv), "summary_json": str(output_summary), "summary_md": str(output_md)},
-    }
-    output_summary.write_text(json.dumps(summary, indent=2), encoding="utf-8")
-
-    lowest_buildings = sorted(rows, key=lambda row: row["coverage_pct"])[:20]
-    lowest_fields = sorted(FIELDS, key=lambda field: field_coverage_pct[field])[:10]
-    md_lines = [
-        "# Coverage Matrix Report (2026-03-28)",
-        "",
-        f"- Generated: `{summary['generated_at']}`",
-        f"- Total active buildings: `{total_buildings}`",
-        f"- Average building coverage: `{avg_coverage}%`",
-        "",
-        "## Field Coverage",
-        "",
-        "| Field | Coverage % | Present Count |",
-        "|---|---:|---:|",
-    ]
-    for field in FIELDS:
-        md_lines.append(f"| `{field}` | {field_coverage_pct[field]} | {field_totals[field]} |")
-
-    md_lines.extend(
-        [
-            "",
-            "## Buildings With Lowest Coverage (Bottom 20)",
-            "",
-            "| Building | File | Coverage % | Present Fields |",
-            "|---|---|---:|---:|",
-        ]
-    )
-    for row in lowest_buildings:
-        md_lines.append(
-            f"| {row['building_name']} | `{row['file']}` | {row['coverage_pct']} | {row['present_count']}/{len(FIELDS)} |"
-        )
-
-    md_lines.extend(["", "## Fields With Lowest Coverage", ""])
-    for field in lowest_fields:
-        md_lines.append(f"- `{field}`: {field_coverage_pct[field]}% ({field_totals[field]}/{total_buildings})")
-
-    output_md.write_text("\n".join(md_lines) + "\n", encoding="utf-8")
-
-    print(f"[coverage] CSV: {output_csv}")
-    print(f"[coverage] Summary JSON: {output_summary}")
-    print(f"[coverage] Summary MD: {output_md}")
-    print(f"[coverage] Buildings: {total_buildings}")
-    print(f"[coverage] Avg coverage: {avg_coverage}%")
-    return 0
-
+    logger.info("Coverage Matrix (%d buildings):", total)
+    for k,v in totals.items():
+        if k == "active": continue
+        pct = v/total*100 if total else 0
+        bar = "#"*int(pct/5) + "."*(20-int(pct/5))
+        logger.info("  %-15s %5d / %d  [%s] %.1f%%", k, v, total, bar, pct)
+    logger.info("Saved: %s", args.output)
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

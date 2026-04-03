@@ -360,11 +360,8 @@
     "window_count": 0,
     "door_count": 0,
     "element_counts": {},
-    "occlusion": {
-      "persons": 0,
-      "vehicles": 3
-    },
-    "total_facade_detections": 3
+    "occlusion": {},
+    "total_facade_detections": 0
   },
   "_audit": {
     "photo_heavily_occluded": true

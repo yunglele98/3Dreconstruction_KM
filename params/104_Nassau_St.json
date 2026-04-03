@@ -38,7 +38,7 @@
     "typology": "",
     "construction_date": "1889-1903",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
@@ -51,15 +51,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way EB | 40 km/h | Sub-standard sidewalks | Mixed commercial-residential",
-    "morphological_zone": "Secondary Market Street \u2013 Mixed-Use",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Secondary Market Street – Mixed-Use",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 4,
@@ -78,7 +78,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 5,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 0
   },
   "_meta": {
@@ -161,15 +161,15 @@
     "colour_diversified": "2026-04-02T19:16:38.944231+00:00",
     "colour_diversification_changes": [
       {
-        "facade": "#B85A3A \u2192 #A75144",
-        "roof": "#5A5A5A \u2192 #575656",
-        "trim": "#E8E0D0 \u2192 #483828",
-        "accent": "#3A2A20 \u2192 #353E2D",
-        "mortar": "#B0A898 \u2192 #B9A88F"
+        "facade": "#B85A3A → #A75144",
+        "roof": "#5A5A5A → #575656",
+        "trim": "#E8E0D0 → #483828",
+        "accent": "#3A2A20 → #353E2D",
+        "mortar": "#B0A898 → #B9A88F"
       },
       {
-        "roof": "#5A5A5A \u2192 #444444",
-        "accent": "#3A2A20 \u2192 #2E3726"
+        "roof": "#5A5A5A → #444444",
+        "accent": "#3A2A20 → #2E3726"
       }
     ],
     "backfills": [
@@ -424,10 +424,7 @@
     "window_count": 0,
     "door_count": 0,
     "element_counts": {},
-    "occlusion": {
-      "persons": 0,
-      "vehicles": 0
-    },
+    "occlusion": {},
     "total_facade_detections": 0
   },
   "facade_material_front_right": "vertical siding"

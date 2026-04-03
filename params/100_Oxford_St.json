@@ -41,12 +41,12 @@
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
     "architectural_style": "Victorian Vernacular (Multi-Unit Conversion)",
-    "construction_period": "c. 1870\u20131889 (structure); post-1920 (conversion)",
+    "construction_period": "c. 1870–1889 (structure); post-1920 (conversion)",
     "construction_decade": 1880,
     "sub_area": "",
     "contributing": "Yes",
     "hcd_plan_index": 270,
-    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th",
+    "statement_of_contribution": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th",
     "building_features": [
       "original_windows",
       "bay_window"
@@ -57,15 +57,15 @@
   "context": {
     "building_type": "residential",
     "general_use": "Residential",
-    "land_use": "Residential \u2013 Multi-Unit",
+    "land_use": "Residential – Multi-Unit",
     "commercial_use": "",
     "business_name": "",
     "business_category": "",
     "zoning": "R",
     "is_vacant": false,
     "street_character": "One-way | Residential | Fine-grain Victorian rowhouses | Quiet",
-    "morphological_zone": "Residential Interior \u2013 Victorian Fabric",
-    "development_phase": "Phase 2: Victorian Residential Build-Out (1870\u20131900)"
+    "morphological_zone": "Residential Interior – Victorian Fabric",
+    "development_phase": "Phase 2: Victorian Residential Build-Out (1870–1900)"
   },
   "assessment": {
     "condition_rating": 3,
@@ -84,7 +84,7 @@
     "lot_width_ft": 17.0,
     "lot_depth_ft": 105.0,
     "dwelling_units": 1,
-    "residential_floors": "All floors (1\u20132)",
+    "residential_floors": "All floors (1–2)",
     "heritage_feature_count": 2
   },
   "_meta": {
@@ -184,10 +184,10 @@
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
-        "roof": "#5A5A5A \u2192 #61584F",
-        "trim": "#3A2A20 \u2192 #453021",
-        "accent": "#3A2A20 \u2192 #342C1D",
-        "mortar": "#B0A898 \u2192 #A99982"
+        "roof": "#5A5A5A → #61584F",
+        "trim": "#3A2A20 → #453021",
+        "accent": "#3A2A20 → #342C1D",
+        "mortar": "#B0A898 → #A99982"
       }
     ],
     "qa_final_fixes": [
@@ -397,7 +397,7 @@
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, bay window, cornice.",
-    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th.",
+    "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
     "secondary_material": "mixed (previously mixed)",
     "mortar_colour_hex": "#A99982"
   },
@@ -468,7 +468,7 @@
   },
   "street_setback_m": 3.0,
   "facade_description": "100 Oxford St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed in a red brick lower levels with dark blue shingle cladding at the upper dormer faces and taupe siding around the porch enclosure palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, bay window, cornice.",
-  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District\u2019s early residential development from the 1850s to th.",
+  "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
   "roof_material": "Slate shingles",
   "dormer": {
     "present": true,
@@ -580,10 +580,7 @@
     "window_count": 0,
     "door_count": 0,
     "element_counts": {},
-    "occlusion": {
-      "persons": 0,
-      "vehicles": 0
-    },
+    "occlusion": {},
     "total_facade_detections": 0
   },
   "secondary_material": "shingle_cladding",
