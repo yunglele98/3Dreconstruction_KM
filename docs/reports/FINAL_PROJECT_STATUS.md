@@ -1,18 +1,20 @@
 # Kensington Market Building Project – Final Status Report
 
-**Date:** 2026-03-29
-**Status:** Data pipeline complete, ready for Blender batch generation
+**Date:** 2026-04-03
+**Status:** Data pipeline complete, enrichment fused, ready for Blender batch generation
 
 ## Data Summary
 
-- **Active buildings:** 1,241
-- **Colour palettes:** 100% complete (1,241/1,241 with all 4 keys: facade, trim, roof, accent)
-- **Deep facade analysis:** 100% coverage (rich observations: roof pitch, brick colour, window detail, storefront type)
-- **Photo matching:** 98.4% (1,219/1,241 buildings matched to field photos)
-- **QA status:** 99.2% zero-issue (1,231/1,241), average score 99.9/100
-- **Multi-volume buildings:** 27 (fire stations, corner towers, residential wings)
-- **Storefronts:** 569 with detailed awnings, signage, security grilles
-- **Porches:** 88 with dimensions, era columns, step counts
+- **Active buildings:** ~1,062 (1,065 total param files, 12 skipped non-buildings)
+- **Colour palettes:** 1,058 buildings with all 4 keys (facade, trim, roof, accent)
+- **Deep facade analysis:** 1,050 buildings with 3D-reconstruction-grade observations
+- **Depth/segmentation fusion:** 1,035 buildings with fused depth + segmentation data
+- **HCD heritage data:** 1,059 buildings with HCD classification
+- **Storefronts:** 566 with detailed awnings, signage, security grilles
+- **Field photos:** 1,930 geotagged (March 2026)
+- **Scripts:** 404 Python scripts
+- **Test files:** 70 pytest files (~20,000 lines)
+- **Generator:** 2,931-line orchestrator + 11 modules (7,401 lines)
 
 ## Enrichment Pipeline – Complete
 
@@ -27,19 +29,19 @@ All eight enrichment scripts have been applied in order:
 7. **deep_facade_pipeline.py** – Promote photo analysis to param fields
 8. **diversify_colour_palettes.py** – Increase material variety (45 → 949 unique facades)
 
-**Result:** 1,241 param files at full spec, zero missing critical fields.
+**Result:** ~1,062 param files at full spec, zero missing critical fields.
 
 ## Generator Contract Audit
 
-- **audit_generator_contracts.py:** Verified all 36 create_* functions in generate_building.py
+- **audit_generator_contracts.py:** Verified all 36+ create_* functions in generate_building.py
 - **Result:** Zero warnings, zero breaking changes, all defensive checks in place
 - **Coverage:** Every param field referenced by generator has a provider script
 
 ## Testing Infrastructure
 
-- **Test suite:** 529 passing tests (was 229 at session start)
-- **Coverage:** Enrichment pipeline (6 modules), regen system, asset export, data enrichment, spatial analysis
-- **Command:** `pytest tests/` – 100% pass rate
+- **Test suite:** 70 test files (~20,000 lines of test code)
+- **Coverage:** Enrichment pipeline (8 modules), regen system, asset export, data enrichment, spatial analysis, visual audit, heritage, deep facade
+- **Command:** `pytest tests/ -q`
 
 ## Asset Export Pipeline
 
@@ -70,7 +72,7 @@ Eleven new scripts (4,777 lines) enable game-engine export:
 
 All remaining work requires Blender 3.x+ running locally:
 
-1. **Batch regeneration** (25 batches via `run_all.ps1`)
+1. **Batch regeneration** (~1,062 buildings via batch scripts)
 2. **FBX export + material baking**
 3. **LOD generation** (4 levels per building)
 4. **Collision mesh generation**
@@ -78,23 +80,28 @@ All remaining work requires Blender 3.x+ running locally:
 6. **Full scene export** (GLB + partitioned FBX by block/street)
 7. **Mesh optimization** (pymeshlab)
 8. **Export validation** (trimesh per-asset checks)
-9. **Photogrammetry on 3 candidate buildings** (validation reference)
+9. **Photogrammetry on candidate buildings** (validation reference)
+10. **Web platform deployment** (CesiumJS + Vite on Vercel)
 
 All scripts are production-ready and can be run unattended via PowerShell or bash launchers.
 
 ## Data Exports
 
-- **CSV:** 1,241 rows × 18 columns (addresses, heights, materials, typology, colours)
-- **GeoJSON:** 1,241 features with full property dict + footprints
+- **CSV:** ~1,062 rows × 18 columns (addresses, heights, materials, typology, colours)
+- **GeoJSON:** ~1,062 features with full property dict + footprints
 - **Street profiles:** 35 streets with block counts, avg heights, material palettes, heritage density
+- **Scenarios:** 5 ten-year planning scenarios with density/heritage/shadow analysis
 
 ## Project Readiness
 
-**Data pipeline:** ✓ Complete
-**Generator contracts:** ✓ Verified
-**QA pass:** ✓ 99.2% zero-issue
-**Tests:** ✓ 529/529 passing
+**Data pipeline:** ✓ Complete (~1,062 buildings enriched)
+**Generator contracts:** ✓ Verified (36+ create_* functions)
+**Fusion:** ✓ 1,035 buildings with depth + segmentation data
+**Heritage:** ✓ 1,059 buildings with HCD classification
+**Tests:** ✓ 70 test files (~20,000 lines)
 **Asset export:** ✓ Scripts ready (awaiting Blender)
+**Scenarios:** ✓ 5 planning scenarios with impact analysis
+**Web platform:** ✓ CesiumJS + Vite scaffold ready
 **Spatial analysis:** ✓ Adjacency + streetscape rhythm complete
 
-The project is at hand-off stage. All data enrichment, validation, and export preparation is done. Blender batch generation can proceed immediately on any machine with Blender 3.x+ installed.
+The project is at hand-off stage. All data enrichment, validation, and export preparation is done. Blender batch generation can proceed immediately on any machine with Blender 5.0+ installed.

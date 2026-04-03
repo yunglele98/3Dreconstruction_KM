@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-This project reconstructs ~1,241 historic buildings in Toronto's Kensington Market neighbourhood as detailed 3D models for heritage documentation and urban planning analysis. The pipeline combines parametric generation, photogrammetry, machine learning, and GIS data fusion to produce multi-format outputs (Blender, Unreal Engine, CityGML, 3D Tiles, web viewer).
+This project reconstructs ~1,064 historic buildings in Toronto's Kensington Market neighbourhood as detailed 3D models for heritage documentation and urban planning analysis. The pipeline combines parametric generation, photogrammetry, machine learning, and GIS data fusion to produce multi-format outputs (Blender, Unreal Engine, CityGML, 3D Tiles, web viewer).
 
 ## 2. Study Area
 
@@ -15,12 +15,12 @@ This project reconstructs ~1,241 historic buildings in Toronto's Kensington Mark
 
 ### 3.1 Primary Sources
 - **PostGIS database** (`kensington`): 1,075 building assessment records with LiDAR heights, lot dimensions, HCD classification
-- **Field photography:** 1,867 geotagged photos (March 2026, iPhone 15 Pro)
+- **Field photography:** 1,930 geotagged photos (March 2026, iPhone 15 Pro)
 - **HCD Plan Vol. 2:** Per-building heritage statements, construction dates, architectural features
 - **Toronto Open Data:** Building footprints (2D polygons), 3D massing models, road centerlines, street trees
 
 ### 3.2 Derived Sources
-- **Depth maps:** 1,879 monocular depth estimates (Depth Anything v2)
+- **Depth maps:** Monocular depth estimates (Depth Anything v2), fused into 1,035 building params
 - **Facade segmentation:** YOLOv11 + SAM2 instance segmentation
 - **Feature matching:** LightGlue + SuperPoint keypoints for photogrammetry
 
@@ -32,7 +32,7 @@ Each building is generated procedurally from a JSON parameter file containing:
 - Architectural features (from HCD plan + photo analysis)
 - Material specifications (brick colour, trim, roof from observation)
 
-The generator (`generate_building.py`, ~2,900-line orchestrator + 10 extracted modules totalling ~7,400 lines) executes 28 sequential `create_*` functions within Blender's Python environment, producing walls, windows, doors, roofs, decorative elements, and storefronts. Modules: materials, geometry, walls, windows, doors, roofs, decorative, storefront, structure, colours.
+The generator (`generate_building.py`, ~2,931-line orchestrator + 11 extracted modules totalling ~7,401 lines) executes 30+ sequential `create_*` functions within Blender's Python environment, producing walls, windows, doors, roofs, decorative elements, and storefronts. Modules: materials, geometry, walls, windows, doors, roofs, decorative, storefront, structure, colours.
 
 ### 4.2 Photogrammetric Reconstruction (When Available)
 Buildings with 3+ field photos from different angles undergo COLMAP sparse+dense reconstruction. The resulting mesh is retopologized (Instant Meshes), then combined with parametric details for unseen faces.
@@ -47,15 +47,17 @@ else:
 
 ## 5. Enrichment Pipeline
 
-Six sequential scripts enrich raw building parameters:
+Eight sequential scripts enrich raw building parameters:
 1. **translate_agent_params** — Converts flat agent output to structured data
 2. **enrich_skeletons** — Fills gaps from typology/era lookup tables
 3. **enrich_facade_descriptions** — Generates prose heritage descriptions
 4. **normalize_params_schema** — Standardizes field formats
 5. **patch_params_from_hcd** — Merges HCD Vol. 2 decorative features
 6. **infer_missing_params** — Final gap-fill for 7 remaining keys
+7. **deep_facade_pipeline** — Promote 3D-reconstruction-grade photo analysis to param fields
+8. **diversify_colour_palettes** — Increase material variety across the district
 
-Post-enrichment fusion scripts integrate depth maps, segmentation masks, LiDAR data, and photo observations.
+Post-enrichment fusion scripts integrate depth maps (1,035 buildings), segmentation masks (1,035 buildings), signage OCR, and photo observations into params.
 
 ## 6. Quality Assurance
 
@@ -70,7 +72,10 @@ Validates all parameter files against the expected schema, checking for:
 - Colour hex validity
 
 ### 6.3 Generator Contract Verification
-Ensures all 28 `create_*` functions in the generation chain produce valid Blender objects with correct naming prefixes for the join-by-prefix post-processing step.
+Ensures all 36 `create_*` functions in the generation chain produce valid Blender objects with correct naming prefixes for the join-by-prefix post-processing step.
+
+### 6.4 Automated Test Suite
+70 pytest test files (~20,000 lines) covering enrichment pipeline, generator contracts, asset export, spatial analysis, deep facade tooling, and Blender-adjacent utilities.
 
 ## 7. Urban Analysis
 
@@ -101,13 +106,13 @@ Each scenario includes density analysis, heritage impact assessment, and shadow 
 
 | Format | Use Case | Coverage |
 |--------|----------|----------|
-| Blender `.blend` | Source models | 1,241 buildings |
-| FBX | Unreal Engine import | 1,223 buildings + LODs + collision |
-| CityGML LOD2 | Heritage archives, GIS | 1,050 buildings |
-| 3D Tiles | Web viewer (CesiumJS) | 1,050 buildings |
-| GeoJSON | Web platform (MapLibre) | 1,231 footprints |
-| Datasmith XML | Unreal scene assembly | 1,223 actors + LOD groups |
-| Unity manifest | Unity import | 1,223 buildings |
+| Blender `.blend` | Source models | ~1,064 buildings |
+| FBX | Unreal Engine import | Batch export ready (Blender-dependent) |
+| CityGML LOD2 | Heritage archives, GIS | ~1,064 buildings |
+| 3D Tiles | Web viewer (CesiumJS) | ~1,064 building tiles |
+| GeoJSON | Web platform (MapLibre) | ~1,062 footprints |
+| Datasmith XML | Unreal scene assembly | ~1,064 actors + LOD groups |
+| Unity manifest | Unity import | ~1,064 buildings |
 | Heritage scores | Per-building significance | 374 HCD buildings scored |
 | Scenario overlays | 5 planning scenarios | density/heritage/shadow analysis |
 

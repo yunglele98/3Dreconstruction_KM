@@ -1,6 +1,6 @@
 # API Reference — Kensington Market 3D Pipeline
 
-All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
+404 Python scripts in the `scripts/` directory. Run with `python scripts/<path>`.
 
 ## Stage 0: ACQUIRE
 
@@ -8,6 +8,12 @@ All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
 |--------|-------------|----------|
 | `export_db_params.py` | Export building params from PostGIS | `--overwrite`, `--street`, `--address` |
 | `acquire/acquire_streetview.py` | Download Mapillary street view | `--source`, `--bbox` |
+| `acquire/acquire_ipad_scans.py` | Ingest iPad LiDAR scans | `--input`, `--output` |
+| `acquire/acquire_extract_elements.py` | Extract elements from LiDAR | `--input`, `--output` |
+| `acquire/acquire_open_data.py` | Download open data sources | `--sources` |
+| `acquire/build_asset_index.py` | Build asset library index | — |
+| `acquire/download_ambientcg.py` | Download AmbientCG PBR textures | — |
+| `acquire/download_polyhaven.py` | Download Poly Haven assets | — |
 
 ## Stage 1: SENSE
 
@@ -30,6 +36,8 @@ All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
 | `reconstruct/train_splats.py` | Gaussian splatting training | `--input`, `--batch`, `--prepare-cloud` |
 | `reconstruct/clip_block_mesh.py` | Clip block mesh per building | `--block-mesh`, `--footprints` |
 | `reconstruct/retopologize.py` | Instant Meshes quad remesh | `--input`, `--target-faces` |
+| `reconstruct/calibrate_defaults.py` | Calibrate element defaults | `--elements` |
+| `reconstruct/extract_elements.py` | Extract elements from meshes | `--meshes`, `--segmentation` |
 
 ## Stage 3: ENRICH
 
@@ -48,6 +56,14 @@ All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
 | `match_photos_to_params.py` | Match field photos to buildings | — |
 | `build_adjacency_graph.py` | Build spatial adjacency graph | — |
 | `analyze_streetscape_rhythm.py` | Analyze streetscape patterns | — |
+| `enrich/fuse_signage.py` | Fuse OCR signage results | `--signage`, `--params` |
+| `enrich/fuse_lidar.py` | Fuse LiDAR data | `--lidar`, `--params` |
+| `enrich/fuse_photogrammetry.py` | Fuse photogrammetric meshes | `--meshes`, `--params` |
+| `deep_facade_pipeline.py` | Deep facade analysis workflow | `merge`, `merge-street`, `promote`, `audit`, `report` |
+| `enrich_storefronts_advanced.py` | Advanced storefront enrichment | — |
+| `enrich_porch_dimensions.py` | Porch dimension inference | — |
+| `infer_setbacks.py` | Setback inference | — |
+| `consolidate_depth_notes.py` | Consolidate depth notes | — |
 
 ## Stage 4: GENERATE (Blender)
 
@@ -63,12 +79,16 @@ All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
 | `texture/extract_pbr.py` | Extract normal/AO/roughness from photos | `--input`, `--method`, `--prepare-cloud` |
 | `texture/upscale_textures.py` | RealESRGAN 4x upscale | `--input`, `--output`, `--scale` |
 | `texture/project_textures.py` | Project photo onto mesh | `--mesh`, `--photo` |
+| `texture/match_textures.py` | Match facade colour to PBR textures | `--params`, `--assets` |
 
 ## Stage 6: OPTIMIZE (Blender)
 
 | Script | Description | Key Args |
 |--------|-------------|----------|
 | `generate_lods.py` | LOD generation | `--source-dir`, `--skip-existing` |
+| `generate_collision_mesh.py` | Collision mesh generation | `--source-dir` |
+| `optimize_meshes.py` | Pymeshlab mesh cleanup | `--source-dir` |
+| `validate_export_pipeline.py` | Trimesh QA on exports | `--source-dir` |
 
 ## Stage 7-8: ASSEMBLE + EXPORT
 
@@ -135,6 +155,29 @@ All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
 | `heritage/extract_hcd_features.py` | Extract features from HCD text | `--dry-run`, `--address` |
 | `heritage/heritage_score.py` | Heritage significance scoring | `--output` |
 | `heritage/generate_heritage_report.py` | Per-street heritage reports | `--street`, `--output` |
+| `heritage/crossref_hcd_params.py` | Cross-reference HCD vs params | — |
+| `heritage/parse_hcd_pdf.py` | Parse HCD PDF document | — |
+| `heritage/deep_parse_update.py` | Deep parse HCD updates | — |
+
+## Phase 0: Visual Audit
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `visual_audit/run_full_audit.py` | Full render-vs-photo audit | `--limit` |
+| `visual_audit/run_audit.py` | Core audit runner | — |
+| `visual_audit/compare_render_to_photo.py` | SSIM comparison | — |
+| `visual_audit/pair_renders_to_photos.py` | Match renders to field photos | — |
+| `visual_audit/score_and_rank.py` | Score and rank buildings | — |
+| `visual_audit/element_gaps.py` | Detect missing elements | — |
+| `visual_audit/layer2_structural.py` | Structural comparison layer | — |
+| `visual_audit/layer4_gemini_api.py` | Gemini vision API comparison | — |
+| `visual_audit/merge_gemini_analysis.py` | Merge Gemini analysis results | — |
+| `visual_audit/apply_audit_fixes.py` | Auto-apply audit fixes | — |
+| `visual_audit/colmap_priority.py` | COLMAP priority queue | — |
+| `visual_audit/fusion.py` | Multi-layer fusion | — |
+| `visual_audit/generate_dashboard.py` | Generate audit dashboard | — |
+| `visual_audit/generate_grid_html.py` | Generate comparison grid | — |
+| `visual_audit/street_summary.py` | Per-street summary stats | — |
 
 ## ML Training
 
@@ -145,6 +188,9 @@ All scripts in the `scripts/` directory. Run with `python scripts/<path>`.
 | `train/train_yolo_facade.py` | Fine-tune YOLOv11 | `--data`, `--epochs`, `--model` |
 | `train/adapt_facades.py` | CMP Facade domain adaptation | `--cmp-dir`, `--method` |
 | `train/evaluate_model.py` | FiftyOne model evaluation | `--model`, `--launch` |
+| `train/bootstrap_annotations.py` | Bootstrap annotation data | — |
+| `train/generate_pseudo_labels.py` | Generate pseudo-labels for training | — |
+| `train/run_training_pipeline.py` | Full training pipeline runner | — |
 
 ## Cloud GPU
 

@@ -1,13 +1,13 @@
 # Unreal Engine 5 Import Guide — Kensington Market
 
-Complete import pipeline: 1,223 buildings + LODs + collision + 20 urban element categories + vegetation + Megascans materials.
+Complete import pipeline: ~1,064 buildings + LODs + collision + 20 urban element categories + vegetation + Megascans materials.
 
 ## Prerequisites
 
 - Unreal Engine 5.4+
 - Datasmith plugin enabled (Edit > Plugins > Datasmith Importer)
 - Megascans plugin / Quixel Bridge
-- 16 GB+ RAM recommended (scene is ~1,200 meshes)
+- 16 GB+ RAM recommended (scene is ~1,064 meshes)
 
 ## Step 1: Import Buildings via Datasmith
 
@@ -22,7 +22,7 @@ Select: outputs/exports/kensington_scene.udatasmith
 - Materials: Create
 - LODs: Import (the file includes LODGroup references)
 
-This imports all 1,223 buildings with LOD groups and collision meshes. Buildings are positioned using SRID 2952 coordinates converted to UE centimetres.
+This imports all ~1,064 buildings with LOD groups and collision meshes. Buildings are positioned using SRID 2952 coordinates converted to UE centimetres.
 
 **Manifests for reference:**
 - `outputs/exports/unreal_import_manifest.json` — per-building actor list
@@ -148,7 +148,7 @@ done
 
 ## Step 7: Collision & Physics
 
-All 1,223 buildings have `_collision.fbx` files (convex hull at 10% decimation). These are referenced in the Datasmith XML as `<CollisionMesh>` elements.
+All ~1,064 buildings have `_collision.fbx` files (convex hull at 10% decimation). These are referenced in the Datasmith XML as `<CollisionMesh>` elements.
 
 **In UE5:**
 - Collision meshes auto-import with Datasmith
@@ -162,7 +162,7 @@ Run the export validation:
 python scripts/validate_all_exports.py
 ```
 
-Expected: 7/7 checks pass (FBX, LODs, collision, CityGML, 3D Tiles, Datasmith, Unity).
+Expected: 7/7 checks pass (FBX, LODs, collision, CityGML, 3D Tiles, Datasmith, Unity). Note: export files are generated during the Blender batch stage.
 
 ## Coordinate System
 
@@ -178,6 +178,6 @@ Scene centre in SRID 2952: X=312672.94, Y=4834994.86
 
 - **Nanite**: Enable only on high-poly buildings (>5,000 verts). Most parametric buildings are under this threshold.
 - **Virtual Shadow Maps**: Enable for Lumen compatibility.
-- **World Partition**: Recommended for the full 1,200+ building scene.
+- **World Partition**: Recommended for the full ~1,064 building scene.
 - **Streaming**: Set streaming distance to 500m for urban walkthrough.
 - **LOD distances**: LOD0 (full), LOD1 at 50m, LOD2 at 100m, LOD3 (bbox) at 200m.

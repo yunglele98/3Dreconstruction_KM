@@ -2,7 +2,7 @@
 
 ## Goal
 
-Provide a stable operating model for 5-10 coding agents in parallel with low conflict and predictable handoffs.
+Provide a stable operating model for the 14-agent fleet (5x Claude Code + 4 Gemini/Codex + 4 Ollama + claude-research) in parallel with low conflict and predictable handoffs.
 
 ## Required Commands
 
@@ -43,10 +43,15 @@ Then open `http://127.0.0.1:8765`.
 
 ## Delegation Pattern
 
-1. `claude`: task decomposition, risk register, documentation synthesis.
+**Tier 1 (Claude Code, Opus 4.6 1M, Max 5x):** architect, reviewer, writer-1, writer-2, ops + claude-research (Claude.ai chat for design track).
+**Tier 2 (Gemini API + Codex CLI):** gemini-batch-1/2 (Flash, n8n-automated), gemini-vision (Pro), codex-cli (manual).
+**Tier 3 (Ollama, local):** qwen2.5-coder:7b (code), qwen2.5-coder:3b (validate), llava:7b (vision), mistral:7b (summarize).
+
+Task routing:
+1. `claude`: architectural decisions, task decomposition, risk register, documentation synthesis.
 2. `codex`: implementation and integration.
-3. `gemini`: research validation and source triangulation.
-4. `ollama`: local fast loops (tests, lint, render checks, smoke QA).
+3. `gemini`: volume data processing, research validation, source triangulation.
+4. `ollama`: local fast loops (tests, lint, render checks, smoke QA, boilerplate).
 
 ## Automated Tiered Dispatch
 

@@ -30,7 +30,7 @@ blender --background outputs/demos/bellevue_footprint_demo.blend --python script
 ```
 PostGIS (building_assessment + opendata.*)
   → scripts/export_gis_scene.py → outputs/gis_scene.json + params/_site_coordinates.json
-  → AI agents (Claude/Codex/Gemini) → params/*.json (1,253 building params)
+  → AI agents (Claude/Codex/Gemini) → params/*.json (~1,062 building params)
   → scripts/demo_footprint_based.py → outputs/demos/bellevue_footprint_demo.blend
   → scripts/render_demo.py → outputs/demos/renders/*.png
   → scripts/export_gltf.py → outputs/demos/web/bellevue_demo.glb + viewer.html
@@ -140,8 +140,8 @@ outputs/demos/
 | `opendata.pedestrian_network` | Pedestrian paths | 14 |
 | `public.building_assessment` | 149 columns per building | 1,075 |
 | `public.field_*` | Field survey (13 tables) | 566 |
-| `params/*.json` | AI photo analysis | 1,253 |
-| `PHOTOS KENSINGTON/` | Field photos (March 2026) | 1,867 |
+| `params/*.json` | AI photo analysis | ~1,062 |
+| `PHOTOS KENSINGTON/` | Field photos (March 2026) | 1,930 |
 
 ## Requirements
 

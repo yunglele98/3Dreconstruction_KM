@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
+This file provides guidance to AI coding agents (Claude Code, Codex, Gemini, Ollama) when working with code in this repository.
 
 ## Project Overview
 
@@ -84,15 +84,15 @@ PostGIS (building_assessment + opendata.*)
 
 ### Working data directories
 
-- `params/` — 2,048 JSON files (1,064 building params from DB export + agent-created + metadata + skipped). Files prefixed with `_` are metadata (`_site_coordinates.json`, `_analysis_summary.json`). Skipped non-building entries have `"skipped": true`.
-- `batches/` — 38 batch JSONs + 38 result JSONs. All batches processed (complete).
-- `scripts/` — 300+ Python scripts spanning the original param/generation pipeline plus QA, deep-facade, agent-ops, and Unreal/Unity export tooling.
-- `tests/` — formal pytest suite with 62 test files covering enrichment, generator helpers, QA, export pipelines, deep facade tooling, and several pure-Python Blender-adjacent utilities.
-- `generator_modules/` — shared helper modules factored out of the monolithic generator (currently includes colour utilities).
+- `params/` — ~1,065 JSON files (~1,062 active building params + metadata + skipped). Files prefixed with `_` are metadata (`_site_coordinates.json`, `_analysis_summary.json`). Skipped non-building entries have `"skipped": true`.
+- `batches/` — Batch JSONs + result JSONs. All batches processed (complete).
+- `scripts/` — 404 Python scripts spanning the original param/generation pipeline plus QA, deep-facade, agent-ops, visual audit, sense, reconstruct, planning, heritage, training, and Unreal/Unity export tooling.
+- `tests/` — formal pytest suite with 70 test files (~20,000 lines) covering enrichment, generator helpers, QA, export pipelines, deep facade tooling, spatial analysis, and several pure-Python Blender-adjacent utilities.
+- `generator_modules/` — 11 shared helper modules (7,401 lines) factored out of the monolithic generator: colours, materials, geometry, walls, windows, doors, roofs, decorative, storefront, structure.
 - `agent_ops/` — multi-agent backlog, active task cards, ownership locks, handoffs, and review artifacts used by the workflow runner.
 - `docs/` — agent prompts, runbooks, workflow docs, and design notes (`docs/AGENT_PROMPT.md`, `docs/AGENT_WORKFLOW_GUIDE.md`, `docs/PIPELINE_RUNBOOK.md`, `AGENTS.md`, `agent_prompts_description_cleanup.md`).
-- `outputs/` — rendered Blender files: `full/` (929 buildings), `batch_50/`, `batch_pilot/`, `demos/` (pilot + block scenes), `single/` (one-off renders). Also `gis_scene.json` (GIS site data).
-- `PHOTOS KENSINGTON/` — 1,867 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index (columns: `filename`, `address_or_location`, `source`). Has its own `AGENTS.md` describing photo review workflows.
+- `outputs/` — rendered Blender files: `full/`, `batch_50/`, `batch_pilot/`, `demos/` (pilot + block scenes), `single/` (one-off renders). Also `gis_scene.json` (GIS site data).
+- `PHOTOS KENSINGTON/` — 1,930 geotagged field photos (March 2026) + `csv/photo_address_index.csv` master index (columns: `filename`, `address_or_location`, `source`). Has its own `AGENTS.md` describing photo review workflows.
 - `archive/` — retired data and scripts: `legacy_analysis/`, `legacy_batches/`, `reference_photos/`, `params_pilot/`, `params_demo/`, `params_block_demo/`, `params_batch_test/`, `params_batch_mixed/`, `skip_originals/`, `geocode.json`, `pilot_buildings.json`, test output runs, legacy vision scripts.
 
 ### Active operating modes
@@ -217,7 +217,7 @@ Each building is a JSON file in `params/` (filename: `22_Lippincott_St.json`, sp
 
 ## Photo Analysis Rules (docs/AGENT_PROMPT.md)
 
-AI agents (Codex / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,867 photos). All 38 batches have been processed (results in `batches/batch_NNN_results.json`).
+AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,930 photos). All batches have been processed.
 
 - **NEVER overwrite:** `total_height_m`, `facade_width_m`, `facade_depth_m`, `site.*`, `city_data.*`, `hcd_data.*`
 - **ALWAYS update:** `facade_colour`, `windows_per_floor`, `window_type`, `window_arrangement`, `door_count`, `door_type`, `condition`, `roof_features`, `chimneys`, `porch_present`, `porch_type`, `balconies`, `balcony_type`, `cornice`, `bay_windows`, `ground_floor_arches`
@@ -226,11 +226,11 @@ AI agents (Codex / Codex / Gemini CLI) analyze March 2026 field photos and merge
 - Multiple photos per address: use the best facade photo, produce one update per unique address
 - Non-building photos (murals, lanes, signs) → `"skipped": true` with `skip_reason`
 
-**Field photos** (`PHOTOS KENSINGTON/`) contain 1,867 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
+**Field photos** (`PHOTOS KENSINGTON/`) contain 1,930 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
 
 ## Testing
 
-The repo now has a formal pytest suite in `tests/` in addition to Blender/manual validation.
+The repo has a formal pytest suite in `tests/` (70 test files, ~20,000 lines) in addition to Blender/manual validation.
 
 Validate by:
 1. Running targeted pytest first for touched areas, then `python -m pytest tests/ -q`
