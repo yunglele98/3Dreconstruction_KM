@@ -111,17 +111,19 @@ This marks it done, cleans up locks and ownership, and reports any tasks that ar
 
 | File | Purpose |
 |------|---------|
-| `generate_building.py` | Main Blender generator (~6,200 lines), runs inside Blender |
-| `scripts/batch_missing.py` | One-Blender-per-building batch generator |
+| `generate_building.py` | Main Blender generator (~2,931 lines), runs inside Blender |
+| `generator_modules/` | 11 extracted modules (7,401 lines): materials, geometry, walls, etc. |
 | `scripts/deep_facade_pipeline.py` | Deep facade analysis merge/promote/audit |
 | `scripts/export_db_params.py` | PostGIS → param JSON skeleton export |
 | `scripts/export_gis_scene.py` | GIS site model export |
-| `scripts/apply_textures.py` | Texture mapping from photo folders |
+| `scripts/visual_audit/run_full_audit.py` | Render vs photo comparison audit |
 | `scripts/qa_params_gate.py` | Pre-generation quality gate |
 | `scripts/audit_params_quality.py` | Param quality report |
-| `scripts/fix_params_quality.py` | Auto-fix common param issues |
-| `params/*.json` | Building parameter files (2,048 files) |
+| `scripts/audit_structural_consistency.py` | Structural consistency check |
+| `scripts/audit_generator_contracts.py` | Generator contract verification |
+| `params/*.json` | Building parameter files (~1,065 files) |
 | `params/_site_coordinates.json` | GIS positions for all buildings |
+| `tests/` | 70 pytest test files (~20,000 lines) |
 
 ## Rules
 

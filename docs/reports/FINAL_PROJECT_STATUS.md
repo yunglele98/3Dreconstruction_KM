@@ -68,6 +68,23 @@ Eleven new scripts (4,777 lines) enable game-engine export:
 - **City data:** Critical Nassau St sensor artifact fixed (49.2m → 12.0m)
 - **Final QA:** 1,231 buildings pass zero-issue threshold (avg 99.9/100)
 
+## V7 Pipeline Stage Progress
+
+| Stage | Name | Status | Notes |
+|-------|------|--------|-------|
+| 0 | ACQUIRE | Complete | 1,075 buildings from PostGIS, 1,930 field photos |
+| 1 | SENSE | Complete | 1,035 depth + segmentation fused into params |
+| 2 | RECONSTRUCT | Scripts ready | COLMAP, DUSt3R, retopology, splat training scripts |
+| 3 | ENRICH | Complete | 8-script enrichment + fusion + deep facade analysis |
+| 4 | GENERATE | Awaiting Blender | ~1,062 param files ready for batch generation |
+| 5 | TEXTURE | Scripts ready | PBR extraction, upscaling, projection scripts |
+| 6 | OPTIMIZE | Scripts ready | LOD, collision, mesh repair scripts |
+| 7 | ASSEMBLE | Scripts ready | 20 urban element import bundles for UE5 |
+| 8 | EXPORT | Scripts ready | CityGML, 3D Tiles, Potree, Datasmith, Unity |
+| 9 | VERIFY | Scripts ready | pytest (70 files), QA gate, visual regression |
+| 10 | MONITOR | Configured | n8n factory, Sentry, sprint progress tracker |
+| 11 | SCENARIOS | Complete | 5 scenarios with density/heritage/shadow analysis |
+
 ## What's Left (Local Machine Only)
 
 All remaining work requires Blender 3.x+ running locally:

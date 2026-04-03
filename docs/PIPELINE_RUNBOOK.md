@@ -17,14 +17,46 @@ python scripts/monitor/sprint_progress.py       # sprint progress vs targets
 python scripts/run_blender_buildings_workflows.py dashboard --once-json
 ```
 
+## Phase 0: VISUAL AUDIT (render vs photo comparison)
+
+Run before any pipeline stage to identify priority buildings for refinement.
+
+```bash
+# Full audit (~35 min, compares all renders against field photos)
+python scripts/visual_audit/run_full_audit.py
+
+# Quick test (20 buildings)
+python scripts/visual_audit/run_full_audit.py --limit 20
+
+# Generate comparison dashboard
+python scripts/visual_audit/generate_dashboard.py
+
+# COLMAP priority queue (buildings needing photogrammetry)
+python scripts/visual_audit/colmap_priority.py
+
+# Apply auto-fixes from audit findings
+python scripts/visual_audit/apply_audit_fixes.py
+```
+
 ## Stage 0: ACQUIRE
 
 ```bash
 # Export building params from PostGIS
 python scripts/export_db_params.py --overwrite
 
+# Single address
+python scripts/export_db_params.py --address "22 Lippincott St"
+
+# Single street
+python scripts/export_db_params.py --street "Augusta Ave"
+
 # Photo matching
 python scripts/match_photos_to_params.py
+
+# Asset library
+python scripts/acquire/build_asset_index.py
+python scripts/acquire/download_polyhaven.py
+python scripts/acquire/download_ambientcg.py
 ```
 
 ## Stage 1: SENSE (GPU)
@@ -101,11 +133,23 @@ python scripts/analyze_streetscape_rhythm.py
 ## Stage 4: GENERATE (Blender)
 
 ```bash
-# Single building
+# Single building test
 blender --background --python generate_building.py -- --params params/22_Lippincott_St.json
 
-# All buildings (batch)
+# Dry run (preview batch without generating)
+blender --background --python generate_building.py -- --params params/ --batch-individual --dry-run
+
+# Filter by street
+blender --background --python generate_building.py -- --params params/ --batch-individual --match "Augusta" --limit 10
+
+# All buildings (batch, skip already generated)
 blender --background --python generate_building.py -- --params params/ --batch-individual --skip-existing
+
+# All buildings with renders
+blender --background --python generate_building.py -- --params params/ --batch-individual --render --skip-existing
+
+# High-quality GPU Cycles render
+blender --background --python generate_building.py -- --params params/ --batch-individual --render --cycles
 ```
 
 ## Stage 5: EXPORT (Blender batch)
@@ -215,3 +259,46 @@ python -m pytest tests/ -q
 | Scenarios | `scenarios/*/` | 5 scenario overlays + impact analysis |
 | QA report | `outputs/qa_report.json` | parameter quality scores |
 | Deliverables | `outputs/deliverables/` | CSV, GeoJSON, street profiles |
+| Web platform | `web/` | CesiumJS + Vite (Vercel deploy) |
+| Visual audit | `outputs/visual_audit/` | Render vs photo comparison grid |
+
+## Web Platform Deployment
+
+```bash
+cd web && npm install && npm run build
+# Deploy via Vercel CLI:
+# vercel --prod
+```
+
+## Multi-Agent Orchestration
+
+```bash
+# Route backlog tasks to agents
+python scripts/run_blender_buildings_workflows.py route
+
+# Control plane: dispatch subtasks to Ollama/Gemini workers
+python scripts/run_blender_buildings_workflows.py control-plane
+
+# Watchdog: check for stalled tasks
+python scripts/run_blender_buildings_workflows.py watchdog --mode once
+
+# Dashboard: JSON snapshot of system state
+python scripts/run_blender_buildings_workflows.py dashboard --once-json
+
+# Full stack launch (PowerShell):
+# .\scripts\start_agent_ops.ps1 -StartControlLoop -StartOllamaRunner -StartGeminiRunner -OllamaAutoComplete
+```
+
+## Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| `psycopg2` import error | `pip install psycopg2-binary` |
+| Blender not found | Set `BLENDER_PATH` or use full path to `blender` executable |
+| GPU lock stuck | Delete `.gpu_lock` if no GPU job is running |
+| Param file missing fields | Re-run enrichment pipeline (Stage 3) in order |
+| Blender crashes on batch | Use `--skip-existing` to resume; check `batch.manifest.json` |
+| Photo not matched | Verify address in `PHOTOS KENSINGTON/csv/photo_address_index.csv` |
+| PostGIS connection refused | Ensure PostgreSQL 18 is running on `localhost:5432` |
+| Enrichment script fails | Scripts are idempotent — safe to re-run. Check `_meta` for provenance |
+| Wrong building count | Exclude `_`-prefixed metadata and `"skipped": true` files |

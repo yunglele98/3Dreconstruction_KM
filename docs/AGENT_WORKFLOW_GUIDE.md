@@ -89,3 +89,48 @@ Task routing:
 1. Review artifact required in `agent_ops/40_reviews/`.
 2. Findings-first format with severity + file references.
 3. Merge/release only after review result is `approve`.
+
+## Full Stack Launch
+
+### PowerShell (all components)
+
+```powershell
+.\scripts\start_agent_ops.ps1 -StartControlLoop -StartOllamaRunner -StartGeminiRunner -OllamaAutoComplete
+```
+
+This starts separate terminals for: dashboard, watchdog, control loop (routes + dispatches), Ollama runner, and Gemini runner.
+
+### Individual components
+
+```bash
+# Dashboard web UI
+python scripts/run_blender_buildings_workflows.py dashboard
+# Then open http://127.0.0.1:8765
+
+# Ollama task runner (continuous)
+python scripts/ollama_task_runner.py --loop --interval 60 --auto-complete
+
+# Gemini task runner (continuous)
+python scripts/gemini_task_runner.py --loop --interval 60 --auto-complete
+
+# Control plane with execution
+python scripts/run_blender_buildings_workflows.py control-plane --execute-ollama --execute-gemini
+```
+
+## Task Lifecycle
+
+```
+10_backlog → route → 20_active/<agent>/ → agent works → 30_handoffs/ → review → 40_reviews/ → close → 90_archive/
+```
+
+## Key Configuration Files
+
+| File | Purpose |
+|------|---------|
+| `agent_ops/state/control_plane.json` | Manager/worker agent IDs, dispatch keywords |
+| `agent_ops/coordination/ownership/*.json` | Per-task owner records |
+| `agent_ops/coordination/locks/*.json` | Write scope locks |
+| `agent_ops/coordination/signals/reassignments.log` | Reassignment history |
+| `agent_ops/templates/task/task_template.json` | Task card template |
+| `agent_ops/templates/handoff/handoff_template.md` | Handoff template |
+| `agent_ops/templates/review/review_template.md` | Review template |

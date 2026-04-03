@@ -197,3 +197,58 @@
 | Script | Description | Key Args |
 |--------|-------------|----------|
 | `cloud/prepare_session.py` | Package data for cloud GPU | `--type`, `--limit`, `--list` |
+
+## Orchestration
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `run_blender_buildings_workflows.py` | Main orchestration entry point | `route`, `control-plane`, `watchdog`, `dashboard` |
+| `agent_control_plane.py` | Dispatch subtasks to workers | `--execute-ollama`, `--execute-gemini` |
+| `agent_delegate_router.py` | Route tasks by skill match | — |
+| `agent_heartbeat_watchdog.py` | Monitor agent heartbeats | `--mode once/watch/ping`, `--stale-minutes` |
+| `agent_dashboard_server.py` | Web dashboard at :8765 | `--once-json` |
+| `agent_ops_state.py` | Agent ops state management | — |
+| `ollama_task_runner.py` | Auto-run Ollama subtasks | `--loop`, `--interval`, `--auto-complete` |
+| `gemini_task_runner.py` | Auto-run Gemini subtasks | `--loop`, `--interval`, `--auto-complete` |
+
+## Utility
+
+| Script | Description | Key Args |
+|--------|-------------|----------|
+| `fingerprint_params.py` | Hash param files for change detection | — |
+| `build_regen_batches.py` | Build regeneration batch lists | — |
+| `generate_coverage_matrix.py` | Show pipeline coverage per building | — |
+| `export_building_summary_csv.py` | Export summary CSV | — |
+| `export_geojson.py` | Export GeoJSON footprints | — |
+| `export_street_profile_json.py` | Export per-street profiles | — |
+| `writeback_to_db.py` | Push photo analysis to PostGIS | `--migrate` |
+| `deep_facade_pipeline.py` | Deep facade analysis workflow | `merge`, `merge-street`, `promote`, `audit`, `report` |
+| `rebuild_colour_palettes.py` | Rebuild colour palettes from params | — |
+| `diversify_colour_palettes.py` | Diversify similar facade palettes | — |
+| `ssim_compare.py` | SSIM image comparison utility | — |
+| `validate_all_exports.py` | 7-check export validation suite | — |
+
+## Unreal Urban Elements
+
+| Script | Description |
+|--------|-------------|
+| `build_unreal_tree_import_bundle.py` | Trees, canopy |
+| `build_unreal_street_furniture_import_bundle.py` | Benches, planters, bollards |
+| `build_unreal_sign_import_bundle.py` | Business/street signs |
+| `build_unreal_pole_import_bundle.py` | Light/utility poles |
+| `build_unreal_alley_import_bundle.py` | Alley geometry |
+| `build_unreal_alley_garage_import_bundle.py` | Rear garages |
+| `build_unreal_ground_import_bundle.py` | Sidewalks, roads |
+| `build_unreal_fence_gate_import_bundle.py` | Fences, gates |
+| `build_unreal_parking_import_bundle.py` | Parking, driveways |
+| `build_unreal_transit_stop_import_bundle.py` | TTC stops |
+| `build_unreal_intersection_import_bundle.py` | Crosswalks, signals |
+| `build_unreal_waste_import_bundle.py` | Bins, dumpsters |
+| `build_unreal_bikerack_import_bundle.py` | Bike racks |
+| `build_unreal_utility_import_bundle.py` | Hydrants, meters |
+| `build_unreal_park_furniture_import_bundle.py` | Park benches, tables |
+| `build_unreal_accessibility_import_bundle.py` | Ramps, tactile paving |
+| `build_unreal_vertical_hardscape_import_bundle.py` | Retaining walls |
+| `build_unreal_service_backlot_import_bundle.py` | Service areas |
+| `build_unreal_roadmark_decal_placements.py` | Lane lines, crossings |
+| `build_unreal_graffiti_texture_import_manifest.py` | Graffiti decals |
