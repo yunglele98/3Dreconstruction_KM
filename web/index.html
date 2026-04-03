@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kensington Market — Heritage Planning Platform</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0f0f1a; --panel: #161625; --card: #1c1c30;
+            --border: rgba(255,255,255,0.06); --text: #e8e8f0; --dim: rgba(255,255,255,0.4);
+            --accent: #4f8ef7; --green: #22c55e; --red: #ef4444; --orange: #f59e0b; --yellow: #eab308;
+        }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; height: 100vh; }
+
+        /* Layout: sidebar | map | panel */
+        .app { display: grid; grid-template-columns: 280px 1fr 380px; height: 100vh; }
+        .app.panel-closed { grid-template-columns: 280px 1fr 0; }
+
+        /* Left sidebar */
+        .sidebar { background: var(--panel); border-right: 1px solid var(--border); overflow-y: auto; padding: 16px; }
+        .sidebar h1 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+        .sidebar .subtitle { font-size: 11px; color: var(--dim); margin-bottom: 16px; }
+
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+        .stat { background: var(--card); border-radius: 8px; padding: 10px; }
+        .stat .value { font-size: 20px; font-weight: 700; }
+        .stat .label { font-size: 10px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .section-title { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 8px; }
+
+        /* Heritage bar chart */
+        .bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 12px; }
+        .bar-label { width: 80px; text-align: right; color: var(--dim); font-size: 11px; }
+        .bar { height: 16px; border-radius: 3px; min-width: 2px; transition: width 0.3s; }
+        .bar-value { font-size: 11px; color: var(--dim); width: 30px; }
+
+        /* Filters */
+        .filter-group { margin-bottom: 12px; }
+        .filter-group label { font-size: 11px; color: var(--dim); display: block; margin-bottom: 4px; }
+        .filter-group select, .filter-group input {
+            width: 100%; background: var(--card); border: 1px solid var(--border);
+            color: var(--text); padding: 6px 8px; border-radius: 6px; font-size: 12px;
+        }
+
+        /* Scenario buttons */
+        .scenario-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+        .pill {
+            padding: 4px 10px; border-radius: 12px; font-size: 11px; cursor: pointer;
+            border: 1px solid var(--border); background: transparent; color: var(--text);
+            transition: all 0.15s;
+        }
+        .pill:hover { background: rgba(255,255,255,0.05); }
+        .pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+        /* Map */
+        #map { width: 100%; height: 100%; }
+
+        /* Right panel */
+        .panel {
+            background: var(--panel); border-left: 1px solid var(--border);
+            overflow-y: auto; padding: 16px; transition: width 0.2s;
+        }
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .panel-header h2 { font-size: 15px; font-weight: 600; }
+        .panel-close { background: none; border: none; color: var(--dim); cursor: pointer; font-size: 18px; padding: 4px; }
+
+        /* Building card */
+        .building-header { margin-bottom: 12px; }
+        .building-header .address { font-size: 16px; font-weight: 600; }
+        .building-header .badges { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+        .badge { padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+        .badge-contributing { background: #14532d; color: #86efac; }
+        .badge-non-contributing { background: #450a0a; color: #fca5a5; }
+        .badge-era { background: #1e3a5f; color: #93c5fd; }
+        .badge-material { background: #3f3f00; color: #fef08a; }
+        .badge-condition-good { background: #14532d; color: #86efac; }
+        .badge-condition-fair { background: #3f3f00; color: #fef08a; }
+        .badge-condition-poor { background: #450a0a; color: #fca5a5; }
+
+        /* Images */
+        .image-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
+        .image-compare img { width: 100%; height: 140px; object-fit: cover; border-radius: 6px; background: var(--card); }
+        .image-compare .img-label { font-size: 10px; color: var(--dim); text-align: center; margin-top: 2px; }
+
+        /* Property table */
+        .prop-table { width: 100%; font-size: 12px; border-collapse: collapse; }
+        .prop-table td { padding: 4px 0; border-bottom: 1px solid var(--border); }
+        .prop-table td:first-child { color: var(--dim); width: 120px; }
+
+        /* Colour swatches */
+        .swatches { display: flex; gap: 8px; margin: 8px 0; }
+        .swatch { text-align: center; }
+        .swatch-circle { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--border); }
+        .swatch-label { font-size: 9px; color: var(--dim); margin-top: 2px; }
+
+        /* Decorative elements */
+        .decorative-list { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
+        .decorative-tag { padding: 2px 6px; background: var(--card); border-radius: 4px; font-size: 10px; color: var(--dim); }
+
+        /* Audit section */
+        .audit-score { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+        .audit-bar { flex: 1; height: 6px; background: var(--card); border-radius: 3px; overflow: hidden; }
+        .audit-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+        .audit-value { font-size: 13px; font-weight: 600; width: 40px; }
+        .audit-tier { padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+        .tier-critical { background: #7f1d1d; color: #fca5a5; }
+        .tier-high { background: #713f12; color: #fed7aa; }
+        .tier-medium { background: #3f3f00; color: #fef08a; }
+        .tier-low { background: #14532d; color: #86efac; }
+        .tier-acceptable { background: #1f2937; color: #9ca3af; }
+
+        /* Building list */
+        .building-list { list-style: none; }
+        .building-list-item {
+            padding: 8px; border-radius: 6px; cursor: pointer; margin-bottom: 2px;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 12px; transition: background 0.1s;
+        }
+        .building-list-item:hover { background: rgba(255,255,255,0.04); }
+        .building-list-item .addr { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+        /* Tab bar */
+        .tabs { display: flex; gap: 2px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+        .tab { padding: 8px 12px; font-size: 12px; cursor: pointer; color: var(--dim); border-bottom: 2px solid transparent; }
+        .tab:hover { color: var(--text); }
+        .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .app { grid-template-columns: 240px 1fr 320px; }
+        }
+        @media (max-width: 900px) {
+            .app { grid-template-columns: 1fr; }
+            .sidebar, .panel { position: fixed; z-index: 100; height: 100vh; }
+            .sidebar { left: 0; width: 280px; transform: translateX(-100%); }
+            .panel { right: 0; width: 340px; transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="app" id="app">
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <h1>Kensington Market</h1>
+            <div class="subtitle">Heritage Urban Planning Platform</div>
+
+            <!-- Stats -->
+            <div class="stat-grid">
+                <div class="stat"><div class="value" id="s-buildings">--</div><div class="label">Buildings</div></div>
+                <div class="stat"><div class="value" id="s-contributing">--</div><div class="label">Contributing</div></div>
+                <div class="stat"><div class="value" id="s-renders">--</div><div class="label">Renders</div></div>
+                <div class="stat"><div class="value" id="s-photos">--</div><div class="label">Photos</div></div>
+            </div>
+
+            <!-- Scenarios -->
+            <div class="section-title">Scenarios</div>
+            <div class="scenario-pills" id="scenario-pills">
+                <div class="pill active" data-scenario="baseline">Baseline 2026</div>
+                <div class="pill" data-scenario="heritage_first">Heritage First</div>
+                <div class="pill" data-scenario="gentle_density">Gentle Density</div>
+                <div class="pill" data-scenario="green_infra">Green Infra</div>
+                <div class="pill" data-scenario="mixed_use">Mixed-Use</div>
+                <div class="pill" data-scenario="mobility">Mobility</div>
+            </div>
+
+            <!-- Colour Mode -->
+            <div class="section-title">Map Colour</div>
+            <div class="filter-group">
+                <select id="colour-mode">
+                    <option value="material">Facade Material</option>
+                    <option value="heritage">Contributing Status</option>
+                    <option value="era">Construction Era</option>
+                    <option value="condition">Condition</option>
+                    <option value="audit">Audit Gap Score</option>
+                    <option value="roof">Roof Type</option>
+                </select>
+            </div>
+
+            <!-- Filters -->
+            <div class="section-title">Filters</div>
+            <div class="filter-group">
+                <label>Street</label>
+                <select id="filter-street"><option value="">All Streets</option></select>
+            </div>
+            <div class="filter-group">
+                <label>Search</label>
+                <input type="text" id="filter-search" placeholder="Address...">
+            </div>
+
+            <!-- Era Distribution -->
+            <div class="section-title">Construction Eras</div>
+            <div id="era-chart"></div>
+
+            <!-- Material Distribution -->
+            <div class="section-title">Facade Materials</div>
+            <div id="material-chart"></div>
+
+            <!-- Building List -->
+            <div class="section-title">Buildings <span id="building-count-label" style="opacity:0.4"></span></div>
+            <div id="building-list" style="max-height:300px;overflow-y:auto;"></div>
+        </div>
+
+        <!-- MAP -->
+        <div id="map"></div>
+        <button id="export-btn" style="position:fixed;top:10px;right:400px;background:rgba(20,20,40,0.9);border:1px solid rgba(255,255,255,0.1);color:#e8e8f0;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px;z-index:50;">Export PNG</button>
+
+        <!-- RIGHT PANEL -->
+        <div class="panel" id="panel">
+            <div class="panel-header">
+                <h2>Building Inspector</h2>
+                <button class="panel-close" id="panel-close">&times;</button>
+            </div>
+            <div id="panel-body">
+                <p style="color:var(--dim); font-size:13px;">Click a building on the map to inspect it.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="legend" style="position:fixed;bottom:20px;left:300px;background:rgba(10,10,30,0.92);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;z-index:50;min-width:160px;font-size:11px;">
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-bottom:6px;">Legend</div>
+        <div id="legend-items"></div>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
+</body>
+</html>
