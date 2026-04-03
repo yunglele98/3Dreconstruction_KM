@@ -4,13 +4,19 @@
   "description": "Run python -m pytest tests/ -q and fix all failures. Last full run was TASK-20260327-011. Enrichment and export changes since then may have introduced regressions. Fix failures in-place, do not skip tests.",
   "priority": "high",
   "estimate_points": 2,
-  "skills": ["python", "qa", "test"],
+  "skills": [
+    "python",
+    "qa",
+    "test"
+  ],
   "write_scope": [
     "tests/",
     "scripts/"
   ],
   "dependencies": [],
   "owner": null,
-  "status": "backlog",
-  "created_at": "2026-04-03T00:00:00Z"
+  "status": "done",
+  "created_at": "2026-04-03T00:00:00Z",
+  "completed_at": "2026-04-03T06:02:51.696848Z",
+  "completed_by": "claude-1"
 }

@@ -4,12 +4,18 @@
   "description": "Create scripts/sense/extract_depth.py using Depth Anything v2 to generate depth maps (.npy + viz .png) from field photos in PHOTOS KENSINGTON/. Output to depth_maps/. Must handle batch processing, skip existing, and log progress. Required for fuse_depth enrichment.",
   "priority": "high",
   "estimate_points": 5,
-  "skills": ["python", "pipeline", "research"],
+  "skills": [
+    "python",
+    "pipeline",
+    "research"
+  ],
   "write_scope": [
     "scripts/sense/extract_depth.py"
   ],
   "dependencies": [],
   "owner": null,
-  "status": "backlog",
-  "created_at": "2026-04-03T00:00:00Z"
+  "status": "done",
+  "created_at": "2026-04-03T00:00:00Z",
+  "completed_at": "2026-04-03T06:02:51.696848Z",
+  "completed_by": "claude-1"
 }

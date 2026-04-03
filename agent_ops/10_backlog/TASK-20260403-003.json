@@ -4,12 +4,17 @@
   "description": "Create scripts/sense/extract_signage.py using PaddleOCR to extract storefront signage text from field photos. Output OCR results per photo to signage/. Feed into fuse_signage enrichment to populate business_name and signage fields in params.",
   "priority": "medium",
   "estimate_points": 3,
-  "skills": ["python", "pipeline"],
+  "skills": [
+    "python",
+    "pipeline"
+  ],
   "write_scope": [
     "scripts/sense/extract_signage.py"
   ],
   "dependencies": [],
   "owner": null,
-  "status": "backlog",
-  "created_at": "2026-04-03T00:00:00Z"
+  "status": "done",
+  "created_at": "2026-04-03T00:00:00Z",
+  "completed_at": "2026-04-03T06:02:51.696848Z",
+  "completed_by": "claude-1"
 }
