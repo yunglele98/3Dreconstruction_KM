@@ -45,3 +45,37 @@ archive/
 fbx_batch_log.txt
 missing_list.txt
 regen_list.txt
+
+# === V7 Pipeline Data (generated, not tracked) ===
+depth_maps/
+segmentation/
+normals/
+signage/
+features/
+point_clouds/
+meshes/
+splats/
+textures/
+citygml/
+tiles_3d/
+data/
+
+# Scanned/external assets (large binaries)
+assets/elements/
+assets/external/
+
+# Binary data formats
+*.npy
+*.laz
+*.las
+*.ply
+*.splat
+*.usdz
+
+# GPU lock
+.gpu_lock
+
+# Web build
+node_modules/
+web/dist/
+web/node_modules/
