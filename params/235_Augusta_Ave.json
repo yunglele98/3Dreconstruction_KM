@@ -27,7 +27,6 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "white-painted low commercial facade with bold black signboards and mural-painted lower walls",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "storefront",
@@ -214,7 +213,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [3, 0] -> [0]",
+      "windows_per_floor: [0, 0] -> [0]",
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.15",
       "doors_detail.steps: 1"

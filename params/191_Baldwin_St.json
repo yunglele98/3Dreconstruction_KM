@@ -29,9 +29,7 @@
   "facade_material": "Metal",
   "facade_colour": "neutral",
   "windows_per_floor": [
-    0,
-    2,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -118,10 +116,11 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "windows_per_floor: [0, 2, 1] -> [0]",
-      "colour_palette enriched from observations"
+      "colour_palette enriched",
+      "foundation_height_m: 0.3"
     ],
     "handoff_fixes_applied": [
       {
@@ -487,5 +486,6 @@
     "foundation_height_m_est": 1.2,
     "eave_overhang_mm_est": 800
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "foundation_height_m": 0.3
 }

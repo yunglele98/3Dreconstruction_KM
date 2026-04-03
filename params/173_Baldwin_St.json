@@ -27,8 +27,7 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -126,14 +125,11 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 50",
-      "windows_per_floor: [2, 2, 1] -> [0, 2]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#8A5A3A'",
-      "colour_palette enriched from observations",
-      "storefront.awning added",
-      "storefront.security_grille added",
+      "windows_per_floor: [0, 2, 1] -> [0, 2]",
+      "colour_palette enriched",
       "foundation_height_m: 0.1"
     ],
     "handoff_fixes_applied": [
@@ -545,5 +541,6 @@
     "has_storefront": true,
     "chimneys": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "foundation_height_m": 0.1
 }

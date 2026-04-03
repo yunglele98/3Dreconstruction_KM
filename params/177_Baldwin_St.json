@@ -24,7 +24,7 @@
   "roof_pitch_deg": 35,
   "roof_features": [],
   "facade_material": "Brick",
-  "facade_colour": "red brick",
+  "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
     0,
     2,
@@ -117,17 +117,12 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "roof_pitch_deg: 45 -> 35",
       "half_storey_gable flagged",
-      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [0, 0] -> [0, 2, 0]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#505050'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "decorative_elements.cornice added",
-      "storefront.security_grille added",
+      "windows_detail: 3 -> 3 floors",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
       "foundation_height_m: 0.2"
     ],
     "handoff_fixes_applied": [
@@ -268,10 +263,7 @@
           "type": "1-over-1 double-hung",
           "frame_colour": "white/light",
           "arch_type": "flat",
-          "height_m": 1.3,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.3
         }
       ]
     },
@@ -280,13 +272,7 @@
       "windows": [
         {
           "count": 0,
-          "type": "arched",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "flat",
-          "glazing": "1-over-1",
-          "frame_colour": "dark"
+          "type": "double-hung"
         }
       ]
     }
@@ -530,5 +516,6 @@
     "roof_type_observed": "gable (with flat parapet front)",
     "has_storefront": true,
     "chimneys": 0
-  }
+  },
+  "foundation_height_m": 0.2
 }

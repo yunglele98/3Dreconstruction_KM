@@ -28,7 +28,9 @@
   "facade_colour": "buff-beige brick with dark grey entry surround and large aluminum-framed windows",
   "windows_per_floor": [
     0,
-    2
+    4,
+    4,
+    3
   ],
   "window_type": "fixed",
   "window_width_m": 0.95,
@@ -134,11 +136,14 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "windows_detail: 4 floors -> 4 floors (from deep analysis)",
-      "colour_palette enriched from observations",
-      "storefront.awning added"
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 4 floors",
+      "windows_per_floor: [0, 2] -> [0, 4, 4, 3]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -323,7 +328,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "storefront": {
@@ -383,18 +389,7 @@
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 3,
-          "type": "double_hung",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "segmental",
-          "glazing": "2-over-2",
-          "frame_colour": "dark"
-        }
-      ],
+      "windows": [],
       "is_storefront": true
     },
     {
@@ -405,10 +400,31 @@
           "type": "fixed casement",
           "frame_colour": "dark grey/charcoal",
           "arch_type": "flat",
-          "height_m": 1.4,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.4
+        }
+      ]
+    },
+    {
+      "floor": "Third floor",
+      "windows": [
+        {
+          "count": 4,
+          "type": "fixed casement",
+          "frame_colour": "dark grey/charcoal",
+          "arch_type": "flat",
+          "height_m": 1.4
+        }
+      ]
+    },
+    {
+      "floor": "fourth",
+      "windows": [
+        {
+          "count": 3,
+          "type": "fixed casement",
+          "frame_colour": "dark grey/charcoal",
+          "arch_type": "flat",
+          "height_m": 1.2
         }
       ]
     }
@@ -592,5 +608,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

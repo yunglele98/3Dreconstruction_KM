@@ -187,7 +187,10 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "windows_detail: 1 -> 1 floors"
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -301,7 +304,8 @@
       "material": "glass_and_aluminum",
       "is_glass": true,
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -416,5 +420,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

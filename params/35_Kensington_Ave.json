@@ -26,9 +26,7 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "painted metal/wood (dark, ground floor); brick above",
   "windows_per_floor": [
-    0,
-    2,
-    1
+    6
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -144,15 +142,12 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "NOTE: storey mismatch DB=3 vs photo=2",
-      "roof_type: 'gable' -> 'Flat'",
+      "eave_overhang_mm: 300",
       "windows_per_floor: [0, 2, 1] -> [6]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#3A3A3A'",
-      "facade_detail.bond_pattern: 'unknown (painted/clad)'",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.1"
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -414,7 +409,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "residential",
@@ -615,5 +611,7 @@
     },
     "total_facade_detections": 1
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

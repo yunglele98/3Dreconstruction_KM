@@ -25,7 +25,6 @@
   "facade_material": "brick",
   "facade_colour": "graffiti-covered lower walls, dark brick upper (barely visible)",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "double_hung",
@@ -191,8 +190,11 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [0, 1] -> [0]"
+      "windows_per_floor: [0, 0] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1"
     ]
   },
   "storefront": {
@@ -249,7 +251,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 1
     },
     {
       "id": "door_1",
@@ -264,7 +267,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 1
     }
   ],
   "party_wall_left": true,
@@ -393,5 +397,7 @@
     },
     "total_facade_detections": 1
   },
-  "inferred_setback_m": 3.0
+  "inferred_setback_m": 3.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

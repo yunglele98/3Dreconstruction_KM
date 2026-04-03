@@ -29,7 +29,8 @@
   "facade_colour": "red brick upper facade with green awnings above a dark shuttered storefront",
   "windows_per_floor": [
     0,
-    2
+    1,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -122,14 +123,17 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "roof_detail.bargeboard added",
       "roof_detail.gable_window added",
       "eave_overhang_mm: 200",
-      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.2"
+      "half_storey_gable flagged",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2] -> [0, 1, 1]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "generation_defaults_applied": true,
     "handoff_fixes_applied": [
@@ -324,7 +328,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -353,7 +358,8 @@
       "width_m": 0.6,
       "height_m": 0.8,
       "arch_type": "small fixed"
-    }
+    },
+    "has_half_storey": true
   },
   "parapet_height_m": 0.6,
   "windows_detail": [
@@ -370,10 +376,7 @@
           "type": "1-over-1 (obscured)",
           "frame_colour": "unknown",
           "arch_type": "segmental",
-          "height_m": 1.3,
-          "width_m": 0.85,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 1.3
         }
       ]
     },
@@ -385,10 +388,7 @@
           "type": "small fixed",
           "frame_colour": "unknown",
           "arch_type": "pointed",
-          "height_m": 0.7,
-          "width_m": 0.85,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 0.7
         }
       ]
     }
@@ -551,5 +551,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 200,
+  "foundation_height_m": 0.3
 }

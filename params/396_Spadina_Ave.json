@@ -27,7 +27,6 @@
   "facade_material": "brick",
   "facade_colour": "dirty beige-grey stucco with graffiti tags",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "not visible (shuttered)",
@@ -201,7 +200,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [0, 1] -> [0]",
+      "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
     ]

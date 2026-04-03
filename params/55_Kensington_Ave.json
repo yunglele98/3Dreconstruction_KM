@@ -24,7 +24,8 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "stucco/render (painted) on corner building; brick on buildings behind",
   "windows_per_floor": [
-    0
+    0,
+    2
   ],
   "window_type": "not visible",
   "window_width_m": 0.85,
@@ -118,15 +119,14 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "NOTE: storey mismatch DB=1 vs photo=2",
-      "windows_detail: 0 floors -> 2 floors (from deep analysis)",
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
       "windows_per_floor: [0] -> [0, 2]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#E0D0B0'",
-      "facade_detail.bond_pattern: 'not visible (painted mural)'",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.1"
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -337,7 +337,8 @@
       "material": "wood",
       "is_glass": true,
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     }
   ],
   "building_type": "residential",
@@ -383,9 +384,7 @@
           "frame_colour": "#E8E0D0",
           "arch_type": "flat",
           "width_m": 0.62,
-          "height_m": 1.2,
-          "glazing": "2-over-2",
-          "sill_height_m": 0.8
+          "height_m": 1.2
         }
       ]
     }
@@ -577,5 +576,7 @@
     },
     "total_facade_detections": 1
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

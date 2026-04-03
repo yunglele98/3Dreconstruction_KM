@@ -27,7 +27,6 @@
   "facade_material": "brick",
   "facade_colour": "yellow brick with cyan neon signage, graffiti-covered green shutters",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "storefront (behind shutters)",
@@ -200,8 +199,11 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [0, 1] -> [0]"
+      "windows_per_floor: [0, 0] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1"
     ]
   },
   "storefront": {
@@ -274,7 +276,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 1
     }
   ],
   "building_type": "commercial",
@@ -415,5 +418,7 @@
     "matches_existing": false,
     "text_count": 12
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

@@ -2242,24 +2242,24 @@ def load_and_generate(params_path, spacing=15.0, match=None, limit=None):
         if site_coords and address and address in site_coords:
             sc = site_coords[address]
             rotation = math.radians(sc.get("rotation_deg", 0))
-            offset = (sc["x"], sc["y"], 0)
+            offset = (sc.get("x", 0), sc.get("y", 0), 0)
         elif site_coords:
             # Try matching by filename stem (address with underscores)
             stem_addr = geo_key.replace("_", " ")
             if stem_addr in site_coords:
                 sc = site_coords[stem_addr]
-                offset = (sc["x"], sc["y"], 0)
+                offset = (sc.get("x", 0), sc.get("y", 0), 0)
                 rotation = math.radians(sc.get("rotation_deg", 0))
             elif geocode and geo_key in geocode:
                 gc = geocode[geo_key]
-                offset = (gc["blender_x"], gc["blender_y"], 0)
+                offset = (gc.get("blender_x", 0), gc.get("blender_y", 0), 0)
                 rotation = math.radians(gc.get("rotation_deg", 0))
             else:
                 offset = (i * spacing, 0, 0)
                 rotation = 0.0
         elif geocode and geo_key in geocode:
             gc = geocode[geo_key]
-            offset = (gc["blender_x"], gc["blender_y"], 0)
+            offset = (gc.get("blender_x", 0), gc.get("blender_y", 0), 0)
             rotation = math.radians(gc.get("rotation_deg", 0))
         else:
             offset = (i * spacing, 0, 0)

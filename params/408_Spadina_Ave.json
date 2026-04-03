@@ -227,6 +227,14 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "decorative_elements": {
@@ -277,7 +285,8 @@
       "height_m": 2.1,
       "material": "glass_and_aluminum",
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -420,5 +429,7 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

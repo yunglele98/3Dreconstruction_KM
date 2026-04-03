@@ -195,8 +195,10 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 2 -> 2 floors",
-      "windows_per_floor: [2, 4] -> [0, 0]"
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "photo_observations": {
@@ -244,7 +246,8 @@
       },
       "material": "glass_and_aluminum",
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -259,7 +262,8 @@
       },
       "material": "glass_and_aluminum",
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -427,5 +431,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

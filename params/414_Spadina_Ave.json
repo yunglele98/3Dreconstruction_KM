@@ -27,7 +27,6 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    0,
     0
   ],
   "window_type": "double_hung",
@@ -192,8 +191,11 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 2 -> 2 floors",
-      "windows_per_floor: [0, 2, 1] -> [0, 0]"
+      "windows_per_floor: [0, 0, 0] -> [0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "bay_window": {
@@ -261,7 +263,8 @@
       },
       "material": "glass_and_aluminum",
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -416,5 +419,7 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

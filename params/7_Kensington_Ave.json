@@ -120,9 +120,12 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "colour_palette enriched from observations"
+      "eave_overhang_mm: 300",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -282,7 +285,8 @@
       },
       "material": "wood",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -391,7 +395,8 @@
     "security_grille": {
       "present": true,
       "type": "rolling"
-    }
+    },
+    "signage_text": "Dreamland Hair Salon"
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260315_150058951_HDR.jpg",
@@ -501,5 +506,7 @@
     "roof": "#5E5555",
     "accent": "#3C4133"
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

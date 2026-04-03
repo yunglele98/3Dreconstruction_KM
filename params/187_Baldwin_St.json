@@ -117,17 +117,16 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "roof_detail.bargeboard added",
       "roof_detail.gable_window added",
       "eave_overhang_mm: 300",
-      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [0, 2, 1] -> [0, 0, 1]",
-      "colour_palette enriched from observations",
-      "decorative_elements.ornamental_shingles added",
-      "storefront.awning added",
-      "foundation_height_m: 0.1"
+      "half_storey_gable flagged",
+      "windows_detail: 3 -> 3 floors",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "volumes_converted": true,
     "handoff_fixes_applied": [
@@ -279,7 +278,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -308,7 +308,8 @@
       "arch_type": "small fixed or vent"
     },
     "bargeboard_style": "decorative with cutwork",
-    "bargeboard_colour_hex": "#5A3A2A"
+    "bargeboard_colour_hex": "#5A3A2A",
+    "has_half_storey": true
   },
   "windows_detail": [
     {
@@ -321,13 +322,7 @@
       "windows": [
         {
           "count": 0,
-          "type": "double_hung",
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "segmental",
-          "frame_colour": "dark"
+          "type": "double-hung"
         }
       ]
     },
@@ -336,13 +331,10 @@
       "windows": [
         {
           "count": 1,
-          "type": "arched",
+          "type": "decorative gable window",
           "frame_colour": "dark brown",
           "arch_type": "pointed (within gable)",
-          "height_m": 0.8,
-          "width_m": 0.85,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 0.8
         }
       ]
     }
@@ -588,5 +580,7 @@
     "has_storefront": true,
     "chimneys": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

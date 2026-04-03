@@ -195,8 +195,8 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 3 -> 3 floors",
-      "windows_per_floor: [3, 2, 1] -> [0, 0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
     ]
@@ -472,5 +472,6 @@
     "eave_overhang_mm_est": 597.0,
     "bay_window_projection_m_est": 0.59
   },
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "eave_overhang_mm": 300
 }

@@ -134,17 +134,14 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "roof_type: 'gable' -> 'Flat'",
       "eave_overhang_mm: 150",
-      "floor_heights_m: [4.5, 4.2] -> [4.44, 4.0]",
-      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
-      "windows_per_floor: [0, 2] -> [1, 2]",
-      "facade_detail.bond_pattern: 'n/a'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "foundation_height_m: 0.2"
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -398,7 +395,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -428,13 +426,11 @@
       "windows": [
         {
           "count": 1,
-          "type": "storefront glazing",
+          "type": "large storefront window with mullions",
           "frame_colour": "dark brown",
           "arch_type": "flat",
           "width_m": 2.34,
-          "height_m": 2.0,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 2.0
         }
       ]
     },
@@ -447,9 +443,7 @@
           "frame_colour": "white",
           "arch_type": "flat",
           "width_m": 0.78,
-          "height_m": 1.2,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 1.2
         }
       ]
     }
@@ -605,5 +599,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.3
 }

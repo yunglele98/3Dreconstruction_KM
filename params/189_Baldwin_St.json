@@ -27,8 +27,7 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    2,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -121,17 +120,11 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "roof_type: 'gable' -> 'Flat'",
       "eave_overhang_mm: 50",
-      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
       "windows_per_floor: [0, 2, 1] -> [0, 0]",
-      "colour_palette enriched from observations",
-      "decorative_elements.cornice added",
-      "decorative_elements.string_courses: 1 courses",
-      "storefront.awning added",
-      "storefront.security_grille added",
+      "colour_palette enriched",
       "foundation_height_m: 0.1"
     ],
     "patched": true,
@@ -578,5 +571,6 @@
     "roof_type_observed": "flat with low parapet",
     "has_storefront": true,
     "chimneys": 0
-  }
+  },
+  "foundation_height_m": 0.1
 }

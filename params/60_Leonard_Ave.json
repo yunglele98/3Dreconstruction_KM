@@ -181,8 +181,10 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 2 -> 2 floors",
-      "windows_per_floor: [2, 2] -> [0, 0]"
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1"
     ]
   },
   "party_wall_left": true,
@@ -249,7 +251,8 @@
         "height_m": 0.4,
         "type": "glazed"
       },
-      "material": "wood"
+      "material": "wood",
+      "steps": 1
     }
   ],
   "photo_observations": {
@@ -328,5 +331,7 @@
       "wall_thickness_m": 0.3
     }
   },
-  "wall_thickness_m": 0.3
+  "wall_thickness_m": 0.3,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

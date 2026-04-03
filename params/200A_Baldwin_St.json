@@ -110,14 +110,11 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 100",
-      "floor_heights_m: [4.5, 4.4] -> [4.78, 4.07]",
-      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#8B4225'",
-      "colour_palette enriched from observations",
-      "storefront.awning added",
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
       "foundation_height_m: 0.15"
     ],
     "handoff_fixes_applied": [
@@ -255,10 +252,7 @@
           "type": "1-over-1 double-hung",
           "frame_colour": "white",
           "arch_type": "flat with stone lintel",
-          "height_m": 1.4,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.4
         }
       ]
     }

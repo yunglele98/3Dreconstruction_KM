@@ -134,16 +134,16 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "roof_detail.bargeboard added",
       "roof_detail.gable_window added",
       "eave_overhang_mm: 150",
-      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [2, 2, 1] -> [3, 1, 1]",
-      "colour_palette enriched from observations",
-      "storefront.awning added",
-      "foundation_height_m: 0.15"
+      "half_storey_gable flagged",
+      "windows_detail: 3 -> 3 floors",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -363,7 +363,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -378,7 +379,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -406,7 +408,8 @@
       "arch_type": "circular decorative/oculus"
     },
     "bargeboard_style": "simple trim",
-    "bargeboard_colour_hex": "#D0C8C0"
+    "bargeboard_colour_hex": "#D0C8C0",
+    "has_half_storey": true
   },
   "windows_detail": [
     {
@@ -414,13 +417,10 @@
       "windows": [
         {
           "count": 3,
-          "type": "storefront glazing",
+          "type": "fixed plate glass",
           "frame_colour": "mixed (#5ABAAA left, #2A4A2A right)",
           "arch_type": "flat",
-          "height_m": 2.0,
-          "glazing": "1-over-1",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 2.0
         }
       ]
     },
@@ -432,10 +432,7 @@
           "type": "1-over-1 with hooded surround",
           "frame_colour": "#E0D8D0",
           "arch_type": "arched hood/surround",
-          "height_m": 1.4,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.4
         }
       ]
     },
@@ -444,13 +441,10 @@
       "windows": [
         {
           "count": 1,
-          "type": "arched",
+          "type": "circular decorative/oculus",
           "frame_colour": "#FFFFFF",
           "arch_type": "round",
-          "height_m": 0.7,
-          "width_m": 0.85,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 0.7
         }
       ]
     }
@@ -659,5 +653,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.3
 }

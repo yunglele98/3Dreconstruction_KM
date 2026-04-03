@@ -527,10 +527,11 @@ def cmd_merge_street(street_key, do_promote=False):
     return cmd_merge([str(bf) for bf in batch_files], do_promote=do_promote)
 
 
-def cmd_promote():
+def cmd_promote(force=False):
     """Promote all deep_facade_analysis sections to generator fields."""
     files = sorted(PARAMS_DIR.glob("*.json"))
     promoted = 0
+    skipped_already = 0
     total_changes = 0
     for fpath in files:
         with open(fpath, encoding="utf-8") as f:
@@ -540,8 +541,9 @@ def cmd_promote():
         deep = params.get("deep_facade_analysis")
         if not deep:
             continue
-        if params.get("_meta", {}).get("geometry_revised"):
-            continue  # already promoted
+        if params.get("_meta", {}).get("geometry_revised") and not force:
+            skipped_already += 1
+            continue
         changes = []
         for promoter in ALL_PROMOTERS:
             changes.extend(promoter(params, deep))
@@ -556,6 +558,8 @@ def cmd_promote():
                 json.dump(params, f, indent=2, ensure_ascii=False)
             promoted += 1
             total_changes += len(changes)
+    if skipped_already:
+        print(f"Skipped (already promoted): {skipped_already} (use --force to re-promote)")
     print(f"Promoted: {promoted} buildings, {total_changes} field changes")
 
 
@@ -647,6 +651,7 @@ def main():
     p_street.add_argument("--promote", action="store_true", help="Also promote to generator fields")
 
     p_promote = sub.add_parser("promote", help="Promote all deep analysis to generator fields")
+    p_promote.add_argument("--force", action="store_true", help="Re-promote even if already promoted")
 
     p_audit = sub.add_parser("audit", help="Show coverage by street")
 
@@ -660,7 +665,7 @@ def main():
     elif args.command == "merge-street":
         cmd_merge_street(args.street, do_promote=args.promote)
     elif args.command == "promote":
-        cmd_promote()
+        cmd_promote(force=getattr(args, "force", False))
     elif args.command == "audit":
         cmd_audit()
     elif args.command == "report":

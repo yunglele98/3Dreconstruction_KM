@@ -209,7 +209,10 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "windows_detail: 1 -> 1 floors"
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -251,7 +254,8 @@
       },
       "material": "wood",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -391,5 +395,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

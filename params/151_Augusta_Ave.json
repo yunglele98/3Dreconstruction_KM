@@ -29,7 +29,6 @@
   "facade_colour": "light cream brick facade with an orange nail studio sign and dark storefront glazing",
   "windows_per_floor": [
     0,
-    0,
     0
   ],
   "window_type": "mixed",
@@ -194,7 +193,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 2 -> 2 floors",
-      "windows_per_floor: [4, 4, 0] -> [0, 0]",
+      "windows_per_floor: [0, 0, 0] -> [0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
     ]

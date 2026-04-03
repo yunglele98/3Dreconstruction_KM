@@ -30,8 +30,6 @@
   "facade_colour": "white-painted upper facade with pale blue signage and awning over a dark storefront opening",
   "windows_per_floor": [
     0,
-    2,
-    2,
     1
   ],
   "window_type": "mixed",
@@ -137,17 +135,13 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "roof_type: 'gable' -> 'Flat'",
       "eave_overhang_mm: 50",
-      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
-      "windows_per_floor: [1, 1, 0, 0] -> [0, 1]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#9A5A3A'",
-      "colour_palette enriched from observations",
-      "storefront.security_grille added",
-      "foundation_height_m: 0.15",
-      "doors_detail.steps: 1"
+      "windows_per_floor: [0, 2, 2, 1] -> [0, 1]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "generation_defaults_applied": true,
     "handoff_fixes_applied": [
@@ -579,5 +573,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.3
 }

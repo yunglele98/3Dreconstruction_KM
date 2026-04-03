@@ -29,7 +29,8 @@
   "facade_colour": "red brick upper wall with dark-painted shuttered storefront below",
   "windows_per_floor": [
     0,
-    2
+    1,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -129,22 +130,17 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "roof_type: 'flat' -> 'Gable'",
-      "roof_pitch_deg: 0 -> 50",
       "roof_detail.bargeboard added",
       "roof_detail.gable_window added",
       "eave_overhang_mm: 200",
-      "floor_heights_m: [3.9, 3.0] -> [3.8, 3.17]",
-      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [1, 1] -> [0, 1, 1]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#A0523C'",
-      "colour_palette enriched from observations",
-      "decorative_elements.stone_voussoirs added",
-      "storefront.awning added",
-      "storefront.security_grille added",
-      "foundation_height_m: 0.2"
+      "half_storey_gable flagged",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2] -> [0, 1, 1]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "generation_defaults_applied": true,
     "handoff_fixes_applied": [
@@ -326,7 +322,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -355,7 +352,8 @@
       "width_m": 0.6,
       "height_m": 0.8,
       "arch_type": "small fixed"
-    }
+    },
+    "has_half_storey": true
   },
   "parapet_height_m": 0.6,
   "windows_detail": [
@@ -372,10 +370,7 @@
           "type": "1-over-1 (obscured)",
           "frame_colour": "unknown",
           "arch_type": "segmental",
-          "height_m": 1.3,
-          "width_m": 0.85,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 1.3
         }
       ]
     },
@@ -387,10 +382,7 @@
           "type": "small fixed",
           "frame_colour": "unknown",
           "arch_type": "pointed",
-          "height_m": 0.7,
-          "width_m": 0.85,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 0.7
         }
       ]
     }
@@ -559,5 +551,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 200,
+  "foundation_height_m": 0.3
 }

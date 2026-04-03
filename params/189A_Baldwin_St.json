@@ -26,8 +26,6 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0,
     0
   ],
   "window_type": "double_hung",
@@ -220,7 +218,10 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "windows_per_floor: [0, 2, 1] -> [0]"
+      "eave_overhang_mm: 300",
+      "windows_per_floor: [0, 0, 0] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "decorative_elements": {
@@ -264,7 +265,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -419,5 +421,7 @@
     "setback_m_est": 0,
     "foundation_height_m_est": 1.2,
     "eave_overhang_mm_est": 800
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

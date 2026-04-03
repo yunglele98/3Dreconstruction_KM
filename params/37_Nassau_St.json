@@ -27,7 +27,6 @@
   "facade_colour": "dark mottled red-brown brick with white-framed replacement windows and a red-and-white enclosed porch element",
   "windows_per_floor": [
     0,
-    0,
     0
   ],
   "window_type": "mixed",
@@ -190,7 +189,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 2 -> 2 floors",
-      "windows_per_floor: [0, 2, 1] -> [0, 0]",
+      "windows_per_floor: [0, 0, 0] -> [0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
     ]

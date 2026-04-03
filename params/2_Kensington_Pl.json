@@ -182,9 +182,11 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 2 -> 2 floors",
-      "windows_per_floor: [1, 1] -> [0, 0]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'"
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1"
     ]
   },
   "doors_detail": [
@@ -201,7 +203,8 @@
         "height_m": 0.4
       },
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 1
     }
   ],
   "party_wall_left": true,
@@ -371,5 +374,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

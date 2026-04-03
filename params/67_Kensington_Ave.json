@@ -25,8 +25,7 @@
   "facade_material": "Painted",
   "facade_colour": "painted (painted wood/metal storefront)",
   "windows_per_floor": [
-    0,
-    2
+    0
   ],
   "window_type": "storefront",
   "window_width_m": 1.5,
@@ -126,15 +125,14 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 100",
-      "windows_detail: 0 floors -> 1 floors (from deep analysis)",
-      "windows_per_floor: [0, 0] -> [0]",
-      "facade_detail.bond_pattern: 'n/a'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "foundation_height_m: 0.1"
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [0, 2] -> [0]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -327,7 +325,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -342,7 +341,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "storefront": {
@@ -544,5 +544,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 100,
+  "foundation_height_m": 0.3
 }

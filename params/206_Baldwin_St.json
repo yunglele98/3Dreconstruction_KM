@@ -123,15 +123,13 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 100",
-      "floor_heights_m: [4.8, 4.8] -> [5.24, 4.36]",
-      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
-      "windows_per_floor: [2, 3] -> [0, 2]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#8B4C32'",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.15"
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -295,7 +293,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#4A3A2A",
-      "colour": "medium brown"
+      "colour": "medium brown",
+      "steps": 2
     }
   ],
   "storefront": {
@@ -357,18 +356,7 @@
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "segmental",
-          "glazing": "1-over-1",
-          "frame_colour": "white"
-        }
-      ],
+      "windows": [],
       "is_storefront": true
     },
     {
@@ -379,10 +367,7 @@
           "type": "1-over-1",
           "frame_colour": "#FFFFFF",
           "arch_type": "flat",
-          "height_m": 1.2,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.2
         }
       ]
     }
@@ -555,5 +540,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 100,
+  "foundation_height_m": 0.3
 }

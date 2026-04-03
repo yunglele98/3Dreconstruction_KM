@@ -26,6 +26,8 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "warm red brick at ground and second floor; cream/beige vertical siding on upper gable and side sections",
   "windows_per_floor": [
+    0,
+    0,
     0
   ],
   "window_type": "mixed",
@@ -241,7 +243,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 3 -> 3 floors",
-      "windows_per_floor: [2] -> [0, 0, 0]",
+      "windows_per_floor: [0] -> [0, 0, 0]",
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"

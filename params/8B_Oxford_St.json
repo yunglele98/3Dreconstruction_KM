@@ -185,8 +185,10 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [2] -> [0]"
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 1"
     ]
   },
   "doors_detail": [
@@ -203,7 +205,8 @@
       },
       "material": "wood",
       "colour_hex": "#4A3A2A",
-      "colour": "medium brown"
+      "colour": "medium brown",
+      "steps": 1
     }
   ],
   "party_wall_left": true,
@@ -344,5 +347,7 @@
     "element_counts": {},
     "occlusion": {},
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

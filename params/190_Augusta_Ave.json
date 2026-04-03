@@ -27,7 +27,6 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "dark maroon/brown shuttered storefront with a red House of Spice banner sign",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "mixed",
@@ -206,7 +205,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [0, 1] -> [0]",
+      "windows_per_floor: [0, 0] -> [0]",
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"

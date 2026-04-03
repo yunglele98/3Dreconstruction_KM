@@ -5,6 +5,7 @@
   "facade_colour": "dark red-brown brick, unpainted natural patina",
   "windows_per_floor": [
     0,
+    0,
     0
   ],
   "window_type": "mixed",
@@ -180,7 +181,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 3 -> 3 floors",
-      "windows_per_floor: [2, 2] -> [0, 0, 0]",
+      "windows_per_floor: [0, 0] -> [0, 0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
     ]

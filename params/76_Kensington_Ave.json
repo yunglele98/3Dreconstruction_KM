@@ -23,7 +23,7 @@
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "Brick",
-  "facade_colour": "red brick",
+  "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
     0,
     3
@@ -127,18 +127,15 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 150",
-      "floor_heights_m: [4.8, 4.8] -> [5.19, 4.41]",
-      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
-      "windows_per_floor: [0, 2] -> [0, 3]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#D8D0C0'",
-      "facade_detail.bond_pattern: 'running bond (visible through paint)'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "decorative_elements.polychromatic_brick flagged",
-      "foundation_height_m: 0.2"
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "polychromatic_brick flagged",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -329,7 +326,8 @@
       },
       "material": "wood",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -368,9 +366,7 @@
           "frame_colour": "white",
           "arch_type": "flat",
           "width_m": 0.73,
-          "height_m": 1.3,
-          "glazing": "2-over-2",
-          "sill_height_m": 0.8
+          "height_m": 1.3
         }
       ]
     }
@@ -520,5 +516,7 @@
   "_audit": {
     "photo_heavily_occluded": true
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.3
 }

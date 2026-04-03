@@ -26,7 +26,8 @@
   "facade_colour": "buff/yellow-brown brick; brick",
   "windows_per_floor": [
     0,
-    2
+    2,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -127,18 +128,17 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "roof_detail.bargeboard added",
       "roof_detail.gable_window added",
       "eave_overhang_mm: 250",
-      "floor_heights_m: [2.9, 2.3] -> [2.76, 2.35]",
-      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [1, 2] -> [0, 2, 1]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#C47040'",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.2",
-      "doors_detail.steps: 1"
+      "half_storey_gable flagged",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2] -> [0, 2, 1]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "generation_defaults_applied": true,
     "handoff_fixes_applied": [
@@ -356,7 +356,8 @@
       "colour_hex": "#3A2A20"
     },
     "bargeboard_style": "simple",
-    "bargeboard_colour_hex": "#C8B8A0"
+    "bargeboard_colour_hex": "#C8B8A0",
+    "has_half_storey": true
   },
   "windows_detail": [
     {
@@ -373,9 +374,7 @@
           "frame_colour": "dark/brown",
           "arch_type": "flat",
           "width_m": 0.78,
-          "height_m": 1.3,
-          "glazing": "2-over-2",
-          "sill_height_m": 0.8
+          "height_m": 1.3
         }
       ]
     },
@@ -384,13 +383,11 @@
       "windows": [
         {
           "count": 1,
-          "type": "fixed",
+          "type": "1-over-1",
           "frame_colour": "dark",
           "arch_type": "pointed",
           "width_m": 0.52,
-          "height_m": 0.8,
-          "glazing": "fixed",
-          "sill_height_m": 0.8
+          "height_m": 0.8
         }
       ]
     }
@@ -561,5 +558,7 @@
     },
     "total_facade_detections": 1
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 250,
+  "foundation_height_m": 0.3
 }

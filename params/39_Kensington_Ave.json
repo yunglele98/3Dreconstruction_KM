@@ -2,8 +2,8 @@
   "building_name": "39 Kensington Ave",
   "floors": 2,
   "floor_heights_m": [
-    3.79,
-    3.1
+    3.72,
+    3.17
   ],
   "total_height_m": 6.89,
   "facade_width_m": 5.2,
@@ -26,7 +26,8 @@
   "facade_colour": "left: painted/stucco (white/cream with green); right: painted (white/grey)",
   "windows_per_floor": [
     0,
-    2
+    2,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -136,22 +137,18 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "NOTE: storey mismatch DB=3 vs photo=2",
-      "roof_type: 'flat' -> 'Gable'",
-      "roof_pitch_deg: 0 -> 45",
       "roof_detail.bargeboard added",
       "roof_detail.gable_window added",
       "eave_overhang_mm: 250",
-      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [2, 2, 1] -> [0, 2, 1]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#E8E0D0'",
-      "facade_detail.bond_pattern: 'not visible (painted/clad)'",
-      "colour_palette enriched from observations",
+      "floor_heights_m: [3.79, 3.1] -> [3.72, 3.17]",
+      "half_storey_gable flagged",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2] -> [0, 2, 1]",
+      "colour_palette enriched",
       "foundation_height_m: 0.3",
-      "doors_detail.steps: 1",
-      "site.setback_m: 0.3"
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -331,7 +328,8 @@
       "width_m": 0.6,
       "height_m": 0.8,
       "arch_type": "rectangular"
-    }
+    },
+    "has_half_storey": true
   },
   "parapet_height_m": 0.6,
   "windows_detail": [
@@ -349,9 +347,7 @@
           "frame_colour": "#E8E0D0",
           "arch_type": "flat",
           "width_m": 0.73,
-          "height_m": 1.4,
-          "sill_height_m": 0.8,
-          "glazing": "1-over-1"
+          "height_m": 1.4
         }
       ]
     },
@@ -364,9 +360,7 @@
           "frame_colour": "#E8E0D0",
           "arch_type": "flat",
           "width_m": 0.52,
-          "height_m": 0.7,
-          "sill_height_m": 0.8,
-          "glazing": "1-over-1"
+          "height_m": 0.7
         }
       ]
     }
@@ -597,5 +591,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 250,
+  "foundation_height_m": 0.3
 }

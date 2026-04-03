@@ -26,7 +26,8 @@
   "facade_colour": "painted (painted wood/stucco)",
   "windows_per_floor": [
     0,
-    2
+    2,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -133,17 +134,16 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 200",
-      "floor_heights_m: [4.2, 3.7] -> [4.18, 3.76]",
       "half_storey_gable flagged",
-      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [2, 2] -> [0, 2, 0]",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "foundation_height_m: 0.2",
-      "doors_detail.steps: 1"
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2] -> [0, 2, 0]",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -366,9 +366,7 @@
           "frame_colour": "white",
           "arch_type": "flat",
           "width_m": 0.83,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "glazing": "2-over-2"
+          "height_m": 1.3
         }
       ]
     },
@@ -377,13 +375,7 @@
       "windows": [
         {
           "count": 0,
-          "type": "double_hung",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "segmental",
-          "glazing": "2-over-2",
-          "frame_colour": "dark"
+          "type": "double-hung"
         }
       ]
     }
@@ -593,5 +585,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 200,
+  "foundation_height_m": 0.3
 }

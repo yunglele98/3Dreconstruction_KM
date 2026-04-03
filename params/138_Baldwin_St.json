@@ -28,9 +28,8 @@
   "facade_colour": "painted (mixed (painted brick, stone veneer))",
   "windows_per_floor": [
     0,
-    2,
-    2,
-    1
+    3,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -113,18 +112,15 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "roof_pitch_deg: 45 -> 35",
       "eave_overhang_mm: 150",
       "half_storey_gable flagged",
-      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
       "windows_per_floor: [0, 2, 2, 1] -> [0, 3, 0]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#8A3020'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "decorative_elements.cornice added",
-      "foundation_height_m: 0.2"
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -303,7 +299,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -590,5 +587,7 @@
     "roof_type_observed": "gable (hidden behind parapet/flat front)",
     "has_storefront": true,
     "chimneys": 0
-  }
+  },
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.3
 }

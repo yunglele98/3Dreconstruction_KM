@@ -28,6 +28,7 @@
   "facade_colour": "cream/yellow vinyl siding with brown trim",
   "windows_per_floor": [
     0,
+    0,
     0
   ],
   "window_type": "casement",
@@ -203,9 +204,12 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 3 -> 3 floors",
-      "windows_per_floor: [2, 2] -> [0, 0, 0]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'"
+      "windows_per_floor: [0, 0] -> [0, 0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "photo_observations": {
@@ -271,7 +275,8 @@
       },
       "material": "wood",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "balcony_detail": {
@@ -445,5 +450,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

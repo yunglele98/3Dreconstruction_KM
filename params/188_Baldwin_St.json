@@ -28,8 +28,8 @@
   "facade_material": "brick",
   "facade_colour": "red brick facade with white fascia over a shuttered storefront opening",
   "windows_per_floor": [
-    1,
-    0
+    0,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -131,12 +131,14 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 50",
-      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.15"
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [1, 0] -> [0, 2]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "patched": true,
     "patches_applied": [
@@ -310,7 +312,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -337,23 +340,17 @@
     {
       "floor": "Ground floor",
       "windows": [],
-      "is_storefront": true,
-      "count": 1,
-      "width_m": 0.95,
-      "height_m": 1.2
+      "is_storefront": true
     },
     {
       "floor": "Second floor",
       "windows": [
         {
-          "count": 0,
+          "count": 2,
           "type": "1-over-1 (obscured)",
           "frame_colour": "unknown",
           "arch_type": "flat/segmental",
-          "height_m": 1.2,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.2
         }
       ]
     }
@@ -510,5 +507,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.3
 }

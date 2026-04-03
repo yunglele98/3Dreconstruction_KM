@@ -27,7 +27,6 @@
   "facade_material": "brick",
   "facade_colour": "white-painted brick with black-framed front window, warm wood planters, and a white fabric patio tent enclosure",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "fixed",
@@ -190,7 +189,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [2, 2] -> [0]",
+      "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
     ]

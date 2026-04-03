@@ -25,7 +25,6 @@
   "facade_material": "stucco",
   "facade_colour": "dark grey/black facade behind large illuminated yellow signage",
   "windows_per_floor": [
-    0,
     0
   ],
   "window_type": "not visible (concealed behind signage and grilles)",
@@ -181,7 +180,7 @@
     "geometry_changes": [
       "eave_overhang_mm: 300",
       "windows_detail: 1 -> 1 floors",
-      "windows_per_floor: [0, 1] -> [0]",
+      "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
     ]

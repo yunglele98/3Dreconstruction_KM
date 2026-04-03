@@ -23,10 +23,11 @@
   "roof_pitch_deg": 45,
   "roof_features": [],
   "facade_material": "Brick",
-  "facade_colour": "#B85A3A",
+  "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
     0,
-    2
+    2,
+    1
   ],
   "window_type": "storefront",
   "window_width_m": 0.85,
@@ -125,20 +126,18 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "roof_detail.bargeboard added",
       "roof_detail.gable_window added",
       "eave_overhang_mm: 250",
-      "floor_heights_m: [4.8, 4.8] -> [5.19, 4.41]",
-      "windows_detail: 2 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [2, 2] -> [0, 2, 1]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#5A6A7A'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "foundation_height_m: 0.5",
-      "doors_detail.steps: 3",
-      "site.setback_m: 0.5"
+      "half_storey_gable flagged",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2] -> [0, 2, 1]",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -367,23 +366,13 @@
       "arch_type": "pointed-arch"
     },
     "bargeboard_style": "simple Victorian",
-    "bargeboard_colour_hex": "#E0D8D0"
+    "bargeboard_colour_hex": "#E0D8D0",
+    "has_half_storey": true
   },
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "segmental",
-          "glazing": "2-over-2",
-          "frame_colour": "dark"
-        }
-      ],
+      "windows": [],
       "is_storefront": true
     },
     {
@@ -395,9 +384,7 @@
           "frame_colour": "dark grey",
           "arch_type": "flat",
           "width_m": 0.78,
-          "height_m": 1.3,
-          "glazing": "2-over-2",
-          "sill_height_m": 0.8
+          "height_m": 1.3
         }
       ]
     },
@@ -406,13 +393,11 @@
       "windows": [
         {
           "count": 1,
-          "type": "fixed",
+          "type": "1-over-1",
           "frame_colour": "white",
           "arch_type": "pointed",
           "width_m": 0.52,
-          "height_m": 0.8,
-          "glazing": "fixed",
-          "sill_height_m": 0.8
+          "height_m": 0.8
         }
       ]
     }
@@ -597,5 +582,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 250,
+  "foundation_height_m": 0.3
 }

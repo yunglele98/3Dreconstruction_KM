@@ -27,7 +27,6 @@
   "facade_colour": "cream/beige upper storey stucco, yellow-painted lower storefront panels, green canvas awning",
   "windows_per_floor": [
     0,
-    0,
     0
   ],
   "window_type": "mixed",
@@ -204,9 +203,12 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
+      "eave_overhang_mm: 300",
       "windows_detail: 2 -> 2 floors",
-      "windows_per_floor: [0, 2, 1] -> [0, 0]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'"
+      "windows_per_floor: [0, 0, 0] -> [0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -278,7 +280,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -447,5 +450,7 @@
     "matches_existing": false,
     "text_count": 51
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

@@ -27,8 +27,7 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    2,
-    1
+    3
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -114,14 +113,14 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 50",
-      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
+      "windows_detail: 2 -> 2 floors",
       "windows_per_floor: [0, 2, 1] -> [0, 3]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B08050'",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.1"
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "generation_defaults_applied": true,
     "handoff_fixes_applied": [
@@ -230,7 +229,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -268,10 +268,7 @@
           "type": "1-over-1 double-hung",
           "frame_colour": "white",
           "arch_type": "flat",
-          "height_m": 1.2,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.2
         }
       ]
     }
@@ -452,5 +449,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 50,
+  "foundation_height_m": 0.3
 }

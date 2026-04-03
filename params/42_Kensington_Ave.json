@@ -23,7 +23,7 @@
   "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "Brick",
-  "facade_colour": "#B85A3A",
+  "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
     0,
     2
@@ -135,14 +135,11 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "floor_heights_m: [4.8, 4.8] -> [5.05, 4.55]",
-      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#3A5080'",
-      "facade_detail.bond_pattern: 'running bond (under paint)'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
       "foundation_height_m: 0.2"
     ],
     "handoff_fixes_applied": [
@@ -446,9 +443,7 @@
           "frame_colour": "#E8E0D0",
           "arch_type": "flat",
           "width_m": 0.68,
-          "height_m": 1.3,
-          "glazing": "2-over-2",
-          "sill_height_m": 0.8
+          "height_m": 1.3
         }
       ]
     }

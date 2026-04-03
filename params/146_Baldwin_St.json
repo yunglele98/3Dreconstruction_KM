@@ -25,7 +25,7 @@
     "parapet_wall"
   ],
   "facade_material": "Brick",
-  "facade_colour": "red brick",
+  "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
     0,
     1
@@ -122,14 +122,14 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "floor_heights_m: [3.1, 2.4] -> [2.98, 2.54]",
-      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
-      "windows_per_floor: [2, 1] -> [0, 1]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#A83030'",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation"
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -319,7 +319,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "storefront": {
@@ -373,18 +374,7 @@
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "flat",
-          "glazing": "1-over-1",
-          "frame_colour": "white"
-        }
-      ],
+      "windows": [],
       "is_storefront": true
     },
     {
@@ -395,10 +385,7 @@
           "type": "1-over-1 double-hung",
           "frame_colour": "dark",
           "arch_type": "flat",
-          "height_m": 1.2,
-          "glazing": "2-over-2",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.2
         }
       ]
     }
@@ -568,5 +555,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

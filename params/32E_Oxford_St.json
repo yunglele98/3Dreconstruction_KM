@@ -27,7 +27,6 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    0,
     0
   ],
   "window_type": "double_hung",
@@ -222,7 +221,10 @@
     "geometry_revised": true,
     "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "windows_per_floor: [2, 2, 1] -> [0, 0]"
+      "eave_overhang_mm: 300",
+      "windows_per_floor: [0, 0, 0] -> [0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "doors_detail": [
@@ -239,7 +241,8 @@
       },
       "material": "wood",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -433,5 +436,7 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

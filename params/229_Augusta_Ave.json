@@ -27,8 +27,7 @@
   "facade_material": "Stucco",
   "facade_colour": "painted (painted stucco/render (upper band), metal roller shutters (ground))",
   "windows_per_floor": [
-    0,
-    2
+    0
   ],
   "window_type": "storefront",
   "window_width_m": 0.95,
@@ -115,11 +114,14 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "windows_per_floor: [3, 2] -> [0]",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation"
+      "eave_overhang_mm: 300",
+      "windows_per_floor: [0, 2] -> [0]",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -316,7 +318,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#4A3A2A",
-      "colour": "medium brown"
+      "colour": "medium brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -539,5 +542,7 @@
     "matches_existing": false,
     "text_count": 25
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

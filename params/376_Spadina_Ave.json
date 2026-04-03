@@ -28,7 +28,8 @@
   "facade_colour": "red brick commercial block with a red-painted storefront base and blue-beige signboard",
   "windows_per_floor": [
     0,
-    2
+    4,
+    4
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -127,13 +128,14 @@
     },
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 100",
-      "windows_detail: 3 floors -> 3 floors (from deep analysis)",
-      "windows_per_floor: [4, 3, 3] -> [0, 4, 4]",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.3"
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2] -> [0, 4, 4]",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -314,7 +316,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "storefront": {
@@ -370,18 +373,7 @@
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 3,
-          "type": "double_hung",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "flat",
-          "glazing": "1-over-1",
-          "frame_colour": "white"
-        }
-      ],
+      "windows": [],
       "is_storefront": true
     },
     {
@@ -392,10 +384,7 @@
           "type": "1-over-1 double-hung",
           "frame_colour": "white",
           "arch_type": "flat with stone lintels",
-          "height_m": 1.4,
-          "glazing": "1-over-1",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.4
         }
       ]
     },
@@ -407,10 +396,7 @@
           "type": "1-over-1 double-hung",
           "frame_colour": "white",
           "arch_type": "flat with stone lintels",
-          "height_m": 1.4,
-          "glazing": "1-over-1",
-          "width_m": 0.85,
-          "sill_height_m": 0.8
+          "height_m": 1.4
         }
       ]
     }
@@ -606,5 +592,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 2
-  }
+  },
+  "eave_overhang_mm": 100,
+  "foundation_height_m": 0.3
 }

@@ -135,14 +135,13 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
-      "floor_heights_m: [4.8, 4.8] -> [5.19, 4.41]",
-      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
-      "windows_per_floor: [0, 2] -> [0, 1]",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#8A7A6A'",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.2"
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "handoff_fixes_applied": [
       {
@@ -393,7 +392,8 @@
       "material": "wood",
       "is_glass": true,
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -431,9 +431,7 @@
           "frame_colour": "#E8E0D0",
           "arch_type": "flat",
           "width_m": 0.73,
-          "height_m": 1.3,
-          "glazing": "2-over-2",
-          "sill_height_m": 0.8
+          "height_m": 1.3
         }
       ]
     }
@@ -583,5 +581,7 @@
     },
     "total_facade_detections": 0
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

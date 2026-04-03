@@ -25,10 +25,10 @@
     "false_front"
   ],
   "facade_material": "Brick",
-  "facade_colour": "red brick",
+  "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
-    4,
-    0
+    0,
+    2
   ],
   "window_type": "storefront",
   "window_width_m": 1.0,
@@ -115,15 +115,17 @@
     ],
     "deep_facade_analysis_applied": true,
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "roof_detail.bargeboard added",
       "eave_overhang_mm: 150",
       "half_storey_gable flagged",
-      "windows_detail: 2 floors -> 2 floors (from deep analysis)",
-      "colour_palette enriched from observations",
-      "facade_colour updated: painted observation",
-      "foundation_height_m: 0.1"
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [4, 0] -> [0, 2]",
+      "colour_palette enriched",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "patched": true,
     "patches_applied": [
@@ -330,7 +332,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -345,7 +348,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -376,35 +380,18 @@
   "windows_detail": [
     {
       "floor": "Ground floor",
-      "windows": [
-        {
-          "count": 4,
-          "type": "double_hung",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "sill_height_m": 0.8,
-          "arch_type": "segmental",
-          "glazing": "2-over-2",
-          "frame_colour": "dark"
-        }
-      ],
-      "is_storefront": true,
-      "count": 4,
-      "width_m": 1.0,
-      "height_m": 2.0
+      "windows": [],
+      "is_storefront": true
     },
     {
       "floor": "Gable",
       "windows": [
         {
-          "count": 0,
-          "type": "fixed",
+          "count": 2,
+          "type": "painted outlines (faux)",
           "frame_colour": "#2AAA7A",
           "arch_type": "flat",
-          "height_m": 0.9,
-          "glazing": "fixed",
-          "width_m": 0.7,
-          "sill_height_m": 0.8
+          "height_m": 0.9
         }
       ]
     }
@@ -585,5 +572,7 @@
     "matches_existing": false,
     "text_count": 40
   },
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.3
 }

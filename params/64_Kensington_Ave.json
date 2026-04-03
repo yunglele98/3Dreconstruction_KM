@@ -124,14 +124,13 @@
     "deep_facade_analysis_applied": true,
     "deep_facade_analysis_ts": "2026-03-26",
     "geometry_revised": true,
-    "geometry_revision_ts": "2026-03-26",
+    "geometry_revision_ts": "2026-04-03",
     "geometry_changes": [
       "eave_overhang_mm: 150",
-      "floor_heights_m: [2.4, 2.4] -> [2.53, 2.27]",
-      "windows_detail: 1 floors -> 2 floors (from deep analysis)",
-      "facade_detail.brick_colour_hex: '#B85A3A' -> '#C8A878'",
-      "colour_palette enriched from observations",
-      "foundation_height_m: 0.15"
+      "windows_detail: 2 -> 2 floors",
+      "colour_palette enriched",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ],
     "generation_defaults_applied": true,
     "handoff_fixes_applied": [
@@ -275,7 +274,8 @@
       },
       "material": "wood",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -314,9 +314,7 @@
           "frame_colour": "dark brown",
           "arch_type": "flat",
           "width_m": 0.94,
-          "height_m": 1.4,
-          "glazing": "2-over-2",
-          "sill_height_m": 0.8
+          "height_m": 1.4
         }
       ]
     }
@@ -467,5 +465,7 @@
       "vehicles": 1
     },
     "total_facade_detections": 2
-  }
+  },
+  "eave_overhang_mm": 150,
+  "foundation_height_m": 0.3
 }
