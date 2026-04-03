@@ -42,6 +42,14 @@ def load_manifests() -> dict:
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Fingerprint params and build regen queue")
+    parser.add_argument("--params-dir", type=Path, default=PARAMS_DIR)
+    parser.add_argument("--manifests-dir", type=Path, default=MANIFESTS_DIR)
+    parser.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
+    parser.add_argument("--street", type=str, default=None, help="Only fingerprint this street")
+    args = parser.parse_args()
+
     manifests = load_manifests()
     fingerprints = {}
     stale, new, fresh = [], [], []

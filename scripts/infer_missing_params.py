@@ -548,8 +548,29 @@ def infer_file(filepath: Path) -> tuple[bool, str]:
 
 
 def main():
-    files = sorted(PARAMS_DIR.glob("*.json"))
+    import argparse
+    parser = argparse.ArgumentParser(description="Infer remaining gap params (run LAST in enrichment)")
+    parser.add_argument("--params-dir", type=Path, default=PARAMS_DIR)
+    parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
+    parser.add_argument("--street", type=str, default=None, help="Only process this street")
+    parser.add_argument("--re-infer", action="store_true", help="Re-run even on already-inferred files")
+    args = parser.parse_args()
+
+    params_dir = args.params_dir
+    files = sorted(params_dir.glob("*.json"))
     files = [f for f in files if not f.name.startswith("_")]
+
+    if args.street:
+        filtered = []
+        for f in files:
+            try:
+                d = json.loads(f.read_text(encoding="utf-8"))
+                street = d.get("site", {}).get("street", "")
+                if args.street.lower() in street.lower():
+                    filtered.append(f)
+            except (json.JSONDecodeError, OSError):
+                pass
+        files = filtered
 
     filled = 0
     skipped = 0

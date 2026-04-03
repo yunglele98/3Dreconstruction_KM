@@ -223,12 +223,29 @@ def normalize_file(path: Path) -> tuple[bool, str]:
 
 
 def main() -> None:
+    import argparse
+    parser = argparse.ArgumentParser(description="Normalize decorative/detail schema across param files")
+    parser.add_argument("--params-dir", type=Path, default=PARAMS_DIR)
+    parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
+    parser.add_argument("--street", type=str, default=None, help="Only process buildings on this street")
+    args = parser.parse_args()
+
     _configure_utf8_stdout()
+    params_dir = args.params_dir
+
     changed = 0
     total = 0
-    for path in sorted(PARAMS_DIR.glob("*.json")):
+    for path in sorted(params_dir.glob("*.json")):
         if path.name.startswith("_"):
             continue
+        if args.street:
+            try:
+                d = json.loads(path.read_text(encoding="utf-8"))
+                street = d.get("site", {}).get("street", "")
+                if args.street.lower() not in street.lower():
+                    continue
+            except (json.JSONDecodeError, OSError):
+                continue
         total += 1
         if normalize_file(path):
             changed += 1
