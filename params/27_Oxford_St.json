@@ -26,9 +26,9 @@
   "facade_material": "stucco",
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
-    2,
-    2,
-    1
+    0,
+    0,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -167,8 +167,8 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.367274+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
@@ -184,6 +184,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [2, 2, 1] -> [0, 0, 0]"
     ]
   },
   "bay_window": {
@@ -246,14 +253,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.9800000000000002,
-          "sill_height_m": 1.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -261,14 +262,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.8,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -277,13 +272,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.9,
-          "sill_height_m": 1.5,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "type": "double-hung"
         }
       ]
     }
@@ -400,7 +389,14 @@
     "decorative_elements_observed": [
       "cornice"
     ],
-    "colour_palette_observed": {}
+    "colour_palette_observed": {},
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

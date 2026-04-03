@@ -25,8 +25,7 @@
   "facade_material": "brick",
   "facade_colour": "red-brown brick upper facade with white-framed modern glazing and cream soffit trim at the lower level",
   "windows_per_floor": [
-    2,
-    2
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 1.2,
@@ -162,7 +161,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.919872+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
@@ -189,6 +188,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [2, 2] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "photo_observations": {
@@ -280,7 +289,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -309,14 +319,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.8,
-          "sill_height_m": 1.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -423,5 +427,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

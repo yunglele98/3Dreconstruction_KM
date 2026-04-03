@@ -27,8 +27,7 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    2,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -164,9 +163,9 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:46.747133+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:16.069290Z",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
@@ -183,6 +182,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [0, 2, 1] -> [0, 0]"
     ]
   },
   "decorative_elements": {
@@ -251,14 +257,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.1,
-          "sill_height_m": 1.6,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -267,13 +267,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.8,
-          "sill_height_m": 1.4,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }
@@ -354,7 +348,13 @@
     ],
     "colour_palette_observed": {},
     "condition_observed": "fair",
-    "depth_notes": {}
+    "depth_notes": {
+      "step_count": 1,
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
   },
   "handoff_fixes_applied": true,
   "notes": " [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix] [AUTO-ENRICH: Neglected Sector Priority Fix]",

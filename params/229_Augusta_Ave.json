@@ -178,9 +178,9 @@
       "timestamp": "2026-03-29T08:34:18.278271Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:13.303850Z",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
@@ -489,7 +489,14 @@
       "roof": "#3A3A3A",
       "accent": "#4A9A4A"
     },
-    "condition_observed": "fair"
+    "condition_observed": "fair",
+    "depth_notes": {
+      "setback_m_est": 0.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {
@@ -531,5 +538,6 @@
     ],
     "matches_existing": false,
     "text_count": 25
-  }
+  },
+  "inferred_setback_m": 0.0
 }

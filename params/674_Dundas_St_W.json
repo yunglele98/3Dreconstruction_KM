@@ -28,9 +28,8 @@
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
     0,
-    2,
-    2,
-    1
+    0,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -149,7 +148,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.185949+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:17.565593Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -164,6 +163,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 2, 2, 1] -> [0, 0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -201,7 +210,8 @@
       },
       "material": "glass_and_aluminum",
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 2
     }
   ],
   "party_wall_left": false,
@@ -227,14 +237,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -242,14 +246,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -258,13 +256,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "fixed",
-          "width_m": 0.7,
-          "height_m": 0.9,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "fixed",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }
@@ -395,5 +387,6 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
-  }
+  },
+  "eave_overhang_mm": 300
 }

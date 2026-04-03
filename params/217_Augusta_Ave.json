@@ -27,7 +27,6 @@
   "facade_material": "brick",
   "facade_colour": "brown brick with red/yellow Chinese community signage at upper level",
   "windows_per_floor": [
-    2,
     0
   ],
   "window_type": "storefront",
@@ -149,7 +148,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:44.735122+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:13.153960Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -169,6 +168,16 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [2, 0] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -292,7 +301,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -307,7 +317,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -337,14 +348,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.3,
-          "sill_height_m": 1.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -457,5 +462,6 @@
     ],
     "matches_existing": true,
     "text_count": 29
-  }
+  },
+  "eave_overhang_mm": 300
 }

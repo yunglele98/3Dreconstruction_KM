@@ -27,8 +27,7 @@
   "facade_material": "stucco",
   "facade_colour": "salmon-pink painted stucco over masonry",
   "windows_per_floor": [
-    0,
-    1
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.9,
@@ -168,7 +167,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:48.456108+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:17.758781Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -187,6 +186,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [0, 1] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -295,7 +304,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "balcony_detail": {
@@ -329,14 +339,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 0,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.9,
-          "sill_height_m": 1.5,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -440,5 +444,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

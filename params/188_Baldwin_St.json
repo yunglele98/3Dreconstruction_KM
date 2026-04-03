@@ -169,9 +169,9 @@
         "timestamp": "2026-03-31T07:46:03.660792+00:00"
       }
     ],
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:12.476586Z",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
@@ -474,7 +474,14 @@
       "roof": "#4A4A4A",
       "accent": "#E8D040"
     },
-    "condition_observed": "poor"
+    "condition_observed": "poor",
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 50,
+      "wall_thickness_m": 0.3
+    }
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

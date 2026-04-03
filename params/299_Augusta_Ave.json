@@ -26,6 +26,7 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "black storefront with blue, pink, and teal mural graphics and large panther mural",
   "windows_per_floor": [
+    0,
     0
   ],
   "window_type": "mixed",
@@ -179,7 +180,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.546222+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:14.388286Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -229,6 +230,17 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [0] -> [0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -349,7 +361,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -380,14 +393,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 0,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.0,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -396,13 +403,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.1,
-          "sill_height_m": 0.9,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "type": "double-hung"
         }
       ]
     }
@@ -541,5 +542,6 @@
     ],
     "matches_existing": false,
     "text_count": 29
-  }
+  },
+  "eave_overhang_mm": 300
 }

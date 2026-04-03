@@ -29,8 +29,8 @@
   "facade_colour": "beige-grey concrete or stone cladding at ground level with red-brown brick upper storeys",
   "windows_per_floor": [
     0,
-    4,
-    4
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -174,7 +174,7 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:47.030231+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:16.446841Z",
     "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
@@ -195,6 +195,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [0, 4, 4] -> [0, 0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -311,7 +321,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -326,7 +337,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_2",
@@ -341,7 +353,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "decorative_elements": {
@@ -397,14 +410,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 0,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -412,14 +419,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 4,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.1,
-          "sill_height_m": 0.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -427,14 +428,8 @@
       "floor": "Attic / gable",
       "windows": [
         {
-          "count": 4,
-          "type": "fixed",
-          "width_m": 0.5,
-          "height_m": 0.6,
-          "sill_height_m": 1.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "fixed",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -549,5 +544,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

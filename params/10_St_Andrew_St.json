@@ -28,8 +28,8 @@
   "facade_material": "brick",
   "facade_colour": "dark brown-red brick with cream/light grey stone decorative trim and tracery",
   "windows_per_floor": [
-    2,
-    4
+    0,
+    0
   ],
   "window_type": "arched",
   "window_width_m": 0.85,
@@ -174,9 +174,9 @@
       }
     ],
     "colour_palette_rebuilt": "2026-03-29T08:35:43.264104+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:11.212611Z",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
@@ -190,6 +190,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [2, 4] -> [0, 0]"
     ]
   },
   "photo_observations": {
@@ -281,14 +288,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -296,14 +297,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 4,
-          "type": "arched",
-          "width_m": 0.9,
-          "height_m": 5.0,
-          "sill_height_m": 3.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -396,7 +391,14 @@
     "roof_type_observed": "gable",
     "roof_pitch_deg": 40,
     "decorative_elements_observed": [],
-    "colour_palette_observed": {}
+    "colour_palette_observed": {},
+    "depth_notes": {
+      "setback_m_est": 3.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

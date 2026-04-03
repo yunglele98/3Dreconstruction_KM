@@ -24,6 +24,9 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
+    0,
+    0,
+    0,
     0
   ],
   "window_type": "double_hung",
@@ -159,9 +162,9 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.922933+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:15.006706Z",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
@@ -211,6 +214,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 4 -> 4 floors",
+      "windows_per_floor: [0] -> [0, 0, 0, 0]"
     ]
   },
   "storefront": {
@@ -269,14 +279,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 0.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -284,14 +288,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 0.6,
-          "sill_height_m": 0.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -299,14 +297,8 @@
       "floor": "Attic / gable",
       "windows": [
         {
-          "count": 2,
-          "type": "fixed",
-          "width_m": 0.7,
-          "height_m": 0.6,
-          "sill_height_m": 0.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "fixed",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -315,13 +307,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 0.5,
-          "sill_height_m": 0.4,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }
@@ -437,7 +423,14 @@
     "roof_pitch_deg": 0,
     "decorative_elements_observed": [
       "cornice"
-    ]
+    ],
+    "depth_notes": {
+      "setback_m_est": 0.5,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

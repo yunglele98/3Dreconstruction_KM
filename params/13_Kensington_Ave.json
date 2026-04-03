@@ -180,8 +180,8 @@
       "timestamp": "2026-03-29T08:34:16.632883Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-30T02:33:23.485405",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "porch_enriched": "2026-03-29T08:38:21.410514Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
@@ -579,7 +579,11 @@
     "condition_notes": "Row of Victorian bay-and-gable houses. Brick generally intact. Ground floors modified for commercial use. Yellow awning on right unit. Some weathering on trim and bargeboards. Utility wires cross facade. A/C unit visible on one window.",
     "depth_notes": {
       "setback_m_est": 0,
-      "porch_depth_m_est": 1.0
+      "porch_depth_m_est": 1.0,
+      "step_count": 1,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
     }
   },
   "porch_detail": {
@@ -615,5 +619,6 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
-  }
+  },
+  "inferred_setback_m": 0.0
 }

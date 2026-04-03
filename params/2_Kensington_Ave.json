@@ -211,9 +211,9 @@
       "timestamp": "2026-03-29T08:34:19.307102Z",
       "script": "match_photos_to_params.py"
     },
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:14.476170Z",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "porch_enriched": "2026-03-29T08:38:22.797717Z",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
@@ -616,7 +616,14 @@
       "accent": "#E8E0D0"
     },
     "condition_observed": "good",
-    "condition_notes": "Entire facade painted blue-grey with cream/white trim highlights. Paint in good condition. Decorative bargeboards well preserved. Gable shingles visible under paint. Gothic pointed-arch gable window is distinctive. Well maintained steps and railings. Small front yard with low hedge."
+    "condition_notes": "Entire facade painted blue-grey with cream/white trim highlights. Paint in good condition. Decorative bargeboards well preserved. Gable shingles visible under paint. Gothic pointed-arch gable window is distinctive. Well maintained steps and railings. Small front yard with low hedge.",
+    "depth_notes": {
+      "setback_m_est": 2.0,
+      "foundation_height_m_est": 0.3,
+      "step_count": 2,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
+    }
   },
   "porch_detail": {
     "present": true,

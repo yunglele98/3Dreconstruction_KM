@@ -25,8 +25,7 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    2
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -181,9 +180,9 @@
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-03-29T08:35:45.098931+00:00",
-    "setback_inferred": "2026-03-30T02:33:23.485405",
+    "setback_inferred": "2026-04-03T06:09:40.847008",
     "storefront_enriched": "2026-03-29T08:38:13.641898Z",
-    "depth_notes_consolidated": "2026-03-29T04:38:17.884509",
+    "depth_notes_consolidated": "2026-04-03T06:09:41.839709",
     "colour_diversified": "2026-03-29T08:41:26.229140+00:00",
     "colour_diversification_changes": [
       {
@@ -201,6 +200,13 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [0, 2] -> [0]"
     ]
   },
   "storefront": {
@@ -271,14 +277,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.7,
-          "sill_height_m": 2.1,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -359,7 +359,11 @@
     "colour_palette_observed": {},
     "condition_observed": "fair",
     "depth_notes": {
-      "setback_m_est": 0.0
+      "setback_m_est": 0.0,
+      "step_count": 1,
+      "foundation_height_m_est": 0.3,
+      "eave_overhang_mm_est": 300,
+      "wall_thickness_m": 0.3
     }
   },
   "wall_thickness_m": 0.3,
@@ -398,5 +402,6 @@
     ],
     "matches_existing": false,
     "text_count": 6
-  }
+  },
+  "inferred_setback_m": 0.0
 }
