@@ -1,0 +1,16 @@
+{
+  "task_id": "TASK-20260403-014",
+  "title": "Implement shadow and density impact analysis for scenarios",
+  "description": "Create scripts/planning/shadow_impact.py and scripts/planning/analyze_density.py. Shadow analysis: compute sun exposure changes per building across seasons using pyephem or pvlib. Density analysis: compute FSI, lot coverage, dwelling unit changes. Output JSON + summary report.",
+  "priority": "low",
+  "estimate_points": 5,
+  "skills": ["python", "gis", "research"],
+  "write_scope": [
+    "scripts/planning/shadow_impact.py",
+    "scripts/planning/analyze_density.py"
+  ],
+  "dependencies": ["TASK-20260403-013"],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

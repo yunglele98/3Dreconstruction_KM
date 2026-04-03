@@ -1,0 +1,16 @@
+{
+  "task_id": "TASK-20260403-018",
+  "title": "Implement LOD generation and collision mesh pipeline",
+  "description": "Ensure scripts/generate_lods.py and scripts/generate_collision_mesh.py work for batch processing. Generate LOD0-LOD3 for all buildings in outputs/full/. Create simplified collision meshes for game engine use. Validate mesh counts and triangle budgets.",
+  "priority": "medium",
+  "estimate_points": 3,
+  "skills": ["python", "blender", "pipeline"],
+  "write_scope": [
+    "scripts/generate_lods.py",
+    "scripts/generate_collision_mesh.py"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

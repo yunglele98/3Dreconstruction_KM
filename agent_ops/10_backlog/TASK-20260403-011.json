@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-20260403-011",
+  "title": "Implement Stage 8 3D Tiles export for CesiumJS",
+  "description": "Create scripts/export/export_3dtiles.py to convert exported meshes to 3D Tiles format for CesiumJS web viewer. Use py3dtiles. Include LOD hierarchy, bounding volumes, and metadata per tile. Output to tiles_3d/. Critical for web planning platform.",
+  "priority": "high",
+  "estimate_points": 5,
+  "skills": ["python", "gis", "pipeline"],
+  "write_scope": [
+    "scripts/export/export_3dtiles.py"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

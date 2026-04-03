@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-20260403-015",
+  "title": "Run Phase 0 visual audit on current renders",
+  "description": "Execute scripts/visual_audit/run_full_audit.py (or --limit 50 for quick pass) to compare outputs/buildings_renders_v1/ parametric renders against PHOTOS KENSINGTON/ field photos. Generate ranked priority queue for buildings needing photogrammetry, segmentation, or colour fixes. Output drives downstream pipeline priorities.",
+  "priority": "high",
+  "estimate_points": 2,
+  "skills": ["python", "render", "qa"],
+  "write_scope": [
+    "outputs/visual_audit/"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

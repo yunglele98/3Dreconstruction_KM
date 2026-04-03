@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-20260403-009",
+  "title": "Implement Stage 5 PBR texture extraction pipeline",
+  "description": "Flesh out scripts/texture/extract_pbr.py using Intrinsic Anything to decompose field photos into albedo, roughness, normal, and metallic maps. Output to textures/pbr/ organized by address. Required for photogrammetric mesh texturing path.",
+  "priority": "medium",
+  "estimate_points": 5,
+  "skills": ["python", "pipeline", "research"],
+  "write_scope": [
+    "scripts/texture/extract_pbr.py"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

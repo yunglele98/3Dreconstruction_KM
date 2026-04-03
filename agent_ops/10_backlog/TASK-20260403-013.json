@@ -1,0 +1,17 @@
+{
+  "task_id": "TASK-20260403-013",
+  "title": "Implement Stage 11 scenario application and impact analysis",
+  "description": "Flesh out scripts/planning/generate_scenarios.py and create scripts/planning/apply_scenario.py. Apply JSON overlay interventions from scenarios/ (add_floor, new_build, facade_renovation, etc.) onto baseline params. Generate modified params for scenario builds. Populate all 5 scenario directories with interventions.json.",
+  "priority": "medium",
+  "estimate_points": 5,
+  "skills": ["python", "planning", "pipeline"],
+  "write_scope": [
+    "scripts/planning/generate_scenarios.py",
+    "scripts/planning/apply_scenario.py",
+    "scenarios/"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

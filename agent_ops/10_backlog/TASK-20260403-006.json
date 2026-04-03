@@ -1,0 +1,16 @@
+{
+  "task_id": "TASK-20260403-006",
+  "title": "Complete mesh export watertight repair pipeline",
+  "description": "Resolve the 2 active mesh repair tasks (TASK-20260329-901/902). Implement automated watertight repair script that handles degenerate faces and open edges for batch export. Test on 103 Bellevue Ave first, then top-20 priority buildings from triage. Parent task: TASK-20260329-EXPORT-MESH.",
+  "priority": "high",
+  "estimate_points": 5,
+  "skills": ["python", "blender", "pipeline"],
+  "write_scope": [
+    "scripts/repair_export_glb_mesh.py",
+    "scripts/blender_cleanup_meshes.py"
+  ],
+  "dependencies": ["TASK-20260329-901", "TASK-20260329-902"],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

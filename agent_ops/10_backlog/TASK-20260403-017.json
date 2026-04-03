@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-20260403-017",
+  "title": "Run deep facade analysis on remaining unanalyzed batches",
+  "description": "Batches 4-8 in batches/ still need deep facade analysis. Dispatch to Gemini agents for photo analysis per AGENT_PROMPT.md rules. Merge results via deep_facade_pipeline.py merge-street. Then promote observations into generator-readable fields. Track coverage via deep_facade_pipeline.py audit.",
+  "priority": "high",
+  "estimate_points": 5,
+  "skills": ["photo-analysis", "facade-audit", "heritage"],
+  "write_scope": [
+    "params/"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

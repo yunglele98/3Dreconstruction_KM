@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-20260403-007",
+  "title": "Implement Stage 3 depth fusion enrichment",
+  "description": "Create scripts/enrich/fuse_depth.py to merge depth maps from Stage 1 into params. Estimate facade setbacks, foundation heights, eave overhangs from depth. Update params/*.json depth_notes and roof_detail.eave_overhang_mm. Idempotent, tracks in _meta.fusion_applied.",
+  "priority": "medium",
+  "estimate_points": 3,
+  "skills": ["python", "pipeline"],
+  "write_scope": [
+    "scripts/enrich/fuse_depth.py"
+  ],
+  "dependencies": ["TASK-20260403-001"],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

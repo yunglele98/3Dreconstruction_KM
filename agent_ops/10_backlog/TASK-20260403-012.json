@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-20260403-012",
+  "title": "Implement Stage 9 visual regression testing",
+  "description": "Create scripts/verify/visual_regression.py to compare new renders against reference renders using SSIM and perceptual hashing. Flag regressions above threshold. Output HTML report with side-by-side diffs. Integrate with pytest via scripts/verify/run_full_qa.py.",
+  "priority": "medium",
+  "estimate_points": 3,
+  "skills": ["python", "qa", "automation"],
+  "write_scope": [
+    "scripts/verify/visual_regression.py"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}

@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-20260403-019",
+  "title": "Implement Stage 1 SENSE feature extraction (LightGlue+SuperPoint)",
+  "description": "Create scripts/sense/extract_features.py using LightGlue+SuperPoint to extract keypoints and descriptors from field photos. Output .h5 files to features/. Required for COLMAP photogrammetry matching and multi-view reconstruction.",
+  "priority": "medium",
+  "estimate_points": 3,
+  "skills": ["python", "pipeline", "research"],
+  "write_scope": [
+    "scripts/sense/extract_features.py"
+  ],
+  "dependencies": [],
+  "owner": null,
+  "status": "backlog",
+  "created_at": "2026-04-03T00:00:00Z"
+}
