@@ -54,7 +54,16 @@
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4,
     "heritage_score": 41,
-    "significance": "low"
+    "significance": "low",
+    "extracted_features": [
+      "voussoirs",
+      "tower",
+      "victorian_style"
+    ],
+    "statement_materials": [
+      "brick",
+      "stone"
+    ]
   },
   "context": {
     "building_type": "institutional",

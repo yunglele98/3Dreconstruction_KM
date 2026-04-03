@@ -55,6 +55,9 @@
     "significance": "medium",
     "extracted_features": [
       "victorian_style"
+    ],
+    "statement_materials": [
+      "brick"
     ]
   },
   "context": {
@@ -203,7 +206,8 @@
     "storefront_enriched": "2026-03-30T06:33:20.948640Z",
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "bay_window": {
@@ -430,5 +434,18 @@
     "element_counts": {},
     "occlusion": {},
     "total_facade_detections": 0
+  },
+  "signage_analysis": {
+    "detected_business_name": "{KENSINGTONKJDS INFO",
+    "confidence": 0.515,
+    "all_texts": [
+      "{KENSINGTONKJDS INFO",
+      "RLY LEARNING CENTRL",
+      "KENSINGTON KIDS",
+      "Learning Centre",
+      "POTS AVAILABLE"
+    ],
+    "matches_existing": null,
+    "text_count": 11
   }
 }

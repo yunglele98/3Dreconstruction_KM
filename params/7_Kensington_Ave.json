@@ -212,7 +212,8 @@
     ],
     "fusion_applied": [
       "depth",
-      "segmentation"
+      "segmentation",
+      "signage"
     ]
   },
   "photo_observations": {
@@ -497,5 +498,18 @@
     "trim": "#392922",
     "roof": "#5E5555",
     "accent": "#3C4133"
+  },
+  "signage_analysis": {
+    "detected_business_name": "{KENSINGTONKJDS INFO",
+    "confidence": 0.515,
+    "all_texts": [
+      "{KENSINGTONKJDS INFO",
+      "RLY LEARNING CENTRL",
+      "KENSINGTON KIDS",
+      "Learning Centre",
+      "POTS AVAILABLE"
+    ],
+    "matches_existing": false,
+    "text_count": 11
   }
 }

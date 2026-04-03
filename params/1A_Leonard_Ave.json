@@ -48,7 +48,14 @@
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4,
     "heritage_score": 39,
-    "significance": "minimal"
+    "significance": "minimal",
+    "extracted_features": [
+      "quoins"
+    ],
+    "statement_materials": [
+      "brick",
+      "stone"
+    ]
   },
   "context": {
     "building_type": "residential",
