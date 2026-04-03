@@ -229,7 +229,7 @@
     "generation_defaults_applied": true,
     "photo_matched": {
       "method": "number_variant",
-      "timestamp": "2026-03-29T08:34:17.161137Z",
+      "timestamp": "2026-04-03T06:38:44.316316Z",
       "script": "match_photos_to_params.py"
     },
     "setback_inferred": "2026-03-30T02:33:23.485405",
@@ -539,5 +539,8 @@
     "foundation_height_m_est": 1.2,
     "eave_overhang_mm_est": 241.0,
     "bay_window_projection_m_est": 1.0
+  },
+  "photo_observations": {
+    "photo": "PXL_20260318_223413574.jpg"
   }
 }
