@@ -4,12 +4,20 @@
   "description": "Initialize web/ directory with CesiumJS globe viewer, Potree point cloud viewer integration, and building inspector panel (click building → show param card + matched photo). Use Svelte or Vanilla TS. Vercel deployment config. This is the public-facing deliverable.",
   "priority": "high",
   "estimate_points": 8,
-  "skills": ["python", "integration", "research"],
+  "skills": [
+    "python",
+    "integration",
+    "research"
+  ],
   "write_scope": [
     "web/"
   ],
-  "dependencies": ["TASK-20260403-011"],
+  "dependencies": [
+    "TASK-20260403-011"
+  ],
   "owner": null,
-  "status": "backlog",
-  "created_at": "2026-04-03T00:00:00Z"
+  "status": "done",
+  "created_at": "2026-04-03T00:00:00Z",
+  "completed_at": "2026-04-03T06:12:12.814388Z",
+  "completed_by": "claude-1"
 }
