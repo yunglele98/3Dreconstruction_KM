@@ -337,13 +337,19 @@
     "brick_colour_hex": "#D8D0C0",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#3D2D23",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
     "heritage_summary": "Constructed as one of a pair of semi-detached residences, the property has retained building features reflecting vernacular interpretations of Victorian architectural styles, including its cross-gabled roofline, brick cladding with brick detailing, and window openings above the first storey. With its visibly layered built form, the property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
     "heritage_expression": "Character-defining facade elements include cornice.",
-    "mortar_colour_hex": "#C1B199"
+    "mortar_colour_hex": "#C1B199",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -555,5 +561,13 @@
       "cap_style": "corbelled"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 2757,
+    "front_net_bricks": 2757,
+    "front_courses": 126,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0025
+  }
 }

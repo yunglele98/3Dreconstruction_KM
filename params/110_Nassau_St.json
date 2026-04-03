@@ -225,7 +225,13 @@
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "mortar_colour_hex": "#B0A797",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
-    "heritage_summary": "This building dates to the  period. Character-defining elements include its original massing and streetscape presence."
+    "heritage_summary": "This building dates to the  period. Character-defining elements include its original massing and streetscape presence.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -394,5 +400,13 @@
       "cap_style": "simple"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 2499,
+    "front_net_bricks": 2499,
+    "front_courses": 115,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0006
+  }
 }

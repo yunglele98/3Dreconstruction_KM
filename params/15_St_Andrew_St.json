@@ -256,13 +256,19 @@
     "brick_colour_hex": "#C8B898",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 9,
     "trim_colour_hex": "#363636",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
     "heritage_summary": "Constructed as a semi-detached pair, the properties retain most of their original building features including the shared roofline with central gable, and mirrored facades featuring brick cladding and decorative brickwork, flat headed and round arched window and door opening, and shingle clad turrets with decorative woodwork. 13 St.",
-    "mortar_colour_hex": "#B4AEA0"
+    "mortar_colour_hex": "#B4AEA0",
+    "brick_length_mm": 215,
+    "brick_height_mm": 60,
+    "brick_width_mm": 100,
+    "course_height_mm": 69,
+    "brick_variation_mm": 1.5,
+    "brick_colour_variation": 0.04
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -435,5 +441,13 @@
       "material": "brick",
       "cap_style": "simple"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 3044,
+    "front_net_bricks": 3044,
+    "front_courses": 139,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 14.49,
+    "blender_brick_scale": 1.0009
   }
 }

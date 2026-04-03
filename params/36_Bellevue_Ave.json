@@ -260,7 +260,13 @@
     "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 2, 2 opening rhythm from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromati.",
     "heritage_expression": "Key heritage elements on the principal elevation include cornice.",
-    "mortar_colour_hex": "#BBAC94"
+    "mortar_colour_hex": "#BBAC94",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -397,5 +403,13 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "brick_geometry": {
+    "total_visible_bricks": 1510,
+    "front_net_bricks": 1510,
+    "front_courses": 72,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0122
+  }
 }

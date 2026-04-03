@@ -230,13 +230,19 @@
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#392A20",
     "composition": "The street elevation spans roughly 5.5 metres across 2 storeys and is capped by a gable, consistent with its park/open space typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Bellevue Square Park has value as the largest and earliest planned public space within the District, which was donated by the Denison family to the City of Toronto in 1872. The property is directly associated with the early development of the District where its rectangular plan was formed by the pie.",
     "mortar_colour_hex": "#BBAC95",
-    "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -396,5 +402,13 @@
       "material": "brick",
       "cap_style": "corbelled"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 2883,
+    "front_net_bricks": 2883,
+    "front_courses": 126,
+    "bricks_per_course": 24.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0025
   }
 }

@@ -242,13 +242,19 @@
     "brick_colour_hex": "#C1613A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#3E2E1E",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 0 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
     "mortar_colour_hex": "#978877",
-    "heritage_expression": "Character-defining elements include ground-floor storefront."
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -390,5 +396,13 @@
       "material": "brick",
       "cap_style": "corbelled"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 1150,
+    "front_net_bricks": 1150,
+    "front_courses": 63,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0025
   }
 }

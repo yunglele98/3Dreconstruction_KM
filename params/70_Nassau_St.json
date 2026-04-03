@@ -211,7 +211,13 @@
     "opening_rhythm": "The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "mortar_colour_hex": "#BDAB92",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
-    "heritage_summary": "Through its construction date and typology, each property is directly as. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles."
+    "heritage_summary": "Through its construction date and typology, each property is directly as. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -417,5 +423,13 @@
       "material": "brick",
       "cap_style": "simple"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 21721,
+    "front_net_bricks": 4385,
+    "front_courses": 197,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0013
   }
 }

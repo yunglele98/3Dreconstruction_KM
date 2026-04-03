@@ -257,13 +257,19 @@
     "brick_colour_hex": "#C46538",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 8,
     "trim_colour_hex": "#E8E0D0",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include bay window, original windows.",
     "heritage_summary": "The property has value as a purpose-built two-storey Commercial building that reflects vernacular interpretations of early-twentieth-century architectural styles. Through its construction date and typology, the property is associated with the District’s pattern of commercial adaptation and expansion.",
-    "mortar_colour_hex": "#BCB5A4"
+    "mortar_colour_hex": "#BCB5A4",
+    "brick_length_mm": 215,
+    "brick_height_mm": 57,
+    "brick_width_mm": 100,
+    "course_height_mm": 65,
+    "brick_variation_mm": 1,
+    "brick_colour_variation": 0.03
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -399,5 +405,13 @@
       "cap_style": "plain"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 2098,
+    "front_net_bricks": 2098,
+    "front_courses": 110,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 15.38,
+    "blender_brick_scale": 1.0014
+  }
 }

@@ -304,7 +304,13 @@
     "opening_rhythm": "The visible opening pattern is organized as 4, 6, 6, 6 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "mortar_colour_hex": "#B3AB9C",
     "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
-    "heritage_summary": "This building dates to the  period. Character-defining elements include its original massing and streetscape presence."
+    "heritage_summary": "This building dates to the  period. Character-defining elements include its original massing and streetscape presence.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -501,5 +507,13 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "brick_geometry": {
+    "total_visible_bricks": 2799,
+    "front_net_bricks": 2799,
+    "front_courses": 95,
+    "bricks_per_course": 31.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0022
+  }
 }

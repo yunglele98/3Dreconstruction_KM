@@ -229,13 +229,19 @@
     "brick_colour_hex": "#B44834",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#483220",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its converted house-form, commercial, row typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Constructed as a row between 1924 and 1930, the additions at 48, 50, and 52 Kensington Avenue have retained their facades above the second storey, which each feature a single wide window opening with stone lintel and sill beneath a pressed metal cornice with a decorative brick parapet. The property at 46 Kensington Avenue retains original building features including its bay-and-gable form above the first storey and roofline with centre gable.",
     "mortar_colour_hex": "#A6967F",
-    "heritage_expression": "Key storefront and facade features include cornice."
+    "heritage_expression": "Key storefront and facade features include cornice.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -402,5 +408,13 @@
       "cap_style": "corbelled"
     }
   },
-  "chimneys": 2
+  "chimneys": 2,
+  "brick_geometry": {
+    "total_visible_bricks": 2642,
+    "front_net_bricks": 2642,
+    "front_courses": 121,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0004
+  }
 }

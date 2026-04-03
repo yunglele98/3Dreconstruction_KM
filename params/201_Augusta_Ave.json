@@ -329,13 +329,19 @@
     "brick_colour_hex": "#AD5035",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 8,
     "trim_colour_hex": "#FFFFFF",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, decorative brick.",
     "heritage_summary": "Each property has value as an early-twentieth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District’s early residential development from the.",
-    "mortar_colour_hex": "#BEB5A4"
+    "mortar_colour_hex": "#BEB5A4",
+    "brick_length_mm": 215,
+    "brick_height_mm": 57,
+    "brick_width_mm": 100,
+    "course_height_mm": 65,
+    "brick_variation_mm": 1,
+    "brick_colour_variation": 0.03
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -471,5 +477,13 @@
       "cap_style": "plain"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 2918,
+    "front_net_bricks": 2918,
+    "front_courses": 147,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 15.38,
+    "blender_brick_scale": 1.0047
+  }
 }

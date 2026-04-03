@@ -332,7 +332,13 @@
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
     "heritage_summary": "Constructed as a row, each property retains building features that reflect vernacular interpretations of Victorian architectural styles, including its shared roofline, corbelled brickwork, and shared entrances between each pair that are recessed behind rounded brick arches. The properties at 9-11 and 13-15 Glen Baillie Place also retain their hexagonal shingle cladding at the second storey.",
-    "mortar_colour_hex": "#BBAC94"
+    "mortar_colour_hex": "#BBAC94",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -484,5 +490,13 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "brick_geometry": {
+    "total_visible_bricks": 1276,
+    "front_net_bricks": 1276,
+    "front_courses": 98,
+    "bricks_per_course": 17.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0064
+  }
 }

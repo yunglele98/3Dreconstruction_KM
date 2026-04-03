@@ -320,13 +320,19 @@
     "brick_colour_hex": "#A64E36",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#3B2C21",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
     "heritage_summary": "Constructed as part of a row, the properties have retained many of their original building features including their shared roofline with gables, brick cladding, segmentally arched window openings, and ground level bay windows. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
-    "mortar_colour_hex": "#A7967E"
+    "mortar_colour_hex": "#A7967E",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -483,5 +489,13 @@
       "material": "brick",
       "cap_style": "corbelled"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 1745,
+    "front_net_bricks": 1745,
+    "front_courses": 82,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0109
   }
 }

@@ -318,13 +318,19 @@
     "brick_colour_hex": "#B2653B",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
     "heritage_expression": "Character-defining facade elements include cornice.",
-    "mortar_colour_hex": "#948474"
+    "mortar_colour_hex": "#948474",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -456,5 +462,13 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "brick_geometry": {
+    "total_visible_bricks": 1208,
+    "front_net_bricks": 1208,
+    "front_courses": 63,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0025
+  }
 }

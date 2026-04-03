@@ -314,13 +314,19 @@
     "brick_colour_hex": "#A86344",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#251D15",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 0 window bays from lower to upper levels, using storefront, and 2 principal entrances.",
     "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its const.",
     "heritage_expression": "Character-defining facade elements include cornice.",
-    "mortar_colour_hex": "#C1B197"
+    "mortar_colour_hex": "#C1B197",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -466,5 +472,13 @@
       "cap_style": "corbelled"
     }
   },
-  "chimneys": 2
+  "chimneys": 2,
+  "brick_geometry": {
+    "total_visible_bricks": 1672,
+    "front_net_bricks": 1672,
+    "front_courses": 85,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0062
+  }
 }

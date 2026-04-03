@@ -232,13 +232,19 @@
     "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#34271E",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its multi-residential ; house-form, detached typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "The property has value as a rare and early example of a purpose-built walk-up apartment building incorporating a pre-1884 House-form building. Constructed onto to the rear of 96 Bellevue Avenue between 1909 and 1910, the walk-up apartment building, with street addresses of 86 and 90 Oxford Street retains its scale, form and massing and original building features including buff brick cladding with decorative red brickwork and stonework, segmentally arched window openings, three-sided flat headed bay windows, wide eaves, and recessed entrances.",
     "mortar_colour_hex": "#A99A83",
-    "heritage_expression": "Character-defining elements include stone voussoirs over window openings."
+    "heritage_expression": "Character-defining elements include stone voussoirs over window openings.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -397,5 +403,13 @@
       "material": "brick",
       "cap_style": "corbelled"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 2642,
+    "front_net_bricks": 2642,
+    "front_courses": 121,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0004
   }
 }

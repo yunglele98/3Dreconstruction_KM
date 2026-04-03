@@ -273,7 +273,13 @@
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "The property retains many of its original building features, including mansard roofline with dormer windows, two-storey bay window, three-point arched window, flat headed window and door openings, brick cladding with decorative brickwork, and prominent three-storey open porch with pyramidal roof. Originally built as a private hospital and residence for Dr.",
     "mortar_colour_hex": "#B1A99B",
-    "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -423,5 +429,13 @@
       "cap_style": "simple"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 2784,
+    "front_net_bricks": 2784,
+    "front_courses": 138,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0006
+  }
 }

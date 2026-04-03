@@ -351,7 +351,13 @@
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick, cornice, gable brackets.",
     "heritage_summary": "Constructed as a pair, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bay windows, brick cladding with decorative brickwork, decorative wooden gable brackets and bargeboards, and fenestration pattern with mix of segmental and flat arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
-    "mortar_colour_hex": "#BDB5A8"
+    "mortar_colour_hex": "#BDB5A8",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -530,5 +536,13 @@
       "cap_style": "simple"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 2108,
+    "front_net_bricks": 2108,
+    "front_courses": 98,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0064
+  }
 }

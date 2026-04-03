@@ -336,7 +336,13 @@
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 3 additional bays above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice.",
     "secondary_material": "painted brick, stone veneer",
-    "mortar_colour_hex": "#B5A58F"
+    "mortar_colour_hex": "#B5A58F",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -627,5 +633,13 @@
       "cap_style": "simple"
     }
   },
-  "chimneys": 2
+  "chimneys": 2,
+  "brick_geometry": {
+    "total_visible_bricks": 2354,
+    "front_net_bricks": 2354,
+    "front_courses": 173,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0056
+  }
 }

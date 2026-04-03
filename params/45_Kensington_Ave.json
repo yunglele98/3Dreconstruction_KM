@@ -268,13 +268,19 @@
     "brick_colour_hex": "#A5563A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 9,
     "trim_colour_hex": "#191818",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick.",
     "heritage_summary": "Constructed as a row, 41-45 Kensington Avenue, along with the adjacent 39 Kensington Avenue, retain most of their original building features including cross-gabled rooflines, brick cladding, ornamental gable shingles and billet moulding, and mixture of flat, round-headed, and depressed arched window and door openings with drip mouldings. The property at 39 Kensington Avenue also retains its first storey bay window.",
-    "mortar_colour_hex": "#A7A092"
+    "mortar_colour_hex": "#A7A092",
+    "brick_length_mm": 215,
+    "brick_height_mm": 60,
+    "brick_width_mm": 100,
+    "course_height_mm": 69,
+    "brick_variation_mm": 1.5,
+    "brick_colour_variation": 0.04
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -463,5 +469,13 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "brick_geometry": {
+    "total_visible_bricks": 2400,
+    "front_net_bricks": 2400,
+    "front_courses": 111,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 14.49,
+    "blender_brick_scale": 1.004
+  }
 }

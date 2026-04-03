@@ -254,12 +254,18 @@
     "brick_colour_hex": "#AC6148",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 9,
     "trim_colour_hex": "#39281F",
     "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, decorative brick.",
-    "mortar_colour_hex": "#B3AC9C"
+    "mortar_colour_hex": "#B3AC9C",
+    "brick_length_mm": 215,
+    "brick_height_mm": 60,
+    "brick_width_mm": 100,
+    "course_height_mm": 69,
+    "brick_variation_mm": 1.5,
+    "brick_colour_variation": 0.04
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -400,5 +406,13 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "brick_geometry": {
+    "total_visible_bricks": 3978,
+    "front_net_bricks": 3978,
+    "front_courses": 153,
+    "bricks_per_course": 27.0,
+    "courses_per_metre": 14.49,
+    "blender_brick_scale": 1.0003
+  }
 }

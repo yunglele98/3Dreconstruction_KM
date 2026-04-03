@@ -268,13 +268,19 @@
     "brick_colour_hex": "#BC5E40",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#4A3A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form (27, & 33 kensington avenue) house-form, row typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, gable brackets.",
     "heritage_summary": "33 Kensington Avenue has also retained with decorative wooden gable brackets and pediment. Each property has evolved over time while retaining original building features including cross-gabled rooflines, double-height bay windows, brick cladding and fenestration pattern with segmentally arched openings (some of the openings at 31 Kensington Avenue have been modified).",
-    "mortar_colour_hex": "#A4947D"
+    "mortar_colour_hex": "#A4947D",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -405,5 +411,13 @@
       "material": "brick",
       "cap_style": "corbelled"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 1130,
+    "front_net_bricks": 1130,
+    "front_courses": 69,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0107
   }
 }

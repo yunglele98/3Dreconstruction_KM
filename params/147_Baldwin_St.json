@@ -260,13 +260,19 @@
     "brick_colour_hex": "#BA6C3F",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 9,
     "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_summary": "Constructed as a semi-detached pair, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline and segmentally arched window openings at the second storey. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
     "mortar_colour_hex": "#C8C1B0",
-    "heritage_expression": "Character-defining elements include ground-floor storefront."
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 60,
+    "brick_width_mm": 100,
+    "course_height_mm": 69,
+    "brick_variation_mm": 1.5,
+    "brick_colour_variation": 0.04
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -404,5 +410,13 @@
       "material": "brick",
       "cap_style": "simple"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 2252,
+    "front_net_bricks": 2252,
+    "front_courses": 112,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 14.49,
+    "blender_brick_scale": 1.0067
   }
 }

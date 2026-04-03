@@ -277,13 +277,19 @@
     "brick_colour_hex": "#BC5937",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#5A4A3A",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial, converted house-form, semi-detached typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include original windows, cornice.",
     "heritage_summary": "The property at 44 Kensington Avenue has value as a nineteenth-century House-form building that has been modified to accommodate. The property at 42 Kensington Avenue has value as an early-twentieth-century vernacular style twostorey commercial addition to a nineteenth-century residential structure.",
-    "mortar_colour_hex": "#AC9C8D"
+    "mortar_colour_hex": "#AC9C8D",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -434,5 +440,13 @@
       "cap_style": "corbelled"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 2257,
+    "front_net_bricks": 2257,
+    "front_courses": 118,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0036
+  }
 }

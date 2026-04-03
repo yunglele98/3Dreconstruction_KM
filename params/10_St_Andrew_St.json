@@ -290,7 +290,13 @@
     "opening_rhythm": "The elevation is ordered in broad vertical bays, with a 2, 4 opening rhythm from lower to upper levels, using arched, and 2 principal entrances.",
     "heritage_summary": "Constructed in the Byzantine Revival style, the property has retained many of its architectural details including brick cladding with decorative stonework, twin towers with double-height round arched windows, large entrance stairway, and double entrance with round arched transoms beneath a large round arched window. Constructed for the oldest Jewish congregation in the District, it was designed by Kaplan & Sprachman, a prolific architectural firm best known for designing movie theatres, as well as synagogues and buildings for the Jewish communities.",
     "mortar_colour_hex": "#CCC4B4",
-    "heritage_expression": "Character-defining elements include ground-floor storefront."
+    "heritage_expression": "Character-defining elements include ground-floor storefront.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 63,
+    "brick_width_mm": 100,
+    "course_height_mm": 73,
+    "brick_variation_mm": 2,
+    "brick_colour_variation": 0.05
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -425,5 +431,13 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "brick_geometry": {
+    "total_visible_bricks": 2721,
+    "front_net_bricks": 2721,
+    "front_courses": 131,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.7,
+    "blender_brick_scale": 1.0039
+  }
 }

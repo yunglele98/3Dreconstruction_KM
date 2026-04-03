@@ -360,13 +360,19 @@
     "brick_colour_hex": "#AD4930",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 4, 4, 0 window bays from lower to upper levels, using mixed, and 3 principal entrances.",
     "heritage_summary": "C. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
     "heritage_expression": "Character-defining facade elements include cornice.",
-    "mortar_colour_hex": "#A7977D"
+    "mortar_colour_hex": "#A7977D",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -521,5 +527,13 @@
       "cap_style": "corbelled"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 1384,
+    "front_net_bricks": 1384,
+    "front_courses": 94,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0078
+  }
 }

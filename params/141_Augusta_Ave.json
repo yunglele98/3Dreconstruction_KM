@@ -256,13 +256,19 @@
     "brick_colour_hex": "#954937",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#291E17",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
     "heritage_summary": "Constructed as the southernmost of seven identical rowhouses, the property has retained most of its original building features including a two-storey porch with decorative millwork, decorative brickwork, fenestration including stained-glass transoms, and a turreted attic dormer. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
-    "mortar_colour_hex": "#B1A293"
+    "mortar_colour_hex": "#B1A293",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -431,5 +437,13 @@
   },
   "eave_overhang_mm": 300,
   "foundation_height_m": 0.3,
-  "inferred_setback_m": 0.0
+  "inferred_setback_m": 0.0,
+  "brick_geometry": {
+    "total_visible_bricks": 2734,
+    "front_net_bricks": 2734,
+    "front_courses": 125,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0074
+  }
 }

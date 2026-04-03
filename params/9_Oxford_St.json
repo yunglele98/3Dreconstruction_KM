@@ -285,13 +285,19 @@
     "brick_colour_hex": "#B45132",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#3E2E1E",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, original windows, decorative brick.",
     "heritage_summary": "The property at 15 Oxford Street has retained its brick cladding with decorative brickwork, mix of segmental and flat arch openings, and vertical orientation including shallow projecting bay windows set under a gable with decorative woodwork. Constructed as a row, the properties at 7-13 Oxford Street have retained many of their original building features including their shared roofline with gables, brick cladding, segmentally arched window and door openings, and ground level bay windows.",
-    "mortar_colour_hex": "#998776"
+    "mortar_colour_hex": "#998776",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -458,5 +464,13 @@
       "material": "brick",
       "cap_style": "corbelled"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 1508,
+    "front_net_bricks": 1508,
+    "front_courses": 82,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0093
   }
 }

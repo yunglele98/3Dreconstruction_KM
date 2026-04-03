@@ -295,13 +295,19 @@
     "brick_colour_hex": "#7A5A48",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#F0EDE8",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a gable, consistent with its commercial, converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include bay window, decorative brick, cornice, gable brackets.",
     "heritage_summary": "The property at 40 Kensington Avenue retains original building features including its cross-gabled roofline, front gable with decorative wooden brackets, and projecting bay and fenestration pattern above the first storey. With its visible layering of residential and commercial built forms, each property is physically, functionally, visually, and historically linked to the surrounding market area.",
-    "mortar_colour_hex": "#B1A192"
+    "mortar_colour_hex": "#B1A192",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -574,5 +580,13 @@
       "cap_style": "corbelled"
     }
   },
-  "chimneys": 1
+  "chimneys": 1,
+  "brick_geometry": {
+    "total_visible_bricks": 945,
+    "front_net_bricks": 945,
+    "front_courses": 126,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0025
+  }
 }

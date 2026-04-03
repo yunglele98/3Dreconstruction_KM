@@ -218,13 +218,19 @@
     "brick_colour_hex": "#A74D2F",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
-    "mortar_joint_width_mm": 10,
+    "mortar_joint_width_mm": 11,
     "trim_colour_hex": "#422E1E",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its multi-residential typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a rare example of an early twentieth residential duplex building within the District. Each of the properties have retain.",
     "mortar_colour_hex": "#AE9E8C",
-    "heritage_expression": "Character-defining elements include its original massing and streetscape presence."
+    "heritage_expression": "Character-defining elements include its original massing and streetscape presence.",
+    "brick_length_mm": 215,
+    "brick_height_mm": 65,
+    "brick_width_mm": 100,
+    "course_height_mm": 76,
+    "brick_variation_mm": 3,
+    "brick_colour_variation": 0.08
   },
   "roof_colour": "#5A5A5A",
   "roof_detail": {
@@ -377,5 +383,13 @@
       "material": "brick",
       "cap_style": "corbelled"
     }
+  },
+  "brick_geometry": {
+    "total_visible_bricks": 2297,
+    "front_net_bricks": 2297,
+    "front_courses": 106,
+    "bricks_per_course": 23.0,
+    "courses_per_metre": 13.16,
+    "blender_brick_scale": 1.0055
   }
 }
