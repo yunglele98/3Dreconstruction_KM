@@ -1,0 +1,301 @@
+{
+  "scenario_id": "heritage_first",
+  "name": "Heritage First (2036)",
+  "description": "Maximum heritage preservation: restore 25 contributing buildings in poor condition, renovate 15 fair-condition facades on key commercial streets.",
+  "principles": [
+    "Prioritize contributing buildings in poor condition",
+    "Restore original brick, trim, and decorative elements",
+    "No height additions to heritage buildings",
+    "Focus investment on market-facing streets",
+    "Use HCD guidelines for all material choices"
+  ],
+  "interventions": [
+    {
+      "address": "100 Bellevue Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "10 Kensington Pl",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "10R Bellevue Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "111 Oxford St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "113 Oxford St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "11 Lippincott St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "12 Casimir St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "12 Kensington Pl",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "12 Oxford St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "136 Denison Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "138 Baldwin St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "141 Augusta Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "142R Denison Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "148 Augusta Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "14 Kensington Pl",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "14 Oxford St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "150 Augusta Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "16 Kensington Pl",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "173 Augusta Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "175 Augusta Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "177 Augusta Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "179 Augusta Ave",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "181 Baldwin St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "185D Baldwin St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "186 Baldwin St",
+      "type": "heritage_restore",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "106 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "10 Kensington Ave",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "10 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "10A Kensington Ave",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "112 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "114 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "11 Kensington Ave",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "122R Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "124 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "12 Kensington Ave",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "132 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "136 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "138 Nassau St",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "13 Kensington Ave",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    },
+    {
+      "address": "143 Augusta Ave",
+      "type": "facade_renovation",
+      "params_override": {
+        "condition": "good"
+      }
+    }
+  ],
+  "impact": {
+    "heritage_restorations": 25,
+    "facade_renovations": 15,
+    "dwelling_units_added": 0,
+    "fsi_change": "0",
+    "height_changes": 0
+  }
+}

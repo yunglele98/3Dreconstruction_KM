@@ -1,0 +1,17 @@
+{
+  "name": "kensington-planning-platform",
+  "version": "0.1.0",
+  "description": "Kensington Market Heritage Conservation District 3D planning platform",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "maplibre-gl": "^4.7.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

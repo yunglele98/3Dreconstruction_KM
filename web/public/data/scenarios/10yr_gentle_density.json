@@ -1,0 +1,164 @@
+{
+  "scenario_id": "gentle_density",
+  "name": "Gentle Density (2036)",
+  "description": "Modest intensification: add third floors to 15 non-contributing 2-storey buildings, 8 ground-floor commercial conversions, 10 green roofs, 2 laneway coach houses.",
+  "principles": [
+    "Only add floors to non-contributing buildings",
+    "Maintain street wall character and rhythm",
+    "Green roofs on flat-roof buildings reduce heat island",
+    "Laneway housing adds gentle density without facade impact",
+    "Commercial conversions limited to existing commercial streets"
+  ],
+  "impact": {
+    "dwelling_units_added": 17,
+    "fsi_change": "+0.15",
+    "height_changes": 15,
+    "new_builds": 2,
+    "green_roofs": 10,
+    "commercial_conversions": 8
+  },
+  "interventions": [
+    {
+      "address": "61 1/2 Kensington Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "66 1/2 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "66 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "74 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "80 Kensington Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "80 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "10 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "10 Kensington Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "111 Oxford St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "113 Oxford St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "11 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "12 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "12 Kensington Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "135 Nassau St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "13 Glen Baillie Pl",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "13 Wales Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "LANEWAY_BEHIND_22_Lippincott",
+      "type": "new_build",
+      "params": {
+        "building_name": "Coach House A",
+        "floors": 2,
+        "total_height_m": 6.5,
+        "facade_width_m": 5.0,
+        "facade_depth_m": 8.0,
+        "facade_material": "brick",
+        "roof_type": "flat"
+      },
+      "lon": -79.4018,
+      "lat": 43.6548
+    },
+    {
+      "address": "LANEWAY_BEHIND_46_Kensington",
+      "type": "new_build",
+      "params": {
+        "building_name": "Coach House B",
+        "floors": 2,
+        "total_height_m": 7.0,
+        "facade_width_m": 6.0,
+        "facade_depth_m": 9.0,
+        "facade_material": "brick",
+        "roof_type": "gable"
+      },
+      "lon": -79.4005,
+      "lat": 43.6555
+    }
+  ]
+}
