@@ -1,10 +1,9 @@
 {
   "building_name": "26 Bellevue Ave",
-  "floors": 3,
+  "floors": 2,
   "floor_heights_m": [
-    2.16,
-    2.16,
-    2.17
+    3.4,
+    3.09
   ],
   "total_height_m": 6.49,
   "facade_width_m": 5.2,
@@ -27,8 +26,7 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     2,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -213,6 +211,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 3 → 2 (avg floor was 2.2m)",
+      "floor_heights [2.2, 2.2, 2.2] → [3.4, 3.09]",
+      "windows_per_floor adjusted to 2 entries"
     ]
   },
   "bay_window": {

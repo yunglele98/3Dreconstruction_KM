@@ -1,11 +1,9 @@
 {
   "building_name": "366A Spadina Ave",
-  "floors": 4,
+  "floors": 2,
   "floor_heights_m": [
-    1.7,
-    1.7,
-    1.7,
-    1.7
+    3.71,
+    3.09
   ],
   "total_height_m": 6.8,
   "facade_width_m": 6.1,
@@ -28,9 +26,7 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    2,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -201,6 +197,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 4 → 2 (avg floor was 1.7m)",
+      "floor_heights [1.7, 1.7, 1.7, 1.7] → [3.71, 3.09]",
+      "windows_per_floor adjusted to 2 entries"
     ]
   },
   "storefront": {

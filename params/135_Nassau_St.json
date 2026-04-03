@@ -1,11 +1,9 @@
 {
   "building_name": "135 Nassau St",
-  "floors": 4,
+  "floors": 2,
   "floor_heights_m": [
-    2.03,
-    1.74,
-    1.74,
-    1.44
+    3.79,
+    3.16
   ],
   "total_height_m": 6.95,
   "facade_width_m": 7.0,
@@ -28,8 +26,6 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     4,
-    6,
-    6,
     6
   ],
   "window_type": "double_hung",
@@ -257,6 +253,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 4 → 2 (avg floor was 1.7m)",
+      "floor_heights [2.0, 1.7, 1.7, 1.4] → [3.79, 3.16]",
+      "windows_per_floor adjusted to 2 entries"
     ]
   },
   "doors_detail": [

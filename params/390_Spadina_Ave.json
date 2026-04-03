@@ -1,10 +1,9 @@
 {
   "building_name": "390 Spadina Ave",
-  "floors": 3,
+  "floors": 2,
   "floor_heights_m": [
-    2.15,
-    2.15,
-    2.16
+    3.52,
+    2.94
   ],
   "total_height_m": 6.46,
   "facade_width_m": 6.1,
@@ -27,8 +26,7 @@
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -198,6 +196,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 3 → 2 (avg floor was 2.2m)",
+      "floor_heights [2.1, 2.1, 2.2] → [3.52, 2.94]",
+      "windows_per_floor adjusted to 2 entries"
     ]
   },
   "storefront": {

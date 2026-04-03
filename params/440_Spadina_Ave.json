@@ -1,8 +1,10 @@
 {
   "building_name": "440 Spadina Ave",
-  "floors": 1,
+  "floors": 3,
   "floor_heights_m": [
-    10.3
+    3.86,
+    3.22,
+    3.22
   ],
   "total_height_m": 10.3,
   "facade_width_m": 6.1,
@@ -24,6 +26,8 @@
   "facade_material": "stucco",
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
+    0,
+    0,
     0
   ],
   "window_type": "double_hung",
@@ -193,6 +197,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 1 → 3 (total_height=10.3m)",
+      "floor_heights [10.3] → [3.86, 3.22, 3.22]",
+      "windows_per_floor adjusted to 3 entries"
     ]
   },
   "storefront": {

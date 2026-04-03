@@ -2,8 +2,8 @@
   "building_name": "144 Baldwin St",
   "floors": 2,
   "floor_heights_m": [
-    6.35,
-    6.35
+    6.93,
+    5.77
   ],
   "total_height_m": 12.7,
   "facade_width_m": 5.2,
@@ -216,6 +216,9 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floor_heights [6.3, 6.3] → [6.93, 5.77]"
     ]
   },
   "storefront": {

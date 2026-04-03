@@ -1,9 +1,8 @@
 {
   "building_name": "5 Oxford St",
-  "floors": 2,
+  "floors": 1,
   "floor_heights_m": [
-    2.2,
-    1.7
+    3.85
   ],
   "total_height_m": 3.85,
   "facade_width_m": 5.2,
@@ -25,7 +24,6 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    2,
     2
   ],
   "window_type": "double_hung",
@@ -213,6 +211,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 2 → 1 (avg floor was 1.9m)",
+      "floor_heights [2.2, 1.7] → [3.85]",
+      "windows_per_floor adjusted to 1 entries"
     ]
   },
   "doors_detail": [
