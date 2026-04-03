@@ -222,6 +222,38 @@ def find_workspaces(input_dir):
     ]
 
 
+def generate_report(colmap_dir):
+    """Generate a report from a single COLMAP directory (API for tests/imports).
+
+    Uses analyze_workspace from analyze_colmap_quality for per-workspace
+    analysis. Returns a dict compatible with the test suite.
+    """
+    # Import here to avoid circular imports at module level
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from analyze_colmap_quality import (
+        find_workspaces as _find_ws,
+        analyze_workspace as _analyze_ws,
+    )
+
+    workspaces = _find_ws(colmap_dir)
+    results = []
+    for ws in workspaces:
+        results.append(_analyze_ws(ws))
+
+    counts = {
+        "total": len(results),
+        "success": sum(1 for r in results if r.get("status") == "analyzed"),
+        "placeholder": sum(1 for r in results if r.get("status") == "placeholder"),
+    }
+
+    return {
+        "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "colmap_dir": str(colmap_dir),
+        "workspaces": results,
+        "counts": counts,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate a consolidated COLMAP reconstruction report."
