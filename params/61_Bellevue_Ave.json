@@ -23,7 +23,8 @@
   "roof_pitch_deg": 0,
   "roof_features": [
     "mansard",
-    "dormer"
+    "dormer",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "cream/beige painted brick at upper storey; green painted trim and gable detail at roofline; ground floor commercial storefronts",
@@ -200,7 +201,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -359,15 +362,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "61 Bellevue Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 2 principal entrances. Character-defining facade elements include decorative brick, original windows, cornice.",
   "heritage_summary": "Constructed as part of a row including the adjacent house-from buildings at 57 and 59 Bellevue Avenue, the property retains its mansard roofline with cornice, round arch dormer window openings with decorative wood surrounds, and brick cladding. The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations.",
@@ -459,5 +454,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.79,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.8,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

@@ -21,13 +21,16 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 45.6,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "concrete",
   "facade_colour": "grey concrete",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -207,6 +210,16 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #8A8A8A → #918C8C",
+      "trim: #35261C → #5A4A3A",
+      "windows_per_floor: [0, 0] → [2, 2, 2]",
+      "roof_pitch: 45 → 45.6",
+      "decorative: +string_courses"
     ]
   },
   "storefront": {},
@@ -231,11 +244,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#8A8A8A",
+    "brick_colour_hex": "#918C8C",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#35261C",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s.",
@@ -273,17 +286,14 @@
     "bargeboard": {
       "colour_hex": "#3A2A20",
       "style": "simple"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 20
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "confidence": 0.9,
   "facade_description": "192-194 Augusta Ave is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as concrete, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
@@ -314,8 +324,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8A8A8A",
-    "trim": "#35261C",
+    "facade": "#918C8C",
+    "trim": "#5A4A3A",
     "roof": "#494949",
     "accent": "#4E3729"
   },
@@ -396,5 +406,14 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.82,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

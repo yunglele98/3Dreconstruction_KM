@@ -23,7 +23,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "awning"
+    "awning",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "grey tile-clad upper facade over weathered wood signboards and a burgundy awning",
@@ -239,7 +240,9 @@
         "old": "#453525",
         "new": "#FFFFFF"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -591,5 +594,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.57,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 0.92,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 43.8,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -191,6 +193,16 @@
         "old": "#AE6E4B",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AE6038",
+      "trim: #272727 → #3A3A3A",
+      "windows_per_floor: [0, 0] → [2, 2]",
+      "roof_pitch: 45 → 43.8",
+      "decorative: +cornice"
     ]
   },
   "bay_window": {
@@ -224,11 +236,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AE6038",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#272727",
+    "trim_colour_hex": "#3A3A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, bay window.",
@@ -268,17 +280,14 @@
       "style": "simple"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "height_mm": 250,
+      "projection_mm": 80
+    }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "49 Wales Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include original windows, bay window.",
@@ -308,8 +317,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#AE6E4B",
-    "trim": "#272727",
+    "facade": "#AE6038",
+    "trim": "#3A3A3A",
     "roof": "#4B4B4B",
     "accent": "#4D3526"
   },
@@ -393,5 +402,14 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.43,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.4,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

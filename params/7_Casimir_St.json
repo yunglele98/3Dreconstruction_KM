@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "stucco",
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
@@ -187,7 +189,9 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "doors_detail": [
     {
@@ -266,15 +270,7 @@
     "bay_window_shape": "canted",
     "bay_window_storeys": 2
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#D8D0C0"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "7 Casimir St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -386,5 +382,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.65,
+      "depth_m": 0.67,
+      "height_above_ridge_m": 0.95,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

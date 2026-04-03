@@ -24,7 +24,8 @@
   "roof_pitch_deg": 40,
   "roof_features": [
     "turret",
-    "tower"
+    "tower",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red brick",
@@ -207,7 +208,9 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -431,5 +434,15 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.65,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.62,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

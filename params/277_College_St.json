@@ -21,11 +21,14 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "glass",
   "facade_colour": "glass and metal",
   "windows_per_floor": [
-    0
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -212,6 +215,15 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #7A7A7A → #767373",
+      "trim: #36261D → #FFFFFF",
+      "windows_per_floor: [0] → [2, 2]",
+      "decorative: +cornice"
     ]
   },
   "storefront": {},
@@ -236,11 +248,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#7A7A7A",
+    "brick_colour_hex": "#767373",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#36261D",
+    "trim_colour_hex": "#FFFFFF",
     "composition": "The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "mortar_colour_hex": "#BCAB92",
@@ -265,7 +277,9 @@
   ],
   "decorative_elements": {
     "cornice": {
-      "present": false
+      "present": true,
+      "height_mm": 150,
+      "projection_mm": 60
     }
   },
   "street_setback_m": 0.5,
@@ -366,11 +380,21 @@
     "total_facade_detections": 0
   },
   "colour_palette": {
-    "facade": "#7A7A7A",
-    "trim": "#36261D",
+    "facade": "#767373",
+    "trim": "#FFFFFF",
     "roof": "#515151",
     "accent": "#273424"
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.44,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.44,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

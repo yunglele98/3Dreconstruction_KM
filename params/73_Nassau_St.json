@@ -22,7 +22,8 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "parapet_wall"
+    "parapet_wall",
+    "chimney"
   ],
   "facade_material": "stucco",
   "facade_colour": "salmon-pink painted stucco over masonry",
@@ -203,7 +204,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -348,15 +351,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#D8D0C0"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "73 Nassau St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features, including shared mansard roofline, dormer windows, asymmetrical facades, first storey bay windows, and segmentally arched openings. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Second Empire and other Victorian architectural styles.",
@@ -439,5 +434,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.57,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.68,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.88,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

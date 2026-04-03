@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
@@ -211,7 +213,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "doors_detail": [
     {
@@ -290,15 +294,7 @@
     "bay_window_shape": "canted",
     "bay_window_storeys": 2
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.5,
   "confidence": 0.8000000000000002,
   "facade_description": "38 Kensington Pl is a bay-and-gable house-form building. The street elevation spans roughly 3.4 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -426,5 +422,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 0.71,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

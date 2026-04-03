@@ -21,7 +21,9 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
@@ -195,7 +197,9 @@
         "old": "#F0EDE8",
         "new": "#404040"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -460,5 +464,22 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.68,
+      "depth_m": 0.54,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.54,
+      "height_above_ridge_m": 0.61,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

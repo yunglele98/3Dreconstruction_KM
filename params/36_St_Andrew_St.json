@@ -20,12 +20,15 @@
     "lots_sharing_footprint": 11
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 45.2,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "dark green storefront, red/orange brick upper",
   "windows_per_floor": [
-    0
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -197,6 +200,17 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AD5637",
+      "trim: #4A3323 → #3A2A20",
+      "windows_per_floor: [0] → [2, 2]",
+      "roof_pitch: 45 → 45.2",
+      "decorative: +cornice",
+      "decorative: +ornamental_shingles"
     ]
   },
   "storefront": {},
@@ -240,11 +254,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AD5637",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4A3323",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_summary": "Constructed as a semi-detached pair, they retain most of their original building features including their shared roofline, and mirrored facades featuring brick cladding with decorative brickwork, flat headed window and door openings, stone lintels, and double-height projecting bay windows set under gables with decorative woodwork. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
@@ -285,17 +299,18 @@
       "style": "simple"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "height_mm": 150,
+      "projection_mm": 100
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 130
+    }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "36 St Andrew St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
   "heritage_summary": "Constructed as a semi-detached pair, they retain most of their original building features including their shared roofline, and mirrored facades featuring brick cladding with decorative brickwork, flat headed window and door openings, stone lintels, and double-height projecting bay windows set under gables with decorative woodwork. Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
@@ -308,8 +323,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#995036",
-    "trim": "#4A3323",
+    "facade": "#AD5637",
+    "trim": "#3A2A20",
     "roof": "#454444",
     "accent": "#2D3E2A"
   },
@@ -377,5 +392,21 @@
   },
   "inferred_setback_m": 3.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.7,
+      "height_above_ridge_m": 0.81,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.6,
+      "depth_m": 0.57,
+      "height_above_ridge_m": 0.91,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

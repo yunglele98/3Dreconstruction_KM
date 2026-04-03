@@ -149,7 +149,9 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "notes": "2-storey residential, dark red-brown brick. Heavily obscured by evergreen tree, limited visibility.",
   "doors_detail": [
@@ -227,15 +229,7 @@
     4.0,
     4.0
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "roof_pitch_deg": 40,
   "windows_per_floor": [
     0
@@ -328,5 +322,17 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "roof_features": [
+    "chimney"
+  ],
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.54,
+      "depth_m": 0.48,
+      "height_above_ridge_m": 0.51,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

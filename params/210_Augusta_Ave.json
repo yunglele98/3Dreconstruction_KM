@@ -21,7 +21,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "vent_stack"
+    "vent_stack",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "bright pink and red commercial signage with black storefront framing and layered food branding",
@@ -211,7 +212,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -464,5 +467,15 @@
     "matches_existing": false,
     "text_count": 7
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.54,
+      "height_above_ridge_m": 0.95,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

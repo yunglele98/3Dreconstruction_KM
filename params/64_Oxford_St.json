@@ -20,14 +20,16 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 47.2,
   "roof_features": [
-    "commercial_addition"
+    "commercial_addition",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "red brick upper facade with a white wraparound storefront and dark brown canopy",
   "windows_per_floor": [
-    0
+    2,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 1.2,
@@ -239,6 +241,17 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AD5439",
+      "trim: #4E3C2B → #2A2A2A",
+      "windows_per_floor: [0] → [2, 1]",
+      "roof_pitch: 45 → 47.2",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs"
     ]
   },
   "decorative_elements": {
@@ -255,6 +268,14 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 20
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
   "photo_observations": {
@@ -369,11 +390,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AD5439",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4E3C2B",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
@@ -411,8 +432,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#4E3C2B",
+    "facade": "#AD5439",
+    "trim": "#2A2A2A",
     "roof": "#515050",
     "accent": "#2D3D2A"
   },
@@ -482,5 +503,22 @@
     },
     "total_facade_detections": 2
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.69,
+      "height_above_ridge_m": 0.63,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.82,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

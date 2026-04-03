@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "patio"
+    "patio",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "white-painted storefront base with black signage band and red-brown upper brick",
@@ -204,7 +205,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "photo_observations": {
     "facade_colour_observed": "white-painted storefront base with black signage band and red-brown upper brick",
@@ -480,5 +483,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.45,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.72,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.6,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.73,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

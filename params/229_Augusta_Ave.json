@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "parapet_wall"
+    "parapet_wall",
+    "chimney"
   ],
   "facade_material": "mixed (metal cladding, painted masonry)",
   "facade_colour": "painted (painted stucco/render (upper band), metal roller shutters (ground))",
@@ -219,7 +220,9 @@
         "old": "#D06030",
         "new": "#4A9A4A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930"
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -566,5 +569,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.48,
+      "depth_m": 0.41,
+      "height_above_ridge_m": 0.42,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  },
+  "chimneys": 1
 }

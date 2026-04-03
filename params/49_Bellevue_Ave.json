@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "cross-gable"
+    "cross-gable",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "warm red-orange brick with cream/beige vertical siding on upper gable section",
@@ -213,7 +214,9 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -387,15 +390,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "49 Bellevue Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as mixed masonry in a warm red-orange brick with cream/beige vertical siding on upper gable section palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
   "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -492,5 +487,21 @@
     },
     "total_facade_detections": 1
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.84,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.61,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

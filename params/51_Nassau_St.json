@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 47.6,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick with cream trim and white gable panels",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -203,6 +205,15 @@
         "old": "#D0836B",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C4643F",
+      "trim: #252424 → #FFFFFF",
+      "windows_per_floor: [0, 0] → [2, 2]",
+      "roof_pitch: 45 → 47.6"
     ]
   },
   "decorative_elements": {
@@ -332,11 +343,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C4643F",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#252424",
+    "trim_colour_hex": "#FFFFFF",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, decorative brick, cornice.",
@@ -375,15 +386,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "51 Nassau St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, decorative brick, cornice.",
   "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s.",
@@ -396,8 +399,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#D0836B",
-    "trim": "#252424",
+    "facade": "#C4643F",
+    "trim": "#FFFFFF",
     "roof": "#584D4D",
     "accent": "#2E3625"
   },
@@ -496,5 +499,14 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.49,
+      "height_above_ridge_m": 0.65,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

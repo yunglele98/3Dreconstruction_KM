@@ -22,7 +22,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red-brown brick with dark brown or black trim and an evergreen tree partly screening the lower facade",
   "windows_per_floor": [
@@ -215,7 +217,9 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "bay_window": {
     "present": true,
@@ -542,5 +546,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 0.75,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.65,
+      "height_above_ridge_m": 0.9,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

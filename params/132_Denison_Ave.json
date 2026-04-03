@@ -19,12 +19,14 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 37.9,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.7,
@@ -203,6 +205,17 @@
         "old": "#9A2E1D",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C15035",
+      "trim: #221A13 → #4A3A2A",
+      "windows_per_floor: [0] → [2]",
+      "roof_pitch: 40 → 37.9",
+      "decorative: +string_courses",
+      "decorative: +ornamental_shingles"
     ]
   },
   "photo_observations": {
@@ -301,11 +314,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C15035",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#221A13",
+    "trim_colour_hex": "#4A3A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -341,17 +354,18 @@
       "height_mm": 250,
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 15
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 130
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "132 Denison Ave is a row-house building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -364,8 +378,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#9A2E1D",
-    "trim": "#221A13",
+    "facade": "#C15035",
+    "trim": "#4A3A2A",
     "roof": "#4D5C5C",
     "accent": "#35241C"
   },
@@ -434,5 +448,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.56,
+      "depth_m": 0.67,
+      "height_above_ridge_m": 0.75,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.57,
+      "height_above_ridge_m": 0.74,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

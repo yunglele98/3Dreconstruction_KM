@@ -136,7 +136,9 @@
         "old": "#97583D",
         "new": "#B85A3A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "notes": "Plain houseform unit on Nassau Street.",
   "doors_detail": [
@@ -221,15 +223,7 @@
     4.8,
     4.8
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "roof_pitch_deg": 40,
   "windows_per_floor": [
     0
@@ -318,5 +312,17 @@
   "heritage_summary": "Through its construction date. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
   "foundation_height_m": 0.3,
   "inferred_setback_m": 1.5,
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "roof_features": [
+    "chimney"
+  ],
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.46,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.74,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

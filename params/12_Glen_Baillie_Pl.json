@@ -22,14 +22,14 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "gable_peak"
+    "gable_peak",
+    "chimney"
   ],
   "facade_material": "vinyl_siding",
   "facade_colour": "beige/cream vinyl siding with white trim",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    1,
+    1
   ],
   "window_type": "casement",
   "window_width_m": 0.85,
@@ -212,6 +212,14 @@
         "old": "Vinyl siding",
         "new": "vinyl_siding"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B7623B",
+      "trim: #242424 → #2A2A2A",
+      "windows_per_floor: [0, 0, 0] → [1, 1]"
     ]
   },
   "photo_observations": {
@@ -301,11 +309,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B7623B",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#242424",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 4 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_summary": "Constructed as a row organized into three adjoining pairs with mirrored facades, the properties each retain building features that reflect vernacular interpretations of Second Empire and other Victorian architectural styles, including their shared rooflines, fenestration pattern, dormer windows, and ground floor bay windows. Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District.",
@@ -369,8 +377,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#242424",
+    "facade": "#B7623B",
+    "trim": "#2A2A2A",
     "roof": "#5E5D5D",
     "accent": "#3F3624"
   },
@@ -471,5 +479,15 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.54,
+      "depth_m": 0.45,
+      "height_above_ridge_m": 0.51,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

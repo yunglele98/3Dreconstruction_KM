@@ -21,7 +21,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
@@ -214,7 +216,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "storefront": {},
   "doors_detail": [
@@ -381,5 +385,22 @@
     "eave_overhang_mm_est": 800
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.69,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.52,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

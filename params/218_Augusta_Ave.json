@@ -20,14 +20,16 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 46.9,
   "roof_features": [
-    "roof_sign"
+    "roof_sign",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "black facade with bright pink, red, blue, and aqua mural swirls on the main roll-down door",
   "windows_per_floor": [
-    0
+    1,
+    2
   ],
   "window_type": "storefront",
   "window_width_m": 0.85,
@@ -216,6 +218,16 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B04D33",
+      "trim: #452F1F → #2A2A2A",
+      "windows_per_floor: [0] → [1, 2]",
+      "roof_pitch: 45 → 46.9",
+      "decorative: +bargeboard"
     ]
   },
   "storefront": {},
@@ -318,11 +330,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B04D33",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#452F1F",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 1 upper-window bay, using storefront, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s.",
@@ -350,8 +362,9 @@
   ],
   "decorative_elements": {
     "bargeboard": {
-      "colour_hex": "#E8E0D0",
-      "style": "simple"
+      "present": true,
+      "style": "simple Victorian",
+      "width_mm": 150
     },
     "cornice": {
       "present": true,
@@ -373,8 +386,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#452F1F",
+    "facade": "#B04D33",
+    "trim": "#2A2A2A",
     "roof": "#5E5E5E",
     "accent": "#332A1C"
   },
@@ -457,5 +470,15 @@
     "matches_existing": false,
     "text_count": 27
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.77,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

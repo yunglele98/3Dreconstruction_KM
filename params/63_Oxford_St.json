@@ -20,7 +20,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "Mixed masonry",
   "facade_colour": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
   "windows_per_floor": [
@@ -196,7 +198,9 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "photo_observations": {
     "facade_colour_observed": "open snowy parkette with chain-link fencing and colourful graffiti mural walls beyond",
@@ -428,5 +432,22 @@
     },
     "total_facade_detections": 1
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.46,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.8,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.54,
+      "depth_m": 0.47,
+      "height_above_ridge_m": 0.64,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

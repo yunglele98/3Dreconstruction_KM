@@ -23,7 +23,8 @@
   "roof_pitch_deg": 40,
   "roof_features": [
     "dormers",
-    "front_balcony"
+    "front_balcony",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "red brick lower levels with dark blue shingle cladding at the upper dormer faces and taupe siding around the porch enclosure",
@@ -288,7 +289,9 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -456,15 +459,7 @@
     "trim_colour": "#FFFFFF",
     "porch_detail": "high"
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "100 Oxford St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed in a red brick lower levels with dark blue shingle cladding at the upper dormer faces and taupe siding around the porch enclosure palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, bay window, cornice.",
   "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
@@ -584,5 +579,21 @@
   },
   "secondary_material": "shingle_cladding",
   "tertiary_material": "siding",
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.82,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.57,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.99,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

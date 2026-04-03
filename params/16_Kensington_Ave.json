@@ -21,7 +21,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 48,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red-brown brick (upper); painted or modified lower; brick",
   "windows_per_floor": [
@@ -214,7 +216,9 @@
         "old": "#473120",
         "new": "#F0EDE8"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -404,15 +408,7 @@
     "bay_window_shape": "canted",
     "bay_window_storeys": 1
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "16 Kensington Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
   "heritage_summary": "Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion.",
@@ -573,5 +569,14 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 250,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.9,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

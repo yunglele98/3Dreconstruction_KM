@@ -21,7 +21,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "gable"
+    "gable",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "warm brown/tan brick; newly constructed wooden porch in light wood",
@@ -201,7 +202,9 @@
         "old": "#983A29",
         "new": "#B85A3A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "warm brown/tan brick; newly constructed wooden porch in light wood",
@@ -343,15 +346,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "58 Bellevue Ave is a house-form, detached, ontario cottage building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, detached, ontario cottage typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Contextually, the property shares a consistent setback with the other contributing properties on the street. The property has been modified but retains the original composition of a central gable and door flanked by a window to either side.",
@@ -449,5 +444,14 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.79,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

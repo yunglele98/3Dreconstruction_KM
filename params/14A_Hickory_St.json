@@ -20,11 +20,13 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -194,6 +196,15 @@
         "old": "#C27758",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C56539",
+      "trim: #4C3B2A → #2A2A2A",
+      "windows_per_floor: [0] → [2]",
+      "decorative: +string_courses"
     ]
   },
   "doors_detail": [
@@ -217,11 +228,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C56539",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4C3B2A",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects early workers’ housing within the District. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the early 1900s, which in.",
@@ -253,6 +264,11 @@
     },
     "decorative_brickwork": {
       "present": true
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 30
     }
   },
   "street_setback_m": 3.0,
@@ -283,8 +299,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
-    "facade": "#C27758",
-    "trim": "#4C3B2A",
+    "facade": "#C56539",
+    "trim": "#2A2A2A",
     "roof": "#545454",
     "accent": "#3B2A1F"
   },
@@ -357,5 +373,22 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.68,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.57,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

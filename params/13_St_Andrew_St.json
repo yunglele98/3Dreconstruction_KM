@@ -26,7 +26,8 @@
     "turret",
     "central_gable",
     "finials",
-    "tower"
+    "tower",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "dark red brick with green-shingled turret roofs and cream/stone trim",
@@ -217,7 +218,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913"
   },
   "bay_window": {
     "present": true,
@@ -365,15 +368,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "13 St Andrew St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include turret, bay window, decorative brick, cornice.",
   "heritage_summary": "Constructed as a semi-detached pair, the properties retain most of their original building features including the shared roofline with central gable, and mirrored facades featuring brick cladding and decorative brickwork, flat headed and round arched window and door opening, and shingle clad turrets with decorative woodwork. 13 St.",
@@ -489,5 +484,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.44,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 0.43,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

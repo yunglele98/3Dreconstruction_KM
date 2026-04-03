@@ -21,13 +21,16 @@
     "lots_sharing_footprint": 5
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 38.6,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -223,6 +226,17 @@
         "old": "#B56751",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C1503D",
+      "trim: #252525 → #E8E0D0",
+      "windows_per_floor: [0, 0] → [1, 2, 2]",
+      "roof_pitch: 40 → 38.6",
+      "decorative: +string_courses",
+      "decorative: +cornice"
     ]
   },
   "bay_window": {
@@ -244,7 +258,17 @@
       "style": "decorative"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 20
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 100
+    }
   },
   "doors_detail": [
     {
@@ -267,11 +291,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C1503D",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#252525",
+    "trim_colour_hex": "#E8E0D0",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, decorative brick, original windows.",
@@ -332,15 +356,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "85 Wales Ave is a house-form, detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, original windows.",
@@ -371,8 +387,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B56751",
-    "trim": "#252525",
+    "facade": "#C1503D",
+    "trim": "#E8E0D0",
     "roof": "#4A4A4A",
     "accent": "#473E2D"
   },
@@ -451,5 +467,14 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.45,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.5,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

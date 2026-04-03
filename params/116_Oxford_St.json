@@ -22,7 +22,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "picture_window"
+    "picture_window",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red-brown brick with dark charcoal-painted trim at the entry volume and eaves",
@@ -205,7 +206,9 @@
         "old": "#D2AD7F",
         "new": "#B85A3A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930"
   },
   "photo_observations": {
     "facade_colour_observed": "red-brown brick with dark charcoal-painted trim at the entry volume and eaves",
@@ -357,15 +360,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "116 Oxford St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructed as a semi-detached pair, the p. Each property has value as an early-twentieth-century vernacular-style House-form building.",
@@ -475,5 +470,14 @@
     "occlusion": {},
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.44,
+      "depth_m": 0.47,
+      "height_above_ridge_m": 0.35,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  }
 }

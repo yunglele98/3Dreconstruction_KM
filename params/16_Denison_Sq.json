@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "gable_front"
+    "gable_front",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "white and turquoise painted enclosed porch over an altered red-brick house-form facade",
@@ -213,7 +214,9 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "bay_window": {
     "present": true,
@@ -505,5 +508,15 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.47,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.62,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

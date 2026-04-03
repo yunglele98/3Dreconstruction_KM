@@ -21,7 +21,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "deck"
+    "deck",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "charcoal and tan modernized facade with a black storefront base",
@@ -247,7 +248,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "storefront": {},
   "photo_observations": {
@@ -522,5 +525,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.62,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.52,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.54,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

@@ -20,7 +20,7 @@
     "lots_sharing_footprint": 8
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 50,
+  "roof_pitch_deg": 47.7,
   "roof_features": [
     "chimney",
     "front_gable"
@@ -206,6 +206,13 @@
         "old": "#32251C",
         "new": "#3A3A3A"
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #A0523C → #9F4A38",
+      "trim: #32251C → #2A2A2A",
+      "roof_pitch: 50 → 47.7",
+      "decorative: +bargeboard"
     ]
   },
   "decorative_elements": {
@@ -223,8 +230,9 @@
       "present": true
     },
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "decorative"
+      "present": true,
+      "style": "plain",
+      "width_mm": 250
     }
   },
   "storefront": {
@@ -343,11 +351,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#A0523C",
+    "brick_colour_hex": "#9F4A38",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#32251C",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, row typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, cornice.",
@@ -411,8 +419,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#A0523C",
-    "trim": "#3A3A3A",
+    "facade": "#9F4A38",
+    "trim": "#2A2A2A",
     "roof": "#4A4A4A",
     "accent": "#2A5A2A"
   },

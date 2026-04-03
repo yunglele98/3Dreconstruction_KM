@@ -21,7 +21,9 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick (buff/yellow), wood/panel at ground level",
   "facade_colour": "painted (wood clapboard / painted wood)",
   "windows_per_floor": [
@@ -244,7 +246,9 @@
         "old": "#F0EDE8",
         "new": "#8A2020"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -470,15 +474,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "71 Kensington Ave is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, semi-detached typology. The facade reads primarily as clapboard, laid in n/a with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice, decorative brick.",
   "heritage_summary": "Constructed between 1924 and 1930 onto the principal elevation of a pre-1889 residence, the property has retained its brick facade and pair of second storey window openings with segmentally arched brick voussoirs. With its visible layering of residential and commercial built forms, the property is physically, functionally, visually, and historically linked to the surrounding market area.",
@@ -623,5 +619,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 150,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

@@ -22,7 +22,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "cross_gable"
+    "cross_gable",
+    "chimney"
   ],
   "facade_material": "stucco",
   "facade_colour": "off-white stucco",
@@ -209,7 +210,9 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -333,15 +336,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#D8D0C0"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "34 Bellevue Ave is a house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, detached typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height bay window, and fenestration pattern with segmentally arched openings. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -432,5 +427,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.52,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.95,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

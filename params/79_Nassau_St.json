@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "mixed",
   "facade_colour": "Facade largely obscured by Bristol rental trucks; green-painted upper trim visible; brown horizontal siding on patio enclosure",
   "windows_per_floor": [
@@ -204,7 +206,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -433,5 +437,22 @@
   "_audit": {
     "photo_heavily_occluded": true
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.57,
+      "depth_m": 0.69,
+      "height_above_ridge_m": 0.86,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.72,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

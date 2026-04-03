@@ -16,7 +16,8 @@
   "roof_type": "gable",
   "roof_features": [
     "dormer",
-    "rear_lane_access"
+    "rear_lane_access",
+    "chimney"
   ],
   "photo_observations": {
     "facade_colour_observed": "dark red-brown brick, unpainted, natural patina with age darkening",
@@ -184,7 +185,9 @@
       "windows_per_floor: [0, 0] -> [0, 0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "overall_style": "Victorian",
   "notes": "2.5-storey Victorian house-form with steep gable. Distinctive green metal projecting balcony at 2nd floor. Front garden with dense hedge. Mural art on lower wall. Party wall on right.",
@@ -305,15 +308,7 @@
     4.7,
     4.7
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "roof_pitch_deg": 40,
   "site": {
     "lon": -79.40446901,
@@ -435,5 +430,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.83,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.84,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

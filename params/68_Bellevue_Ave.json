@@ -20,18 +20,19 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 38.0,
   "roof_features": [
     "cross_gable",
     "dormer",
     "bargeboard",
-    "finial"
+    "finial",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "white/cream painted brick; dark brown/maroon trim on gable dormers and bargeboard",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -208,6 +209,15 @@
         "old": "#7F2414",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BE6042",
+      "trim: #4F3626 → #3A2A20",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "roof_pitch: 40 → 38.0"
     ]
   },
   "bay_window": {
@@ -341,11 +351,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BE6042",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4F3626",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 3 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
@@ -384,15 +394,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "68 Bellevue Ave is a house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 3 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
   "heritage_summary": "Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
@@ -413,8 +415,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#7F2414",
-    "trim": "#4F3626",
+    "facade": "#BE6042",
+    "trim": "#3A2A20",
     "roof": "#5E564F",
     "accent": "#2B3729"
   },
@@ -514,5 +516,21 @@
     },
     "total_facade_detections": 1
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.98,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.65,
+      "height_above_ridge_m": 0.75,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

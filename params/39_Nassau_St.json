@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "dark mottled red-brown brick with white-framed modern windows and white porch trim",
   "windows_per_floor": [
@@ -190,7 +192,9 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "dark mottled red-brown brick with white-framed modern windows and white porch trim",
@@ -451,5 +455,15 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.66,
+      "height_above_ridge_m": 0.77,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

@@ -20,15 +20,16 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 47.0,
   "roof_features": [
-    "parapet_wall"
+    "parapet_wall",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "white-painted brick/tile facade with simple residential-style doors and horizontal ground-floor windows",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -203,6 +204,15 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C36C38",
+      "trim: #473121 → #2A2A2A",
+      "windows_per_floor: [0, 0] → [1, 1]",
+      "roof_pitch: 45 → 47.0"
     ]
   },
   "storefront": {},
@@ -321,11 +331,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C36C38",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#473121",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 4, 4 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
     "heritage_summary": "T. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
@@ -385,15 +395,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "163 Augusta Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as mixed masonry in a white-painted brick/tile facade with simple residential-style doors and horizontal ground-floor windows palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 4, 4 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include cornice.",
   "heritage_summary": "T. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
@@ -406,8 +408,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#473121",
+    "facade": "#C36C38",
+    "trim": "#2A2A2A",
     "roof": "#534949",
     "accent": "#3A4532"
   },
@@ -490,5 +492,14 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.82,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

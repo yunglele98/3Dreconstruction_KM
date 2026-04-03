@@ -21,7 +21,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "clapboard",
   "facade_colour": "tan",
   "windows_per_floor": [
@@ -235,7 +237,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "doors_detail": [
@@ -297,15 +301,7 @@
       "present": true
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.5,
   "confidence": 0.9,
   "facade_description": "1 Fitzroy Ter is a house-form, semi-detached building. The street elevation spans roughly 4 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as clapboard in a tan palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
@@ -403,5 +399,21 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.82,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.94,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

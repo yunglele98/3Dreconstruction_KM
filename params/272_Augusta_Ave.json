@@ -23,13 +23,14 @@
   "roof_pitch_deg": 0,
   "roof_features": [
     "front_gable",
-    "projecting_balcony"
+    "projecting_balcony",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "yellow and blue decorated storefront with sunflower-covered balcony and dark upper facade",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.9,
@@ -219,6 +220,16 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AC4930",
+      "trim: #53392A → #3A2A20",
+      "windows_per_floor: [0, 0] → [2, 2]",
+      "decorative: +string_courses",
+      "decorative: +decorative_brickwork"
     ]
   },
   "storefront": {},
@@ -330,11 +341,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AC4930",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#53392A",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_summary": "The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding.",
@@ -374,6 +385,14 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 30
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
   "street_setback_m": 0.0,
@@ -388,8 +407,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#53392A",
+    "facade": "#AC4930",
+    "trim": "#3A2A20",
     "roof": "#564D4D",
     "accent": "#452A1D"
   },
@@ -486,5 +505,22 @@
     "matches_existing": false,
     "text_count": 13
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.65,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 1.0,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.69,
+      "height_above_ridge_m": 0.73,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 46.8,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "warm red-brown brick with dark brown trim",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    1,
+    2,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -220,6 +222,17 @@
         "old": "#B13C1D",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C3613E",
+      "trim: #221913 → #2A2A2A",
+      "windows_per_floor: [0, 0, 0] → [1, 2, 1]",
+      "roof_pitch: 45 → 46.8",
+      "decorative: +cornice",
+      "decorative: +bargeboard"
     ]
   },
   "bay_window": {
@@ -237,11 +250,17 @@
       "present": true
     },
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "decorative"
+      "present": true,
+      "style": "decorative Victorian",
+      "width_mm": 200
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "height_mm": 150,
+      "projection_mm": 100
+    }
   },
   "photo_observations": {
     "photo_reference": "IMG_20260320_154909304_HDR.jpg",
@@ -322,11 +341,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C3613E",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#221913",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick.",
@@ -374,15 +393,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "80 Bellevue Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick.",
   "heritage_summary": "Constructed as a semi-detached pair, the properties have retained many of their original building features including first-storey bay windows, brick cladding, and decorative brickwork. 80 Bellevue Avenue also retains a projecting bay and cross-gabled roofline.",
@@ -395,8 +406,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B13C1D",
-    "trim": "#221913",
+    "facade": "#C3613E",
+    "trim": "#2A2A2A",
     "roof": "#565555",
     "accent": "#2A3123"
   },
@@ -497,5 +508,21 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.57,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 0.94,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.97,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

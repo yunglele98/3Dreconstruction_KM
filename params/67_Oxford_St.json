@@ -23,7 +23,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "enclosed_porch"
+    "enclosed_porch",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "cream vertical siding over an altered rear facade with enclosed porch addition",
@@ -205,7 +206,9 @@
         "old": "brick",
         "new": "mixed"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "photo_observations": {
     "facade_colour_observed": "cream vertical siding over an altered rear facade with enclosed porch addition",
@@ -504,5 +507,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.86,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.86,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

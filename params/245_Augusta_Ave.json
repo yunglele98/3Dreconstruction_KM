@@ -22,7 +22,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "canopy"
+    "canopy",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "dark painted/deteriorated facade with extensive graffiti covering storefront and upper wall",
@@ -224,7 +225,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930"
   },
   "storefront": {},
   "photo_observations": {
@@ -395,5 +398,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.39,
+      "height_above_ridge_m": 0.35,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  },
+  "chimneys": 1
 }

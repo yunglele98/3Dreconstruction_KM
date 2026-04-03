@@ -23,7 +23,8 @@
   "roof_pitch_deg": 40,
   "roof_features": [
     "mansard",
-    "dormer"
+    "dormer",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "warm red-orange brick with white/cream painted wood trim; decorative wood scrollwork on dormers",
@@ -203,7 +204,9 @@
         "old": "#944E35",
         "new": "#B85A3A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -381,15 +384,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "59 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
   "heritage_summary": "Constructed as part of a row with the adjacent property at 61 Bellevue Avenue, the properties retain many of their original building features, including their shared mansard roofline, round-arched dormers with wood scrollwork trim, brick cladding, and single-storey bay windows, and segmentally arched window and door openings at the first storey. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -502,5 +497,14 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.67,
+      "height_above_ridge_m": 0.65,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

@@ -21,13 +21,16 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 42.3,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "not clearly visible — night photo",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -211,6 +214,17 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AF5B3E",
+      "trim: #35261D → #2A2A2A",
+      "windows_per_floor: [0, 0] → [2, 2, 1]",
+      "roof_pitch: 45 → 42.3",
+      "decorative: +string_courses",
+      "decorative: +bargeboard"
     ]
   },
   "bay_window": {
@@ -286,11 +300,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AF5B3E",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#35261D",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
@@ -337,21 +351,19 @@
       "present": true
     },
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "simple"
+      "present": true,
+      "style": "simple trim",
+      "width_mm": 250
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 15
+    }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "22 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "Constructed as a pair, they have largely retained their original building features reflecting vernacular interpretations of Victorian architectural styles, including mirrored facades, cross-gabled roofline, double-height bay windows, round-arched attic windows, and segmentally arched fenestration at the first and second storeys. 20 Kensington Avenue also retains its decorative wooden bargeboard.",
@@ -364,8 +376,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#935336",
-    "trim": "#35261D",
+    "facade": "#AF5B3E",
+    "trim": "#2A2A2A",
     "roof": "#5E564E",
     "accent": "#4C2F22"
   },
@@ -445,5 +457,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.62,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.74,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

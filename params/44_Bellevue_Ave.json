@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "cross_gable"
+    "cross_gable",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "warm red-orange brick; wooden upper deck structure",
@@ -194,7 +195,9 @@
         "old": "#C34826",
         "new": "#B85A3A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "warm red-orange brick; wooden upper deck structure",
@@ -372,15 +375,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "44 Bellevue Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the early.",
@@ -492,5 +487,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.6,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.87,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.95,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

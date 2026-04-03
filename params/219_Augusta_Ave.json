@@ -21,13 +21,16 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 39.3,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    1,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -227,6 +230,18 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AF533D",
+      "trim: #4B3526 → #3A2A20",
+      "windows_per_floor: [0, 0] → [1, 1, 1]",
+      "roof_pitch: 40 → 39.3",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs",
+      "decorative: +bargeboard"
     ]
   },
   "decorative_elements": {
@@ -234,8 +249,17 @@
       "present": true
     },
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "decorative"
+      "present": true,
+      "style": "simple Victorian",
+      "width_mm": 150
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 15
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
   "storefront": {},
@@ -260,11 +284,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AF533D",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4B3526",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
@@ -298,15 +322,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "confidence": 0.9,
   "facade_description": "219 Augusta Ave is a converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows.",
@@ -337,8 +353,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#9A603F",
-    "trim": "#4B3526",
+    "facade": "#AF533D",
+    "trim": "#3A2A20",
     "roof": "#485656",
     "accent": "#322A1A"
   },
@@ -414,5 +430,14 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

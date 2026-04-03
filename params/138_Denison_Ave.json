@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 44.4,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -202,6 +204,18 @@
         "old": "#BE845D",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C55940",
+      "trim: #343434 → #F0EDE8",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "roof_pitch: 45 → 44.4",
+      "decorative: +string_courses",
+      "decorative: +cornice",
+      "decorative: +quoins"
     ]
   },
   "doors_detail": [
@@ -225,11 +239,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C55940",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#343434",
+    "trim_colour_hex": "#F0EDE8",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "The property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, the property is directly associated with the District’s early residential development from the 1850s to the.",
@@ -267,17 +281,24 @@
     "bargeboard": {
       "colour_hex": "#2A2A2A",
       "style": "simple"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 15
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 250,
+      "projection_mm": 80
+    },
+    "quoins": {
+      "present": true,
+      "strip_width_mm": 80,
+      "projection_mm": 10
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "138 Denison Ave is a house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -307,8 +328,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#BE845D",
-    "trim": "#343434",
+    "facade": "#C55940",
+    "trim": "#F0EDE8",
     "roof": "#585050",
     "accent": "#384130"
   },
@@ -389,5 +410,14 @@
     "total_facade_detections": 2
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.49,
+      "depth_m": 0.42,
+      "height_above_ridge_m": 0.68,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

@@ -21,7 +21,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "clapboard",
   "facade_colour": "painted wood",
   "windows_per_floor": [
@@ -202,7 +204,9 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930"
   },
   "doors_detail": [
     {
@@ -269,15 +273,7 @@
       "style": "simple"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "1A Leonard Ave is a multi-residential building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its multi-residential typology. The facade reads primarily as clapboard in a painted wood palette, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -367,5 +363,14 @@
   },
   "wall_thickness_m": 0.3,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.46,
+      "depth_m": 0.4,
+      "height_above_ridge_m": 0.51,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  }
 }

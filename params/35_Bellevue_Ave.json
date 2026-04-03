@@ -23,7 +23,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "cross_gable"
+    "cross_gable",
+    "chimney"
   ],
   "facade_material": "stucco",
   "facade_colour": "light stucco-clad bay-and-gable house-form facade",
@@ -228,7 +229,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "photo_observations": {
     "facade_colour_observed": "light stucco-clad bay-and-gable house-form facade",
@@ -544,5 +547,22 @@
     "text_count": 56
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.83,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.48,
+      "height_above_ridge_m": 0.87,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

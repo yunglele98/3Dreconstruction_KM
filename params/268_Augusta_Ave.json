@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "patio"
+    "patio",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "cream, orange, and rust storefront with white-framed glazing and orange patio railings",
@@ -207,7 +208,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "photo_observations": {
     "facade_colour_observed": "cream, orange, and rust storefront with white-framed glazing and orange patio railings",
@@ -470,5 +473,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.48,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.81,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.51,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
@@ -209,7 +211,9 @@
         "old": "#231B14",
         "new": "#2A3A2A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -295,15 +299,7 @@
       "style": "simple"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "confidence": 0.9,
   "facade_description": "185 Baldwin St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
@@ -491,5 +487,14 @@
     "roof_type_observed": "flat",
     "has_storefront": true,
     "chimneys": 0
+  },
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.6,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.63,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
   }
 }

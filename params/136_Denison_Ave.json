@@ -19,14 +19,14 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 40.9,
   "roof_features": [
     "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "dark brown brick, somewhat weathered",
   "windows_per_floor": [
-    0
+    2
   ],
   "window_type": "casement",
   "window_width_m": 0.7,
@@ -206,6 +206,15 @@
         "old": "#98432E",
         "new": "#B85A3A"
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B2653B",
+      "trim: #483222 → #5A4A3A",
+      "windows_per_floor: [0] → [2]",
+      "roof_pitch: 40 → 40.9",
+      "decorative: +string_courses",
+      "decorative: +decorative_brickwork"
     ]
   },
   "photo_observations": {
@@ -306,11 +315,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B2653B",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#483222",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -346,6 +355,14 @@
       "height_mm": 250,
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 20
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
   "chimneys": {
@@ -369,8 +386,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#98432E",
-    "trim": "#483222",
+    "facade": "#B2653B",
+    "trim": "#5A4A3A",
     "roof": "#535252",
     "accent": "#3D4534"
   },

@@ -20,16 +20,17 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 47.7,
   "roof_features": [
     "glass_guard",
-    "box_bay"
+    "box_bay",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "light gray stone-look cladding with white smooth panels and dark gray metal-framed glazing",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -232,6 +233,18 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #8A8A8A → #898989",
+      "trim: #533828 → #3A2A20",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "roof_pitch: 45 → 47.7",
+      "decorative: +ornamental_shingles",
+      "decorative: +bargeboard",
+      "decorative: +decorative_brickwork"
     ]
   },
   "photo_observations": {
@@ -345,11 +358,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#8A8A8A",
+    "brick_colour_hex": "#898989",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#533828",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 3, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
@@ -386,8 +399,9 @@
   ],
   "decorative_elements": {
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "simple"
+      "present": true,
+      "style": "plain",
+      "width_mm": 150
     },
     "bay_window_shape": "canted",
     "bay_window_storeys": 2,
@@ -397,17 +411,16 @@
       "height_mm": 250,
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 100
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "98 Oxford St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as mixed masonry in a light gray stone-look cladding with white smooth panels and dark gray metal-framed glazing palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 3 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Each property has value as a late-nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to th.",
@@ -432,8 +445,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8A8A8A",
-    "trim": "#533828",
+    "facade": "#898989",
+    "trim": "#3A2A20",
     "roof": "#444343",
     "accent": "#32251C"
   },
@@ -513,5 +526,14 @@
     "occlusion": {},
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.65,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

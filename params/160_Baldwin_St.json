@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "parapet_wall"
+    "parapet_wall",
+    "chimney"
   ],
   "facade_material": "Brick",
   "facade_colour": "buff-beige brick with dark grey entry surround and large aluminum-framed windows",
@@ -241,7 +242,9 @@
         "old": 45,
         "new": 0
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_condition_notes": "Facade is occupied and readable from the street, with contemporary storefront alterations layered onto the historic building form.",
@@ -617,5 +620,22 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.92,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.56,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 0.99,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

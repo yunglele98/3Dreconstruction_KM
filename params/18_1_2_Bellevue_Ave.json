@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 43.6,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    1,
+    1,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -213,6 +215,15 @@
         "old": "#B3875F",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BD4D36",
+      "trim: #2F2F2F → #3A3A3A",
+      "windows_per_floor: [0, 0, 0] → [1, 1, 1]",
+      "roof_pitch: 45 → 43.6"
     ]
   },
   "bay_window": {
@@ -270,11 +281,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BD4D36",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2F2F2F",
+    "trim_colour_hex": "#3A3A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
@@ -317,15 +328,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "18 1/2 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
@@ -356,8 +359,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B3875F",
-    "trim": "#2F2F2F",
+    "facade": "#BD4D36",
+    "trim": "#3A3A3A",
     "roof": "#5E5D5D",
     "accent": "#503729"
   },
@@ -454,5 +457,14 @@
     "bay_window_projection_m_est": 0.59
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 0.69,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

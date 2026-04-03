@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 6
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 38.4,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -210,6 +212,15 @@
         "old": "#8E413C",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AD5538",
+      "trim: #443425 → #2A2A2A",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "roof_pitch: 40 → 38.4"
     ]
   },
   "doors_detail": [
@@ -233,11 +244,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AD5538",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#443425",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Constructed as one of a semi-detached pair, the property retains original building features including its cross-gable roofline, first storey bay window, and fenestration pattern with segmentally arched openings. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -306,8 +317,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8E413C",
-    "trim": "#443425",
+    "facade": "#AD5538",
+    "trim": "#2A2A2A",
     "roof": "#4C4C4C",
     "accent": "#4A412F"
   },
@@ -385,5 +396,15 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.46,
+      "height_above_ridge_m": 0.61,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

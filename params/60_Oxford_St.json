@@ -22,7 +22,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "service_rear"
+    "service_rear",
+    "chimney"
   ],
   "facade_material": "stone",
   "facade_colour": "pale green stone-pattern rear wall with a darker brown upper band",
@@ -213,7 +214,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913"
   },
   "photo_observations": {
     "facade_colour_observed": "pale green stone-pattern rear wall with a darker brown upper band",
@@ -376,15 +379,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#C8B898"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "60 Oxford St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as stone, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
@@ -493,5 +488,14 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.46,
+      "depth_m": 0.43,
+      "height_above_ridge_m": 0.77,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

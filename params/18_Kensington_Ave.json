@@ -20,12 +20,15 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 40.1,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "not clearly visible — night photo",
   "windows_per_floor": [
-    0
+    1,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -210,6 +213,20 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C56A39",
+      "trim: #4A3423 → #3A2A20",
+      "windows_per_floor: [0] → [1, 2]",
+      "roof_pitch: 40 → 40.1",
+      "decorative: +string_courses",
+      "decorative: +cornice",
+      "decorative: +stone_voussoirs",
+      "decorative: +ornamental_shingles",
+      "decorative: +decorative_brickwork"
     ]
   },
   "storefront": {},
@@ -268,11 +285,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C56A39",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4A3423",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
     "heritage_summary": "Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion.",
@@ -306,17 +323,29 @@
     "bargeboard": {
       "colour_hex": "#3A2A20",
       "style": "simple"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 20
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 100
+    },
+    "stone_voussoirs": {
+      "present": true
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 100
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "18 Kensington Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick in a not clearly visible — night photo palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance.",
   "heritage_summary": "Constructed as pair, the properties have largely retained their original building features including their shared roofline with central gable, first storey bay windows, brick cladding, and fenestration pattern with flat headed openings. The property at 16 Kensington Avenue has value for the modifications made to accommodate a commercial conversion.",
@@ -329,8 +358,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#9E361F",
-    "trim": "#4A3423",
+    "facade": "#C56A39",
+    "trim": "#3A2A20",
     "roof": "#5D5353",
     "accent": "#182825"
   },
@@ -396,5 +425,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.57,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.95,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

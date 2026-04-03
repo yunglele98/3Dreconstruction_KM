@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 47.3,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -199,6 +201,15 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C54F3A",
+      "trim: #4A4A4A → #F0EDE8",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "roof_pitch: 45 → 47.3"
     ]
   },
   "doors_detail": [
@@ -222,11 +233,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C54F3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4A4A4A",
+    "trim_colour_hex": "#F0EDE8",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a cross-gable, consistent with its commercial typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "With its early-twentieth-century commercial built form, the property is physically, functionally, visually, and historically linked to the surrounding market area. Summary: Reference Primary Address Entrance Address(es) Number 216.",
@@ -297,8 +308,8 @@
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B7A178",
-    "trim": "#4A4A4A",
+    "facade": "#C54F3A",
+    "trim": "#F0EDE8",
     "roof": "#525252",
     "accent": "#4A3A2A"
   },
@@ -379,5 +390,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.49,
+      "depth_m": 0.39,
+      "height_above_ridge_m": 0.39,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  },
+  "chimneys": 1
 }

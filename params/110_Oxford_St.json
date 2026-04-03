@@ -20,15 +20,16 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 44.4,
   "roof_features": [
-    "mansard_dormers"
+    "mansard_dormers",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "gray ashlar-pattern stone veneer facade with cream entry surround and vivid red metal-clad mansard dormers",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -218,6 +219,16 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #8A8A8A → #949393",
+      "trim: #3E2B1E → #3E2E1E",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "roof_pitch: 45 → 44.4",
+      "decorative: +bargeboard"
     ]
   },
   "decorative_elements": {
@@ -231,8 +242,9 @@
       "colour_hex": "#D4C9A8"
     },
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "decorative"
+      "present": true,
+      "style": "plain",
+      "width_mm": 150
     },
     "bay_window_shape": "canted",
     "bay_window_storeys": 2,
@@ -343,11 +355,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#8A8A8A",
+    "brick_colour_hex": "#949393",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3E2B1E",
+    "trim_colour_hex": "#3E2E1E",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, decorative brick, cornice.",
@@ -392,15 +404,7 @@
       1
     ]
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "110 Oxford St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as mixed masonry in a gray ashlar-pattern stone veneer facade with cream entry surround and vivid red metal-clad mansard dormers palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, decorative brick, cornice.",
   "heritage_summary": "Constructed as a row of identical residences, the properties retain original building features, including their shared roofline, gables, fenestration pattern with segmentally arched window openings, and ground floor bay windows. 106 and 110 Oxford Street retain their original dichromatic brick cladding while 108 Oxford Street has been overclad.",
@@ -421,8 +425,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8A8A8A",
-    "trim": "#3E2B1E",
+    "facade": "#949393",
+    "trim": "#3E2E1E",
     "roof": "#5F5F5F",
     "accent": "#3A4233"
   },
@@ -520,5 +524,14 @@
     "occlusion": {},
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.61,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

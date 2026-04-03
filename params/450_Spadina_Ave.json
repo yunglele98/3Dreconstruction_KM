@@ -21,7 +21,9 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "stucco",
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
@@ -210,7 +212,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913"
   },
   "storefront": {},
   "doors_detail": [
@@ -359,5 +363,15 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.46,
+      "height_above_ridge_m": 0.79,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

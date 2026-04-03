@@ -21,12 +21,14 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -212,11 +214,26 @@
         "old": "#76332A",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BD5039",
+      "trim: #37281F → #5A4A3A",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "decorative: +cornice",
+      "decorative: +bargeboard"
     ]
   },
   "decorative_elements": {
     "decorative_brickwork": {
       "present": true
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 150,
+      "projection_mm": 60
     }
   },
   "doors_detail": [
@@ -240,11 +257,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BD5039",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#37281F",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
@@ -276,15 +293,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "23 Wales Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows.",
@@ -314,8 +323,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#76332A",
-    "trim": "#37281F",
+    "facade": "#BD5039",
+    "trim": "#5A4A3A",
     "roof": "#594F4F",
     "accent": "#192624"
   },
@@ -401,5 +410,21 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.68,
+      "height_above_ridge_m": 0.65,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.76,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

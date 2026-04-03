@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 10
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 46.1,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    2,
+    1,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -199,6 +201,15 @@
         "old": "#BA6A55",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C45644",
+      "trim: #222222 → #E8E0D0",
+      "windows_per_floor: [0, 0, 0] → [2, 1, 1]",
+      "roof_pitch: 45 → 46.1"
     ]
   },
   "doors_detail": [
@@ -222,11 +233,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C45644",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#222222",
+    "trim_colour_hex": "#E8E0D0",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "The property has value as an early-twentieth-century House-form building that reflects vernacular interpretations of early-twentieth-century architectural styles. The property retains most of its original building features including brick cladding, flat headed openings, projecting two-storey bay, second storey oriel window and hipped attic dormer.",
@@ -275,15 +286,7 @@
       "style": "simple"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "69 Wales Ave is a house-form, detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -314,8 +317,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#BA6A55",
-    "trim": "#222222",
+    "facade": "#C45644",
+    "trim": "#E8E0D0",
     "roof": "#544E4E",
     "accent": "#27271F"
   },
@@ -413,5 +416,14 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.46,
+      "depth_m": 0.49,
+      "height_above_ridge_m": 0.75,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

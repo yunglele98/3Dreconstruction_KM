@@ -21,7 +21,9 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "painted stucco/render (blue/navy)",
   "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
@@ -246,7 +248,9 @@
         "old": "#526161",
         "new": "#5A5A5A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -623,5 +627,15 @@
     "element_counts": {},
     "occlusion": {},
     "total_facade_detections": 0
-  }
+  },
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.64,
+      "height_above_ridge_m": 0.9,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

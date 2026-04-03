@@ -24,7 +24,8 @@
   "roof_pitch_deg": 45,
   "roof_features": [
     "projecting_balconies",
-    "patio"
+    "patio",
+    "chimney"
   ],
   "facade_material": "concrete",
   "facade_colour": "beige/tan brick upper floors with green artificial turf balcony panels on 2nd and 3rd floors, colorful polka-dot painted ground floor (red, yellow, green, purple)",
@@ -193,7 +194,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -519,5 +522,22 @@
     "matches_existing": false,
     "text_count": 5
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.65,
+      "depth_m": 0.64,
+      "height_above_ridge_m": 0.8,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.65,
+      "depth_m": 0.64,
+      "height_above_ridge_m": 0.86,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

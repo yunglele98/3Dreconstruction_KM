@@ -20,15 +20,16 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 45.6,
   "roof_features": [
-    "gable_front"
+    "gable_front",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "weathered red brick with pale yellow brick banding and white trim",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -204,6 +205,17 @@
         "old": "#8E3D35",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C36044",
+      "trim: #503B2A → #5A4A3A",
+      "windows_per_floor: [0, 0] → [2, 2]",
+      "roof_pitch: 45 → 45.6",
+      "decorative: +ornamental_shingles",
+      "decorative: +decorative_brickwork"
     ]
   },
   "photo_observations": {
@@ -331,17 +343,24 @@
       "projection_mm": 120,
       "height_mm": 200,
       "colour_hex": "#4A3A2A"
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 130
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
   "building_type": "residential",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C36044",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#503B2A",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include string courses, cornice, gable brackets.",
@@ -390,15 +409,7 @@
       1
     ]
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "12 Denison Sq is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include string courses, cornice, gable brackets.",
   "heritage_summary": "Constructed as a pair of semi-detached houses, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bays, brick cladding with polychromatic brickwork detailing, decorative wooden gable brackets, and fenestration pattern with segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -411,8 +422,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8E3D35",
-    "trim": "#503B2A",
+    "facade": "#C36044",
+    "trim": "#5A4A3A",
     "roof": "#494949",
     "accent": "#4B331F"
   },
@@ -515,5 +526,14 @@
   "_audit": {
     "photo_heavily_occluded": true
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.6,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.66,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

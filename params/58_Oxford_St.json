@@ -20,16 +20,17 @@
     "lots_sharing_footprint": 6
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 41.1,
   "roof_features": [
     "gable_front",
-    "rear_addition"
+    "rear_addition",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "red brick rear gable with a brown-clad lower addition",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.9,
@@ -198,6 +199,17 @@
         "old": "#793323",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BB653C",
+      "trim: #432E1D → #5A4A3A",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "roof_pitch: 40 → 41.1",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs"
     ]
   },
   "photo_observations": {
@@ -312,11 +324,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BB653C",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#432E1D",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_summary": "Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. 50 Lippincott Street N/A 259.",
@@ -366,17 +378,17 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 15
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "58 Oxford St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructed as a pair, the properties retain their original asymmetrical composition including side gable with pointed arch window above a pair of windows. 50 Lippincott Street N/A 259.",
@@ -389,8 +401,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#793323",
-    "trim": "#432E1D",
+    "facade": "#BB653C",
+    "trim": "#5A4A3A",
     "roof": "#4E4E4E",
     "accent": "#34261C"
   },
@@ -473,5 +485,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.52,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.68,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.98,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

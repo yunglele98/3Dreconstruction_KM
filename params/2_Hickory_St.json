@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 37.6,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -217,6 +219,16 @@
         "old": "#CD7259",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BF573E",
+      "trim: #343434 → #2A2A2A",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "roof_pitch: 40 → 37.6",
+      "decorative: +string_courses"
     ]
   },
   "doors_detail": [
@@ -240,11 +252,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BF573E",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#343434",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its multi-residential typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Constructed as a pair they retain most of their original building features including their mirrored facades, shared roofline, projecting double-height bay windows, brick cladding with stonework, and stone masonry, flat-headed window openings, and segmentally arched double entrances with brick voussoirs. Contextually, the property supports and maintains the residential character of the streetscape and is functionally, visually, and historically linked to the District.",
@@ -286,17 +298,14 @@
     "stone_voussoirs": {
       "present": true,
       "colour_hex": "#C8B898"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 15
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "2 Hickory St is a multi-residential building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its multi-residential typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -319,8 +328,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#CD7259",
-    "trim": "#343434",
+    "facade": "#BF573E",
+    "trim": "#2A2A2A",
     "roof": "#4C4B4B",
     "accent": "#2C2C33"
   },
@@ -403,5 +412,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.43,
+      "depth_m": 0.41,
+      "height_above_ridge_m": 0.76,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

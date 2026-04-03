@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "cross_gable"
+    "cross_gable",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "warm red-brown brick; white painted downspout; upper floor retains brick",
@@ -209,7 +210,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "storefront": {},
   "photo_observations": {
@@ -460,5 +463,15 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.54,
+      "height_above_ridge_m": 0.89,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

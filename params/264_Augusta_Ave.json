@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "gable_front"
+    "gable_front",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "weathered red brick with dark red trim and wood infill at the former bay opening",
@@ -223,7 +224,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "photo_observations": {
     "facade_colour_observed": "weathered red brick with dark red trim and wood infill at the former bay opening",
@@ -529,5 +532,15 @@
     },
     "total_facade_detections": 2
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.49,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.81,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

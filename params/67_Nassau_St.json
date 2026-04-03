@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "Mixed masonry",
   "facade_colour": "dark navy blue painted commercial storefront at ground, white/light painted upper floor",
   "windows_per_floor": [
@@ -223,7 +225,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "photo_reference": "IMG_20260320_155707219_HDR.jpg",
@@ -349,15 +353,7 @@
       "style": "simple"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "67 Nassau St is a converted house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed masonry in a dark navy blue painted commercial storefront at ground, white/light painted upper floor palette, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 1 upper-window bay, using double hung, and 1 principal entrance.",
   "heritage_summary": "Summary: Reference Primary Address Entrance Address(es) Number 21. 230 Augusta Avenue 228 Augusta Avenue 67 Nassau Street 27 DCH | FO :D FO YTIC 5202 234 Augusta Avenue 234 AUGUSTA AVENUE.",
@@ -452,5 +448,21 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.64,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.62,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.62,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "awning"
+    "awning",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "painted (corrugated metal/painted siding)",
@@ -243,7 +244,9 @@
         "old": "#D03050",
         "new": "#208040"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "cornice": {
     "present": true,
@@ -575,5 +578,22 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.57,
+      "height_above_ridge_m": 0.99,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.64,
+      "height_above_ridge_m": 0.69,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

@@ -22,7 +22,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red-brown brick, warm tone consistent across row; brick",
   "windows_per_floor": [
@@ -215,7 +217,9 @@
         "old": "#37281F",
         "new": "#E8D8C0"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -605,5 +609,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.47,
+      "depth_m": 0.54,
+      "height_above_ridge_m": 0.53,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

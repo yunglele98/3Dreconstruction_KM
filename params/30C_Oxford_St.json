@@ -24,7 +24,8 @@
   "roof_pitch_deg": 45,
   "roof_features": [
     "turret",
-    "tower"
+    "tower",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red brick",
@@ -193,7 +194,9 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -300,15 +303,7 @@
       1
     ]
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "30C Oxford St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice, decorative brick, original windows, turret.",
@@ -441,5 +436,14 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.48,
+      "depth_m": 0.46,
+      "height_above_ridge_m": 0.7,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

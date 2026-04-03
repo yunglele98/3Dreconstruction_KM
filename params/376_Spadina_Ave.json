@@ -22,7 +22,8 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "parapet_wall"
+    "parapet_wall",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red brick commercial block with a red-painted storefront base and blue-beige signboard",
@@ -219,7 +220,9 @@
         "old": "#4C3322",
         "new": "#8A2020"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913"
   },
   "bay_window": {
     "present": true,
@@ -601,5 +604,15 @@
     "total_facade_detections": 2
   },
   "eave_overhang_mm": 100,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.46,
+      "height_above_ridge_m": 0.62,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

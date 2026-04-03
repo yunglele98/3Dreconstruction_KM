@@ -19,12 +19,14 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 46.2,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "dark mottled red-brown brick with white-framed modern glazing and white soffit trim",
   "windows_per_floor": [
-    0
+    2
   ],
   "window_type": "fixed",
   "window_width_m": 1.3,
@@ -197,6 +199,17 @@
         "old": "#993A29",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AD5B38",
+      "trim: #3F2B1D → #3A2A20",
+      "windows_per_floor: [0] → [2]",
+      "roof_pitch: 45 → 46.2",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs"
     ]
   },
   "photo_observations": {
@@ -297,11 +310,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AD5B38",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3F2B1D",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using fixed, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s.",
@@ -337,17 +350,17 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 20
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "35 Nassau St is a converted house-form, house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its converted house-form, house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using fixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s.",
@@ -360,8 +373,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#993A29",
-    "trim": "#3F2B1D",
+    "facade": "#AD5B38",
+    "trim": "#3A2A20",
     "roof": "#4D4C4C",
     "accent": "#384031"
   },
@@ -445,5 +458,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.68,
+      "depth_m": 0.67,
+      "height_above_ridge_m": 0.74,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.84,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

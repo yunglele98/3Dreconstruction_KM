@@ -22,7 +22,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red-brown brick; brick (upper), mixed at ground level",
   "windows_per_floor": [
@@ -207,7 +209,9 @@
         "old": "#3E2C1D",
         "new": "#E8E0D0"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -339,15 +343,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
   "facade_description": "37 Kensington Ave is a converted house-form, house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its converted house-form, house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, gable brackets.",
@@ -550,5 +546,21 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 250,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.7,
+      "depth_m": 0.64,
+      "height_above_ridge_m": 0.61,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.89,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

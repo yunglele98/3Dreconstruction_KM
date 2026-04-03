@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "buff/yellow-brown brick; brick",
   "windows_per_floor": [
@@ -209,7 +211,9 @@
         "old": "#4F3727",
         "new": "#C8B8A0"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -404,15 +408,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "10 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, decorative brick, original windows.",
   "heritage_summary": "Constructed as a pair, the properties have evolved over time while retaining original building features including cross-gabled rooflines, polychromatic brickwork, round arched attic windows, and flat headed windows at the second storey. The property at 8 Kensington Avenue has also retained its first storey bay window.",
@@ -572,5 +568,14 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 250,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.54,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 1.0,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

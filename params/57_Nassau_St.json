@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 47.8,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red-brown brick with dark trim, black-painted porch details, and arched brick entry surround",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -195,6 +197,15 @@
         "old": "#8D281E",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BA6341",
+      "trim: #2C2219 → #5A4A3A",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "roof_pitch: 45 → 47.8"
     ]
   },
   "photo_observations": {
@@ -313,11 +324,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BA6341",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2C2219",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, cornice.",
@@ -356,15 +367,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "57 Nassau St is a house-form, converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, converted house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice.",
   "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is associated with the District’s early residential development from the 1850s to the early 1900s.",
@@ -383,8 +386,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8D281E",
-    "trim": "#2C2219",
+    "facade": "#BA6341",
+    "trim": "#5A4A3A",
     "roof": "#3C3B3B",
     "accent": "#3B2F20"
   },
@@ -486,5 +489,21 @@
   "_audit": {
     "photo_heavily_occluded": true
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.98,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.64,
+      "height_above_ridge_m": 0.97,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

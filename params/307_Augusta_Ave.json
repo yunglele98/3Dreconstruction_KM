@@ -22,7 +22,8 @@
   "roof_pitch_deg": 45,
   "roof_features": [
     "projecting_balcony",
-    "deck"
+    "deck",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "white storefront with black trim, side mural panel, and upper dark-framed windows",
@@ -236,7 +237,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "storefront": {},
   "photo_observations": {
@@ -538,5 +541,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.49,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.59,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.9,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

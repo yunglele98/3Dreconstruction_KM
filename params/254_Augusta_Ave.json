@@ -21,7 +21,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "parapet_wall"
+    "parapet_wall",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "dark red-brown brick facade with pale wood storefront infill and black trim",
@@ -227,7 +228,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930"
   },
   "storefront": {},
   "photo_observations": {
@@ -518,5 +521,15 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.47,
+      "depth_m": 0.41,
+      "height_above_ridge_m": 0.31,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  },
+  "chimneys": 1
 }

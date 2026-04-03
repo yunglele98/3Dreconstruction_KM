@@ -23,7 +23,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "gothic_gable_peaks"
+    "gothic_gable_peaks",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "dark charcoal/slate grey painted facade with white trim",
@@ -198,7 +199,9 @@
         "old": "#9C4221",
         "new": "#8A8A8A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -350,15 +353,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "73 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick in a dark charcoal/slate grey painted facade with white trim palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, cornice.",
   "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
@@ -473,5 +468,14 @@
     "eave_overhang_mm_est": 800
   },
   "foundation_height_m": 0.3,
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.94,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

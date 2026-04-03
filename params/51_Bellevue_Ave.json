@@ -22,7 +22,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "cross_gable"
+    "cross_gable",
+    "chimney"
   ],
   "facade_material": "mixed",
   "facade_colour": "cream/beige stucco upper; brown brick visible at lower section",
@@ -198,7 +199,9 @@
         "old": "#B0694E",
         "new": "#B85A3A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "photo_observations": {
     "facade_colour_observed": "cream/beige stucco upper; brown brick visible at lower section",
@@ -461,5 +464,22 @@
     "occlusion": {},
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.62,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.68,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

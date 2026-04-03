@@ -22,7 +22,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "white-painted brick with dark green trim on bay window frames, bargeboard, and porch elements",
   "windows_per_floor": [
@@ -215,7 +217,9 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "bay_window": {
     "present": true,
@@ -535,5 +539,15 @@
   "_audit": {
     "photo_heavily_occluded": true
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.62,
+      "depth_m": 0.49,
+      "height_above_ridge_m": 0.59,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

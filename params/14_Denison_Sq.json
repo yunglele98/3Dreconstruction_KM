@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "gable_front"
+    "gable_front",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red brick with buff/yellow brick banding and white-painted trim",
@@ -190,7 +191,9 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "red brick with buff/yellow brick banding and white-painted trim",
@@ -376,15 +379,7 @@
       1
     ]
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "14 Denison Sq is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include string courses, cornice, gable brackets.",
   "heritage_summary": "Constructed as a pair of semi-detached houses, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bays, brick cladding with polychromatic brickwork detailing, decorative wooden gable brackets, and fenestration pattern with segmentally arched openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -501,5 +496,14 @@
   "_audit": {
     "photo_heavily_occluded": true
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.52,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.95,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

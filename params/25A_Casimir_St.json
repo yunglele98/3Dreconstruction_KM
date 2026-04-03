@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 6
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 39.5,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    2,
+    1,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -211,6 +213,18 @@
         "old": "#973E2A",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C25F42",
+      "trim: #493726 → #E8E0D0",
+      "windows_per_floor: [0, 0, 0] → [2, 1, 1]",
+      "roof_pitch: 40 → 39.5",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs",
+      "decorative: +decorative_brickwork"
     ]
   },
   "doors_detail": [
@@ -234,11 +248,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C25F42",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#493726",
+    "trim_colour_hex": "#E8E0D0",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "mortar_colour_hex": "#B4A58B",
@@ -285,6 +299,17 @@
     "bargeboard": {
       "colour_hex": "#E8E0D0",
       "style": "simple"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 30
+    },
+    "stone_voussoirs": {
+      "present": true
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
   "street_setback_m": 3.0,
@@ -316,8 +341,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#973E2A",
-    "trim": "#493726",
+    "facade": "#C25F42",
+    "trim": "#E8E0D0",
     "roof": "#5C5354",
     "accent": "#492F1D"
   },
@@ -412,5 +437,22 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.77,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 0.54,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

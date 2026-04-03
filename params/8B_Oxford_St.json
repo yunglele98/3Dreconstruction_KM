@@ -19,12 +19,14 @@
     "lots_sharing_footprint": 5
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 38.2,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -196,6 +198,15 @@
         "old": "#AF9F83",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BF5B35",
+      "windows_per_floor: [0] → [2]",
+      "roof_pitch: 40 → 38.2",
+      "decorative: +cornice"
     ]
   },
   "doors_detail": [
@@ -219,7 +230,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BF5B35",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -252,17 +263,14 @@
     "bargeboard": {
       "colour_hex": "#4A4A4A",
       "style": "simple"
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 60
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "8B Oxford St is a multi-residential building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its multi-residential typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -291,7 +299,7 @@
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#AF9F83",
+    "facade": "#BF5B35",
     "trim": "#4A4A4A",
     "roof": "#494949",
     "accent": "#4A3A2A"
@@ -356,5 +364,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.48,
+      "depth_m": 0.42,
+      "height_above_ridge_m": 0.32,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  }
 }

@@ -24,7 +24,8 @@
   "roof_pitch_deg": 45,
   "roof_features": [
     "dormers",
-    "patio"
+    "patio",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red brick upper facade with green storefront framing and beige patio enclosure",
@@ -217,7 +218,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "cornice": {
     "present": true,
@@ -499,5 +502,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.52,
+      "depth_m": 0.45,
+      "height_above_ridge_m": 0.69,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.54,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.69,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

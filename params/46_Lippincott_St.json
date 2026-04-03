@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 7
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 42.1,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "clapboard",
   "facade_colour": "painted wood",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    2,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -199,6 +201,18 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BB6D3F",
+      "trim: #3E2C21 → #4A3A2A",
+      "windows_per_floor: [0, 0, 0] → [2, 2, 2]",
+      "roof_pitch: 45 → 42.1",
+      "decorative: +stone_voussoirs",
+      "decorative: +bargeboard",
+      "decorative: +decorative_brickwork"
     ]
   },
   "doors_detail": [
@@ -222,11 +236,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BB6D3F",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3E2C21",
+    "trim_colour_hex": "#4A3A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, detached, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "The property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through a one-storey commercial addition. Through its construction date and typology, the property is associated with the District’s early residential development from the.",
@@ -281,21 +295,20 @@
   },
   "decorative_elements": {
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "simple"
+      "present": true,
+      "style": "decorative Victorian",
+      "width_mm": 150
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "stone_voussoirs": {
+      "present": true
+    },
+    "decorative_brickwork": {
+      "present": true
+    }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "46 Lippincott St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, detached, bay-and-gable typology. The facade reads primarily as clapboard in a painted wood palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -326,8 +339,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#3E2C21",
+    "facade": "#BB6D3F",
+    "trim": "#4A3A2A",
     "roof": "#4D5D5D",
     "accent": "#4E2F20"
   },
@@ -418,5 +431,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.66,
+      "height_above_ridge_m": 0.96,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

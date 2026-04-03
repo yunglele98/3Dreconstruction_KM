@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 42.5,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "dark red-brown brick with white/cream trim",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -210,6 +212,19 @@
         "old": "#8B4836",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B16033",
+      "trim: #483120 → #5A4A3A",
+      "windows_per_floor: [0, 0] → [1, 1]",
+      "roof_pitch: 45 → 42.5",
+      "decorative: +string_courses",
+      "decorative: +cornice",
+      "decorative: +stone_voussoirs",
+      "decorative: +bargeboard"
     ]
   },
   "doors_detail": [
@@ -233,11 +248,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B16033",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#483120",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_summary": "Each property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles. Through its construction date and typology, each property is directly associated with the District’s early residential development from the 1850s to the ear.",
@@ -283,21 +298,27 @@
   },
   "decorative_elements": {
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "simple"
+      "present": true,
+      "style": "simple Victorian",
+      "width_mm": 200
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 30
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 250,
+      "projection_mm": 100
+    },
+    "stone_voussoirs": {
+      "present": true
+    }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "11 Casimir St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -347,8 +368,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8B4836",
-    "trim": "#483120",
+    "facade": "#B16033",
+    "trim": "#5A4A3A",
     "roof": "#61584F",
     "accent": "#363F30"
   },
@@ -430,5 +451,21 @@
     "total_facade_detections": 1
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.68,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.8,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.67,
+      "height_above_ridge_m": 0.91,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

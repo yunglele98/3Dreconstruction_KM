@@ -22,7 +22,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 35,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "Brick",
   "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
@@ -225,7 +227,9 @@
         "old": "#4A8030",
         "new": "#3A7A6A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913"
   },
   "doors_detail": [
     {
@@ -305,15 +309,7 @@
       "projection_mm": 150
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "confidence": 0.9,
   "facade_description": "177 Baldwin St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade is organized as a storefront base with 2 upper-window bays, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
@@ -519,5 +515,14 @@
     "has_storefront": true,
     "chimneys": 0
   },
-  "foundation_height_m": 0.2
+  "foundation_height_m": 0.2,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.73,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

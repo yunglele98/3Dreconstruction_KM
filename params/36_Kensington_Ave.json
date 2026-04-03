@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 42.3,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -225,6 +227,16 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B55734",
+      "trim: #433224 → #3A2A20",
+      "windows_per_floor: [0, 0] → [2, 2]",
+      "roof_pitch: 45 → 42.3",
+      "decorative: +cornice"
     ]
   },
   "bay_window": {
@@ -253,6 +265,11 @@
       "projection_mm": 120,
       "height_mm": 200,
       "colour_hex": "#4A3A2A"
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 250,
+      "projection_mm": 100
     }
   },
   "doors_detail": [
@@ -276,11 +293,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B55734",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#433224",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick, gable brackets.",
@@ -314,15 +331,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
   "facade_description": "36 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick, gable brackets.",
@@ -370,8 +379,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#993D2B",
-    "trim": "#433224",
+    "facade": "#B55734",
+    "trim": "#3A2A20",
     "roof": "#5D554C",
     "accent": "#2E3E2D"
   },
@@ -449,5 +458,21 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.92,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.64,
+      "height_above_ridge_m": 0.98,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

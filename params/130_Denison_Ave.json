@@ -20,7 +20,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "Mixed masonry",
   "facade_colour": "dark red-brown brick with grey/white trim elements",
   "windows_per_floor": [
@@ -214,7 +216,9 @@
       "windows_detail: 1 -> 1 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "dark red-brown brick with grey/white trim elements",
@@ -355,15 +359,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "130 Denison Ave is a row-house building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as mixed masonry in a dark red-brown brick with grey/white trim elements palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using casement, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "Constructed as a row, the properties retain their original composition of a central gable and entrance flanked by windows to either side. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -462,5 +458,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.68,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.79,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.62,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

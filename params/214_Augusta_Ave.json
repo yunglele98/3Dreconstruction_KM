@@ -22,7 +22,8 @@
   "roof_pitch_deg": 40,
   "roof_features": [
     "parapet_wall",
-    "sign_band"
+    "sign_band",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "pink painted brick facade with extensive graffiti art on roll-down shutters",
@@ -218,7 +219,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -399,5 +402,22 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.66,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.93,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.66,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 5
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 46.3,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -213,6 +215,18 @@
         "old": "#863F2E",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B45132",
+      "trim: #3C2B21 → #3E2E1E",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "roof_pitch: 45 → 46.3",
+      "decorative: +stone_voussoirs",
+      "decorative: +ornamental_shingles",
+      "decorative: +bargeboard"
     ]
   },
   "decorative_elements": {
@@ -226,11 +240,19 @@
       "present": true
     },
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "decorative"
+      "present": true,
+      "style": "decorative Victorian",
+      "width_mm": 150
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "stone_voussoirs": {
+      "present": true
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 130
+    }
   },
   "cornice": {
     "present": true,
@@ -260,11 +282,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B45132",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3C2B21",
+    "trim_colour_hex": "#3E2E1E",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, original windows, decorative brick.",
@@ -308,15 +330,7 @@
       1
     ]
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "9 Oxford St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice, original windows, decorative brick.",
@@ -346,8 +360,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#863F2E",
-    "trim": "#3C2B21",
+    "facade": "#B45132",
+    "trim": "#3E2E1E",
     "roof": "#393939",
     "accent": "#363B2D"
   },
@@ -428,5 +442,21 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.56,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.61,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.62,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.79,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

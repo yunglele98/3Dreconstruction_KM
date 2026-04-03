@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "buff/cream brick with decorative brick bands and red door accent",
   "windows_per_floor": [
@@ -215,7 +217,9 @@
         "old": "#B65C44",
         "new": "#D4B896"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "photo_reference": "IMG_20260320_155037469_HDR.jpg",
@@ -357,15 +361,7 @@
       "colour_hex": "#4A3A2A"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "70 Bellevue Ave is a house-form, semi-detached ; converted house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached ; converted house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include string courses, gable brackets.",
   "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have retained original building features including their shared roofline, brick eaves brackets, string courses and segmental window openings with brick voussoirs at the first and second storey at 72 Bellevue Avenue and 90 Nassau Street and at the second storey at 70 Bellevue Avenue. 70 Bellevue Avenue N/A 90.",
@@ -462,5 +458,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.87,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

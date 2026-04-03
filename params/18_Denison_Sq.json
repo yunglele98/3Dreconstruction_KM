@@ -20,15 +20,16 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 45.7,
   "roof_features": [
-    "gable_front"
+    "gable_front",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "brown-clad and cream-trimmed altered semi-detached facade",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.8,
@@ -213,6 +214,17 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BA6D42",
+      "trim: #382E27 → #E8E0D0",
+      "windows_per_floor: [0, 0] → [1, 1]",
+      "roof_pitch: 45 → 45.7",
+      "decorative: +bargeboard",
+      "decorative: +decorative_brickwork"
     ]
   },
   "bay_window": {
@@ -324,11 +336,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BA6D42",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#382E27",
+    "trim_colour_hex": "#E8E0D0",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice, gable brackets.",
@@ -365,8 +377,9 @@
   ],
   "decorative_elements": {
     "bargeboard": {
-      "colour_hex": "#E8E0D0",
-      "style": "simple"
+      "present": true,
+      "style": "simple trim",
+      "width_mm": 150
     },
     "bay_window_shape": "canted",
     "bay_window_storeys": 2,
@@ -387,6 +400,9 @@
       "projection_mm": 120,
       "height_mm": 200,
       "colour_hex": "#4A3A2A"
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
   "street_setback_m": 3.0,
@@ -401,8 +417,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#382E27",
+    "facade": "#BA6D42",
+    "trim": "#E8E0D0",
     "roof": "#494848",
     "accent": "#3C4533"
   },
@@ -502,5 +518,15 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.46,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.72,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

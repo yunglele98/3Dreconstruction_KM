@@ -23,13 +23,14 @@
   "roof_pitch_deg": 0,
   "roof_features": [
     "front_gable",
-    "boarded_opening"
+    "boarded_opening",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "black-painted storefront with a boarded/covered display opening and dark upper facade",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.9,
@@ -218,6 +219,18 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AE4E35",
+      "trim: #463425 → #4A3A2A",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs",
+      "decorative: +ornamental_shingles",
+      "decorative: +bargeboard"
     ]
   },
   "storefront": {},
@@ -321,11 +334,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AE4E35",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#463425",
+    "trim_colour_hex": "#4A3A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_summary": "The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding.",
@@ -365,17 +378,21 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 20
+    },
+    "stone_voussoirs": {
+      "present": true
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 100
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "274 Augusta Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology. The facade reads primarily as mixed masonry in a black-painted storefront with a boarded/covered display opening and dark upper facade palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding.",
@@ -388,8 +405,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#463425",
+    "facade": "#AE4E35",
+    "trim": "#4A3A2A",
     "roof": "#465656",
     "accent": "#543B2B"
   },
@@ -486,5 +503,14 @@
     "matches_existing": false,
     "text_count": 13
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.66,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.99,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

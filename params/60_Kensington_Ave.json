@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "Brick",
   "facade_colour": "painted (painted brick / vinyl siding)",
   "windows_per_floor": [
@@ -230,7 +232,9 @@
         "old": "#4D5353",
         "new": "#5A5A5A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "storefront": {
     "type": "Commercial ground floor",
@@ -536,5 +540,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 200,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.47,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.78,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

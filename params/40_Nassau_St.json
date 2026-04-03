@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "flat",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 45.2,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2
   ],
   "window_type": "casement",
   "window_width_m": 0.85,
@@ -195,6 +197,16 @@
         "old": "#8B452E",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BC5937",
+      "trim: #38291F → #5A4A3A",
+      "windows_per_floor: [0, 0] → [2, 2]",
+      "roof_pitch: 45 → 45.2",
+      "decorative: +stone_voussoirs"
     ]
   },
   "photo_observations": {
@@ -262,11 +274,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BC5937",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#38291F",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street frontage spans roughly 5.2 metres across 2 storeys beneath a flat, consistent with its commercial, converted house-form, semi-detached typology.",
     "opening_rhythm": "The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_expression": "Key storefront and facade features include original windows, cornice.",
@@ -305,6 +317,9 @@
       "height_mm": 250,
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
   "street_setback_m": 0.0,
@@ -319,8 +334,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8B452E",
-    "trim": "#38291F",
+    "facade": "#BC5937",
+    "trim": "#5A4A3A",
     "roof": "#494747",
     "accent": "#4F3726"
   },
@@ -409,5 +424,15 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.54,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.76,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

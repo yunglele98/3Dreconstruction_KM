@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 5
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 43.1,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    1,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -241,6 +243,18 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C36643",
+      "trim: #563B2A → #3A2A20",
+      "windows_per_floor: [0, 0, 0] → [1, 2, 2]",
+      "roof_pitch: 45 → 43.1",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs",
+      "decorative: +ornamental_shingles"
     ]
   },
   "bay_window": {
@@ -275,6 +289,18 @@
       "projection_mm": 120,
       "height_mm": 200,
       "colour_hex": "#4A3A2A"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 20
+    },
+    "stone_voussoirs": {
+      "present": true
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 130
     }
   },
   "cornice": {
@@ -305,11 +331,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C36643",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#563B2A",
+    "trim_colour_hex": "#3A2A20",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, bay window, original windows, cornice, gable brackets.",
@@ -352,15 +378,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "confidence": 0.9,
   "facade_description": "175 Augusta Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, bay window, original windows, cornice, gable brackets.",
@@ -407,8 +425,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#8F453A",
-    "trim": "#563B2A",
+    "facade": "#C36643",
+    "trim": "#3A2A20",
     "roof": "#484747",
     "accent": "#26262A"
   },
@@ -504,5 +522,21 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.87,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.68,
+      "height_above_ridge_m": 0.64,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "dark red painted brick, some areas with red-brown stained siding",
   "windows_per_floor": [
@@ -198,7 +200,9 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "dark red painted brick, some areas with red-brown stained siding",
@@ -367,15 +371,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "155 Denison Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, cornice.",
   "heritage_summary": "Constructed as a pair of semi-detached houses, the properties retain most of their original building features including mirrored facades, cross-gabled roofline, double-height bays, brick cladding, and fenestration pattern with flat headed openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -488,5 +484,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.69,
+      "height_above_ridge_m": 0.94,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.52,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.84,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

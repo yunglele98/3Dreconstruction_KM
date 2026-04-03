@@ -21,7 +21,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
@@ -200,7 +202,9 @@
         "old": "#7E3B29",
         "new": "#B85A3A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "doors_detail": [
     {
@@ -267,15 +271,7 @@
       "style": "simple"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
   "facade_description": "5 Bellevue Ave is a park/open space building. The street elevation spans roughly 5.5 metres across 2 storeys and is capped by a gable, consistent with its park/open space typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
@@ -384,5 +380,21 @@
   },
   "inferred_setback_m": 2.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.69,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.64,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

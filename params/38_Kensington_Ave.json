@@ -21,7 +21,9 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "dark brown/dark brick upper; white/cream tile or painted brick at ground level; brick (upper), mixed at ground (painted brick/tile)",
   "windows_per_floor": [
@@ -207,7 +209,9 @@
     "fusion_applied": [
       "depth",
       "segmentation"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -560,5 +564,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 250,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.82,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

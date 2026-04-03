@@ -175,7 +175,9 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "notes": "Striking 2.5-storey Victorian semi-detached pair. Red-brown brick with prominent rounded arches at ground floor. Rich decorative brickwork. Twin steep gables.",
   "doors_detail": [
@@ -279,15 +281,7 @@
     4.8,
     4.8
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "roof_pitch_deg": 40,
   "windows_per_floor": [
     0,
@@ -411,5 +405,17 @@
     "total_facade_detections": 0
   },
   "heritage_summary": "Through its construction date and typology, each property is directly as. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "roof_features": [
+    "chimney"
+  ],
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.62,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

@@ -28,8 +28,9 @@
   "facade_material": "brick",
   "facade_colour": "white sign band with black storefront framing over a brown brick base",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -195,6 +196,14 @@
         "old": true,
         "new": false
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #A94936",
+      "trim: #3E332A → #FFFFFF",
+      "windows_per_floor: [0, 0] → [2, 2, 2]",
+      "decorative: +string_courses",
+      "decorative: +quoins"
     ]
   },
   "storefront": {},
@@ -302,11 +311,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A94936",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3E332A",
+    "trim_colour_hex": "#FFFFFF",
     "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice.",
@@ -344,6 +353,16 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 30
+    },
+    "quoins": {
+      "present": true,
+      "strip_width_mm": 80,
+      "projection_mm": 10
     }
   },
   "street_setback_m": 0.5,
@@ -357,8 +376,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#C88154",
-    "trim": "#3E332A",
+    "facade": "#A94936",
+    "trim": "#FFFFFF",
     "roof": "#515151",
     "accent": "#24242A"
   },

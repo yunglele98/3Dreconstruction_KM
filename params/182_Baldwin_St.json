@@ -23,7 +23,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "front_gable"
+    "front_gable",
+    "chimney"
   ],
   "facade_material": "Brick",
   "facade_colour": "painted (painted brick/clapboard)",
@@ -229,7 +230,9 @@
         "old": "#4A3827",
         "new": "#CC2222"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "decorative_elements": {
     "decorative_brickwork": {
@@ -457,15 +460,7 @@
       1
     ]
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "182 Baldwin St is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, row, bay-and-gable typology. The facade reads primarily as brick, laid in unknown (painted over) with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 1, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, string courses, cornice.",
   "heritage_summary": "Constructed as a row, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their brick cladding and window openings above the first storey, and cross-gabled roofline. With its visibly layered built form, each property is also associated with the patterns of commercial adaptation and expansion that began in the early twentieth century.",
@@ -646,5 +641,21 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 150,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.56,
+      "height_above_ridge_m": 0.81,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.78,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

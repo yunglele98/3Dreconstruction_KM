@@ -21,7 +21,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "cross-gable"
+    "cross-gable",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "warm red brick at ground and second floor; cream/beige vertical siding on upper gable and side sections",
@@ -247,7 +248,9 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913"
   },
   "bay_window": {
     "present": true,
@@ -428,15 +431,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "27 Bellevue Ave is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 1 storeys and is capped by a cross-gable, consistent with its house-form, semi-detached typology. The facade reads primarily as mixed masonry in a warm red brick at ground and second floor; cream/beige vertical siding on upper gable and side sections palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "Constructe. Each property has value as an early-twentieth-century House-form building that reflects architectural styles of the period.",
@@ -547,5 +542,14 @@
     },
     "total_facade_detections": 1
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.47,
+      "height_above_ridge_m": 0.42,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  }
 }

@@ -21,12 +21,14 @@
   },
   "roof_type": "gable",
   "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -203,6 +205,16 @@
         "old": "#85332D",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C44F36",
+      "trim: #412F24 → #2A2A2A",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "decorative: +cornice",
+      "decorative: +decorative_brickwork"
     ]
   },
   "bay_window": {
@@ -236,11 +248,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C44F36",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#412F24",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, bay window.",
@@ -280,17 +292,17 @@
       "style": "simple"
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 60
+    },
+    "decorative_brickwork": {
+      "present": true
+    }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "52 Lippincott St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its house-form, row, ontario cottage typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include original windows, bay window.",
@@ -320,8 +332,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#85332D",
-    "trim": "#412F24",
+    "facade": "#C44F36",
+    "trim": "#2A2A2A",
     "roof": "#3E3E3E",
     "accent": "#242429"
   },
@@ -404,5 +416,21 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.63,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.75,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.62,
+      "depth_m": 0.67,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

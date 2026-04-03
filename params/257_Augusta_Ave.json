@@ -22,7 +22,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "front_gable"
+    "front_gable",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "black-painted storefront and lower wall beneath a blue-green mural-covered gabled upper facade",
@@ -220,7 +221,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -483,5 +486,15 @@
     "matches_existing": true,
     "text_count": 10
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.54,
+      "height_above_ridge_m": 0.9,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

@@ -21,12 +21,14 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "stone",
   "facade_colour": "buff stone",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -189,6 +191,16 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #C8B898 → #BEB390",
+      "trim: #4F3B29 → #5A4A3A",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "decorative: +string_courses",
+      "decorative: +ornamental_shingles"
     ]
   },
   "decorative_elements": {
@@ -200,6 +212,15 @@
       "projection_mm": 180,
       "colour_hex": "#D4C9A8",
       "present": true
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 15
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 100
     }
   },
   "cornice": {
@@ -230,11 +251,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#C8B898",
+    "brick_colour_hex": "#BEB390",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4F3B29",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, original windows, decorative brick.",
@@ -266,15 +287,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#C8B898"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "confidence": 0.8500000000000002,
   "facade_description": "88 Bellevue Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as stone, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice, original windows, decorative brick.",
@@ -304,8 +317,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#C8B898",
-    "trim": "#4F3B29",
+    "facade": "#BEB390",
+    "trim": "#5A4A3A",
     "roof": "#323232",
     "accent": "#4E4431"
   },
@@ -389,5 +402,21 @@
     "total_facade_detections": 1
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.56,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 1.0,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.53,
+      "depth_m": 0.7,
+      "height_above_ridge_m": 0.83,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

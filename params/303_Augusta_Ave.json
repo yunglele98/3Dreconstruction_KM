@@ -23,7 +23,8 @@
   "roof_pitch_deg": 45,
   "roof_features": [
     "parapet_wall",
-    "patio"
+    "patio",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "black-painted brick facade with large black-framed garage-style windows",
@@ -186,7 +187,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -439,5 +442,15 @@
     "matches_existing": false,
     "text_count": 11
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.7,
+      "depth_m": 0.65,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

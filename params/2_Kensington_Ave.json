@@ -22,7 +22,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "Brick",
   "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
@@ -245,7 +247,9 @@
         "old": "#39291E",
         "new": "#E8E0D0"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -456,15 +460,7 @@
       "colour_hex": "#4A3A2A"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "facade_description": "2 Kensington Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as brick in a #b85a3a palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, gable brackets.",
   "heritage_summary": "The property retains most of its original building features including its cross-gabled roofline, double-height bay window, fenestration pattern with segmentally arched openings, and decorative wooden gable brackets. The property has value as a nineteenth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
@@ -643,5 +639,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.52,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.92,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

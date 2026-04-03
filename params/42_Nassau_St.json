@@ -20,13 +20,15 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_pitch_deg": 47.0,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -215,6 +217,18 @@
         "old": "#954B3A",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BE6C40",
+      "trim: #33241C → #E8E0D0",
+      "windows_per_floor: [0, 0] → [2, 2]",
+      "roof_pitch: 45 → 47.0",
+      "decorative: +cornice",
+      "decorative: +stone_voussoirs",
+      "decorative: +bargeboard"
     ]
   },
   "bay_window": {
@@ -232,11 +246,20 @@
       "present": true
     },
     "bargeboard": {
-      "colour_hex": "#E8E0D0",
-      "style": "decorative"
+      "present": true,
+      "style": "plain",
+      "width_mm": 150
     },
     "bay_window_shape": "canted",
-    "bay_window_storeys": 2
+    "bay_window_storeys": 2,
+    "cornice": {
+      "present": true,
+      "height_mm": 200,
+      "projection_mm": 80
+    },
+    "stone_voussoirs": {
+      "present": true
+    }
   },
   "doors_detail": [
     {
@@ -259,11 +282,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BE6C40",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#33241C",
+    "trim_colour_hex": "#E8E0D0",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its semi-detached bay-and-gable house-form typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window.",
@@ -326,8 +349,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
-    "facade": "#954B3A",
-    "trim": "#33241C",
+    "facade": "#BE6C40",
+    "trim": "#E8E0D0",
     "roof": "#5D5D5D",
     "accent": "#35281D"
   },
@@ -407,5 +430,15 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.53,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

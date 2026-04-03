@@ -23,7 +23,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "gable_peak"
+    "gable_peak",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red-brown brick (partially visible through scaffolding and protective netting)",
@@ -254,7 +255,9 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "bay_window": {
     "present": true,
@@ -528,5 +531,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.68,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.84,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

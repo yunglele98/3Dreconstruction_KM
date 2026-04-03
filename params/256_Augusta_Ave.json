@@ -24,7 +24,8 @@
   "roof_pitch_deg": 40,
   "roof_features": [
     "dormer",
-    "awning"
+    "awning",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "grey storefront with black awning beneath cream upper siding and a white dormer",
@@ -233,7 +234,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "bay_window": {
     "present": true,
@@ -541,5 +544,22 @@
     "matches_existing": false,
     "text_count": 27
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.64,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.92,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.68,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.79,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

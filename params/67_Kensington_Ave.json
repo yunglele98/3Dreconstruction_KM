@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "Painted",
   "facade_colour": "painted (painted wood/metal storefront)",
   "windows_per_floor": [
@@ -220,7 +222,9 @@
         "old": "#F0EDE8",
         "new": "#D4A020"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "Dark-painted commercial ground floor with brown brick upper storey behind orange-and-white striped awning",
@@ -563,5 +567,22 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 100,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.55,
+      "depth_m": 0.5,
+      "height_above_ridge_m": 0.6,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.65,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.92,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 2
 }

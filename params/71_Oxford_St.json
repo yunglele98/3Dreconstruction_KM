@@ -22,13 +22,14 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [
-    "parapet_wall"
+    "parapet_wall",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "red brick side wall with black-painted lower storefront and a mural-like pink side entrance treatment",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -230,6 +231,15 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #A94732",
+      "trim: #2A2018 → #2A2A2A",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "decorative: +stone_voussoirs"
     ]
   },
   "bay_window": {
@@ -254,6 +264,9 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
   "photo_observations": {
@@ -356,11 +369,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#A94732",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#2A2018",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
@@ -392,15 +405,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 3.0,
   "facade_description": "71 Oxford St is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its house-form, row typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows, bay window, cornice.",
   "heritage_summary": "Constructed as a row of three residences, the properties have retained many of their original building features, including their shared roofline, brick cladding and decorative brickwork, and combination of flat headed, round, and segmentally arched window and door openings. Contextually, each property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -425,8 +430,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#853327",
-    "trim": "#2A2018",
+    "facade": "#A94732",
+    "trim": "#2A2A2A",
     "roof": "#3D3D3D",
     "accent": "#403525"
   },
@@ -510,5 +515,21 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.66,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.69,
+      "height_above_ridge_m": 0.89,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

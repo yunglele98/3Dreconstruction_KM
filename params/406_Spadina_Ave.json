@@ -20,11 +20,13 @@
   },
   "roof_type": "flat",
   "roof_pitch_deg": 0,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -247,6 +249,15 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1904-1913",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C65437",
+      "trim: #412C1E → #FFFFFF",
+      "windows_per_floor: [0] → [2]",
+      "decorative: +string_courses"
     ]
   },
   "decorative_elements": {
@@ -258,6 +269,11 @@
       "projection_mm": 180,
       "colour_hex": "#D4C9A8",
       "present": true
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 80,
+      "projection_mm": 30
     }
   },
   "cornice": {
@@ -284,11 +300,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C65437",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#412C1E",
+    "trim_colour_hex": "#FFFFFF",
     "composition": "The street elevation spans roughly 6.1 metres across 1 storeys and is capped by a flat.",
     "opening_rhythm": "The visible opening pattern is organized as 0 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, decorative brick.",
@@ -360,8 +376,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#924A3C",
-    "trim": "#412C1E",
+    "facade": "#C65437",
+    "trim": "#FFFFFF",
     "roof": "#525252",
     "accent": "#483F2E"
   },
@@ -423,5 +439,15 @@
     "photo_heavily_occluded": true
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.47,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.67,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 1
 }

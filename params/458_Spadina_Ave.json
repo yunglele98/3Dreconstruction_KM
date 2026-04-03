@@ -26,8 +26,9 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -208,6 +209,13 @@
         "old": true,
         "new": false
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BB5E33",
+      "trim: #252525 → #3A3A3A",
+      "windows_per_floor: [0, 0] → [2, 2, 2]",
+      "decorative: +string_courses"
     ]
   },
   "decorative_elements": {
@@ -219,6 +227,11 @@
       "projection_mm": 180,
       "colour_hex": "#D4C9A8",
       "present": true
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 15
     }
   },
   "cornice": {
@@ -250,11 +263,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BB5E33",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#252525",
+    "trim_colour_hex": "#3A3A3A",
     "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice, decorative brick, original windows.",
@@ -314,8 +327,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#995130",
-    "trim": "#252525",
+    "facade": "#BB5E33",
+    "trim": "#3A3A3A",
     "roof": "#505050",
     "accent": "#2B3222"
   },

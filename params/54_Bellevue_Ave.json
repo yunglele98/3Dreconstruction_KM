@@ -22,7 +22,8 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [
-    "cross_gable"
+    "cross_gable",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "medium grey painted brick or stucco with dark charcoal/black window frames; bright blue front door; number 54 visible",
@@ -211,7 +212,9 @@
         "old": "#9F4E3F",
         "new": "#8A8A8A"
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903"
   },
   "bay_window": {
     "present": true,
@@ -480,5 +483,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.49,
+      "depth_m": 0.58,
+      "height_above_ridge_m": 0.84,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.48,
+      "depth_m": 0.65,
+      "height_above_ridge_m": 0.84,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

@@ -21,17 +21,18 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 45.9,
   "roof_features": [
     "parapet_wall",
-    "patio"
+    "patio",
+    "chimney"
   ],
   "facade_material": "stucco",
   "facade_colour": "beige/cream stucco upper, dark/black commercial storefront at ground level",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    2,
+    1,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -211,6 +212,20 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #D8D0C0 → #DEDACA",
+      "trim: #3A2B21 → #2A2A2A",
+      "windows_per_floor: [0, 0, 0] → [2, 1, 2]",
+      "roof_pitch: 45 → 45.9",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs",
+      "decorative: +ornamental_shingles",
+      "decorative: +bargeboard",
+      "decorative: +decorative_brickwork"
     ]
   },
   "storefront": {},
@@ -320,11 +335,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#D8D0C0",
+    "brick_colour_hex": "#DEDACA",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3A2B21",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. Through its const.",
@@ -374,8 +389,9 @@
   ],
   "decorative_elements": {
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "simple"
+      "present": true,
+      "style": "simple Victorian",
+      "width_mm": 200
     },
     "cornice": {
       "present": true,
@@ -383,6 +399,21 @@
       "height_mm": 250,
       "projection_mm": 150,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 20
+    },
+    "stone_voussoirs": {
+      "present": true
+    },
+    "ornamental_shingles": {
+      "present": true,
+      "exposure_mm": 150
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
   "street_setback_m": 0.0,
@@ -397,8 +428,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#D8D0C0",
-    "trim": "#3A2B21",
+    "facade": "#DEDACA",
+    "trim": "#2A2A2A",
     "roof": "#494949",
     "accent": "#182624"
   },
@@ -499,5 +530,15 @@
   },
   "inferred_setback_m": 0.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.61,
+      "depth_m": 0.52,
+      "height_above_ridge_m": 0.62,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

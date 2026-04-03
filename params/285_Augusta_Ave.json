@@ -20,15 +20,16 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 41.2,
   "roof_features": [
-    "front_gable"
+    "front_gable",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "white and black storefront at grade with a pink mural-covered upper side wall and dark roof shingles",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -219,6 +220,16 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AB4930",
+      "trim: #473526 → #5A4A3A",
+      "windows_per_floor: [0, 0] → [1, 2]",
+      "roof_pitch: 40 → 41.2",
+      "decorative: +stone_voussoirs"
     ]
   },
   "bay_window": {
@@ -347,11 +358,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AB4930",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#473526",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, cornice.",
@@ -399,17 +410,12 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "285 Augusta Ave is a converted house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, detached typology. The facade reads primarily as mixed masonry in a white and black storefront at grade with a pink mural-covered upper side wall and dark roof shingles palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2 window bays from lower to upper levels, using mixed, and 2 principal entrances. Character-defining facade elements include bay window, original windows, cornice.",
   "heritage_summary": "The property was purpose-built for commercial use on the ground floor, which has been modified through subsequent ground floor alterations. With storefronts that address both street facing elevations, the property defines the intersection of Augusta Avenue and Oxford Street.",
@@ -422,8 +428,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#473526",
+    "facade": "#AB4930",
+    "trim": "#5A4A3A",
     "roof": "#3E3E3E",
     "accent": "#292922"
   },
@@ -516,5 +522,21 @@
     "matches_existing": false,
     "text_count": 11
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.61,
+      "height_above_ridge_m": 0.94,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.63,
+      "height_above_ridge_m": 0.76,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

@@ -28,9 +28,11 @@
   "facade_material": "glass",
   "facade_colour": "glass and metal",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    2,
+    2,
+    2,
+    2,
+    3
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -218,6 +220,12 @@
         "old": true,
         "new": false
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #7A7A7A → #817F7F",
+      "trim: #452D1F → #2A2A2A",
+      "windows_per_floor: [0, 0, 0] → [2, 2, 2, 2, 3]"
     ]
   },
   "storefront": {},
@@ -242,11 +250,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#7A7A7A",
+    "brick_colour_hex": "#817F7F",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#452D1F",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 6.1 metres across 5 storeys and is capped by a flat.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 5 additional bays above, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include cornice.",
@@ -358,8 +366,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#7A7A7A",
-    "trim": "#452D1F",
+    "facade": "#817F7F",
+    "trim": "#2A2A2A",
     "roof": "#4F5454",
     "accent": "#503121"
   },

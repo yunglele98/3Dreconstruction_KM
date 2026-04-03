@@ -26,8 +26,9 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -197,6 +198,12 @@
         "old": true,
         "new": false
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B56136",
+      "trim: #363636 → #FFFFFF",
+      "windows_per_floor: [0, 0] → [2, 2, 2]"
     ]
   },
   "storefront": {},
@@ -221,11 +228,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B56136",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#363636",
+    "trim_colour_hex": "#FFFFFF",
     "composition": "The street elevation spans roughly 6.1 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade is organized as a storefront base with 2 upper-window bays and 1 additional bay above, using double hung, and 1 principal entrance.",
     "heritage_summary": "22 and 24 Denison Square additionally retain decorative woodwork around the second storey bay window, wood brackets, and shingles in the gable above. Constructed as a row of three, the properties retain original building features including shared roofline with prominent cross- gable, second storey bay windows, segmentally arched openings, and brick cladding.",
@@ -310,8 +317,8 @@
     "accent_hex": "#2A2A2A",
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B98151",
-    "trim": "#363636",
+    "facade": "#B56136",
+    "trim": "#FFFFFF",
     "roof": "#494241",
     "accent": "#3F4435"
   },

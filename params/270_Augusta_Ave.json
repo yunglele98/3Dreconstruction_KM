@@ -23,7 +23,8 @@
   "roof_pitch_deg": 0,
   "roof_features": [
     "front_gable",
-    "shutter"
+    "shutter",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "yellow-painted storefront with black trim and closed metal shutter",
@@ -211,7 +212,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -367,15 +370,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "270 Augusta Ave is a row-house building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a flat, consistent with its converted house-form, row typology. The facade reads primarily as mixed masonry in a yellow-painted storefront with black trim and closed metal shutter palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include cornice.",
   "heritage_summary": "The properties at 272 and 274 Augusta Avenue retain a shared roofline with gable, flat headed window openings, and decorative woodwork. Constructed as a row, each property retains original building features reflecting vernacular interpretations of Victorian architectural styles including a shared roofline and brick cladding.",
@@ -486,5 +481,21 @@
     "matches_existing": false,
     "text_count": 13
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.97,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.58,
+      "depth_m": 0.51,
+      "height_above_ridge_m": 0.9,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

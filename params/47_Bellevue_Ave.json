@@ -21,17 +21,18 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 45.2,
   "roof_features": [
     "cross_gable",
-    "tower"
+    "tower",
+    "chimney"
   ],
   "facade_material": "stucco",
   "facade_colour": "cream/tan/yellow stucco with dark brown window trim; worn appearance",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    1,
+    1,
+    2
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -205,6 +206,16 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #D8D0C0 → #C8C3B4",
+      "trim: #37281D → #3E2E1E",
+      "windows_per_floor: [0, 0, 0] → [1, 1, 2]",
+      "roof_pitch: 45 → 45.2",
+      "decorative: +string_courses"
     ]
   },
   "photo_observations": {
@@ -326,11 +337,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#D8D0C0",
+    "brick_colour_hex": "#C8C3B4",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#37281D",
+    "trim_colour_hex": "#3E2E1E",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include original windows, turret, cornice.",
@@ -394,17 +405,14 @@
     },
     "turreted_element": {
       "present": true
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 100,
+      "projection_mm": 30
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#D8D0C0"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "facade_description": "47 Bellevue Ave is a bay-and-gable house-form building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a cross-gable, consistent with its house-form, detached, bay-and-gable typology. The facade reads primarily as stucco, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using mixed, and 1 principal entrance. Character-defining facade elements include original windows, turret, cornice.",
   "heritage_summary": "The property has retained many of its original building features including its cross-gabled roofline, double-height projecting bay window, fenestration pattern with round and segmentally arched openings, and brick cladding with decorative brickwork. Contextually, the property shares a consistent setback, scale, and massing with the other contributing properties on the street.",
@@ -417,8 +425,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#D8D0C0",
-    "trim": "#37281D",
+    "facade": "#C8C3B4",
+    "trim": "#3E2E1E",
     "roof": "#494949",
     "accent": "#393F2D"
   },
@@ -516,5 +524,14 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.65,
+      "depth_m": 0.59,
+      "height_above_ridge_m": 0.92,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

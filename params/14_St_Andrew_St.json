@@ -21,7 +21,9 @@
   },
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
-  "roof_features": [],
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "white painted/clad ground floor storefront with dark glazed curtain wall above",
   "windows_per_floor": [
@@ -201,7 +203,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "storefront": {},
   "photo_observations": {
@@ -311,15 +315,7 @@
       "style": "simple"
     }
   },
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 2,
   "street_setback_m": 0.0,
   "facade_description": "14 St Andrew St is a converted house-form, detached building. The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a cross-gable, consistent with its converted house-form, detached typology. The facade reads primarily as brick in a white painted/clad ground floor storefront with dark glazed curtain wall above palette, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 3, 4 window bays from lower to upper levels, using mixed, and 2 principal entrances.",
   "heritage_summary": "14 St. Andrew Street (R-L).",
@@ -415,5 +411,21 @@
   },
   "inferred_setback_m": 3.0,
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.59,
+      "depth_m": 0.62,
+      "height_above_ridge_m": 0.68,
+      "material": "brick",
+      "cap_style": "corbelled"
+    },
+    "right_chimney": {
+      "width_m": 0.69,
+      "depth_m": 0.55,
+      "height_above_ridge_m": 0.64,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

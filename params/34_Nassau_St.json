@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 42.1,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    2,
+    2,
+    1
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -196,6 +198,15 @@
         "old": "#D8B691",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #B95339",
+      "trim: #4A4A4A → #F0EDE8",
+      "windows_per_floor: [0, 0, 0] → [2, 2, 1]",
+      "roof_pitch: 40 → 42.1"
     ]
   },
   "bay_window": {
@@ -240,11 +251,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#B95339",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4A4A4A",
+    "trim_colour_hex": "#F0EDE8",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include bay window, original windows, decorative brick.",
@@ -287,15 +298,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 0.0,
   "confidence": 0.8500000000000002,
   "facade_description": "34 Nassau St is a house-form, semi-detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, semi-detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include bay window, original windows, decorative brick.",
@@ -326,8 +329,8 @@
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#D8B691",
-    "trim": "#4A4A4A",
+    "facade": "#B95339",
+    "trim": "#F0EDE8",
     "roof": "#575757",
     "accent": "#4A3A2A"
   },
@@ -421,5 +424,14 @@
     "total_facade_detections": 0
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.43,
+      "depth_m": 0.48,
+      "height_above_ridge_m": 0.32,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  }
 }

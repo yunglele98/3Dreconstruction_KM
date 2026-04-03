@@ -21,14 +21,16 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
-  "roof_features": [],
+  "roof_pitch_deg": 38.7,
+  "roof_features": [
+    "chimney"
+  ],
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    1,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -203,6 +205,18 @@
         "old": "#77241B",
         "new": "#B85A3A"
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AD4531",
+      "trim: #4A3322 → #5A4A3A",
+      "windows_per_floor: [0, 0, 0] → [1, 2, 2]",
+      "roof_pitch: 40 → 38.7",
+      "decorative: +cornice",
+      "decorative: +stone_voussoirs",
+      "decorative: +bargeboard"
     ]
   },
   "decorative_elements": {
@@ -210,8 +224,17 @@
       "present": true
     },
     "bargeboard": {
-      "colour_hex": "#3A2A20",
-      "style": "decorative"
+      "present": true,
+      "style": "decorative Victorian",
+      "width_mm": 200
+    },
+    "cornice": {
+      "present": true,
+      "height_mm": 150,
+      "projection_mm": 60
+    },
+    "stone_voussoirs": {
+      "present": true
     }
   },
   "doors_detail": [
@@ -235,11 +258,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AD4531",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#4A3322",
+    "trim_colour_hex": "#5A4A3A",
     "composition": "The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows.",
@@ -282,15 +305,7 @@
       ]
     }
   ],
-  "chimneys": {
-    "count": 1,
-    "position": "right_rear",
-    "width_m": 0.6,
-    "depth_m": 0.4,
-    "height_above_ridge_m": 0.8,
-    "material": "brick",
-    "colour_hex": "#B85A3A"
-  },
+  "chimneys": 1,
   "street_setback_m": 3.0,
   "confidence": 0.9,
   "facade_description": "32C Oxford St is a house-form, detached building. The street elevation spans roughly 5.2 metres across 3 storeys and is capped by a gable, consistent with its house-form, detached typology. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include decorative brick, original windows.",
@@ -321,8 +336,8 @@
     "accent_hex": "#3A2A20",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#77241B",
-    "trim": "#4A3322",
+    "facade": "#AD4531",
+    "trim": "#5A4A3A",
     "roof": "#564C4C",
     "accent": "#3C2A20"
   },
@@ -419,5 +434,14 @@
     "total_facade_detections": 1
   },
   "eave_overhang_mm": 300,
-  "foundation_height_m": 0.3
+  "foundation_height_m": 0.3,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.56,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 0.83,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  }
 }

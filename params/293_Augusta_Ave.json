@@ -20,16 +20,17 @@
     "lots_sharing_footprint": 4
   },
   "roof_type": "gable",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 42.0,
   "roof_features": [
     "deck",
-    "canopy"
+    "canopy",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "sage-green and cream painted facade with black entry surround and timber deck",
   "windows_per_floor": [
-    0,
-    0
+    2,
+    1
   ],
   "window_type": "mixed",
   "window_width_m": 0.9,
@@ -236,6 +237,18 @@
         "old": true,
         "new": false
       }
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1889-1903",
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #AF4F33",
+      "trim: #3E332B → #2A2A2A",
+      "windows_per_floor: [0, 0] → [2, 1]",
+      "roof_pitch: 40 → 42.0",
+      "decorative: +string_courses",
+      "decorative: +stone_voussoirs",
+      "decorative: +decorative_brickwork"
     ]
   },
   "photo_observations": {
@@ -347,11 +360,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#AF4F33",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3E332B",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 5.2 metres across 2 storeys and is capped by a gable, consistent with its converted house-form, semi-detached typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 1, 2 window bays from lower to upper levels, using mixed, and 1 principal entrance.",
     "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared cross gabled roofline, double-height projecting bay, and segmentally arched window openings at the second storey. Each property has value as a nineteenth-century House-form building that has been modified to accommodate a commercial conversion through ground floor alterations.",
@@ -397,6 +410,17 @@
       "height_mm": 200,
       "projection_mm": 100,
       "colour_hex": "#D4C9A8"
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 15
+    },
+    "stone_voussoirs": {
+      "present": true
+    },
+    "decorative_brickwork": {
+      "present": true
     }
   },
   "street_setback_m": 0.0,
@@ -411,8 +435,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
-    "facade": "#B85A3A",
-    "trim": "#3E332B",
+    "facade": "#AF4F33",
+    "trim": "#2A2A2A",
     "roof": "#645C5C",
     "accent": "#343A2A"
   },
@@ -495,5 +519,22 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.51,
+      "depth_m": 0.53,
+      "height_above_ridge_m": 0.85,
+      "material": "brick",
+      "cap_style": "simple"
+    },
+    "right_chimney": {
+      "width_m": 0.46,
+      "depth_m": 0.48,
+      "height_above_ridge_m": 0.9,
+      "material": "brick",
+      "cap_style": "simple"
+    }
+  },
+  "chimneys": 2
 }

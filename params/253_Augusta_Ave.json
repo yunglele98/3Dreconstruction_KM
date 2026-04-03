@@ -23,7 +23,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "vent_stack"
+    "vent_stack",
+    "chimney"
   ],
   "facade_material": "Mixed masonry",
   "facade_colour": "black storefront framing with bright pink commercial signage and a dark upper gable behind",
@@ -214,7 +215,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "1914-1930"
   },
   "storefront": {},
   "photo_observations": {
@@ -505,5 +508,15 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "right_chimney": {
+      "width_m": 0.5,
+      "depth_m": 0.37,
+      "height_above_ridge_m": 0.47,
+      "material": "brick",
+      "cap_style": "plain"
+    }
+  },
+  "chimneys": 1
 }

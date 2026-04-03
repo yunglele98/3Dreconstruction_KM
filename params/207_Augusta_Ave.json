@@ -22,7 +22,8 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [
-    "patio"
+    "patio",
+    "chimney"
   ],
   "facade_material": "brick",
   "facade_colour": "buff/golden-yellow brick upper, dark grey commercial ground floor",
@@ -210,7 +211,9 @@
         "old": true,
         "new": false
       }
-    ]
+    ],
+    "chimney_injected": true,
+    "chimney_injection_era": "Pre-1889"
   },
   "photo_observations": {
     "facade_colour_observed": "buff/golden-yellow brick upper, dark grey commercial ground floor",
@@ -465,5 +468,15 @@
     },
     "total_facade_detections": 0
   },
-  "eave_overhang_mm": 300
+  "eave_overhang_mm": 300,
+  "chimney_detail": {
+    "left_chimney": {
+      "width_m": 0.67,
+      "depth_m": 0.6,
+      "height_above_ridge_m": 0.86,
+      "material": "brick",
+      "cap_style": "corbelled"
+    }
+  },
+  "chimneys": 1
 }

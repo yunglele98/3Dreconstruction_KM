@@ -26,8 +26,9 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    0
+    1,
+    2,
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -242,6 +243,11 @@
         "old": true,
         "new": false
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #BD5B3C",
+      "windows_per_floor: [0, 0] → [1, 2, 2]"
     ]
   },
   "bay_window": {
@@ -288,7 +294,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#BD5B3C",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -404,7 +410,7 @@
     "accent_hex": "#4A4A4A",
     "door_hex": "#4A4A4A",
     "mortar_hex": "#C8C0B0",
-    "facade": "#A08C73",
+    "facade": "#BD5B3C",
     "trim": "#4A4A4A",
     "roof": "#424242",
     "accent": "#4A3A2A"

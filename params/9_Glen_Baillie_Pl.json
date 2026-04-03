@@ -28,9 +28,9 @@
   "facade_material": "brick",
   "facade_colour": "salmon/peach brick ground floor, dark red brick upper storeys",
   "windows_per_floor": [
-    0,
-    0,
-    0
+    1,
+    1,
+    1
   ],
   "window_type": "casement",
   "window_width_m": 0.85,
@@ -212,6 +212,13 @@
         "old": "#AA6150",
         "new": "#B85A3A"
       }
+    ],
+    "facade_diversified": true,
+    "diversification_changes": [
+      "brick_colour: #B85A3A → #C36E45",
+      "trim: #3C2B23 → #2A2A2A",
+      "windows_per_floor: [0, 0, 0] → [1, 1, 1]",
+      "decorative: +string_courses"
     ]
   },
   "decorative_elements": {
@@ -229,6 +236,11 @@
       "present": true,
       "colour_hex": "#6A5A4A",
       "exposure_mm": 150
+    },
+    "string_courses": {
+      "present": true,
+      "width_mm": 120,
+      "projection_mm": 20
     }
   },
   "photo_observations": {
@@ -311,11 +323,11 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85A3A",
+    "brick_colour_hex": "#C36E45",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
-    "trim_colour_hex": "#3C2B23",
+    "trim_colour_hex": "#2A2A2A",
     "composition": "The street elevation spans roughly 4 metres across 3 storeys and is capped by a flat, consistent with its house-form, row typology.",
     "opening_rhythm": "The facade keeps a domestic opening rhythm of 2, 2, 1 window bays from lower to upper levels, using casement, and 1 principal entrance.",
     "heritage_expression": "Character-defining facade elements include decorative brick, original windows, cornice.",
@@ -374,8 +386,8 @@
     "accent_hex": "#E8E0D0",
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
-    "facade": "#AA6150",
-    "trim": "#3C2B23",
+    "facade": "#C36E45",
+    "trim": "#2A2A2A",
     "roof": "#4A4F4F",
     "accent": "#393E2E"
   },
