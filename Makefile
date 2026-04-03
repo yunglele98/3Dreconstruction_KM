@@ -1,4 +1,4 @@
-.PHONY: test test-fast lint audit render-sample web-build pipeline-status pipeline-dry-run healthcheck coverage scenarios clean help
+.PHONY: test test-fast lint audit render-sample web-build web-dev pipeline-status pipeline-dry-run healthcheck coverage scenarios web-data analyze autofix-dry-run autofix-apply report clean help
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*##' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*## "}; {printf "  %-20s %s\n", $$1, $$2}'
@@ -63,6 +63,27 @@ scenarios:  ## Generate all scenario data
 
 web-data:  ## Build web data bundle (params-slim.json, geojson, scenarios)
 	python scripts/export/build_web_data.py
+
+analyze:  ## Run all param-only analysis scripts
+	python scripts/analyze/geometric_accuracy.py --params params/ --output outputs/geometric_analysis/
+	python scripts/analyze/facade_completeness.py --params params/ --output outputs/facade_completeness/
+	python scripts/analyze/photo_param_drift.py --params params/ --output outputs/photo_drift/
+	python scripts/analyze/heritage_fidelity.py --params params/ --output outputs/heritage_analysis/
+	python scripts/analyze/splat_readiness.py --params params/ --output outputs/splat_readiness/
+	python scripts/analyze/style_consistency.py --params params/ --output outputs/style_analysis/
+
+autofix-dry-run:  ## Preview all autofix changes (no writes)
+	python scripts/autofix_from_photos.py --params params/ --dry-run
+	python scripts/autofix_decorative_from_hcd.py --params params/ --dry-run
+	python scripts/autofix_color_from_photos.py --params params/ --dry-run
+
+autofix-apply:  ## Apply all autofixes (writes to params)
+	python scripts/autofix_from_photos.py --params params/ --apply --report outputs/autofix_report.json
+	python scripts/autofix_decorative_from_hcd.py --params params/ --apply --report outputs/autofix_decorative_report.json
+	python scripts/autofix_color_from_photos.py --params params/ --apply --report outputs/autofix_color_report.json
+
+report:  ## Generate master pipeline report from all analyses
+	python scripts/analyze/reconstruction_pipeline_report.py --output outputs/pipeline_report.json
 
 clean:  ## Remove Python cache files
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
