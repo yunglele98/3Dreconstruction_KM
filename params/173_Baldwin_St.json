@@ -34,7 +34,7 @@
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "good",
   "hcd_data": {
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
@@ -234,6 +234,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "condition",
+        "old": "fair",
+        "new": "good"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#F0EDE8",
+        "new": "#1A1A1A"
+      }
     ]
   },
   "decorative_elements": {
@@ -356,29 +368,16 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#8A5A3A",
-    "trim": "#F0EDE8",
+    "trim": "#1A1A1A",
     "roof": "#4A4A4A",
     "accent": "#FFFFFF"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed fabric",
-      "colour": "black and white striped"
-    },
-    "security_grille": true,
-    "signage_text": "Vida NATURAL AND ORGANIC PRODUCTS",
-    "signage": {
-      "text": "Interesting Things",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
+    "width_m": 4.4,
+    "height_m": 3.7,
+    "status": "active"
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260315_154911815_HDR.jpg",

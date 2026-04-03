@@ -23,7 +23,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "clapboard",
+  "facade_material": "wood_siding",
   "facade_colour": "painted wood",
   "windows_per_floor": [
     0,
@@ -197,6 +197,13 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "clapboard",
+        "new": "wood_siding"
+      }
     ]
   },
   "photo_observations": {

@@ -20,12 +20,12 @@
     "lots_sharing_footprint": 5
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [
     "parapet_wall",
     "chimney"
   ],
-  "facade_material": "stucco",
+  "facade_material": "mixed",
   "facade_colour": "ochre stucco upper storey with red-brown trim and a red awning over a glazed storefront",
   "windows_per_floor": [
     0,
@@ -36,7 +36,7 @@
   "window_height_m": 1.35,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "good",
+  "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Detached",
     "construction_date": "Pre-1889",
@@ -220,6 +220,28 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "stucco",
+        "new": "mixed"
+      },
+      {
+        "field": "condition",
+        "old": "good",
+        "new": "fair"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#533C2B",
+        "new": "#B22222"
+      }
     ]
   },
   "photo_observations": {
@@ -430,7 +452,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#B85A3A",
-    "trim": "#533C2B",
+    "trim": "#B22222",
     "roof": "#525151",
     "accent": "#B22222"
   },

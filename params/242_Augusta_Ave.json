@@ -31,7 +31,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Row, Bay-and-Gable",
@@ -187,26 +187,21 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#7E3A25",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "status_source": "db_status",
-    "width_m": 4.4,
-    "height_m": 4.0,
-    "awning": {
-      "present": true,
-      "type": "retractable",
-      "width_m": 4.16,
-      "projection_m": 1.0,
-      "colour_hex": "#8A2A2A"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
-  },
+  "storefront": {},
   "decorative_elements": {
     "bargeboard": {
       "colour_hex": "#3A2A20",
@@ -246,7 +241,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#7E3A25",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

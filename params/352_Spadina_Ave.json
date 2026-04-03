@@ -33,7 +33,7 @@
   "window_width_m": 1.0,
   "window_height_m": 1.8,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "good",
   "hcd_data": {
     "typology": "",
@@ -185,6 +185,13 @@
       "windows_per_floor: [0, 0, 0] -> [0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "decorative_elements": {
@@ -210,27 +217,7 @@
     "projection_mm": 200,
     "colour_hex": "#D4C9A8"
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "closed",
-    "width_m": 5.2,
-    "height_m": 4.8,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "Minh Chau Jewellery & Watches",
-      "type": "projecting",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "photo": "IMG_20260316_005447888_HDR.jpg",
     "photo_datetime": "2026-03-16T00:54:00",

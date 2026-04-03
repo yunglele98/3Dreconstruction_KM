@@ -19,9 +19,9 @@
     "lots_sharing_footprint": 2
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "stucco/render (painted) on corner building; brick on buildings behind",
   "facade_colour": "stucco/render (painted) on corner building; brick on buildings behind",
   "windows_per_floor": [
     0,
@@ -32,7 +32,7 @@
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "good",
+  "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Row",
     "construction_date": "1889-1903",
@@ -198,6 +198,28 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Mixed masonry",
+        "new": "stucco/render (painted) on corner building; brick on buildings behind"
+      },
+      {
+        "field": "condition",
+        "old": "good",
+        "new": "fair"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#242424",
+        "new": "#E8E0D0"
+      }
     ]
   },
   "storefront": {
@@ -426,7 +448,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#E0D0B0",
-    "trim": "#242424",
+    "trim": "#E8E0D0",
     "roof": "#484747",
     "accent": "#C03020"
   },

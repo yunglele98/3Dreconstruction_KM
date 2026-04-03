@@ -25,7 +25,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "mixed (corrugated metal lower, dark cladding upper)",
   "facade_colour": "blue/teal corrugated metal with tree mural at ground, dark cladding upper",
   "windows_per_floor": [
     0,
@@ -35,7 +35,7 @@
   "window_width_m": 1.0,
   "window_height_m": 1.4,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "good",
   "hcd_data": {
     "typology": "Converted House-form, Detached",
@@ -197,33 +197,21 @@
       "windows_per_floor: [0, 0, 0] -> [0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Mixed masonry",
+        "new": "mixed (corrugated metal lower, dark cladding upper)"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 4.4,
-    "height_m": 4.5,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "retractable",
-      "width_m": 4.16,
-      "projection_m": 1.0,
-      "colour_hex": "#8A2A2A"
-    },
-    "signage": {
-      "text": "Kid Icarus",
-      "type": "projecting",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "blue/teal corrugated metal with tree mural at ground, dark cladding upper",
     "facade_material_observed": "mixed (corrugated metal lower, dark cladding upper)",

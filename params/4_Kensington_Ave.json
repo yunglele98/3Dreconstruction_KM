@@ -195,6 +195,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "colour_palette.trim",
+        "old": "#553C2B",
+        "new": "#F0EDE8"
+      }
     ]
   },
   "bay_window": {
@@ -407,7 +414,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#A04030",
-    "trim": "#553C2B",
+    "trim": "#F0EDE8",
     "roof": "#4C4C4C",
     "accent": "#8A5030"
   },

@@ -22,11 +22,11 @@
     "lots_sharing_footprint": 8
   },
   "roof_type": "flat",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 0,
   "roof_features": [
     "balcony"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "white-painted upper facade with pale blue signage and awning over a dark storefront opening",
   "windows_per_floor": [
     0,
@@ -192,6 +192,23 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 40,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#4F3B29",
+        "new": "#1E6EB8"
+      }
     ]
   },
   "decorative_elements": {
@@ -431,7 +448,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#9A5A3A",
-    "trim": "#4F3B29",
+    "trim": "#1E6EB8",
     "roof": "#4A4A4A",
     "accent": "#1E6EB8"
   },

@@ -31,7 +31,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Row",
@@ -194,22 +194,16 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 4.4,
-    "height_m": 4.9,
-    "status_source": "normalized_fix",
-    "signage": {
-      "text": "SHAMPOO HAIR SALON",
-      "type": "projecting",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "doors_detail": [
     {
       "id": "door_0",

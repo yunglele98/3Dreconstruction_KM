@@ -32,7 +32,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "",
@@ -190,6 +190,18 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#A36844",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "doors_detail": [
@@ -213,7 +225,7 @@
   "party_wall_left": false,
   "party_wall_right": false,
   "facade_detail": {
-    "brick_colour_hex": "#A36844",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -261,34 +273,7 @@
   "facade_description": "409 1/2 College St is a commercial building with a street-level storefront. The street elevation spans roughly 6.1 metres across 2 storeys and is capped by a flat. The facade reads primarily as brick, laid in running bond with light grey mortar joints. The visible opening pattern is organized as 2, 2 window bays from lower to upper levels, using double hung, and 1 principal entrance. Character-defining facade elements include cornice.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
-  "storefront": {
-    "width_m": 5.2,
-    "height_m": 3.6,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 3,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "Slice of Life",
-      "type": "fascia",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "source": "synthesized_from_params",
     "facade_material_observed": "brick",

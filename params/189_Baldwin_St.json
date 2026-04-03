@@ -21,7 +21,7 @@
     "lots_sharing_footprint": 6
   },
   "roof_type": "flat",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "Brick",
   "facade_colour": "red brick",
@@ -268,6 +268,18 @@
     "fusion_applied": [
       "segmentation",
       "depth"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "roof_pitch_deg",
+        "old": 40,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#453021",
+        "new": "#2A5A3A"
+      }
     ]
   },
   "decorative_elements": {
@@ -407,7 +419,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#9B5434",
-    "trim": "#453021",
+    "trim": "#2A5A3A",
     "roof": "#4A4A4A",
     "accent": "#CC5522"
   },

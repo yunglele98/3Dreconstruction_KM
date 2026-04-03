@@ -33,7 +33,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "poor",
   "hcd_data": {
     "typology": "",
@@ -185,6 +185,18 @@
       "windows_per_floor: [0, 0, 0] -> [0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#855034",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "decorative_elements": {
@@ -205,27 +217,7 @@
     "projection_mm": 180,
     "colour_hex": "#D4C9A8"
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 5.2,
-    "height_m": 4.8,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "Awesome Tteokbokki",
-      "type": "projecting",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "doors_detail": [
     {
       "id": "door_0",
@@ -247,7 +239,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#855034",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

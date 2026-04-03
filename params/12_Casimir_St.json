@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "stucco",
+  "facade_material": "brick",
   "facade_colour": "off-white stucco",
   "windows_per_floor": [
     0,
@@ -199,6 +199,13 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "stucco",
+        "new": "brick"
+      }
     ]
   },
   "doors_detail": [

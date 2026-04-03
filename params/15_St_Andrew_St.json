@@ -35,7 +35,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
@@ -192,6 +192,13 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "decorative_elements": {
@@ -221,13 +228,7 @@
     "projection_mm": 180,
     "colour_hex": "#D4C9A8"
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 4.4,
-    "height_m": 5.4,
-    "status_source": "normalized_fix"
-  },
+  "storefront": {},
   "doors_detail": [
     {
       "id": "door_0",

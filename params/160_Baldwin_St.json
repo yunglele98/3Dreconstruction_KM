@@ -20,7 +20,7 @@
     "lots_sharing_footprint": 1
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [
     "parapet_wall"
   ],
@@ -234,6 +234,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      }
     ]
   },
   "photo_observations": {

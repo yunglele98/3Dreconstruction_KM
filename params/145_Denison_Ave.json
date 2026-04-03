@@ -202,6 +202,13 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#D7866B",
+        "new": "#B85A3A"
+      }
     ]
   },
   "bay_window": {
@@ -336,7 +343,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#D7866B",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

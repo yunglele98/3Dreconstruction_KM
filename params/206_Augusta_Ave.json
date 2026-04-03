@@ -34,7 +34,7 @@
   "window_width_m": 0.9,
   "window_height_m": 1.35,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "Commercial",
@@ -214,6 +214,13 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.15",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "decorative_elements": {
@@ -238,31 +245,7 @@
     "projection_mm": 100,
     "colour_hex": "#D4C9A8"
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "vacant",
-    "width_m": 4.4,
-    "height_m": 5.2,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "retractable",
-      "width_m": 4.16,
-      "projection_m": 1.0,
-      "colour_hex": "#8A2A2A"
-    },
-    "signage": {
-      "text": "The Lost Corner",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "black-painted ground floor storefront with dense graffiti murals; dark red-brown brick above with some graffiti",
     "facade_material_observed": "mixed",

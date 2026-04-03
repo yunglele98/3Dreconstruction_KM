@@ -31,7 +31,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "",
@@ -186,29 +186,21 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#A56444",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 5.2,
-    "height_m": 5.0,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "BEAUTIFUL HAIR DESIGN",
-      "type": "fascia",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "source_photo": "IMG_20260320_011653265_HDR.jpg",
     "photo_timestamp": "2026-03-20T01:16:53-04:00",
@@ -245,7 +237,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#A56444",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

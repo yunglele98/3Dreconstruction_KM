@@ -20,9 +20,9 @@
     "lots_sharing_footprint": 12
   },
   "roof_type": "flat",
-  "roof_pitch_deg": 40,
+  "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Clapboard",
+  "facade_material": "brick (buff/yellow), wood/panel at ground level",
   "facade_colour": "painted (wood clapboard / painted wood)",
   "windows_per_floor": [
     1,
@@ -33,7 +33,7 @@
   "window_height_m": 1.1,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
@@ -222,6 +222,28 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Clapboard",
+        "new": "brick (buff/yellow), wood/panel at ground level"
+      },
+      {
+        "field": "condition",
+        "old": "fair",
+        "new": "poor"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 40,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#F0EDE8",
+        "new": "#8A2020"
+      }
     ]
   },
   "decorative_elements": {
@@ -469,7 +491,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#B85A3A",
-    "trim": "#F0EDE8",
+    "trim": "#8A2020",
     "roof": "#4A4A4A",
     "accent": "#8A2020"
   },

@@ -24,7 +24,7 @@
   "roof_features": [
     "canopy"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "dark painted/deteriorated facade with extensive graffiti covering storefront and upper wall",
   "windows_per_floor": [
     0
@@ -33,7 +33,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
@@ -207,33 +207,26 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      },
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#C6A78A",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 4.4,
-    "height_m": 5.1,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "retractable",
-      "width_m": 4.16,
-      "projection_m": 1.0,
-      "colour_hex": "#8A2A2A"
-    },
-    "signage": {
-      "text": "Jumbo Empanadas",
-      "type": "projecting",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "dark painted/deteriorated facade with extensive graffiti covering storefront and upper wall",
     "facade_material_observed": "mixed",
@@ -286,7 +279,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#C6A78A",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

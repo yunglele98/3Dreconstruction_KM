@@ -34,7 +34,7 @@
   "window_width_m": 0.9,
   "window_height_m": 1.25,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Detached",
@@ -192,6 +192,18 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#8A2D1B",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "photo_observations": {
@@ -301,26 +313,12 @@
       "steps": 2
     }
   ],
-  "storefront": {
-    "type": "Commercial ground floor",
-    "width_m": 4.4,
-    "height_m": 3.2,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 2,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "description": "commercial frontage extends toward Oxford with mural-painted side access passage",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  },
+  "storefront": {},
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#8A2D1B",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

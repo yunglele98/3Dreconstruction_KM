@@ -25,7 +25,7 @@
   "roof_features": [
     "deck"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "light cream facade with contemporary balcony/deck elements",
   "windows_per_floor": [
     0,
@@ -197,6 +197,13 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      }
     ]
   },
   "bay_window": {

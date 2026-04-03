@@ -24,7 +24,7 @@
     "projecting_balcony",
     "deck"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "white storefront with black trim, side mural panel, and upper dark-framed windows",
   "windows_per_floor": [
     0,
@@ -36,7 +36,7 @@
   "window_width_m": 0.95,
   "window_height_m": 1.25,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
@@ -224,33 +224,21 @@
       "windows_per_floor: [0] -> [0, 0, 0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 4.4,
-    "height_m": 2.9,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "retractable",
-      "width_m": 4.16,
-      "projection_m": 1.0,
-      "colour_hex": "#8A2A2A"
-    },
-    "signage": {
-      "text": "Pamenar",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "white storefront with black trim, side mural panel, and upper dark-framed windows",
     "facade_material_observed": "mixed",

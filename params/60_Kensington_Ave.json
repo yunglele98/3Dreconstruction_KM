@@ -218,6 +218,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "colour_palette.trim",
+        "old": "#3B3028",
+        "new": "#E0D020"
+      },
+      {
+        "field": "colour_palette.roof",
+        "old": "#4D5353",
+        "new": "#5A5A5A"
+      }
     ]
   },
   "storefront": {
@@ -381,8 +393,8 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#C8A830",
-    "trim": "#3B3028",
-    "roof": "#4D5353",
+    "trim": "#E0D020",
+    "roof": "#5A5A5A",
     "accent": "#1A3A8A"
   },
   "volumes": [],

@@ -25,7 +25,7 @@
   "roof_features": [
     "gable_front"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "mixed (metal cladding upper, corrugated metal lower)",
   "facade_colour": "black board-and-batten upper, vibrant green/blue mural on corrugated metal ground floor",
   "windows_per_floor": [
     0,
@@ -35,7 +35,7 @@
   "window_width_m": 0.95,
   "window_height_m": 1.35,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
@@ -220,26 +220,21 @@
       "windows_per_floor: [0, 0, 0] -> [0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Mixed masonry",
+        "new": "mixed (metal cladding upper, corrugated metal lower)"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "vacant",
-    "width_m": 4.4,
-    "height_m": 4.5,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "retractable",
-      "width_m": 4.16,
-      "projection_m": 1.0,
-      "colour_hex": "#8A2A2A"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "black board-and-batten upper, vibrant green/blue mural on corrugated metal ground floor",
     "facade_material_observed": "mixed (metal cladding upper, corrugated metal lower)",

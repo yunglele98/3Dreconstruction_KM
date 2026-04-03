@@ -20,11 +20,11 @@
     "lots_sharing_footprint": 9
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "Stucco",
+  "facade_material": "mixed (metal cladding, painted masonry)",
   "facade_colour": "painted (painted stucco/render (upper band), metal roller shutters (ground))",
   "windows_per_floor": [
     0
@@ -197,6 +197,28 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Stucco",
+        "new": "mixed (metal cladding, painted masonry)"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#4A4A4A",
+        "new": "#1A1A1A"
+      },
+      {
+        "field": "colour_palette.accent",
+        "old": "#D06030",
+        "new": "#4A9A4A"
+      }
     ]
   },
   "storefront": {
@@ -402,8 +424,8 @@
     "door_hex": "#4A4A4A",
     "mortar_hex": "#C8C0B0",
     "facade": "#D8D0C0",
-    "trim": "#4A4A4A",
-    "accent": "#D06030",
+    "trim": "#1A1A1A",
+    "accent": "#4A9A4A",
     "roof": "#3A3A3A"
   },
   "volumes": [],

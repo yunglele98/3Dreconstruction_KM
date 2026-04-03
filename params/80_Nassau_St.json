@@ -129,6 +129,13 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#97583D",
+        "new": "#B85A3A"
+      }
     ]
   },
   "notes": "Plain houseform unit on Nassau Street.",
@@ -154,7 +161,7 @@
   "party_wall_right": false,
   "facade_depth_m": 10.0,
   "facade_detail": {
-    "brick_colour_hex": "#97583D",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

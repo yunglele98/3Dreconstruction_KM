@@ -30,7 +30,7 @@
   "window_width_m": 1.8,
   "window_height_m": 2.2,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "",
@@ -196,29 +196,16 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 5.2,
-    "height_m": 10.2,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "24/7 Auto Group (Kensington Automotive)",
-      "type": "fascia",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "dark-painted single-storey automotive storefront with red-and-white commercial signage",
     "facade_material_observed": "mixed",

@@ -22,7 +22,7 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "Stucco",
+  "facade_material": "left: wood panel/plywood over original; right: painted (pink/magenta tones with neon)",
   "facade_colour": "painted (painted wood/stucco)",
   "windows_per_floor": [
     0,
@@ -240,6 +240,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Stucco",
+        "new": "left: wood panel/plywood over original; right: painted (pink/magenta tones with neon)"
+      }
     ]
   },
   "bay_window": {
@@ -426,26 +433,9 @@
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage_text": "LAST TEMPTATION",
-    "awning": {
-      "present": false,
-      "type": null,
-      "colour": null
-    },
-    "width_pct": 90,
-    "signage": {
-      "text": "Last Temptation",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
+    "width_m": 4.4,
+    "height_m": 4.18,
+    "status": "active"
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260320_012227134_HDR.jpg",

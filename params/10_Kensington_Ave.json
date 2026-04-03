@@ -197,6 +197,18 @@
         "category": "facade_material",
         "applied_at": "2026-04-02T03:56:41.785538+00:00"
       }
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#4B2820",
+        "new": "#C47040"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#4F3727",
+        "new": "#C8B8A0"
+      }
     ]
   },
   "bay_window": {
@@ -329,7 +341,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#4B2820",
+    "brick_colour_hex": "#C47040",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -413,7 +425,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#C47040",
-    "trim": "#4F3727",
+    "trim": "#C8B8A0",
     "roof": "#5A5A5A",
     "accent": "#2A7A2A"
   },

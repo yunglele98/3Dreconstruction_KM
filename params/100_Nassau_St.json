@@ -22,7 +22,7 @@
   "roof_type": "gable",
   "roof_pitch_deg": 40,
   "roof_features": [],
-  "facade_material": "mixed",
+  "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
     0,
@@ -238,6 +238,13 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "mixed",
+        "new": "brick"
+      }
     ]
   },
   "doors_detail": [

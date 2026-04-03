@@ -32,7 +32,7 @@
   "window_width_m": 0.95,
   "window_height_m": 1.35,
   "door_count": 2,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "",
@@ -224,6 +224,13 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "bay_window": {
@@ -236,27 +243,7 @@
     "width_m": 2.4,
     "projection_m": 0.6
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "vacant",
-    "width_m": 5.2,
-    "height_m": 4.5,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "Cosmo Cafe | Bar",
-      "type": "fascia",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "charcoal-painted wood siding with black storefront fascia and vivid blue, pink, and purple mural panels across the side parking-lot elevation",
     "facade_material_observed": "wood_clapboard",

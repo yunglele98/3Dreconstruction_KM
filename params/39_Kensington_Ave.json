@@ -22,7 +22,7 @@
   "roof_type": "gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "left: painted/stucco (white/cream with green); right: painted (white/grey)",
   "facade_colour": "left: painted/stucco (white/cream with green); right: painted (white/grey)",
   "windows_per_floor": [
     0,
@@ -256,6 +256,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Mixed masonry",
+        "new": "left: painted/stucco (white/cream with green); right: painted (white/grey)"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#3B3A3A",
+        "new": "#E8E0D0"
+      }
     ]
   },
   "bay_window": {
@@ -387,28 +399,16 @@
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
     "facade": "#E8E0D0",
-    "trim": "#3B3A3A",
+    "trim": "#E8E0D0",
     "roof": "#4F4646",
     "accent": "#6ABF40"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage_text": "CUTLASS (implied from address assignment)",
-    "awning": {
-      "present": false
-    },
-    "security_grille": true,
-    "width_pct": 70,
-    "signage": {
-      "text": "CUTLASS",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
+    "width_m": 4.4,
+    "height_m": 3.72,
+    "status": "active"
   },
   "photo_observations": {
     "facade_analysis_agent": "claude-opus-4-6-facade-analysis",

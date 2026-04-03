@@ -20,7 +20,7 @@
     "lots_sharing_footprint": 11
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "Painted",
   "facade_colour": "painted (painted wood/metal storefront)",
@@ -32,7 +32,7 @@
   "window_height_m": 2.5,
   "door_count": 2,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
@@ -203,6 +203,23 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "condition",
+        "old": "fair",
+        "new": "poor"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#F0EDE8",
+        "new": "#D4A020"
+      }
     ]
   },
   "photo_observations": {
@@ -426,7 +443,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#7A7A7A",
-    "trim": "#F0EDE8",
+    "trim": "#D4A020",
     "roof": "#4A4A4A",
     "accent": "#C87040"
   },

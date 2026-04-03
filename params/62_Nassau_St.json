@@ -33,7 +33,7 @@
   "window_width_m": 2.4,
   "window_height_m": 2.2,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Semi-detached",
@@ -192,6 +192,18 @@
       "windows_per_floor: [0, 0] -> [0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#86271E",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "photo_observations": {
@@ -293,7 +305,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#86271E",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -344,27 +356,7 @@
   "heritage_summary": "Constructed as a pair of semi-detached residences, the properties have evolved over time while retaining original building features reflecting vernacular interpretations of Victorian architectural styles, including their shared roofline with Scottish dormers and segmentally arched windows with brick voussoirs at the second storey. 256 Augusta Avenue N/A 29.",
   "roof_material": "Slate shingles",
   "volumes": [],
-  "storefront": {
-    "width_m": 4.4,
-    "height_m": 1.8,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 2,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage": {
-      "text": "Pera Cafe",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "colour_palette": {
     "facade_hex": "#E8E0D4",
     "trim_hex": "#3A2A20",

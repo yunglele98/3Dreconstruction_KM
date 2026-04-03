@@ -24,7 +24,7 @@
   "roof_features": [
     "parapet_wall"
   ],
-  "facade_material": "Clapboard",
+  "facade_material": "brick",
   "facade_colour": "painted (painted wood siding)",
   "windows_per_floor": [
     0,
@@ -225,6 +225,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Clapboard",
+        "new": "brick"
+      }
     ]
   },
   "storefront": {

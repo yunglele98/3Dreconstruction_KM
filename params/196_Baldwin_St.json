@@ -20,7 +20,7 @@
     "lots_sharing_footprint": 8
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [
     "chimney",
     "front_gable"
@@ -36,7 +36,7 @@
   "window_height_m": 1.2,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "poor",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
@@ -205,6 +205,23 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "condition",
+        "old": "fair",
+        "new": "poor"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#241B15",
+        "new": "#3A3A3A"
+      }
     ]
   },
   "storefront": {
@@ -397,7 +414,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#B75F3A",
-    "trim": "#241B15",
+    "trim": "#3A3A3A",
     "roof": "#5A5151",
     "accent": "#E8D040"
   },

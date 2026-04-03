@@ -35,7 +35,7 @@
   "window_height_m": 1.35,
   "door_count": 2,
   "has_storefront": true,
-  "condition": "good",
+  "condition": "fair",
   "hcd_data": {
     "typology": "Commercial",
     "construction_date": "1914-1930",
@@ -227,6 +227,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "condition",
+        "old": "good",
+        "new": "fair"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#4A4A4A",
+        "new": "#FFFFFF"
+      }
     ]
   },
   "decorative_elements": {
@@ -437,7 +449,7 @@
     "door_hex": "#4A4A4A",
     "mortar_hex": "#C8C0B0",
     "facade": "#E8D010",
-    "trim": "#4A4A4A",
+    "trim": "#FFFFFF",
     "roof": "#505050",
     "accent": "#CC0000"
   },

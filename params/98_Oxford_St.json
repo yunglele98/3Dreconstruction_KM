@@ -35,7 +35,7 @@
   "window_width_m": 1.0,
   "window_height_m": 1.8,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Semi-detached, Bay-and-Gable",
@@ -225,6 +225,13 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "photo_observations": {

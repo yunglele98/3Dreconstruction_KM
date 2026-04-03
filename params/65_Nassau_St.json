@@ -32,7 +32,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 2,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Detached",
@@ -211,6 +211,13 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "photo_observations": {
@@ -383,27 +390,7 @@
   "heritage_summary": "First noted in the City Directories in 1880, and housing commercial uses at the ground floor since 1889, the property retains building features reflecting vernacular interpretations of Victorian architectural styles, including its gabled roof with decorative bargeboard and finial. Summary: Reference Primary Address Entrance Address(es) Number 26.",
   "roof_material": "Slate shingles",
   "volumes": [],
-  "storefront": {
-    "width_m": 4.4,
-    "height_m": 3.6,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 2,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage": {
-      "text": "Augusta Fruit Market | Kensington Market Sourdough",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#3A2A20",

@@ -20,7 +20,7 @@
     "lots_sharing_footprint": 1
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [
     "parapet_wall"
   ],
@@ -225,6 +225,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#4D3B2A",
+        "new": "#505050"
+      }
     ]
   },
   "photo_observations": {
@@ -414,7 +426,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#A83030",
-    "trim": "#4D3B2A",
+    "trim": "#505050",
     "roof": "#505050",
     "accent": "#E87020"
   },

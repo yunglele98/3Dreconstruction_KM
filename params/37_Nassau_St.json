@@ -33,7 +33,7 @@
   "window_width_m": 1.2,
   "window_height_m": 1.45,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, House-form, Semi-detached",
@@ -192,6 +192,13 @@
       "windows_per_floor: [0, 0, 0] -> [0, 0]",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "bay_window": {
@@ -222,20 +229,7 @@
       "colour_hex": "#D4C9A8"
     }
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "vacant",
-    "width_m": 4.4,
-    "height_m": 4.0,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 4.680000000000001,
-      "projection_m": 1.2,
-      "colour_hex": "#3A2A20"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "dark mottled red-brown brick with white-framed replacement windows and a red-and-white enclosed porch element",
     "facade_material_observed": "brick",

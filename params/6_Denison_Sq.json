@@ -24,7 +24,7 @@
   "roof_features": [
     "patio"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "white-painted storefront base with black signage band and red-brown upper brick",
   "windows_per_floor": [
     0,
@@ -34,7 +34,7 @@
   "window_width_m": 1.0,
   "window_height_m": 1.5,
   "door_count": 2,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "good",
   "hcd_data": {
     "typology": "House-form, Converted House-form",
@@ -192,6 +192,18 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "photo_observations": {
@@ -309,21 +321,7 @@
       "steps": 2
     }
   ],
-  "storefront": {
-    "type": "Commercial ground floor",
-    "width_m": 4.4,
-    "height_m": 3.0,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 2,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "description": "wide modern brewery storefront with large glazing, black BURDOCK lettering, and wood patio/terrace edging",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix"
-  },
+  "storefront": {},
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,

@@ -32,7 +32,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "Institutional",
@@ -186,6 +186,18 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#C57662",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "doors_detail": [
@@ -209,7 +221,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#C57662",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -259,34 +271,7 @@
   "heritage_summary": "Located on the southeast corner of Bellevue Avenue and College Street, the property anchors the entrance to Bellevue Avenue and is considered a landmark within the District. St Stephen-In-The-Fields Church has value as an early and representative example of a Gothic Revival Church that has retained most of its original building features including steeply pitched roof, pointed lancet windows, stained-glass windows, stepped buttresses, radiating nave chapels, polychromatic roof, and polychromatic brickwork with stone detailing and bellcote.",
   "roof_material": "Built-up tar and gravel",
   "volumes": [],
-  "storefront": {
-    "width_m": 5.2,
-    "height_m": 3.6,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 3,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "Toronto Christian Worship Center",
-      "type": "fascia",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "source": "synthesized_from_params",
     "facade_material_observed": "brick",

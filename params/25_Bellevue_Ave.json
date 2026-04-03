@@ -34,7 +34,7 @@
   "window_width_m": 0.9,
   "window_height_m": 1.7,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "good",
   "photo_observations": {
     "facade_colour_observed": "warm red brick with white/cream stone trim at arched window surrounds, pilaster capitals, and string course; dark wood entry surround with gold semi-circular fanlight",
@@ -243,6 +243,13 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.45",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "window_arrangement": "symmetric",
@@ -388,27 +395,7 @@
     "spring_height_ratio": 0.65
   },
   "volumes": [],
-  "storefront": {
-    "width_m": 4.4,
-    "height_m": 3.6,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 2,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage": {
-      "text": "The Kiever Shul",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "colour_palette": {
     "facade_hex": "#B85A3A",
     "trim_hex": "#E8E0D0",

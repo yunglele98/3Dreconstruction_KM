@@ -207,6 +207,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "colour_palette.trim",
+        "old": "#473120",
+        "new": "#F0EDE8"
+      }
     ]
   },
   "storefront": {
@@ -418,7 +425,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#A55B3C",
-    "trim": "#473120",
+    "trim": "#F0EDE8",
     "roof": "#575656",
     "accent": "#D8C8A0"
   },

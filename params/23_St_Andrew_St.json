@@ -21,7 +21,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "unknown",
   "facade_colour": "not visible — site under active construction",
   "windows_per_floor": [
     0
@@ -30,7 +30,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "poor",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
@@ -220,6 +220,18 @@
       "windows_detail: 1 -> 1 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Brick",
+        "new": "unknown"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "photo_observations": {

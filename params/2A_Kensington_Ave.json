@@ -34,7 +34,7 @@
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "good",
   "hcd_data": {
     "typology": "House-Form, Detached, Bay-and-Gable",
     "construction_date": "Pre-1889",
@@ -233,6 +233,23 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#A15641",
+        "new": "#5A6A7A"
+      },
+      {
+        "field": "condition",
+        "old": "fair",
+        "new": "good"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#4A3423",
+        "new": "#E0D8D0"
+      }
     ]
   },
   "storefront": {
@@ -344,7 +361,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#A15641",
+    "brick_colour_hex": "#5A6A7A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -432,7 +449,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#A15641",
-    "trim": "#4A3423",
+    "trim": "#E0D8D0",
     "roof": "#5F5656",
     "accent": "#4080C0"
   },

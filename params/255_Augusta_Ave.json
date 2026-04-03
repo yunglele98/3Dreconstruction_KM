@@ -34,7 +34,7 @@
   "window_width_m": 0.9,
   "window_height_m": 1.2,
   "door_count": 2,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "Converted House-form, Detached",
@@ -215,6 +215,13 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "cornice": {
@@ -224,31 +231,7 @@
     "projection_mm": 100,
     "colour_hex": "#D4C9A8"
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "active",
-    "width_m": 4.4,
-    "height_m": 4.8,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "retractable",
-      "width_m": 4.16,
-      "projection_m": 1.0,
-      "colour_hex": "#8A2A2A"
-    },
-    "signage": {
-      "text": "Kensington Kitchen",
-      "type": "projecting",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "dark blue and black mural-painted upper facade with black storefront framing and bright pink, blue, and white signage",
     "facade_material_observed": "mixed",

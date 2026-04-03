@@ -22,7 +22,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "brick",
+  "facade_material": "left: painted (dark brown/olive); right: painted blue with additional colours",
   "facade_colour": "left: painted (dark brown/olive); right: painted blue with additional colours",
   "windows_per_floor": [
     0,
@@ -209,6 +209,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "left: painted (dark brown/olive); right: painted blue with additional colours"
+      }
     ]
   },
   "bay_window": {

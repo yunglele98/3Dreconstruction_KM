@@ -22,7 +22,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "Mixed masonry",
+  "facade_material": "mixed (brick, painted siding, board-and-batten)",
   "facade_colour": "painted (mixed (brick, painted siding, board-and-batten))",
   "windows_per_floor": [
     0,
@@ -259,6 +259,18 @@
       "segmentation",
       "signage",
       "depth"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Mixed masonry",
+        "new": "mixed (brick, painted siding, board-and-batten)"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#3F2E23",
+        "new": "#4080C0"
+      }
     ]
   },
   "storefront": {
@@ -377,7 +389,7 @@
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
     "facade": "#B85A3A",
-    "trim": "#3F2E23",
+    "trim": "#4080C0",
     "roof": "#505050",
     "accent": "#D4A030"
   },

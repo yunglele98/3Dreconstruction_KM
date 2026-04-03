@@ -21,7 +21,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "N/A - vacant lot",
   "facade_colour": "N/A - vacant lot",
   "windows_per_floor": [
     0
@@ -30,7 +30,7 @@
   "window_width_m": 0.85,
   "window_height_m": 1.3,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "fair",
   "hcd_data": {
     "typology": "",
@@ -206,29 +206,26 @@
       "windows_detail: 1 -> 1 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 1"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Brick",
+        "new": "N/A - vacant lot"
+      },
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#D27355",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
-  "storefront": {
-    "type": "Commercial ground floor",
-    "status": "vacant",
-    "width_m": 5.2,
-    "height_m": 11.8,
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 5.49,
-      "projection_m": 1.2,
-      "colour_hex": "#2A4A2A"
-    },
-    "signage": {
-      "text": "Hive",
-      "type": "fascia",
-      "width_m": 4.0,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "photo_observations": {
     "facade_colour_observed": "N/A - vacant lot",
     "facade_material_observed": "N/A - vacant lot",
@@ -271,7 +268,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#D27355",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

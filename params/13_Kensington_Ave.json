@@ -208,6 +208,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "colour_palette.trim",
+        "old": "#37281F",
+        "new": "#E8D8C0"
+      }
     ]
   },
   "decorative_elements": {
@@ -415,33 +422,16 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#9B4330",
-    "trim": "#37281F",
+    "trim": "#E8D8C0",
     "roof": "#554D4D",
     "accent": "#D4A030"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage_text": "Causa Culture",
-    "awning": {
-      "present": true,
-      "type": "retractable fabric",
-      "colour": "#D4A030"
-    },
-    "width_pct": 60,
-    "signage": {
-      "text": "Causa Culture",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
+    "width_m": 4.4,
+    "height_m": 3.8,
+    "status": "active"
   },
   "deep_facade_analysis": {
     "source_photo": "IMG_20260320_012043877_HDR.jpg",

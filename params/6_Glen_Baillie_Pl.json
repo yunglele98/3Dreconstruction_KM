@@ -24,7 +24,7 @@
   "roof_features": [
     "gable_peak"
   ],
-  "facade_material": "Vinyl siding",
+  "facade_material": "vinyl_siding",
   "facade_colour": "cream/yellow vinyl siding with brown trim",
   "windows_per_floor": [
     0,
@@ -210,6 +210,13 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Vinyl siding",
+        "new": "vinyl_siding"
+      }
     ]
   },
   "photo_observations": {

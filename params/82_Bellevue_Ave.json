@@ -23,7 +23,7 @@
   "roof_type": "cross-gable",
   "roof_pitch_deg": 45,
   "roof_features": [],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "red-brown brick with dark grey/black trim, grey-painted upper sections",
   "windows_per_floor": [
     0,
@@ -212,6 +212,18 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      },
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#9D4022",
+        "new": "#8A8A8A"
+      }
     ]
   },
   "bay_window": {
@@ -310,7 +322,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#9D4022",
+    "brick_colour_hex": "#8A8A8A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

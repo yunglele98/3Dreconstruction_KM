@@ -25,7 +25,7 @@
     "mansard",
     "dormer"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "grey-green painted exterior; heavily obscured by large evergreen trees",
   "windows_per_floor": [
     0,
@@ -195,6 +195,18 @@
       "windows_detail: 2 -> 2 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      },
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#B85733",
+        "new": "#8A8A8A"
+      }
     ]
   },
   "bay_window": {
@@ -325,7 +337,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#B85733",
+    "brick_colour_hex": "#8A8A8A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,

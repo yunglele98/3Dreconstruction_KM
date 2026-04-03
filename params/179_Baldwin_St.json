@@ -21,7 +21,7 @@
     "lots_sharing_footprint": 12
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "Metal",
   "facade_colour": "neutral",
@@ -33,7 +33,7 @@
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "good",
+  "condition": "fair",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
@@ -241,6 +241,23 @@
       "segmentation",
       "signage",
       "depth"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "condition",
+        "old": "good",
+        "new": "fair"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#353535",
+        "new": "#4A8A8A"
+      }
     ]
   },
   "doors_detail": [
@@ -357,33 +374,16 @@
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
     "facade": "#B85A3A",
-    "trim": "#353535",
+    "trim": "#4A8A8A",
     "roof": "#4A4A4A",
     "accent": "#CC4466"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 4.680000000000001,
-      "projection_m": 1.2,
-      "colour_hex": "#CC4466"
-    },
-    "signage": {
-      "text": "Golden Grams Culture Boutique (cannabis/culture shop)",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    },
-    "security_grille": {
-      "present": true,
-      "type": "rolling"
-    }
+    "width_m": 4.4,
+    "height_m": 3.7,
+    "status": "active"
   },
   "deep_facade_analysis": {
     "source_photo": "PXL_20260318_223043101.jpg",

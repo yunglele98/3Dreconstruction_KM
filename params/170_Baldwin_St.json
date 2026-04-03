@@ -20,11 +20,11 @@
     "lots_sharing_footprint": 3
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [
     "awning"
   ],
-  "facade_material": "Stucco",
+  "facade_material": "mixed",
   "facade_colour": "painted (corrugated metal/painted siding)",
   "windows_per_floor": [
     0,
@@ -221,6 +221,28 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Stucco",
+        "new": "mixed"
+      },
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#473120",
+        "new": "#FFFFFF"
+      },
+      {
+        "field": "colour_palette.accent",
+        "old": "#D03050",
+        "new": "#208040"
+      }
     ]
   },
   "cornice": {
@@ -408,9 +430,9 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#7A7A7A",
-    "trim": "#473120",
+    "trim": "#FFFFFF",
     "roof": "#505050",
-    "accent": "#D03050"
+    "accent": "#208040"
   },
   "volumes": [],
   "deep_facade_analysis": {

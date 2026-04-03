@@ -26,7 +26,7 @@
     "turret",
     "tower"
   ],
-  "facade_material": "Mixed masonry",
+  "facade_material": "mixed (stucco upper, cladding storefront)",
   "facade_colour": "varied brick and stone",
   "windows_per_floor": [
     0,
@@ -228,6 +228,13 @@
       "segmentation",
       "signage",
       "depth"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Mixed masonry",
+        "new": "mixed (stucco upper, cladding storefront)"
+      }
     ]
   },
   "bay_window": {

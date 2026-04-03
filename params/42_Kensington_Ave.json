@@ -22,7 +22,7 @@
   "roof_type": "flat",
   "roof_pitch_deg": 0,
   "roof_features": [],
-  "facade_material": "Brick",
+  "facade_material": "painted stucco/render (blue/navy)",
   "facade_colour": "painted (painted brick)",
   "windows_per_floor": [
     0,
@@ -33,7 +33,7 @@
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "good",
+  "condition": "fair",
   "hcd_data": {
     "typology": "Commercial, Converted House-form, Semi-detached",
     "construction_date": "Pre-1889",
@@ -224,6 +224,28 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "Brick",
+        "new": "painted stucco/render (blue/navy)"
+      },
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#A24C2A",
+        "new": "#3A5080"
+      },
+      {
+        "field": "condition",
+        "old": "good",
+        "new": "fair"
+      },
+      {
+        "field": "colour_palette.roof",
+        "old": "#526161",
+        "new": "#5A5A5A"
+      }
     ]
   },
   "bay_window": {
@@ -412,7 +434,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#A24C2A",
+    "brick_colour_hex": "#3A5080",
     "bond_pattern": "running bond (under paint)",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -461,7 +483,7 @@
     "mortar_hex": "#C8C0B0",
     "facade": "#A24C2A",
     "trim": "#F0EDE8",
-    "roof": "#526161",
+    "roof": "#5A5A5A",
     "accent": "#D0303A"
   },
   "volumes": [],

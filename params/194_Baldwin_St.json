@@ -37,7 +37,7 @@
   "window_height_m": 1.2,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "fair",
+  "condition": "poor",
   "hcd_data": {
     "typology": "Converted House-form, Row",
     "construction_date": "Pre-1889",
@@ -194,6 +194,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "condition",
+        "old": "fair",
+        "new": "poor"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#32251C",
+        "new": "#3A3A3A"
+      }
     ]
   },
   "decorative_elements": {
@@ -400,7 +412,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#A0523C",
-    "trim": "#32251C",
+    "trim": "#3A3A3A",
     "roof": "#4A4A4A",
     "accent": "#2A5A2A"
   },

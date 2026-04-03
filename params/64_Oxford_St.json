@@ -33,7 +33,7 @@
   "window_width_m": 1.2,
   "window_height_m": 1.4,
   "door_count": 1,
-  "has_storefront": true,
+  "has_storefront": false,
   "condition": "good",
   "hcd_data": {
     "typology": "Converted House-form, House-form, Semi-detached",
@@ -232,6 +232,13 @@
       "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "has_storefront",
+        "old": true,
+        "new": false
+      }
     ]
   },
   "decorative_elements": {
@@ -357,28 +364,7 @@
       "steps": 2
     }
   ],
-  "storefront": {
-    "type": "Commercial ground floor",
-    "width_m": 4.4,
-    "height_m": 3.3,
-    "bulkhead_height_m": 0.4,
-    "glazing": {
-      "type": "Plate glass",
-      "panel_count": 2,
-      "frame_colour_hex": "#2A2A2A"
-    },
-    "recessed_entry": false,
-    "description": "corner cafe/restaurant storefront wrapping the Augusta/Oxford corner with broad glazing",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage": {
-      "text": "The Cottage Cheese - Urban Indian",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
-  },
+  "storefront": {},
   "building_type": "commercial",
   "party_wall_left": true,
   "party_wall_right": true,

@@ -20,7 +20,7 @@
     "lots_sharing_footprint": 9
   },
   "roof_type": "cross-gable",
-  "roof_pitch_deg": 45,
+  "roof_pitch_deg": 0,
   "roof_features": [],
   "facade_material": "Brick",
   "facade_colour": "painted (painted brick)",
@@ -209,6 +209,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "roof_pitch_deg",
+        "old": 45,
+        "new": 0
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#38281F",
+        "new": "#F0EDE8"
+      }
     ]
   },
   "decorative_elements": {
@@ -383,7 +395,7 @@
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
     "facade": "#D8D0C0",
-    "trim": "#38281F",
+    "trim": "#F0EDE8",
     "roof": "#4A4A4A",
     "accent": "#1A3A8A"
   },

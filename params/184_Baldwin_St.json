@@ -214,6 +214,13 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "colour_palette.trim",
+        "old": "#443425",
+        "new": "#2AAA7A"
+      }
     ]
   },
   "storefront": {
@@ -421,7 +428,7 @@
     "door_hex": "#3A2A20",
     "mortar_hex": "#C8C0B0",
     "facade": "#F0F0F0",
-    "trim": "#443425",
+    "trim": "#2AAA7A",
     "roof": "#5A5050",
     "accent": "#2AAA7A"
   },

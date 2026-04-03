@@ -204,6 +204,18 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_detail.brick_colour_hex",
+        "old": "#C0775A",
+        "new": "#B85A3A"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#3E2E23",
+        "new": "#E8D8C0"
+      }
     ]
   },
   "photo_observations": {
@@ -279,7 +291,7 @@
   "party_wall_left": true,
   "party_wall_right": true,
   "facade_detail": {
-    "brick_colour_hex": "#C0775A",
+    "brick_colour_hex": "#B85A3A",
     "bond_pattern": "running bond",
     "mortar_colour": "Light grey",
     "mortar_joint_width_mm": 10,
@@ -366,7 +378,7 @@
     "door_hex": "#E8E0D0",
     "mortar_hex": "#C8C0B0",
     "facade": "#C0775A",
-    "trim": "#3E2E23",
+    "trim": "#E8D8C0",
     "roof": "#525252",
     "accent": "#C83030"
   },

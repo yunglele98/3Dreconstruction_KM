@@ -35,7 +35,7 @@
   "window_height_m": 1.3,
   "door_count": 1,
   "has_storefront": true,
-  "condition": "good",
+  "condition": "poor",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "1904-1913",
@@ -208,6 +208,23 @@
       "segmentation",
       "signage",
       "depth"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "condition",
+        "old": "good",
+        "new": "poor"
+      },
+      {
+        "field": "colour_palette.trim",
+        "old": "#29292F",
+        "new": "#707070"
+      },
+      {
+        "field": "colour_palette.accent",
+        "old": "#4A8030",
+        "new": "#3A7A6A"
+      }
     ]
   },
   "doors_detail": [
@@ -310,31 +327,16 @@
     "door_hex": "#2A2A2A",
     "mortar_hex": "#C8C0B0",
     "facade": "#505050",
-    "trim": "#29292F",
+    "trim": "#707070",
     "roof": "#303030",
-    "accent": "#4A8030"
+    "accent": "#3A7A6A"
   },
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage_text": "$1 DOLLAR SMOKES / VAPES TOBACCO ZYN / FIRST NATION STORE / Golden Grams Culture Boutique",
-    "security_grille": true,
-    "awning": {
-      "present": true,
-      "type": "fixed",
-      "width_m": 4.680000000000001,
-      "projection_m": 1.2,
-      "colour_hex": "#4A8030"
-    },
-    "signage": {
-      "text": "NORTH POKE",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
+    "width_m": 4.4,
+    "height_m": 3.7,
+    "status": "active"
   },
   "deep_facade_analysis": {
     "source_photo": "PXL_20260318_223430241.jpg",

@@ -286,15 +286,9 @@
   "volumes": [],
   "storefront": {
     "type": "Commercial ground floor",
-    "status": "inferred_from_fix",
-    "status_source": "normalized_fix",
-    "signage": {
-      "text": "Building (Chimney)",
-      "type": "fascia",
-      "width_m": 3.6399999999999997,
-      "height_m": 0.6,
-      "colour_hex": "#F0EDE8"
-    }
+    "width_m": 4.4,
+    "height_m": 4.8,
+    "status": "active"
   },
   "photo_observations": {
     "source": "synthesized_from_params",

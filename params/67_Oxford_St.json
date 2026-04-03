@@ -25,7 +25,7 @@
   "roof_features": [
     "enclosed_porch"
   ],
-  "facade_material": "brick",
+  "facade_material": "mixed",
   "facade_colour": "cream vertical siding over an altered rear facade with enclosed porch addition",
   "windows_per_floor": [
     0,
@@ -198,6 +198,13 @@
       "windows_detail: 3 -> 3 floors",
       "foundation_height_m: 0.3",
       "doors_detail.steps: 2"
+    ],
+    "photo_divergence_fixes": [
+      {
+        "field": "facade_material",
+        "old": "brick",
+        "new": "mixed"
+      }
     ]
   },
   "photo_observations": {
