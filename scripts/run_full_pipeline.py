@@ -75,6 +75,12 @@ STAGES = {
             ("python", "scripts/reconstruct/extract_elements.py"),
             ("python", "scripts/reconstruct/calibrate_defaults.py"),
             ("python", "scripts/reconstruct/train_splats.py"),
+            # COLMAP analysis (read-only, no --address flag)
+            # NOTE: analyze_sparse_model.py is intentionally NOT here —
+            # it's for manual deep-dives on specific models.
+            ("python", "scripts/reconstruct/analyze_photo_coverage.py"),
+            ("python", "scripts/reconstruct/analyze_colmap_quality.py"),
+            ("python", "scripts/reconstruct/colmap_report.py"),
         ],
         "prereqs": ["params/", "PHOTOS KENSINGTON/"],
     },
