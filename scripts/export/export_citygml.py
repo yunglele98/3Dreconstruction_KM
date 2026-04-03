@@ -32,7 +32,7 @@ ORIGIN_Y = 4834994.86
 def building_to_citygml(params: dict, lod: int = 3) -> Element:
     """Convert a building params dict to a CityGML Building element."""
     bldg = Element(f"{{{NS_BLDG}}}Building")
-    bldg.set(f"{{{NS_GML}}}id", params.get("building_name", "unknown"))
+    bldg.set("gml:id", params.get("building_name", "unknown").replace(" ", "_"))
 
     # Measured height
     height = SubElement(bldg, f"{{{NS_BLDG}}}measuredHeight")
@@ -101,8 +101,9 @@ def export_citygml(
         member.append(bldg_elem)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    xml_bytes = tostring(root, encoding="unicode", xml_declaration=True)
-    output_path.write_text(xml_bytes, encoding="utf-8")
+    xml_bytes = tostring(root, encoding="unicode")
+    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n' + xml_bytes
+    output_path.write_text(xml_str, encoding="utf-8")
 
     result["status"] = "exported"
     return result

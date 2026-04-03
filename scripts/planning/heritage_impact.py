@@ -26,7 +26,7 @@ HERITAGE_CAUTIOUS = {
     "tree_planting",
 }
 HERITAGE_INCOMPATIBLE = {
-    "demolish", "add_floor", "new_build",
+    "demolish", "add_floor",
 }
 
 

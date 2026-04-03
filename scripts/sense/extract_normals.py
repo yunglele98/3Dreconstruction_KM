@@ -14,7 +14,10 @@ import json
 import sys
 from pathlib import Path
 
-import numpy as np
+try:
+    import numpy as np
+except ImportError:
+    np = None
 
 PHOTO_EXTENSIONS = {".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
@@ -49,6 +52,9 @@ def extract_normals(
     }
 
     try:
+        if np is None:
+            result["status"] = "skipped_no_numpy"
+            return result
         placeholder = np.zeros((480, 640, 3), dtype=np.float32)
         placeholder[:, :, 2] = 1.0  # Default: facing camera
         np.save(npy_path, placeholder)

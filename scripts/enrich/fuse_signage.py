@@ -18,22 +18,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 DEFAULT_SIGNAGE = REPO_ROOT / "signage"
 DEFAULT_PARAMS = REPO_ROOT / "params"
 
-
-def load_photo_param_mapping(params_dir: Path) -> dict[str, Path]:
-    """Map photo stems to param files."""
-    mapping: dict[str, Path] = {}
-    for f in params_dir.glob("*.json"):
-        if f.name.startswith("_"):
-            continue
-        data = json.loads(f.read_text(encoding="utf-8"))
-        if data.get("skipped"):
-            continue
-        for photo in data.get("matched_photos", []):
-            mapping[Path(photo).stem] = f
-        obs = data.get("photo_observations", {})
-        if obs.get("photo"):
-            mapping[Path(obs["photo"]).stem] = f
-    return mapping
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _common import load_photo_param_mapping
 
 
 def load_signage_results(signage_path: Path) -> dict:

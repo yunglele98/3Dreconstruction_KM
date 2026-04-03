@@ -14,7 +14,10 @@ import json
 import sys
 from pathlib import Path
 
-import numpy as np
+try:
+    import numpy as np
+except ImportError:
+    np = None
 
 PHOTO_EXTENSIONS = {".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
@@ -24,14 +27,12 @@ DEFAULT_OUTPUT = REPO_ROOT / "depth_maps"
 
 
 def discover_photos(input_dir: Path, *, limit: int = 0) -> list[Path]:
-    """Find all photo files in *input_dir* (non-recursive for flat dirs)."""
+    """Find all photo files in *input_dir* (non-recursive)."""
     photos = sorted(
         p for p in input_dir.iterdir()
         if p.suffix.lower() in PHOTO_EXTENSIONS
     )
-    if limit > 0:
-        photos = photos[:limit]
-    return photos
+    return photos[:limit] if limit > 0 else photos
 
 
 def extract_depth_map(
@@ -54,6 +55,9 @@ def extract_depth_map(
     }
 
     try:
+        if np is None:
+            result["status"] = "skipped_no_numpy"
+            return result
         # Placeholder: create a dummy depth map
         # In production: load image, run model, save real depth
         placeholder = np.zeros((480, 640), dtype=np.float32)

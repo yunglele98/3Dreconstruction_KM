@@ -80,16 +80,22 @@ def analyze_shadow_impact(
         base_shadow = shadow_length(base_h, min_alt)
         scen_shadow = shadow_length(scen_h, min_alt)
 
-        max_shadow_increase = scen_shadow - base_shadow if scen_shadow != float("inf") else float("inf")
+        if base_shadow == float("inf") or scen_shadow == float("inf"):
+            max_shadow_increase = float("inf")
+        else:
+            max_shadow_increase = scen_shadow - base_shadow
+
+        def _safe_round(v: float) -> float | None:
+            return round(v, 2) if v != float("inf") else None
 
         changes.append({
             "address": addr,
             "baseline_height_m": base_h,
             "scenario_height_m": scen_h,
             "height_delta_m": round(delta_h, 2),
-            "baseline_max_shadow_m": round(base_shadow, 2) if base_shadow != float("inf") else "inf",
-            "scenario_max_shadow_m": round(scen_shadow, 2) if scen_shadow != float("inf") else "inf",
-            "max_shadow_increase_m": round(max_shadow_increase, 2) if max_shadow_increase != float("inf") else "inf",
+            "baseline_max_shadow_m": _safe_round(base_shadow),
+            "scenario_max_shadow_m": _safe_round(scen_shadow),
+            "max_shadow_increase_m": _safe_round(max_shadow_increase),
             "season": season,
         })
 

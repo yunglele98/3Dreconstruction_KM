@@ -14,7 +14,10 @@ import json
 import sys
 from pathlib import Path
 
-import numpy as np
+try:
+    import numpy as np
+except ImportError:
+    np = None
 
 PHOTO_EXTENSIONS = {".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
@@ -49,6 +52,9 @@ def extract_features(
     }
 
     try:
+        if np is None:
+            result["status"] = "skipped_no_numpy"
+            return result
         # Placeholder: empty keypoints and descriptors
         keypoints = np.zeros((0, 2), dtype=np.float32)
         descriptors = np.zeros((0, 256), dtype=np.float32)

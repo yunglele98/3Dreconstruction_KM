@@ -15,36 +15,23 @@ import json
 import sys
 from pathlib import Path
 
-import numpy as np
+try:
+    import numpy as np
+except ImportError:
+    np = None
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 DEFAULT_DEPTH = REPO_ROOT / "depth_maps"
 DEFAULT_PARAMS = REPO_ROOT / "params"
 
-
-def load_photo_param_mapping(params_dir: Path) -> dict[str, Path]:
-    """Map photo stems to their param files via matched_photos or photo_observations."""
-    mapping: dict[str, Path] = {}
-    for f in params_dir.glob("*.json"):
-        if f.name.startswith("_"):
-            continue
-        data = json.loads(f.read_text(encoding="utf-8"))
-        if data.get("skipped"):
-            continue
-        # Check matched_photos
-        for photo in data.get("matched_photos", []):
-            stem = Path(photo).stem
-            mapping[stem] = f
-        # Check photo_observations
-        obs = data.get("photo_observations", {})
-        if obs.get("photo"):
-            stem = Path(obs["photo"]).stem
-            mapping[stem] = f
-    return mapping
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _common import load_photo_param_mapping
 
 
 def extract_depth_stats(depth_path: Path) -> dict:
     """Extract statistical measurements from a depth map .npy file."""
+    if np is None:
+        return {}
     depth = np.load(depth_path)
     if depth.size == 0:
         return {}

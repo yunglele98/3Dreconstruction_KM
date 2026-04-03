@@ -107,14 +107,15 @@ def apply_scenario(
     scenario_id = scenario_data.get("scenario_id", "unknown")
     interventions = scenario_data.get("interventions", [])
 
-    # Index interventions by address
+    # Index interventions by address (copy dicts to avoid mutating originals)
     intv_by_addr: dict[str, list[dict]] = {}
     for intv in interventions:
         addr = intv.get("address", "")
-        intv["scenario_id"] = scenario_id
-        intv_by_addr.setdefault(addr, []).append(intv)
+        tagged = {**intv, "scenario_id": scenario_id}
+        intv_by_addr.setdefault(addr, []).append(tagged)
 
     stats = {"modified": 0, "new_builds": 0, "unchanged": 0, "total": 0}
+    matched_addresses: set[str] = set()
 
     # Copy and modify existing buildings
     for param_file in sorted(baseline_dir.glob("*.json")):
@@ -125,6 +126,7 @@ def apply_scenario(
         address = data.get("_meta", {}).get("address", param_file.stem.replace("_", " "))
 
         if address in intv_by_addr:
+            matched_addresses.add(address)
             for intv in intv_by_addr[address]:
                 data = apply_intervention(data, intv)
             stats["modified"] += 1
@@ -136,11 +138,13 @@ def apply_scenario(
         )
         stats["total"] += 1
 
-    # Handle new builds (addresses not in baseline)
+    # Handle new builds (only addresses NOT already in baseline)
     for addr, intvs in intv_by_addr.items():
+        if addr in matched_addresses:
+            continue
         for intv in intvs:
             if intv.get("type") == "new_build":
-                new_params = intv.get("params", {})
+                new_params = copy.deepcopy(intv.get("params", {}))
                 new_params["_meta"] = {
                     "address": addr,
                     "source": "scenario_new_build",
