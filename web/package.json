@@ -1,0 +1,18 @@
+{
+  "name": "kensington-3d-planning",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web planning platform for Kensington Market 3D reconstruction",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "maplibre-gl": "^4.7.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
