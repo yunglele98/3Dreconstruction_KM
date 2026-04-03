@@ -7,14 +7,37 @@ on:
     branches: [main]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Syntax check pipeline scripts
+        run: |
+          python -m py_compile generate_building.py
+          for f in generator_modules/*.py; do python -m py_compile "$f"; done
+          for d in scripts/sense scripts/reconstruct scripts/enrich scripts/planning scripts/export scripts/verify scripts/monitor scripts/visual_audit; do
+            if [ -d "$d" ]; then
+              for f in "$d"/*.py; do python -m py_compile "$f"; done
+            fi
+          done
+          echo "All syntax checks passed."
+
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    needs: lint
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python 3.10
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
@@ -24,4 +47,20 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run tests
-        run: python -m pytest tests/ -q --ignore=tests/conftest.py -x
+        run: python -m pytest tests/ -q -x --tb=short
+
+  pipeline-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: lint
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Pipeline dry-run
+        run: python scripts/run_full_pipeline.py --dry-run --skip-missing
