@@ -3,7 +3,7 @@ import csv
 import os
 from pathlib import Path
 
-ROOT = Path("C:/Users/liam1/blender_buildings")
+ROOT = Path(__file__).resolve().parent.parent.parent
 PARAMS_DIR = ROOT / "params"
 OUTPUT_FILE = ROOT / "outputs" / "exports" / "megascans_mapping.csv"
 

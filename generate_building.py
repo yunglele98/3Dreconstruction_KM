@@ -10,7 +10,7 @@ Usage (run inside Blender):
     blender --python generate_building.py -- --params params/  (all buildings)
 
 Or from Blender scripting tab:
-    exec(open('C:/Users/liam1/blender_buildings/generate_building.py').read())
+    exec(open('generate_building.py').read())
 """
 
 import bpy
@@ -27,7 +27,7 @@ from mathutils import Vector, Matrix
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-PARAMS_DIR = Path(__file__).parent / "params" if "__file__" in dir() else Path("C:/Users/liam1/blender_buildings/params")
+PARAMS_DIR = Path(__file__).parent / "params" if "__file__" in dir() else Path("params")
 DEFAULT_DEPTH = 10.0  # default building depth when not specified
 
 # ---------------------------------------------------------------------------
@@ -1844,6 +1844,18 @@ def generate_building(params, offset=(0, 0, 0), rotation=0.0):
         return []
 
     params = apply_hcd_guide_defaults(params)
+
+    # Normalize array lengths to match floor count
+    floors = params.get("floors", 1)
+    for arr_key, default_val in [("floor_heights_m", 3.0), ("windows_per_floor", 3)]:
+        arr = params.get(arr_key, [])
+        if arr and len(arr) != floors:
+            if len(arr) < floors:
+                fill = arr[-1] if arr else default_val
+                arr = list(arr) + [fill] * (floors - len(arr))
+            else:
+                arr = arr[:floors]
+            params[arr_key] = arr
 
     # Dedicated custom profile for St. Stephen church accuracy work
     meta = params.get("_meta", {})

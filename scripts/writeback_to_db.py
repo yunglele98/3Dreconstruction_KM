@@ -24,10 +24,13 @@ try:
     import psycopg2
     import psycopg2.extras
 except ImportError:
-    print("[ERROR] psycopg2 not installed. Run: pip install psycopg2-binary")
-    sys.exit(1)
+    psycopg2 = None
 
-from db_config import DB_CONFIG, get_connection
+try:
+    from db_config import DB_CONFIG, get_connection
+except ImportError:
+    DB_CONFIG = None
+    get_connection = None
 
 PARAMS_DIR = Path(__file__).parent.parent / "params"
 
@@ -441,6 +444,13 @@ def find_building_id(cur, raw_address: str) -> tuple[int | None, str]:
 # ---------------------------------------------------------------------------
 
 def main():
+    if psycopg2 is None:
+        print("[ERROR] psycopg2 not installed. Run: pip install psycopg2-binary")
+        sys.exit(1)
+    if get_connection is None:
+        print("[ERROR] db_config module not found.")
+        sys.exit(1)
+
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     except AttributeError:

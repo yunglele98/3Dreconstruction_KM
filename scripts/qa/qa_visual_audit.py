@@ -3,11 +3,11 @@ import os
 import subprocess
 from pathlib import Path
 
-ROOT = Path("C:/Users/liam1/blender_buildings")
+ROOT = Path(__file__).resolve().parent.parent.parent
 PARAMS_DIR = ROOT / "params"
 PHOTO_DIR = ROOT / "PHOTOS KENSINGTON"
 OUTPUT_DIR = ROOT / "outputs" / "qa_visual_audit"
-BLENDER_EXE = "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe"
+BLENDER_EXE = os.environ.get("BLENDER_EXE", "blender")
 
 def run_visual_audit(address):
     print(f"--- Visual Audit: {address} ---")
