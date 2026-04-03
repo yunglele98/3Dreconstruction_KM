@@ -1,0 +1,43 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260318_175543668_HDR.jpg",
+    "address": "~95 Nassau St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 12.8,
+      "course_height_mm": 78,
+      "brick_height_mm": 65,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 13,
+      "mortar_joint_profile": "weathered",
+      "measurement_reference": "Side passage between two buildings. Window openings visible on side elevation — approximately 17 courses in ~1.3m window height. Wide mortar joints inflate course height."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard running bond on both flanking side walls. Courses are level and consistent despite the multicoloured brick mix.",
+    "colour": {
+      "base_hex": "#8A5848",
+      "variance": "high",
+      "description": "Multicoloured brick mix — the side walls show a wide range of brick colours from red-brown, dark brown, orange, and near-black clinker bricks. This is characteristic of Toronto side-wall construction where lower-cost or second-quality bricks were used for walls not visible from the street. The colour mix suggests these are either seconds from the brickyard (mixing different firing temperatures) or recycled brick from multiple sources.",
+      "polychromatic": false,
+      "polychromatic_notes": "The colour variation is incidental (cost-saving use of mixed-quality brick on side walls), not intentional decorative polychromy."
+    },
+    "special_features": [],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "fair",
+      "repointing_visible": true,
+      "efflorescence": false,
+      "spalling_locations": "Some spalling visible on softer red bricks, especially at lower courses where moisture exposure is highest",
+      "notes": "Narrow side passage between two 2-storey brick buildings. Snow on ground and on wall caps. The passage is approximately 1m wide. Both side walls show the multicoloured brick characteristic of non-street-facing Toronto Victorian construction. Some mortar deterioration with joints recessed from weathering. Modern repointing patches visible with lighter Portland cement mortar. Useful reference for side-elevation texture mapping — distinct from the more uniform and better-quality brick used on street-facing facades."
+    },
+    "texture_calibration": {
+      "courses_counted": 17,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 3,
+      "reference_width_m": 0.67,
+      "confidence": 0.6,
+      "blender_brick_scale_corrected": 1.03,
+      "notes": "Photo taken looking down narrow passage at oblique upward angle. Perspective distortion moderate. The side-wall brick provides a different texture profile from the street facade — use for side elevation materials in the 3D model. Lighting is dim (narrow passage, overcast sky) so colour values may read darker/cooler than actual."
+    }
+  }
+}

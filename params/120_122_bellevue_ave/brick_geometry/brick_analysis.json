@@ -1,0 +1,69 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/120 & 122 Bellevue Ave.jpg",
+    "address": "120 & 122 Bellevue Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 218,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Second-floor windows ~1.3m, ~18 courses sill to arch crown. Storefront opening at ground level provides additional reference."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond. Very clean and consistent coursing across the full facade width of both semi-detached units.",
+    "colour": {
+      "base_hex": "#A84A35",
+      "variance": "low",
+      "description": "Rich red brick with low variation — quality pressed brick. Slightly deeper red than 112 Bellevue (less orange). Photo taken in warm late-afternoon light with low sun creating strong side-lighting that reveals the texture. The brick has aged to a warm patina. Uniform colour suggests machine-pressed brick from a single batch/source.",
+      "polychromatic": true,
+      "polychromatic_notes": "Prominent buff/cream stone voussoirs forming segmental arches above second-floor windows. Each arch has a raised central keystone flanked by radiating voussoirs. The stone-on-red contrast is the primary decorative element."
+    },
+    "special_features": [
+      {
+        "type": "gauged_arch",
+        "location": "above second-floor windows",
+        "description": "Segmental arch window heads in buff stone/cast stone with prominent raised keystones. Three windows visible across the facade, each with matching arch detail. The arches are finely executed with tapered voussoirs radiating from the spring line. This is the building's signature decorative feature."
+      },
+      {
+        "type": "stone_sill",
+        "location": "second-floor window sills",
+        "description": "Projecting stone sills below all second-floor windows."
+      },
+      {
+        "type": "peaked_gable",
+        "location": "centre of facade",
+        "description": "Central peaked gable at roof line in brick. The gable creates a strong vertical accent between the two chimneys."
+      },
+      {
+        "type": "iron_balcony",
+        "location": "second floor",
+        "description": "Iron railing balcony running the full width of the second floor, supported by the porch/storefront roof below."
+      },
+      {
+        "type": "storefront",
+        "location": "ground floor",
+        "description": "Ground floor has commercial storefront with awning and shop windows. The storefront frame is timber/painted, set into the brick facade."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "good",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "Beautifully maintained semi-detached pair with commercial ground floor and residential above. The brick facade above the storefront is in excellent condition. The stone arch window heads are intact and well-preserved. Warm golden-hour lighting in photo creates strong shadows that reveal brick texture and mortar joint depth. Hedges and plantings partially obscure ground level. Two chimneys visible at the roof line in matching brick."
+    },
+    "texture_calibration": {
+      "courses_counted": 18,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.90,
+      "confidence": 0.8,
+      "blender_brick_scale_corrected": 1.0,
+      "notes": "Excellent face-on photo with warm directional light. The stone arch keystones cast visible shadows confirming their projection from the wall face — useful for Blender normal map calibration. Multiple windows across the facade allow cross-referencing coursing counts. This is one of the best-quality HCD facade photos for brick measurement."
+    }
+  }
+}

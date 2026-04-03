@@ -1,0 +1,43 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260315_151559547_HDR.jpg",
+    "address": "Brick close-up, Oxford St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 12.5,
+      "course_height_mm": 80,
+      "brick_height_mm": 65,
+      "brick_length_mm": 210,
+      "mortar_joint_mm": 15,
+      "mortar_joint_profile": "weathered",
+      "measurement_reference": "Extreme close-up — no architectural scale reference in frame. Brick proportions and visible mortar joint width suggest hand-pressed brick with wider-than-standard joints. Mortar joint width estimated at 15mm based on ratio to brick height."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond. Head joints clearly visible between stretchers. The rough texture of the brick faces makes joint lines less sharp than machine-pressed brick.",
+    "colour": {
+      "base_hex": "#A86540",
+      "variance": "high",
+      "description": "Orange-brown hand-pressed brick with high colour variation. Individual bricks range from warm orange to deep brown with mottled/streaked faces. The rough, porous texture shows exposed aggregate and sand inclusions. This is characteristic of hand-moulded brick from pre-1890 Toronto manufacture. Significant white deposits (efflorescence) visible on multiple bricks, creating a chalky white bloom over the orange-brown base.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [],
+    "condition": {
+      "mortar_condition": "poor",
+      "brick_condition": "fair",
+      "repointing_visible": false,
+      "efflorescence": true,
+      "spalling_locations": "Multiple bricks show surface spalling and delamination. The rough texture may be partially from original hand-pressing and partially from weathering/freeze-thaw spalling.",
+      "notes": "This close-up shows older, rougher brick characteristic of the earliest Kensington Market construction (1870s-1880s). The wide mortar joints, rough texture, high colour variation, and efflorescence all point to hand-pressed brick with lime mortar. The mortar has weathered significantly — recessed well below the brick face in many joints. This brick type represents the oldest surviving masonry in the neighbourhood. Good reference for texture mapping buildings that predate 1890."
+    },
+    "texture_calibration": {
+      "courses_counted": 4,
+      "reference_height_m": null,
+      "bricks_counted_horizontal": 3,
+      "reference_width_m": null,
+      "confidence": 0.85,
+      "blender_brick_scale_corrected": null,
+      "notes": "TEXTURE REFERENCE PHOTO — pre-1890 hand-pressed brick. This represents a fundamentally different brick type from the clean machine-pressed brick in the Bellevue detail photo. The Blender material for this brick needs: (1) Higher roughness values, (2) Greater colour variance in the diffuse map, (3) More pronounced mortar joint depth for normal mapping, (4) Efflorescence overlay as stochastic white patches. Use as reference for the oldest buildings in the KM model."
+    }
+  }
+}

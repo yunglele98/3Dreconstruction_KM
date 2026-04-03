@@ -1,0 +1,64 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/120 & 122 Nassau St.jpg",
+    "address": "120 & 122 Nassau St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Ground floor door ~2.1m, ~28 courses. Second-floor windows ~1.3m, ~18 courses."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond. Consistent with neighbouring 116 & 118.",
+    "colour": {
+      "base_hex": "#A85038",
+      "variance": "medium",
+      "description": "Red-orange brick, slightly warmer than 116-118. Some variation with scattered darker bricks. Typical residential quality. Summer photo with mostly even lighting.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "flat_arch_lintel",
+        "location": "above windows",
+        "description": "Flat brick lintels above window openings."
+      },
+      {
+        "type": "rowlock_sill",
+        "location": "window sills",
+        "description": "Brick rowlock courses forming window sills."
+      },
+      {
+        "type": "second_floor_balcony",
+        "location": "second floor",
+        "description": "Metal railing balcony at second floor, similar to neighbouring properties."
+      },
+      {
+        "type": "dormer_window",
+        "location": "attic/gable level",
+        "description": "Gable dormer with siding cladding above the brick wall line."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "2.5-storey semi-detached pair, very similar in form to 116-118 next door. Brick in good condition. Vegetation and parked cars partially obscure lower facade. The building follows the standard Nassau St residential pattern — brick lower floors, siding gable, simple detailing."
+    },
+    "texture_calibration": {
+      "courses_counted": 18,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.65,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Summer photo, partial vegetation obstruction. Standard Kensington residential brick — measurements consistent with neighbourhood baseline."
+    }
+  }
+}

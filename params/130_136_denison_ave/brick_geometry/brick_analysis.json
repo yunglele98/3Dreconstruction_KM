@@ -1,0 +1,59 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/130 & 132 & 134 & 136 Denison Ave.jpg",
+    "address": "130, 132, 134 & 136 Denison Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.3,
+      "course_height_mm": 75,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 11,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Front door ~2.1m, ~28 courses. These are single-storey cottages so total wall height from grade to eave is approximately 2.7-3.0m (~36-40 courses)."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout all units. Consistent coursing across the row.",
+    "colour": {
+      "base_hex": "#A85040",
+      "variance": "medium",
+      "description": "Medium red-orange brick. Some units show slightly different tones — the rightmost unit (136) appears slightly more brown/weathered while the inner units are warmer orange-red. This may reflect different repair/replacement brick or simply different sun exposure. Overall consistent with standard Kensington residential brick.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "peaked_gable",
+        "location": "each unit",
+        "description": "Each cottage has its own peaked front-facing gable, creating a repeating sawtooth roofline. The gables are small and steep, typical of Gothic cottage form. Some gables have decorative vergeboard trim."
+      },
+      {
+        "type": "flat_arch_lintel",
+        "location": "above doors and windows",
+        "description": "Simple flat brick lintels above all openings."
+      },
+      {
+        "type": "rowlock_sill",
+        "location": "window sills",
+        "description": "Brick rowlock sills on windows."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "fair",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "Some spalling on individual bricks, particularly near grade level",
+      "notes": "Row of four single-storey worker's cottages with peaked gables — a distinctive and increasingly rare building type in the HCD. These represent the most modest residential construction in the neighbourhood, likely dating from the 1880s-1890s. The small scale means the total brick wall area per unit is relatively small (approximately 2.7-3.0m grade to eave). Large tree partially obscures the two centre units. Parked cars and chain-link fences in front. The building type is important for the 3D model as it represents the lowest-scale residential form in the district."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.65,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Door reference used for coursing. The single-storey scale means fewer courses are visible (only 36-40 courses total from grade to eave). Tree and cars obstruct portions. Brick measurements consistent with neighbourhood baseline — same brick supply as nearby 2-storey houses."
+    }
+  }
+}

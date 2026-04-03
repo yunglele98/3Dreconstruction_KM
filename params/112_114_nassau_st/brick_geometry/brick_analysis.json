@@ -1,0 +1,74 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260318_175814615_HDR.jpg",
+    "address": "~112-114 Nassau St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 218,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Multiple window openings across two storeys used for scale. Second-floor windows ~1.3m tall, approximately 18 courses sill to lintel."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout main field. The extensive decorative features (pilasters, corbelling, window surrounds) are achieved within the running bond framework using brick projections and recesses rather than bond pattern changes.",
+    "colour": {
+      "base_hex": "#9C4A35",
+      "variance": "low",
+      "description": "Rich red brick, relatively uniform in colour — higher quality pressed brick than typical Kensington residential. The uniformity and fine arrises suggest machine-pressed brick, consistent with a building of some pretension (possibly late 1880s-1890s). Slightly more orange-red than the deeper brown-red of the Hose Station.",
+      "polychromatic": false,
+      "polychromatic_notes": "No contrasting brick colours, but extensive use of stone/cast stone for window surrounds, sills, and decorative elements creates a two-tone red-and-white palette."
+    },
+    "special_features": [
+      {
+        "type": "corbelling",
+        "location": "cornice and gable",
+        "description": "Elaborate multi-course corbelled brick cornice at eave line with deep projection. Additional corbelling in the peaked gable creating a stepped profile. At least 4-5 courses of progressively stepped brick."
+      },
+      {
+        "type": "pilasters",
+        "location": "flanking facade, between window bays",
+        "description": "Brick pilasters dividing the facade into bays and flanking the building edges. Pilasters project approximately half a brick from the wall face and run full height from base to cornice."
+      },
+      {
+        "type": "gauged_arch",
+        "location": "above first-floor windows",
+        "description": "Segmental brick arches with gauged voussoirs above the tall first-floor windows. Fine brick cutting visible."
+      },
+      {
+        "type": "stone_window_surround",
+        "location": "all windows",
+        "description": "Stone or cast stone surrounds, sills, and lintels on all windows. The stone creates strong contrast with the red brick field."
+      },
+      {
+        "type": "decorative_panel",
+        "location": "between first and second floor windows",
+        "description": "Recessed decorative brick panels between floor levels creating shadow lines and visual interest."
+      },
+      {
+        "type": "peaked_gable",
+        "location": "center of facade",
+        "description": "Prominent peaked gable at centre of facade with corbelled stepped profile. The gable is a defining feature of the building's Victorian Gothic character."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "good",
+      "repointing_visible": true,
+      "efflorescence": false,
+      "spalling_locations": "Minor spalling on some corbelled courses at cornice level",
+      "notes": "A tall, ornate Victorian building — one of the most architecturally significant brick facades on Nassau St. The decorative brickwork is substantially intact. Some modern repointing visible but generally sympathetic. The peaked gable, deep corbelling, and stone window surrounds make this a high-priority building for accurate 3D modelling. Evergreen tree in foreground partially obscures ground floor in photo."
+    },
+    "texture_calibration": {
+      "courses_counted": 18,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.90,
+      "confidence": 0.7,
+      "blender_brick_scale_corrected": 1.0,
+      "notes": "Photo taken at slight upward angle in overcast winter conditions. Multiple windows across two storeys provide good cross-reference for coursing measurements. The pilasters provide useful vertical reference lines for checking course alignment. Ornate features will need detailed Blender modelling beyond simple texture mapping."
+    }
+  }
+}
