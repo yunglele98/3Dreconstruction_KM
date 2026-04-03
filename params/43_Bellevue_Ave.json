@@ -24,7 +24,7 @@
   "facade_material": "stone",
   "facade_colour": "buff stone",
   "windows_per_floor": [
-    2
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -181,6 +181,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [2] -> [0]"
     ]
   },
   "doors_detail": [
@@ -226,14 +233,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 6.4,
-          "sill_height_m": 4.3,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

@@ -25,8 +25,7 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    0,
-    2
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -197,6 +196,13 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [0, 2] -> [0]"
     ]
   },
   "storefront": {
@@ -267,14 +273,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 3.0,
-          "sill_height_m": 2.3,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

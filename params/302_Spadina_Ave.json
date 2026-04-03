@@ -29,10 +29,10 @@
   "facade_material": "concrete",
   "facade_colour": "white commercial facade with red 3D UCanada lettering, Chinese professional office signs above",
   "windows_per_floor": [
-    1,
-    2,
-    2,
-    1
+    0,
+    0,
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 1.1,
@@ -237,6 +237,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 4 -> 4 floors",
+      "windows_per_floor: [1, 2, 2, 1] -> [0, 0, 0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -301,7 +311,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -329,13 +340,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.3,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     },
@@ -343,14 +348,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 3.3,
-          "sill_height_m": 2.6,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -358,14 +357,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 3.3,
-          "sill_height_m": 2.6,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -374,13 +367,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "fixed",
-          "width_m": 0.7,
-          "height_m": 0.9,
-          "sill_height_m": 2.2,
-          "frame_colour": "#E8E0D0",
-          "glazing": "fixed",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }
@@ -516,5 +503,6 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
-  }
+  },
+  "eave_overhang_mm": 300
 }

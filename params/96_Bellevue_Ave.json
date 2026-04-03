@@ -27,8 +27,8 @@
   "facade_material": "brick",
   "facade_colour": "buff/cream coloured brick with polychromatic accents",
   "windows_per_floor": [
-    2,
-    2
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -177,6 +177,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [2, 2] -> [0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "photo_observations": {
@@ -285,7 +295,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "residential",
@@ -320,14 +331,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.5,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -335,14 +340,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 6.3,
-          "sill_height_m": 4.9,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -482,5 +481,6 @@
       "vehicles": 1
     },
     "total_facade_detections": 1
-  }
+  },
+  "eave_overhang_mm": 300
 }

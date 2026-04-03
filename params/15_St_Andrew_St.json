@@ -29,8 +29,7 @@
   "facade_material": "brick",
   "facade_colour": "dark red-orange brick with white/cream stone trim",
   "windows_per_floor": [
-    0,
-    2
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -183,6 +182,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [0, 2] -> [0]"
     ]
   },
   "decorative_elements": {
@@ -262,14 +268,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 3.7,
-          "sill_height_m": 2.9,
-          "frame_colour": "#2A2A2A",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

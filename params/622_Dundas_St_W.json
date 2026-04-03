@@ -175,6 +175,12 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors"
     ]
   },
   "storefront": {
@@ -231,14 +237,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 0,
-          "type": "storefront glazing",
-          "width_m": 0.85,
-          "height_m": 1.3,
-          "glazing": "Double-hung sash",
-          "sill_height_m": 0.8,
-          "arch_type": "flat",
-          "frame_colour": "white"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

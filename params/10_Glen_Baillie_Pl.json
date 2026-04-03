@@ -27,8 +27,9 @@
   "facade_material": "Vinyl siding",
   "facade_colour": "light vinyl",
   "windows_per_floor": [
-    2,
-    2
+    0,
+    0,
+    0
   ],
   "window_type": "casement",
   "window_width_m": 0.85,
@@ -207,6 +208,13 @@
         "category": "facade_material",
         "applied_at": "2026-04-02T03:56:41.808241+00:00"
       }
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [2, 2] -> [0, 0, 0]"
     ]
   },
   "photo_observations": {
@@ -298,14 +306,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "casement",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -313,14 +315,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "casement",
-          "width_m": 0.9,
-          "height_m": 5.0,
-          "sill_height_m": 3.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -329,13 +325,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "casement",
-          "width_m": 0.5,
-          "height_m": 0.6,
-          "sill_height_m": 1.0,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }

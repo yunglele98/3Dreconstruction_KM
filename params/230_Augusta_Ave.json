@@ -25,7 +25,6 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "weathered white upper facade with a green commercial base and purple trim bands",
   "windows_per_floor": [
-    2,
     0
   ],
   "window_type": "mixed",
@@ -193,6 +192,17 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [2, 0] -> [0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -310,7 +320,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -341,14 +352,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.3,
-          "sill_height_m": 1.5,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -459,5 +464,6 @@
     ],
     "matches_existing": false,
     "text_count": 19
-  }
+  },
+  "eave_overhang_mm": 300
 }

@@ -24,6 +24,9 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
+    0,
+    0,
+    0,
     0
   ],
   "window_type": "double_hung",
@@ -211,6 +214,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 4 -> 4 floors",
+      "windows_per_floor: [0] -> [0, 0, 0, 0]"
     ]
   },
   "storefront": {
@@ -269,14 +279,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 0.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -284,14 +288,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 0.6,
-          "sill_height_m": 0.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -299,14 +297,8 @@
       "floor": "Attic / gable",
       "windows": [
         {
-          "count": 2,
-          "type": "fixed",
-          "width_m": 0.7,
-          "height_m": 0.6,
-          "sill_height_m": 0.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "fixed",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -315,13 +307,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 0.5,
-          "sill_height_m": 0.4,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }

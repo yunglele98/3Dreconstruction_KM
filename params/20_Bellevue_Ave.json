@@ -26,9 +26,9 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    2,
-    2,
-    1
+    0,
+    0,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -198,6 +198,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [2, 2, 1] -> [0, 0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "bay_window": {
@@ -255,7 +265,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": true,
@@ -284,14 +295,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.9800000000000002,
-          "sill_height_m": 1.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -299,14 +304,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.1,
-          "sill_height_m": 1.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -315,13 +314,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.8,
-          "sill_height_m": 1.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "type": "double-hung"
         }
       ]
     }
@@ -462,5 +455,7 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300,
+  "foundation_height_m": 0.3
 }

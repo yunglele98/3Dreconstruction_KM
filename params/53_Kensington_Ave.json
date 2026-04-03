@@ -213,6 +213,12 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors"
     ]
   },
   "storefront": {
@@ -283,14 +289,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.8,
-          "sill_height_m": 1.4,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

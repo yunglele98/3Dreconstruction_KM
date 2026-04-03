@@ -166,6 +166,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [2, 2, 1] -> [0, 0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "notes": "Striking 2.5-storey Victorian semi-detached pair. Red-brown brick with prominent rounded arches at ground floor. Rich decorative brickwork. Twin steep gables.",
@@ -183,7 +193,8 @@
         "height_m": 0.4
       },
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "party_wall_left": false,
@@ -213,14 +224,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 0.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -228,14 +233,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 0.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -243,14 +242,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 0.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -298,9 +291,9 @@
   },
   "roof_pitch_deg": 40,
   "windows_per_floor": [
-    2,
-    2,
-    1
+    0,
+    0,
+    0
   ],
   "window_type": "double_hung",
   "site": {
@@ -418,5 +411,6 @@
     },
     "total_facade_detections": 0
   },
-  "heritage_summary": "Through its construction date and typology, each property is directly as. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles."
+  "heritage_summary": "Through its construction date and typology, each property is directly as. Each property has value as a late-nineteenth- to early-twentieth-century House-form building that reflects vernacular interpretations of Victorian architectural styles.",
+  "eave_overhang_mm": 300
 }

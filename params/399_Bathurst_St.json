@@ -29,12 +29,11 @@
   "facade_material": "glass",
   "facade_colour": "glass and metal",
   "windows_per_floor": [
-    2,
-    2,
-    2,
-    2,
-    2,
-    1
+    0,
+    0,
+    0,
+    0,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -231,6 +230,12 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_per_floor: [2, 2, 2, 2, 2, 1] -> [0, 0, 0, 0, 0]"
     ]
   },
   "doors_detail": [

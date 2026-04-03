@@ -28,8 +28,8 @@
   "facade_material": "brick",
   "facade_colour": "dark brown-red brick with cream/light grey stone decorative trim and tracery",
   "windows_per_floor": [
-    2,
-    4
+    0,
+    0
   ],
   "window_type": "arched",
   "window_width_m": 0.85,
@@ -190,6 +190,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [2, 4] -> [0, 0]"
     ]
   },
   "photo_observations": {
@@ -281,14 +288,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -296,14 +297,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 4,
-          "type": "arched",
-          "width_m": 0.9,
-          "height_m": 5.0,
-          "sill_height_m": 3.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

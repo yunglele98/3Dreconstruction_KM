@@ -27,7 +27,6 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "white-painted low commercial facade with bold black signboards and mural-painted lower walls",
   "windows_per_floor": [
-    3,
     0
   ],
   "window_type": "storefront",
@@ -207,6 +206,17 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [3, 0] -> [0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.15",
+      "doors_detail.steps: 1"
     ]
   },
   "storefront": {
@@ -326,7 +336,8 @@
       },
       "material": "glass_and_aluminum",
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 1
     },
     {
       "id": "door_1",
@@ -341,7 +352,8 @@
       },
       "material": "glass_and_aluminum",
       "colour_hex": "#1A1A2A",
-      "colour": "black frame"
+      "colour": "black frame",
+      "steps": 1
     }
   ],
   "building_type": "commercial",
@@ -370,14 +382,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 3,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.3,
-          "sill_height_m": 1.5,
-          "frame_colour": "#4A4A4A",
-          "glazing": "single pane",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -478,5 +484,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 2
-  }
+  },
+  "eave_overhang_mm": 300
 }

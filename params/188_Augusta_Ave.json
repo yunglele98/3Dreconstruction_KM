@@ -24,9 +24,9 @@
     "parapet_wall"
   ],
   "facade_material": "Stucco",
-  "facade_colour": "white/cream painted facade with blue sign and grey trim",
+  "facade_colour": "painted (painted masonry/stucco)",
   "windows_per_floor": [
-    4
+    0
   ],
   "window_type": "storefront",
   "window_width_m": 1.2,
@@ -184,6 +184,17 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [4] -> [0]",
+      "facade_colour: painted observation",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -306,7 +317,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -334,14 +346,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 4,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 4.2,
-          "sill_height_m": 2.8,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -453,5 +459,6 @@
     ],
     "matches_existing": false,
     "text_count": 36
-  }
+  },
+  "eave_overhang_mm": 300
 }

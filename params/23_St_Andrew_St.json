@@ -24,7 +24,7 @@
   "facade_material": "Brick",
   "facade_colour": "not visible — site under active construction",
   "windows_per_floor": [
-    2
+    0
   ],
   "window_type": "unknown",
   "window_width_m": 0.85,
@@ -211,6 +211,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [2] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "photo_observations": {
@@ -301,14 +311,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "unknown",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -326,7 +330,8 @@
         "height_m": 0.4,
         "type": "glazed"
       },
-      "material": "wood"
+      "material": "wood",
+      "steps": 2
     }
   ],
   "decorative_elements": {
@@ -440,5 +445,6 @@
   },
   "_audit": {
     "photo_heavily_occluded": true
-  }
+  },
+  "eave_overhang_mm": 300
 }

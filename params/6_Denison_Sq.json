@@ -27,8 +27,8 @@
   "facade_material": "brick",
   "facade_colour": "white-painted storefront base with black signage band and red-brown upper brick",
   "windows_per_floor": [
-    3,
-    3
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -183,6 +183,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [3, 3] -> [0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "photo_observations": {
@@ -280,7 +290,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -295,7 +306,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "storefront": {
@@ -340,14 +352,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 3,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.2,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -355,14 +361,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 3,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.4,
-          "sill_height_m": 1.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -482,5 +482,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

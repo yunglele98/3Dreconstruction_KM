@@ -27,8 +27,8 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "white upper facade with a stone-clad peaked storefront surround",
   "windows_per_floor": [
-    3,
-    2
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -202,6 +202,17 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [3, 2] -> [0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -321,7 +332,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -352,14 +364,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 3,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.1,
-          "sill_height_m": 1.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -367,14 +373,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.4,
-          "sill_height_m": 1.9,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -503,5 +503,6 @@
     ],
     "matches_existing": true,
     "text_count": 30
-  }
+  },
+  "eave_overhang_mm": 300
 }

@@ -27,8 +27,7 @@
   "facade_colour": "red brick with large street mural at ground level",
   "windows_per_floor": [
     0,
-    2,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -181,6 +180,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [0, 2, 1] -> [0, 0]"
     ]
   },
   "decorative_elements": {
@@ -302,14 +308,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 3.1,
-          "sill_height_m": 2.4,
-          "frame_colour": "#4A4A4A",
-          "glazing": "plate",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -318,13 +318,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.6,
-          "sill_height_m": 2.0,
-          "frame_colour": "#4A4A4A",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "type": "double-hung"
         }
       ]
     }

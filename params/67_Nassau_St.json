@@ -26,7 +26,7 @@
   "facade_colour": "dark navy blue painted commercial storefront at ground, white/light painted upper floor",
   "windows_per_floor": [
     0,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -206,6 +206,14 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [0, 1] -> [0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'"
     ]
   },
   "photo_observations": {
@@ -310,14 +318,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 0,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.3,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -325,14 +327,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 3.3,
-          "sill_height_m": 2.6,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

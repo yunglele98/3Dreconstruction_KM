@@ -27,8 +27,7 @@
   "facade_colour": "dark red-brown brick with white and red commercial signage at ground level",
   "windows_per_floor": [
     0,
-    2,
-    1
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -181,6 +180,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [0, 2, 1] -> [0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "decorative_elements": {
@@ -309,7 +318,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -336,14 +346,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 0,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.7,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -352,13 +356,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.9,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }
@@ -458,5 +456,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

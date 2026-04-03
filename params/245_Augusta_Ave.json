@@ -27,8 +27,7 @@
   "facade_material": "brick",
   "facade_colour": "dark painted/deteriorated facade with extensive graffiti covering storefront and upper wall",
   "windows_per_floor": [
-    0,
-    1
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -198,6 +197,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [0, 1] -> [0]"
     ]
   },
   "storefront": {
@@ -300,13 +306,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 3.0,
-          "sill_height_m": 2.3,
-          "frame_colour": "#4A4A4A",
-          "glazing": "single pane",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }

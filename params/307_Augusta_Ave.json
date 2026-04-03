@@ -27,7 +27,10 @@
   "facade_material": "brick",
   "facade_colour": "white storefront with black trim, side mural panel, and upper dark-framed windows",
   "windows_per_floor": [
-    1
+    0,
+    0,
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -211,6 +214,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 4 -> 4 floors",
+      "windows_per_floor: [1] -> [0, 0, 0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -328,7 +341,8 @@
       "height_m": 2.2,
       "material": "glass/metal",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "balcony_detail": {
@@ -366,13 +380,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 0.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "type": "double-hung"
         }
       ]
     },
@@ -380,14 +388,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.0,
-          "sill_height_m": 0.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -395,14 +397,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.0,
-          "sill_height_m": 0.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -411,13 +407,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "fixed",
-          "width_m": 0.7,
-          "height_m": 0.9,
-          "sill_height_m": 0.7,
-          "frame_colour": "#E8E0D0",
-          "glazing": "fixed",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }
@@ -559,5 +549,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

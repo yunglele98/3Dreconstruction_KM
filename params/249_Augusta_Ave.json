@@ -30,8 +30,7 @@
   "facade_colour": "cream sign band over a dark storefront with green awning and tan upper facade",
   "windows_per_floor": [
     0,
-    2,
-    1
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.95,
@@ -208,6 +207,17 @@
       "segmentation",
       "signage",
       "depth"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [0, 2, 1] -> [0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -329,7 +339,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -359,14 +370,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 0,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.2,
-          "sill_height_m": 1.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -375,13 +380,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.9,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }
@@ -506,5 +505,6 @@
     "setback_m_est": 0,
     "foundation_height_m_est": 1.2,
     "eave_overhang_mm_est": 646.0
-  }
+  },
+  "eave_overhang_mm": 300
 }

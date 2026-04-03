@@ -26,7 +26,7 @@
   "facade_material": "brick",
   "facade_colour": "warm brown/tan brick; newly constructed wooden porch in light wood",
   "windows_per_floor": [
-    2
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -185,6 +185,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [2] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "photo_observations": {
@@ -278,7 +288,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "party_wall_left": false,
@@ -307,14 +318,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 4.7,
-          "sill_height_m": 3.1,
-          "frame_colour": "#3A2A20",
-          "glazing": "single pane",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -437,5 +442,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

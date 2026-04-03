@@ -206,6 +206,13 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'"
     ]
   },
   "storefront": {
@@ -355,14 +362,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 0,
-          "type": "storefront glazing",
-          "width_m": 1.8,
-          "height_m": 2.0,
-          "glazing": "1-over-1",
-          "sill_height_m": 0.8,
-          "arch_type": "flat",
-          "frame_colour": "dark"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

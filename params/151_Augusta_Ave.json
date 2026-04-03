@@ -28,8 +28,7 @@
   "facade_material": "brick",
   "facade_colour": "light cream brick facade with an orange nail studio sign and dark storefront glazing",
   "windows_per_floor": [
-    4,
-    4,
+    0,
     0
   ],
   "window_type": "mixed",
@@ -187,6 +186,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [4, 4, 0] -> [0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "storefront": {
@@ -307,7 +316,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_1",
@@ -322,7 +332,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     },
     {
       "id": "door_2",
@@ -337,7 +348,8 @@
       },
       "material": "wood",
       "colour_hex": "#3A2A20",
-      "colour": "dark brown"
+      "colour": "dark brown",
+      "steps": 2
     }
   ],
   "building_type": "commercial",
@@ -367,14 +379,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 4,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -382,14 +388,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 4,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 1.1,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -503,5 +503,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

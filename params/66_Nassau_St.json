@@ -118,6 +118,15 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 1 -> 1 floors",
+      "windows_per_floor: [2, 2] -> [0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "notes": "Residential counterpart in the Nassau row.",
@@ -135,7 +144,8 @@
         "height_m": 0.4
       },
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "party_wall_left": false,
@@ -165,14 +175,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 0.9,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -212,8 +216,7 @@
   },
   "roof_pitch_deg": 40,
   "windows_per_floor": [
-    2,
-    2
+    0
   ],
   "window_type": "double_hung",
   "site": {
@@ -292,5 +295,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "foundation_height_m": 0.3
 }

@@ -29,9 +29,9 @@
   "facade_material": "Mixed masonry",
   "facade_colour": "white, yellow, and purple mural-painted ground floor beneath a beige block-clad upper facade with green balcony guards",
   "windows_per_floor": [
-    1,
-    2,
-    2
+    0,
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 1.0,
@@ -203,6 +203,17 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [1, 2, 2] -> [0, 0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "bay_window": {
@@ -344,7 +355,8 @@
       },
       "material": "glass/metal",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "balcony_detail": {
@@ -383,13 +395,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "storefront glazing",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.3,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "segmental"
+          "type": "double-hung"
         }
       ]
     },
@@ -397,14 +403,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.6,
-          "sill_height_m": 1.3,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -412,14 +412,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.4,
-          "sill_height_m": 1.1,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -534,5 +528,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

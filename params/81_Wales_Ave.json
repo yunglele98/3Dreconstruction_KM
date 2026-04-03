@@ -25,8 +25,8 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
-    2,
-    2
+    0,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -175,6 +175,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [2, 2] -> [0, 0]"
     ]
   },
   "bay_window": {
@@ -230,14 +237,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.3,
-          "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -245,14 +246,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 3.3,
-          "sill_height_m": 2.6,
-          "frame_colour": "#2A2A2A",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }

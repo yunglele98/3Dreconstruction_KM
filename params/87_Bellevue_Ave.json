@@ -29,9 +29,9 @@
   "facade_material": "brick",
   "facade_colour": "warm red brick with lighter trim; substantial 3-storey building",
   "windows_per_floor": [
-    3,
-    3,
-    2
+    0,
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.9,
@@ -196,6 +196,16 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "eave_overhang_mm: 300",
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [3, 3, 2] -> [0, 0, 0]",
+      "foundation_height_m: 0.3",
+      "doors_detail.steps: 2"
     ]
   },
   "bay_window": {
@@ -333,7 +343,8 @@
       },
       "material": "wood",
       "colour_hex": "#2A3A2A",
-      "colour": "dark green"
+      "colour": "dark green",
+      "steps": 2
     }
   ],
   "balcony_detail": {
@@ -375,14 +386,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 3,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.9800000000000002,
-          "sill_height_m": 1.2,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -390,14 +395,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 3,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.3,
-          "sill_height_m": 1.8,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -405,14 +404,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.6,
-          "frame_colour": "#E8E0D0",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     }
@@ -559,5 +552,6 @@
       "vehicles": 0
     },
     "total_facade_detections": 0
-  }
+  },
+  "eave_overhang_mm": 300
 }

@@ -31,9 +31,9 @@
   "facade_material": "brick",
   "facade_colour": "dark red brick with green-shingled turret roofs and cream/stone trim",
   "windows_per_floor": [
-    2,
-    2,
-    1
+    0,
+    0,
+    0
   ],
   "window_type": "mixed",
   "window_width_m": 0.85,
@@ -196,6 +196,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 3 -> 3 floors",
+      "windows_per_floor: [2, 2, 1] -> [0, 0, 0]"
     ]
   },
   "bay_window": {
@@ -319,14 +326,8 @@
       "floor": "Ground floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 1.9800000000000002,
-          "sill_height_m": 1.2,
-          "frame_colour": "#2A2A2A",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -334,14 +335,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.4,
-          "sill_height_m": 1.9,
-          "frame_colour": "#2A2A2A",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -350,13 +345,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "mixed",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.6,
-          "frame_colour": "#2A2A2A",
-          "glazing": "2-over-2",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }

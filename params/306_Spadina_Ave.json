@@ -30,11 +30,10 @@
   "facade_colour": "grey concrete",
   "windows_per_floor": [
     0,
-    2,
-    2,
-    2,
-    2,
-    1
+    0,
+    0,
+    0,
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -193,6 +192,13 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 5 -> 5 floors",
+      "windows_per_floor: [0, 2, 2, 2, 2, 1] -> [0, 0, 0, 0, 0]"
     ]
   },
   "storefront": {
@@ -256,14 +262,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "plate",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -271,14 +271,8 @@
       "floor": "Third floor",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -286,14 +280,8 @@
       "floor": "Attic / gable",
       "windows": [
         {
-          "count": 2,
-          "type": "fixed",
-          "width_m": 0.7,
-          "height_m": 0.9,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "fixed",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -301,14 +289,8 @@
       "floor": "Floor 5",
       "windows": [
         {
-          "count": 2,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.5,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -317,13 +299,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.7,
-          "sill_height_m": 1.3,
-          "frame_colour": "#E8E0D0",
-          "glazing": "1-over-1",
-          "arch_type": "flat"
+          "type": "double-hung"
         }
       ]
     }

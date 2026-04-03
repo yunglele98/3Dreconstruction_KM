@@ -27,8 +27,7 @@
   "facade_colour": "painted wood",
   "windows_per_floor": [
     0,
-    2,
-    1
+    0
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -183,6 +182,14 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "deep_facade_analysis_applied": true,
+    "geometry_revised": true,
+    "geometry_revision_ts": "2026-04-03",
+    "geometry_changes": [
+      "windows_detail: 2 -> 2 floors",
+      "windows_per_floor: [0, 2, 1] -> [0, 0]",
+      "facade_detail.brick_colour_hex: '#B85A3A' -> '#B85A3A'"
     ]
   },
   "bay_window": {
@@ -263,14 +270,8 @@
       "floor": "Second floor",
       "windows": [
         {
-          "count": 2,
-          "type": "storefront",
-          "width_m": 0.9,
-          "height_m": 2.0,
-          "sill_height_m": 1.4,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "count": 1,
+          "type": "double-hung"
         }
       ]
     },
@@ -279,13 +280,7 @@
       "windows": [
         {
           "count": 1,
-          "type": "double_hung",
-          "width_m": 0.9,
-          "height_m": 1.6,
-          "sill_height_m": 1.2,
-          "frame_colour": "#3A2A20",
-          "glazing": "2-over-2",
-          "arch_type": "segmental"
+          "type": "double-hung"
         }
       ]
     }
