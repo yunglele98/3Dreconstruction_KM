@@ -14,8 +14,17 @@ Usage:
     # Promote all deep analysis to generator fields (all streets)
     python scripts/deep_facade_pipeline.py promote
 
+    # Promote with dry-run (show changes without writing)
+    python scripts/deep_facade_pipeline.py promote --dry-run
+
+    # Re-promote already-promoted buildings
+    python scripts/deep_facade_pipeline.py promote --force
+
     # Full pipeline: merge all batch files then promote
     python scripts/deep_facade_pipeline.py merge-street baldwin --promote
+
+    # Validate deep analysis data quality
+    python scripts/deep_facade_pipeline.py validate
 
     # Report: show stats for a street
     python scripts/deep_facade_pipeline.py report baldwin
@@ -31,8 +40,17 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-PARAMS_DIR = Path("C:/Users/liam1/blender_buildings/params")
-DOCS_DIR = Path("C:/Users/liam1/blender_buildings/docs")
+_ROOT = Path(__file__).resolve().parent.parent
+PARAMS_DIR = _ROOT / "params"
+DOCS_DIR = _ROOT / "docs"
+
+_HEX_RE = re.compile(r"^#[0-9A-Fa-f]{6}$")
+
+
+def is_valid_hex(value):
+    """Return True if value is a valid 6-digit hex colour string."""
+    return isinstance(value, str) and bool(_HEX_RE.match(value))
+
 
 # ── Address normalization and param file lookup ──────────────────────────
 
@@ -159,12 +177,21 @@ def promote_roof(params, deep):
     if observed_type:
         current = (params.get("roof_type") or "").lower()
         obs_lower = observed_type.lower()
-        if current in ("", "flat") and "gable" in obs_lower:
-            params["roof_type"] = "Gable"
-            changes.append(f"roof_type: '{current}' -> 'Gable'")
-        elif current in ("", "gable") and "flat" in obs_lower:
-            params["roof_type"] = "Flat"
-            changes.append(f"roof_type: '{current}' -> 'Flat'")
+        # Map observed roof types to canonical generator values
+        # Longer keys first to avoid partial matches (cross-gable before gable)
+        ROOF_TYPE_MAP = [
+            ("cross-gable", "Cross-Gable"), ("cross_gable", "Cross-Gable"),
+            ("gable", "Gable"), ("hip", "Hip"), ("mansard", "Mansard"),
+            ("flat", "Flat"), ("gambrel", "Gambrel"),
+        ]
+        canonical = None
+        for key, val in ROOF_TYPE_MAP:
+            if key in obs_lower:
+                canonical = val
+                break
+        if canonical and canonical.lower() != current:
+            params["roof_type"] = canonical
+            changes.append(f"roof_type: '{current}' -> '{canonical}'")
 
     observed_pitch = deep.get("roof_pitch_deg")
     if observed_pitch and isinstance(observed_pitch, (int, float)) and observed_pitch > 0:
@@ -173,11 +200,28 @@ def promote_roof(params, deep):
             params["roof_pitch_deg"] = observed_pitch
             changes.append(f"roof_pitch_deg: {current_pitch} -> {observed_pitch}")
 
+    # Roof material and colour (merged but previously not promoted)
+    roof_mat = deep.get("roof_material")
+    if roof_mat and isinstance(roof_mat, str):
+        current_mat = (params.get("roof_material") or "").lower()
+        obs_mat = roof_mat.lower()
+        if not current_mat or current_mat in ("asphalt", "unknown"):
+            params["roof_material"] = roof_mat
+            changes.append(f"roof_material: '{current_mat}' -> '{roof_mat}'")
+    roof_hex = deep.get("roof_colour_hex")
+    if is_valid_hex(roof_hex):
+        old_hex = params.get("roof_colour")
+        if not old_hex or old_hex in ("#5A5A5A", "#4A5A5A"):
+            params["roof_colour"] = roof_hex
+            changes.append(f"roof_colour: '{old_hex}' -> '{roof_hex}'")
+
     rd = params.get("roof_detail", {})
     bargeboard = deep.get("bargeboard")
     if bargeboard and isinstance(bargeboard, dict) and bargeboard.get("present"):
+        colour = bargeboard.get("colour_hex")
         rd["bargeboard_style"] = bargeboard.get("style", "decorative")
-        rd["bargeboard_colour_hex"] = bargeboard.get("colour_hex")
+        if is_valid_hex(colour):
+            rd["bargeboard_colour_hex"] = colour
         changes.append("roof_detail.bargeboard added")
 
     gw = deep.get("gable_window")
@@ -233,11 +277,18 @@ def promote_windows(params, deep):
     win_obs = deep.get("windows_detail")
     if not win_obs or not isinstance(win_obs, list):
         return changes
-    floor_map = {"ground": "Ground floor", "first": "Ground floor", "second": "Second floor",
-                 "third": "Third floor", "gable": "Gable", "attic": "Gable"}
+    floor_map = {
+        "ground": "Ground floor", "ground floor": "Ground floor",
+        "first": "Ground floor", "first floor": "Ground floor",
+        "second": "Second floor", "second floor": "Second floor",
+        "third": "Third floor", "third floor": "Third floor",
+        "fourth": "Fourth floor", "fourth floor": "Fourth floor",
+        "fifth": "Fifth floor", "fifth floor": "Fifth floor",
+        "gable": "Gable", "attic": "Gable", "half-storey": "Gable",
+    }
     new_wd = []
     for w in win_obs:
-        floor_key = str(w.get("floor", "")).lower()
+        floor_key = str(w.get("floor", "")).lower().strip()
         floor_name = floor_map.get(floor_key, w.get("floor", "Unknown"))
         entry = {"floor": floor_name}
         if w.get("note") and "storefront" in str(w.get("note", "")).lower():
@@ -251,8 +302,14 @@ def promote_windows(params, deep):
                 win["arch_type"] = w["arch"]
             if w.get("width_ratio") and params.get("facade_width_m"):
                 win["width_m"] = round(w["width_ratio"] * params["facade_width_m"], 2)
+            elif w.get("width_m_est"):
+                win["width_m"] = w["width_m_est"]
             if w.get("height_m_est"):
                 win["height_m"] = w["height_m_est"]
+            if w.get("sill_height_m"):
+                win["sill_height_m"] = w["sill_height_m"]
+            if w.get("glazing"):
+                win["glazing"] = w["glazing"]
             entry["windows"] = [win]
         new_wd.append(entry)
     current_wd = params.get("windows_detail", [])
@@ -276,10 +333,12 @@ def promote_windows(params, deep):
 def promote_facade(params, deep):
     changes = []
     brick_hex = deep.get("brick_colour_hex")
-    if brick_hex:
+    if is_valid_hex(brick_hex):
         fd = params.get("facade_detail", {})
         old_hex = fd.get("brick_colour_hex")
-        if not old_hex or old_hex in ("#B85A3A", "#D4B896"):
+        # Overwrite default/skeleton values but not photo-confirmed ones
+        default_hexes = {"#B85A3A", "#D4B896", "#7A5C44", "#E8D8B0", "#C87040"}
+        if not old_hex or old_hex in default_hexes:
             fd["brick_colour_hex"] = brick_hex
             params["facade_detail"] = fd
             changes.append(f"facade_detail.brick_colour_hex: '{old_hex}' -> '{brick_hex}'")
@@ -302,17 +361,34 @@ def promote_facade(params, deep):
     if cp_obs and isinstance(cp_obs, dict):
         cp = params.get("colour_palette", {})
         for key in ("facade", "trim", "roof", "accent"):
-            if cp_obs.get(key) and not cp.get(key):
-                cp[key] = cp_obs[key]
-        params["colour_palette"] = cp
-        changes.append("colour_palette enriched")
+            obs_val = cp_obs.get(key)
+            if is_valid_hex(obs_val) and not cp.get(key):
+                cp[key] = obs_val
+        if cp:
+            params["colour_palette"] = cp
+            changes.append("colour_palette enriched")
+    # Facade material — update when clearly different from DB
     mat_obs = deep.get("facade_material_observed")
-    if mat_obs:
+    if mat_obs and isinstance(mat_obs, str):
         current = (params.get("facade_material") or "").lower()
         obs_lower = mat_obs.lower()
+        # Check "painted" overlay first — it's an observation about finish, not a material change
         if "painted" in obs_lower and "painted" not in current:
             params["facade_colour"] = f"painted ({obs_lower})"
             changes.append("facade_colour: painted observation")
+        elif not current or current in ("unknown", ""):
+            # Longer keys first to avoid partial matches
+            MATERIAL_MAP = [
+                ("painted brick", "painted brick"), ("vinyl siding", "vinyl siding"),
+                ("aluminum siding", "aluminum siding"),
+                ("brick", "brick"), ("stucco", "stucco"), ("stone", "stone"),
+                ("clapboard", "clapboard"), ("concrete", "concrete"), ("render", "stucco"),
+            ]
+            for key, val in MATERIAL_MAP:
+                if key in obs_lower:
+                    params["facade_material"] = val
+                    changes.append(f"facade_material: '{current}' -> '{val}'")
+                    break
     return changes
 
 
@@ -322,28 +398,83 @@ def promote_decorative(params, deep):
     if not de_obs or not isinstance(de_obs, dict):
         return changes
     de = params.get("decorative_elements", {})
+
+    def _is_present(v):
+        """Check if an observed value indicates presence (dict with present, or truthy)."""
+        if isinstance(v, dict):
+            return v.get("present", False)
+        return bool(v)
+
     mapping = [
-        ("cornice", "cornice", lambda v: isinstance(v, dict) and v.get("present"),
-         lambda: {"present": True, "height_mm": 200, "projection_mm": 150}),
-        ("voussoirs", "stone_voussoirs", lambda v: isinstance(v, dict) and v.get("present"),
-         lambda: {"present": True}),
-        ("quoins", "quoins", lambda v: v, lambda: {"present": True}),
-        ("dentil_course", "dentil_course", lambda v: v, lambda: {"present": True}),
-        ("brackets", "gable_brackets", lambda v: v, lambda: {"present": True}),
-        ("ornamental_shingles_in_gable", "ornamental_shingles", lambda v: v, lambda: {"present": True}),
+        ("cornice", "cornice",
+         lambda v: _is_present(v),
+         lambda v: {"present": True,
+                     "height_mm": v.get("height_mm", 200) if isinstance(v, dict) else 200,
+                     "projection_mm": v.get("projection_mm", 150) if isinstance(v, dict) else 150,
+                     **({"colour_hex": v["colour_hex"]} if isinstance(v, dict) and is_valid_hex(v.get("colour_hex")) else {})}),
+        ("voussoirs", "stone_voussoirs",
+         lambda v: _is_present(v),
+         lambda v: {"present": True,
+                     **({"colour_hex": v["colour_hex"]} if isinstance(v, dict) and is_valid_hex(v.get("colour_hex")) else {})}),
+        ("quoins", "quoins",
+         lambda v: _is_present(v),
+         lambda v: {"present": True,
+                     **({"strip_width_mm": v["strip_width_mm"]} if isinstance(v, dict) and v.get("strip_width_mm") else {}),
+                     **({"colour_hex": v["colour_hex"]} if isinstance(v, dict) and is_valid_hex(v.get("colour_hex")) else {})}),
+        ("dentil_course", "dentil_course",
+         lambda v: _is_present(v),
+         lambda v: {"present": True}),
+        ("brackets", "gable_brackets",
+         lambda v: _is_present(v),
+         lambda v: {"present": True,
+                     **({"type": v["type"]} if isinstance(v, dict) and v.get("type") else {}),
+                     **({"count": v["count"]} if isinstance(v, dict) and v.get("count") else {})}),
+        ("ornamental_shingles_in_gable", "ornamental_shingles",
+         lambda v: _is_present(v),
+         lambda v: {"present": True,
+                     **({"colour_hex": v["colour_hex"]} if isinstance(v, dict) and is_valid_hex(v.get("colour_hex")) else {})}),
+        ("stone_lintels", "stone_lintels",
+         lambda v: _is_present(v),
+         lambda v: {"present": True,
+                     **({"colour_hex": v["colour_hex"]} if isinstance(v, dict) and is_valid_hex(v.get("colour_hex")) else {})}),
+        ("keystones", "keystones",
+         lambda v: _is_present(v),
+         lambda v: {"present": True}),
+        ("pilasters", "pilasters",
+         lambda v: _is_present(v),
+         lambda v: {"present": True}),
+        ("corbelling", "corbelling",
+         lambda v: _is_present(v),
+         lambda v: {"present": True}),
     ]
     for obs_key, param_key, check_fn, make_fn in mapping:
         val = de_obs.get(obs_key)
         if val and check_fn(val) and param_key not in de:
-            de[param_key] = make_fn()
+            de[param_key] = make_fn(val)
             changes.append(f"decorative_elements.{param_key} added")
+
+    # String courses: handle both list and dict formats
     sc = de_obs.get("string_courses")
-    if sc and isinstance(sc, list) and len(sc) > 0 and "string_courses" not in de:
-        de["string_courses"] = {"present": True, "count": len(sc)}
-        changes.append(f"decorative_elements.string_courses: {len(sc)}")
-    if de_obs.get("diamond_brick_patterns"):
-        de["polychromatic_brick"] = True
-        changes.append("polychromatic_brick flagged")
+    if sc and "string_courses" not in de:
+        if isinstance(sc, list) and len(sc) > 0:
+            de["string_courses"] = {"present": True, "count": len(sc)}
+            changes.append(f"decorative_elements.string_courses: {len(sc)}")
+        elif isinstance(sc, dict) and sc.get("present"):
+            de["string_courses"] = {"present": True, "count": sc.get("count", 1)}
+            if sc.get("width_mm"):
+                de["string_courses"]["width_mm"] = sc["width_mm"]
+            if sc.get("projection_mm"):
+                de["string_courses"]["projection_mm"] = sc["projection_mm"]
+            if is_valid_hex(sc.get("colour_hex")):
+                de["string_courses"]["colour_hex"] = sc["colour_hex"]
+            changes.append(f"decorative_elements.string_courses added")
+
+    # Polychromatic brick patterns
+    if de_obs.get("diamond_brick_patterns") or de_obs.get("polychromatic_brick"):
+        if not de.get("polychromatic_brick"):
+            de["polychromatic_brick"] = True
+            changes.append("polychromatic_brick flagged")
+
     if de:
         params["decorative_elements"] = de
     return changes
@@ -355,16 +486,39 @@ def promote_storefront(params, deep):
     if not sf_obs or not isinstance(sf_obs, dict):
         return changes
     sf = params.get("storefront", {})
+
+    # Awning — handle both dict {"present": true, ...} and plain boolean
     if sf_obs.get("awning") and not sf.get("awning"):
         awning = sf_obs["awning"]
         if isinstance(awning, dict) and awning.get("present"):
             sf["awning"] = {"present": True, "type": awning.get("type", "fixed"), "colour": awning.get("colour", "dark")}
             changes.append("storefront.awning added")
+        elif awning is True:
+            sf["awning"] = {"present": True, "type": "fixed", "colour": "dark"}
+            changes.append("storefront.awning added (boolean)")
+
+    # Security grille
     if sf_obs.get("security_grille") and not sf.get("security_grille"):
         sf["security_grille"] = True
         changes.append("storefront.security_grille added")
+
+    # Signage text
     if sf_obs.get("signage_text") and not sf.get("signage_text"):
         sf["signage_text"] = sf_obs["signage_text"]
+        changes.append("storefront.signage_text added")
+
+    # Width from percentage observation
+    width_pct = sf_obs.get("width_pct")
+    facade_w = params.get("facade_width_m")
+    if width_pct and facade_w and not sf.get("width_m"):
+        sf["width_m"] = round(facade_w * width_pct / 100, 2)
+        changes.append(f"storefront.width_m: {sf['width_m']} (from {width_pct}%)")
+
+    # Ensure has_storefront flag is set
+    if sf and not params.get("has_storefront"):
+        params["has_storefront"] = True
+        changes.append("has_storefront: True")
+
     if sf:
         params["storefront"] = sf
     return changes
@@ -414,9 +568,44 @@ def promote_doors(params, deep):
     return changes
 
 
+def promote_party_walls(params, deep):
+    changes = []
+    for side in ("left", "right"):
+        key = f"party_wall_{side}"
+        obs = deep.get(key)
+        if obs is None:
+            continue
+        current = params.get(key)
+        if current is None or current != obs:
+            params[key] = obs
+            changes.append(f"{key}: {current} -> {obs}")
+    return changes
+
+
+def promote_condition(params, deep):
+    changes = []
+    cond = deep.get("condition_observed")
+    if cond and isinstance(cond, str):
+        current = (params.get("condition") or "").lower()
+        obs_lower = cond.lower()
+        valid = {"good", "fair", "poor", "excellent"}
+        if obs_lower in valid and obs_lower != current:
+            params["condition"] = cond.lower()
+            changes.append(f"condition: '{current}' -> '{obs_lower}'")
+    notes = deep.get("condition_notes")
+    if notes and isinstance(notes, str):
+        assessment = params.get("assessment", {})
+        if not assessment.get("condition_issues"):
+            assessment["condition_issues"] = notes
+            params["assessment"] = assessment
+            changes.append("assessment.condition_issues added")
+    return changes
+
+
 ALL_PROMOTERS = [promote_roof, promote_floor_heights, promote_windows,
                  promote_facade, promote_decorative, promote_storefront,
-                 promote_depth, promote_doors]
+                 promote_depth, promote_doors, promote_party_walls,
+                 promote_condition]
 
 
 # ── Pipeline commands ────────────────────────────────────────────────────
@@ -527,12 +716,15 @@ def cmd_merge_street(street_key, do_promote=False):
     return cmd_merge([str(bf) for bf in batch_files], do_promote=do_promote)
 
 
-def cmd_promote():
+def cmd_promote(dry_run=False, force=False):
     """Promote all deep_facade_analysis sections to generator fields."""
     files = sorted(PARAMS_DIR.glob("*.json"))
     promoted = 0
+    skipped_already = 0
     total_changes = 0
     for fpath in files:
+        if fpath.name.startswith("_"):
+            continue
         with open(fpath, encoding="utf-8") as f:
             params = json.load(f)
         if params.get("skipped"):
@@ -540,8 +732,9 @@ def cmd_promote():
         deep = params.get("deep_facade_analysis")
         if not deep:
             continue
-        if params.get("_meta", {}).get("geometry_revised"):
-            continue  # already promoted
+        if params.get("_meta", {}).get("geometry_revised") and not force:
+            skipped_already += 1
+            continue
         changes = []
         for promoter in ALL_PROMOTERS:
             changes.extend(promoter(params, deep))
@@ -552,11 +745,21 @@ def cmd_promote():
             meta["geometry_revision_ts"] = datetime.now().strftime("%Y-%m-%d")
             meta["geometry_changes"] = changes
             params["_meta"] = meta
-            with open(fpath, "w", encoding="utf-8") as f:
-                json.dump(params, f, indent=2, ensure_ascii=False)
+            if not dry_run:
+                with open(fpath, "w", encoding="utf-8") as f:
+                    json.dump(params, f, indent=2, ensure_ascii=False)
             promoted += 1
             total_changes += len(changes)
+            prefix = "[DRY-RUN] " if dry_run else ""
+            print(f"  {prefix}{fpath.name}: {len(changes)} changes")
+            for c in changes:
+                print(f"    - {c}")
+    print(f"\n{'='*60}")
+    if dry_run:
+        print("DRY RUN — no files were modified")
     print(f"Promoted: {promoted} buildings, {total_changes} field changes")
+    if skipped_already:
+        print(f"Skipped (already promoted): {skipped_already}  (use --force to re-promote)")
 
 
 def cmd_audit():
@@ -632,6 +835,74 @@ def cmd_report(street_key):
         print(f"  [{status:>4}] {b['file']:<50} {b['changes']:>3} changes  {b['photo'] or ''}")
 
 
+def cmd_validate():
+    """Validate deep_facade_analysis data quality across all param files."""
+    files = sorted(PARAMS_DIR.glob("*.json"))
+    total_with_deep = 0
+    issues = []
+
+    for fpath in files:
+        if fpath.name.startswith("_"):
+            continue
+        with open(fpath, encoding="utf-8") as f:
+            params = json.load(f)
+        if params.get("skipped"):
+            continue
+        deep = params.get("deep_facade_analysis")
+        if not deep:
+            continue
+        total_with_deep += 1
+        name = fpath.name
+
+        # Check hex colours are valid
+        for key in ("brick_colour_hex", "roof_colour_hex"):
+            val = deep.get(key)
+            if val and not is_valid_hex(val):
+                issues.append((name, f"{key} invalid hex: '{val}'"))
+
+        cp = deep.get("colour_palette_observed")
+        if cp and isinstance(cp, dict):
+            for ck in ("facade", "trim", "roof", "accent"):
+                cv = cp.get(ck)
+                if cv and not is_valid_hex(cv):
+                    issues.append((name, f"colour_palette_observed.{ck} invalid hex: '{cv}'"))
+
+        # Check floor_height_ratios sum roughly to 1.0
+        ratios = deep.get("floor_height_ratios")
+        if ratios and isinstance(ratios, list):
+            rsum = sum(r for r in ratios if isinstance(r, (int, float)))
+            if rsum > 0 and abs(rsum - 1.0) > 0.15:
+                issues.append((name, f"floor_height_ratios sum={rsum:.2f} (expected ~1.0)"))
+
+        # Check storeys_observed is reasonable
+        storeys = deep.get("storeys_observed")
+        if storeys and isinstance(storeys, (int, float)) and (storeys < 1 or storeys > 6):
+            issues.append((name, f"storeys_observed={storeys} (unusual for Kensington)"))
+
+        # Check roof_pitch_deg is in reasonable range
+        pitch = deep.get("roof_pitch_deg")
+        if pitch and isinstance(pitch, (int, float)) and (pitch < 10 or pitch > 60):
+            issues.append((name, f"roof_pitch_deg={pitch} (outside 10-60 range)"))
+
+        # Check windows_detail has expected structure
+        wd = deep.get("windows_detail")
+        if wd and isinstance(wd, list):
+            for i, w in enumerate(wd):
+                if not isinstance(w, dict):
+                    issues.append((name, f"windows_detail[{i}] is not a dict"))
+                elif not w.get("floor"):
+                    issues.append((name, f"windows_detail[{i}] missing 'floor' key"))
+
+    print(f"Validated {total_with_deep} buildings with deep_facade_analysis")
+    print(f"Found {len(issues)} issues\n")
+    if issues:
+        for fname, msg in issues:
+            print(f"  [{fname}] {msg}")
+    else:
+        print("  All data valid!")
+    return len(issues)
+
+
 # ── CLI ──────────────────────────────────────────────────────────────────
 
 def main():
@@ -647,11 +918,15 @@ def main():
     p_street.add_argument("--promote", action="store_true", help="Also promote to generator fields")
 
     p_promote = sub.add_parser("promote", help="Promote all deep analysis to generator fields")
+    p_promote.add_argument("--dry-run", action="store_true", help="Show changes without writing files")
+    p_promote.add_argument("--force", action="store_true", help="Re-promote already-promoted buildings")
 
     p_audit = sub.add_parser("audit", help="Show coverage by street")
 
     p_report = sub.add_parser("report", help="Show stats for a street")
     p_report.add_argument("street", help="Street name key")
+
+    p_validate = sub.add_parser("validate", help="Validate deep analysis data quality")
 
     args = parser.parse_args()
 
@@ -660,11 +935,13 @@ def main():
     elif args.command == "merge-street":
         cmd_merge_street(args.street, do_promote=args.promote)
     elif args.command == "promote":
-        cmd_promote()
+        cmd_promote(dry_run=args.dry_run, force=args.force)
     elif args.command == "audit":
         cmd_audit()
     elif args.command == "report":
         cmd_report(args.street)
+    elif args.command == "validate":
+        cmd_validate()
     else:
         parser.print_help()
 
