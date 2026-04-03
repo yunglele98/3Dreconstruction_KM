@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Hybrid pipeline for 3D reconstruction of ~1,064 historic Kensington Market buildings (Toronto): parametric generation (foundation) + photogrammetry (ground truth) + neural reconstruction (gap filling) + ML segmentation (automation) + urban analysis (context). Delivers to game engines, web planning platform, and heritage archives.
+Hybrid pipeline for 3D reconstruction of ~1,050 historic Kensington Market buildings (Toronto): parametric generation (foundation) + photogrammetry (ground truth) + neural reconstruction (gap filling) + ML segmentation (automation) + urban analysis (context). Delivers to game engines, web planning platform, and heritage archives.
 
 **Dual purpose:**
 1. **Heritage reconstruction** — accurate 3D model of Kensington Market as it exists today
@@ -14,7 +14,7 @@ Study area: Dundas St W (north) / Bathurst St (east) / College St (south) / Spad
 
 **Key design docs:** `docs/PIPELINE_REDESIGN_V7.md` (full architecture), `docs/SPRINT_3_WEEK_PARALLEL.md` (execution plan), `docs/FACTORY_ALWAYS_ON.md` (always-on autonomous system), `docs/PHASE_0_VISUAL_AUDIT.md` (render vs photo comparison).
 
-**Sprint:** Day 1 = April 2, 2026. 3-week sprint, 14-agent fleet (5x Claude Code + 4 Gemini/Codex + 4 Ollama), ~$7 cloud GPU total.
+**Sprint:** Day 1 = April 2, 2026 (active). 3-week sprint, 14-agent fleet (5x Claude Code + 4 Gemini/Codex + 4 Ollama), ~$7 cloud GPU total.
 
 **Phase 0 (precedes all pipeline phases):** Visual audit comparing `outputs/buildings_renders_v1/` (parametric renders) against `PHOTOS KENSINGTON sorted/` (field photos). Produces ranked priority queue driving which buildings get photogrammetry, segmentation, or colour fixes.
 
@@ -169,7 +169,7 @@ python scripts/generate_coverage_matrix.py
 ```
 Raw Data Sources:
   PostGIS (building_assessment + opendata.*) ─────┐
-  PHOTOS KENSINGTON/ (1,867 field photos) ────────┤
+  PHOTOS KENSINGTON/ (1,928 field photos) ────────┤
   iPad LiDAR scans (Montreal proxy) ──────────────┤
   Mapillary street view ──────────────────────────┤
   Overture Maps / Toronto Open Data ──────────────┘
@@ -198,14 +198,16 @@ Raw Data Sources:
 ### Directory structure
 
 **Existing:**
-- `params/` — ~2,060 JSON files (1,064 active + ~820 skipped). `_` prefix = metadata, `"skipped": true` = non-building.
-- `scripts/` — 300+ Python scripts. New V7 scripts go in subdirs: `scripts/sense/`, `scripts/reconstruct/`, `scripts/enrich/`, `scripts/texture/`, `scripts/analyze/`, `scripts/planning/`, `scripts/export/`, `scripts/verify/`, `scripts/monitor/`, `scripts/acquire/`.
-- `generator_modules/` — decomposed from `generate_building.py` (9,935 → 2,931 lines). 10 modules: `colours.py`, `materials.py`, `geometry.py`, `walls.py`, `windows.py`, `doors.py`, `roofs.py`, `decorative.py`, `storefront.py`, `structure.py`.
-- `tests/` — 93 pytest test files, 1,961 tests.
+- `params/` — 1,065 JSON files (1,050 active + 3 metadata `_` prefix + 12 skipped). `_` prefix = metadata, `"skipped": true` = non-building.
+- `scripts/` — 329 Python scripts. New V7 scripts go in subdirs: `scripts/sense/`, `scripts/reconstruct/`, `scripts/enrich/`, `scripts/texture/`, `scripts/analyze/`, `scripts/planning/`, `scripts/export/`, `scripts/verify/`, `scripts/monitor/`, `scripts/acquire/`, `scripts/heritage/`, `scripts/train/`, `scripts/unreal/`, `scripts/cloud/`, `scripts/game_engine/`, `scripts/qa/`, `scripts/visual_audit/`.
+- `generator_modules/` — decomposed from `generate_building.py` (9,935 → 2,931 lines). 11 modules: `__init__.py`, `colours.py`, `materials.py`, `geometry.py`, `walls.py`, `windows.py`, `doors.py`, `roofs.py`, `decorative.py`, `storefront.py`, `structure.py`.
+- `tests/` — 70 pytest test files.
 - `outputs/` — rendered `.blend` files: `full/`, `exports/`, `demos/`, `single/`.
-- `PHOTOS KENSINGTON/` — 1,867 geotagged field photos + `csv/photo_address_index.csv`.
+- `PHOTOS KENSINGTON/` — 1,928 geotagged field photos + `csv/photo_address_index.csv`.
 - `agent_ops/` — kanban: `00_intake/` → `10_backlog/` → `20_active/` → `30_handoffs/` → `40_reviews/` → `60_releases/` → `90_archive/`.
-- `docs/` — `PIPELINE_REDESIGN_V7.md`, `SPRINT_3_WEEK_PARALLEL.md`, `FACTORY_ALWAYS_ON.md`, agent prompts, runbooks.
+- `docs/` — 37 markdown files: `PIPELINE_REDESIGN_V7.md`, `SPRINT_3_WEEK_PARALLEL.md`, `FACTORY_ALWAYS_ON.md`, `METHODOLOGY.md`, `PIPELINE_RUNBOOK.md`, `API_REFERENCE.md`, `UNREAL_IMPORT_GUIDE.md`, agent prompts, runbooks, audit reports.
+- `batches/` — 8 batch dispatch files (`batch_001.json`–`batch_008.json`) for parallel Gemini/Codex agents.
+- `infra/` — `n8n/` (workflow configs), `slack_commands.json`.
 
 **New (V7):**
 - `data/` — `lidar/` (raw/classified/building .laz), `street_view/`, `open_data/` (*.geojson), `terrain/` (DEM .tif), `heritage/`, `training/` (COCO annotations), `ipad_scans/`.
@@ -222,7 +224,7 @@ Raw Data Sources:
 - `citygml/` — LOD2 + LOD3 .gml exports.
 - `tiles_3d/` — 3D Tiles for CesiumJS.
 - `web/` — planning platform (CesiumJS + Potree + splats, Svelte/Vanilla TS, Vercel).
-- `scenarios/` — `baseline/`, `10yr_heritage_first/`, `10yr_gentle_density/`, `10yr_mixed_use/`, `10yr_green_infra/`, `10yr_mobility/`, `custom/`. Each has `interventions.json` overlay.
+- `scenarios/` — `10yr_gentle_density/`, `10yr_green_infra/`, `10yr_heritage_first/`, `10yr_mixed_use/`, `10yr_mobility/`. Each has `interventions.json` overlay.
 
 ### Always-On Factory (n8n)
 
@@ -256,7 +258,7 @@ def select_method(params, address):
 
 Photogrammetric path: import retopologized mesh → apply procedural materials → add parametric details for unseen sides (party walls, rear, foundation, gutters). Procedural path: existing `generate_building()` with 30+ `create_*` functions.
 
-### `generate_building.py` (~6,200 lines)
+### `generate_building.py` (2,931 lines)
 
 Runs inside Blender's Python environment (`bpy`, `bmesh`, `mathutils`). CLI args are parsed after the `--` separator.
 
@@ -404,7 +406,7 @@ Each building is a JSON file in `params/` (filename: `22_Lippincott_St.json`, sp
 
 ## Photo Analysis Rules (docs/AGENT_PROMPT.md)
 
-AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,867 photos). 8 batches of 50 buildings each in `batches/batch_NNN.json`, dispatched to parallel Gemini/Codex agents.
+AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and merge visual observations into params. Photo index CSV at `PHOTOS KENSINGTON/csv/photo_address_index.csv` (1,928 photos). 8 batches of 50 buildings each in `batches/batch_001.json`–`batch_008.json`, dispatched to parallel Gemini/Codex agents.
 
 - **NEVER overwrite:** `total_height_m`, `facade_width_m`, `facade_depth_m`, `site.*`, `city_data.*`, `hcd_data.*`
 - **ALWAYS update:** `facade_colour`, `windows_per_floor`, `window_type`, `window_arrangement`, `door_count`, `door_type`, `condition`, `roof_features`, `chimneys`, `porch_present`, `porch_type`, `balconies`, `balcony_type`, `cornice`, `bay_windows`, `ground_floor_arches`
@@ -413,7 +415,7 @@ AI agents (Claude Code / Codex / Gemini CLI) analyze March 2026 field photos and
 - Multiple photos per address: use the best facade photo, produce one update per unique address
 - Non-building photos (murals, lanes, signs) → `"skipped": true` with `skip_reason`
 
-**Field photos** (`PHOTOS KENSINGTON/`) contain 1,867 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
+**Field photos** (`PHOTOS KENSINGTON/`) contain 1,928 geotagged March 2026 field photos — the primary visual reference for all buildings. The HCD PDF is at `params/96c1-city-planning-kensington-market-hcd-vol-2.pdf`.
 
 ## Testing
 
@@ -424,7 +426,7 @@ python -m pytest tests/                          # all tests
 python -m pytest tests/test_enrich_skeletons.py  # single module
 ```
 
-62 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, QA report, Megascans mapping, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8 Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
+70 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent, doors_and_foundations, roof_and_heritage, window_details), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, generation defaults, QA report, Megascans mapping, deep facade pipeline, SSIM comparison, planning scripts, reconstruct pipeline, training pipeline, urban analysis, sprint progress, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8+ Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
 
 For visual/integration validation:
 1. Run scripts on a narrow sample first (`--address "22 Lippincott St"`)
@@ -434,7 +436,7 @@ For visual/integration validation:
 
 ## Dependencies
 
-- **Blender 5.0 CLI** at `C:\Program Files\Blender Foundation\Blender 5.0\blender.exe` (Blender 3.x+ APIs are the baseline for `bpy`, `bmesh`, `mathutils`)
+- **Blender 5.1 CLI** (Blender 3.x+ APIs are the baseline for `bpy`, `bmesh`, `mathutils`)
 - **Python 3.10+**, **pytest**
 - **psycopg2-binary** — all PostGIS access scripts
 - **PostgreSQL 18** with PostGIS
@@ -449,3 +451,4 @@ For visual/integration validation:
 - Use `(value or "").lower()` not `.get("key", "").lower()` — handles explicit `None`
 - Imperative commit messages scoped to one pipeline stage
 - PRs: include affected addresses, dependencies, and screenshots for geometry/material changes
+- Platform: Linux (primary dev), Windows (Blender rendering)
