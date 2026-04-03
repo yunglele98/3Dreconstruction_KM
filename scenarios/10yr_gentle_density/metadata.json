@@ -1,0 +1,19 @@
+{
+  "scenario_id": "gentle_density",
+  "name": "Gentle Density (2036)",
+  "description": "Add third floors to low-rise non-contributing buildings, laneway housing on deep lots, live-work conversions on side streets. Preserves heritage character while adding housing.",
+  "created": "2026-04-02",
+  "author": "planning-agent",
+  "total_interventions": 6,
+  "intervention_types": {
+    "add_floor": 1,
+    "convert_ground": 5
+  },
+  "principles": [
+    "Only add density to non-contributing buildings",
+    "Laneway suites on lots deeper than 100 ft",
+    "New construction matches neighbourhood scale (max 3 floors)",
+    "Live-work conversions support local economy",
+    "Preserve street wall and setback patterns"
+  ]
+}

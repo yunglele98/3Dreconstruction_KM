@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
 """Export building footprints as GeoJSON for the web platform, with height + params data."""
+
+from __future__ import annotations
 
 import json
 import sys

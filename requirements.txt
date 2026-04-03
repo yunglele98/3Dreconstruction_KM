@@ -1,0 +1,27 @@
+# Core dependencies (non-Blender)
+psycopg2-binary>=2.9
+pytest>=7.0
+numpy>=1.23
+Pillow>=9.0
+sentry-sdk>=1.0
+requests>=2.28
+
+# Optional: ML models (Stage 1 SENSE — install on GPU machines)
+# torch>=2.0
+# torchvision>=0.15
+# transformers>=4.30      # Depth Anything v2
+# ultralytics>=8.0        # YOLOv11
+# segment-anything-2      # SAM2
+# paddleocr>=2.7          # PaddleOCR
+# kornia>=0.7             # LightGlue+SuperPoint
+
+# Optional: Reconstruction (Stage 2)
+# open3d>=0.17            # Point cloud processing
+# trimesh>=3.20           # Mesh I/O
+
+# Optional: Texture (Stage 5)
+# scikit-image>=0.20      # SSIM for visual regression
+
+# Optional: Export (Stage 8)
+# py3dtiles>=2.0          # 3D Tiles
+# cjio>=0.8               # CityJSON/CityGML

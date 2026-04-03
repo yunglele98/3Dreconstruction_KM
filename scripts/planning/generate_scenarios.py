@@ -192,6 +192,100 @@ def generate_green_infra(data):
     }
 
 
+def generate_gentle_density(data):
+    interventions = []
+
+    residential_streets = ["Lippincott St", "Wales Ave", "Casimir St", "Denison Ave", "Leonard Ave"]
+
+    # Add floors to 2-storey non-contributing buildings on side streets
+    two_storey = [b for b in data if b.get("street") in residential_streets
+                  and (b.get("floors") or 0) == 2
+                  and b.get("contributing") != "Yes"]
+    for b in two_storey[:15]:
+        interventions.append({
+            "address": b["address"],
+            "type": "add_floor",
+            "params_override": {"floors": 3},
+        })
+
+    # New laneway housing behind deep lots (lot_depth >= 100 ft)
+    deep_lots = [b for b in data if b.get("street") in residential_streets
+                 and (b.get("lot_depth_ft") or 0) >= 100
+                 and b.get("contributing") != "Yes"]
+    for b in deep_lots[:12]:
+        laneway_addr = f"LANEWAY_BEHIND_{b['address'].replace(' ', '_')}"
+        interventions.append({
+            "address": laneway_addr,
+            "type": "new_build",
+            "params_override": {
+                "floors": 2,
+                "facade_width_m": 6.0,
+                "facade_depth_m": 8.0,
+                "roof_type": "flat",
+                "facade_material": "clapboard",
+                "building_type": "laneway_house",
+                "description": "Two-storey laneway house behind deep lot",
+            },
+        })
+
+    # Convert underused ground floors to live-work on residential streets
+    no_sf_residential = [b for b in data if b.get("street") in residential_streets
+                         and not b.get("has_storefront")
+                         and b.get("contributing") != "Yes"
+                         and (b.get("floors") or 0) >= 2]
+    # Exclude buildings already getting add_floor
+    add_floor_addrs = {i["address"] for i in interventions if i["type"] == "add_floor"}
+    no_sf_residential = [b for b in no_sf_residential if b["address"] not in add_floor_addrs]
+    for b in no_sf_residential[:10]:
+        interventions.append({
+            "address": b["address"],
+            "type": "convert_ground",
+            "params_override": {
+                "has_storefront": True,
+                "storefront": {"type": "live_work", "width_m": 4.0, "height_m": 3.0},
+            },
+        })
+
+    # Pad with a few more add_floor if under 35 interventions
+    if len(interventions) < 35:
+        remaining_2storey = [b for b in data if b.get("street") in residential_streets
+                             and (b.get("floors") or 0) == 2
+                             and b.get("contributing") != "Yes"
+                             and b["address"] not in {i["address"] for i in interventions}]
+        for b in remaining_2storey[:35 - len(interventions)]:
+            interventions.append({
+                "address": b["address"],
+                "type": "add_floor",
+                "params_override": {"floors": 3},
+            })
+
+    add_floor_count = sum(1 for i in interventions if i["type"] == "add_floor")
+    new_build_count = sum(1 for i in interventions if i["type"] == "new_build")
+    convert_count = sum(1 for i in interventions if i["type"] == "convert_ground")
+
+    return {
+        "scenario_id": "gentle_density",
+        "name": "Gentle Density (2036)",
+        "description": f"Incremental densification on residential side streets: add third floors to {add_floor_count} two-storey buildings, {new_build_count} new laneway houses behind deep lots, and {convert_count} live-work ground floor conversions.",
+        "principles": [
+            "Densify only non-contributing buildings on residential side streets",
+            "Respect heritage character by limiting additions to one floor",
+            "Laneway housing uses lightweight materials (clapboard) to distinguish from historic fabric",
+            "Live-work conversions maintain residential upper floors",
+            "Focus on streets with lowest existing density",
+        ],
+        "interventions": interventions,
+        "impact": {
+            "floors_added": add_floor_count,
+            "laneway_houses": new_build_count,
+            "live_work_conversions": convert_count,
+            "dwelling_units_added": add_floor_count + new_build_count * 1,
+            "fsi_change": "+0.12",
+            "height_changes": add_floor_count,
+        },
+    }
+
+
 def generate_mobility(data):
     interventions = []
 
@@ -292,6 +386,95 @@ def generate_mobility(data):
     }
 
 
+def generate_gentle_density(data):
+    interventions = []
+
+    # Add floors to 2-storey non-contributing buildings on residential side streets
+    side_streets = ["Lippincott St", "Wales Ave", "Casimir St", "Denison Ave", "Leonard Ave"]
+    add_fl = [b for b in data if b.get("street") in side_streets
+              and (b.get("floors") or 0) == 2
+              and b.get("contributing") != "Yes"
+              and (b.get("condition") or "").lower() in ("good", "fair")]
+    for b in add_fl[:15]:
+        interventions.append({
+            "address": b["address"],
+            "type": "add_floor",
+            "params_override": {"floors": 3},
+        })
+
+    # Laneway housing behind deep lots (lot_depth > 100 ft)
+    deep_lots = [b for b in data if b.get("street") in side_streets
+                 and (b.get("lot_depth_ft") or 0) > 100
+                 and b.get("contributing") != "Yes"]
+    for b in deep_lots[:10]:
+        interventions.append({
+            "address": "LANEWAY_BEHIND_" + b["address"].replace(" ", "_"),
+            "type": "new_build",
+            "params_override": {
+                "floors": 2,
+                "facade_width_m": 6.0,
+                "facade_depth_m": 8.0,
+                "roof_type": "flat",
+                "facade_material": "clapboard",
+                "description": "Laneway suite behind " + b["address"],
+            },
+        })
+
+    # Convert underused ground floors to live-work on Nassau and Oxford
+    convert_streets = ["Nassau St", "Oxford St"]
+    no_sf = [b for b in data if b.get("street") in convert_streets
+             and not b.get("has_storefront")
+             and b.get("contributing") != "Yes"
+             and (b.get("floors") or 0) >= 2]
+    for b in no_sf[:10]:
+        interventions.append({
+            "address": b["address"],
+            "type": "convert_ground",
+            "params_override": {"has_storefront": True},
+        })
+
+    # Modest infill on vacant or parking lots (if any)
+    vacant = [b for b in data if b.get("is_vacant")
+              and b.get("street") in side_streets + convert_streets]
+    for b in vacant[:5]:
+        interventions.append({
+            "address": b["address"],
+            "type": "new_build",
+            "params_override": {
+                "floors": 3,
+                "facade_material": "brick",
+                "roof_type": "flat",
+                "description": "Infill on vacant lot at " + b["address"],
+            },
+        })
+
+    return {
+        "scenario_id": "gentle_density",
+        "name": "Gentle Density (2036)",
+        "description": "Add third floors to low-rise non-contributing buildings, laneway housing on deep lots, live-work conversions on side streets. Preserves heritage character while adding housing.",
+        "principles": [
+            "Only add density to non-contributing buildings",
+            "Laneway suites on lots deeper than 100 ft",
+            "New construction matches neighbourhood scale (max 3 floors)",
+            "Live-work conversions support local economy",
+            "Preserve street wall and setback patterns",
+        ],
+        "interventions": interventions,
+        "impact": {
+            "floors_added": sum(1 for i in interventions if i["type"] == "add_floor"),
+            "laneway_suites": sum(1 for i in interventions if i["type"] == "new_build" and "LANEWAY" in i["address"]),
+            "commercial_conversions": sum(1 for i in interventions if i["type"] == "convert_ground"),
+            "infill_builds": sum(1 for i in interventions if i["type"] == "new_build" and "LANEWAY" not in i["address"]),
+            "dwelling_units_added": (
+                sum(1 for i in interventions if i["type"] == "add_floor")
+                + sum(1 for i in interventions if i["type"] == "new_build") * 2
+            ),
+            "fsi_change": "+0.06",
+            "height_changes": sum(1 for i in interventions if i["type"] == "add_floor"),
+        },
+    }
+
+
 def generate_metadata(scenario_id, scenario):
     """Write metadata.json for a scenario."""
     meta = {
@@ -312,13 +495,22 @@ def generate_metadata(scenario_id, scenario):
 
 def main():
     print("Loading building data...")
-    data = load_data()
+    try:
+        data = load_data()
+    except FileNotFoundError:
+        print(f"  ERROR: {SLIM} not found.")
+        print("  Run 'python scripts/export/build_web_data.py' first to generate params-slim.json.")
+        return
+    except json.JSONDecodeError as exc:
+        print(f"  ERROR: {SLIM} contains invalid JSON: {exc}")
+        return
     print(f"  {len(data)} buildings loaded")
 
     print("\nGenerating scenarios:")
 
     scenarios = {
         "10yr_heritage_first": generate_heritage_first(data),
+        "10yr_gentle_density": generate_gentle_density(data),
         "10yr_mixed_use": generate_mixed_use(data),
         "10yr_green_infra": generate_green_infra(data),
         "10yr_mobility": generate_mobility(data),

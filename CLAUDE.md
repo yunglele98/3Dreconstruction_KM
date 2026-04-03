@@ -144,6 +144,35 @@ python scripts/audit_params_quality.py
 python scripts/audit_structural_consistency.py
 python scripts/audit_generator_contracts.py
 python scripts/verify/visual_regression.py --renders outputs/full/ --references outputs/qa_visual_check/
+python scripts/verify/validate_pipeline_interfaces.py
+
+# === Stage 10: ANALYZE (photo-first quality metrics) ===
+python scripts/analyze/photo_param_drift.py --params params/ --output outputs/photo_drift/
+python scripts/analyze/photo_color_extraction.py --params params/ --output outputs/photo_colors/
+python scripts/analyze/photo_window_counter.py --params params/ --output outputs/photo_windows/
+python scripts/analyze/photo_condition_scorer.py --params params/ --output outputs/photo_condition/
+python scripts/analyze/photo_reference_linker.py --params params/ --output outputs/photo_links/
+python scripts/analyze/texture_fidelity.py --renders outputs/buildings_renders_v1/ --output outputs/texture_analysis/
+python scripts/analyze/geometric_accuracy.py --params params/ --output outputs/geometric_analysis/
+python scripts/analyze/facade_completeness.py --params params/ --output outputs/facade_completeness/
+python scripts/analyze/splat_readiness.py --params params/ --output outputs/splat_readiness/
+python scripts/analyze/heritage_fidelity.py --params params/ --output outputs/heritage_analysis/
+python scripts/analyze/render_quality.py --renders outputs/buildings_renders_v1/ --output outputs/render_quality/
+python scripts/analyze/style_consistency.py --params params/ --output outputs/style_analysis/
+python scripts/analyze/reconstruction_pipeline_report.py --output outputs/pipeline_report.json
+# COLMAP analysis:
+python scripts/reconstruct/analyze_photo_coverage.py --params params/ --output outputs/photo_coverage/
+python scripts/reconstruct/analyze_colmap_quality.py --input point_clouds/colmap/ --output outputs/colmap_analysis/
+python scripts/reconstruct/analyze_sparse_model.py --model point_clouds/colmap/<name>/sparse/0/
+python scripts/reconstruct/colmap_report.py --output outputs/colmap_report.json
+
+# === Autofix (photo evidence as ground truth) ===
+python scripts/autofix_from_photos.py --params params/ --dry-run             # preview changes
+python scripts/autofix_from_photos.py --params params/ --apply --report outputs/autofix_report.json
+python scripts/autofix_decorative_from_hcd.py --params params/ --dry-run     # preview HCD decorative fill
+python scripts/autofix_decorative_from_hcd.py --params params/ --apply
+python scripts/autofix_color_from_photos.py --params params/ --dry-run       # preview color correction
+python scripts/autofix_color_from_photos.py --params params/ --apply --delta-e-threshold 15
 
 # === Stage 11: SCENARIOS ===
 python scripts/planning/apply_scenario.py --baseline params/ --scenario scenarios/10yr_gentle_density/
