@@ -67,7 +67,7 @@
       }
     },
     {
-      "address": "285 1 2 College St",
+      "address": "285 1/2 College St",
       "type": "add_floor",
       "params_override": {
         "floors": 3
@@ -81,14 +81,14 @@
       }
     },
     {
-      "address": "289 College St",
+      "address": "289A College St",
       "type": "add_floor",
       "params_override": {
         "floors": 3
       }
     },
     {
-      "address": "289A College St",
+      "address": "289 College St",
       "type": "add_floor",
       "params_override": {
         "floors": 3
@@ -123,12 +123,12 @@
       }
     },
     {
-      "address": "10 Kensington Ave",
+      "address": "10A Kensington Ave",
       "type": "signage_update",
       "params_override": {}
     },
     {
-      "address": "10A Kensington Ave",
+      "address": "10 Kensington Ave",
       "type": "signage_update",
       "params_override": {}
     },
@@ -138,12 +138,12 @@
       "params_override": {}
     },
     {
-      "address": "12 Kensington Ave",
+      "address": "12A Kensington Ave",
       "type": "signage_update",
       "params_override": {}
     },
     {
-      "address": "12A Kensington Ave",
+      "address": "12 Kensington Ave",
       "type": "signage_update",
       "params_override": {}
     },

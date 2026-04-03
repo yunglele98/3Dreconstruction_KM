@@ -35,7 +35,7 @@
       "address": "135 Nassau St",
       "type": "green_roof",
       "params_override": {
-        "green_roof_type": "extensive"
+        "green_roof_type": "intensive"
       }
     },
     {
@@ -67,14 +67,14 @@
       }
     },
     {
-      "address": "14 Kensington Ave",
+      "address": "14A Hickory St",
       "type": "green_roof",
       "params_override": {
         "green_roof_type": "extensive"
       }
     },
     {
-      "address": "14A Hickory St",
+      "address": "14 Kensington Ave",
       "type": "green_roof",
       "params_override": {
         "green_roof_type": "extensive"
