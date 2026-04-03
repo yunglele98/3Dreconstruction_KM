@@ -87,8 +87,8 @@ def _create_fake_las(lidar_dir, stem):
     """Create a minimal LAS 1.2 file header with known Z bounds."""
     path = lidar_dir / f"{stem}.las"
     with open(path, "wb") as f:
-        # Build a 227-byte LAS header
-        header = bytearray(227)
+        # Build a 375-byte LAS header (>= 235 required by _read_las_header_stats)
+        header = bytearray(375)
         # Signature
         header[0:4] = b"LASF"
         # Version 1.2
