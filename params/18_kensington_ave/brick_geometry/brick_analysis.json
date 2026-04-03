@@ -1,0 +1,59 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/16 & 18 Kensington Ave.jpg",
+    "address": "18 Kensington Ave (right unit, exposed brick)",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Front door ~2.1m, ~28 courses. Ground floor window ~1.3m, ~18 courses."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout. Very clean coursing visible on the exposed brick unit.",
+    "colour": {
+      "base_hex": "#9C5038",
+      "variance": "medium",
+      "description": "Red-brown brick, typical Kensington residential tone. Overcast lighting in photo gives a relatively neutral colour read. Some variation with scattered darker bricks. The brick colour is clearly visible against the painted green neighbour (16) which provides contrast.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "bay_window",
+        "location": "ground floor, right unit",
+        "description": "Small projecting bay window at the ground floor with its own brick surround."
+      },
+      {
+        "type": "peaked_gable",
+        "location": "shared between units",
+        "description": "Peaked gable with pointed profile shared between the two semi-detached units. Decorative fretwork at the gable peak."
+      },
+      {
+        "type": "decorative_porch",
+        "location": "entrance",
+        "description": "Small covered entrance porch with decorative fretwork/gingerbread detailing — Victorian Carpenter Gothic ornamentation."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "The right unit (18) retains its original exposed brick while the left unit (16) has been painted green. The boundary between painted and unpainted is clearly visible at the party wall line. The building is a compact 2.5-storey Victorian semi-detached, typical of Kensington Ave. Overcast lighting gives neutral colour reading."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.7,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Good face-on photo in neutral overcast light (ideal for colour calibration). The painted neighbour provides useful contrast for reading the brick colour. Standard Kensington residential brick profile."
+    }
+  }
+}
