@@ -1,0 +1,58 @@
+{
+  "door_width_m": {
+    "median": 0.85,
+    "mean": 0.87,
+    "std": 0.038,
+    "count": 1077,
+    "current_default": 0.9,
+    "recommended": 0.85
+  },
+  "door_height_m": {
+    "median": 2.1,
+    "mean": 2.103,
+    "std": 0.027,
+    "count": 1059,
+    "current_default": 2.1,
+    "recommended": 2.1
+  },
+  "cornice_height_mm": {
+    "median": 200.0,
+    "mean": 239.518,
+    "std": 46.196,
+    "count": 519,
+    "current_default": 200,
+    "recommended": 200.0
+  },
+  "cornice_projection_mm": {
+    "median": 150.0,
+    "mean": 147.079,
+    "std": 37.253,
+    "count": 541,
+    "current_default": 150,
+    "recommended": 150.0
+  },
+  "eave_overhang_mm": {
+    "median": 300.0,
+    "mean": 300.0,
+    "std": 0.0,
+    "count": 1006,
+    "current_default": 300,
+    "recommended": 300.0
+  },
+  "window_width_m": {
+    "median": 0.9,
+    "mean": 0.86,
+    "std": 0.067,
+    "count": 259,
+    "current_default": 0.9,
+    "recommended": 0.9
+  },
+  "window_height_m": {
+    "median": 1.4,
+    "mean": 1.428,
+    "std": 0.402,
+    "count": 252,
+    "current_default": 1.5,
+    "recommended": 1.4
+  }
+}
