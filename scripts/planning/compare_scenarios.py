@@ -133,7 +133,15 @@ def main():
 
     if args.all or (not args.baseline and not args.scenario):
         print("Comparing all scenarios ...")
-        result = compare_all()
+        if not SCENARIOS.is_dir():
+            print(f"  ERROR: Scenarios directory not found: {SCENARIOS}")
+            print("  Run 'python scripts/planning/generate_scenarios.py' first.")
+            return
+        try:
+            result = compare_all()
+        except (json.JSONDecodeError, KeyError) as exc:
+            print(f"  ERROR reading scenario files: {exc}")
+            return
         out_path = Path(args.output) if args.output else SCENARIOS / "comparison.json"
     elif args.baseline and args.scenario:
         baseline_dir = Path(args.baseline)

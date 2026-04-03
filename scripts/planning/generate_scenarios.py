@@ -495,7 +495,15 @@ def generate_metadata(scenario_id, scenario):
 
 def main():
     print("Loading building data...")
-    data = load_data()
+    try:
+        data = load_data()
+    except FileNotFoundError:
+        print(f"  ERROR: {SLIM} not found.")
+        print("  Run 'python scripts/export/build_web_data.py' first to generate params-slim.json.")
+        return
+    except json.JSONDecodeError as exc:
+        print(f"  ERROR: {SLIM} contains invalid JSON: {exc}")
+        return
     print(f"  {len(data)} buildings loaded")
 
     print("\nGenerating scenarios:")
