@@ -1,0 +1,65 @@
+{
+  "scenario_id": "gentle_density",
+  "name": "Gentle Density (2036)",
+  "description": "Add third floors to low-rise non-contributing buildings, laneway housing on deep lots, live-work conversions on side streets. Preserves heritage character while adding housing.",
+  "principles": [
+    "Only add density to non-contributing buildings",
+    "Laneway suites on lots deeper than 100 ft",
+    "New construction matches neighbourhood scale (max 3 floors)",
+    "Live-work conversions support local economy",
+    "Preserve street wall and setback patterns"
+  ],
+  "interventions": [
+    {
+      "address": "126 Denison Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3
+      }
+    },
+    {
+      "address": "66 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "68 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "70 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "74 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    },
+    {
+      "address": "80 Nassau St",
+      "type": "convert_ground",
+      "params_override": {
+        "has_storefront": true
+      }
+    }
+  ],
+  "impact": {
+    "floors_added": 1,
+    "laneway_suites": 0,
+    "commercial_conversions": 5,
+    "infill_builds": 0,
+    "dwelling_units_added": 1,
+    "fsi_change": "+0.06",
+    "height_changes": 1
+  }
+}
