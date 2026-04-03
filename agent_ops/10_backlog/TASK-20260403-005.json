@@ -4,12 +4,18 @@
   "description": "Create scripts/reconstruct/run_dust3r.py for buildings with only 1-2 photos. Use DUSt3R/MASt3R to generate single-view point clouds (.ply) to dust3r/ directory. Fallback path when COLMAP photogrammetry cannot run. Must respect GPU lock (.gpu_lock).",
   "priority": "medium",
   "estimate_points": 5,
-  "skills": ["python", "pipeline", "research"],
+  "skills": [
+    "python",
+    "pipeline",
+    "research"
+  ],
   "write_scope": [
     "scripts/reconstruct/run_dust3r.py"
   ],
   "dependencies": [],
   "owner": null,
-  "status": "backlog",
-  "created_at": "2026-04-03T00:00:00Z"
+  "status": "done",
+  "created_at": "2026-04-03T00:00:00Z",
+  "completed_at": "2026-04-03T06:10:42.318984Z",
+  "completed_by": "claude-1"
 }

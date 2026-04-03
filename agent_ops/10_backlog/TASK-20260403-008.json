@@ -4,12 +4,19 @@
   "description": "Create scripts/enrich/fuse_segmentation.py to merge facade segmentation masks into params. Extract window counts per floor, door positions, storefront boundaries from segment masks. Update windows_detail, doors_detail, storefront fields. Never overwrite LiDAR heights or HCD data.",
   "priority": "medium",
   "estimate_points": 3,
-  "skills": ["python", "pipeline"],
+  "skills": [
+    "python",
+    "pipeline"
+  ],
   "write_scope": [
     "scripts/enrich/fuse_segmentation.py"
   ],
-  "dependencies": ["TASK-20260403-002"],
+  "dependencies": [
+    "TASK-20260403-002"
+  ],
   "owner": null,
-  "status": "backlog",
-  "created_at": "2026-04-03T00:00:00Z"
+  "status": "done",
+  "created_at": "2026-04-03T00:00:00Z",
+  "completed_at": "2026-04-03T06:10:42.318984Z",
+  "completed_by": "claude-1"
 }
