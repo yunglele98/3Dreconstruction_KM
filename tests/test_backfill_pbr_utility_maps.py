@@ -2,9 +2,11 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from PIL import Image
+import pytest
 
-from backfill_pbr_utility_maps import run_backfill
+Image = pytest.importorskip("PIL.Image", reason="Pillow not installed")
+_mod = pytest.importorskip("backfill_pbr_utility_maps", reason="backfill_pbr_utility_maps not on path")
+run_backfill = _mod.run_backfill
 
 
 def _make_export_dir(root: Path, safe: str) -> Path:

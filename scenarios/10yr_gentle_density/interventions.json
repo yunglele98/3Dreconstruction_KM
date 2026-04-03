@@ -1,0 +1,158 @@
+{
+  "scenario_id": "gentle_density",
+  "name": "Gentle Density (2036)",
+  "description": "Modest infill and laneway housing: add floors to non-contributing buildings on arterials, laneway suites behind eligible lots, green roofs on flat-roof commercial.",
+  "principles": [
+    "No height additions to contributing heritage buildings",
+    "Add at most one floor to non-contributing buildings on arterials",
+    "Laneway suites only where lane access exists",
+    "Green roofs on flat-roof commercial buildings",
+    "Maintain existing streetwall character and setbacks"
+  ],
+  "interventions": [
+    {
+      "address": "292 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "294 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "296 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "350 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "352 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "354 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "356 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "400 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "402 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 4
+      }
+    },
+    {
+      "address": "LANEWAY_BEHIND_22_Lippincott",
+      "type": "new_build",
+      "params": {
+        "building_name": "Laneway Suite A",
+        "floors": 2,
+        "total_height_m": 6.5,
+        "facade_width_m": 5.0,
+        "facade_depth_m": 8.0,
+        "roof_type": "flat",
+        "facade_material": "clapboard"
+      }
+    },
+    {
+      "address": "LANEWAY_BEHIND_30_Lippincott",
+      "type": "new_build",
+      "params": {
+        "building_name": "Laneway Suite B",
+        "floors": 2,
+        "total_height_m": 6.5,
+        "facade_width_m": 5.5,
+        "facade_depth_m": 7.5,
+        "roof_type": "flat",
+        "facade_material": "clapboard"
+      }
+    },
+    {
+      "address": "LANEWAY_BEHIND_15_Kensington_Ave",
+      "type": "new_build",
+      "params": {
+        "building_name": "Laneway Suite C",
+        "floors": 2,
+        "total_height_m": 6.0,
+        "facade_width_m": 4.5,
+        "facade_depth_m": 7.0,
+        "roof_type": "gable",
+        "facade_material": "clapboard"
+      }
+    },
+    {
+      "address": "214 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "216 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "222 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "224 Augusta Ave",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "188 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    },
+    {
+      "address": "190 Baldwin St",
+      "type": "green_roof",
+      "params_override": {
+        "green_roof_type": "extensive"
+      }
+    }
+  ]
+}
