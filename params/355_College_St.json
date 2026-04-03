@@ -1,8 +1,12 @@
 {
   "building_name": "355 College St",
-  "floors": 1,
+  "floors": 5,
   "floor_heights_m": [
-    14.2
+    3.28,
+    2.73,
+    2.73,
+    2.73,
+    2.73
   ],
   "total_height_m": 14.2,
   "facade_width_m": 6.1,
@@ -24,6 +28,10 @@
   "facade_material": "brick",
   "facade_colour": "red brick",
   "windows_per_floor": [
+    0,
+    0,
+    0,
+    0,
     0
   ],
   "window_type": "not clearly visible",
@@ -182,6 +190,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 1 → 5 (total_height=14.2m)",
+      "floor_heights [14.2] → [3.28, 2.73, 2.73, 2.73, 2.73]",
+      "windows_per_floor adjusted to 5 entries"
     ]
   },
   "storefront": {

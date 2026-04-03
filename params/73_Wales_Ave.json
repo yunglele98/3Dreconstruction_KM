@@ -1,11 +1,10 @@
 {
   "building_name": "73 Wales Ave",
-  "floors": 4,
+  "floors": 3,
   "floor_heights_m": [
-    1.96,
-    1.96,
-    1.96,
-    1.94
+    2.77,
+    2.52,
+    2.53
   ],
   "total_height_m": 7.82,
   "facade_width_m": 5.2,
@@ -29,8 +28,7 @@
   "windows_per_floor": [
     2,
     2,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -209,6 +207,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 4 → 3 (avg floor was 2.0m)",
+      "floor_heights [2.0, 2.0, 2.0, 1.9] → [2.77, 2.52, 2.53]",
+      "windows_per_floor adjusted to 3 entries"
     ]
   },
   "doors_detail": [

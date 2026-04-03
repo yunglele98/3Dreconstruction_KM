@@ -1,12 +1,10 @@
 {
   "building_name": "298-300 Spadina Ave",
-  "floors": 5,
+  "floors": 3,
   "floor_heights_m": [
-    1.89,
-    1.89,
-    1.89,
-    1.89,
-    1.87
+    3.54,
+    2.95,
+    2.94
   ],
   "total_height_m": 9.43,
   "facade_width_m": 6.1,
@@ -30,9 +28,7 @@
   "windows_per_floor": [
     0,
     2,
-    2,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -207,6 +203,11 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floors 5 → 3 (avg floor was 1.9m)",
+      "floor_heights [1.9, 1.9, 1.9, 1.9, 1.9] → [3.54, 2.95, 2.94]",
+      "windows_per_floor adjusted to 3 entries"
     ]
   },
   "storefront": {

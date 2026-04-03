@@ -2,12 +2,12 @@
   "building_name": "399 Bathurst St",
   "floors": 6,
   "floor_heights_m": [
-    6.03,
-    6.03,
-    6.03,
-    6.03,
-    6.03,
-    6.05
+    7.01,
+    5.84,
+    5.84,
+    5.84,
+    5.84,
+    5.83
   ],
   "total_height_m": 36.2,
   "facade_width_m": 5.5,
@@ -231,6 +231,9 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floor_heights [6.0, 6.0, 6.0, 6.0, 6.0, 6.0] → [7.01, 5.84, 5.84, 5.84, 5.84, 5.83]"
     ]
   },
   "doors_detail": [

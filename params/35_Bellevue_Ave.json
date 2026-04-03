@@ -1,10 +1,8 @@
 {
   "building_name": "35 Bellevue Ave",
-  "floors": 3,
+  "floors": 1,
   "floor_heights_m": [
-    0.4,
-    0.3,
-    0.3
+    1.03
   ],
   "total_height_m": 1.03,
   "facade_width_m": 5.2,
@@ -28,9 +26,7 @@
   "facade_material": "stucco",
   "facade_colour": "light stucco-clad bay-and-gable house-form facade",
   "windows_per_floor": [
-    2,
-    2,
-    1
+    2
   ],
   "window_type": "double_hung",
   "window_width_m": 0.85,
@@ -213,6 +209,11 @@
       "depth",
       "segmentation",
       "signage"
+    ],
+    "anomaly_fixes": [
+      "floors 3 → 1 (avg floor was 0.3m)",
+      "floor_heights [0.4, 0.3, 0.3] → [1.03]",
+      "windows_per_floor adjusted to 1 entries"
     ]
   },
   "photo_observations": {

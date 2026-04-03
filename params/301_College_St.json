@@ -2,12 +2,12 @@
   "building_name": "301 College St",
   "floors": 6,
   "floor_heights_m": [
-    5.1,
-    10.8,
-    10.8,
-    10.8,
-    10.8,
-    9.2
+    11.09,
+    9.24,
+    9.24,
+    9.24,
+    9.24,
+    9.25
   ],
   "total_height_m": 57.3,
   "facade_width_m": 6.1,
@@ -182,6 +182,9 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floor_heights [5.1, 10.8, 10.8, 10.8, 10.8, 9.2] → [11.09, 9.24, 9.24, 9.24, 9.24, 9.25]"
     ]
   },
   "storefront": {

@@ -10,10 +10,11 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+SCRIPTS = Path(__file__).resolve().parent
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
 
-from scripts.ssim_single import compute_ssim, load_gray
+from ssim_single import compute_ssim, load_gray
 
 
 def parse_args() -> argparse.Namespace:

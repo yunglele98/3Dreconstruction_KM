@@ -2,8 +2,8 @@
   "building_name": "401 College St",
   "floors": 2,
   "floor_heights_m": [
-    7.39,
-    7.39
+    8.06,
+    6.72
   ],
   "total_height_m": 14.78,
   "facade_width_m": 6.1,
@@ -199,6 +199,9 @@
     "fusion_applied": [
       "depth",
       "segmentation"
+    ],
+    "anomaly_fixes": [
+      "floor_heights [7.4, 7.4] → [8.06, 6.72]"
     ]
   },
   "doors_detail": [

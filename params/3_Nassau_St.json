@@ -46,7 +46,16 @@
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4,
     "heritage_score": 47,
-    "significance": "low"
+    "significance": "low",
+    "extracted_features": [
+      "cornice",
+      "string_course",
+      "heritage_fabric"
+    ],
+    "statement_materials": [
+      "brick",
+      "stone"
+    ]
   },
   "context": {
     "building_type": "institutional",

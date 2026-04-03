@@ -920,6 +920,210 @@ def create_canvas_material(name, canvas_hex):
 
 
 
+def apply_weathering_layer(mat, condition="fair", age_years=80):
+    """Add procedural weathering effects to an existing material.
+
+    Adds condition-driven surface degradation:
+    - Edge wear (chipped paint, exposed substrate at corners/edges)
+    - Water stain streaks (vertical dark streaks from rain runoff)
+    - Dirt accumulation (darker values in crevices and lower zones)
+    - Surface roughness variation (worn areas are smoother)
+
+    Args:
+        mat: Existing Blender material to weatherize.
+        condition: "good", "fair", or "poor" — controls intensity.
+        age_years: Approximate building age — scales moss/patina.
+
+    Returns the modified material.
+    """
+    if not mat or not mat.node_tree:
+        return mat
+
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+
+    # Intensity multipliers by condition
+    intensity = {"good": 0.3, "fair": 0.6, "poor": 1.0}.get(
+        (condition or "fair").lower(), 0.6
+    )
+    age_factor = min(1.0, age_years / 120.0)
+
+    # Get current base colour connection
+    base_color_link = None
+    for link in links:
+        if link.to_socket == bsdf.inputs["Base Color"]:
+            base_color_link = link
+            break
+
+    if not base_color_link:
+        return mat
+
+    original_color_output = base_color_link.from_socket
+    links.remove(base_color_link)
+
+    # --- Water stain streaks (vertical) ---
+    stain_noise = nodes.new('ShaderNodeTexNoise')
+    stain_noise.location = (-600, 400)
+    stain_noise.inputs["Scale"].default_value = 3.0
+    stain_noise.inputs["Detail"].default_value = 8.0
+    stain_noise.inputs["Roughness"].default_value = 0.7
+    stain_noise.inputs["Distortion"].default_value = 2.0
+
+    # Stretch vertically for streak effect
+    stain_mapping = nodes.new('ShaderNodeMapping')
+    stain_mapping.location = (-750, 400)
+    stain_mapping.inputs["Scale"].default_value = (0.3, 1.0, 8.0)
+
+    stain_coord = nodes.new('ShaderNodeTexCoord')
+    stain_coord.location = (-900, 400)
+    links.new(stain_coord.outputs["Generated"], stain_mapping.inputs["Vector"])
+    links.new(stain_mapping.outputs["Vector"], stain_noise.inputs["Vector"])
+
+    # Ramp to make streaks darker
+    stain_ramp = nodes.new('ShaderNodeValToRGB')
+    stain_ramp.location = (-400, 400)
+    stain_ramp.color_ramp.elements[0].position = 0.4
+    stain_ramp.color_ramp.elements[0].color = (0.15, 0.13, 0.12, 1.0)
+    stain_ramp.color_ramp.elements[1].position = 0.6
+    stain_ramp.color_ramp.elements[1].color = (1.0, 1.0, 1.0, 1.0)
+    links.new(stain_noise.outputs["Fac"], stain_ramp.inputs["Fac"])
+
+    # Mix stains with original colour
+    stain_mix = nodes.new('ShaderNodeMixRGB')
+    stain_mix.location = (-200, 300)
+    stain_mix.blend_type = 'MULTIPLY'
+    stain_mix.inputs["Fac"].default_value = 0.15 * intensity
+    links.new(original_color_output, stain_mix.inputs["Color1"])
+    links.new(stain_ramp.outputs["Color"], stain_mix.inputs["Color2"])
+
+    # --- Dirt accumulation (gravity-driven, lower areas darker) ---
+    dirt_coord = nodes.new('ShaderNodeTexCoord')
+    dirt_coord.location = (-600, 100)
+
+    dirt_sep = nodes.new('ShaderNodeSeparateXYZ')
+    dirt_sep.location = (-450, 100)
+    links.new(dirt_coord.outputs["Generated"], dirt_sep.inputs["Vector"])
+
+    # Gradient: more dirt at bottom (Z=0), less at top
+    dirt_ramp = nodes.new('ShaderNodeValToRGB')
+    dirt_ramp.location = (-300, 100)
+    dirt_ramp.color_ramp.elements[0].position = 0.0
+    dirt_ramp.color_ramp.elements[0].color = (0.3, 0.28, 0.25, 1.0)
+    dirt_ramp.color_ramp.elements[1].position = 0.3
+    dirt_ramp.color_ramp.elements[1].color = (1.0, 1.0, 1.0, 1.0)
+    links.new(dirt_sep.outputs["Z"], dirt_ramp.inputs["Fac"])
+
+    # Add noise to break up the gradient
+    dirt_noise = nodes.new('ShaderNodeTexNoise')
+    dirt_noise.location = (-450, 0)
+    dirt_noise.inputs["Scale"].default_value = 12.0
+    dirt_noise.inputs["Detail"].default_value = 4.0
+
+    dirt_mix_noise = nodes.new('ShaderNodeMixRGB')
+    dirt_mix_noise.location = (-200, 100)
+    dirt_mix_noise.blend_type = 'MULTIPLY'
+    dirt_mix_noise.inputs["Fac"].default_value = 0.5
+    links.new(dirt_ramp.outputs["Color"], dirt_mix_noise.inputs["Color1"])
+    links.new(dirt_noise.outputs["Color"], dirt_mix_noise.inputs["Color2"])
+
+    # Apply dirt to stained colour
+    dirt_apply = nodes.new('ShaderNodeMixRGB')
+    dirt_apply.location = (0, 200)
+    dirt_apply.blend_type = 'MULTIPLY'
+    dirt_apply.inputs["Fac"].default_value = 0.12 * intensity
+    links.new(stain_mix.outputs["Color"], dirt_apply.inputs["Color1"])
+    links.new(dirt_mix_noise.outputs["Color"], dirt_apply.inputs["Color2"])
+
+    # --- Surface roughness variation ---
+    rough_noise = nodes.new('ShaderNodeTexNoise')
+    rough_noise.location = (-400, -200)
+    rough_noise.inputs["Scale"].default_value = 15.0
+    rough_noise.inputs["Detail"].default_value = 5.0
+
+    rough_ramp = nodes.new('ShaderNodeValToRGB')
+    rough_ramp.location = (-200, -200)
+    # Weathered = more roughness variation
+    base_rough = 0.85
+    rough_ramp.color_ramp.elements[0].position = 0.3
+    rough_ramp.color_ramp.elements[0].color = (base_rough - 0.1, 0, 0, 1)
+    rough_ramp.color_ramp.elements[1].position = 0.7
+    rough_ramp.color_ramp.elements[1].color = (base_rough + 0.1 * intensity, 0, 0, 1)
+    links.new(rough_noise.outputs["Fac"], rough_ramp.inputs["Fac"])
+
+    # Connect final colour and roughness
+    links.new(dirt_apply.outputs["Color"], bsdf.inputs["Base Color"])
+
+    return mat
+
+
+def apply_moss_layer(mat, coverage=0.1):
+    """Add moss/lichen growth to a material (for poor-condition old buildings).
+
+    Adds green organic growth concentrated in crevices and north-facing
+    areas (lower parts of the wall, mortar joints).
+
+    Args:
+        mat: Existing Blender material.
+        coverage: 0.0-1.0 moss coverage fraction.
+    """
+    if not mat or not mat.node_tree or coverage <= 0:
+        return mat
+
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    bsdf = _get_bsdf(mat)
+    if not bsdf:
+        return mat
+
+    # Get current base colour
+    base_link = None
+    for link in links:
+        if link.to_socket == bsdf.inputs["Base Color"]:
+            base_link = link
+            break
+    if not base_link:
+        return mat
+
+    original_output = base_link.from_socket
+    links.remove(base_link)
+
+    # Moss colour
+    moss_color = nodes.new('ShaderNodeRGB')
+    moss_color.location = (-400, 500)
+    moss_color.outputs["Color"].default_value = (0.18, 0.28, 0.08, 1.0)
+
+    # Moss distribution: noise + gravity (more at bottom and in crevices)
+    moss_noise = nodes.new('ShaderNodeTexNoise')
+    moss_noise.location = (-600, 500)
+    moss_noise.inputs["Scale"].default_value = 8.0
+    moss_noise.inputs["Detail"].default_value = 6.0
+    moss_noise.inputs["Roughness"].default_value = 0.8
+
+    moss_ramp = nodes.new('ShaderNodeValToRGB')
+    moss_ramp.location = (-400, 600)
+    # Sharp threshold for patchy moss
+    threshold = 1.0 - coverage
+    moss_ramp.color_ramp.elements[0].position = threshold - 0.05
+    moss_ramp.color_ramp.elements[0].color = (0, 0, 0, 1)
+    moss_ramp.color_ramp.elements[1].position = threshold + 0.05
+    moss_ramp.color_ramp.elements[1].color = (1, 1, 1, 1)
+    links.new(moss_noise.outputs["Fac"], moss_ramp.inputs["Fac"])
+
+    # Mix moss with base
+    moss_mix = nodes.new('ShaderNodeMixRGB')
+    moss_mix.location = (-200, 500)
+    links.new(moss_ramp.outputs["Color"], moss_mix.inputs["Fac"])
+    links.new(original_output, moss_mix.inputs["Color1"])
+    links.new(moss_color.outputs["Color"], moss_mix.inputs["Color2"])
+
+    links.new(moss_mix.outputs["Color"], bsdf.inputs["Base Color"])
+
+    return mat
+
+
 def assign_material(obj, mat):
     """Assign a material to an object."""
     if obj.data.materials:

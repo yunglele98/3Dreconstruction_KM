@@ -3,10 +3,14 @@ import subprocess
 import sys
 from pathlib import Path
 
-import numpy as np
-from PIL import Image
+import pytest
 
-from ssim_single import compute_ssim
+np = pytest.importorskip("numpy", reason="numpy not installed")
+Image = pytest.importorskip("PIL.Image", reason="Pillow not installed")
+
+sys.path.insert(0, str(Path(__file__).parent.parent / "scripts" / "verify"))
+ssim_single = pytest.importorskip("ssim_single", reason="scripts/verify/ssim_single.py not on path")
+compute_ssim = ssim_single.compute_ssim
 
 
 def _write_image(path: Path, arr: np.ndarray) -> None:

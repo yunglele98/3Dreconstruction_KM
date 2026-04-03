@@ -33,7 +33,7 @@
   "window_height_m": 1.2,
   "door_count": 1,
   "has_storefront": false,
-  "condition": "weathered",
+  "condition": "poor",
   "hcd_data": {
     "typology": "House-form, Semi-detached",
     "construction_date": "Pre-1889",
@@ -222,6 +222,9 @@
     "normalized": true,
     "normalizations_applied": [
       "stone_lintels_bool_to_dict"
+    ],
+    "anomaly_fixes": [
+      "condition 'weathered' → 'poor'"
     ]
   },
   "bay_window": {

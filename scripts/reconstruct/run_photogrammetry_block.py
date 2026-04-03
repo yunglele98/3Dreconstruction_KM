@@ -23,27 +23,23 @@ import time
 from collections import defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _colmap import (
+    find_colmap,
+    acquire_gpu_lock,
+    release_gpu_lock,
+    run_sparse_reconstruction,
+    run_dense_reconstruction,
+    export_model_ply,
+    validate_sparse_model,
+)
+
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 PHOTO_DIR = REPO_ROOT / "PHOTOS KENSINGTON sorted"
 PHOTO_INDEX = REPO_ROOT / "PHOTOS KENSINGTON" / "csv" / "photo_address_index.csv"
 COLMAP_PRIORITY = REPO_ROOT / "outputs" / "visual_audit" / "colmap_priority.json"
 OUTPUT_DIR = REPO_ROOT / "point_clouds" / "colmap_blocks"
 PARAMS_DIR = REPO_ROOT / "params"
-
-
-def find_colmap():
-    """Locate COLMAP executable."""
-    candidates = [
-        shutil.which("colmap"),
-        "C:/Users/liam1/Apps/COLMAP/bin/colmap",
-        "C:/Program Files/COLMAP/COLMAP.bat",
-        "/usr/bin/colmap",
-        "/usr/local/bin/colmap",
-    ]
-    for c in candidates:
-        if c and Path(c).exists():
-            return str(c)
-    return None
 
 
 def load_photo_index():
@@ -121,111 +117,33 @@ def list_blocks():
 
 
 def run_colmap_sparse(image_dir, workspace, colmap_bin, gpu_index=0):
-    """COLMAP sparse reconstruction."""
-    db_path = workspace / "database.db"
-    sparse_dir = workspace / "sparse"
-    sparse_dir.mkdir(parents=True, exist_ok=True)
-
-    steps = [
-        ("Feature extraction", [
-            colmap_bin, "feature_extractor",
-            "--database_path", str(db_path),
-            "--image_path", str(image_dir),
-            "--ImageReader.single_camera", "0",
-            "--FeatureExtraction.use_gpu", str(int(gpu_index >= 0)),
-            "--FeatureExtraction.gpu_index", str(max(gpu_index, 0)),
-            "--SiftExtraction.max_num_features", "8192",
-            "--FeatureExtraction.max_image_size", "2048",
-        ], 3600),
-        ("Exhaustive matching", [
-            colmap_bin, "exhaustive_matcher",
-            "--database_path", str(db_path),
-            "--FeatureMatching.use_gpu", str(int(gpu_index >= 0)),
-            "--FeatureMatching.gpu_index", str(max(gpu_index, 0)),
-        ], 3600),
-        ("Mapping", [
-            colmap_bin, "mapper",
-            "--database_path", str(db_path),
-            "--image_path", str(image_dir),
-            "--output_path", str(sparse_dir),
-        ], 3600),
-    ]
-
-    for name, cmd, timeout in steps:
-        print(f"    {name}...")
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
-        if result.returncode != 0:
-            return False, f"{name} failed: {result.stderr[:500]}"
-
-    models = sorted(sparse_dir.iterdir())
-    if not models:
-        return False, "No sparse model produced"
-
-    # Pick the model with most images
-    best = models[0]
-    return True, str(best)
+    """COLMAP sparse reconstruction (delegates to shared module)."""
+    ok, model, log = run_sparse_reconstruction(
+        image_dir, workspace, colmap_bin, gpu_index=gpu_index,
+    )
+    for msg in log:
+        print(f"    {msg}")
+    return ok, model if ok else (log[-1] if log else "Unknown error")
 
 
 def run_colmap_dense(sparse_model, image_dir, workspace, colmap_bin, gpu_index=0):
-    """COLMAP dense reconstruction."""
-    dense_dir = workspace / "dense"
-    dense_dir.mkdir(parents=True, exist_ok=True)
-
-    steps = [
-        ("Undistort", [
-            colmap_bin, "image_undistorter",
-            "--image_path", str(image_dir),
-            "--input_path", str(sparse_model),
-            "--output_path", str(dense_dir),
-            "--output_type", "COLMAP",
-        ], 600),
-        ("Patch match stereo", [
-            colmap_bin, "patch_match_stereo",
-            "--workspace_path", str(dense_dir),
-            "--workspace_format", "COLMAP",
-            "--PatchMatchStereo.gpu_index", str(max(gpu_index, 0)),
-        ], 3600),
-    ]
-
-    for name, cmd, timeout in steps:
-        print(f"    {name}...")
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
-        if result.returncode != 0:
-            return False, f"{name} failed: {result.stderr[:500]}"
-
-    # Fusion
-    ply_path = workspace / "fused.ply"
-    cmd = [
-        colmap_bin, "stereo_fusion",
-        "--workspace_path", str(dense_dir),
-        "--workspace_format", "COLMAP",
-        "--output_path", str(ply_path),
-    ]
-    print("    Fusion...")
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
-    if result.returncode != 0:
-        return False, f"Fusion failed: {result.stderr[:500]}"
-
-    if not ply_path.exists():
-        return False, "No fused.ply produced"
-
-    return True, str(ply_path)
+    """COLMAP dense reconstruction (delegates to shared module)."""
+    ok, ply, log = run_dense_reconstruction(
+        sparse_model, image_dir, workspace, colmap_bin, gpu_index=gpu_index,
+    )
+    for msg in log:
+        print(f"    {msg}")
+    return ok, ply if ok else (log[-1] if log else "Unknown error")
 
 
 def export_sparse_ply(sparse_model, workspace, colmap_bin):
     """Export sparse model as PLY for quick inspection."""
     ply_path = workspace / "sparse_cloud.ply"
-    cmd = [
-        colmap_bin, "model_converter",
-        "--input_path", str(sparse_model),
-        "--output_path", str(ply_path),
-        "--output_type", "PLY",
-    ]
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-    if result.returncode == 0 and ply_path.exists():
-        size_mb = ply_path.stat().st_size / 1024 / 1024
-        print(f"    Sparse PLY: {ply_path.name} ({size_mb:.1f} MB)")
-    return ply_path if ply_path.exists() else None
+    result = export_model_ply(sparse_model, ply_path, colmap_bin)
+    if result:
+        size_mb = result.stat().st_size / 1024 / 1024
+        print(f"    Sparse PLY: {result.name} ({size_mb:.1f} MB)")
+    return result
 
 
 def main():
@@ -248,7 +166,7 @@ def main():
 
     colmap_bin = find_colmap()
     if not colmap_bin and not args.dry_run:
-        print("ERROR: COLMAP not found")
+        print("ERROR: COLMAP not found. Install COLMAP or add to PATH.")
         sys.exit(1)
 
     print(f"Block photogrammetry: {args.street}")
@@ -287,27 +205,38 @@ def main():
             copied += 1
     print(f"  Copied {copied} new photos to {img_dir}")
 
+    # Acquire GPU lock
+    if not acquire_gpu_lock("run_photogrammetry_block"):
+        print("ERROR: GPU is locked by another process. Wait or remove .gpu_lock")
+        sys.exit(1)
+
     start = time.time()
-
-    # Sparse reconstruction
-    print("\n  SPARSE RECONSTRUCTION")
-    ok, sparse_model = run_colmap_sparse(img_dir, workspace, colmap_bin, args.gpu_index)
-    if not ok:
-        print(f"  FAILED: {sparse_model}")
-        return
-
-    print(f"  Sparse model: {sparse_model}")
-    export_sparse_ply(sparse_model, workspace, colmap_bin)
-
-    # Dense reconstruction
-    if args.dense:
-        print("\n  DENSE RECONSTRUCTION")
-        ok, ply_path = run_colmap_dense(sparse_model, img_dir, workspace, colmap_bin, args.gpu_index)
+    try:
+        # Sparse reconstruction
+        print("\n  SPARSE RECONSTRUCTION")
+        ok, sparse_model = run_colmap_sparse(img_dir, workspace, colmap_bin, args.gpu_index)
         if not ok:
-            print(f"  FAILED: {ply_path}")
-        else:
-            size_mb = Path(ply_path).stat().st_size / 1024 / 1024
-            print(f"  Dense PLY: {ply_path} ({size_mb:.1f} MB)")
+            print(f"  FAILED: {sparse_model}")
+            return
+
+        print(f"  Sparse model: {sparse_model}")
+        export_sparse_ply(sparse_model, workspace, colmap_bin)
+
+        # Validate
+        validation = validate_sparse_model(Path(sparse_model))
+        print(f"  Validation: {validation['images']} images, {validation['points']} points")
+
+        # Dense reconstruction
+        if args.dense:
+            print("\n  DENSE RECONSTRUCTION")
+            ok, ply_path = run_colmap_dense(sparse_model, img_dir, workspace, colmap_bin, args.gpu_index)
+            if not ok:
+                print(f"  FAILED: {ply_path}")
+            else:
+                size_mb = Path(ply_path).stat().st_size / 1024 / 1024
+                print(f"  Dense PLY: {ply_path} ({size_mb:.1f} MB)")
+    finally:
+        release_gpu_lock()
 
     elapsed = time.time() - start
     print(f"\n  Complete in {elapsed:.0f}s")

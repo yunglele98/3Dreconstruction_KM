@@ -1,8 +1,10 @@
 {
   "building_name": "353 College St",
-  "floors": 1,
+  "floors": 3,
   "floor_heights_m": [
-    9.8
+    3.3,
+    3.3,
+    3.2
   ],
   "total_height_m": 9.8,
   "facade_width_m": 6.1,
@@ -24,6 +26,8 @@
   "facade_material": "Brick",
   "facade_colour": "N/A - vacant lot",
   "windows_per_floor": [
+    0,
+    0,
     0
   ],
   "window_type": "double_hung",
