@@ -16,6 +16,7 @@ from PIL import Image
 # Ensure scripts/visual_audit/ is importable
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts" / "visual_audit"))
 
+import run_full_audit
 from run_full_audit import (
     run_audit,
     build_summary,
@@ -26,6 +27,12 @@ from run_full_audit import (
     _load_image_as_array,
     load_photo_index,
 )
+
+
+@pytest.fixture(autouse=True)
+def _patch_repo_root(tmp_path, monkeypatch):
+    """Patch REPO_ROOT so relative_to() works with tmp_path test files."""
+    monkeypatch.setattr(run_full_audit, "REPO_ROOT", tmp_path)
 
 
 # ---------------------------------------------------------------------------
