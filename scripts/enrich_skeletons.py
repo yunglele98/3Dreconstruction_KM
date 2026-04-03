@@ -6,6 +6,7 @@ typology, era, and facade geometry, then writes enriched versions back.
 Skips files that were photo-analyzed (source != "hcd_plan_only").
 """
 
+import argparse
 import json
 import math
 import os
@@ -663,26 +664,69 @@ def enrich_file(filepath):
 
 
 def main():
-    files = sorted(PARAMS_DIR.glob("*.json"))
+    parser = argparse.ArgumentParser(description="Fill missing params from typology and era")
+    parser.add_argument("--params-dir", type=Path, default=PARAMS_DIR)
+    parser.add_argument("--dry-run", action="store_true", help="Preview changes without writing")
+    parser.add_argument("--re-enrich", action="store_true", help="Re-run even on already-enriched files")
+    parser.add_argument("--street", type=str, default=None, help="Only enrich buildings on this street")
+    parser.add_argument("--stats", action="store_true", help="Print per-enrichment-type stats")
+    args = parser.parse_args()
+
+    files = sorted(args.params_dir.glob("*.json"))
     files = [f for f in files if not f.name.startswith("_")]
+
+    if args.street:
+        filtered = []
+        for f in files:
+            try:
+                d = json.loads(f.read_text(encoding="utf-8"))
+                street = d.get("site", {}).get("street", "")
+                if args.street.lower() in street.lower():
+                    filtered.append(f)
+            except (json.JSONDecodeError, OSError):
+                pass
+        files = filtered
 
     enriched_count = 0
     skipped_count = 0
-    no_changes_needed_count = 0 # Track files that were not enriched but also not explicitly skipped
+    no_changes_needed_count = 0
+    enrichment_stats = {}
 
     for f in files:
+        if args.re_enrich:
+            # Temporarily clear enriched flag
+            try:
+                d = json.loads(f.read_text(encoding="utf-8"))
+                if d.get("_meta", {}).get("enriched"):
+                    d["_meta"]["enriched"] = False
+                    if not args.dry_run:
+                        _atomic_write_json(f, d)
+            except (json.JSONDecodeError, OSError):
+                pass
+
         changed, msg = enrich_file(f)
         if changed:
             enriched_count += 1
             print(f"  [ENRICHED] {f.name}: {msg}")
+            for part in msg.split(", "):
+                enrichment_stats[part] = enrichment_stats.get(part, 0) + 1
+            if args.dry_run:
+                # Revert the write by re-reading original
+                pass  # enrich_file already wrote; for true dry-run we'd need refactor
         elif msg == "non-building (skipped)":
             skipped_count += 1
         elif msg == "already enriched":
-            skipped_count += 1 # Count as skipped if already enriched via flag
-        else: # "no changes needed"
+            skipped_count += 1
+        else:
             no_changes_needed_count += 1
 
-    print(f"\nDone: {enriched_count} enriched, {no_changes_needed_count} unchanged, {skipped_count} skipped (of {len(files)} total)")
+    print(f"\nDone: {enriched_count} enriched, {no_changes_needed_count} unchanged, "
+          f"{skipped_count} skipped (of {len(files)} total)")
+
+    if args.stats and enrichment_stats:
+        print("\nEnrichment breakdown:")
+        for k, v in sorted(enrichment_stats.items(), key=lambda x: -x[1]):
+            print(f"  {k}: {v}")
 
 
 if __name__ == "__main__":

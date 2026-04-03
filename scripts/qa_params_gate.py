@@ -9,11 +9,20 @@ import time
 from pathlib import Path
 from typing import Any
 
-import psycopg2
-import psycopg2.extras
+try:
+    import psycopg2
+    import psycopg2.extras
+except ImportError:
+    psycopg2 = None
 
-from db_config import DB_CONFIG, get_connection
-from revise_params_from_db import get_param_address, norm_addr_loose
+try:
+    from db_config import DB_CONFIG, get_connection
+    from revise_params_from_db import get_param_address, norm_addr_loose
+except ImportError:
+    DB_CONFIG = None
+    get_connection = None
+    def get_param_address(d, p): return d.get("_meta", {}).get("address") or d.get("building_name") or p.stem
+    def norm_addr_loose(a): return a.strip().lower()
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,6 +51,8 @@ def derive_storefront(status: str | None) -> bool | None:
 
 
 def db_storefront_map() -> dict[str, bool]:
+    if psycopg2 is None or get_connection is None:
+        return {}
     conn = get_connection()
     cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute('select "ADDRESS_FULL" as address_full, ba_storefront_status from public.building_assessment where "ADDRESS_FULL" is not null')
@@ -142,6 +153,33 @@ def main() -> None:
                 hex_val.startswith("#") and len(hex_val) == 7
             ):
                 reasons.append(f"malformed_hex:{hex_path}={hex_val}")
+
+        # Array length consistency
+        wpf = d.get("windows_per_floor", [])
+        if isinstance(wpf, list) and floors and len(wpf) != int(floors):
+            reasons.append(f"windows_per_floor_length:{len(wpf)}!=floors:{int(floors)}")
+
+        if isinstance(fh, list) and floors and len(fh) != int(floors):
+            reasons.append(f"floor_heights_length:{len(fh)}!=floors:{int(floors)}")
+
+        # Facade width sanity
+        width = coerce_float(d.get("facade_width_m"))
+        if width and (width < 2.0 or width > 30.0):
+            reasons.append(f"facade_width_out_of_range:{width:.1f}")
+
+        depth = coerce_float(d.get("facade_depth_m"))
+        if depth and (depth < 2.0 or depth > 40.0):
+            reasons.append(f"facade_depth_out_of_range:{depth:.1f}")
+
+        # Missing critical enrichment
+        meta = d.get("_meta", {})
+        if not meta.get("enriched") and not meta.get("geometry_revised"):
+            reasons.append("not_enriched_or_promoted")
+
+        # Colour palette completeness
+        cp = d.get("colour_palette", {})
+        if isinstance(cp, dict) and not cp.get("facade"):
+            reasons.append("missing_colour_palette_facade")
 
         if reasons:
             failed.append(

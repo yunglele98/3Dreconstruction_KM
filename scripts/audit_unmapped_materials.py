@@ -31,7 +31,7 @@ def find_unmapped_materials():
                     mat = data.get("facade_material", "unknown")
                     unmapped_types.append(mat)
                     targets.append({"address": addr, "material": mat})
-            except:
+            except Exception:
                 continue
 
     print(f"--- Material Coverage Report ---")

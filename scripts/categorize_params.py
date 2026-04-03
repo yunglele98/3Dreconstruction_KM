@@ -47,7 +47,7 @@ def categorize():
         with open(pf, encoding="utf-8") as f:
             try:
                 data = json.load(f)
-            except:
+            except Exception:
                 continue
         
         # Check if canonical (has valid ID)

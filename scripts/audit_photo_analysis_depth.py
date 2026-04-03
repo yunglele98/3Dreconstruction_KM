@@ -21,7 +21,7 @@ def audit_depth():
             try:
                 data = json.load(f)
                 if data.get("skipped"): continue
-            except: continue
+            except Exception: continue
             
         total += 1
         # Check all possible locations for detailed data

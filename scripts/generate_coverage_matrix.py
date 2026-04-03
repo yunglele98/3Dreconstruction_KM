@@ -58,19 +58,80 @@ def main():
         buildings.append(row)
 
     total = totals["active"]
-    output = {"generated_at": datetime.now().isoformat(), "total_active": total,
-              "summary": {k: {"count":v, "pct": round(v/total*100,1) if total else 0} for k,v in totals.items()},
-              "buildings": buildings}
+
+    # Per-street breakdown
+    from collections import defaultdict
+    street_coverage = defaultdict(lambda: defaultdict(int))
+    for row in buildings:
+        # Load street from params
+        pf = REPO / "params" / f"{row['address']}.json"
+        street = "Unknown"
+        if pf.exists():
+            try:
+                pd = json.loads(pf.read_text(encoding="utf-8"))
+                street = pd.get("site", {}).get("street", "Unknown")
+            except (json.JSONDecodeError, OSError):
+                pass
+        row["street"] = street
+        street_coverage[street]["total"] += 1
+        for k in ["has_photo", "depth_fused", "seg_fused", "sig_fused", "exported", "rendered"]:
+            if row.get(k):
+                street_coverage[street][k] += 1
+
+    # Gap analysis: find buildings missing the most pipeline stages
+    stage_keys = ["has_photo", "depth_fused", "seg_fused", "exported", "rendered"]
+    for row in buildings:
+        row["completeness"] = sum(1 for k in stage_keys if row.get(k))
+        row["gap_score"] = len(stage_keys) - row["completeness"]
+
+    gap_buildings = sorted(buildings, key=lambda r: -r["gap_score"])
+    top_gaps = gap_buildings[:20]
+
+    # Quality flags
+    quality_flags = {"no_photo": 0, "no_enrichment": 0, "no_export": 0, "fully_complete": 0}
+    for row in buildings:
+        if not row.get("has_photo"):
+            quality_flags["no_photo"] += 1
+        if not row.get("depth_fused") and not row.get("seg_fused"):
+            quality_flags["no_enrichment"] += 1
+        if not row.get("exported") and not row.get("rendered"):
+            quality_flags["no_export"] += 1
+        if row["completeness"] == len(stage_keys):
+            quality_flags["fully_complete"] += 1
+
+    output = {
+        "generated_at": datetime.now().isoformat(),
+        "total_active": total,
+        "summary": {k: {"count": v, "pct": round(v / total * 100, 1) if total else 0} for k, v in totals.items()},
+        "quality_flags": quality_flags,
+        "street_coverage": {k: dict(v) for k, v in sorted(street_coverage.items())},
+        "top_gaps": [{"address": r["address"], "street": r.get("street", "?"),
+                       "gap_score": r["gap_score"], "completeness": r["completeness"]}
+                      for r in top_gaps],
+        "buildings": buildings,
+    }
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, indent=2), encoding="utf-8")
 
     logger.info("Coverage Matrix (%d buildings):", total)
-    for k,v in totals.items():
-        if k == "active": continue
-        pct = v/total*100 if total else 0
-        bar = "#"*int(pct/5) + "."*(20-int(pct/5))
+    for k, v in totals.items():
+        if k == "active":
+            continue
+        pct = v / total * 100 if total else 0
+        bar = "#" * int(pct / 5) + "." * (20 - int(pct / 5))
         logger.info("  %-15s %5d / %d  [%s] %.1f%%", k, v, total, bar, pct)
+
+    logger.info("\nQuality flags:")
+    for k, v in quality_flags.items():
+        logger.info("  %-20s %d", k, v)
+
+    if top_gaps:
+        logger.info("\nTop gaps (buildings needing most work):")
+        for r in top_gaps[:10]:
+            logger.info("  %s (%s): %d/%d stages complete",
+                        r["address"], r.get("street", "?"), r["completeness"], len(stage_keys))
+
     logger.info("Saved: %s", args.output)
 
 if __name__ == "__main__":

@@ -2704,10 +2704,16 @@ def generate_batch_individual(params_dir, output_dir=None, do_render=False,
 # ---------------------------------------------------------------------------
 
 def _validate_params(params):
-    """Pre-generation validation. Returns (ok, errors) tuple."""
+    """Pre-generation validation. Returns (ok, errors) tuple.
+
+    Checks critical fields (will skip building if missing) and
+    warns about optional fields that will use defaults.
+    Also applies auto-corrections for common data issues.
+    """
     errors = []
     name = params.get("building_name", "unknown")
 
+    # Critical checks (will skip if any fail)
     if not params.get("facade_width_m") or params["facade_width_m"] <= 0:
         errors.append(f"{name}: facade_width_m is missing or <= 0")
     if not params.get("total_height_m") or params["total_height_m"] <= 0:
@@ -2715,6 +2721,43 @@ def _validate_params(params):
     if not params.get("floors") or params["floors"] <= 0:
         errors.append(f"{name}: floors is missing or <= 0")
 
+    # Range sanity checks (auto-correct with warnings)
+    width = params.get("facade_width_m", 0)
+    if width > 50:
+        errors.append(f"{name}: WARNING - facade_width_m={width} unusually wide, clamping to 30")
+        params["facade_width_m"] = 30.0
+    height = params.get("total_height_m", 0)
+    if height > 40:
+        errors.append(f"{name}: WARNING - total_height_m={height} unusually tall, clamping to 30")
+        params["total_height_m"] = 30.0
+    floors = params.get("floors", 0)
+    if floors and floors > 6:
+        errors.append(f"{name}: WARNING - floors={floors} exceeds typical range")
+
+    # Height consistency: floor_heights should sum to total_height
+    fh = params.get("floor_heights_m", [])
+    if fh and height > 0:
+        fh_sum = sum(fh)
+        if abs(fh_sum - height) > 1.0:
+            errors.append(f"{name}: WARNING - floor_heights sum={fh_sum:.1f} != total_height={height:.1f}, recalculating")
+            params["total_height_m"] = round(fh_sum, 2)
+
+    # Window sanity: calibrated defaults (from calibrate_defaults.py)
+    win_w = params.get("window_width_m", 0.9)
+    win_h = params.get("window_height_m", 1.4)
+    if win_w and (win_w < 0.3 or win_w > 3.0):
+        errors.append(f"{name}: WARNING - window_width_m={win_w} out of range, using 0.9")
+        params["window_width_m"] = 0.9
+    if win_h and (win_h < 0.4 or win_h > 3.0):
+        errors.append(f"{name}: WARNING - window_height_m={win_h} out of range, using 1.4")
+        params["window_height_m"] = 1.4
+
+    # Door calibrated default: 0.85m not 0.9m
+    for door in params.get("doors_detail", []):
+        if isinstance(door, dict) and not door.get("width_m"):
+            door["width_m"] = 0.85
+
+    # Missing field warnings
     if not params.get("floor_heights_m"):
         errors.append(f"{name}: WARNING - floor_heights_m missing, will use defaults")
     if not params.get("roof_type"):
