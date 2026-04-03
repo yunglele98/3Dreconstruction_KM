@@ -426,7 +426,7 @@ python -m pytest tests/                          # all tests
 python -m pytest tests/test_enrich_skeletons.py  # single module
 ```
 
-70 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent, doors_and_foundations, roof_and_heritage, window_details), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, generation defaults, QA report, Megascans mapping, deep facade pipeline, SSIM comparison, planning scripts, reconstruct pipeline, training pipeline, urban analysis, sprint progress, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8+ Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
+70 test files, 1,688 tests. Covers: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent, doors_and_foundations, roof_and_heritage, window_details), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, generation defaults, QA report, Megascans mapping, deep facade pipeline, SSIM comparison, planning scripts, reconstruct pipeline, training pipeline, urban analysis, sprint progress, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8+ Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
 
 For visual/integration validation:
 1. Run scripts on a narrow sample first (`--address "22 Lippincott St"`)
