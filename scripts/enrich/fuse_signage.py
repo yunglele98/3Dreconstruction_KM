@@ -13,6 +13,7 @@ Usage:
 import argparse
 import json
 import os
+import sys
 import tempfile
 from pathlib import Path
 
@@ -130,7 +131,7 @@ def _extract_signage_observations(sig_data):
 # Main
 # ---------------------------------------------------------------------------
 
-def fuse_signage(signage_dir, params_dir):
+def fuse_signage(signage_dir, params_dir, address=None):
     """Fuse signage/OCR data into all matching param files."""
     signage_dir = Path(signage_dir)
     params_dir = Path(params_dir)
@@ -140,7 +141,15 @@ def fuse_signage(signage_dir, params_dir):
     skipped_already = 0
     skipped_other = 0
 
-    for param_file in sorted(params_dir.glob("*.json")):
+    param_files = sorted(params_dir.glob("*.json"))
+    if address:
+        target = address.replace(" ", "_") + ".json"
+        param_files = [f for f in param_files if f.name == target]
+        if not param_files:
+            print(f"No param file found for: {address}")
+            sys.exit(1)
+
+    for param_file in param_files:
         # Skip metadata files
         if param_file.name.startswith("_"):
             skipped_other += 1
@@ -211,5 +220,8 @@ if __name__ == "__main__":
         "--params", type=Path, default=REPO_ROOT / "params",
         help="Directory containing building param JSON files (default: params/)"
     )
+    parser.add_argument(
+        "--address", help="Process only this address (e.g. '22 Lippincott St')"
+    )
     args = parser.parse_args()
-    fuse_signage(args.signage, args.params)
+    fuse_signage(args.signage, args.params, address=args.address)

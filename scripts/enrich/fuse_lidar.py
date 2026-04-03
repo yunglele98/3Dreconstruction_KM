@@ -16,6 +16,7 @@ import json
 import math
 import os
 import struct
+import sys
 import tempfile
 from pathlib import Path
 
@@ -162,7 +163,7 @@ def _estimate_from_lidar(stats):
 # Main
 # ---------------------------------------------------------------------------
 
-def fuse_lidar(lidar_dir, params_dir):
+def fuse_lidar(lidar_dir, params_dir, address=None):
     """Fuse LiDAR data into all matching param files."""
     lidar_dir = Path(lidar_dir)
     params_dir = Path(params_dir)
@@ -172,7 +173,15 @@ def fuse_lidar(lidar_dir, params_dir):
     skipped_already = 0
     skipped_other = 0
 
-    for param_file in sorted(params_dir.glob("*.json")):
+    param_files = sorted(params_dir.glob("*.json"))
+    if address:
+        target = address.replace(" ", "_") + ".json"
+        param_files = [f for f in param_files if f.name == target]
+        if not param_files:
+            print(f"No param file found for: {address}")
+            sys.exit(1)
+
+    for param_file in param_files:
         # Skip metadata files
         if param_file.name.startswith("_"):
             skipped_other += 1
@@ -231,5 +240,8 @@ if __name__ == "__main__":
         "--params", type=Path, default=REPO_ROOT / "params",
         help="Directory containing building param JSON files (default: params/)"
     )
+    parser.add_argument(
+        "--address", help="Process only this address (e.g. '22 Lippincott St')"
+    )
     args = parser.parse_args()
-    fuse_lidar(args.lidar, args.params)
+    fuse_lidar(args.lidar, args.params, address=args.address)
