@@ -164,7 +164,7 @@
     "generation_defaults_applied": true,
     "photo_matched": {
       "method": "fuzzy",
-      "timestamp": "2026-03-29T08:34:16.596419Z",
+      "timestamp": "2026-04-03T06:00:23.011566Z",
       "script": "match_photos_to_params.py"
     },
     "colour_palette_rebuilt": "2026-04-02T19:16:37.689077+00:00",
@@ -407,7 +407,8 @@
       2,
       1
     ],
-    "window_type": "Double-hung sash"
+    "window_type": "Double-hung sash",
+    "photo": "IMG_20260315_154114750_HDR.jpg"
   },
   "wall_thickness_m": 0.3,
   "depth_analysis": {

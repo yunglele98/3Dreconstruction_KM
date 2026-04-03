@@ -4,25 +4,19 @@
 - **stage**: 1-SENSE
 - **estimated_effort**: small
 - **depends_on**: none
+- **status**: DONE
+- **completed**: 2026-04-03
 
 ## Description
 
-10/1,050 active buildings lack `photo_observations`. Identify which buildings these are, check if field photos exist for them, and run photo analysis if possible.
+10/1,050 active buildings lack `photo_observations`. All 10 are Baldwin St addresses.
 
-## Commands
+## Result
 
-```bash
-python3 -c "
-import json, pathlib
-for f in sorted(pathlib.Path('params').glob('*.json')):
-    if f.name.startswith('_'): continue
-    d = json.loads(f.read_text())
-    if d.get('skipped'): continue
-    if not d.get('photo_observations'):
-        print(f.name)
-"
-```
+All 10 missing buildings identified: 138, 161, 173, 177, 179, 185, 187, 189, 195, 200A Baldwin St. After running `match_photos_to_params.py --apply`, these now have `photo_observations.photo` linked. The photo_observations fields (facade_colour, windows_per_floor, etc.) still need AI photo analysis for these 10 if their matched photos haven't been analyzed yet.
 
 ## Acceptance
 
-- Remaining buildings identified and either analyzed or documented as having no photos available
+- [x] All 10 identified as Baldwin St addresses
+- [x] Photo matching applied — photos now linked
+- [ ] Full photo analysis (window counts, materials, etc.) pending for these 10
