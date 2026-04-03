@@ -86,7 +86,7 @@ def fuse_depth(
                 fusion.append("depth")
 
             param_file.write_text(
-                json.dumps(data, indent=2), encoding="utf-8"
+                json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
             )
             stats["fused"] += 1
 

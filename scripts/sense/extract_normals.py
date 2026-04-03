@@ -108,7 +108,7 @@ def main() -> None:
     )
 
     manifest_path = args.output / "normals_manifest.json"
-    manifest_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+    manifest_path.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
 
     ok = sum(1 for r in results if r["status"] in ("placeholder", "success"))
     print(f"Normals: {ok} processed")

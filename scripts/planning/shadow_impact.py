@@ -119,7 +119,7 @@ def main() -> None:
 
     if args.output:
         args.output.write_text(
-            json.dumps(result, indent=2), encoding="utf-8"
+            json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8"
         )
     print(f"Shadow analysis ({args.season}): {result['buildings_with_height_change']} buildings affected")
     for c in result["changes"][:10]:

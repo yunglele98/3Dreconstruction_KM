@@ -52,7 +52,7 @@ def extract_signage(
         "text_regions": [],
         "note": "OCR pending — requires PaddleOCR installation",
     }
-    json_path.write_text(json.dumps(ocr_data, indent=2), encoding="utf-8")
+    json_path.write_text(json.dumps(ocr_data, indent=2, ensure_ascii=False), encoding="utf-8")
     result["status"] = "placeholder"
     result["text_regions_found"] = 0
 
@@ -100,7 +100,7 @@ def main() -> None:
     )
 
     manifest_path = args.output / "signage_manifest.json"
-    manifest_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+    manifest_path.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
 
     ok = sum(1 for r in results if r["status"] in ("placeholder", "success"))
     print(f"Signage extraction: {ok} processed")

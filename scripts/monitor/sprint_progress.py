@@ -214,7 +214,7 @@ def main() -> None:
     report = generate_report(sprint_day, today)
 
     if args.json:
-        print(json.dumps(report, indent=2))
+        print(json.dumps(report, indent=2, ensure_ascii=False))
     else:
         print(f"Sprint Day {report['sprint_day']} ({report['date']})")
         print("=" * 50)

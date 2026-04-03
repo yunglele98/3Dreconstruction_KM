@@ -100,10 +100,10 @@ def build_web_data(
     output_dir.mkdir(parents=True, exist_ok=True)
 
     (output_dir / "buildings.json").write_text(
-        json.dumps(buildings, indent=2), encoding="utf-8"
+        json.dumps(buildings, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     (output_dir / "scenarios.json").write_text(
-        json.dumps(scenarios, indent=2), encoding="utf-8"
+        json.dumps(scenarios, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
     # Copy scenario interventions for the web platform

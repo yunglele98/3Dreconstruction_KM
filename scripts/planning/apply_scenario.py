@@ -134,7 +134,7 @@ def apply_scenario(
             stats["unchanged"] += 1
 
         (output_dir / param_file.name).write_text(
-            json.dumps(data, indent=2), encoding="utf-8"
+            json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         stats["total"] += 1
 
@@ -156,7 +156,7 @@ def apply_scenario(
                 }
                 safe_name = addr.replace(" ", "_")
                 (output_dir / f"{safe_name}.json").write_text(
-                    json.dumps(new_params, indent=2), encoding="utf-8"
+                    json.dumps(new_params, indent=2, ensure_ascii=False), encoding="utf-8"
                 )
                 stats["new_builds"] += 1
                 stats["total"] += 1

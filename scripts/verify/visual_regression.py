@@ -127,7 +127,7 @@ def main() -> None:
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(
-            json.dumps(report, indent=2), encoding="utf-8"
+            json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8"
         )
 
     print(f"Visual regression: {report['passed']}/{report['total_compared']} passed "

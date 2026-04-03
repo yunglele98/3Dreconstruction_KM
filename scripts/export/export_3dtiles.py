@@ -104,7 +104,7 @@ def export_3dtiles(
 
     tileset = create_tileset_json(buildings, output_dir)
     (output_dir / "tileset.json").write_text(
-        json.dumps(tileset, indent=2), encoding="utf-8"
+        json.dumps(tileset, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
     result["status"] = "tileset_created"

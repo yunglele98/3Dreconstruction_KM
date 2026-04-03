@@ -76,7 +76,7 @@ def main() -> None:
     else:
         args.elements.parent.mkdir(parents=True, exist_ok=True)
         args.elements.write_text(
-            json.dumps(calibrated, indent=2), encoding="utf-8"
+            json.dumps(calibrated, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         print(f"Calibrated {len(calibrated.get('calibrated_defaults', {}))} element types")
 

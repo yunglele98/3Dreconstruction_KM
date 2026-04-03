@@ -11,24 +11,24 @@
   ],
   "interventions": [
     {
-      "address": "292 College St",
+      "address": "271 College St",
       "type": "add_floor",
       "params_override": {
-        "floors": 4
+        "floors": 3
       }
     },
     {
-      "address": "294 College St",
+      "address": "277 College St",
       "type": "add_floor",
       "params_override": {
-        "floors": 4
+        "floors": 3
       }
     },
     {
-      "address": "296 College St",
+      "address": "287 College St",
       "type": "add_floor",
       "params_override": {
-        "floors": 4
+        "floors": 3
       }
     },
     {
@@ -60,17 +60,17 @@
       }
     },
     {
-      "address": "400 Dundas St W",
+      "address": "574 Dundas St W",
       "type": "add_floor",
       "params_override": {
-        "floors": 4
+        "floors": 3
       }
     },
     {
-      "address": "402 Dundas St W",
+      "address": "578 Dundas St W",
       "type": "add_floor",
       "params_override": {
-        "floors": 4
+        "floors": 3
       }
     },
     {
@@ -120,7 +120,7 @@
       }
     },
     {
-      "address": "216 Augusta Ave",
+      "address": "141 Augusta Ave",
       "type": "green_roof",
       "params_override": {
         "green_roof_type": "extensive"

@@ -52,7 +52,7 @@ def run_dust3r_single(
         "note": "DUSt3R pipeline pending — requires DUSt3R installation",
     }
     (building_dir / "dust3r_status.json").write_text(
-        json.dumps(status, indent=2), encoding="utf-8"
+        json.dumps(status, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
     result["status"] = "workspace_prepared"

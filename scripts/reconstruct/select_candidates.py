@@ -118,7 +118,7 @@ def main() -> None:
     )
 
     args.output.write_text(
-        json.dumps(candidates, indent=2), encoding="utf-8"
+        json.dumps(candidates, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     print(f"Selected {len(candidates)} candidates (min {args.min_views} views)")
     for c in candidates[:10]:

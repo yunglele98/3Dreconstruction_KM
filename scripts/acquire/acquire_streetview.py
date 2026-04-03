@@ -92,7 +92,7 @@ def main() -> None:
     manifest_path = args.output / "streetview_manifest.json"
     if not args.dry_run:
         manifest_path.write_text(
-            json.dumps(manifest, indent=2), encoding="utf-8"
+            json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8"
         )
 
     prefix = "[DRY RUN] " if args.dry_run else ""

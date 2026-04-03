@@ -58,7 +58,7 @@ def run_colmap_pipeline(
         "note": "COLMAP pipeline pending — requires COLMAP installation",
     }
     (building_dir / "colmap_status.json").write_text(
-        json.dumps(status, indent=2), encoding="utf-8"
+        json.dumps(status, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
     result["status"] = "workspace_prepared"
@@ -89,7 +89,7 @@ def main() -> None:
     if not args.dry_run:
         args.output.mkdir(parents=True, exist_ok=True)
         manifest_path.write_text(
-            json.dumps(results, indent=2), encoding="utf-8"
+            json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8"
         )
 
     prefix = "[DRY RUN] " if args.dry_run else ""

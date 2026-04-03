@@ -52,7 +52,7 @@ def extract_from_mesh(
             "note": "Element extraction pending — requires mesh segmentation pipeline",
         }
         (element_dir / "catalog.json").write_text(
-            json.dumps(catalog, indent=2), encoding="utf-8"
+            json.dumps(catalog, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         result["status"] = "workspace_prepared"
 

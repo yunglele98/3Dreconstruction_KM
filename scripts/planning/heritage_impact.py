@@ -130,7 +130,7 @@ def main() -> None:
 
     if args.output:
         args.output.write_text(
-            json.dumps(result, indent=2), encoding="utf-8"
+            json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8"
         )
 
     print(f"Heritage impact: score={result['heritage_preservation_score']}%")

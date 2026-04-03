@@ -62,7 +62,7 @@ def extract_elements(
                 "note": "Segmentation pending — requires trimesh/Open3D pipeline",
             }
             (element_dir / "catalog.json").write_text(
-                json.dumps(catalog, indent=2), encoding="utf-8"
+                json.dumps(catalog, indent=2, ensure_ascii=False), encoding="utf-8"
             )
         results.append(entry)
 
