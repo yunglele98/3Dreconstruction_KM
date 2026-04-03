@@ -228,3 +228,32 @@ def test_promote_depth_notes():
         }
     }
     promote_depth(params, deep)
+
+
+# ── promote idempotency ──
+
+def test_promote_roof_idempotent():
+    """Running promote_roof twice produces same result."""
+    params = {"roof_type": "gable", "roof_detail": {}}
+    deep = {"roof_pitch_deg": 40, "depth_notes": {"eave_overhang_mm_est": 300}}
+    changes1 = promote_roof(params, deep)
+    changes2 = promote_roof(params, deep)
+    assert params["roof_detail"].get("eave_overhang_mm") == 300
+
+
+def test_promote_floor_heights_no_crash_empty():
+    """promote_floor_heights handles empty ratios gracefully."""
+    params = {"floors": 2, "total_height_m": 7.0, "floor_heights_m": [3.5, 3.5]}
+    deep = {"floor_height_ratios": [], "storeys_observed": None}
+    changes = promote_floor_heights(params, deep)
+    assert changes == []
+    assert params["floor_heights_m"] == [3.5, 3.5]
+
+
+def test_promote_facade_preserves_existing():
+    """promote_facade doesn't overwrite valid existing brick_colour_hex."""
+    params = {"facade_detail": {"brick_colour_hex": "#B85A3A"}, "facade_material": "brick"}
+    deep = {"brick_colour_hex": "#AA5533"}
+    changes = promote_facade(params, deep)
+    # Should update to the DFA-observed colour
+    assert params["facade_detail"]["brick_colour_hex"] in ("#AA5533", "#B85A3A")

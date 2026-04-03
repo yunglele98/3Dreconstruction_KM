@@ -21,14 +21,16 @@ from generator_modules.materials import (
 )
 from generator_modules.geometry import create_box, boolean_cut, _clamp_positive
 
+_DEFAULT_DEPTH = 10.0
+
 
 def create_walls(params, depth=None):
     """Create the main building walls as a hollow box with water table and party wall blanking."""
     width = _clamp_positive(params.get("facade_width_m"), 6.0, minimum=1.0)
     if depth is None:
-        depth = _clamp_positive(params.get("facade_depth_m"), DEFAULT_DEPTH, minimum=1.0)
+        depth = _clamp_positive(params.get("facade_depth_m"), _DEFAULT_DEPTH, minimum=1.0)
     else:
-        depth = _clamp_positive(depth, DEFAULT_DEPTH, minimum=1.0)
+        depth = _clamp_positive(depth, _DEFAULT_DEPTH, minimum=1.0)
     total_h = _clamp_positive(params.get("total_height_m"), 9.0, minimum=2.0)
 
     # Get wall height (up to eave, not gable peak)

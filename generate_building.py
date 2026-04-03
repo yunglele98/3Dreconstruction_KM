@@ -2679,12 +2679,25 @@ def generate_batch_individual(params_dir, output_dir=None, do_render=False,
                 "error": str(e),
             })
 
+        # Write manifest incrementally so progress survives crashes
+        if i % 10 == 0 or i == len(plans):
+            _write_batch_manifest(out_dir / "batch.manifest.json", batch_manifest)
+
     batch_manifest_path = out_dir / "batch.manifest.json"
-    with open(batch_manifest_path, "w") as f:
-        json.dump(batch_manifest, f, indent=2)
-        f.write("\n")
-    print(f"\nBatch manifest: {batch_manifest_path}")
+    _write_batch_manifest(batch_manifest_path, batch_manifest)
+    c = batch_manifest["counts"]
+    print(f"\nBatch complete: {c['completed']} completed, {c['skipped']} skipped, {c['failed']} failed")
+    print(f"Batch manifest: {batch_manifest_path}")
     return batch_manifest
+
+
+def _write_batch_manifest(path, manifest):
+    """Write batch manifest atomically (temp file + rename)."""
+    tmp = Path(str(path) + ".tmp")
+    with open(tmp, "w") as f:
+        json.dump(manifest, f, indent=2)
+        f.write("\n")
+    tmp.replace(path)
 
 
 # ---------------------------------------------------------------------------
@@ -2696,11 +2709,14 @@ def _validate_params(params):
     errors = []
     name = params.get("building_name", "unknown")
 
-    if not params.get("facade_width_m") or params["facade_width_m"] <= 0:
+    fw = params.get("facade_width_m")
+    if not isinstance(fw, (int, float)) or fw <= 0:
         errors.append(f"{name}: facade_width_m is missing or <= 0")
-    if not params.get("total_height_m") or params["total_height_m"] <= 0:
+    th = params.get("total_height_m")
+    if not isinstance(th, (int, float)) or th <= 0:
         errors.append(f"{name}: total_height_m is missing or <= 0")
-    if not params.get("floors") or params["floors"] <= 0:
+    fl = params.get("floors")
+    if not isinstance(fl, (int, float)) or fl <= 0:
         errors.append(f"{name}: floors is missing or <= 0")
 
     if not params.get("floor_heights_m"):

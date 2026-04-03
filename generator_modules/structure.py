@@ -25,6 +25,8 @@ from generator_modules.geometry import (
     _safe_tan, _clamp_positive,
 )
 
+_DEFAULT_DEPTH = 10.0
+
 
 def create_porch(params, facade_width):
     """Create a front porch with posts and optional roof."""
@@ -316,7 +318,7 @@ def create_chimney(params, wall_h, ridge_height, width):
     cap_mat = create_stone_material("mat_chimney_cap", "#6A6A6A")
 
     hw = width / 2
-    depth = params.get("facade_depth_m", DEFAULT_DEPTH)
+    depth = params.get("facade_depth_m", _DEFAULT_DEPTH)
 
     # Build chimney positions from data or defaults
     chimney_specs = []
@@ -707,7 +709,7 @@ def create_chimney_caps(params, wall_h, ridge_height, width, bldg_id=""):
     cap_mat = create_brick_material(f"mat_chimcap_{facade_hex.lstrip('#')}", facade_hex)
     stone_cap = get_or_create_material("mat_chimcap_stone", colour_hex="#8A8A88", roughness=0.7)
 
-    depth = params.get("facade_depth_m", DEFAULT_DEPTH)
+    depth = params.get("facade_depth_m", _DEFAULT_DEPTH)
     hw = width / 2
 
     for key in chimney_data:
