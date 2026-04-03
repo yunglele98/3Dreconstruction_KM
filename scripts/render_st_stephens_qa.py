@@ -2,7 +2,7 @@ import bpy
 from mathutils import Vector
 from pathlib import Path
 
-OUT_DIR = Path(r"C:\Users\liam1\blender_buildings\outputs")
+OUT_DIR = Path(__file__).resolve().parent.parent / "outputs"
 COLLECTION_NAME = "building_103_Bellevue_Ave"
 
 

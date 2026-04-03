@@ -551,7 +551,7 @@ ORIGIN_X = {ORIGIN_X}
 ORIGIN_Y = {ORIGIN_Y}
 
 # Load GIS data from JSON
-SCRIPT_DIR = Path(os.path.dirname(os.path.abspath(__file__))) if "__file__" in dir() else Path("C:/Users/liam1/blender_buildings")
+SCRIPT_DIR = Path(os.path.dirname(os.path.abspath(__file__))) if "__file__" in dir() else Path(__file__).resolve().parent.parent
 DATA_PATH = {data_path_expr}
 with open(DATA_PATH, encoding="utf-8") as _f:
     GIS = json.load(_f)

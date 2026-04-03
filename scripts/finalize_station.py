@@ -4,9 +4,9 @@ import sys
 import random
 
 # --- CONFIG ---
-SOURCE_FILE = r"C:\Users\liam1\blender_buildings\outputs\demos\fire_station_315_geometry_extracted.blend"
-PHOTO_DIR = r"C:\Users\liam1\blender_buildings\PHOTOS KENSINGTON sorted\Toronto Fire Station 315"
-FINAL_FILE = r"C:\Users\liam1\blender_buildings\outputs\demos\fire_station_315_picture_perfect_FINAL.blend"
+SOURCE_FILE = str(Path(__file__).resolve().parent.parent / "outputs" / "demos" / "fire_station_315_geometry_extracted.blend")
+PHOTO_DIR = str(Path(__file__).resolve().parent.parent / "PHOTOS KENSINGTON sorted" / "Toronto Fire Station 315")
+FINAL_FILE = str(Path(__file__).resolve().parent.parent / "outputs" / "demos" / "fire_station_315_picture_perfect_FINAL.blend")
 
 def create_advanced_photo_material(name, photo_path, scale=0.08):
     mat = bpy.data.materials.new(name=name)

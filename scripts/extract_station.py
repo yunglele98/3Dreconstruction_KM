@@ -3,8 +3,8 @@ import os
 import sys
 
 # --- CONFIG ---
-SOURCE_BLEND = r"C:\Users\liam1\blender_buildings\archive\kensington_pilot.blend"
-EXTRACT_FILE = r"C:\Users\liam1\blender_buildings\outputs\demos\fire_station_315_geometry_extracted.blend"
+SOURCE_BLEND = str(Path(__file__).resolve().parent.parent / "archive" / "kensington_pilot.blend")
+EXTRACT_FILE = str(Path(__file__).resolve().parent.parent / "outputs" / "demos" / "fire_station_315_geometry_extracted.blend")
 
 def extract_station_geometry():
     if not os.path.exists(SOURCE_BLEND):

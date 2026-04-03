@@ -4,9 +4,9 @@ import sys
 import random
 
 # --- CONFIG ---
-ORIGINAL_BLEND = r"C:\Users\liam1\blender_buildings\outputs\full_backup\No_8_Hose_Station_Bellevue_Ave.blend"
-PHOTO_DIR = r"C:\Users\liam1\blender_buildings\PHOTOS KENSINGTON sorted\Toronto Fire Station 315"
-OUTPUT_BLEND = r"C:\Users\liam1\blender_buildings\outputs\demos\fire_station_315_picture_perfect_FINAL.blend"
+ORIGINAL_BLEND = str(Path(__file__).resolve().parent.parent / "outputs" / "full_backup" / "No_8_Hose_Station_Bellevue_Ave.blend")
+PHOTO_DIR = str(Path(__file__).resolve().parent.parent / "PHOTOS KENSINGTON sorted" / "Toronto Fire Station 315")
+OUTPUT_BLEND = str(Path(__file__).resolve().parent.parent / "outputs" / "demos" / "fire_station_315_picture_perfect_FINAL.blend")
 
 def create_perfect_photo_material(photo_dir):
     """Creates a high-quality material using box-projected site photos."""

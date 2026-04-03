@@ -18,6 +18,6 @@ def search_objects_in_blends(directory):
             pass
 
 if __name__ == "__main__":
-    search_objects_in_blends(r"C:\Users\liam1\blender_buildings\outputs\demos")
-    search_objects_in_blends(r"C:\Users\liam1\blender_buildings\outputs\full")
-    search_objects_in_blends(r"C:\Users\liam1\blender_buildings\outputs\full_backup")
+    search_objects_in_blends(str(Path(__file__).resolve().parent.parent / "outputs" / "demos"))
+    search_objects_in_blends(str(Path(__file__).resolve().parent.parent / "outputs" / "full"))
+    search_objects_in_blends(str(Path(__file__).resolve().parent.parent / "outputs" / "full_backup"))

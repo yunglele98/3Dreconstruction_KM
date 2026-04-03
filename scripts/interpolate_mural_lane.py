@@ -1,6 +1,6 @@
 import os, re, math, xml.etree.ElementTree as ET
 
-photo_dir = r'C:\Users\liam1\blender_buildings\PHOTOS KENSINGTON sorted\Chinatown Mural Lane'
+photo_dir = str(Path(__file__).resolve().parent.parent / 'PHOTOS KENSINGTON sorted' / 'Chinatown Mural Lane')
 photos = sorted([f for f in os.listdir(photo_dir) if f.startswith('IMG_') and f.endswith('.jpg')])
 
 def parse_ts(fname):
@@ -171,7 +171,7 @@ for sname in ['night', 'walk1', 'walk2']:
     coords_str = ' '.join(f'{lon:.7f},{lat:.7f},0' for _, lat, lon, sn, _ in session_results)
     ET.SubElement(linestring, 'coordinates').text = coords_str
 
-out_path = r'C:\Users\liam1\blender_buildings\PHOTOS KENSINGTON sorted\Chinatown Mural Lane\mural_lane_photos.kml'
+out_path = str(Path(__file__).resolve().parent.parent / 'PHOTOS KENSINGTON sorted' / 'Chinatown Mural Lane' / 'mural_lane_photos.kml')
 tree = ET.ElementTree(kml)
 ET.indent(tree, space='  ')
 tree.write(out_path, encoding='utf-8', xml_declaration=True)

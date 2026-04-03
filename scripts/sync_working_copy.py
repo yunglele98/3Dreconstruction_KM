@@ -9,7 +9,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-SRC = Path(r"C:\Users\liam1\blender_buildings")
+SRC = Path(__file__).resolve().parent.parent
 DST = Path(r"D:\liam1_transfer\blender_buildings")
 
 SYNC_DIRS = [
