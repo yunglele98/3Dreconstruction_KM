@@ -19,6 +19,25 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # ---------------------------------------------------------------------------
+# Scripts that accept --address / --street flags
+# ---------------------------------------------------------------------------
+
+ADDR_SCRIPTS = {
+    "scripts/export_db_params.py",
+    "scripts/enrich/fuse_depth.py",
+    "scripts/enrich/fuse_segmentation.py",
+    "scripts/enrich/fuse_lidar.py",
+    "scripts/enrich/fuse_photogrammetry.py",
+    "scripts/enrich/fuse_signage.py",
+    "scripts/reconstruct/select_candidates.py",
+}
+
+STREET_SCRIPTS = {
+    "scripts/export_db_params.py",
+    "scripts/reconstruct/run_photogrammetry_block.py",
+}
+
+# ---------------------------------------------------------------------------
 # Stage definitions
 # ---------------------------------------------------------------------------
 
@@ -187,9 +206,9 @@ def build_command(runner: str, script: str, args: argparse.Namespace) -> list[st
         return cmd
 
     cmd = [sys.executable, script_path]
-    if args.address:
+    if args.address and script in ADDR_SCRIPTS:
         cmd.extend(["--address", args.address])
-    if args.street:
+    if args.street and script in STREET_SCRIPTS:
         cmd.extend(["--street", args.street])
     return cmd
 
