@@ -1,8 +1,9 @@
 {
   "building_name": "429 College St",
-  "floors": 1,
+  "floors": 2,
   "floor_heights_m": [
-    8.5
+    4.0,
+    4.5
   ],
   "total_height_m": 8.5,
   "facade_width_m": 6.1,
@@ -24,6 +25,7 @@
   "facade_material": "concrete",
   "facade_colour": "grey concrete",
   "windows_per_floor": [
+    0,
     0
   ],
   "window_type": "double_hung",

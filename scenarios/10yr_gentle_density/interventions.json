@@ -1,0 +1,942 @@
+{
+  "scenario_id": "gentle_density",
+  "name": "Gentle Density",
+  "interventions": [
+    {
+      "address": "10 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "11 Carlyle St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.4
+      }
+    },
+    {
+      "address": "126 Denison Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.7
+      }
+    },
+    {
+      "address": "14 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "15 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "25 Bellevue Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "271 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "277 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "27 Bellevue Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 6.7
+      }
+    },
+    {
+      "address": "285 1 2 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "287 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "289 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "289A College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "28 Denison Sq",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "292 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.2
+      }
+    },
+    {
+      "address": "294-296 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.2
+      }
+    },
+    {
+      "address": "294 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.2
+      }
+    },
+    {
+      "address": "296 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.2
+      }
+    },
+    {
+      "address": "298 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.4
+      }
+    },
+    {
+      "address": "298A Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.4
+      }
+    },
+    {
+      "address": "2 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.8
+      }
+    },
+    {
+      "address": "300A Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.4
+      }
+    },
+    {
+      "address": "30 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.7
+      }
+    },
+    {
+      "address": "32 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.7
+      }
+    },
+    {
+      "address": "333 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 6.5
+      }
+    },
+    {
+      "address": "335 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 6.5
+      }
+    },
+    {
+      "address": "337 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.2
+      }
+    },
+    {
+      "address": "339 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.2
+      }
+    },
+    {
+      "address": "339A College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.2
+      }
+    },
+    {
+      "address": "341 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.2
+      }
+    },
+    {
+      "address": "347 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "34 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.7
+      }
+    },
+    {
+      "address": "360 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.0
+      }
+    },
+    {
+      "address": "362 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.8
+      }
+    },
+    {
+      "address": "366 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.8
+      }
+    },
+    {
+      "address": "368 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.1
+      }
+    },
+    {
+      "address": "36 St Andrew St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.7
+      }
+    },
+    {
+      "address": "370 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 7.8
+      }
+    },
+    {
+      "address": "372 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 7.8
+      }
+    },
+    {
+      "address": "374 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 6.9
+      }
+    },
+    {
+      "address": "376 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "388 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.8
+      }
+    },
+    {
+      "address": "392 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.5
+      }
+    },
+    {
+      "address": "394 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.5
+      }
+    },
+    {
+      "address": "396 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.9
+      }
+    },
+    {
+      "address": "398 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 7.8
+      }
+    },
+    {
+      "address": "400 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.4
+      }
+    },
+    {
+      "address": "402 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.4
+      }
+    },
+    {
+      "address": "404 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.4
+      }
+    },
+    {
+      "address": "406 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.4
+      }
+    },
+    {
+      "address": "408 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.4
+      }
+    },
+    {
+      "address": "409 1 2 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "411 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 11.5
+      }
+    },
+    {
+      "address": "415-417 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 11.5
+      }
+    },
+    {
+      "address": "415 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 11.5
+      }
+    },
+    {
+      "address": "416 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "417 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 11.5
+      }
+    },
+    {
+      "address": "419 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 11.5
+      }
+    },
+    {
+      "address": "423 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 11.5
+      }
+    },
+    {
+      "address": "429 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.8
+      }
+    },
+    {
+      "address": "431 College St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.5
+      }
+    },
+    {
+      "address": "447 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.3
+      }
+    },
+    {
+      "address": "449 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.3
+      }
+    },
+    {
+      "address": "450 Spadina Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "451 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.3
+      }
+    },
+    {
+      "address": "453 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.3
+      }
+    },
+    {
+      "address": "455 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.3
+      }
+    },
+    {
+      "address": "471 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.2
+      }
+    },
+    {
+      "address": "473 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.5
+      }
+    },
+    {
+      "address": "475 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.9
+      }
+    },
+    {
+      "address": "477 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.9
+      }
+    },
+    {
+      "address": "479 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.1
+      }
+    },
+    {
+      "address": "481 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.1
+      }
+    },
+    {
+      "address": "483 Bathurst St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.1
+      }
+    },
+    {
+      "address": "536 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "538 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "542 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "544 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "546 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.9
+      }
+    },
+    {
+      "address": "548 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.9
+      }
+    },
+    {
+      "address": "548A Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.9
+      }
+    },
+    {
+      "address": "562 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "562A Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "564 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "568 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.8
+      }
+    },
+    {
+      "address": "570 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.8
+      }
+    },
+    {
+      "address": "574 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "576 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "578 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.6
+      }
+    },
+    {
+      "address": "580 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "584 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "586 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "602 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "602A Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "604 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "606-608 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "606 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "608 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "610 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "614 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 10.1
+      }
+    },
+    {
+      "address": "618 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.2
+      }
+    },
+    {
+      "address": "61 1 2 Kensington Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 8.7
+      }
+    },
+    {
+      "address": "620 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.2
+      }
+    },
+    {
+      "address": "622 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.8
+      }
+    },
+    {
+      "address": "626 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.8
+      }
+    },
+    {
+      "address": "634 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.7
+      }
+    },
+    {
+      "address": "638 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.7
+      }
+    },
+    {
+      "address": "63 Oxford St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 7.8
+      }
+    },
+    {
+      "address": "640 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.7
+      }
+    },
+    {
+      "address": "650 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 2,
+        "total_height_m": 6.8
+      }
+    },
+    {
+      "address": "666 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 9.4
+      }
+    },
+    {
+      "address": "66 1 2 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "66 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "686 Dundas St W",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "74 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 11.1
+      }
+    },
+    {
+      "address": "80 Kensington Ave",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    },
+    {
+      "address": "80 Nassau St",
+      "type": "add_floor",
+      "params_override": {
+        "floors": 3,
+        "total_height_m": 12.6
+      }
+    }
+  ]
+}

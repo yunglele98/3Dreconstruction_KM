@@ -52,7 +52,17 @@
     "heritage_register": "Part V HCD Contributing",
     "protection_level": 4,
     "heritage_score": 46,
-    "significance": "low"
+    "significance": "low",
+    "extracted_features": [
+      "bay_window",
+      "dormer",
+      "gable",
+      "voussoirs",
+      "heritage_fabric"
+    ],
+    "statement_materials": [
+      "brick"
+    ]
   },
   "context": {
     "building_type": "residential",

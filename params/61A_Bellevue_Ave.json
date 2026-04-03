@@ -1,8 +1,10 @@
 {
   "building_name": "61A Bellevue Ave",
-  "floors": 1,
+  "floors": 3,
   "floor_heights_m": [
-    8.8
+    3.0,
+    2.9,
+    2.9
   ],
   "total_height_m": 8.83,
   "facade_width_m": 5.2,
