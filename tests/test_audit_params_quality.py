@@ -49,7 +49,7 @@ class TestIsNumber:
     def test_string_not_number(self):
         assert apq.is_number("abc") is False
 
-    def test_numeric_string_not_number(self):
+    def test_numeric_string_is_number(self):
         # The function explicitly uses float(value), but strings are not rejected by float()
         # However the function checks isinstance(bool) first and then tries float()
         # "5" can be float()-converted, so it is a number
@@ -90,7 +90,7 @@ class TestToInt:
     def test_bool_returns_none(self):
         assert apq.to_int(True) is None
 
-    def test_string_not_parsed(self):
+    def test_numeric_string_parsed(self):
         # to_int("3") returns 3 – string numeric values ARE parsed
         assert apq.to_int("3") == 3
 

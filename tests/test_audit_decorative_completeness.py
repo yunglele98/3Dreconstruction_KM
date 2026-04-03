@@ -79,9 +79,11 @@ class TestElementPresent:
     def test_dict_with_present_true(self):
         assert adc.element_present({"cornice": {"present": True}}, "cornice") is True
 
-    def test_dict_with_present_false(self):
-        # A non-empty dict makes bool(val) True even if present=False.
-        # The function returns present=False OR bool(dict) which is True for non-empty dict.
+    def test_dict_with_present_false_still_truthy(self):
+        # element_present returns (val.get("present", False) OR bool(val)).
+        # A dict {"present": False} is non-empty, so bool(val) is True and the
+        # function returns True even though present=False.  An empty dict {}
+        # is the correct way to signal "element recorded but absent".
         assert adc.element_present({"cornice": {"present": False}}, "cornice") is True
 
     def test_non_empty_dict_without_present_key(self):
