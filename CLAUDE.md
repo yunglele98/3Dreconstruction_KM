@@ -39,21 +39,33 @@ Study area: Dundas St W (north) / Bathurst St (east) / College St (south) / Spad
 
 ## Commands
 
+### Most-used (start here)
+
+```bash
+python -m pytest tests/                                          # run all tests
+python -m pytest tests/test_enrich_skeletons.py                  # single file
+python -m pytest tests/test_edge_cases.py::test_name             # single test
+python scripts/visual_audit/run_full_audit.py --limit 20         # quick visual audit
+blender --background --python generate_building.py -- --params params/22_Lippincott_St.json --output-dir outputs/single/ --batch-individual --render
+```
+
+### Full pipeline command inventory
+
 ```bash
 # === Phase 0: Visual Audit (render vs photo comparison) ===
 python scripts/visual_audit/run_full_audit.py                    # full audit (~35 min)
 python scripts/visual_audit/run_full_audit.py --limit 20         # quick test
 
-# === Batch Render (Blender 5.1) ===
+# === Batch Render (Blender 5.0) ===
 blender --background --python generate_building.py -- --params params/ --output-dir outputs/buildings_renders_v1/ --batch-individual --render
 blender --background --python generate_building.py -- --params params/ --output-dir outputs/buildings_renders_v1/ --batch-individual --render --skip-existing
 blender --background --python generate_building.py -- --params params/22_Lippincott_St.json --output-dir outputs/camera_test/ --batch-individual --render
 blender --background --python generate_building.py -- --params params/ --batch-individual --render --cycles  # GPU Cycles (slower, higher quality)
 
 # === Tests ===
-python -m pytest tests/ -q
-python -m pytest tests/test_enrich_skeletons.py -q   # single file
-python -m pytest tests/test_edge_cases.py::test_name  # single test
+python -m pytest tests/
+python -m pytest tests/test_enrich_skeletons.py      # single file
+python -m pytest tests/test_edge_cases.py::test_name # single test
 
 # === Orchestration / status ===
 python scripts/run_blender_buildings_workflows.py route
@@ -230,7 +242,7 @@ Raw Data Sources:
 - `params/` — ~2,060 JSON files (1,064 active + ~820 skipped). `_` prefix = metadata, `"skipped": true` = non-building.
 - `scripts/` — 300+ Python scripts. New V7 scripts go in subdirs: `scripts/sense/`, `scripts/reconstruct/`, `scripts/enrich/`, `scripts/texture/`, `scripts/analyze/`, `scripts/planning/`, `scripts/export/`, `scripts/verify/`, `scripts/monitor/`, `scripts/acquire/`.
 - `generator_modules/` — decomposed from `generate_building.py` (9,935 → 2,931 lines). 10 modules: `colours.py`, `materials.py`, `geometry.py`, `walls.py`, `windows.py`, `doors.py`, `roofs.py`, `decorative.py`, `storefront.py`, `structure.py`.
-- `tests/` — 93 pytest test files, 1,961 tests.
+- `tests/` — 81 pytest test files.
 - `outputs/` — rendered `.blend` files: `full/`, `exports/`, `demos/`, `single/`.
 - `PHOTOS KENSINGTON/` — 1,867 geotagged field photos + `csv/photo_address_index.csv`.
 - `agent_ops/` — kanban: `00_intake/` → `10_backlog/` → `20_active/` → `30_handoffs/` → `40_reviews/` → `60_releases/` → `90_archive/`.
@@ -453,7 +465,7 @@ python -m pytest tests/                          # all tests
 python -m pytest tests/test_enrich_skeletons.py  # single module
 ```
 
-62 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, QA report, Megascans mapping, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8 Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
+81 test files cover: enrichment pipeline (enrich_skeletons, facade_descriptions, normalize_params, patch_hcd, infer_missing, translate_agent), colour palettes (rebuild, diversify), photo matching, storefronts, porches, setbacks, depth notes, adjacency graph, streetscape rhythm, generator contracts, QA report, Megascans mapping, Blender asset export (FBX, LODs, collision, Datasmith, Unity), and 8 Unreal urban-element export/import scripts. Each test creates temp param files and verifies output, idempotency, and skip-file handling.
 
 For visual/integration validation:
 1. Run scripts on a narrow sample first (`--address "22 Lippincott St"`)
