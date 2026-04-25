@@ -1,0 +1,40 @@
+name: index-scenarios-ob1
+
+# Capture every Kensington scenario into OB1 on push to main.
+# Idempotent (server-side fingerprint dedup).
+#
+# Required GH Actions secrets:
+#   MCP_CONNECTION_URL  — full URL incl. ?key=<MCP_ACCESS_KEY>
+#   SUPABASE_ANON_KEY   — Supabase anon key for Authorization header
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scenarios/**"
+      - "scripts/index_scenarios_to_ob1.py"
+      - ".github/workflows/index-scenarios-ob1.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: index-scenarios-ob1
+  cancel-in-progress: true
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Index scenarios
+        env:
+          MCP_CONNECTION_URL: ${{ secrets.MCP_CONNECTION_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$MCP_CONNECTION_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "::error::Missing GH secrets MCP_CONNECTION_URL and/or SUPABASE_ANON_KEY"
+            exit 1
+          fi
+          python3 scripts/index_scenarios_to_ob1.py

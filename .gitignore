@@ -45,3 +45,6 @@ archive/
 fbx_batch_log.txt
 missing_list.txt
 regen_list.txt
+
+# OB1 scenario indexer cache
+.ob1-scenario-manifest.json

@@ -449,3 +449,38 @@ For visual/integration validation:
 - Use `(value or "").lower()` not `.get("key", "").lower()` — handles explicit `None`
 - Imperative commit messages scoped to one pipeline stage
 - PRs: include affected addresses, dependencies, and screenshots for geometry/material changes
+
+## Open Brain (OB1) integration
+
+Vendored single-file CLI at `scripts/ob1` (Python stdlib only, no deps).
+Use it to capture batch lifecycle events and search prior decisions.
+
+```bash
+# Capture
+python scripts/ob1 capture "deciding to bake textures at 1024 not 2048" \
+  --meta source=3Dreconstruction_KM --meta kind=decision \
+  --meta domain=texturing
+
+# Search the indexed scenarios + any captured decisions
+python scripts/ob1 search "heritage preservation 2036" --pretty
+python scripts/ob1 recent -n 10
+```
+
+`scripts/index_scenarios_to_ob1.py` walks `scenarios/<id>/` and captures
+each scenario as one thought (metadata + interventions + impact summaries
+combined). Metadata: `{source: 3Dreconstruction_KM, kind: scenario,
+scenario_id, scenario_name, intervention_count}`.
+
+CI: `.github/workflows/index-scenarios-ob1.yml` runs on push to `main`
+when `scenarios/` or the indexer changes. Requires repo secrets
+`MCP_CONNECTION_URL` and `SUPABASE_ANON_KEY`.
+
+`EXAMPLE_ob1_in_fbx_batch.ps1` shows the lifecycle capture pattern for
+PowerShell. Production `run_fbx_batch.ps1` is unchanged; copy the pattern
+when you want batch observability.
+
+**Not currently indexed:** the 1,065 per-building `params/*.json` files —
+indexing each individually would dilute search quality. Per-building
+specifics still live in `params/` for direct lookup; metadata or rolled-up
+summaries can be captured as needed via `ob1 capture` from any analysis
+script.
