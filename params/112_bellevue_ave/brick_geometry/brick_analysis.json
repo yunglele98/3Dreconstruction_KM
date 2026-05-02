@@ -1,0 +1,69 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/112 Bellevue Ave.jpg",
+    "address": "112 Bellevue Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 218,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Front door ~2.1m, ~28 courses. Second-floor window ~1.3m, ~18 courses. Multiple openings allow cross-reference."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout main facade. Consistent coursing from stone foundation to gable peak. The brick is continuous up into the gable (no siding transition).",
+    "colour": {
+      "base_hex": "#B0503A",
+      "variance": "medium",
+      "description": "Warm red-orange brick typical of late Victorian Toronto residential construction. Some darker bricks scattered throughout — natural variation from kiln firing. Photo taken in warm golden-hour light which accentuates the orange tone. True colour likely slightly cooler/more neutral red. The overall impression is of quality residential brick — not the highest institutional grade but well above common.",
+      "polychromatic": true,
+      "polychromatic_notes": "Buff/cream stone or cast stone used for decorative window heads (segmental arch voussoirs with prominent keystones). The buff stone against red brick creates a deliberate two-tone decorative scheme. Stone quoins may be present at building corners."
+    },
+    "special_features": [
+      {
+        "type": "gauged_arch",
+        "location": "above all windows",
+        "description": "Segmental arch window heads in buff stone/cast stone with prominent keystones. The arches project slightly from the wall face and use contrasting light-coloured stone voussoirs. Very typical of 1880s-1890s Bellevue Ave Victorians."
+      },
+      {
+        "type": "stone_sill",
+        "location": "all window sills",
+        "description": "Buff/cream stone sills projecting from the brick face."
+      },
+      {
+        "type": "peaked_gable",
+        "location": "centre of facade",
+        "description": "Prominent Victorian peaked gable at roof line in brick with decorative bargeboard. The gable contains a tall narrow window with its own arch head."
+      },
+      {
+        "type": "corbelling",
+        "location": "gable peak and eave line",
+        "description": "Decorative corbelling in the gable creating a stepped profile."
+      },
+      {
+        "type": "covered_porch",
+        "location": "ground floor",
+        "description": "Full-width covered verandah with columns at ground floor. Porch roof at first-floor level creates a balcony."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "good",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "Well-maintained Victorian semi-detached house. Brick in good condition. The warm golden light in the photo suggests late afternoon — colour calibration should account for warm bias. Chimney stacks visible at roofline in matching brick. Weeping willow tree from adjacent property partially encroaches. This is a high-quality representative example of Bellevue Ave Victorian brick residential architecture."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.90,
+      "confidence": 0.75,
+      "blender_brick_scale_corrected": 1.0,
+      "notes": "Good face-on photo in warm light. Door and multiple windows provide scale references. The stone arch heads are highly visible and will need dedicated geometry in the Blender model — they cannot be captured by texture alone."
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/102 & 104 Bellevue Ave.jpg",
+    "address": "102 & 104 Bellevue Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 218,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Multiple windows across two full storeys plus attic. Door ~2.1m, ~28 courses. Second-floor windows ~1.3m, ~18 courses. Bay window dimensions provide secondary reference."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout all brick surfaces. The extensive polychromatic detailing is executed within the running bond using contrasting brick colours and stone inserts, not bond pattern changes.",
+    "colour": {
+      "base_hex": "#B85838",
+      "variance": "low",
+      "description": "Warm orange-red pressed brick, very high quality with tight dimensional tolerance. The warm tone is accentuated by autumn afternoon light in the photo but the brick appears genuinely warmer/more orange than the darker red-brown of many Kensington buildings. Likely from the Don Valley brickworks or similar premium source. Very uniform colour in the main field — institutional quality for a residential building, indicating wealth of original owners.",
+      "polychromatic": true,
+      "polychromatic_notes": "Extensive and elaborate polychromatic scheme: buff/cream brick and stone used for horizontal belt courses, window head arches (segmental arches with radiating voussoirs), window surrounds, string courses, and decorative panels. The buff elements create a rich two-tone decorative programme across the full facade. The polychromatic detailing is among the most elaborate in the Kensington HCD. Buff brick bands appear at every floor level and as window apron panels."
+    },
+    "special_features": [
+      {
+        "type": "gauged_arch",
+        "location": "above all windows, both storeys",
+        "description": "Segmental arched window heads in buff stone/brick with radiating voussoirs on all windows across both units. Arches consistently executed with matching profiles. The first-floor arches are particularly prominent."
+      },
+      {
+        "type": "polychromatic_banding",
+        "location": "full facade, all floor levels",
+        "description": "Buff/cream brick horizontal belt courses at each floor level and as continuous string courses. At least 3-4 distinct buff bands visible across the facade height. This is the primary decorative element."
+      },
+      {
+        "type": "peaked_gable",
+        "location": "both units, symmetrical",
+        "description": "Two matching peaked gables with decorative bargeboard creating a symmetrical double-gable roofline. Each gable contains attic windows with their own arch heads. The gables are brick-faced (not siding) continuing the polychromatic scheme to the peak."
+      },
+      {
+        "type": "bay_window",
+        "location": "second floor, both units",
+        "description": "Projecting bay windows at the second floor on both units. The bays have their own brick cladding with matching polychromatic details."
+      },
+      {
+        "type": "covered_porch",
+        "location": "ground floor, centre",
+        "description": "Shared covered verandah with ornate turned columns spanning the ground floor between the two units. Porch roof creates a balcony at the first-floor level."
+      },
+      {
+        "type": "corbelling",
+        "location": "cornice and gable peaks",
+        "description": "Corbelled brick at the eave line/cornice and at the gable peaks. Multiple stepped courses creating shadow lines."
+      },
+      {
+        "type": "stone_sill",
+        "location": "all windows",
+        "description": "Buff stone or cast stone sills on all windows, projecting from the brick face."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "good",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "One of the finest Victorian brick facades in the Bellevue Ave area. The building is in excellent condition — the polychromatic brickwork is substantially intact with no visible loss of decorative elements. The warm autumn light reveals rich colour and texture. Garden and wrought iron fence visible in foreground. Chimney stacks visible at the roof line. This building should be a high-priority target for detailed 3D modelling given its architectural significance."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 5,
+      "reference_width_m": 1.12,
+      "confidence": 0.8,
+      "blender_brick_scale_corrected": 1.0,
+      "notes": "Excellent quality photo with warm autumn directional light. Multiple scale references available (doors, windows across two full storeys, bay window projections). The symmetrical double-gable design means measurements from one unit can validate the other. The polychromatic bands will need explicit Blender material zones — use the buff band positions as horizontal layer boundaries in the parametric model."
+    }
+  }
+}

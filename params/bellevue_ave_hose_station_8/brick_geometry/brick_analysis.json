@@ -1,0 +1,78 @@
+{
+  "brick_analysis": {
+    "source_photos": [
+      "IMG_20260315_145720484_HDR.jpg",
+      "IMG_20260315_145744359_HDR.jpg",
+      "IMG_20260315_145758658_HDR.jpg"
+    ],
+    "address": "No. 8 Hose Station, Bellevue Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.3,
+      "course_height_mm": 75,
+      "brick_height_mm": 65,
+      "brick_length_mm": 218,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Second-floor window sill to lintel, ~17 courses in ~1.3m"
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout main field. Buff/cream brick belt courses interrupt the red field at regular intervals creating polychromatic horizontal banding. No header courses visible in main field.",
+    "colour": {
+      "base_hex": "#8B4332",
+      "variance": "low",
+      "description": "Dark red-brown machine-pressed brick, very uniform colour. Institutional-grade brick with tight dimensional tolerance. Clean sharp arrises indicate high-quality pressed brick, consistent with 1878 municipal construction.",
+      "polychromatic": true,
+      "polychromatic_notes": "Buff/cream brick (#D4B87A) used extensively as horizontal belt courses, window surrounds, arch voussoirs, and decorative banding. Two-tone scheme is a defining feature of the building's Italianate civic design."
+    },
+    "special_features": [
+      {
+        "type": "gauged_arch",
+        "location": "engine bay opening",
+        "description": "Large segmental brick arch over fire engine bay with buff brick voussoirs. Multi-ring arch approximately 3m span."
+      },
+      {
+        "type": "polychromatic_banding",
+        "location": "full facade",
+        "description": "Buff/cream brick horizontal belt courses at regular intervals creating strong horizontal emphasis. Belt courses appear at floor levels, window sill levels, and as decorative string courses."
+      },
+      {
+        "type": "corbelling",
+        "location": "cornice and tower",
+        "description": "Corbelled brick cornice at eave line and elaborate corbelling on the clock/hose tower. Multiple stepped courses creating deep shadow lines."
+      },
+      {
+        "type": "oculus_window",
+        "location": "tower and upper facade",
+        "description": "Circular (oculus) windows with radiating brick/stone surrounds on the hose-drying tower."
+      },
+      {
+        "type": "soldier_course",
+        "location": "above windows and as belt courses",
+        "description": "Soldier courses in buff brick forming flat lintels and decorative bands."
+      },
+      {
+        "type": "pilasters",
+        "location": "flanking engine bay",
+        "description": "Buff brick pilasters with decorative capitals flanking the main engine bay opening."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "good",
+      "brick_condition": "good",
+      "repointing_visible": true,
+      "efflorescence": false,
+      "spalling_locations": "Minor spalling on some upper courses of tower",
+      "notes": "Heritage building in well-maintained condition. Some modern repointing visible but generally sympathetic. Original polychromatic brickwork intact. The close-up photo (145758658) shows machine-pressed brick with very clean arrises and minimal weathering."
+    },
+    "texture_calibration": {
+      "courses_counted": 17,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.91,
+      "confidence": 0.75,
+      "blender_brick_scale_corrected": 1.0,
+      "notes": "Measurement from second-floor window. Building is a known heritage landmark (1878) so brick is institutional-grade pressed brick. Close-up photo confirms tight joints and uniform coursing."
+    }
+  }
+}

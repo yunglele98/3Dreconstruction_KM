@@ -1,0 +1,69 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/12 & 14 Bellevue Ave.jpg",
+    "address": "12 & 14 Bellevue Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 218,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Front door ~2.1m, ~28 courses. Second-floor windows ~1.3m, ~18 courses."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout. The decorative brick patterns in the gable and around windows are achieved through brick colour contrast and projection within the running bond framework.",
+    "colour": {
+      "base_hex": "#A84838",
+      "variance": "medium",
+      "description": "Red brick, slightly deeper/cooler red than the neighbouring orange-toned houses. Photo taken in dappled sunlight through tree canopy, creating mixed lighting. The left unit (12) shows the original brick clearly; the right unit (14) appears to have been painted a darker red, partially obscuring the original brick texture. Painted vs. unpainted difference is visible at the boundary between the two units.",
+      "polychromatic": true,
+      "polychromatic_notes": "Elaborate polychromatic brickwork on the left unit (12): buff/cream brick bands, decorative panels, and contrasting brick patterns visible in the gable and at the window-head level. The left unit has one of the most elaborate decorative brick facades on Bellevue Ave — including what appear to be geometric brick patterns using contrasting colours in the lower facade panels."
+    },
+    "special_features": [
+      {
+        "type": "polychromatic_banding",
+        "location": "left unit (12), full facade",
+        "description": "Horizontal bands of buff/cream brick creating strong decorative contrast against the red field. Bands appear at floor levels and as string courses."
+      },
+      {
+        "type": "decorative_panel",
+        "location": "left unit (12), between floors and in gable",
+        "description": "Geometric brick panels using contrasting buff and red brick. The patterns include what appears to be diaper/diamond-like motifs and recessed panels."
+      },
+      {
+        "type": "pointed_arch",
+        "location": "gable window, left unit (12)",
+        "description": "Tall narrow pointed Gothic arch window in the gable peak with decorative brick surround. This Gothic pointed arch is unusual in Kensington — most arches are segmental. Suggests Gothic Revival influence."
+      },
+      {
+        "type": "corbelling",
+        "location": "gable, cornice",
+        "description": "Corbelled brick at the gable peak and at the cornice/eave line. Multiple stepped courses."
+      },
+      {
+        "type": "covered_porch",
+        "location": "ground floor, both units",
+        "description": "Covered verandah with decorative columns spanning the ground floor of both units."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "fair",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "Some deterioration visible on corbelled courses at gable peak",
+      "notes": "The left unit (12) is architecturally significant with elaborate polychromatic brickwork and a Gothic pointed gable window — one of the most decorative brick facades on lower Bellevue Ave. The right unit (14) has been painted, obscuring the original brick pattern. Some brick deterioration visible in the upper gable area. Large tree partially obscures the left side of the facade. The green copper awnings on the right unit are a later addition."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.90,
+      "confidence": 0.65,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Tree canopy creates dappled lighting that complicates colour analysis. The polychromatic patterns on the left unit will need careful Blender modelling — the buff brick bands need to be explicitly mapped, not just textured. The Gothic gable arch is a unique feature requiring dedicated geometry. Right unit painted — use left unit as the reference for original brick appearance."
+    }
+  }
+}

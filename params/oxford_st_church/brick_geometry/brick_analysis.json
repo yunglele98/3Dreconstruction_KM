@@ -1,0 +1,54 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260315_152000297_HDR.jpg",
+    "address": "Red brick church, near Oxford St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.0,
+      "course_height_mm": 77,
+      "brick_height_mm": 65,
+      "brick_length_mm": 220,
+      "mortar_joint_mm": 12,
+      "mortar_joint_profile": "weathered",
+      "measurement_reference": "Side window approximately 1.5m tall, ~19-20 courses sill to lintel. Church windows are taller than residential standard."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond across entire side elevation. Very consistent coursing maintained over long unbroken wall plane. No decorative bond variations on this elevation.",
+    "colour": {
+      "base_hex": "#A04430",
+      "variance": "medium",
+      "description": "Medium red brick, somewhat more orange-red than the darker residential brick in the area. Some colour variation between courses suggesting different batches or firing temperatures. Lower courses show darker tones from ground splash/moisture. Upper courses lighter and more weathered.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "flat_arch_lintel",
+        "location": "above side windows",
+        "description": "Simple flat arches above the tall side windows"
+      },
+      {
+        "type": "stone_sill",
+        "location": "window sills",
+        "description": "Stone or cast stone window sills (not brick rowlock) — white/light grey"
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "fair",
+      "repointing_visible": true,
+      "efflorescence": false,
+      "spalling_locations": "Upper courses near eave line show some spalling",
+      "notes": "A significant vertical structural crack/repair is visible running from near the roofline down to the foundation on the side elevation. The crack has been repaired/patched but is clearly visible as a vertical line of contrasting mortar colour. Mortar is weathered throughout — original lime mortar has receded below the brick face in many locations. Some modern repointing with Portland cement visible (lighter grey colour, wider joint fill). Steeple/spire visible above roofline. Building appears to be an active church."
+    },
+    "texture_calibration": {
+      "courses_counted": 20,
+      "reference_height_m": 1.5,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.92,
+      "confidence": 0.65,
+      "blender_brick_scale_corrected": 1.03,
+      "notes": "Church windows are taller than standard residential (est. 1.5m not 1.3m). Long unbroken side wall gives excellent consistency check — courses remain level over full length. Photo taken at slight oblique angle. Structural crack repair provides useful vertical reference."
+    }
+  }
+}

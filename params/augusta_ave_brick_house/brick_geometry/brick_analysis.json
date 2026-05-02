@@ -1,0 +1,54 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260315_153824969_HDR.jpg",
+    "address": "Brick house, Augusta Ave area",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Ground floor door opening ~2.1m tall, approximately 28 courses from threshold to lintel. Ground floor window ~1.3m, approximately 18 courses."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout brick portion of facade. Upper storey is clad in vertical siding (not brick). Brick is limited to ground floor and part of second floor.",
+    "colour": {
+      "base_hex": "#A85030",
+      "variance": "low",
+      "description": "Bright red-orange machine-pressed brick. Relatively uniform colour — a warmer, more vivid red than the darker red-brown typical of older Kensington houses. This suggests a later construction date (1910s-1920s) or higher-quality brick. Clean smooth face with minimal texture.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "rowlock_sill",
+        "location": "ground floor window sills",
+        "description": "Brick rowlock course forming projecting window sills"
+      },
+      {
+        "type": "flat_arch_lintel",
+        "location": "above ground floor windows and door",
+        "description": "Simple flat brick lintels above openings"
+      }
+    ],
+    "condition": {
+      "mortar_condition": "good",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "A relatively simple 2-storey residential building with brick on the lower portion and vertical siding above. The brick is in good condition with intact mortar. A large ground-floor storefront window suggests this may have been a shop/commercial use at some point. The bright red-orange brick colour is distinctive and somewhat newer-looking than surrounding heritage buildings."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.7,
+      "blender_brick_scale_corrected": 1.0,
+      "notes": "Door height provides good vertical scale reference. Photo is rotated 90 degrees counterclockwise from upright. Large storefront window and door provide multiple cross-references for measurement. Upper portion is siding — brick model only needed for lower facade."
+    }
+  }
+}

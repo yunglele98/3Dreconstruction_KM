@@ -1,0 +1,43 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260315_151848298_HDR.jpg",
+    "address": "Brick close-up, alley near Oxford St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 11.5,
+      "course_height_mm": 87,
+      "brick_height_mm": 70,
+      "brick_length_mm": 200,
+      "mortar_joint_mm": 17,
+      "mortar_joint_profile": "weathered",
+      "measurement_reference": "Extreme close-up — no architectural scale reference. These appear to be salvaged/recycled brick of mixed provenance, so dimensions are irregular. Mortar joints are very wide (est. 15-20mm), significantly inflating the course height. Some bricks are undersized compared to standard."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Approximate running bond but with irregular offsets. Head joints do not consistently align every other course. This is characteristic of salvage brick construction where varying brick sizes make precise alignment difficult.",
+    "colour": {
+      "base_hex": "#8A7060",
+      "variance": "high",
+      "description": "Extremely varied — this is mixed/salvaged brick from multiple sources. Individual bricks range from: deep red (#8B3020), medium red-brown (#9C5A40), orange (#B87040), grey (#7A7A78), cream/buff (#C8B898), and dark brown-black (#4A3830). At least 5-6 distinct colour groups visible. Some bricks appear to be firebrick (cream/yellow), some are common red brick, and some are clinker brick (dark vitrified). This is NOT heritage brickwork — it is utilitarian construction using whatever brick was available.",
+      "polychromatic": false,
+      "polychromatic_notes": "The colour variation is incidental (salvaged brick), not intentional decorative polychromy."
+    },
+    "special_features": [],
+    "condition": {
+      "mortar_condition": "poor",
+      "brick_condition": "poor",
+      "repointing_visible": true,
+      "efflorescence": true,
+      "spalling_locations": "Multiple bricks throughout — especially the softer red bricks. Some bricks have lost their entire face, exposing the rough interior.",
+      "notes": "This is a rear/alley wall built with salvaged or second-hand brick. The extreme colour variation, irregular sizing, and wide messy mortar joints indicate low-budget utilitarian construction — likely a rear addition, garden wall, or garage wall. Multiple repairs visible with contrasting mortar colours. Some bricks appear to have been laid with frog (indentation) facing outward rather than down, suggesting unskilled or hasty construction. Not suitable for calibrating 3D models of primary street-facing facades, but useful as a texture reference for rear elevations and alley walls."
+    },
+    "texture_calibration": {
+      "courses_counted": 6,
+      "reference_height_m": null,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": null,
+      "confidence": 0.5,
+      "blender_brick_scale_corrected": null,
+      "notes": "LOW CONFIDENCE — salvaged brick with non-standard dimensions. Do NOT use these measurements to calibrate primary facade models. This texture is useful only for: (1) Rear elevation/alley wall texture mapping, (2) Reference for 'rough' brick material variant in Blender, (3) Colour palette for secondary/service walls. The wide mortar joints and mixed brick sizes make dimensional extraction unreliable."
+    }
+  }
+}

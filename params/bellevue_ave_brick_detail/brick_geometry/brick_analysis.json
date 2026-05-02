@@ -1,0 +1,43 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260315_145758658_HDR.jpg",
+    "address": "Brick detail, Bellevue Ave area (likely No. 8 Hose Station or adjacent)",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.3,
+      "course_height_mm": 75,
+      "brick_height_mm": 65,
+      "brick_length_mm": 220,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Extreme close-up — no architectural scale reference in frame. Measurements derived from standard Canadian modular brick proportions visible in photo. Brick length-to-height ratio approximately 3.4:1 is consistent with standard 220x65mm pressed brick."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond. Close-up shows excellent half-brick offset between courses. Head joints align every other course as expected.",
+    "colour": {
+      "base_hex": "#B86B55",
+      "variance": "low",
+      "description": "Clean medium red-orange machine-pressed brick. Very uniform colour across all visible bricks. Smooth face texture with fine sand finish. Sharp arrises and precise dimensional consistency. This is high-quality institutional/civic-grade pressed brick. Some very slight variation where individual bricks show marginally lighter or darker faces, but overall extremely uniform.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [],
+    "condition": {
+      "mortar_condition": "good",
+      "brick_condition": "excellent",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "One small hairline crack visible on single brick at right edge",
+      "notes": "This extreme close-up shows the brick in excellent condition. Mortar joints are full, flush, and intact — likely original lime mortar with minimal weathering. The brick faces are smooth and unspalled. This is a reference-quality close-up for texture mapping in the 3D model. The lighting is even and neutral (overcast or shadow)."
+    },
+    "texture_calibration": {
+      "courses_counted": 4,
+      "reference_height_m": null,
+      "bricks_counted_horizontal": 3,
+      "reference_width_m": null,
+      "confidence": 0.9,
+      "blender_brick_scale_corrected": null,
+      "notes": "TEXTURE REFERENCE PHOTO. This is the highest-resolution brick texture available in the photo set. Ideal for: (1) Blender diffuse texture map, (2) Normal map generation, (3) Roughness map extraction. The flush mortar joints and uniform colour make this an excellent source for procedural brick material calibration. No absolute scale reference in frame — use measurements from the Hose Station facade photo to calibrate."
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "brick_analysis_index": {
+    "project": "Kensington Market 3D Reconstruction",
+    "analysis_date": "2026-04-03",
+    "analyst": "claude_masonry_agent",
+    "total_buildings_analyzed": 17,
+    "summary": "Brick coursing and texture analysis from field photos and HCD facade photos for parametric 3D model calibration.",
+
+    "neighbourhood_baseline": {
+      "description": "Standard brick dimensions for the Kensington Market HCD, derived from cross-referencing all analyzed buildings. These values can be used as defaults for buildings without close-up photos.",
+      "standard_course_height_mm": 74,
+      "standard_brick_height_mm": 64,
+      "standard_brick_length_mm": 215,
+      "standard_mortar_joint_mm": 10,
+      "standard_courses_per_metre": 13.5,
+      "typical_bond": "running bond",
+      "typical_mortar_profile": "flush",
+      "notes": "These values are consistent across 14 of the 17 buildings analyzed. The three outliers are: (1) Oxford St hand-pressed close-up (wider joints, 12.5 cpm), (2) alley salvage brick close-up (very wide joints, 11.5 cpm), (3) Oxford St church (wider joints, 13.0 cpm). The standard values correspond to Canadian standard modular brick manufactured 1870-1920."
+    },
+
+    "brick_type_classification": {
+      "type_A_machine_pressed_institutional": {
+        "description": "High-quality machine-pressed brick, uniform colour, tight joints. Used for civic/institutional buildings.",
+        "representative_building": "No. 8 Hose Station, Bellevue Ave",
+        "texture_reference_photo": "IMG_20260315_145758658_HDR.jpg",
+        "colour_hex": "#8B4332 to #B86B55",
+        "variance": "low",
+        "mortar_joint_mm": 10,
+        "buildings_using_this_type": [
+          "No. 8 Hose Station",
+          "~112-114 Nassau St (Victorian)"
+        ]
+      },
+      "type_B_machine_pressed_residential": {
+        "description": "Good quality machine-pressed brick, medium variation, standard joints. The most common type in the HCD.",
+        "representative_buildings": "112 Oxford St, 120-122 Bellevue Ave, Nassau St row houses",
+        "colour_hex": "#9C4A35 to #B85838",
+        "variance": "medium",
+        "mortar_joint_mm": 10,
+        "buildings_using_this_type": [
+          "112 Oxford St",
+          "112 Bellevue Ave",
+          "120 & 122 Bellevue Ave",
+          "102 & 104 Bellevue Ave",
+          "12 & 14 Bellevue Ave",
+          "~30 Bellevue Ave",
+          "116 & 118 Nassau St",
+          "120 & 122 Nassau St",
+          "~110 Nassau St",
+          "18 Kensington Ave",
+          "130-136 Denison Ave",
+          "Augusta Ave brick house"
+        ]
+      },
+      "type_C_hand_pressed_pre1890": {
+        "description": "Older hand-moulded brick with rough texture, high colour variation, wide joints. Pre-1890 construction.",
+        "texture_reference_photo": "IMG_20260315_151559547_HDR.jpg",
+        "colour_hex": "#A86540",
+        "variance": "high",
+        "mortar_joint_mm": 15,
+        "buildings_using_this_type": [
+          "Oxford St church (partial)",
+          "Older buildings not individually photographed"
+        ]
+      },
+      "type_D_salvage_mixed": {
+        "description": "Recycled/salvaged brick of mixed provenance. Non-standard dimensions. Used for rear walls, garages, garden walls.",
+        "texture_reference_photo": "IMG_20260315_151848298_HDR.jpg",
+        "colour_hex": "mixed — #4A3830 to #C8B898",
+        "variance": "very high",
+        "mortar_joint_mm": 17,
+        "buildings_using_this_type": [
+          "Alley/rear walls throughout KM"
+        ]
+      },
+      "type_E_side_wall_seconds": {
+        "description": "Second-quality or mixed-firing brick used on non-street-facing side walls. Common Toronto practice.",
+        "texture_reference_photo": "IMG_20260318_175543668_HDR.jpg",
+        "colour_hex": "#8A5848",
+        "variance": "high",
+        "mortar_joint_mm": 13,
+        "buildings_using_this_type": [
+          "~95 Nassau St (side passage)",
+          "Side walls throughout KM"
+        ]
+      }
+    },
+
+    "polychromatic_buildings": {
+      "description": "Buildings with deliberate decorative use of contrasting brick or stone colours.",
+      "buildings": [
+        {
+          "address": "No. 8 Hose Station",
+          "scheme": "Red-brown field + buff/cream brick belt courses, pilasters, and arch voussoirs",
+          "significance": "highest — civic landmark"
+        },
+        {
+          "address": "102 & 104 Bellevue Ave",
+          "scheme": "Orange-red field + buff stone arches, belt courses, and window surrounds",
+          "significance": "high — finest residential polychromatic on Bellevue"
+        },
+        {
+          "address": "12 & 14 Bellevue Ave",
+          "scheme": "Red field + buff brick bands, panels, and Gothic arch details",
+          "significance": "high — most elaborate decorative brick patterns"
+        },
+        {
+          "address": "~110 Nassau St",
+          "scheme": "Red-brown field + contrasting brick diaper (diamond) pattern",
+          "significance": "high — rare surviving diaper pattern"
+        },
+        {
+          "address": "Augusta Ave Victorian",
+          "scheme": "Orange-red field + white stone belt courses, arched voussoirs, and oculus surrounds",
+          "significance": "high — finest commercial polychromatic on Augusta"
+        }
+      ]
+    },
+
+    "special_features_inventory": {
+      "gauged_arches": ["Hose Station", "~112-114 Nassau St", "Augusta Ave Victorian", "102-104 Bellevue Ave", "112 Bellevue Ave", "120-122 Bellevue Ave", "~30 Bellevue Ave"],
+      "corbelling": ["Hose Station", "~112-114 Nassau St", "Augusta Ave Victorian", "12-14 Bellevue Ave", "102-104 Bellevue Ave"],
+      "diaper_pattern": ["~110 Nassau St"],
+      "oculus_windows": ["Hose Station", "Augusta Ave Victorian"],
+      "mansard_roof": ["145 Augusta Ave"],
+      "gothic_pointed_arch": ["12 Bellevue Ave (gable)"],
+      "soldier_courses": ["Hose Station"],
+      "polychromatic_banding": ["Hose Station", "102-104 Bellevue Ave", "12-14 Bellevue Ave", "Augusta Ave Victorian"]
+    },
+
+    "analyzed_buildings": [
+      {"params_dir": "bellevue_ave_hose_station_8", "address": "No. 8 Hose Station, Bellevue Ave", "type": "institutional", "confidence": 0.75},
+      {"params_dir": "112_oxford_st", "address": "112 Oxford St", "type": "residential_duplex", "confidence": 0.7},
+      {"params_dir": "oxford_st_church", "address": "Red brick church, near Oxford St", "type": "church", "confidence": 0.65},
+      {"params_dir": "110_nassau_st", "address": "~110 Nassau St", "type": "residential", "confidence": 0.6},
+      {"params_dir": "112_114_nassau_st", "address": "~112-114 Nassau St", "type": "residential_ornate", "confidence": 0.7},
+      {"params_dir": "augusta_ave_victorian", "address": "Victorian building, Augusta Ave", "type": "commercial_victorian", "confidence": 0.7},
+      {"params_dir": "bellevue_ave_brick_detail", "address": "Brick detail, Bellevue Ave area", "type": "texture_reference", "confidence": 0.9},
+      {"params_dir": "oxford_st_brick_closeup", "address": "Brick close-up, Oxford St", "type": "texture_reference", "confidence": 0.85},
+      {"params_dir": "alley_brick_closeup", "address": "Brick close-up, alley near Oxford St", "type": "texture_reference", "confidence": 0.5},
+      {"params_dir": "augusta_ave_brick_house", "address": "Brick house, Augusta Ave", "type": "residential_commercial", "confidence": 0.7},
+      {"params_dir": "bellevue_ave_brick_house", "address": "~30 Bellevue Ave", "type": "residential_victorian", "confidence": 0.65},
+      {"params_dir": "95_nassau_st", "address": "~95 Nassau St", "type": "side_wall_reference", "confidence": 0.6},
+      {"params_dir": "112_bellevue_ave", "address": "112 Bellevue Ave", "type": "residential_victorian", "confidence": 0.75},
+      {"params_dir": "120_122_bellevue_ave", "address": "120 & 122 Bellevue Ave", "type": "residential_commercial", "confidence": 0.8},
+      {"params_dir": "12_14_bellevue_ave", "address": "12 & 14 Bellevue Ave", "type": "residential_victorian", "confidence": 0.65},
+      {"params_dir": "102_104_bellevue_ave", "address": "102 & 104 Bellevue Ave", "type": "residential_victorian", "confidence": 0.8},
+      {"params_dir": "18_kensington_ave", "address": "18 Kensington Ave", "type": "residential", "confidence": 0.7},
+      {"params_dir": "116_118_nassau_st", "address": "116 & 118 Nassau St", "type": "residential", "confidence": 0.65},
+      {"params_dir": "120_122_nassau_st", "address": "120 & 122 Nassau St", "type": "residential", "confidence": 0.65},
+      {"params_dir": "145_augusta_ave", "address": "145 Augusta Ave", "type": "commercial_mansard", "confidence": 0.6},
+      {"params_dir": "130_136_denison_ave", "address": "130-136 Denison Ave", "type": "worker_cottage", "confidence": 0.65}
+    ]
+  }
+}

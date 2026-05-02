@@ -1,0 +1,83 @@
+{
+  "brick_analysis": {
+    "source_photos": [
+      "IMG_20260315_153951246_HDR.jpg",
+      "IMG_20260315_154114750_HDR.jpg",
+      "IMG_20260315_153845340_HDR.jpg"
+    ],
+    "address": "Victorian brick building, Augusta Ave (adjacent views)",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.8,
+      "course_height_mm": 72,
+      "brick_height_mm": 63,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 9,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Arched first-floor window opening ~1.5m tall, approximately 21 courses from sill to crown of arch. Second-floor windows ~1.3m, approximately 18 courses."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout main field walls. The arched window heads use radial brick arrangement (gauged voussoirs) which departs from the running bond for the arch profile. Belt courses are running bond in contrasting buff/stone material.",
+    "colour": {
+      "base_hex": "#B05A38",
+      "variance": "low",
+      "description": "Rich orange-red pressed brick, uniform in colour. Slightly warmer/more orange than the typical Kensington dark red-brown. High quality pressed brick with clean arrises. The warmth of the orange-red against the white stone trim creates a visually striking facade. Consistent with 1880s-1890s Toronto commercial/institutional brick.",
+      "polychromatic": true,
+      "polychromatic_notes": "White stone or cast stone used extensively for belt courses, window surrounds, arch voussoirs, and decorative elements. Creates strong white-on-red contrast. The stone belt courses divide the facade into horizontal bands at each floor level."
+    },
+    "special_features": [
+      {
+        "type": "gauged_arch",
+        "location": "first-floor windows",
+        "description": "Large segmental arched windows on first floor with gauged brick voussoirs. The arches span approximately 1.0-1.2m and use finely cut radiating brick voussoirs with stone/cast stone keystone and springer details. These are the most prominent feature of the facade."
+      },
+      {
+        "type": "oculus_window",
+        "location": "second floor, between main windows",
+        "description": "Circular (oculus/round) windows with radiating stone/brick surrounds. Approximately 0.6m diameter. Set between the main rectangular second-floor windows as decorative elements."
+      },
+      {
+        "type": "stone_belt_course",
+        "location": "floor levels",
+        "description": "Continuous white stone belt courses at each floor level creating strong horizontal divisions. Belt courses project slightly from the wall face."
+      },
+      {
+        "type": "corbelling",
+        "location": "cornice",
+        "description": "Corbelled brick cornice at eave line, multiple courses stepping out progressively. Creates deep shadow line at roof edge."
+      },
+      {
+        "type": "pilasters",
+        "location": "flanking facade bays",
+        "description": "Brick pilasters with stone capitals dividing the facade into defined bays."
+      },
+      {
+        "type": "stone_window_surround",
+        "location": "all windows",
+        "description": "Stone or cast stone surrounds on all windows including arched heads on first floor and flat lintels on second floor."
+      },
+      {
+        "type": "decorative_panel",
+        "location": "between floor levels",
+        "description": "Recessed brick panels and stone decorative elements between first and second floor windows."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "good",
+      "repointing_visible": true,
+      "efflorescence": false,
+      "spalling_locations": "Some spalling on exposed cornice corbelling",
+      "notes": "This is one of the most architecturally significant Victorian brick facades on Augusta Ave. The combination of gauged arches, oculus windows, stone belt courses, and corbelled cornice represents high-quality late Victorian commercial architecture. Building appears to have had some sympathetic restoration — fire escape visible on side (154114750 photo). Chain-link fence partially obscures ground level in one photo. The facade is substantially intact and a high priority for accurate 3D reconstruction."
+    },
+    "texture_calibration": {
+      "courses_counted": 21,
+      "reference_height_m": 1.5,
+      "bricks_counted_horizontal": 5,
+      "reference_width_m": 1.12,
+      "confidence": 0.7,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Two photos provide complementary views — one from across the street (153951246) showing full facade, one from below at closer range (154114750) showing upper detail. Cross-referencing both improves confidence. The arched window dimensions provide a secondary scale reference. The ornate features (arches, oculi, corbelling) will require parametric Blender modelling beyond flat texture mapping."
+    }
+  }
+}

@@ -1,0 +1,603 @@
+{
+  "special_features_inventory": {
+    "project": "Kensington Market 3D Reconstruction",
+    "analysis_date": "2026-04-03",
+    "scope": "Visual analysis of 40+ buildings from field photos + HCD facade photos",
+    "purpose": "Comprehensive catalogue of every observed decorative and architectural feature, keyed to the generator's decorative_elements schema and create_* functions for parametric modelling.",
+
+    "ARCHES": {
+      "description": "Brick or stone arch heads above window and door openings. The generator handles these via create_voussoirs() and create_window_lintels(). Arch type is set per-building in window_type or decorative_elements.stone_voussoirs.",
+
+      "segmental_arch": {
+        "description": "Shallow curved arch with less than semicircular curvature. The most common arch type in pre-1904 Kensington buildings. Formed with tapered brick voussoirs radiating from a centre below the spring line.",
+        "generator_field": "window_type: 'arched' OR decorative_elements.stone_voussoirs.present",
+        "typical_dimensions": {"rise_mm": "40-80 above spring line", "span_mm": "800-1200"},
+        "buildings": [
+          {"address": "No. 8 Hose Station", "location": "engine bay + all windows", "material": "buff brick voussoirs", "notes": "Multi-ring arch over engine bay ~3m span. Single-ring segmental over windows."},
+          {"address": "102 & 104 Bellevue Ave", "location": "all windows both storeys", "material": "buff stone voussoirs with raised keystone", "notes": "Finest residential example — consistent arches across 6+ windows with prominent keystones."},
+          {"address": "112 Bellevue Ave", "location": "all windows", "material": "buff stone voussoirs with keystone", "notes": "Typical Bellevue Ave quality."},
+          {"address": "120 & 122 Bellevue Ave", "location": "second-floor windows", "material": "buff stone voussoirs with raised keystones", "notes": "Three matching arches across facade. Strong directional light in photo reveals voussoir projection."},
+          {"address": "~30 Bellevue Ave", "location": "porch arcade openings", "material": "brick voussoirs", "notes": "Three arched porch openings forming an arcade."},
+          {"address": "~112-114 Nassau St", "location": "first-floor windows", "material": "brick voussoirs, gauged", "notes": "Fine brick cutting visible. Part of elaborate Victorian facade."},
+          {"address": "Augusta Ave Victorian", "location": "first-floor windows", "material": "gauged brick with stone keystone/springers", "notes": "Large segmental arches ~1.0-1.2m span. Multi-ring voussoirs."},
+          {"address": "175 & 177 & 179 Augusta Ave", "location": "all windows", "material": "stone voussoirs", "notes": "Consistent across semi-detached pair."},
+          {"address": "193 & 195 Augusta Ave", "location": "ground floor windows", "material": "brick voussoirs", "notes": "Arched ground floor windows below bow bay."},
+          {"address": "24 Bellevue Ave", "location": "upper windows", "material": "stone/buff brick voussoirs", "notes": "Part of polychromatic scheme."}
+        ],
+        "total_buildings_observed": 10,
+        "blender_notes": "create_voussoirs() generates individual voussoir blocks radiating from spring line. Set stone_voussoirs.colour_hex to match observed stone colour (typically #D4B896 buff or #E0D0B0 cream)."
+      },
+
+      "flat_jack_arch": {
+        "description": "Flat or very slightly cambered arch formed by brick soldiers or wedge-cut bricks above an opening. Common on simpler residential buildings and post-1900 construction.",
+        "generator_field": "decorative_elements.stone_lintels.present OR window_type default",
+        "buildings": [
+          {"address": "112 Oxford St", "location": "all windows", "notes": "Simple flat arches, 3-4 courses deep."},
+          {"address": "116 & 118 Nassau St", "location": "all windows", "notes": "Standard residential flat lintels."},
+          {"address": "120 & 122 Nassau St", "location": "all windows", "notes": "Matching pair."},
+          {"address": "130-136 Denison Ave", "location": "all openings", "notes": "Simple flat lintels on single-storey cottages."},
+          {"address": "Augusta Ave brick house", "location": "ground floor", "notes": "Simple flat lintels above storefront windows."},
+          {"address": "18 Kensington Ave", "location": "all openings", "notes": "Standard residential."},
+          {"address": "145 Augusta Ave", "location": "second-floor window", "notes": "Simple flat lintel."}
+        ],
+        "total_buildings_observed": 7,
+        "blender_notes": "create_window_lintels() handles these. Default behaviour when no arch type specified."
+      },
+
+      "pointed_gothic_arch": {
+        "description": "Pointed arch with two curved segments meeting at a peak. Rare in Kensington residential — indicates Gothic Revival influence.",
+        "generator_field": "decorative_elements with custom arch_type: 'pointed'",
+        "buildings": [
+          {"address": "12 Bellevue Ave", "location": "gable window", "material": "brick with decorative surround", "notes": "Tall narrow pointed arch in the gable peak — the only confirmed Gothic pointed arch on a residential building in the HCD."},
+          {"address": "103 Bellevue Ave (St Stephen-in-the-Fields)", "location": "nave windows and tower", "material": "stone/brick", "notes": "Full Gothic church — pointed arches throughout. Stone buttresses, lancet windows. The primary Gothic building in the HCD."}
+        ],
+        "total_buildings_observed": 2,
+        "blender_notes": "Not natively supported by create_voussoirs(). Requires custom geometry or modification of arch profile. Flag for manual Blender adjustment."
+      }
+    },
+
+    "CORBELLING": {
+      "description": "Stepped brick courses projecting progressively outward from the wall face, typically at cornice level or on gable peaks. The generator handles this via create_corbelling().",
+      "generator_field": "decorative_elements.cornice with projection_mm and height_mm",
+      "typical_dimensions": {"projection_mm": "50-150", "height_mm": "150-400", "courses": "3-8"},
+      "buildings": [
+        {"address": "No. 8 Hose Station", "location": "cornice + tower", "courses": "5-8", "projection_mm": 120, "notes": "Elaborate multi-course corbelling on both the main cornice and the hose-drying tower. Deep shadow lines."},
+        {"address": "~112-114 Nassau St", "location": "cornice + peaked gable", "courses": "4-5", "projection_mm": 100, "notes": "Stepped gable profile and deep eave corbelling."},
+        {"address": "Augusta Ave Victorian", "location": "cornice", "courses": "4-5", "projection_mm": 100, "notes": "Full-width corbelled cornice at eave line."},
+        {"address": "102 & 104 Bellevue Ave", "location": "cornice + gable peaks", "courses": "3-4", "projection_mm": 80, "notes": "Both gable peaks and eave line."},
+        {"address": "12 & 14 Bellevue Ave", "location": "gable + cornice", "courses": "3-4", "projection_mm": 80, "notes": "Gothic gable has stepped corbelling at peak."},
+        {"address": "175 & 177 & 179 Augusta Ave", "location": "cornice area", "courses": "3", "projection_mm": 60, "notes": "Subtler corbelling beneath bargeboard."},
+        {"address": "112 Bellevue Ave", "location": "gable peak", "courses": "3", "projection_mm": 60, "notes": "Small corbelling at gable apex."}
+      ],
+      "total_buildings_observed": 7,
+      "blender_notes": "create_corbelling() generates stepped brick courses. Set cornice.projection_mm (total) and cornice.height_mm. Each course steps out by projection_mm / n_courses."
+    },
+
+    "POLYCHROMATIC_BRICKWORK": {
+      "description": "Deliberate use of contrasting brick or stone colours to create decorative patterns on the facade. Includes horizontal belt courses, decorative panels, and contrasting window surrounds. NOT incidental colour variation from mixed-quality brick.",
+      "generator_field": "decorative_elements.string_courses + decorative_elements.decorative_brickwork + facade_detail.brick_colour_hex",
+
+      "horizontal_belt_courses": {
+        "description": "Continuous horizontal bands of contrasting material (buff brick, stone, or cast stone) dividing the facade into layers at floor levels.",
+        "buildings": [
+          {"address": "No. 8 Hose Station", "material": "buff/cream brick", "num_bands": 4, "notes": "Buff brick belt courses at every floor level + as string courses. Also buff pilasters and arch voussoirs. The most extensive polychromatic scheme in the HCD."},
+          {"address": "102 & 104 Bellevue Ave", "material": "buff stone", "num_bands": 3, "notes": "Stone belt courses at each floor level. Stone window surrounds create additional contrast."},
+          {"address": "12 & 14 Bellevue Ave", "material": "buff brick", "num_bands": 3, "notes": "Buff brick bands plus geometric decorative panels between floors — most elaborate decorative brick patterns on Bellevue."},
+          {"address": "Augusta Ave Victorian", "material": "white stone", "num_bands": 3, "notes": "White stone belt courses strongly divide facade. Stone also used for all window surrounds."},
+          {"address": "24 Bellevue Ave", "material": "buff/cream brick", "num_bands": 2, "notes": "Buff brick banding visible between floors."},
+          {"address": "175 & 177 & 179 Augusta Ave", "material": "buff stone/brick", "num_bands": 2, "notes": "Stone belt courses between floors on ornate Victorian pair."}
+        ],
+        "total_buildings_observed": 6,
+        "blender_notes": "create_string_courses() generates horizontal bands. Set string_courses.colour_hex to buff (#D4B896) or white (#E0D8C8). Multiple bands need multiple entries or a belt_courses array in decorative_elements."
+      },
+
+      "diaper_diamond_pattern": {
+        "description": "Diamond-shaped motif formed by inserting contrasting-colour brick headers at regular intervals within the running bond field. Very rare in Kensington.",
+        "buildings": [
+          {"address": "~110 Nassau St", "location": "first floor facade between windows", "pattern_height_courses": 8, "notes": "Repeating diamond motif in contrasting brick. The ONLY confirmed diaper pattern in the HCD. A significant heritage feature that must be accurately modelled."}
+        ],
+        "total_buildings_observed": 1,
+        "blender_notes": "NOT supported by any existing create_* function. Requires custom UV mapping or a dedicated diaper texture overlay. Flag for special Blender material treatment. The diamond pattern repeat spacing can calibrate brick course height."
+      },
+
+      "decorative_panels": {
+        "description": "Recessed or projecting brick panels between floors or in spandrel areas using contrasting colours or textures.",
+        "buildings": [
+          {"address": "12 & 14 Bellevue Ave", "location": "between floors, left unit", "notes": "Geometric brick patterns including possible diaper-like motifs in buff and red brick. Most elaborate residential decorative brickwork on lower Bellevue."},
+          {"address": "~112-114 Nassau St", "location": "between first and second floor", "notes": "Recessed decorative brick panels creating shadow lines."},
+          {"address": "24 Bellevue Ave", "location": "between floors", "notes": "Polychromatic decorative panels visible between storeys."}
+        ],
+        "total_buildings_observed": 3,
+        "blender_notes": "create_string_courses() can approximate simple panels. Complex patterns need custom geometry or texture mapping."
+      }
+    },
+
+    "GABLE_FEATURES": {
+      "description": "Decorative features in and on peaked gables. Bay-and-gable is the dominant Kensington typology.",
+
+      "bargeboard": {
+        "description": "Decorative wooden boards along the rake (sloped edge) of a gable, often with fretwork/scrollwork/gingerbread patterns. The generator handles this via create_bargeboard().",
+        "generator_field": "decorative_elements.bargeboard: {colour_hex, style, width_mm}",
+        "styles_observed": ["plain", "scrollwork", "fretwork/gingerbread", "trefoil cutouts"],
+        "buildings": [
+          {"address": "175 & 177 & 179 Augusta Ave", "style": "elaborate fretwork/gingerbread", "colour": "dark brown/stained", "notes": "The most ornate bargeboard observed — deeply cut scrollwork patterns."},
+          {"address": "102 & 104 Bellevue Ave", "style": "decorative scrollwork", "colour": "dark stained wood", "notes": "Matching pair of ornate bargeboards on symmetrical double gable."},
+          {"address": "12 & 14 Bellevue Ave", "style": "decorative with Gothic motifs", "colour": "dark", "notes": "Gothic-influenced bargeboard on pointed gable."},
+          {"address": "112 Bellevue Ave", "style": "scrollwork", "colour": "dark stained", "notes": "Ornate Victorian bargeboard."},
+          {"address": "~112-114 Nassau St", "style": "decorative", "colour": "dark", "notes": "Peaked gable with decorative bargeboard."},
+          {"address": "60 Bellevue Ave", "style": "plain with end finials", "colour": "dark stained", "notes": "Simpler bargeboard but with applied timbers in gable (half-timbering effect)."},
+          {"address": "68 Bellevue Ave", "style": "plain with finials at apex", "colour": "painted trim colour", "notes": "Twin gables each with finials at the apex — cross-gable roof."},
+          {"address": "91 Bellevue Ave", "style": "plain", "colour": "dark green painted", "notes": "Painted bargeboard on institutional/daycare building."},
+          {"address": "24 & 26 Bellevue Ave", "style": "scrollwork", "colour": "painted olive (24), dark stained (26)", "notes": "Adjacent units with different bargeboard colours."},
+          {"address": "7-15 Oxford St", "style": "various", "colour": "painted trim", "notes": "Row of bay-and-gable houses, each with bargeboard. Styles vary."},
+          {"address": "71-75 Oxford St", "style": "various", "colour": "dark/painted", "notes": "Bay-and-gable row with bargeboard."},
+          {"address": "18 Kensington Ave", "style": "fretwork", "colour": "dark stained", "notes": "Victorian Carpenter Gothic fretwork at porch entrance and gable."},
+          {"address": "34 Bellevue Ave", "style": "plain", "colour": "painted", "notes": "Simple bargeboard on painted/stucco house."}
+        ],
+        "total_buildings_observed": 13,
+        "prevalence": "Very high — present on virtually all bay-and-gable buildings (estimated 60-70% of residential buildings in HCD)",
+        "blender_notes": "create_bargeboard() generates decorative boards along gable rake edges. Set style (plain/scrollwork/fretwork). Width typically 200-300mm. The scrollwork/fretwork styles use procedural cutout patterns."
+      },
+
+      "ornamental_shingles": {
+        "description": "Decorative wooden shingles in the gable area, often with fish-scale, diamond, or scalloped patterns. Common in Queen Anne Revival buildings.",
+        "generator_field": "decorative_elements.ornamental_shingles: {present, colour_hex, exposure_mm}",
+        "patterns_observed": ["fish-scale", "diamond", "scalloped", "plain rectangular"],
+        "buildings": [
+          {"address": "~30 Bellevue Ave", "pattern": "mixed decorative", "location": "gable above brick", "notes": "Queen Anne Revival — decorative shingle cladding in the gable creates visual contrast with brick below."},
+          {"address": "60 Bellevue Ave", "pattern": "decorative with half-timbering", "location": "gable", "notes": "Combination of ornamental shingles and applied timber framing in gable."},
+          {"address": "175 & 177 & 179 Augusta Ave", "pattern": "decorative", "location": "gable area", "notes": "Shingles visible in gable between bargeboard."},
+          {"address": "102 & 104 Bellevue Ave", "pattern": "plain/unknown", "location": "within gable peak", "notes": "May be present but partially obscured."},
+          {"address": "26 Bellevue Ave", "pattern": "copper/green patina shingles", "location": "gable face", "notes": "Distinctive green patina — possibly copper or painted metal shingles. Unusual."}
+        ],
+        "total_buildings_observed": 5,
+        "blender_notes": "create_gable_shingles() generates shingle cladding on gable walls. Set exposure_mm (typically 100-150mm) and colour_hex. Fish-scale pattern is procedural."
+      },
+
+      "gable_window": {
+        "description": "Window set within the peaked gable, often with a distinctive arch or decorative surround.",
+        "generator_field": "roof_detail.gable_window: {present, width_m, height_m, type, arch_type}",
+        "buildings": [
+          {"address": "12 Bellevue Ave", "type": "tall narrow with pointed Gothic arch", "notes": "Unique Gothic pointed arch gable window — only one in the HCD."},
+          {"address": "102 & 104 Bellevue Ave", "type": "single with segmental arch", "notes": "Gable windows with matching arch heads in both units."},
+          {"address": "112 Bellevue Ave", "type": "single with arch", "notes": "Narrow gable window with decorative surround."},
+          {"address": "24 Bellevue Ave", "type": "decorative with stained glass transom", "notes": "Elaborate gable window with apparent stained glass elements."},
+          {"address": "98 & 100 Bellevue Ave", "type": "trefoil/quatrefoil decorative", "notes": "Decorative window shape in gable — possibly trefoil."},
+          {"address": "175 & 177 & 179 Augusta Ave", "type": "paired windows in gable", "notes": "Two narrow windows in each gable."},
+          {"address": "~112-114 Nassau St", "type": "single with decorative surround", "notes": "Window in peaked gable with elaborate brick surround."}
+        ],
+        "total_buildings_observed": 7,
+        "blender_notes": "create_gable_walls() includes gable window placement. Set roof_detail.gable_window fields. Pointed arch type needs custom handling."
+      },
+
+      "half_timbering": {
+        "description": "Applied decorative timber framing in the gable, creating a Tudor/Arts and Crafts visual effect. Not structural.",
+        "buildings": [
+          {"address": "60 Bellevue Ave", "location": "gable", "notes": "Applied timbers in gable creating half-timbering pattern over shingle infill."},
+          {"address": "193 & 195 Augusta Ave", "location": "gable", "notes": "Half-timbering visible in gable area."},
+          {"address": "106 & 108 & 110 Oxford St", "location": "gable area", "notes": "Some units show half-timbering effect."}
+        ],
+        "total_buildings_observed": 3,
+        "blender_notes": "Not directly supported. Could approximate with applied box geometry on gable wall or custom texture. Consider adding to create_gable_shingles() as a variant."
+      }
+    },
+
+    "BAY_WINDOWS": {
+      "description": "Projecting window structures extending from the facade. The generator handles these via create_bay_window().",
+      "generator_field": "bay_window: {present, type, width_m, projection_m, floors_spanned}",
+
+      "canted_bay": {
+        "description": "Three-sided bay with angled (usually 45-degree) side panels. The most common bay type in Kensington.",
+        "buildings": [
+          {"address": "102 & 104 Bellevue Ave", "floors_spanned": 1, "location": "second floor both units", "notes": "Matching pair of canted bays at second floor."},
+          {"address": "18 Kensington Ave", "floors_spanned": 1, "location": "ground floor", "notes": "Small ground-floor canted bay."},
+          {"address": "7-15 Oxford St", "floors_spanned": "1-2", "notes": "Multiple bay-and-gable houses with canted bays."},
+          {"address": "34 Bellevue Ave", "floors_spanned": 1, "location": "ground floor", "notes": "Canted bay on painted facade."}
+        ],
+        "total_buildings_observed": 4,
+        "prevalence": "Very high — present on nearly all bay-and-gable houses (estimated 50-60% of residential)"
+      },
+
+      "bow_curved_bay": {
+        "description": "Curved/rounded projecting bay. Much rarer than canted bays in Kensington.",
+        "buildings": [
+          {"address": "193 & 195 Augusta Ave", "floors_spanned": 1, "location": "ground floor", "notes": "CURVED/BOW bay window at ground floor. Rare in Kensington. Arched windows within the curved bay."},
+          {"address": "80 Bellevue Ave", "floors_spanned": 2, "location": "front facade, right unit", "notes": "Large curved glass bay/turret addition — appears to be a modern renovation with conical roof cap. Unusual."}
+        ],
+        "total_buildings_observed": 2,
+        "blender_notes": "create_bay_window() supports canted type. Bow/curved bay needs type: 'bow' with arc geometry. Flag for custom modelling."
+      },
+
+      "oriel_bay": {
+        "description": "Upper-floor projecting bay that does not extend to the ground — supported by corbels or brackets.",
+        "buildings": [
+          {"address": "258 Augusta Ave", "location": "upper floor", "notes": "Distinctive red-painted oriel projection at top floor with its own small hipped roof cap. A unique feature on Augusta Ave."}
+        ],
+        "total_buildings_observed": 1,
+        "blender_notes": "create_bay_window() with floor parameter set to upper floor only. The oriel's bracket support and hipped cap need special geometry."
+      }
+    },
+
+    "PILASTERS": {
+      "description": "Shallow vertical projections from the wall face resembling flat columns. Used to divide the facade into bays or frame openings.",
+      "generator_field": "Custom — not in standard decorative_elements. Related to create_quoins().",
+      "buildings": [
+        {"address": "No. 8 Hose Station", "material": "buff brick", "location": "flanking engine bay", "notes": "Buff brick pilasters with decorative capitals framing the main engine bay."},
+        {"address": "~112-114 Nassau St", "material": "brick", "location": "flanking facade, between bays", "notes": "Full-height pilasters dividing facade and framing building edges. Project ~half brick."},
+        {"address": "Augusta Ave Victorian", "material": "brick with stone capitals", "location": "between facade bays", "notes": "Pilasters with stone/cast stone capitals defining vertical bays."}
+      ],
+      "total_buildings_observed": 3,
+      "blender_notes": "create_quoins() handles corner projections. Full pilasters (mid-facade vertical strips) need a dedicated create_pilasters() function or extension of create_quoins()."
+    },
+
+    "OCULUS_WINDOWS": {
+      "description": "Circular (round) windows, sometimes called 'bull's-eye' or 'oeil-de-boeuf' windows. Decorative feature found on more elaborate buildings.",
+      "generator_field": "Custom window type — not standard in windows_detail",
+      "buildings": [
+        {"address": "No. 8 Hose Station", "location": "tower upper levels", "diameter_est_m": 0.6, "surround": "radiating brick/stone", "notes": "Multiple oculus windows on the hose-drying clock tower."},
+        {"address": "Augusta Ave Victorian", "location": "second floor between main windows", "diameter_est_m": 0.5, "surround": "stone radiating surround", "notes": "Decorative oculi set between rectangular windows. Creates rhythm variation."}
+      ],
+      "total_buildings_observed": 2,
+      "blender_notes": "cut_windows() only handles rectangular openings. Oculus windows need a circular boolean cut + radiating surround geometry. Flag for custom Blender modelling."
+    },
+
+    "PORCHES_AND_VERANDAHS": {
+      "description": "Covered entrance structures. The generator handles these via create_porch() and create_turned_posts().",
+      "generator_field": "porch_present, porch_type, decorative turned posts",
+
+      "full_width_verandah": {
+        "description": "Covered porch spanning the full width of the facade at ground level.",
+        "buildings": [
+          {"address": "102 & 104 Bellevue Ave", "notes": "Shared verandah with ornate turned columns between the two units."},
+          {"address": "112 Bellevue Ave", "notes": "Full-width verandah creating second-floor balcony."},
+          {"address": "7-15 Oxford St", "notes": "Multiple houses with full-width covered porches."},
+          {"address": "91 Bellevue Ave", "notes": "Deep covered porch across full facade."},
+          {"address": "12 & 14 Bellevue Ave", "notes": "Shared verandah with decorative posts."},
+          {"address": "120 & 122 Bellevue Ave", "notes": "Ground floor storefront with porch roof creating second-floor balcony."}
+        ],
+        "total_buildings_observed": 6,
+        "prevalence": "Very high — standard feature on most Victorian residential buildings"
+      },
+
+      "arched_porch_arcade": {
+        "description": "Porch with arched openings forming an arcade. Distinctive feature of some Queen Anne houses.",
+        "buildings": [
+          {"address": "~30 Bellevue Ave", "num_arches": 3, "arch_type": "segmental", "notes": "Three arched porch openings forming a ground-floor arcade. Queen Anne Revival style."}
+        ],
+        "total_buildings_observed": 1,
+        "blender_notes": "create_porch() + create_voussoirs() combination. Set ground_floor_arches entries."
+      },
+
+      "carpenter_gothic_porch": {
+        "description": "Small entrance porch with elaborate fretwork/gingerbread detailing in a Gothic-influenced style.",
+        "buildings": [
+          {"address": "18 Kensington Ave", "notes": "Small covered entrance porch with decorative fretwork brackets and gingerbread trim."}
+        ],
+        "total_buildings_observed": 1
+      }
+    },
+
+    "CHIMNEYS": {
+      "description": "Brick chimney stacks visible at roofline. The generator handles these via create_chimney() and create_chimney_caps().",
+      "generator_field": "roof_features: [{type: 'chimney'}]",
+      "prevalence": "Very high — visible on virtually all pre-1930 buildings. Typically 1-2 per residential building, located at party walls or at the ridge.",
+      "notable_examples": [
+        {"address": "102 & 104 Bellevue Ave", "count": 2, "notes": "Twin chimney stacks at party wall and end wall, matching brick."},
+        {"address": "112 Bellevue Ave", "count": 2, "notes": "Visible at roofline."},
+        {"address": "No. 8 Hose Station", "count": 1, "notes": "Large chimney on the main hall."},
+        {"address": "7-15 Oxford St", "count": "5+", "notes": "Row of chimneys visible along the shared party wall line."}
+      ],
+      "blender_notes": "create_chimney() places brick chimney at ridge or party wall. create_chimney_caps() adds the corbelled cap detail."
+    },
+
+    "ROOF_TYPES_AND_FEATURES": {
+      "peaked_gable": {
+        "description": "Front-facing peaked gable — the dominant roof form in the bay-and-gable typology.",
+        "prevalence": "60-70% of residential buildings. Typically combined with a front bay window.",
+        "generator_field": "roof_type: 'gable'"
+      },
+      "cross_gable": {
+        "description": "Intersecting gable roof forms creating an L or T-shaped roofline.",
+        "buildings": [
+          {"address": "68 Bellevue Ave", "notes": "Twin peaked gables forming a cross-gable composition."}
+        ],
+        "generator_field": "roof_type: 'cross-gable'"
+      },
+      "mansard": {
+        "description": "French Second Empire mansard roof with steep lower slope and dormer windows.",
+        "buildings": [
+          {"address": "145 Augusta Ave", "notes": "Mansard with dark shingle covering and dormer. Suggests 1870s-1880s construction."},
+          {"address": "90 Bellevue Ave", "notes": "Mansard-style upper storey with arched dormer windows on both units."}
+        ],
+        "total_buildings_observed": 2,
+        "generator_field": "roof_type: 'mansard'"
+      },
+      "dormers": {
+        "arched_dormer": {
+          "description": "Dormer window with an arched (semi-circular) head.",
+          "buildings": [
+            {"address": "90 Bellevue Ave", "notes": "Arched dormer windows on mansard roof — semi-circular arch heads."}
+          ]
+        },
+        "gable_dormer": {
+          "description": "Dormer with its own peaked gable.",
+          "buildings": [
+            {"address": "120 & 122 Nassau St", "notes": "Gable dormer at attic level."},
+            {"address": "145 Augusta Ave", "notes": "Dormers in mansard slope."}
+          ]
+        },
+        "generator_field": "roof_features: [{type: 'dormer', style: 'gable'/'arched'}]"
+      }
+    },
+
+    "SOLDIER_COURSES": {
+      "description": "Horizontal course of bricks placed on end (vertically) rather than laid flat. Used decoratively as belt courses, above windows, or at cornice level.",
+      "generator_field": "decorative_elements.string_courses with soldier_course variant",
+      "buildings": [
+        {"address": "No. 8 Hose Station", "location": "above windows + as belt courses", "material": "buff brick soldiers", "notes": "Buff brick soldier courses forming flat lintels and decorative bands."}
+      ],
+      "total_buildings_observed": 1,
+      "blender_notes": "create_string_courses() — would need a 'soldier' variant that rotates bricks 90 degrees. Currently generates flat projecting courses."
+    },
+
+    "ROWLOCK_SILLS": {
+      "description": "Window sills formed by a course of bricks laid on edge (rowlock orientation), projecting slightly from the wall face.",
+      "generator_field": "Handled by cut_windows() sill geometry",
+      "prevalence": "Very high — observed on most brick buildings where stone sills are not present.",
+      "buildings": [
+        {"address": "112 Oxford St", "notes": "Clear brick rowlock sills on all windows."},
+        {"address": "116 & 118 Nassau St", "notes": "Rowlock sills."},
+        {"address": "120 & 122 Nassau St", "notes": "Rowlock sills."},
+        {"address": "130-136 Denison Ave", "notes": "Rowlock sills on cottage windows."},
+        {"address": "Augusta Ave brick house", "notes": "Rowlock sills."},
+        {"address": "~110 Nassau St", "notes": "Rowlock sills between windows."},
+        {"address": "18 Kensington Ave", "notes": "Rowlock sills."}
+      ],
+      "total_buildings_observed": 7,
+      "blender_notes": "Default sill geometry in cut_windows(). Projecting brick sill approximately 30mm out and 65mm deep."
+    },
+
+    "STONE_SILLS_AND_LINTELS": {
+      "description": "Window sills and lintels in contrasting stone or cast stone. More expensive than brick — indicates higher-quality construction.",
+      "generator_field": "decorative_elements.stone_lintels: {present, colour_hex}",
+      "buildings": [
+        {"address": "102 & 104 Bellevue Ave", "colour": "#D4B896 buff", "notes": "Stone sills projecting from brick face on all windows."},
+        {"address": "120 & 122 Bellevue Ave", "colour": "#D4B896 buff", "notes": "Projecting stone sills."},
+        {"address": "112 Bellevue Ave", "colour": "#D4B896 buff", "notes": "Stone sills."},
+        {"address": "Augusta Ave Victorian", "colour": "#E0D8C8 white/cream", "notes": "White stone sills and full window surrounds."},
+        {"address": "Oxford St church", "colour": "#D0D0D0 light grey", "notes": "Stone or cast stone sills."}
+      ],
+      "total_buildings_observed": 5,
+      "blender_notes": "Set stone_lintels.colour_hex and stone_lintels.present. The generator applies contrasting material to lintel and sill geometry."
+    },
+
+    "STOREFRONTS": {
+      "description": "Commercial ground-floor shopfronts with large display windows, signage area, and separate entrance.",
+      "generator_field": "has_storefront, storefront: {type, width_m, height_m, entrance}",
+      "buildings": [
+        {"address": "120 & 122 Bellevue Ave", "notes": "Ground floor commercial with awning. Brick above."},
+        {"address": "145 Augusta Ave", "notes": "Ground floor commercial storefront with bench and display."},
+        {"address": "Augusta Ave brick house", "notes": "Large storefront window at ground floor."},
+        {"address": "Augusta Ave Victorian", "notes": "Commercial ground floor with shop windows."},
+        {"address": "214 Augusta Ave", "notes": "Heavily signed/graffitied commercial. Peaked gable above."},
+        {"address": "270-274 Augusta Ave", "notes": "Row of small commercial buildings with murals/art."}
+      ],
+      "total_buildings_observed": 6,
+      "prevalence": "Common on Augusta Ave and Baldwin St commercial strips"
+    },
+
+    "STAINED_GLASS_AND_TRANSOMS": {
+      "description": "Decorative glazing including stained or leaded glass in transoms above doors or in upper window sashes.",
+      "generator_field": "create_stained_glass_transoms()",
+      "buildings": [
+        {"address": "24 Bellevue Ave", "location": "upper floor gable window", "notes": "Apparent stained or decorative leaded glass visible in the gable window of left unit (24). Yellow/green tones suggest art glass."},
+        {"address": "103 Bellevue Ave (St Stephen-in-the-Fields)", "location": "nave windows", "notes": "Gothic church with likely stained glass in lancet windows."},
+        {"address": "No. 8 Hose Station", "location": "upper windows", "notes": "Possible decorative glazing in upper tower windows."}
+      ],
+      "total_buildings_observed": 3,
+      "blender_notes": "create_stained_glass_transoms() generates coloured glass panels above doors. For windows, modify glass material with colour tint."
+    },
+
+    "TOWERS_AND_TURRETS": {
+      "description": "Vertical tower elements projecting above the main roofline.",
+      "generator_field": "roof_features: [{type: 'tower'}], create_tower()",
+      "buildings": [
+        {"address": "No. 8 Hose Station", "type": "hose-drying clock tower", "height": "~25m", "notes": "Tall square brick tower with clock face, corbelled cornice, oculus windows, and pyramidal cap. The tallest and most prominent structure in the HCD. Already modelled as multi-volume building."}
+      ],
+      "total_buildings_observed": 1
+    },
+
+    "BALCONIES": {
+      "description": "Projecting platforms at upper floor levels with railings.",
+      "generator_field": "balconies, balcony_type",
+      "types_observed": {
+        "iron_railing": {
+          "buildings": [
+            {"address": "120 & 122 Bellevue Ave", "notes": "Full-width iron railing balcony at second floor."},
+            {"address": "116 & 118 Nassau St", "notes": "Wooden balconies with railings at second floor."},
+            {"address": "120 & 122 Nassau St", "notes": "Metal railing balcony."},
+            {"address": "256 Augusta Ave", "notes": "Second-floor balcony with iron railing on Italianate flat-roof building."},
+            {"address": "78 Bellevue Ave", "notes": "Metal balcony on left unit (orange brick)."}
+          ]
+        },
+        "wooden_porch_balcony": {
+          "description": "Second-floor balcony formed by the roof of the ground-floor porch.",
+          "buildings": [
+            {"address": "112 Bellevue Ave", "notes": "Porch roof creates balcony at first-floor level."},
+            {"address": "102 & 104 Bellevue Ave", "notes": "Shared verandah roof creates balcony."},
+            {"address": "7-15 Oxford St", "notes": "Multiple houses with porch-roof balconies."}
+          ]
+        }
+      },
+      "total_buildings_observed": 8
+    },
+
+    "QUOINS": {
+      "description": "Corner stones or brick projections at building corners, creating a decorative vertical accent. Typically in contrasting colour.",
+      "generator_field": "decorative_elements.quoins: {present, strip_width_mm, projection_mm, colour_hex}",
+      "buildings": [
+        {"address": "102 & 104 Bellevue Ave", "material": "stone/buff", "notes": "Possible stone quoins at building corners — partially obscured by vegetation."},
+        {"address": "No. 8 Hose Station", "material": "buff brick", "notes": "Buff brick corner treatments that function as quoins."}
+      ],
+      "total_buildings_observed": 2,
+      "blender_notes": "create_quoins() generates alternating projecting blocks at building corners."
+    },
+
+    "PAINTED_BRICK": {
+      "description": "Buildings where original brick has been painted over, obscuring texture and colour. Important for the 3D model to render accurately as painted rather than bare brick.",
+      "buildings": [
+        {"address": "16 Kensington Ave", "colour": "green", "notes": "Left unit painted green, right unit exposed brick."},
+        {"address": "11 & 13 Kensington Ave", "colour": "dark red", "notes": "Both units appear painted red."},
+        {"address": "102 & 104 Oxford St", "colour": "red/rust", "notes": "Painted to match original brick colour but too uniform for bare brick."},
+        {"address": "168 Baldwin St", "colour": "bright yellow", "notes": "Entire building painted yellow ('House of Moses'). Brick form visible through paint."},
+        {"address": "147 Augusta Ave", "colour": "white", "notes": "Right unit entirely painted white."},
+        {"address": "52 & 54 Bellevue Ave", "colour": "grey", "notes": "Grey painted brick or stucco."},
+        {"address": "47 Bellevue Ave", "colour": "cream/yellow", "notes": "Painted or rendered cream over original brick."},
+        {"address": "14 Bellevue Ave", "colour": "dark red", "notes": "Right unit painted, obscuring polychromatic brickwork visible on unpainted left unit (12)."},
+        {"address": "84 & 86 & 88 Bellevue Ave", "colour": "buff/cream", "notes": "May be buff brick rather than painted — lower saturation could be original."}
+      ],
+      "total_buildings_observed": 9,
+      "blender_notes": "Set facade_material to 'paint' and facade_colour to the observed painted colour hex. create_painted_material() generates a flat painted surface."
+    },
+
+    "STRUCTURAL_FEATURES": {
+      "structural_cracks": {
+        "description": "Visible structural cracking in masonry indicating settlement or movement.",
+        "buildings": [
+          {"address": "Oxford St church", "location": "side elevation, vertical crack roof to foundation", "notes": "Significant vertical crack has been repaired/patched but clearly visible. Contrasting mortar colour in repair. Document for heritage condition assessment."}
+        ]
+      },
+      "buttresses": {
+        "description": "Projecting masonry structures providing lateral support to walls.",
+        "buildings": [
+          {"address": "103 Bellevue Ave (St Stephen-in-the-Fields)", "location": "nave side walls", "material": "stone/brick", "notes": "Stone buttresses along the nave — standard Gothic church structural feature."}
+        ]
+      }
+    },
+
+    "BRICK_TEXTURE_TYPES": {
+      "description": "Five distinct brick texture categories identified from close-up analysis, each requiring a different Blender material.",
+      "types": {
+        "type_A_institutional_pressed": {
+          "texture_photo": "IMG_20260315_145758658_HDR.jpg",
+          "colour_range": "#8B4332 to #B86B55",
+          "roughness": "low (smooth face, sharp arrises)",
+          "mortar_joint_mm": 10,
+          "mortar_profile": "flush",
+          "blender_roughness": 0.3,
+          "buildings": ["No. 8 Hose Station", "~112-114 Nassau St"]
+        },
+        "type_B_residential_pressed": {
+          "colour_range": "#9C4A35 to #B85838",
+          "roughness": "low-medium",
+          "mortar_joint_mm": 10,
+          "mortar_profile": "flush",
+          "blender_roughness": 0.4,
+          "prevalence": "~70% of all brick buildings",
+          "buildings": "Most residential buildings across all streets"
+        },
+        "type_C_hand_pressed_pre1890": {
+          "texture_photo": "IMG_20260315_151559547_HDR.jpg",
+          "colour_range": "#A86540 (high variance)",
+          "roughness": "high (porous, exposed aggregate)",
+          "mortar_joint_mm": 15,
+          "mortar_profile": "weathered/recessed",
+          "blender_roughness": 0.7,
+          "buildings": ["Oxford St church (partial)", "oldest buildings pre-1890"]
+        },
+        "type_D_salvage_mixed": {
+          "texture_photo": "IMG_20260315_151848298_HDR.jpg",
+          "colour_range": "mixed (#4A3830 to #C8B898)",
+          "roughness": "very high",
+          "mortar_joint_mm": 17,
+          "mortar_profile": "weathered/messy",
+          "blender_roughness": 0.8,
+          "use": "Rear walls, alley walls, garages only"
+        },
+        "type_E_side_wall_seconds": {
+          "texture_photo": "IMG_20260318_175543668_HDR.jpg",
+          "colour_range": "#8A5848 (high variance)",
+          "roughness": "medium-high",
+          "mortar_joint_mm": 13,
+          "mortar_profile": "weathered",
+          "blender_roughness": 0.55,
+          "use": "Side walls not visible from street"
+        }
+      }
+    },
+
+    "CONDITION_NOTES": {
+      "efflorescence": {
+        "description": "White salt deposits on brick surface from moisture migration.",
+        "buildings": ["Oxford St brick close-up (severe)", "alley brick close-up (moderate)"]
+      },
+      "repointing": {
+        "description": "Visible mortar repair with contrasting colour/material.",
+        "buildings": ["Oxford St church", "~95 Nassau St side passage", "No. 8 Hose Station (minor)"]
+      },
+      "spalling": {
+        "description": "Surface delamination of brick faces from freeze-thaw cycles.",
+        "buildings": ["Alley brick close-up (severe)", "~95 Nassau St (lower courses)", "130-136 Denison Ave (minor, near grade)"]
+      }
+    },
+
+    "SUMMARY_STATISTICS": {
+      "total_buildings_visually_analysed": 42,
+      "feature_counts": {
+        "segmental_arches": 10,
+        "flat_jack_arches": 7,
+        "pointed_gothic_arches": 2,
+        "corbelling": 7,
+        "polychromatic_belt_courses": 6,
+        "diaper_diamond_pattern": 1,
+        "decorative_panels": 3,
+        "bargeboard": 13,
+        "ornamental_shingles": 5,
+        "gable_windows": 7,
+        "half_timbering": 3,
+        "canted_bay_windows": 4,
+        "bow_curved_bay_windows": 2,
+        "oriel_bay_windows": 1,
+        "pilasters": 3,
+        "oculus_windows": 2,
+        "storefronts": 6,
+        "stained_glass_transoms": 3,
+        "towers": 1,
+        "balconies": 8,
+        "quoins": 2,
+        "soldier_courses": 1,
+        "rowlock_sills": 7,
+        "stone_sills_lintels": 5,
+        "painted_brick": 9,
+        "mansard_roofs": 2,
+        "arched_dormers": 1,
+        "arched_porch_arcade": 1,
+        "structural_cracks": 1,
+        "buttresses": 1,
+        "chimneys": "nearly_universal"
+      },
+      "most_decorated_buildings_ranked": [
+        {"rank": 1, "address": "No. 8 Hose Station", "features": "polychromatic banding, gauged arches, corbelling, pilasters, oculus windows, soldier courses, tower, quoins"},
+        {"rank": 2, "address": "Augusta Ave Victorian", "features": "gauged arches, oculus windows, stone belt courses, corbelling, pilasters, storefronts"},
+        {"rank": 3, "address": "102 & 104 Bellevue Ave", "features": "polychromatic banding, segmental arches with keystones, corbelling, double gable with bargeboard, bay windows, ornamental shingles"},
+        {"rank": 4, "address": "12 & 14 Bellevue Ave", "features": "polychromatic banding, decorative panels, Gothic pointed arch, corbelling, bargeboard"},
+        {"rank": 5, "address": "~112-114 Nassau St", "features": "corbelling, pilasters, gauged arches, peaked gable, bargeboard, decorative panels"},
+        {"rank": 6, "address": "175 & 177 & 179 Augusta Ave", "features": "elaborate bargeboard fretwork, stone voussoirs, polychromatic banding, ornamental shingles"},
+        {"rank": 7, "address": "24 Bellevue Ave", "features": "polychromatic banding, decorative panels, stained glass, stone voussoirs, bargeboard"},
+        {"rank": 8, "address": "~110 Nassau St", "features": "diaper diamond pattern (unique in HCD), segmental arches"},
+        {"rank": 9, "address": "120 & 122 Bellevue Ave", "features": "segmental arches with raised keystones, stone sills, balcony, storefront"},
+        {"rank": 10, "address": "103 Bellevue Ave (St Stephen-in-the-Fields)", "features": "Gothic pointed arches, buttresses, tower/spire, stone construction"}
+      ],
+      "generator_gaps_identified": [
+        "Diaper/diamond brick patterns — no create_* function exists",
+        "Bow/curved bay windows — create_bay_window() only supports canted",
+        "Oculus/round windows — cut_windows() only supports rectangular",
+        "Pointed Gothic arches — create_voussoirs() only supports segmental",
+        "Half-timbering in gables — no create_* function exists",
+        "Oriel (upper-floor-only) bay windows — create_bay_window() assumes ground-up",
+        "Pilasters (mid-facade) — create_quoins() only handles corners",
+        "Soldier courses — create_string_courses() uses flat brick orientation only"
+      ]
+    }
+  }
+}

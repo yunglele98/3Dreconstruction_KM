@@ -1,0 +1,59 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/116 & 118 Nassau St.jpg",
+    "address": "116 & 118 Nassau St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Ground floor door ~2.1m, ~28 courses. First-floor windows ~1.3m, ~18 courses."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond on all brick surfaces. Upper gable/attic level transitions to siding on one or both units.",
+    "colour": {
+      "base_hex": "#9C5040",
+      "variance": "medium",
+      "description": "Medium red-brown brick. Some variation visible with scattered darker bricks. Typical Kensington residential quality. The two units show similar brick suggesting they were built as a pair from the same brick supply.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "flat_arch_lintel",
+        "location": "above windows",
+        "description": "Simple flat brick lintels above window openings."
+      },
+      {
+        "type": "rowlock_sill",
+        "location": "window sills",
+        "description": "Brick rowlock courses forming window sills."
+      },
+      {
+        "type": "second_floor_balcony",
+        "location": "second floor, both units",
+        "description": "Wooden balconies with railings at second floor level, likely later additions."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "2.5-storey semi-detached pair, brick below with siding in the gable/attic level. Brick in decent condition. Large tree partially obscures left side. White SUV parked in front. Simple residential brick without elaborate decorative features — representative of the more common Kensington building type."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.65,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Tree and parked car partially obstruct facade. Summer photo with full leaf canopy. Coursing visible on exposed portions between obstructions."
+    }
+  }
+}

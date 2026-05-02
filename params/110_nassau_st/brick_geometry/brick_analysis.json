@@ -1,0 +1,59 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260318_175757676_HDR.jpg",
+    "address": "~110 Nassau St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.3,
+      "course_height_mm": 75,
+      "brick_height_mm": 63,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 12,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Ground floor window and door openings used for vertical scale. Estimated 18 courses per 1.3m window height."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond for main field. The diaper (diamond) pattern is achieved by inserting contrasting-colour headers at regular intervals within the running bond field, creating a diamond motif without changing the bond pattern itself.",
+    "colour": {
+      "base_hex": "#8E4E3A",
+      "variance": "medium",
+      "description": "Medium red-brown brick as main field colour with contrasting darker and/or buff brick used for the diamond/diaper pattern. The contrast creates a visible decorative motif against the red field. Some natural variation in the red field brick.",
+      "polychromatic": true,
+      "polychromatic_notes": "Diaper (diamond) pattern formed by contrasting brick headers inserted at regular intervals in the running bond field. The diamonds appear as a repeating geometric motif on the first-floor facade between windows. This is a distinctive decorative technique common in late Victorian Toronto residential architecture (1880s-1890s)."
+    },
+    "special_features": [
+      {
+        "type": "diaper_pattern",
+        "location": "first floor facade, between and below windows",
+        "description": "Diamond/diaper pattern formed by contrasting-colour brick headers set into the running bond field. Pattern creates repeating diamond shapes approximately 8-10 courses tall. A distinctive and relatively uncommon decorative feature in Kensington Market."
+      },
+      {
+        "type": "flat_arch_lintel",
+        "location": "above windows",
+        "description": "Flat jack arches above window openings"
+      },
+      {
+        "type": "rowlock_sill",
+        "location": "window sills",
+        "description": "Brick rowlock course forming window sills"
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "fair",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "Overcast winter photo with snow on ground. Building appears to be a 2-storey residential brick house. The diaper pattern is the most notable feature — survives intact and is an important heritage detail for 3D model accuracy. Some weathering and soiling but no major deterioration visible. White van partially obscures ground floor in photo."
+    },
+    "texture_calibration": {
+      "courses_counted": 18,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.6,
+      "blender_brick_scale_corrected": 1.02,
+      "notes": "Photo taken at slight oblique angle in overcast winter conditions. Snow and van partially obscure lower facade. The diaper pattern provides additional geometric reference for calibration — diamond repeat spacing can cross-check course height estimates."
+    }
+  }
+}

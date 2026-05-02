@@ -1,0 +1,54 @@
+{
+  "brick_analysis": {
+    "source_photo": "IMG_20260315_151351421_HDR.jpg",
+    "address": "112 Oxford St",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Ground floor window height ~1.3m, approximately 18 courses sill to lintel"
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout. No header courses visible. Consistent coursing across full facade width.",
+    "colour": {
+      "base_hex": "#8C5040",
+      "variance": "medium",
+      "description": "Medium red-brown brick with scattered darker headers/stretchers throughout. Some bricks show deeper brown-red tones while others are lighter orange-red. Typical of mid-range Toronto residential brick from early 20th century. Not the fine uniformity of institutional brick but reasonably consistent.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "rowlock_sill",
+        "location": "all window sills",
+        "description": "Rowlock course forming projecting window sills on both storeys"
+      },
+      {
+        "type": "flat_arch_lintel",
+        "location": "above all windows",
+        "description": "Flat jack arches in brick above window openings, approximately 3-4 courses deep"
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "2-storey brick duplex in typical Kensington condition. Address '112' clearly visible on facade. Brick intact but some darkening/soiling on lower courses. No structural cracking visible. Gable end above second floor is clad in siding, not brick."
+    },
+    "texture_calibration": {
+      "courses_counted": 18,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.7,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Measurement estimated from ground floor window. Photo is face-on but some perspective distortion due to wide angle. Speed limit sign and utility pole partially obscure some coursing."
+    }
+  }
+}

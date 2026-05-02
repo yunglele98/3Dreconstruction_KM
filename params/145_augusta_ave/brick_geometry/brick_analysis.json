@@ -1,0 +1,59 @@
+{
+  "brick_analysis": {
+    "source_photo": "hcd_photos/145 & 147 Augusta Ave.jpg",
+    "address": "145 Augusta Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Ground floor storefront opening and second-floor window used for scale. ~18 courses per 1.3m window."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard running bond. Only visible on left unit (145) — right unit (147) is painted white, obscuring brick pattern.",
+    "colour": {
+      "base_hex": "#8A5040",
+      "variance": "medium",
+      "description": "Medium red-brown brick, slightly muted/darkened — possibly from age, soot, or urban soiling. The brick appears darker/browner than newer-looking buildings in the area. Consistent with older commercial construction. Only the left unit (145) shows exposed brick; right unit (147) is entirely painted white.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "mansard_roof",
+        "location": "roof level, both units",
+        "description": "Mansard roof profile with dormer windows on both units. Dark green/black shingle covering. The Mansard roof is a distinctive French Second Empire feature suggesting 1870s-1880s construction."
+      },
+      {
+        "type": "storefront",
+        "location": "ground floor",
+        "description": "Commercial storefront at ground level with large windows. The storefront framework is timber/metal within the brick opening."
+      },
+      {
+        "type": "flat_arch_lintel",
+        "location": "above second-floor window",
+        "description": "Simple flat brick lintel above the second-floor window."
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "fair",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "Some surface deterioration visible on exposed brick",
+      "notes": "Two-storey commercial building pair with Mansard roofs. The left unit (145) retains exposed brick; the right (147) is painted white. The Mansard roof form suggests this is among the older commercial buildings on Augusta Ave (1870s-1880s). Utility pole and transformer partially obscure the facade centre. A bench and merchandise display visible at street level — active commercial use."
+    },
+    "texture_calibration": {
+      "courses_counted": 18,
+      "reference_height_m": 1.3,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.6,
+      "blender_brick_scale_corrected": 1.02,
+      "notes": "Utility pole and transformer create significant central obstruction. Twilight/dusk lighting (blue sky, artificial lights on) makes colour assessment less reliable. The Mansard roof profile is important for the 3D model — it defines the building silhouette."
+    }
+  }
+}

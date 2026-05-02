@@ -1,0 +1,59 @@
+{
+  "brick_analysis": {
+    "source_photo": "PXL_20260318_214522004.jpg",
+    "address": "~30 Bellevue Ave",
+    "analysis_method": "photo_measurement",
+    "measurements": {
+      "courses_per_metre": 13.5,
+      "course_height_mm": 74,
+      "brick_height_mm": 64,
+      "brick_length_mm": 215,
+      "mortar_joint_mm": 10,
+      "mortar_joint_profile": "flush",
+      "measurement_reference": "Front door opening ~2.1m, approximately 28 courses. Ground floor window ~1.3m, approximately 18 courses."
+    },
+    "bond_pattern": "running bond",
+    "bond_notes": "Standard half-lap running bond throughout brick facade. Consistent coursing from foundation to the second-floor gable level where decorative shingle cladding begins.",
+    "colour": {
+      "base_hex": "#C07040",
+      "variance": "medium",
+      "description": "Warm orange brick — noticeably warmer and more orange than the typical Kensington red-brown. Some variation between courses with lighter and slightly darker bricks intermixed. The orange tone may be from Don Valley brick or similar local clay source. Snow and overcast lighting in the photo may shift perceived colour slightly cooler than reality.",
+      "polychromatic": false,
+      "polychromatic_notes": ""
+    },
+    "special_features": [
+      {
+        "type": "gauged_arch",
+        "location": "porch openings",
+        "description": "Three arched openings on the ground-floor porch with brick voussoirs forming segmental arches. The arches span approximately 1.0m each and define the porch arcade. This is a distinctive feature of this semi-detached house type in the Bellevue Ave area."
+      },
+      {
+        "type": "decorative_shingle",
+        "location": "gable and upper facade",
+        "description": "Decorative wood shingle cladding in the gable above the brick, with ornamental pattern. This is typical of Queen Anne Revival style (1880s-1890s)."
+      },
+      {
+        "type": "rowlock_sill",
+        "location": "window sills",
+        "description": "Brick rowlock courses forming window sills"
+      }
+    ],
+    "condition": {
+      "mortar_condition": "fair",
+      "brick_condition": "good",
+      "repointing_visible": false,
+      "efflorescence": false,
+      "spalling_locations": "",
+      "notes": "2.5-storey Victorian semi-detached house with arched porch. Brick in good condition. Snow on ground and garbage bin partially obscure the foundation/ground level. The house retains its original Queen Anne Revival character with the combination of orange brick and decorative gable shingles. A typical high-quality Kensington Market heritage house."
+    },
+    "texture_calibration": {
+      "courses_counted": 28,
+      "reference_height_m": 2.1,
+      "bricks_counted_horizontal": 4,
+      "reference_width_m": 0.88,
+      "confidence": 0.65,
+      "blender_brick_scale_corrected": 1.01,
+      "notes": "Photo taken from sidewalk, face-on. Overcast winter conditions with snow — colour calibration should account for cool lighting. The arched porch provides good geometric references. Door height used as primary scale reference."
+    }
+  }
+}
